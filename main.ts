@@ -25,7 +25,7 @@ export async function init (
   const npcData = parse(await Deno.readTextFile(yamlPath))
   const onLoad: Lines = []
   const onTick: Lines = []
-  for (const [id, data] of Object.entries(npcData)) {
+  for (const [id, data] of Object.entries(npcData.npc.npcs)) {
     const result = toMcfunction(id, data)
     onLoad.push('', result.onLoad)
     onTick.push('', result.onTick)
@@ -46,10 +46,36 @@ export async function init (
       onLoad
     )
   )
+
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/tick.mcfunction`),
     lines('# NPC dialogue', onTick)
+  );
+
+
+  //generate helper functions
+
+  //tag npcs player looks towards
+  await Deno.writeTextFile(
+    join(basePath, `./data/${namespace}/functions/player_facing_npc.mcfunction`),
+    lines(
+      ((): string[] =>{
+        const factor = 3/((npcData.npc.params.facing_res)*(npcData.npc.params.facing_res+1));
+        let cmds: string[] = [];
+        let td: number = 0;
+        for(let i: number = 1; i <= npcData.npc.params.facing_res; i++) {
+          td+=i*factor;
+          cmds.push(`execute at @s positioned ^ ^ ^${td*2-i*factor} run tag @e[tag=npc,distance=..${i*factor}] add player_facing_npc`);
+        }
+        return [
+          ...cmds,
+          `execute at @s run tag @e[tag=player_facing_npc,sort=nearest,limit=1] add selected_npc`,
+          `tag @e remove player_facing_npc`
+        ];
+      })()
+    )
   )
+
 }
 
 if (import.meta.main) {
@@ -69,7 +95,7 @@ if (import.meta.main) {
   })
   if (help || !yamlPath || !pathToDatapackFolder) {
     console.log(
-      'deno run --allow-read --allow-write https://raw.githubusercontent.com/SheepTester/hello-world/master/minecraft-npc/init.ts [path to yml file] [path to datapack folder] -n [namespace name] -d [description]'
+      'deno run --allow-write=./data/generated --allow-read=./ main.ts [path to yml file] [path to datapack folder] -n [namespace name] -d [description]'
     )
   } else {
     await init(String(yamlPath), String(pathToDatapackFolder), {

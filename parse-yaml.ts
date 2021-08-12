@@ -21,24 +21,20 @@ const colourNameSchema = [
 ] as const
 const colourNames = colourNameSchema.map(schema => schema.value)
 
-const schema = z
+const npcSchema = z
   .object({
     name: z.string(),
     colour: z.union([
       z
-        .string()
-        .regex(
-          /^[0-9a-f]{6}$/i,
-          'Custom colours must be 6-digit hex colour codes (case insensitive) without the #.'
-        )
-        .transform(hex => `#${hex}`),
+        .number()
+        .transform(hex => `#${hex.toString(16).padStart(6, '0')}`),
       ...colourNameSchema
     ]),
     position: z
       .string()
       .regex(
-        /^-?\d+ -?\d+ -?\d+$/i,
-        'Positions must be a triplet of signed integers.'
+        /^-?\d+.?\d* -?\d+.?\d* -?\d+.?\d*$/i,
+        'Positions must be a triplet of signed numbers.'
       )
       .transform((triplet): [number, number, number] => {
         const [x, y, z] = triplet.split(' ').map(Number)
@@ -92,10 +88,18 @@ const schema = z
   .strict()
   .deepPartial()
 
-export type Npc = z.infer<typeof schema>
+export type Npc = z.infer<typeof npcSchema>
 
-const recordSchema = z.record(schema)
+const fullSchema = z
+  .object({
+    npc:z.object({
+      params:z.object({
+        facing_res: z.number().default(3)
+      }),
+      npcs:z.record(npcSchema)
+    })
+  })
 
-export function parse (yaml: string): Record<string, Npc> {
-  return recordSchema.parse(YAML.parse(yaml))
+export function parse (yaml: string): z.infer<typeof fullSchema> {
+  return fullSchema.parse(YAML.parse(yaml))
 }

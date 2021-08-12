@@ -5,6 +5,7 @@ type NbtData = {
   [key: string]: string | number | boolean | NbtData | undefined | null
 }
 
+//nbt tostring
 function toSnbt (nbt: NbtData): string {
   const values = []
   for (const [key, value] of Object.entries(nbt)) {
