@@ -1,4 +1,4 @@
-import { ensureDir } from 'https://deno.land/std@0.102.0/fs/ensure_dir.ts'
+import { ensureDir, emptyDir } from 'https://deno.land/std@0.102.0/fs/mod.ts'
 import { join } from 'https://deno.land/std@0.102.0/path/mod.ts'
 import { parse as parseArgs } from 'https://deno.land/std@0.104.0/flags/mod.ts'
 import { toMcfunction } from './compile-to-mcfunction.ts'
@@ -23,34 +23,50 @@ export async function init (
   { namespace = 'minecraft', description = 'Mysterious datapack' } = {}
 ): Promise<void> {
   const npcData = parse(await Deno.readTextFile(yamlPath))
+  const reset: Lines = []
   const onLoad: Lines = []
   const onTick: Lines = []
+  const functions: Record<string, Lines> = {}
   for (const [id, data] of Object.entries(npcData.npc.npcs)) {
-    const result = toMcfunction(id, data)
+    const result = toMcfunction(namespace, id, data)
+    // The empty string is to have an empty between each entry
+    reset.push('', result.reset)
     onLoad.push('', result.onLoad)
     onTick.push('', result.onTick)
+    Object.assign(functions, result.functions)
   }
 
   // ensureDir expects an absolute path rather than a file:// URL
   await ensureDir(join(basePath, `./data/${namespace}/functions/`))
 
   await Deno.writeTextFile(
+    join(basePath, `./data/${namespace}/functions/reset.mcfunction`),
+    lines(
+      '# Kill all existing NPCs.',
+      'kill @e[type=minecraft:villager, tag=npc]',
+      reset
+    )
+  )
+  await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/load.mcfunction`),
     lines(
-      '# Initialise scoreboards',
-      'scoreboard objectives add npc-timers dummy',
-      'scoreboard objectives add npc-steps dummy',
-      '',
-      '# Stop all conversations, if possible',
+      '# Stop all conversations, if possible.',
       `tag @a remove spoken-to`,
+      `tag @e[tag=npc] remove speaking`,
       onLoad
     )
   )
-
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/tick.mcfunction`),
     lines('# NPC dialogue', onTick)
-  );
+  )
+  await emptyDir(join(basePath, `./data/${namespace}/functions/funcs/`))
+  for (const [name, contents] of Object.entries(functions)) {
+    await Deno.writeTextFile(
+      join(basePath, `./data/${namespace}/functions/funcs/${name}.mcfunction`),
+      lines(contents)
+    )
+  }
 
 
   //generate helper functions
