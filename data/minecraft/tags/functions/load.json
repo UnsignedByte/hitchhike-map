@@ -1,5 +1,6 @@
 {
 	"values":[
-		"minecraft:load"
+		"minecraft:load",
+		"generated:load"
 	]
 }
