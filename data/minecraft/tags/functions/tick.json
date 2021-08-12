@@ -1,6 +1,6 @@
 {
 	"values":[
-		"minecraft:tick"
+		"minecraft:tick",
 		"generated:tick"
 	]
 }
