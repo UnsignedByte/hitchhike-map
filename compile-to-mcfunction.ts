@@ -156,7 +156,7 @@ export function toMcfunction (
           "# Start a conversation if it was selected",
           // TODO: Consider `mark` and `if`
           `execute at ${select.selected} run tag @a[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,
-          `tag ${select.player} remove npc_selector`
+          `tag ${select.player} remove npc_selector`,
           `tag ${select.selected} add speaking`,
           `execute if entity ${
             select.newPlayer
