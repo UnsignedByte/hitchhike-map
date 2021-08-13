@@ -62,7 +62,7 @@ export async function init (
   )
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/tick.mcfunction`),
-    lines('# NPC dialogue', onTick)
+    lines('# NPC dialogue', onTick, `tag @a remove npc_selector`,)
   )
   await emptyDir(join(basePath, `./data/${namespace}/functions/funcs/`))
   for (const [name, contents] of Object.entries(functions)) {

@@ -26,3 +26,4 @@ tag @a[tag=victim-of-dialogue-by-sam, tag=!spoken-to, limit=1] add spoken-to
 
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-sam, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sam, limit=1]
+tag @a remove npc_selector
