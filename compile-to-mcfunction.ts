@@ -79,6 +79,8 @@ export function toMcfunction (
       `summon minecraft:villager ${x} ${y} ${z} ${toSnbt({
         Silent: true,
         Invulnerable: true,
+        NoAI:true,
+        NoGravity:true,
         CustomNameVisible: !!name,
         // `npc` tag is unused but might be nice to kill all NPCs
         Tags: `["npc", "${npcTag}"]`,
