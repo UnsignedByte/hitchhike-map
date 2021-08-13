@@ -91,7 +91,7 @@ export async function init (
           ...cmds,
           `execute at @s run tag @e[tag=player_facing_npc,sort=nearest,limit=1] add selected_npc`,
           `tag @e remove player_facing_npc`,
-          `execute if entity @e[tag=selected_npc] run tag @s add npc-selector`
+          `execute if entity @e[tag=selected_npc] run tag @s add npc_selector`
         ];
       })()
     )
