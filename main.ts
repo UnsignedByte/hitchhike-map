@@ -80,7 +80,7 @@ export async function init (
     join(basePath, `./data/${namespace}/functions/player_facing_npc.mcfunction`),
     lines(
       ((): string[] =>{
-        const factor = 3/((npcData.npc.params.facing_res)*(npcData.npc.params.facing_res+1));
+        const factor = 4/((npcData.npc.params.facing_res)*(npcData.npc.params.facing_res+1));
         let cmds: string[] = [];
         let td: number = 0;
         for(let i: number = 1; i <= npcData.npc.params.facing_res; i++) {
