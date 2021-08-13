@@ -140,7 +140,7 @@ export function toMcfunction (
             } ${JSON.stringify([
               '<',
               { text: name || 'Passerby', color: colour, bold: true },
-              `>`,
+              `> `,
               ...message.message
             ])}`,
             `execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets}`,
@@ -156,6 +156,7 @@ export function toMcfunction (
           // No `limit=1` just in case there are multiple players with the tag
           `tag @a[tag=${playerTag}] remove spoken-to`,
           `tag @a[tag=${playerTag}] remove ${playerTag}`,
+          `tp ${select.self} ~ ~ ~ ${rx} ${ry}`,
           `tag ${select.self} remove speaking`
         ]
         return [
