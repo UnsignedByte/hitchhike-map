@@ -3,7 +3,7 @@
 npc:
   params:
     # how accurate the line checking facing npc is
-    facing_res: 5
+    facing_res: 7
   npcs:
     billy:
       name: Billy
