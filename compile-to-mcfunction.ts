@@ -130,7 +130,7 @@ export function toMcfunction (
             .padStart(String(messages.length - 1).length, '0')}`
         for (const [i, message] of messages.entries()) {
           message.message.map(msg => {
-            if ('selector' in msg && (<string>msg.selector).startsWith('selector')) msg.selector = <string>eval(<string>msg.selector);
+            if ('selector' in msg && (<string>msg.selector).startsWith('select')) msg.selector = <string>eval(<string>msg.selector);
             return msg
           });
           // # of vowels (≈ syllables) * 5 ticks/vowel
