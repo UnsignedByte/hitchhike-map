@@ -46,8 +46,8 @@ const npcSchema = z
         'Positions must be a pair of signed numbers.'
       )
       .transform((pair): [number, number] => {
-        const [a, b] = pair.split(' ').map(Number)
-        return [a, b]
+        const [rx, ry] = pair.split(' ').map(Number)
+        return [rx, ry]
       }),
     head: z.string(),
     villager: z.object({
