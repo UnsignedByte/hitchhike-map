@@ -38,6 +38,7 @@ export function toMcfunction (
     colour,
     head,
     position: [x, y, z] = [0, 0, 0],
+    rotation: [a, b] = [0,0],
     villager: {
       type = 'plains',
       profession = 'none',
