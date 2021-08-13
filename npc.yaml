@@ -52,3 +52,9 @@ npc:
                 bold: true
                 italic: true
             global: true
+          end: 1
+        - messages:
+          - Please stop.
+          - I will call the police.
+          cond: 1
+          end: 0

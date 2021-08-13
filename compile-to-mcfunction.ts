@@ -113,24 +113,32 @@ export function toMcfunction (
         },
         // `Offers` is empty to prevent trading
         Offers: '{}'
-      })}`
+      })}`,
+      `scoreboard players set @e[tag=npc] dialogue-status 0`
     ],
     onLoad: [
       // Reset conversations, if possible (player may be offline)
       `tag @a remove ${playerTag}`,
       '',
       '# Villager interaction detection',
-      `scoreboard objectives add npc-interact minecraft.custom:minecraft.talked_to_villager`
+      `scoreboard objectives add npc-interact minecraft.custom:minecraft.talked_to_villager`,
+      `scoreboard objectives add dialogue-status dummy`
     ],
     onTick: [
-      dialogue.map(({ messages }) => {
+      "# Start a conversation if it was selected",
+      // TODO: Consider `mark` and `if`
+      `execute at ${select.selected} run tag @a[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,
+      `tag ${select.player} remove npc_selector`,
+      `tag ${select.selected} add speaking`,
+
+      dialogue.map((dialogue, idx) => {
         const indexToFuncName = (i: number) =>
-          `dialogue-${id}-${i
+          `dialogue-${id}-${idx}-${i
             .toString()
-            .padStart(String(messages.length - 1).length, '0')}`
-        for (const [i, message] of messages.entries()) {
+            .padStart(String(dialogue.messages.length - 1).length, '0')}`
+        for (const [i, message] of dialogue.messages.entries()) {
           message.message.map(msg => {
-            if ('selector' in msg && (<string>msg.selector).startsWith('select')) msg.selector = <string>eval(<string>msg.selector);
+            if ('selector' in msg && (<string>msg.selector)[0] !== '@') msg.selector = <string>eval(<string>msg.selector);
             return msg
           });
           // # of vowels (≈ syllables) * 5 ticks/vowel
@@ -138,7 +146,7 @@ export function toMcfunction (
           const duration = (fulltext.match(/[aiueo]/gi)?.length ?? 0) * 5
           const broadcastTargets = message.global ? '@a' : select.eavesdropper;
           functions[indexToFuncName(i)] = [
-            `# Dialogue line #${i + 1}: speak and make noise.`,
+            `# Dialogue line #${idx}-${i + 1}: speak and make noise.`,
             `execute at ${select.self} run tellraw ${
               broadcastTargets
             } ${JSON.stringify([
@@ -149,31 +157,25 @@ export function toMcfunction (
             ])}`,
             `execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets}`,
             `schedule function ${namespace}:funcs/${
-              i === messages.length - 1
-                ? `dialogue-${id}-end`
+              i === dialogue.messages.length - 1
+                ? `dialogue-${id}-${idx}-end`
                 : indexToFuncName(i + 1)
             } ${duration}t`
           ]
         }
-        functions[`dialogue-${id}-end`] = [
+        functions[`dialogue-${id}-${idx}-end`] = [
           '# Handle the end of the conversation.',
           // No `limit=1` just in case there are multiple players with the tag
           `tag @a[tag=${playerTag}] remove spoken-to`,
           `tag @a[tag=${playerTag}] remove ${playerTag}`,
           `execute as ${select.self} at @s run tp @s ~ ~ ~ ${rx} ${ry}`,
+          'end' in dialogue ? `scoreboard players set ${select.self} dialogue-status ${dialogue.end}` : '# no scoreboard change here',
           `tag ${select.self} remove speaking`
         ]
         return [
-          '',
-          "# Start a conversation if it was selected",
-          // TODO: Consider `mark` and `if`
-          `execute at ${select.selected} run tag @a[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,
-          `tag ${select.player} remove npc_selector`,
-          `tag ${select.selected} add speaking`,
-          `execute if entity ${
-            select.newPlayer
-          } run schedule function ${namespace}:funcs/${indexToFuncName(0)} 1t`,
-          `tag ${select.newPlayer} add spoken-to`,
+          `execute store success score dialogue-begun dialogue-status if entity ${select.newPlayer} as ${select.self} if score @s dialogue-status matches ${dialogue.cond} run schedule function ${namespace}:funcs/${indexToFuncName(0)} 1t`,
+          `execute if score dialogue-begun dialogue-status matches 1 run tag ${select.newPlayer} add spoken-to`,
+          `scoreboard players set dialogue-begun dialogue-status 0`,
           ''
         ]
       }),

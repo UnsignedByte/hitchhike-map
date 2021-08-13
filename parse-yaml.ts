@@ -57,7 +57,7 @@ const dialogueSchema = z
   .object({
     type: z.literal('simple').optional(), // default to simple
     end: z.number().optional(), // scoreboard value to update to after finish
-    cond: z.number().optional(), // scoreboard condition under which to run
+    cond: z.number().default(0), // scoreboard condition under which to run
     messages: z.array(z.union([
       msgSchema,
       z.string().transform(msg=>msgSchema.parse({message: msg})),
