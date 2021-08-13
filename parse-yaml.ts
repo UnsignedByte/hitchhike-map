@@ -32,13 +32,15 @@ const colourSchema =
 const rawJSONTextSchema = 
   z.object({
     text: z.string(),
-    color: colourSchema.optional(),
-    bold: z.boolean().optional(),
-    italic: z.boolean().optional(),
-    underlined: z.boolean().optional(),
-    strikethrough: z.boolean().optional(),
-    obfuscated: z.boolean().optional()
+    selector: z.string(),
+    color: colourSchema,
+    bold: z.boolean(),
+    italic: z.boolean(),
+    underlined: z.boolean(),
+    strikethrough: z.boolean(),
+    obfuscated: z.boolean()
   })
+  .deepPartial()
 
 const msgSchema = z
   .object({
