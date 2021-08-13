@@ -27,7 +27,7 @@ export async function init (
   const onLoad: Lines = []
   const onTick: Lines = [
     `# Detect right clicks`,
-    `execute as @a[scores={npc-interact=1..}] run function generated:player_facing_npc`,
+    `execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc`,
     `scoreboard players set @a npc-interact 0`
   ]
   const functions: Record<string, Lines> = {}
