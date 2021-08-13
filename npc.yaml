@@ -30,6 +30,7 @@ npc:
         - messages:
           - Well, this is a bit unfortunate.
           - Please leave.
+          end: 1
 
     marc:
       name: Marc
