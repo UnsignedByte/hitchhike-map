@@ -38,7 +38,7 @@ export function toMcfunction (
     colour,
     head,
     position: [x, y, z] = [0, 0, 0],
-    rotation: [rx, rb] = [0,0],
+    rotation: [rx, ry] = [0,0],
     villager: {
       type = 'plains',
       profession = 'none',
@@ -77,8 +77,7 @@ export function toMcfunction (
     reset: [
       `# Summon the villager for ${id}.`,
       // Summon new villager
-      `summon minecraft:villager ${x} ${y} ${z} ${toSnbt({
-        Rotation: `[${rx}, ${rb}]`,
+      `execute rotated ${rx} ${ry} run summon minecraft:villager ${x} ${y} ${z} ${toSnbt({
         Silent: true,
         Invulnerable: true,
         NoAI:true,
