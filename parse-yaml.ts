@@ -21,15 +21,52 @@ const colourNameSchema = [
 ] as const
 const colourNames = colourNameSchema.map(schema => schema.value)
 
+const colourSchema = 
+  z.union([
+    z
+      .number()
+      .transform(hex => `#${hex.toString(16).padStart(6, '0')}`),
+    ...colourNameSchema
+  ])
+
+const rawJSONTextSchema = 
+  z.object({
+    text: z.string(),
+    color: colourSchema.optional(),
+    bold: z.boolean().optional(),
+    italic: z.boolean().optional(),
+    underlined: z.boolean().optional(),
+    strikethrough: z.boolean().optional(),
+    obfuscated: z.boolean().optional()
+  })
+
+const msgSchema = z
+  .object({
+    global: z.boolean().default(false),
+    message: z.union([
+      z.string().transform(msg=>[{text: msg}]),
+      rawJSONTextSchema.transform(json=>[json]),
+      z.array(rawJSONTextSchema)
+    ])
+  })
+  .strict()
+
+const dialogueSchema = z
+  .object({
+    type: z.literal('simple').optional(), // default to simple
+    end: z.number().optional(), // scoreboard value to update to after finish
+    cond: z.number().optional(), // scoreboard condition under which to run
+    messages: z.array(z.union([
+      msgSchema,
+      z.string().transform(msg=>msgSchema.parse({message: msg})),
+    ])) // list of sequential messages to present, along with some parameters (I.E. globality)
+  })
+  .strict()
+
 const npcSchema = z
   .object({
     name: z.string(),
-    colour: z.union([
-      z
-        .number()
-        .transform(hex => `#${hex.toString(16).padStart(6, '0')}`),
-      ...colourNameSchema
-    ]),
+    colour: colourSchema,
     position: z
       .string()
       .regex(
@@ -87,11 +124,10 @@ const npcSchema = z
       ])
     }),
     dialogue: z.array(
-      z.object({
-        mark: z.string().optional(),
-        if: z.string().optional(),
-        messages: z.array(z.string())
-      })
+      z.union([
+        dialogueSchema,
+        z.string().transform((msg) => dialogueSchema.parse({messages:[msg]}))
+      ])
     )
   })
   .strict()

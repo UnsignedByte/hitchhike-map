@@ -1,5 +1,6 @@
 import { Lines } from './main.ts'
 import { Npc } from './parse-yaml.ts'
+import { randchoice } from './misc-utils.ts'
 
 type NbtData = {
   [key: string]: string | number | boolean | NbtData | undefined | null
@@ -129,17 +130,20 @@ export function toMcfunction (
             .padStart(String(messages.length - 1).length, '0')}`
         for (const [i, message] of messages.entries()) {
           // # of vowels (≈ syllables) * 5 ticks/vowel
-          const duration = (message.match(/[aiueo]/gi)?.length ?? 0) * 5
+          const fulltext = message.message.map(x=>x.text).join("");
+          const duration = (fulltext.match(/[aiueo]/gi)?.length ?? 0) * 5
+          const broadcastTargets = message.global ? '@a' : select.eavesdropper;
           functions[indexToFuncName(i)] = [
             `# Dialogue line #${i + 1}: speak and make noise.`,
             `execute at ${select.self} run tellraw ${
-              select.eavesdropper
+              broadcastTargets
             } ${JSON.stringify([
               '<',
               { text: name || 'Passerby', color: colour, bold: true },
-              `> ${message}`
+              `>`,
+              ...message.message
             ])}`,
-            `execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${select.eavesdropper}`,
+            `execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets}`,
             `schedule function ${namespace}:funcs/${
               i === messages.length - 1
                 ? `dialogue-${id}-end`

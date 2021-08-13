@@ -43,5 +43,8 @@ npc:
       dialogue:
         - messages:
           - I have nothing to say to you.
-        - messages:
-          - Go away!
+          - message:
+              text: GOODBYE!
+              color: red
+              bold: true
+            global: true
