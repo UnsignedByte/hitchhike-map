@@ -80,12 +80,12 @@ export async function init (
     join(basePath, `./data/${namespace}/functions/player_facing_npc.mcfunction`),
     lines(
       ((): string[] =>{
-        const factor = 4/((npcData.npc.params.facing_res)*(npcData.npc.params.facing_res+1));
+        const factor = 8/((npcData.npc.params.facing_res)*(npcData.npc.params.facing_res+1));
         let cmds: string[] = [];
         let td: number = 0;
-        for(let i: number = 1; i <= npcData.npc.params.facing_res; i++) {
+        for(let i: number = npcData.npc.params.facing_res; i > 0; i--) {
           td+=i*factor;
-          cmds.push(`execute at @s positioned ^ ^ ^${td*2-i*factor} run tag @e[tag=npc,distance=..${i*factor}] add player_facing_npc`);
+          cmds.push(`execute at @s positioned ^ ^ ^${td} run tag @e[tag=npc,distance=..${i*factor}] add player_facing_npc`);
         }
         return [
           ...cmds,
