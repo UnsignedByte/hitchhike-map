@@ -44,7 +44,7 @@ npc:
         - messages:
           - I have nothing to say to you.
           - message:
-              - text: GOODBYE, 
+              - text: "GOODBYE, "
                 color: red
                 bold: true
               - selector: select.player
