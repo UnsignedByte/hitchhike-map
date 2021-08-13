@@ -77,7 +77,8 @@ export function toMcfunction (
     reset: [
       `# Summon the villager for ${id}.`,
       // Summon new villager
-      `summon minecraft:villager ${x} ${y} ${z} ${rx} ${rb} ${toSnbt({
+      `summon minecraft:villager ${x} ${y} ${z} ${toSnbt({
+        Rotation: `[${rx}, ${rb}]`,
         Silent: true,
         Invulnerable: true,
         NoAI:true,
