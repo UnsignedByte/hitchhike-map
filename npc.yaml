@@ -15,8 +15,8 @@ npc:
         profession: fletcher
       dialogue:
         - messages:
-            - Once upon a time, I stumbled across a hole.
-            - Honestly, I have no idea how I didn't fall in.
+          - Once upon a time, I stumbled across a hole.
+          - Honestly, I have no idea how I didn't fall in.
 
     sam:
       name: Sam
@@ -28,8 +28,8 @@ npc:
         profession: shepherd
       dialogue:
         - messages:
-            - Well, this is a bit unfortunate.
-            - Please leave.
+          - Well, this is a bit unfortunate.
+          - Please leave.
 
     marc:
       name: Marc
@@ -42,4 +42,6 @@ npc:
         profession: mason
       dialogue:
         - messages:
-            - I have nothing to say to you.
+          - I have nothing to say to you.
+        - messages:
+          - Go away!
