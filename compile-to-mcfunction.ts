@@ -119,9 +119,6 @@ export function toMcfunction (
       `scoreboard objectives add npc-interact minecraft.custom:minecraft.talked_to_villager`
     ],
     onTick: [
-      `# Detect right clicks`,
-      `execute as @a[scores={npc-interact=1..}] run function generated:player_facing_npc`,
-      `scoreboard players set @a npc-interact 0`,
       dialogue.map(({ messages }) => {
         const indexToFuncName = (i: number) =>
           `dialogue-${id}-${i
@@ -158,7 +155,7 @@ export function toMcfunction (
           '',
           "# Start a conversation if it was selected",
           // TODO: Consider `mark` and `if`
-          `execute at ${select.selected} run tag @a=[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,
+          `execute at ${select.selected} run tag @a[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,
           `tag add ${select.selected} speaking`,
           `execute if entity ${
             select.newPlayer

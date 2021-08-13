@@ -25,7 +25,11 @@ export async function init (
   const npcData = parse(await Deno.readTextFile(yamlPath))
   const reset: Lines = []
   const onLoad: Lines = []
-  const onTick: Lines = []
+  const onTick: Lines = [
+    `# Detect right clicks`,
+    `execute as @a[scores={npc-interact=1..}] run function generated:player_facing_npc`,
+    `scoreboard players set @a npc-interact 0`
+  ]
   const functions: Record<string, Lines> = {}
   for (const [id, data] of Object.entries(npcData.npc.npcs)) {
     const result = toMcfunction(namespace, id, data)
