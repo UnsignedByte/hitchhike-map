@@ -55,7 +55,6 @@ export function toMcfunction (
   const npcTag = `npc-${id}`
   const playerTag = `victim-of-dialogue-by-${id}`
   // Prevent the dialogue from immediately restarting
-  const formerPlayerTag = `former-victim-of-dialogue-by-${id}`
 
   const START_DIST = 4
   const LEAVE_DIST = 10
@@ -63,6 +62,7 @@ export function toMcfunction (
 
   const select = {
     self: `@e[tag=${npcTag}, limit=1]`,
+    selected: `@e[tag=${npcTag}, tag=selected_npc, limit=1]`,
     notSpeaking: `@e[tag=${npcTag}, tag=!speaking, limit=1]`,
     speaking: `@e[tag=${npcTag}, tag=speaking, limit=1]`,
 
@@ -114,10 +114,14 @@ export function toMcfunction (
     onLoad: [
       // Reset conversations, if possible (player may be offline)
       `tag @a remove ${playerTag}`,
-      `tag @a remove ${formerPlayerTag}`
+      '',
+      '# Villager interaction detection',
+      `scoreboard objectives add npc-interact minecraft.custom:minecraft.talked_to_villager`
     ],
     onTick: [
-      `# Dialogue for ${id}`,
+      `# Detect right clicks`,
+      `execute as @a[scores={npc-interact=1..}] run function generated:player_facing_npc`,
+      `scoreboard players set @a npc-interact 0`,
       dialogue.map(({ messages }) => {
         const indexToFuncName = (i: number) =>
           `dialogue-${id}-${i
@@ -146,20 +150,16 @@ export function toMcfunction (
         functions[`dialogue-${id}-end`] = [
           '# Handle the end of the conversation.',
           // No `limit=1` just in case there are multiple players with the tag
-          `tag ${select.player} add ${formerPlayerTag}`,
           `tag @a[tag=${playerTag}] remove spoken-to`,
           `tag @a[tag=${playerTag}] remove ${playerTag}`,
           `tag ${select.self} remove speaking`
         ]
         return [
           '',
-          `# Mark players who have ditched the NPC as viable for re-conversation.`,
-          `execute at ${select.notSpeaking} run tag @a[tag=${formerPlayerTag}, distance=${LEAVE_DIST}..] remove ${formerPlayerTag}`,
-          '',
-          "# Start a conversation if it can and hasn't already.",
+          "# Start a conversation if it was selected",
           // TODO: Consider `mark` and `if`
-          `execute at ${select.notSpeaking} run tag @a[tag=!spoken-to, tag=!${formerPlayerTag}, distance=..${START_DIST}, sort=nearest, limit=1] add ${playerTag}`,
-          `execute if entity ${select.newPlayer} run tag ${select.self} add speaking`,
+          `execute at ${select.selected} run tag @a=[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,
+          `tag add ${select.selected} speaking`,
           `execute if entity ${
             select.newPlayer
           } run schedule function ${namespace}:funcs/${indexToFuncName(0)} 1t`,
