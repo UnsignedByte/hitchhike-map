@@ -40,6 +40,15 @@ const npcSchema = z
         const [x, y, z] = triplet.split(' ').map(Number)
         return [x, y, z]
       }),
+    rotation: z
+      .string().regex(
+        /^-?\d+.?\d* -?\d+.?\d*/i,
+        'Positions must be a pair of signed numbers.'
+      )
+      .transform((pair): [number, number] => {
+        const [a, b] = pair.split(' ').map(Number)
+        return [a, b]
+      }),
     head: z.string(),
     villager: z.object({
       type: z.union([
