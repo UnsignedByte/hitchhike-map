@@ -11,6 +11,7 @@ execute store success score dialogue-begun dialogue-status if entity @a[tag=vict
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-billy, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
+tag @a[tag=victim-of-dialogue-by-billy, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-billy
 
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-billy, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-billy, limit=1]
@@ -23,6 +24,7 @@ execute store success score dialogue-begun dialogue-status if entity @a[tag=vict
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-sam, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
+tag @a[tag=victim-of-dialogue-by-sam, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-sam
 
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-sam, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sam, limit=1]
@@ -39,6 +41,7 @@ execute store success score dialogue-begun dialogue-status if entity @a[tag=vict
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
+tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-marc
 
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-marc, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-marc, limit=1]
