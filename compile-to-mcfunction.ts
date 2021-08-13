@@ -156,7 +156,7 @@ export function toMcfunction (
           // No `limit=1` just in case there are multiple players with the tag
           `tag @a[tag=${playerTag}] remove spoken-to`,
           `tag @a[tag=${playerTag}] remove ${playerTag}`,
-          `tp ${select.self} ~ ~ ~ ${rx} ${ry}`,
+          `execute as ${select.self} at @s run tp @s ~ ~ ~ ${rx} ${ry}`,
           `tag ${select.self} remove speaking`
         ]
         return [
