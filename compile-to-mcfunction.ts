@@ -62,8 +62,7 @@ export function toMcfunction (
 
   const select = {
     self: `@e[tag=${npcTag}, limit=1]`,
-    selected: `@e[tag=${npcTag}, tag=selected_npc, limit=1]`,
-    notSpeaking: `@e[tag=${npcTag}, tag=!speaking, limit=1]`,
+    selected: `@e[tag=${npcTag}, tag=selected_npc, tag=!speaking, limit=1]`,
     speaking: `@e[tag=${npcTag}, tag=speaking, limit=1]`,
 
     player: `@a[tag=${playerTag}, limit=1]`,
