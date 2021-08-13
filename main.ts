@@ -86,6 +86,7 @@ export async function init (
         for(let i: number = npcData.npc.params.facing_res; i > 0; i--) {
           td+=i*factor;
           cmds.push(`execute at @s positioned ^ ^ ^${td} run tag @e[tag=npc,distance=..${i*factor}] add player_facing_npc`);
+          cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~1 ~ run tag @e[tag=npc,distance=..${i*factor}] add player_facing_npc`);
         }
         return [
           ...cmds,
