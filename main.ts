@@ -27,33 +27,13 @@ export async function init (
   const onLoad: Lines = [
     `# Summon quest book template entity`,
     'kill @e[tag=quest_book]',
-    `summon item 0 64 0 ${toSnbt({
-      Tags:'["quest_book"]',
-      Age: -32768,
-      PickupDelay: 32767,
-      Item: {
-        id: '"minecraft:written_book"',
-        Count: 1,
-        tag: {
-          display: {
-            Name: rawJson({
-              text: "Quest Book",
-              color: "light_purple",
-              italic: true
-            })
-          },
-          title: '"Quest Book"',
-          author: '""',
-          pages:`[${
-            rawJson([{
-              text: "Current Quests",
-              color: "light_purple",
-              underlined: true,
-              bold: true
-            }])}]`
-        }
-      }
-    })}`
+    `data modify storage generated:quest_book pages set value [${rawJson([{
+          text: "Current Quests",
+          color: "light_purple",
+          underlined: true,
+          bold: true
+        }].join(', ')
+       )}]`
   ]
   const onTick: Lines = [
     `# Detect right clicks`,
@@ -129,8 +109,18 @@ export async function init (
       '# Clear quest book from all players.',
       'clear @a minecraft:written_book{title:"Quest Book"}',
       '# Give new quest book',
-      `execute at @a run summon item ~ ~ ~ {NoGravity:1b,Age:2,PickupDelay:1,Tags:["quest_book_template"],Item:{id:"minecraft:written_book",Count:1b,tag:{title:"Quest Book",author:""}}}`,
-      `execute as @e[tag=quest_book_template] run data modify entity @s Item set from entity @e[tag=quest_book,limit=1] Item`
+      `give @a written_book${toSnbt({
+        display: {
+          Name: rawJson({
+            text: "Quest Book",
+            color: "light_purple",
+            italic: true
+          })
+        },
+        title: '"Quest Book"',
+        author: '""',
+        pages:`['{"nbt":"pages[]","storage":"generated:quest_book","interpret":true}']`
+      })}}`
     )
   )
 
