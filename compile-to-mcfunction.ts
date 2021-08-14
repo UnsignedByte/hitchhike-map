@@ -217,11 +217,11 @@ export function createQuest (
         functions[`quests-quest-${id}-start`] = [
           `data modify storage generated:quest_book quests append value ${rawJson({
             text:`[${name}]`,
+            color:"green",
             hoverEvent:{
               action:"show_text",
-              color:"green",
-              contents:{
-                text:description
+              contents: {
+                text: "test"
               }
             }
           })}`

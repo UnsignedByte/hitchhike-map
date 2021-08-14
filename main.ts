@@ -22,6 +22,7 @@ export async function init (
   basePath: string,
   { namespace = 'minecraft', description = 'Mysterious datapack' } = {}
 ): Promise<void> {
+  await emptyDir(join(basePath, `./data/${namespace}/functions/`))
   const data = parse(await Deno.readTextFile(yamlPath))
   const reset: Lines = []
   const onLoad: Lines = [
