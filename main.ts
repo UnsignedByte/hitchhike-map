@@ -120,7 +120,7 @@ export async function init (
         title: '"Quest Book"',
         author: '""',
         pages:`['{"nbt":"pages[]","storage":"generated:quest_book","interpret":true}']`
-      })}}`
+      })}`
     )
   )
 
