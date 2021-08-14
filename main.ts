@@ -27,7 +27,7 @@ export async function init (
   const onLoad: Lines = [
     `# Summon quest book template entity`,
     'kill @e[tag=quest_book]',
-    `data modify storage generated:quest_book pages set value [${rawJson({
+    `data modify storage generated:quest_book quests set value [${rawJson({
           text: "Current Quests",
           color: "light_purple",
           underlined: true,
@@ -92,10 +92,10 @@ export async function init (
     join(basePath, `./data/${namespace}/functions/tick.mcfunction`),
     lines('# NPC dialogue', onTick, `tag @a remove npc_selector`, `tag @e[tag=npc] remove selected_npc`)
   )
-  await emptyDir(join(basePath, `./data/${namespace}/functions/dialoguefuncs/`))
+  await emptyDir(join(basePath, `./data/${namespace}/functions/generated/`))
   for (const [name, contents] of Object.entries(functions)) {
     await Deno.writeTextFile(
-      join(basePath, `./data/${namespace}/functions/dialoguefuncs/${name}.mcfunction`),
+      join(basePath, `./data/${namespace}/functions/generated/${name}.mcfunction`),
       lines(contents)
     )
   }
@@ -119,7 +119,7 @@ export async function init (
         },
         title: '"Quest Book"',
         author: '""',
-        pages:`['{"nbt":"pages[]","storage":"generated:quest_book","interpret":true}']`
+        pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true}']`
       })}`
     )
   )
