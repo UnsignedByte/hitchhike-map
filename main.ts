@@ -50,8 +50,7 @@ export async function init (
               color: "light_purple",
               underlined: true,
               bold: true
-            }])}
-          ]`
+            }])}]`
         }
       }
     })}`

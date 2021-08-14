@@ -11,8 +11,7 @@ scoreboard objectives add dialogue-status dummy
 scoreboard objectives add quest-status dummy
 # Summon quest book template entity
 kill @e[tag=quest_book]
-summon item 0 64 0 {Tags: ["quest_book"], Age: -32768, PickupDelay: 32767, Item: {id: "minecraft:written_book", Count: 1, tag: {display: {Name: '{"text":"Quest Book","color":"light_purple","italic":true}'}, title: "Quest Book", author: "", pages: ['[{"text":"Current Quests","color":"light_purple","underlined":true,"bold":true}]'
-          ]}}}
+summon item 0 64 0 {Tags: ["quest_book"], Age: -32768, PickupDelay: 32767, Item: {id: "minecraft:written_book", Count: 1, tag: {display: {Name: '{"text":"Quest Book","color":"light_purple","italic":true}'}, title: "Quest Book", author: "", pages: ['[{"text":"Current Quests","color":"light_purple","underlined":true,"bold":true}]']}}}
 
 tag @a remove victim-of-dialogue-by-billy
 
