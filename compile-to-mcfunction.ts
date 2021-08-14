@@ -221,7 +221,7 @@ export function createQuest (
             hoverEvent:{
               action:"show_text",
               contents: {
-                text: "test"
+                text: eval(`\`${description}\``)
               }
             }
           })}`
