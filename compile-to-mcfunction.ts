@@ -1,12 +1,12 @@
 import { Lines } from './main.ts'
-import { Npc } from './parse-yaml.ts'
-import { randchoice } from './misc-utils.ts'
+import { Npc, Quest } from './parse-yaml.ts'
 
+type NbtValue = string | number | boolean | undefined | null;
 type NbtData = {
-  [key: string]: string | number | boolean | NbtData | undefined | null
+  [key: string]: NbtValue | NbtData
 }
 
-function toSnbt (nbt: NbtData): string {
+export function toSnbt (nbt: NbtData): string {
   const values = []
   for (const [key, value] of Object.entries(nbt)) {
     if (value === undefined || value === null) continue
@@ -22,16 +22,16 @@ function toSnbt (nbt: NbtData): string {
       }`
     )
   }
-  return values.length ? `{ ${values.join(', ')} }` : '{}'
+  return values.length ? `{${values.join(', ')}}` : '{}'
 }
 
-function rawJson (json: unknown): string {
+export function rawJson (json: unknown): string {
   return `'${JSON.stringify(json).replace(/['\\]/g, match =>
     match === "'" ? "\\'" : '\\\\'
   )}'`
 }
 
-export function toMcfunction (
+export function createNpc (
   namespace: string,
   id: string,
   {
@@ -118,11 +118,7 @@ export function toMcfunction (
     ],
     onLoad: [
       // Reset conversations, if possible (player may be offline)
-      `tag @a remove ${playerTag}`,
-      '',
-      '# Villager interaction detection',
-      `scoreboard objectives add npc-interact minecraft.custom:minecraft.talked_to_villager`,
-      `scoreboard objectives add dialogue-status dummy`
+      `tag @a remove ${playerTag}`
     ],
     onTick: [
       "# Start a conversation if it was selected",
@@ -156,7 +152,7 @@ export function toMcfunction (
               ...message.message
             ])}`,
             `execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets}`,
-            `schedule function ${namespace}:funcs/${
+            `schedule function ${namespace}:dialoguefuncs/${
               i === dialogue.messages.length - 1
                 ? `dialogue-${id}-${idx}-end`
                 : indexToFuncName(i + 1)
@@ -173,7 +169,7 @@ export function toMcfunction (
           `tag ${select.self} remove speaking`
         ]
         return [
-          `execute store success score dialogue-begun dialogue-status if entity ${select.newPlayer} as ${select.self} if score @s dialogue-status matches ${dialogue.cond} run schedule function ${namespace}:funcs/${indexToFuncName(0)} 1t`,
+          `execute store success score dialogue-begun dialogue-status if entity ${select.newPlayer} as ${select.self} if score @s dialogue-status matches ${dialogue.cond} run schedule function ${namespace}:dialoguefuncs/${indexToFuncName(0)} 1t`,
           `execute if score dialogue-begun dialogue-status matches 1 run tag ${select.newPlayer} add spoken-to`,
           `scoreboard players set dialogue-begun dialogue-status 0`,
           ''
@@ -183,6 +179,40 @@ export function toMcfunction (
       '',
       '# While in a conversation, make eye contact with the player.',
       `execute as ${select.speaking} at @s run tp @s ~ ~ ~ facing entity ${select.player}`
+    ],
+    functions
+  }
+}
+
+export function createQuest (
+  namespace: string,
+  id: string,
+  {
+    name,
+    description,
+    cond: {
+      type,
+      value,
+      count = 1,
+    }
+  }: Quest
+): {
+  reset: Lines
+  onLoad: Lines
+  onTick: Lines
+  functions: Record<string, Lines>
+} {
+  
+  const functions: Record<string, Lines> = {}
+
+  return {
+    reset: [
+    ],
+    onLoad: [
+      
+    ],
+    onTick: [
+
     ],
     functions
   }

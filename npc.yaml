@@ -59,3 +59,12 @@ npc:
           - I will call the police.
           cond: 1
           end: 0
+
+quest:
+  bread:
+    name: Whole Wheat
+    description: Eat ${count} pieces of bread.
+    cond:
+      type: stat
+      value: minecraft.used:minecraft.bread
+      count: 5

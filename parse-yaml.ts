@@ -137,6 +137,23 @@ const npcSchema = z
 
 export type Npc = z.infer<typeof npcSchema>
 
+const questSchema = z.
+  object({
+    name: z.string(),
+    description: z.string(),
+    cond: z.object({
+      type: z.union([
+        z.literal('stat'),
+        z.literal('score')
+       ]),
+      value: z.string(),
+      count: z.number().int()
+    })
+  })
+  .strict()
+
+export type Quest = z.infer<typeof questSchema>
+
 const fullSchema = z
   .object({
     npc:z.object({
@@ -144,7 +161,8 @@ const fullSchema = z
         facing_res: z.number().default(3)
       }),
       npcs:z.record(npcSchema)
-    })
+    }),
+    quest: z.record(questSchema)
   })
 
 export function parse (yaml: string): z.infer<typeof fullSchema> {
