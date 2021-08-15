@@ -102,15 +102,23 @@ export async function init (
       '# update quest books',
       `title @a[scores={quest-book-upd=-1}] actionbar ${JSON.stringify([
         {
-          text:"[",
-          color:"light_purple",
-          hoverEvent:{
-            action:"show_item",
-            value:toSnbt(item.quest_book)
+          text: "[",
+          color: "light_purple",
+          hoverEvent: {
+            action: "show_item",
+            value: toSnbt(item.quest_book)
           },
-          extra:[
-            {}
+          extra: [
+            {
+              text: "Quest Book",
+              italic: true
+            },
+            "]"
           ]
+        },
+        {
+          color: "white",
+          text: " updated. Open it to view changes!"
         }
       ])}`,
       `scoreboard players set @a[scores={quest-book-upd=-1}] quest-book-upd 0`,
