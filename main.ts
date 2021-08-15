@@ -91,7 +91,7 @@ export async function init (
       '',
       `# set up quest book`,
       'kill @e[tag=quest_book]',
-      `scoreboard objectives add quest-book-updated dummy`,
+      `scoreboard objectives add quest-book-upd dummy`,
       `data modify storage generated:quest_book quests set value [${rawJson({
           text: "Current Quests\n",
           color: "light_purple",
@@ -114,7 +114,7 @@ export async function init (
       '# update quest books',
       `execute as entity @a[nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] run item modify entity @s weapon.mainhand generated:update_quest_book`,
       `execute as entity @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] run item modify entity @s weapon.offhand generated:update_quest_book`,
-      `scoreboard players set @a quest-book-updated 1`,
+      `scoreboard players set @a quest-book-upd 1`,
       onTick,
       `tag @a remove npc_selector`,
       `tag @e[tag=npc] remove selected_npc`)
