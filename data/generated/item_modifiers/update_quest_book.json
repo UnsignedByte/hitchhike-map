@@ -1,1 +1,1 @@
-{"function":"set_nbt","tag":"{display: {Name: '{\"text\":\"Quest Book\",\"color\":\"light_purple\",\"italic\":true}'}, resolved: 0b, title: \"Quest Book\", author: \"\", pages: ['{\"nbt\":\"quests[]\",\"storage\":\"generated:quest_book\",\"interpret\":true}']}"}
+{"function":"set_nbt","tag":"{display: {Name: '{\"text\":\"Quest Book\",\"color\":\"light_purple\",\"italic\":true}'}, resolved: 0b, title: \"Quest Book\", author: \"\", pages: ['{\"nbt\":\"quests[]\",\"storage\":\"generated:quest_book\",\"interpret\":true,\"separator\":\"\n\"}']}"}

@@ -13,7 +13,7 @@ scoreboard objectives add quest-status dummy
 # set up quest book
 kill @e[tag=quest_book]
 scoreboard objectives add quest-book-upd dummy
-data modify storage generated:quest_book quests set value ['{"text":"Current Quests","color":"light_purple","underlined":true,"bold":true}', '{"text":"\\n","color":"white","bold":false,"underlined":false}']
+data modify storage generated:quest_book quests set value ['{"text":"Current Quests\\n","color":"light_purple","underlined":true,"bold":true}']
 
 tag @a remove victim-of-dialogue-by-billy
 

@@ -93,17 +93,11 @@ export async function init (
       'kill @e[tag=quest_book]',
       `scoreboard objectives add quest-book-upd dummy`,
       `data modify storage generated:quest_book quests set value [${rawJson({
-          text: "Current Quests",
-          color: "light_purple",
-          underlined: true,
-          bold: true
-        }
-       )}, ${rawJson({
-         text: "\n",
-         color: "white",
-         bold: false,
-         underlined: false
-       })}]`,
+        text: "Current Quests\n",
+        color: "light_purple",
+        underlined: true,
+        bold: true
+      })}]`,
       onLoad
     )
   )
@@ -176,7 +170,7 @@ export async function init (
           resolved: false,
           title: '"Quest Book"',
           author: '""',
-          pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true}']`
+          pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true,"separator":"\n"}']`
         })
       }
     )
