@@ -10,8 +10,9 @@ scoreboard objectives add dialogue-status dummy
 # Quest scoreboard setup
 scoreboard objectives add quest-status dummy
 
-# Summon quest book template entity
+# set up quest book
 kill @e[tag=quest_book]
+scoreboard objectives add quest-book-updated dummy
 data modify storage generated:quest_book quests set value ['{"text":"Current Quests\\n","color":"light_purple","underlined":true,"bold":true}']
 
 tag @a remove victim-of-dialogue-by-billy

@@ -89,8 +89,9 @@ export async function init (
       '# Quest scoreboard setup',
       'scoreboard objectives add quest-status dummy',
       '',
-      `# Summon quest book template entity`,
+      `# set up quest book`,
       'kill @e[tag=quest_book]',
+      `scoreboard objectives add quest-book-updated dummy`,
       `data modify storage generated:quest_book quests set value [${rawJson({
           text: "Current Quests\n",
           color: "light_purple",
@@ -109,6 +110,11 @@ export async function init (
       `# Detect right clicks`,
       `execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc`,
       `scoreboard players set @a npc-interact 0`,
+      '',
+      '# update quest books',
+      `execute as entity @a[nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] run item modify entity @s weapon.mainhand generated:update_quest_book`,
+      `execute as entity @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] run item modify entity @s weapon.offhand generated:update_quest_book`,
+      `scoreboard players set @a quest-book-updated 1`,
       onTick,
       `tag @a remove npc_selector`,
       `tag @e[tag=npc] remove selected_npc`)
@@ -123,13 +129,6 @@ export async function init (
 
 
   //generate helper functions
-
-  await Deno.writeTextFile(
-    join(basePath, `./data/${namespace}/functions/update_quest_book.mcfunction`),
-    lines(
-      ``
-    )
-  )
 
   //tag npcs player looks towards
   await Deno.writeTextFile(

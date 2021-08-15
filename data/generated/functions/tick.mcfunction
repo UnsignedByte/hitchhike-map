@@ -3,6 +3,11 @@
 execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc
 scoreboard players set @a npc-interact 0
 
+# update quest books
+execute as entity @a[nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] run item modify entity @s weapon.mainhand generated:update_quest_book
+execute as entity @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] run item modify entity @s weapon.offhand generated:update_quest_book
+scoreboard players set @a quest-book-updated 1
+
 # Start a conversation if it was selected
 execute at @e[tag=npc-billy, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-billy
 tag @a[tag=victim-of-dialogue-by-billy, limit=1] remove npc_selector

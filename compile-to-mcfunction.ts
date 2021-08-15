@@ -216,6 +216,7 @@ export function createQuest (
       ((): string => {
         functions[`quests-quest-${id}-start`] = [
           `scoreboard players set ${id} quest-status 0`,
+          `scoreboard players set @a quest-book-updated 0`,
           `data modify storage generated:quest_book quests append value ${rawJson({
             text:`[`,
             color:"green",
