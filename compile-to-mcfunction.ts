@@ -186,6 +186,7 @@ export function createNpc (
 
 export function createQuest (
   namespace: string,
+  ind: number,
   id: string,
   {
     name,
@@ -210,24 +211,16 @@ export function createQuest (
 
     ],
     onLoad: [
-      (() => {
-        switch(type){
-          case 'stat':
-            return `scoreboard objectives add q-${id} ${value}`;
-          default:
-            return '';
-        }
-      })()
     ],
     onTick: [
       (() => {
         functions[`quests-quest-${id}-start`] = [
+          `scoreboard objectives add q-${id} ${type === 'stat' ? value : 'dummy'}`,
           `scoreboard players set ${id} quest-status 0`,
           `scoreboard players set @a quest-book-upd 0`,
-          `data modify storage generated:quest_book quests append value ${rawJson({
-            text:`[`,
+          `data modify storage generated:quest_book current[${ind}] set value ${rawJson({
+            text:``,
             color:"dark_green",
-            bold:false,
             hoverEvent:{
               action:"show_text",
               contents: {
@@ -239,17 +232,40 @@ export function createQuest (
                 text:name,
                 italic:true
               },
-              ' (',
+              '\t(',
               {
                 score:{
                   name: id,
                   objective: 'quest-status'
                 }
               },
-              `/${count})]`
+              `/${count})`
             ]
           })}`
-         ]
+        ]
+
+        functions[`quests-quest-${id}-end`] = [
+          `scoreboard objectives remove q-${id}`,
+          `data modify storage generated:quest_book current[${ind}] set value ''`,
+          `data modify storage generated:quest_book completed[${ind}] set value ${rawJson({
+            text:``,
+            color:"gray",
+            strikethrough:true,
+            hoverEvent:{
+              action:"show_text",
+              contents: {
+                text: eval(`\`${description}\``)
+              }
+            },
+            extra:[
+              {
+                text:name,
+                italic:true
+              },
+              `\t(${count}/${count})`
+            ]
+          })}`
+        ]
         switch(type){
           case 'stat':
             return [
@@ -260,7 +276,8 @@ export function createQuest (
           default:
             return '';
         }
-      })()
+      })(),
+      `execute if score ${id} quest-status matches ${count}.. run function generated:generated/quests-quest-${id}-end`
     ],
     functions
   }

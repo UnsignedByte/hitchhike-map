@@ -37,8 +37,10 @@ export async function init (
     Object.assign(functions, result.functions)
   }
 
+  let questCount = 0;
+
   for (const [id, dat] of Object.entries(data.quest)) {
-    const result = createQuest(namespace, id, dat)
+    const result = createQuest(namespace, questCount++, id, dat)
     // The empty string is to have an empty between each entry
     reset.push('', result.reset)
     onLoad.push('', result.onLoad)
@@ -92,12 +94,8 @@ export async function init (
       `# set up quest book`,
       'kill @e[tag=quest_book]',
       `scoreboard objectives add quest-book-upd dummy`,
-      `data modify storage generated:quest_book quests set value [${rawJson({
-        text: "Current Quests\n",
-        color: "light_purple",
-        underlined: true,
-        bold: true
-      })}]`,
+      `data modify storage generated:quest_book current set value ${JSON.stringify(Array(questCount).fill(""))}`,
+      `data modify storage generated:quest_book completed set value ${JSON.stringify(Array(questCount).fill(""))}`,
       onLoad
     )
   )
@@ -170,7 +168,33 @@ export async function init (
           resolved: false,
           title: '"Quest Book"',
           author: '""',
-          pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true,"separator":"\n"}']`
+          pages:`[${rawJson([
+            {
+              text: "Current Quests\n",
+              color: "light_purple",
+              underlined: true,
+              bold: true
+            },
+            {
+              nbt:"current[]",
+              storage:"generated:quest_book",
+              interpret:true,
+              separator:"\n"
+            }
+          ])}, ${rawJson([
+            {
+              text: "Completed Quests\n",
+              color: "light_purple",
+              underlined: true,
+              bold: true
+            },
+            {
+              nbt:"completed[]",
+              storage:"generated:quest_book",
+              interpret:true,
+              separator:"\n"
+            }
+          ])}]`
         })
       }
     )

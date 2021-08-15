@@ -13,7 +13,8 @@ scoreboard objectives add quest-status dummy
 # set up quest book
 kill @e[tag=quest_book]
 scoreboard objectives add quest-book-upd dummy
-data modify storage generated:quest_book quests set value ['{"text":"Current Quests\\n","color":"light_purple","underlined":true,"bold":true}']
+data modify storage generated:quest_book current set value [""]
+data modify storage generated:quest_book completed set value [""]
 
 tag @a remove victim-of-dialogue-by-billy
 
@@ -21,4 +22,3 @@ tag @a remove victim-of-dialogue-by-sam
 
 tag @a remove victim-of-dialogue-by-marc
 
-scoreboard objectives add q-bread minecraft.used:minecraft.bread
