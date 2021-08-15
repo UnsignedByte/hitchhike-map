@@ -274,7 +274,7 @@ export function createQuest (
           case 'stat':
             return [
               `scoreboard players operation ${id} quest-status += @a q-${id}`,
-              `execute if entity @a[scores={q-${id}=1..}] run scoreboard players set @a quest-book-upd 0`,
+              `execute if entity @a[scores={q-${id}=1..}] run scoreboard players set @a quest-book-upd -1`,
               `scoreboard players set @a q-${id} 0`
             ];
           default:

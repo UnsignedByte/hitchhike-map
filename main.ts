@@ -3,6 +3,7 @@ import { join } from 'https://deno.land/std@0.102.0/path/mod.ts'
 import { parse as parseArgs } from 'https://deno.land/std@0.104.0/flags/mod.ts'
 import { createNpc, createQuest, toSnbt, rawJson } from './compile-to-mcfunction.ts'
 import { parse } from './parse-yaml.ts'
+import { item } from './item.ts'
 
 export type Lines = string | Lines[]
 
@@ -61,17 +62,7 @@ export async function init (
       'clear @a minecraft:written_book{title:"Quest Book"}',
       '# Give new quest book',
       `scoreboard players set @a quest-book-upd 0`,
-      `give @a written_book${toSnbt({
-        display: {
-          Name: rawJson({
-            text: "Quest Book",
-            color: "light_purple",
-            italic: true
-          })
-        },
-        title: '"Quest Book"',
-        author: '""'
-      })}`,
+      `give @a written_book${toSnbt(item.quest_book.tag)}`,
       reset
     )
   )
@@ -109,6 +100,20 @@ export async function init (
       `scoreboard players set @a npc-interact 0`,
       '',
       '# update quest books',
+      `title @a[scores={quest-book-upd=-1}] actionbar ${JSON.stringify([
+        {
+          text:"[",
+          color:"light_purple",
+          hoverEvent:{
+            action:"show_item",
+            value:toSnbt(item.quest_book)
+          },
+          extra:[
+            {}
+          ]
+        }
+      ])}`,
+      `scoreboard players set @a[scores={quest-book-upd=-1}] quest-book-upd 0`,
       `execute as @a[scores={quest-book-upd=0},nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] store result score @s quest-book-upd run item modify entity @s weapon.mainhand generated:update_quest_book`,
       `execute as @a[scores={quest-book-upd=0},nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] store result score @s quest-book-upd run item modify entity @s weapon.offhand generated:update_quest_book`,
       onTick,
@@ -157,45 +162,7 @@ export async function init (
     JSON.stringify(
       {
         function: "set_nbt",
-        tag: toSnbt({
-          display: {
-            Name: rawJson({
-              text: "Quest Book",
-              color: "light_purple",
-              italic: true
-            })
-          },
-          resolved: false,
-          title: '"Quest Book"',
-          author: '""',
-          pages:`[${rawJson([
-            {
-              text: "Current Quests\n",
-              color: "light_purple",
-              underlined: true,
-              bold: true
-            },
-            {
-              nbt:"current[]",
-              storage:"generated:quest_book",
-              interpret:true,
-              separator:"\n"
-            }
-          ])}, ${rawJson([
-            {
-              text: "Completed Quests\n",
-              color: "light_purple",
-              underlined: true,
-              bold: true
-            },
-            {
-              nbt:"completed[]",
-              storage:"generated:quest_book",
-              interpret:true,
-              separator:"\n"
-            }
-          ])}]`
-        })
+        tag: toSnbt(item.quest_book.tag)
       }
     )
   )

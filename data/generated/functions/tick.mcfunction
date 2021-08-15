@@ -4,6 +4,8 @@ execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:p
 scoreboard players set @a npc-interact 0
 
 # update quest books
+title @a[scores={quest-book-upd=-1}] actionbar [{"text":"[","color":"light_purple","hoverEvent":{"action":"show_item","value":"{id: \"minecraft:written_book\", Count: 1b, tag: {display: {Name: '{\"text\":\"Quest Book\",\"color\":\"light_purple\",\"italic\":true}'}, resolved: 0b, title: \"Quest Book\", author: \"\", pages: ['[{\"text\":\"Current Quests\\\\n\",\"color\":\"light_purple\",\"underlined\":true,\"bold\":true},{\"nbt\":\"current[]\",\"storage\":\"generated:quest_book\",\"interpret\":true,\"separator\":\"\\\\n\"}]', '[{\"text\":\"Completed Quests\\\\n\",\"color\":\"light_purple\",\"underlined\":true,\"bold\":true},{\"nbt\":\"completed[]\",\"storage\":\"generated:quest_book\",\"interpret\":true,\"separator\":\"\\\\n\"}]']}}"},"extra":[{}]}]
+scoreboard players set @a[scores={quest-book-upd=-1}] quest-book-upd 0
 execute as @a[scores={quest-book-upd=0},nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] store result score @s quest-book-upd run item modify entity @s weapon.mainhand generated:update_quest_book
 execute as @a[scores={quest-book-upd=0},nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] store result score @s quest-book-upd run item modify entity @s weapon.offhand generated:update_quest_book
 
@@ -51,7 +53,7 @@ tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] remove victim-of
 execute as @e[tag=npc-marc, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-marc, limit=1]
 
 scoreboard players operation bread quest-status += @a q-bread
-execute if entity @a[scores={q-bread=1..}] run scoreboard players set @a quest-book-upd 0
+execute if entity @a[scores={q-bread=1..}] run scoreboard players set @a quest-book-upd -1
 scoreboard players set @a q-bread 0
 execute if score bread quest-status matches 5.. run function generated:generated/quests-quest-bread-end
 tag @a remove npc_selector
