@@ -28,7 +28,7 @@ export async function init (
   const onLoad: Lines = [
     `# Summon quest book template entity`,
     'kill @e[tag=quest_book]',
-    `data modify storage generated:quest_book quests set value [${rawJson({
+    `data modify storage generated:quest_book quests set value [${JSON.stringify({
           text: "Current Quests",
           color: "light_purple",
           underlined: true,
