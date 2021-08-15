@@ -1,7 +1,4 @@
 {
-	"function": "copy_nbt",
-	"source":	{
-		"type": "storage",
-		"target": "generated:quest_book_template"
-	}
+  "function": "set_name",
+  "name": "Useless Stick"
 }
