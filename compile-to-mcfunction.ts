@@ -215,15 +215,25 @@ export function createQuest (
     onTick: [
       ((): string => {
         functions[`quests-quest-${id}-start`] = [
-          `data modify storage generated:quest_book quests append value ${JSON.stringify({
-            text:`[${name}]`,
+          `data modify storage generated:quest_book quests append value ${rawJson({
+            text:`[${name}`,
             color:"green",
             hoverEvent:{
               action:"show_text",
               contents: {
                 text: eval(`\`${description}\``)
               }
-            }
+            },
+            extra:[
+              '(',
+              {
+                score:{
+                  name: id,
+                  objective: 'quest-status'
+                }
+              },
+              `/${count})]`
+            ]
           })}`
          ]
         return '';

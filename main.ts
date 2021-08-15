@@ -25,22 +25,8 @@ export async function init (
   await emptyDir(join(basePath, `./data/${namespace}/functions/`))
   const data = parse(await Deno.readTextFile(yamlPath))
   const reset: Lines = []
-  const onLoad: Lines = [
-    `# Summon quest book template entity`,
-    'kill @e[tag=quest_book]',
-    `data modify storage generated:quest_book quests set value [${JSON.stringify({
-          text: "Current Quests",
-          color: "light_purple",
-          underlined: true,
-          bold: true
-        }
-       )}]`
-  ]
-  const onTick: Lines = [
-    `# Detect right clicks`,
-    `execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc`,
-    `scoreboard players set @a npc-interact 0`
-  ]
+  const onLoad: Lines = []
+  const onTick: Lines = []
   const functions: Record<string, Lines> = {}
   for (const [id, dat] of Object.entries(data.npc.npcs)) {
     const result = createNpc(namespace, id, dat)
@@ -86,12 +72,29 @@ export async function init (
       '',
       '# Quest scoreboard setup',
       'scoreboard objectives add quest-status dummy',
+      '',
+      `# Summon quest book template entity`,
+      'kill @e[tag=quest_book]',
+      `data modify storage generated:quest_book quests set value [${rawJson({
+          text: "Current Quests",
+          color: "light_purple",
+          underlined: true,
+          bold: true
+        }
+       )}]`,
       onLoad
     )
   )
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/tick.mcfunction`),
-    lines('# NPC dialogue', onTick, `tag @a remove npc_selector`, `tag @e[tag=npc] remove selected_npc`)
+    lines(
+      '# NPC dialogue',
+      `# Detect right clicks`,
+      `execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc`,
+      `scoreboard players set @a npc-interact 0`,
+      onTick,
+      `tag @a remove npc_selector`,
+      `tag @e[tag=npc] remove selected_npc`)
   )
   await emptyDir(join(basePath, `./data/${namespace}/functions/generated/`))
   for (const [name, contents] of Object.entries(functions)) {
