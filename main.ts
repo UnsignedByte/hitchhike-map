@@ -174,7 +174,7 @@ export async function init (
     JSON.stringify(
       {
         function: "set_nbt",
-        tag: rawJson({
+        tag: toSnbt({
           display: {
             Name: rawJson({
               text: "Quest Book",
