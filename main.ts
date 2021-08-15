@@ -98,18 +98,6 @@ export async function init (
           bold: true
         }
        )}]`,
-      `data merge storage generated:quest_book_template ${toSnbt({
-        display: {
-          Name: rawJson({
-            text: "Quest Book",
-            color: "light_purple",
-            italic: true
-          })
-        },
-        title: '"Quest Book"',
-        author: '""',
-        pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true}']`
-      })}`,
       onLoad
     )
   )
@@ -182,6 +170,7 @@ export async function init (
               italic: true
             })
           },
+          resolved: false,
           title: '"Quest Book"',
           author: '""',
           pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true}']`
