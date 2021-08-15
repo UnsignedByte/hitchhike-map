@@ -113,6 +113,7 @@ export async function init (
       onLoad
     )
   )
+
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/tick.mcfunction`),
     lines(
@@ -165,6 +166,29 @@ export async function init (
     )
   )
 
+  // item modifiers
+  await emptyDir(join(basePath, `./data/${namespace}/item_modifiers`))
+
+  await Deno.writeTextFile(
+    join(basePath, `./data/${namespace}/item_modifiers/update_quest_book.json`),
+    JSON.stringify(
+      {
+        function: "set_nbt",
+        tag: rawJson({
+          display: {
+            Name: rawJson({
+              text: "Quest Book",
+              color: "light_purple",
+              italic: true
+            })
+          },
+          title: '"Quest Book"',
+          author: '""',
+          pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true}']`
+        })
+      }
+    )
+  )
 }
 
 if (import.meta.main) {
