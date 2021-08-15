@@ -129,7 +129,7 @@ export function createNpc (
 
       dialogue.map((dialogue, idx) => {
         const indexToFuncName = (i: number) =>
-          `npc-dialogue-${id}-${idx}-${i
+          `npc/dialogue-${id}-${idx}-${i
             .toString()
             .padStart(String(dialogue.messages.length - 1).length, '0')}`
         for (const [i, message] of dialogue.messages.entries()) {
@@ -141,7 +141,7 @@ export function createNpc (
           const fulltext = message.message.map(x=>x.text || '').join("");
           const duration = (fulltext.match(/[aiueo]/gi)?.length ?? 0) * 5
           const broadcastTargets = message.global ? '@a' : select.eavesdropper;
-          functions[`npc/${indexToFuncName(i)}`] = [
+          functions[`${indexToFuncName(i)}`] = [
             `# Dialogue line #${idx}-${i + 1}: speak and make noise.`,
             `execute at ${select.self} run tellraw ${
               broadcastTargets
@@ -152,14 +152,14 @@ export function createNpc (
               ...message.message
             ])}`,
             `execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets}`,
-            `schedule function ${namespace}:npc/${
+            `schedule function ${namespace}:${
               i === dialogue.messages.length - 1
-                ? `dialogue-${id}-${idx}-end`
+                ? `npc/dialogue-${id}-${idx}-end`
                 : indexToFuncName(i + 1)
             } ${duration}t`
           ]
         }
-        functions[`npc/npc-dialogue-${id}-${idx}-end`] = [
+        functions[`npc/dialogue-${id}-${idx}-end`] = [
           '# Handle the end of the conversation.',
           // No `limit=1` just in case there are multiple players with the tag
           `tag @a[tag=${playerTag}] remove spoken-to`,
@@ -169,7 +169,7 @@ export function createNpc (
           `tag ${select.self} remove speaking`
         ]
         return [
-          `execute store success score dialogue-begun dialogue-status if entity ${select.newPlayer} as ${select.self} if score @s dialogue-status matches ${dialogue.cond} run schedule function ${namespace}:npc/${indexToFuncName(0)} 1t`,
+          `execute store success score dialogue-begun dialogue-status if entity ${select.newPlayer} as ${select.self} if score @s dialogue-status matches ${dialogue.cond} run schedule function ${namespace}:${indexToFuncName(0)} 1t`,
           `execute if score dialogue-begun dialogue-status matches 1 run tag ${select.newPlayer} add spoken-to`,
           `scoreboard players set dialogue-begun dialogue-status 0`,
           ''
