@@ -93,12 +93,17 @@ export async function init (
       'kill @e[tag=quest_book]',
       `scoreboard objectives add quest-book-upd dummy`,
       `data modify storage generated:quest_book quests set value [${rawJson({
-          text: "Current Quests\n",
+          text: "Current Quests",
           color: "light_purple",
           underlined: true,
           bold: true
         }
-       )}]`,
+       )}, ${rawJson({
+         text: "\n",
+         color: "white",
+         bold: false,
+         underlined: false
+       })}]`,
       onLoad
     )
   )
