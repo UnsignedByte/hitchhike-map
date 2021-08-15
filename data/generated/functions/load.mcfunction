@@ -21,3 +21,4 @@ tag @a remove victim-of-dialogue-by-sam
 
 tag @a remove victim-of-dialogue-by-marc
 
+scoreboard objectives add q-bread minecraft.used:minecraft.bread

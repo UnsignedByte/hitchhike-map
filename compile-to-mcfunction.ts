@@ -210,10 +210,17 @@ export function createQuest (
 
     ],
     onLoad: [
-      
+      (() => {
+        switch(type){
+          case 'stat':
+            return `scoreboard objectives add q-${id} ${value}`;
+          default:
+            return '';
+        }
+      })()
     ],
     onTick: [
-      ((): string => {
+      (() => {
         functions[`quests-quest-${id}-start`] = [
           `scoreboard players set ${id} quest-status 0`,
           `scoreboard players set @a quest-book-upd 0`,
@@ -243,7 +250,16 @@ export function createQuest (
             ]
           })}`
          ]
-        return '';
+        switch(type){
+          case 'stat':
+            return [
+              `scoreboard players operation ${id} quest-status += @a q-${id}`,
+              `execute if entity @a[scores={q-${id}=1..}] run scoreboard players set @a quest-book-upd 0`,
+              `scoreboard players set @a q-${id} 0`
+            ];
+          default:
+            return '';
+        }
       })()
     ],
     functions

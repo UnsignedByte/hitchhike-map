@@ -4,7 +4,6 @@ execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:p
 scoreboard players set @a npc-interact 0
 
 # update quest books
-scoreboard players set @a[nbt=!{SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}},nbt=!{Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] quest-book-upd 0
 execute as @a[scores={quest-book-upd=0},nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] store result score @s quest-book-upd run item modify entity @s weapon.mainhand generated:update_quest_book
 execute as @a[scores={quest-book-upd=0},nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] store result score @s quest-book-upd run item modify entity @s weapon.offhand generated:update_quest_book
 
@@ -51,6 +50,8 @@ tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] remove victim-of
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-marc, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-marc, limit=1]
 
-
+scoreboard players operation bread quest-status += @a q-bread
+execute if entity @a[scores={q-bread=1..}] run scoreboard players set @a quest-book-upd 0
+scoreboard players set @a q-bread 0
 tag @a remove npc_selector
 tag @e[tag=npc] remove selected_npc
