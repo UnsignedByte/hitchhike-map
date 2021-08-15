@@ -61,7 +61,7 @@ export async function init (
       '# Clear quest book from all players.',
       'clear @a minecraft:written_book{title:"Quest Book"}',
       '# Give new quest book',
-      `give @a ${item.quest_book.id}${toSnbt(item.quest_book.tag)}`,
+      `give @a written_book${toSnbt(item.quest_book.tag)}`,
       reset
     )
   )
