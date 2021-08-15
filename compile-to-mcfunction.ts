@@ -226,7 +226,7 @@ export function createQuest (
           `scoreboard players set @a quest-book-upd 0`,
           `data modify storage generated:quest_book quests append value ${rawJson({
             text:`[`,
-            color:"green",
+            color:"dark_green",
             bold:false,
             hoverEvent:{
               action:"show_text",
@@ -239,7 +239,7 @@ export function createQuest (
                 text:name,
                 italic:true
               },
-              '(',
+              ' (',
               {
                 score:{
                   name: id,
