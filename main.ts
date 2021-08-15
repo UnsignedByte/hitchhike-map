@@ -1,5 +1,5 @@
 import { ensureDir, emptyDir } from 'https://deno.land/std@0.102.0/fs/mod.ts'
-import { join } from 'https://deno.land/std@0.102.0/path/mod.ts'
+import { join, dirname } from 'https://deno.land/std@0.102.0/path/mod.ts'
 import { parse as parseArgs } from 'https://deno.land/std@0.104.0/flags/mod.ts'
 import { createNpc, createQuest, toSnbt, rawJson } from './compile-to-mcfunction.ts'
 import { parse } from './parse-yaml.ts'
@@ -23,7 +23,7 @@ export async function init (
   basePath: string,
   { namespace = 'minecraft', description = 'Mysterious datapack' } = {}
 ): Promise<void> {
-  await emptyDir(join(basePath, `./data/${namespace}/functions/`))
+  await emptyDir(join(basePath, `./data/${namespace}/`))
   const data = parse(await Deno.readTextFile(yamlPath))
   const reset: Lines = []
   const onLoad: Lines = []
@@ -61,8 +61,7 @@ export async function init (
       '# Clear quest book from all players.',
       'clear @a minecraft:written_book{title:"Quest Book"}',
       '# Give new quest book',
-      `scoreboard players set @a quest-book-upd 0`,
-      `give @a written_book${toSnbt(item.quest_book.tag)}`,
+      `give @a ${item.quest_book.id}${toSnbt(item.quest_book.tag)}`,
       reset
     )
   )
@@ -128,42 +127,39 @@ export async function init (
       `tag @a remove npc_selector`,
       `tag @e[tag=npc] remove selected_npc`)
   )
-  await emptyDir(join(basePath, `./data/${namespace}/functions/generated/`))
-  for (const [name, contents] of Object.entries(functions)) {
-    await Deno.writeTextFile(
-      join(basePath, `./data/${namespace}/functions/generated/${name}.mcfunction`),
-      lines(contents)
-    )
-  }
 
 
   //generate helper functions
 
   //tag npcs player looks towards
-  await Deno.writeTextFile(
-    join(basePath, `./data/${namespace}/functions/player_facing_npc.mcfunction`),
-    lines(
-      ((): string[] =>{
-        const factor = 3/data.npc.params.facing_res;
-        let cmds: string[] = [];
-        let td: number = 0;
-        for(let i: number = data.npc.params.facing_res; i > 0; i--) {
-          td+=factor;
-          cmds.push(`execute at @s positioned ^ ^ ^${td} run tag @e[tag=npc,distance=..${factor}] add player_facing_npc`);
-          cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~1 ~ run tag @e[tag=npc,distance=..${factor}] add player_facing_npc`);
-        }
-        return [
-          ...cmds,
-          `execute at @s run tag @e[tag=player_facing_npc,sort=nearest,limit=1] add selected_npc`,
-          `tag @e remove player_facing_npc`,
-          `execute if entity @e[tag=selected_npc] run tag @s add npc_selector`
-        ];
-      })()
+  functions[`player_facing_npc.mcfunction`] = ((): string[] =>{
+    const factor = 3/data.npc.params.facing_res;
+    let cmds: string[] = [];
+    let td: number = 0;
+    for(let i: number = data.npc.params.facing_res; i > 0; i--) {
+      td+=factor;
+      cmds.push(`execute at @s positioned ^ ^ ^${td} run tag @e[tag=npc,distance=..${factor}] add player_facing_npc`);
+      cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~1 ~ run tag @e[tag=npc,distance=..${factor}] add player_facing_npc`);
+    }
+    return [
+      ...cmds,
+      `execute at @s run tag @e[tag=player_facing_npc,sort=nearest,limit=1] add selected_npc`,
+      `tag @e remove player_facing_npc`,
+      `execute if entity @e[tag=selected_npc] run tag @s add npc_selector`
+    ];
+  })()
+
+
+  for (const [name, contents] of Object.entries(functions)) {
+    await ensureDir(join(basePath, `./data/${namespace}/functions/`, dirname(name)))
+    await Deno.writeTextFile(
+      join(basePath, `./data/${namespace}/functions/`, `${name}.mcfunction`),
+      lines(contents)
     )
-  )
+  }
 
   // item modifiers
-  await emptyDir(join(basePath, `./data/${namespace}/item_modifiers`))
+  await ensureDir(join(basePath, `./data/${namespace}/item_modifiers`))
 
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/item_modifiers/update_quest_book.json`),

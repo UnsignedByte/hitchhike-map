@@ -141,7 +141,7 @@ export function createNpc (
           const fulltext = message.message.map(x=>x.text || '').join("");
           const duration = (fulltext.match(/[aiueo]/gi)?.length ?? 0) * 5
           const broadcastTargets = message.global ? '@a' : select.eavesdropper;
-          functions[indexToFuncName(i)] = [
+          functions[`npc/${indexToFuncName(i)}`] = [
             `# Dialogue line #${idx}-${i + 1}: speak and make noise.`,
             `execute at ${select.self} run tellraw ${
               broadcastTargets
@@ -159,7 +159,7 @@ export function createNpc (
             } ${duration}t`
           ]
         }
-        functions[`npc-dialogue-${id}-${idx}-end`] = [
+        functions[`npc/npc-dialogue-${id}-${idx}-end`] = [
           '# Handle the end of the conversation.',
           // No `limit=1` just in case there are multiple players with the tag
           `tag @a[tag=${playerTag}] remove spoken-to`,
@@ -214,10 +214,10 @@ export function createQuest (
     ],
     onTick: [
       (() => {
-        functions[`quests-quest-${id}-start`] = [
+        functions[`quests/quest-${id}-start`] = [
           `scoreboard objectives add q-${id} ${type === 'stat' ? value : 'dummy'}`,
           `scoreboard players set ${id} quest-status 0`,
-          `scoreboard players set @a quest-book-upd 0`,
+          `scoreboard players set @a quest-book-upd -1`,
           `data modify storage generated:quest_book current[${ind}] set value ${rawJson({
             text:``,
             color:"dark_green",
@@ -246,7 +246,7 @@ export function createQuest (
           })}`
         ]
 
-        functions[`quests-quest-${id}-end`] = [
+        functions[`quests/quest-${id}-end`] = [
           `scoreboard objectives remove q-${id}`,
           `data modify storage generated:quest_book current[${ind}] set value ''`,
           `data modify storage generated:quest_book completed[${ind}] set value ${rawJson({
@@ -281,7 +281,7 @@ export function createQuest (
             return '';
         }
       })(),
-      `execute if score ${id} quest-status matches ${count}.. run function generated:generated/quests-quest-${id}-end`
+      `execute if score ${id} quest-status matches ${count}.. run function generated:quests/quest-${id}-end`
     ],
     functions
   }

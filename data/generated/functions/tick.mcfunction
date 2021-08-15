@@ -55,6 +55,6 @@ execute as @e[tag=npc-marc, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing 
 scoreboard players operation bread quest-status += @a q-bread
 execute if entity @a[scores={q-bread=1..}] run scoreboard players set @a quest-book-upd -1
 scoreboard players set @a q-bread 0
-execute if score bread quest-status matches 5.. run function generated:generated/quests-quest-bread-end
+execute if score bread quest-status matches 5.. run function generated:quests/quest-bread-end
 tag @a remove npc_selector
 tag @e[tag=npc] remove selected_npc
