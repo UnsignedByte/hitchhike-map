@@ -60,6 +60,7 @@ export async function init (
       '# Clear quest book from all players.',
       'clear @a minecraft:written_book{title:"Quest Book"}',
       '# Give new quest book',
+      `scoreboard players set @a quest-book-upd 0`,
       `give @a written_book${toSnbt({
         display: {
           Name: rawJson({
@@ -69,8 +70,7 @@ export async function init (
           })
         },
         title: '"Quest Book"',
-        author: '""',
-        pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true}']`
+        author: '""'
       })}`,
       reset
     )

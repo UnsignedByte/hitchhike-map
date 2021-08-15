@@ -221,6 +221,8 @@ export function createQuest (
           `data modify storage generated:quest_book current[${ind}] set value ${rawJson({
             text:``,
             color:"dark_green",
+            bold:false,
+            underlined:false,
             hoverEvent:{
               action:"show_text",
               contents: {
@@ -232,7 +234,7 @@ export function createQuest (
                 text:name,
                 italic:true
               },
-              '\t(',
+              ' (',
               {
                 score:{
                   name: id,
@@ -250,6 +252,8 @@ export function createQuest (
           `data modify storage generated:quest_book completed[${ind}] set value ${rawJson({
             text:``,
             color:"gray",
+            bold:false,
+            underlined:false,
             strikethrough:true,
             hoverEvent:{
               action:"show_text",
@@ -262,7 +266,7 @@ export function createQuest (
                 text:name,
                 italic:true
               },
-              `\t(${count}/${count})`
+              ` (${count}/${count})`
             ]
           })}`
         ]
