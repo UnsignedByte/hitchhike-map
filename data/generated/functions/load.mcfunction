@@ -12,7 +12,8 @@ scoreboard objectives add quest-status dummy
 
 # Summon quest book template entity
 kill @e[tag=quest_book]
-data modify storage generated:quest_book quests set value ['{"text":"Current Quests","color":"light_purple","underlined":true,"bold":true}']
+data modify storage generated:quest_book quests set value ['{"text":"Current Quests\\n","color":"light_purple","underlined":true,"bold":true}']
+data merge storage generated:quest_book_template {display: {Name: '{"text":"Quest Book","color":"light_purple","italic":true}'}, title: "Quest Book", author: "", pages: ['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true}']}
 
 tag @a remove victim-of-dialogue-by-billy
 

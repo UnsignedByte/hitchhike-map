@@ -54,6 +54,22 @@ export async function init (
     lines(
       '# Kill all existing NPCs.',
       'kill @e[type=minecraft:villager, tag=npc]',
+      '',
+      '# Clear quest book from all players.',
+      'clear @a minecraft:written_book{title:"Quest Book"}',
+      '# Give new quest book',
+      `give @a written_book${toSnbt({
+        display: {
+          Name: rawJson({
+            text: "Quest Book",
+            color: "light_purple",
+            italic: true
+          })
+        },
+        title: '"Quest Book"',
+        author: '""',
+        pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true}']`
+      })}`,
       reset
     )
   )
@@ -76,12 +92,24 @@ export async function init (
       `# Summon quest book template entity`,
       'kill @e[tag=quest_book]',
       `data modify storage generated:quest_book quests set value [${rawJson({
-          text: "Current Quests",
+          text: "Current Quests\n",
           color: "light_purple",
           underlined: true,
           bold: true
         }
        )}]`,
+      `data merge storage generated:quest_book_template ${toSnbt({
+        display: {
+          Name: rawJson({
+            text: "Quest Book",
+            color: "light_purple",
+            italic: true
+          })
+        },
+        title: '"Quest Book"',
+        author: '""',
+        pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true}']`
+      })}`,
       onLoad
     )
   )
@@ -108,23 +136,9 @@ export async function init (
   //generate helper functions
 
   await Deno.writeTextFile(
-    join(basePath, `./data/${namespace}/functions/give_quest_book.mcfunction`),
+    join(basePath, `./data/${namespace}/functions/update_quest_book.mcfunction`),
     lines(
-      '# Clear quest book from all players.',
-      'clear @a minecraft:written_book{title:"Quest Book"}',
-      '# Give new quest book',
-      `give @a written_book${toSnbt({
-        display: {
-          Name: rawJson({
-            text: "Quest Book",
-            color: "light_purple",
-            italic: true
-          })
-        },
-        title: '"Quest Book"',
-        author: '""',
-        pages:`['{"nbt":"quests[]","storage":"generated:quest_book","interpret":true}']`
-      })}`
+      ``
     )
   )
 

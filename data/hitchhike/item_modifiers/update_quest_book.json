@@ -1,0 +1,7 @@
+{
+	"function": "copy_nbt",
+	"source":	{
+		"type": "storage",
+		"target": "generated:quest_book_template"
+	}
+}
