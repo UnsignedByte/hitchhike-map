@@ -4,8 +4,8 @@ execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:p
 scoreboard players set @a npc-interact 0
 
 # update quest books
-execute as entity @a[nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] run item modify entity @s weapon.mainhand generated:update_quest_book
-execute as entity @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] run item modify entity @s weapon.offhand generated:update_quest_book
+execute as @a[nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] run item modify entity @s weapon.mainhand generated:update_quest_book
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] run item modify entity @s weapon.offhand generated:update_quest_book
 scoreboard players set @a quest-book-upd 1
 
 # Start a conversation if it was selected
