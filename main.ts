@@ -132,7 +132,7 @@ export async function init (
   //generate helper functions
 
   //tag npcs player looks towards
-  functions[`player_facing_npc.mcfunction`] = ((): string[] =>{
+  functions[`player_facing_npc`] = ((): string[] =>{
     const factor = 3/data.npc.params.facing_res;
     let cmds: string[] = [];
     let td: number = 0;
