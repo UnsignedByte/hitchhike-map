@@ -9,6 +9,7 @@ scoreboard objectives add dialogue-status dummy
 
 # Quest scoreboard setup
 scoreboard objectives add quest-status dummy
+scoreboard objectives add quest-status-old dummy
 
 # set up quest book
 kill @e[tag=quest_book]

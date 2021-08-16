@@ -268,14 +268,16 @@ export function createQuest (
               },
               ` (${count}/${count})`
             ]
-          })}`
+          })}`,
+          `scoreboard players set @a quest-book-upd -1`
         ]
         switch(type){
           case 'stat':
             return [
+              `execute store result score ${id} quest-status-old run scoreboard players get ${id} quest-status`,
+              `scoreboard players set ${id} quest-status 0`,
               `scoreboard players operation ${id} quest-status += @a q-${id}`,
-              `execute if entity @a[scores={q-${id}=1..}] run scoreboard players set @a quest-book-upd -1`,
-              `scoreboard players set @a q-${id} 0`
+              `execute unless score ${id} quest-status-old = ${id} quest-status run scoreboard players set @a quest-book-upd 0`,
             ];
           default:
             return '';
