@@ -344,7 +344,7 @@ export function createQuest (
 
         functions[`quests/quest-${id}-tick`].push([
           `execute ${
-            (obj.value as QuestCondition[]).map((v, i)=>`unless score ${getQ([...path, i])} ${getQ()} = o${getQ([...path, i])} ${getQ()}`).join(' ')
+            (obj.value as QuestCondition[]).map((v, i)=>`if score ${getQ([...path, i])} ${getQ()} != o${getQ([...path, i])} ${getQ()}`).join(' ')
           } run function generated:quests/tick/${getQ(path)}`
         ])
         break;
@@ -353,7 +353,7 @@ export function createQuest (
 
   parse();
 
-  functions[`quests/tick/${getQ()}`].push(`execute unless score o${getQ()} ${getQ()} = ${getQ()} ${getQ()} run scoreboard players set @a quest-book-upd 0`)
+  functions[`quests/tick/${getQ()}`].push(`execute if score o${getQ()} ${getQ()} != ${getQ()} ${getQ()} run scoreboard players set @a quest-book-upd 0`)
   functions[`quests/quest-${id}-tick`].push([
     `function generated:quests/tick/${getQ()}`,
     `scoreboard players operation ${id} quest-status = ${getQ()} ${getQ()}`
