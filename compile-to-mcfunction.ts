@@ -129,10 +129,11 @@ export function createNpc (
 
       dialogue.map((dialogue, idx) => {
         const indexToFuncName = (i: number) =>
-          `npc/dialogue-${id}-${idx}-${i
+          `npc/${id}/${idx}-${i
             .toString()
             .padStart(String(dialogue.messages.length - 1).length, '0')}`
         for (const [i, message] of dialogue.messages.entries()) {
+          // console.log(message)
           message.message.map(msg => {
             if ('selector' in msg && (<string>msg.selector)[0] !== '@') msg.selector = <string>eval(<string>msg.selector);
             return msg
@@ -152,14 +153,15 @@ export function createNpc (
               ...message.message
             ])}`,
             `execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets}`,
+            message.command,
             `schedule function ${namespace}:${
               i === dialogue.messages.length - 1
-                ? `npc/dialogue-${id}-${idx}-end`
+                ? `npc/${id}-${idx}-end`
                 : indexToFuncName(i + 1)
             } ${duration}t`
           ]
         }
-        functions[`npc/dialogue-${id}-${idx}-end`] = [
+        functions[`npc/${id}/${idx}-end`] = [
           '# Handle the end of the conversation.',
           // No `limit=1` just in case there are multiple players with the tag
           `tag @a[tag=${playerTag}] remove spoken-to`,
@@ -311,6 +313,7 @@ export function createQuest (
           functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path, "s")}`)
         }
 
+        functions[`quests/tick/${getQ(path)}`].push(<string[]>obj.value) //custom lines
         functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`)
 
         functions[`quests/${id}-tick`].push(

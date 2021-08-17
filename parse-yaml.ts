@@ -49,9 +49,19 @@ const msgSchema = z
       z.string().transform(msg=>[{text: msg}]),
       rawJSONTextSchema.transform(json=>[json]),
       z.array(rawJSONTextSchema)
-    ])
+    ]),
+    command: z.string().default(''),
+    quest: z.string().optional(),
+    function: z.string().optional()
+  }).transform(x=>{
+    if ('function' in x) {
+      x.command = `function ${x.function}`
+    }
+    if ('quest' in x) {
+      x.command = `function generated:quests/${x.quest}-start`
+    }
+    return x;
   })
-  .strict()
 
 const dialogueSchema = z
   .object({
@@ -142,7 +152,7 @@ type qci =
   type: "player",
   stat?: string,
   condition?: string[],
-  value?: string,
+  value?: string[],
   count?: number,
   overflow?: boolean,
   all?: boolean
@@ -158,6 +168,7 @@ const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
     type: z.literal('player'),
     stat: z.string().default('dummy'),
     condition: z.array(z.string()).default([]),
+    value: z.array(z.string()).default([]),
     count: z.number().int().default(1)
   }),
   z.object({
@@ -197,6 +208,6 @@ const fullSchema = z
   })
 
 export function parse (yaml: string): z.infer<typeof fullSchema> {
-  console.log(fullSchema.parse(YAML.parse(yaml)))
+  // console.log(fullSchema.parse(YAML.parse(yaml)))
   return fullSchema.parse(YAML.parse(yaml))
 }

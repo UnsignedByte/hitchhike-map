@@ -59,6 +59,34 @@ npc:
           - I will call the police.
           cond: 1
           end: 0
+    breadboy:
+      name: Mr. Wheat
+      colour: 0x00ff00
+      position: 6 64 18
+      rotation: 180 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTlkZjNlYmRkZGRmMDNmYmE0ZmQ5ZjIxMDU2YjIwMmMyNTMyOTFjNmRkMDgyNjg4Y2YxMGNmNTUzOThiZGM5NiJ9fX0=
+      villager:
+        type: desert
+        profession: none
+      dialogue:
+        - messages:
+          - Hey! It sure is a LOAF-ly day today, isn't it?
+          - A fine day for some bread... though isn't that every day?
+          - Anyways, you should get on with your daily whole wheat goodness!
+          - message: 
+              - text: The bread at safeway is mighty tasty, 
+              - text: go try some
+                color: light_purple
+                italic: true
+              - text: '!'
+            quest: bread
+            global: true
+          end:  1
+        - messages:
+          - You still haven't had the bread?
+          - I told you, its really good!
+          - Just go try it, I'm sure you'll like it.
+          cond: 1
 
 quest:
   bread:

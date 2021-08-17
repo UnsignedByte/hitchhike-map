@@ -18,6 +18,10 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 0 64 18 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, CustomNameVisible: 1b, Tags: ["npc", "npc-marc"], CustomName: '{"text":"Marc","color":"#00ff00","bold":true}', ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmExYjA2Njk3NDIwMmViMGY2ZTM0MmFhYmI3ZTBkNzM0ZGNhMDlhOWY2ZjJiMzhmMjIyNmE3OTEwZmIzNzZlOSJ9fX0" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:mason", level: 99}, Offers: {}}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for breadboy.
+summon minecraft:villager 6 64 18 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, CustomNameVisible: 1b, Tags: ["npc", "npc-breadboy"], CustomName: '{"text":"Mr. Wheat","color":"#00ff00","bold":true}', ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTlkZjNlYmRkZGRmMDNmYmE0ZmQ5ZjIxMDU2YjIwMmMyNTMyOTFjNmRkMDgyNjg4Y2YxMGNmNTUzOThiZGM5NiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:none", level: 99}, Offers: {}}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 scoreboard objectives remove q-0
 scoreboard players reset bread quest-status
 scoreboard objectives remove s-0-0

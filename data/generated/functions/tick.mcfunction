@@ -13,7 +13,7 @@ execute as @a[scores={quest-book-upd=0},nbt={Inventory:[{Slot:-106b,id:"minecraf
 execute at @e[tag=npc-billy, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-billy
 tag @a[tag=victim-of-dialogue-by-billy, limit=1] remove npc_selector
 tag @e[tag=npc-billy, tag=selected_npc, tag=!speaking, limit=1] add speaking
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-billy, tag=!spoken-to, limit=1] as @e[tag=npc-billy, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/dialogue-billy-0-0 1t
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-billy, tag=!spoken-to, limit=1] as @e[tag=npc-billy, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/billy/0-0 1t
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-billy, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
@@ -26,7 +26,7 @@ execute as @e[tag=npc-billy, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing
 execute at @e[tag=npc-sam, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-sam
 tag @a[tag=victim-of-dialogue-by-sam, limit=1] remove npc_selector
 tag @e[tag=npc-sam, tag=selected_npc, tag=!speaking, limit=1] add speaking
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-sam, tag=!spoken-to, limit=1] as @e[tag=npc-sam, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/dialogue-sam-0-0 1t
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-sam, tag=!spoken-to, limit=1] as @e[tag=npc-sam, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/sam/0-0 1t
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-sam, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
@@ -39,11 +39,11 @@ execute as @e[tag=npc-sam, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing e
 execute at @e[tag=npc-marc, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-marc
 tag @a[tag=victim-of-dialogue-by-marc, limit=1] remove npc_selector
 tag @e[tag=npc-marc, tag=selected_npc, tag=!speaking, limit=1] add speaking
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] as @e[tag=npc-marc, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/dialogue-marc-0-0 1t
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] as @e[tag=npc-marc, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/marc/0-0 1t
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] as @e[tag=npc-marc, limit=1] if score @s dialogue-status matches 1 run schedule function generated:npc/dialogue-marc-1-0 1t
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] as @e[tag=npc-marc, limit=1] if score @s dialogue-status matches 1 run schedule function generated:npc/marc/1-0 1t
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
@@ -51,6 +51,23 @@ tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] remove victim-of
 
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-marc, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-marc, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-breadboy, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-breadboy
+tag @a[tag=victim-of-dialogue-by-breadboy, limit=1] remove npc_selector
+tag @e[tag=npc-breadboy, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-breadboy, tag=!spoken-to, limit=1] as @e[tag=npc-breadboy, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/breadboy/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-breadboy, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-breadboy, tag=!spoken-to, limit=1] as @e[tag=npc-breadboy, limit=1] if score @s dialogue-status matches 1 run schedule function generated:npc/breadboy/1-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-breadboy, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-breadboy, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-breadboy
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-breadboy, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-breadboy, limit=1]
 
 execute if score bread quest-status matches 0.. run function generated:quests/bread-tick
 
