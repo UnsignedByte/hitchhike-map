@@ -211,7 +211,7 @@ export function createQuest (
     return path.length === 0 ? `${pre}-${ind}` : `${pre}-${ind}-${path.join('-')}`
   }
 
-  functions[`quests/quest-${id}-start`] = [
+  functions[`quests/${id}-start`] = [
     `scoreboard players set @a quest-book-upd -1`,
     `data modify storage generated:quest_book current[${ind}] set value ${rawJson({
       text:``,
@@ -243,7 +243,7 @@ export function createQuest (
     `scoreboard objectives add ${getQ()} dummy`
   ]
 
-  functions[`quests/quest-${id}-end`] = [
+  functions[`quests/${id}-end`] = [
     `data modify storage generated:quest_book current[${ind}] set value ''`,
     `data modify storage generated:quest_book completed[${ind}] set value ${rawJson({
       text:``,
@@ -270,7 +270,7 @@ export function createQuest (
     `scoreboard players reset ${id} quest-status`
   ]
 
-  functions[`quests/quest-${id}-tick`] = [];
+  functions[`quests/${id}-tick`] = [];
 
   condition = {
     type: 'nest',
@@ -282,7 +282,7 @@ export function createQuest (
   function parse(path: number[] = []) {
     let obj = path.reduce((o, i) => (o.value! as QuestCondition[])[i], condition); //as-es are needed because i hate typescript
 
-    functions[`quests/quest-${id}-start`].push(
+    functions[`quests/${id}-start`].push(
       `scoreboard players set ${getQ(path)} ${getQ()} 0` // set all to 0 at start
     )
 
@@ -295,8 +295,8 @@ export function createQuest (
       case 'player':
 
         if (obj.condition!.length > 0) {
-          functions[`quests/quest-${id}-start`].push(`scoreboard objectives add ${getQ(path)} dummy`);
-          functions[`quests/quest-${id}-end`].push(`scoreboard objectives remove ${getQ(path)}`);
+          functions[`quests/${id}-start`].push(`scoreboard objectives add ${getQ(path)} dummy`);
+          functions[`quests/${id}-end`].push(`scoreboard objectives remove ${getQ(path)}`);
 
           functions[`quests/tick/${getQ(path)}`].push([
             `scoreboard players set @a ${getQ(path)} 0`,
@@ -306,14 +306,14 @@ export function createQuest (
         }
 
         if (obj.stat! !== 'dummy') {
-          functions[`quests/quest-${id}-start`].push(`scoreboard objectives add ${getQ(path, "s")} ${obj.stat}`);
-          functions[`quests/quest-${id}-end`].push(`scoreboard objectives remove ${getQ(path, "s")}`);
+          functions[`quests/${id}-start`].push(`scoreboard objectives add ${getQ(path, "s")} ${obj.stat}`);
+          functions[`quests/${id}-end`].push(`scoreboard objectives remove ${getQ(path, "s")}`);
           functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path, "s")}`)
         }
 
         functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`)
 
-        functions[`quests/quest-${id}-tick`].push(
+        functions[`quests/${id}-tick`].push(
           `function generated:quests/tick/${getQ(path)}`
         )
         break;
@@ -330,7 +330,7 @@ export function createQuest (
           parse(npath)
         }
 
-        functions[`quests/quest-${id}-tick`].push([
+        functions[`quests/${id}-tick`].push([
           `scoreboard players set - ${getQ()} 0`,
           `execute ${
             (<QuestCondition[]>obj.value!).map((v, i)=>`if score ${getQ([...path, i])} ${getQ()} = o${getQ([...path, i])} ${getQ()}`).join(' ')
@@ -351,16 +351,16 @@ export function createQuest (
   functions[`quests/tick/${getQ()}`].push([
     `execute unless score o${getQ()} ${getQ()} = ${getQ()} ${getQ()} run scoreboard players set @a quest-book-upd 0`
   ])
-  functions[`quests/quest-${id}-tick`].push([
+  functions[`quests/${id}-tick`].push([
     `scoreboard players operation ${id} quest-status = ${getQ()} ${getQ()}`,
-    `execute if score ${id} quest-status matches 100 run function generated:quests/quest-${id}-end`
+    `execute if score ${id} quest-status matches 100 run function generated:quests/${id}-end`
   ])
 
   onTick.push([
-    `execute if score ${id} quest-status matches 0.. run function generated:quests/quest-${id}-tick`
+    `execute if score ${id} quest-status matches 0.. run function generated:quests/${id}-tick`
   ])
 
-  reset = functions[`quests/quest-${id}-end`].slice(3)
+  reset = functions[`quests/${id}-end`].slice(3)
 
   return {
     reset,

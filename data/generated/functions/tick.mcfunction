@@ -52,10 +52,10 @@ tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] remove victim-of
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-marc, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-marc, limit=1]
 
-execute if score bread quest-status matches 0.. run function generated:quests/quest-bread-tick
+execute if score bread quest-status matches 0.. run function generated:quests/bread-tick
 
-execute if score diet quest-status matches 0.. run function generated:quests/quest-diet-tick
+execute if score diet quest-status matches 0.. run function generated:quests/diet-tick
 
-execute if score leather quest-status matches 0.. run function generated:quests/quest-leather-tick
+execute if score leather quest-status matches 0.. run function generated:quests/leather-tick
 tag @a remove npc_selector
 tag @e[tag=npc] remove selected_npc
