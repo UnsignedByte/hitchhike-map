@@ -160,8 +160,11 @@ const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
   z.object({
     type: z.literal('nest'),
     value: z.array(questConditionSchema),
-    count: z.number().int().default(1),
+    count: z.number().int().default(-1),
     all: z.boolean().default(false)
+  }).transform(x=>{
+    if (x.count == -1) x.count = x.value.reduce((o: number, i)=>(o+<number>i.count), 0); // this is possibly the worst thing humans have ever made, other than mask by dream and among us.
+    return x;
   })
 ]))
 
@@ -189,5 +192,6 @@ const fullSchema = z
   })
 
 export function parse (yaml: string): z.infer<typeof fullSchema> {
+  console.log(fullSchema.parse(YAML.parse(yaml)))
   return fullSchema.parse(YAML.parse(yaml))
 }

@@ -281,6 +281,10 @@ export function createQuest (
   function parse(path: number[] = []) {
     let obj = path.reduce((o, i) => (o.value as QuestCondition[])[i], condition); //as-es are needed because i hate typescript
 
+    functions[`quests/quest-${id}-start`].push(
+      `scoreboard players set ${getQ(path)} ${getQ()} 0` // set all to 0 at start
+    )
+
     functions[`quests/tick/${getQ(path)}`] = [
       `scoreboard players operation o${getQ(path)} ${getQ()} = ${getQ(path)} ${getQ()}`,
       `scoreboard players set ${getQ(path)} ${getQ()} 0`
