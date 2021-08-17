@@ -53,21 +53,21 @@ tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] remove victim-of
 execute as @e[tag=npc-marc, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-marc, limit=1]
 
 # Start a conversation if it was selected
-execute at @e[tag=npc-breadboy, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-breadboy
-tag @a[tag=victim-of-dialogue-by-breadboy, limit=1] remove npc_selector
-tag @e[tag=npc-breadboy, tag=selected_npc, tag=!speaking, limit=1] add speaking
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-breadboy, tag=!spoken-to, limit=1] as @e[tag=npc-breadboy, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/breadboy/0-0 1t
-execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-breadboy, tag=!spoken-to, limit=1] add spoken-to
+execute at @e[tag=npc-wheatish, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-wheatish
+tag @a[tag=victim-of-dialogue-by-wheatish, limit=1] remove npc_selector
+tag @e[tag=npc-wheatish, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] as @e[tag=npc-wheatish, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/wheatish/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-breadboy, tag=!spoken-to, limit=1] as @e[tag=npc-breadboy, limit=1] if score @s dialogue-status matches 1 run schedule function generated:npc/breadboy/1-0 1t
-execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-breadboy, tag=!spoken-to, limit=1] add spoken-to
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] as @e[tag=npc-wheatish, limit=1] if score @s dialogue-status matches 1 run schedule function generated:npc/wheatish/1-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
-tag @a[tag=victim-of-dialogue-by-breadboy, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-breadboy
+tag @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-wheatish
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-breadboy, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-breadboy, limit=1]
+execute as @e[tag=npc-wheatish, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-wheatish, limit=1]
 
 execute if score bread quest-status matches 0.. run function generated:quests/bread-tick
 

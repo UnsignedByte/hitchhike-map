@@ -59,12 +59,12 @@ npc:
           - I will call the police.
           cond: 1
           end: 0
-    breadboy:
+    wheatish:
       name: Mr. Wheat
       colour: 0x00ff00
       position: 6 64 18
       rotation: 180 0
-      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTlkZjNlYmRkZGRmMDNmYmE0ZmQ5ZjIxMDU2YjIwMmMyNTMyOTFjNmRkMDgyNjg4Y2YxMGNmNTUzOThiZGM5NiJ9fX0=
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzBkNDE1ZDJlYjlkNjhlNTZkYjUwYWZmNDk0YWJkZWRiODViOTExOTE4OWNmMDFkZDRmOTFjNmRhYjJjNmJhIn19fQ==
       villager:
         type: desert
         profession: none
@@ -74,7 +74,7 @@ npc:
           - A fine day for some bread... though isn't that every day?
           - Anyways, you should get on with your daily whole wheat goodness!
           - message: 
-              - text: The bread at safeway is mighty tasty, 
+              - text: "I've heard the bread at safeway is mighty tasty, "
               - text: go try some
                 color: light_purple
                 italic: true

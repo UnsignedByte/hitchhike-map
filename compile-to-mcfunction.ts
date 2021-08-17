@@ -156,7 +156,7 @@ export function createNpc (
             message.command,
             `schedule function ${namespace}:${
               i === dialogue.messages.length - 1
-                ? `npc/${id}-${idx}-end`
+                ? `npc/${id}/${idx}-end`
                 : indexToFuncName(i + 1)
             } ${duration}t`
           ]
