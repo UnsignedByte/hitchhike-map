@@ -345,6 +345,7 @@ export function createQuest (
   }
 
   parse();
+
   functions[`quests/tick/${getQ()}`].push(`execute unless score o${getQ()} ${getQ()} = ${getQ()} ${getQ()} run scoreboard players set @a quest-book-upd 0`)
   functions[`quests/quest-${id}-tick`].push([
     `function generated:quests/tick/${getQ()}`,
@@ -354,6 +355,8 @@ export function createQuest (
   onTick.push([
     `execute if score ${id} quest-status matches 0.. run function generated:quests/quest-${id}-tick`
   ])
+
+  reset = functions[`quests/quest-${id}-end`].slice(3)
 
   return {
     reset,
