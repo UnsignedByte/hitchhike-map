@@ -1,5 +1,5 @@
 import { Lines } from './main.ts'
-import { Npc, Quest } from './parse-yaml.ts'
+import { Npc, Quest, QuestCondition } from './parse-yaml.ts'
 
 type NbtValue = string | number | boolean | undefined | null;
 type NbtData = {
@@ -191,11 +191,7 @@ export function createQuest (
   {
     name,
     description,
-    cond: {
-      type,
-      value,
-      count = 1,
-    }
+    condition
   }: Quest
 ): {
   reset: Lines
@@ -204,87 +200,158 @@ export function createQuest (
   functions: Record<string, Lines>
 } {
   
-  const functions: Record<string, Lines> = {}
+  const functions: Record<string, Lines[]> = {}
+
+  let reset: Lines[] = [];
+  let onLoad: Lines[] = [];
+  let onTick: Lines[] = [];
+
+  function getQ(path: number[] = []): string {
+    return path.length === 0 ? `q-${ind}` : `q-${ind}-${path.join('-')}`
+  }
+
+  functions[`quests/quest-${id}-start`] = [
+    `scoreboard players set @a quest-book-upd -1`,
+    `data modify storage generated:quest_book current[${ind}] set value ${rawJson({
+      text:``,
+      color:"dark_green",
+      bold:false,
+      underlined:false,
+      hoverEvent:{
+        action:"show_text",
+        contents: {
+          text: eval(`\`${description}\``)
+        }
+      },
+      extra:[
+        {
+          text:name,
+          italic:true
+        },
+        ' (',
+        {
+          score:{
+            name: id,
+            objective: 'quest-status'
+          }
+        },
+        `/${condition.count})`
+      ]
+    })}`,
+    `scoreboard objectives add ${getQ()} dummy`
+  ]
+
+  functions[`quests/quest-${id}-end`] = [
+    `data modify storage generated:quest_book current[${ind}] set value ''`,
+    `data modify storage generated:quest_book completed[${ind}] set value ${rawJson({
+      text:``,
+      color:"gray",
+      bold:false,
+      underlined:false,
+      strikethrough:true,
+      hoverEvent:{
+        action:"show_text",
+        contents: {
+          text: eval(`\`${description}\``)
+        }
+      },
+      extra:[
+        {
+          text:name,
+          italic:true
+        },
+        ` (${condition.count}/${condition.count})`
+      ]
+    })}`,
+    `scoreboard players set @a quest-book-upd -1`,
+    `scoreboard objectives remove ${getQ()}`,
+    `scoreboard players reset ${id} quest-status`
+  ]
+
+  functions[`quests/quest-${id}-tick`] = [];
+
+  function parse(path: number[] = []) {
+    let obj = path.reduce((o, i) => (o.value as QuestCondition[])[i], condition); //as-es are needed because i hate typescript
+
+    functions[`quests/tick/${getQ(path)}`] = [
+      `scoreboard players operation o${getQ(path)} ${getQ()} = ${getQ(path)} ${getQ()}`,
+      `scoreboard players set ${getQ(path)} ${getQ()} 0`
+    ];
+
+    switch(obj.type) {
+      case 'stat':
+        functions[`quests/quest-${id}-start`].push(`scoreboard objectives add ${getQ(path)} ${obj.value}`);
+        functions[`quests/quest-${id}-end`].push(`scoreboard objectives remove ${getQ(path)}`);
+
+        functions[`quests/tick/${getQ(path)}`].push([
+          ...((): Lines[] => {
+            switch(obj.all){
+              case false:
+                return [
+                  `scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path)}`,
+                ];
+              case true:
+                return [
+                  `execute as @a if score ${getQ(path)} ${getQ()} > @s ${getQ(path)} run scoreboard players operation ${getQ(path)} ${getQ()} = @s ${getQ(path)}`
+                ]
+            }
+            return []; // shouldnt hpapen but typescript is dumb
+          })()
+        ])
+
+        functions[`quests/quest-${id}-tick`].push(
+          `function generated:quests/tick/${getQ(path)}`
+        )
+        break;
+      case 'nest':
+        for (let i = 0; i < (obj.value as QuestCondition[]).length; i++) {
+          const npath = [...path, i];
+
+          // add update functions to tick
+
+          functions[`quests/tick/${getQ(path)}`].push([
+            ...((): Lines[] => {
+              switch(obj.all){
+                case false:
+                  return [
+                    `scoreboard players operation ${getQ(path)} ${getQ()} += ${getQ(npath)} ${getQ()}`,
+                  ];
+                case true:
+                  return [
+                    `execute if score ${getQ(path)} ${getQ()} > ${getQ(npath)} ${getQ()} run scoreboard players operation ${getQ(path)} ${getQ()} = ${getQ(npath)} ${getQ()}`
+                  ]
+              }
+              return []; // shouldnt hpapen but typescript is dumb
+            })()
+          ])
+
+          parse(npath)
+        }
+
+        functions[`quests/quest-${id}-tick`].push([
+          `execute ${
+            (obj.value as QuestCondition[]).map((v, i)=>`unless score ${getQ([...path, i])} ${getQ()} = o${getQ([...path, i])} ${getQ()}`).join(' ')
+          } run function generated:quests/tick/${getQ(path)}`
+        ])
+        break;
+    }
+  }
+
+  parse();
+  functions[`quests/tick/${getQ()}`].push(`execute unless score o${getQ()} ${getQ()} = ${getQ()} ${getQ()} run scoreboard players set @a quest-book-upd 0`)
+  functions[`quests/quest-${id}-tick`].push([
+    `function generated:quests/tick/${getQ()}`,
+    `scoreboard players operation ${id} quest-status = ${getQ()} ${getQ()}`
+  ])
+
+  onTick.push([
+    `execute if score ${id} quest-status matches 0.. run function generated:quests/quest-${id}-tick`
+  ])
 
   return {
-    reset: [
-
-    ],
-    onLoad: [
-    ],
-    onTick: [
-      (() => {
-        functions[`quests/quest-${id}-start`] = [
-          `scoreboard objectives add q-${id} ${type === 'stat' ? value : 'dummy'}`,
-          `scoreboard players set ${id} quest-status 0`,
-          `scoreboard players set @a quest-book-upd -1`,
-          `data modify storage generated:quest_book current[${ind}] set value ${rawJson({
-            text:``,
-            color:"dark_green",
-            bold:false,
-            underlined:false,
-            hoverEvent:{
-              action:"show_text",
-              contents: {
-                text: eval(`\`${description}\``)
-              }
-            },
-            extra:[
-              {
-                text:name,
-                italic:true
-              },
-              ' (',
-              {
-                score:{
-                  name: id,
-                  objective: 'quest-status'
-                }
-              },
-              `/${count})`
-            ]
-          })}`
-        ]
-
-        functions[`quests/quest-${id}-end`] = [
-          `scoreboard objectives remove q-${id}`,
-          `data modify storage generated:quest_book current[${ind}] set value ''`,
-          `data modify storage generated:quest_book completed[${ind}] set value ${rawJson({
-            text:``,
-            color:"gray",
-            bold:false,
-            underlined:false,
-            strikethrough:true,
-            hoverEvent:{
-              action:"show_text",
-              contents: {
-                text: eval(`\`${description}\``)
-              }
-            },
-            extra:[
-              {
-                text:name,
-                italic:true
-              },
-              ` (${count}/${count})`
-            ]
-          })}`,
-          `scoreboard players set @a quest-book-upd -1`
-        ]
-        switch(type){
-          case 'stat':
-            return [
-              `execute store result score ${id} quest-status-old run scoreboard players get ${id} quest-status`,
-              `scoreboard players set ${id} quest-status 0`,
-              `scoreboard players operation ${id} quest-status += @a q-${id}`,
-              `execute unless score ${id} quest-status-old = ${id} quest-status run scoreboard players set @a quest-book-upd 0`,
-            ];
-          default:
-            return '';
-        }
-      })(),
-      `execute if score ${id} quest-status matches ${count}.. run function generated:quests/quest-${id}-end`
-    ],
+    reset,
+    onLoad,
+    onTick,
     functions
   }
 }

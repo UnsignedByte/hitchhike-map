@@ -63,8 +63,33 @@ npc:
 quest:
   bread:
     name: Whole Wheat
-    description: Eat ${count} pieces of bread.
-    cond:
+    description: Eat ${condition.count} pieces of bread.
+    condition:
       type: stat
       value: minecraft.used:minecraft.bread
       count: 5
+  diet:
+    name: Balanced Diet
+    description: Eat ${condition.value[1].count} pieces of meat (cooked, of course) and ${condition.value[0].count} vegetables
+    condition:
+      type: nest # listed values are also condition objects
+      all: true # all of the below conditions are required. I.E. the minimum value of all the conditions will be taken. (as opposed to the sum). for type stat (and similar), does the same with @a.
+      value:
+        - type: nest # q-1-0
+          value: 
+            - type: stat
+              value: minecraft.used:minecraft.carrot #q-1-0-0
+            - type: stat
+              value: minecraft.used:minecraft.potato #q-1-0-1
+            - type: stat
+              value: minecraft.used:minecraft.beetroot #q-1-0-2
+          count: 5
+        - type: nest #q-1-1
+          value:
+            - type: stat
+              value: minecraft.used:minecraft.cooked_beef
+            - type: stat
+              value: minecraft.used:minecraft.cooked_porkchop
+            - type: stat
+              value: minecraft.used:minecraft.cooked_chicken
+          count: 5

@@ -14,12 +14,13 @@ scoreboard objectives add quest-status-old dummy
 # set up quest book
 kill @e[tag=quest_book]
 scoreboard objectives add quest-book-upd dummy
-data modify storage generated:quest_book current set value [""]
-data modify storage generated:quest_book completed set value [""]
+data modify storage generated:quest_book current set value ["",""]
+data modify storage generated:quest_book completed set value ["",""]
 
 tag @a remove victim-of-dialogue-by-billy
 
 tag @a remove victim-of-dialogue-by-sam
 
 tag @a remove victim-of-dialogue-by-marc
+
 

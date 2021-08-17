@@ -137,18 +137,41 @@ const npcSchema = z
 
 export type Npc = z.infer<typeof npcSchema>
 
+type qci = 
+{
+  type: "stat",
+  value: string,
+  count?: number,
+  all?: boolean
+} | {
+  type: "nest",
+  value: qci[],
+  count?: number,
+  all?: boolean
+}
+
+const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
+  z.object({
+    type: z.literal('stat'),
+    value: z.string(),
+    count: z.number().int().default(1),
+    all: z.boolean().default(false)
+  }),
+  z.object({
+    type: z.literal('nest'),
+    value: z.array(questConditionSchema),
+    count: z.number().int().default(1),
+    all: z.boolean().default(false)
+  })
+]))
+
+export type QuestCondition = z.infer<typeof questConditionSchema>; // i hate this
+
 const questSchema = z.
   object({
     name: z.string(),
     description: z.string(),
-    cond: z.object({
-      type: z.union([
-        z.literal('stat'),
-        z.literal('score')
-       ]),
-      value: z.string(),
-      count: z.number().int()
-    })
+    condition: questConditionSchema
   })
   .strict()
 
