@@ -346,7 +346,7 @@ export function createQuest (
           `scoreboard players set - ${getQ()} 0`,
           `execute ${
             (obj.value as QuestCondition[]).map((v, i)=>`if score ${getQ([...path, i])} ${getQ()} = o${getQ([...path, i])} ${getQ()}`).join(' ')
-          }run scoreboard players set - ${getQ()} 1`,
+          } run scoreboard players set - ${getQ()} 1`,
           `execute if score - ${getQ()} matches 0 run function generated:quests/tick/${getQ(path)}`
         ])
         break;
