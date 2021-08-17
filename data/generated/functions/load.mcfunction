@@ -1050,8 +1050,6 @@ scoreboard players set 1073741824 const 1073741824
 scoreboard players set max const 2147483647
 scoreboard players set min const -2147483648
 scoreboard players set -1 const -1
-scoreboard players set 0.1 const 0.1
-scoreboard players set 0.5 const 0.5
 
 tag @a remove victim-of-dialogue-by-billy
 

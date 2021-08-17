@@ -74,8 +74,8 @@ export async function init (
   let numericConstants: Set<number> = new Set();
 
   for (let i = -1; i <= 1000; i++) numericConstants.add(i)
-  for (let i = -1; i <= 9; i++) numericConstants.add(Math.pow(10,i)) // add powers of 10 to 1 billion
-  for (let i = -1; i <= 30; i++) numericConstants.add(Math.pow(2,i)) // add powers of 2 to 2^30
+  for (let i = 0; i <= 9; i++) numericConstants.add(Math.pow(10,i)) // add powers of 10 to 1 billion
+  for (let i = 0; i <= 30; i++) numericConstants.add(Math.pow(2,i)) // add powers of 2 to 2^30
 
   CONSTANTS = Object.assign(CONSTANTS, Object.fromEntries([...numericConstants].map(x=>[x,x])))
 
