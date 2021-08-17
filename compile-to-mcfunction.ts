@@ -238,6 +238,7 @@ export function createQuest (
         `/${condition.count})`
       ]
     })}`,
+    `scoreboard players set ${id} quest-status 0`,
     `scoreboard objectives add ${getQ()} dummy`
   ]
 
