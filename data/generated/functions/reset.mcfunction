@@ -20,16 +20,16 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 
 scoreboard objectives remove q-0
 scoreboard players reset bread quest-status
-scoreboard objectives remove q-0-0
+scoreboard objectives remove s-0-0
 
 scoreboard objectives remove q-1
 scoreboard players reset diet quest-status
-scoreboard objectives remove q-1-0-0-0
-scoreboard objectives remove q-1-0-0-1
-scoreboard objectives remove q-1-0-0-2
-scoreboard objectives remove q-1-0-1-0
-scoreboard objectives remove q-1-0-1-1
-scoreboard objectives remove q-1-0-1-2
+scoreboard objectives remove s-1-0-0-0
+scoreboard objectives remove s-1-0-0-1
+scoreboard objectives remove s-1-0-0-2
+scoreboard objectives remove s-1-0-1-0
+scoreboard objectives remove s-1-0-1-1
+scoreboard objectives remove s-1-0-1-2
 
 scoreboard objectives remove q-2
 scoreboard players reset leather quest-status

@@ -6,15 +6,15 @@ scoreboard players set q-1 q-1 0
 scoreboard players set q-1-0 q-1 0
 scoreboard players set q-1-0-0 q-1 0
 scoreboard players set q-1-0-0-0 q-1 0
-scoreboard objectives add q-1-0-0-0 minecraft.used:minecraft.carrot
+scoreboard objectives add s-1-0-0-0 minecraft.used:minecraft.carrot
 scoreboard players set q-1-0-0-1 q-1 0
-scoreboard objectives add q-1-0-0-1 minecraft.used:minecraft.potato
+scoreboard objectives add s-1-0-0-1 minecraft.used:minecraft.potato
 scoreboard players set q-1-0-0-2 q-1 0
-scoreboard objectives add q-1-0-0-2 minecraft.used:minecraft.beetroot
+scoreboard objectives add s-1-0-0-2 minecraft.used:minecraft.beetroot
 scoreboard players set q-1-0-1 q-1 0
 scoreboard players set q-1-0-1-0 q-1 0
-scoreboard objectives add q-1-0-1-0 minecraft.used:minecraft.cooked_beef
+scoreboard objectives add s-1-0-1-0 minecraft.used:minecraft.cooked_beef
 scoreboard players set q-1-0-1-1 q-1 0
-scoreboard objectives add q-1-0-1-1 minecraft.used:minecraft.cooked_porkchop
+scoreboard objectives add s-1-0-1-1 minecraft.used:minecraft.cooked_porkchop
 scoreboard players set q-1-0-1-2 q-1 0
-scoreboard objectives add q-1-0-1-2 minecraft.used:minecraft.cooked_chicken
+scoreboard objectives add s-1-0-1-2 minecraft.used:minecraft.cooked_chicken

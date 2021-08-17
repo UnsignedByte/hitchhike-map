@@ -4,4 +4,4 @@ scoreboard players set bread quest-status 0
 scoreboard objectives add q-0 dummy
 scoreboard players set q-0 q-0 0
 scoreboard players set q-0-0 q-0 0
-scoreboard objectives add q-0-0 minecraft.used:minecraft.bread
+scoreboard objectives add s-0-0 minecraft.used:minecraft.bread

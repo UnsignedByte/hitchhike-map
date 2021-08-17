@@ -207,8 +207,8 @@ export function createQuest (
   let onLoad: Lines[] = [];
   let onTick: Lines[] = [];
 
-  function getQ(path: number[] = []): string {
-    return path.length === 0 ? `q-${ind}` : `q-${ind}-${path.join('-')}`
+  function getQ(path: number[] = [], pre: string = 'q'): string {
+    return path.length === 0 ? `${pre}-${ind}` : `${pre}-${ind}-${path.join('-')}`
   }
 
   functions[`quests/quest-${id}-start`] = [
@@ -293,14 +293,25 @@ export function createQuest (
 
     switch(obj.type) {
       case 'player':
-        functions[`quests/quest-${id}-start`].push(`scoreboard objectives add ${getQ(path)} ${obj.stat}`);
-        functions[`quests/quest-${id}-end`].push(`scoreboard objectives remove ${getQ(path)}`);
 
-        functions[`quests/tick/${getQ(path)}`].push([
-          (<string[]>obj.condition).map(x=>`execute as @a at @s ${x} run scoreboard players add @s ${getQ(path)} 1`),
-          `scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path)}`,
-          `scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`,
-        ])
+        if (obj.condition!.length > 0) {
+          functions[`quests/quest-${id}-start`].push(`scoreboard objectives add ${getQ(path)} dummy`);
+          functions[`quests/quest-${id}-end`].push(`scoreboard objectives remove ${getQ(path)}`);
+
+          functions[`quests/tick/${getQ(path)}`].push([
+            `scoreboard players set @a ${getQ(path)} 0`,
+            (<string[]>obj.condition).map(x=>`execute as @a at @s ${x} run scoreboard players add @s ${getQ(path)} 1`),
+            `scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path)}`
+          ])
+        }
+
+        if (obj.stat! !== 'dummy') {
+          functions[`quests/quest-${id}-start`].push(`scoreboard objectives add ${getQ(path, "s")} ${obj.stat}`);
+          functions[`quests/quest-${id}-end`].push(`scoreboard objectives remove ${getQ(path, "s")}`);
+          functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path, "s")}`)
+        }
+
+        functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`)
 
         functions[`quests/quest-${id}-tick`].push(
           `function generated:quests/tick/${getQ(path)}`

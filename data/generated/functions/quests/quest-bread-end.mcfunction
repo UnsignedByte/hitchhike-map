@@ -3,4 +3,4 @@ data modify storage generated:quest_book completed[0] set value '{"text":"","col
 scoreboard players set @a quest-book-upd -1
 scoreboard objectives remove q-0
 scoreboard players reset bread quest-status
-scoreboard objectives remove q-0-0
+scoreboard objectives remove s-0-0
