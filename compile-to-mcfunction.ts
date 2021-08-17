@@ -300,6 +300,7 @@ export function createQuest (
                 ];
               case true:
                 return [
+                  `scoreboard players set ${getQ(path)} ${getQ()} 2147483647`,
                   `execute as @a if score ${getQ(path)} ${getQ()} > @s ${getQ(path)} run scoreboard players operation ${getQ(path)} ${getQ()} = @s ${getQ(path)}`
                 ]
             }
@@ -326,6 +327,7 @@ export function createQuest (
                   ];
                 case true:
                   return [
+                  `scoreboard players set ${getQ(path)} ${getQ()} 2147483647`,
                     `execute if score ${getQ(path)} ${getQ()} > ${getQ(npath)} ${getQ()} run scoreboard players operation ${getQ(path)} ${getQ()} = ${getQ(npath)} ${getQ()}`
                   ]
               }
