@@ -17,7 +17,7 @@ scoreboard objectives add quest-book-upd dummy
 data modify storage generated:quest_book current set value ["","",""]
 data modify storage generated:quest_book completed set value ["","",""]
 
-# SETUP CONSTS
+# SET UP CONSTS
 scoreboard objectives add const dummy
 scoreboard players set 0 const 0
 scoreboard players set 1 const 1
@@ -1050,6 +1050,9 @@ scoreboard players set 1073741824 const 1073741824
 scoreboard players set max const 2147483647
 scoreboard players set min const -2147483648
 scoreboard players set -1 const -1
+
+# SET UP VARIABLES
+scoreboard objectives add vars dummy
 
 tag @a remove victim-of-dialogue-by-billy
 

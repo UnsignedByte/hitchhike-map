@@ -101,9 +101,12 @@ export async function init (
       `data modify storage generated:quest_book current set value ${JSON.stringify(Array(questCount).fill(""))}`,
       `data modify storage generated:quest_book completed set value ${JSON.stringify(Array(questCount).fill(""))}`,
       '',
-      '# SETUP CONSTS',
+      '# SET UP CONSTS',
       `scoreboard objectives add const dummy`,
       (()=> Object.entries(CONSTANTS).map(x=>`scoreboard players set ${x[0]} const ${x[1]}`))(),
+      '',
+      '# SET UP VARIABLES',
+      `scoreboard objectives add vars dummy`,
       onLoad
     )
   )
@@ -111,6 +114,9 @@ export async function init (
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/tick.mcfunction`),
     lines(
+      '# update variables',
+      `scoreboard players set playercount vars 0`,
+      `execute as @a run scoreboard players add playercount vars 1`,
       '# NPC dialogue',
       `# Detect right clicks`,
       `execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc`,

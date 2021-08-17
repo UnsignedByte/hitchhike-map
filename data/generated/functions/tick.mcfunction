@@ -1,3 +1,6 @@
+# update variables
+scoreboard players set playercount vars 0
+execute as @a run scoreboard players add playercount vars 1
 # NPC dialogue
 # Detect right clicks
 execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc
@@ -61,6 +64,10 @@ execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-
 scoreboard players set dialogue-begun dialogue-status 0
 
 execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] as @e[tag=npc-wheatish, limit=1] if score @s dialogue-status matches 1 run schedule function generated:npc/wheatish/1-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] as @e[tag=npc-wheatish, limit=1] if score @s dialogue-status matches 2 run schedule function generated:npc/wheatish/2-0 1t
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 

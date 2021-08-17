@@ -21,6 +21,20 @@ const colourNameSchema = [
 ] as const
 const colourNames = colourNameSchema.map(schema => schema.value)
 
+const cmdSchema = z.object({ // allows custom commands
+  command: z.array(z.string()).default([]),
+  quest: z.array(z.string()).default([]),
+  function: z.array(z.string()).default([]),
+  score: z.array(z.string()).default([])
+}).transform(x=>(
+  {command:[
+    ...x.command,
+    ...x.function.map(f=>`function ${f}`),
+    ...x.quest.map(q=>`function generated:quests/${q}-start`),
+    ...x.score.map(s=>`scoreboard players set ${s}`)
+  ]}
+)).default({command:[]})
+
 const colourSchema = 
   z.union([
     z
@@ -49,31 +63,22 @@ const msgSchema = z
       z.string().transform(msg=>[{text: msg}]),
       rawJSONTextSchema.transform(json=>[json]),
       z.array(rawJSONTextSchema)
-    ]),
-    command: z.string().default(''),
-    quest: z.string().optional(),
-    function: z.string().optional()
-  }).transform(x=>{
-    if ('function' in x) {
-      x.command = `function ${x.function}`
-    }
-    if ('quest' in x) {
-      x.command = `function generated:quests/${x.quest}-start`
-    }
-    return x;
-  })
+    ])
+  }).and(cmdSchema)
 
 const dialogueSchema = z
   .object({
     type: z.literal('simple').optional(), // default to simple
-    end: z.number().optional(), // scoreboard value to update to after finish
+    end: z.union([
+      z.number().transform(x=>({command: [`scoreboard players set \${select.self} dialogue-status ${x}`]})),
+      cmdSchema
+    ]),
     cond: z.number().default(0), // scoreboard condition under which to run
     messages: z.array(z.union([
       msgSchema,
       z.string().transform(msg=>msgSchema.parse({message: msg})),
     ])) // list of sequential messages to present, along with some parameters (I.E. globality)
   })
-  .strict()
 
 const npcSchema = z
   .object({
@@ -169,7 +174,8 @@ const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
     stat: z.string().default('dummy'),
     condition: z.array(z.string()).default([]),
     value: z.array(z.string()).default([]),
-    count: z.number().int().default(1)
+    count: z.number().int().default(1),
+    all: z.boolean().default(false)
   }),
   z.object({
     type: z.literal('nest'),
@@ -190,7 +196,8 @@ const questSchema = z.
     name: z.string(),
     description: z.string(),
     hint: z.string().optional(),
-    condition: questConditionSchema
+    condition: questConditionSchema,
+    end: cmdSchema
   })
   .strict()
 

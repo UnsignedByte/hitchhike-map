@@ -1,6 +1,8 @@
 import { Lines } from './main.ts'
 import { Npc, Quest, QuestCondition } from './parse-yaml.ts'
 
+let npc: Record<string, string> = {} // dictionary for npc selectors
+
 type NbtValue = string | number | boolean | undefined | null;
 type NbtData = {
   [key: string]: NbtValue | NbtData
@@ -71,6 +73,8 @@ export function createNpc (
     newPlayer: `@a[tag=${playerTag}, tag=!spoken-to, limit=1]`,
     eavesdropper: `@a[distance=..${HEAR_DIST}]`
   }
+
+  npc[id] = select.self;
 
   const functions: Record<string, Lines> = {}
 
@@ -153,7 +157,7 @@ export function createNpc (
               ...message.message
             ])}`,
             `execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets}`,
-            message.command,
+            message.command.map(x=>eval(`\`${x}\``)),
             `schedule function ${namespace}:${
               i === dialogue.messages.length - 1
                 ? `npc/${id}/${idx}-end`
@@ -167,7 +171,7 @@ export function createNpc (
           `tag @a[tag=${playerTag}] remove spoken-to`,
           `tag @a[tag=${playerTag}] remove ${playerTag}`,
           `execute as ${select.self} at @s run tp @s ~ ~ ~ ${rx} ${ry}`,
-          'end' in dialogue ? `scoreboard players set ${select.self} dialogue-status ${dialogue.end}` : '# no scoreboard change here',
+          dialogue.end.command.map(x=>eval(`\`${x}\``)),
           `tag ${select.self} remove speaking`
         ]
         return [
@@ -268,8 +272,8 @@ export function createQuest (
       ]
     })}`,
     `scoreboard players set @a quest-book-upd -1`,
-    `scoreboard objectives remove ${getQ()}`,
-    `scoreboard players reset ${id} quest-status`
+    `scoreboard players set ${id} quest-status -1`,
+    `scoreboard objectives remove ${getQ()}`
   ]
 
   functions[`quests/${id}-tick`] = [];
@@ -314,6 +318,7 @@ export function createQuest (
         }
 
         functions[`quests/tick/${getQ(path)}`].push(<string[]>obj.value) //custom lines
+        if (<boolean>obj.all) functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} /= playercount vars`)
         functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`)
 
         functions[`quests/${id}-tick`].push(
@@ -363,7 +368,10 @@ export function createQuest (
     `execute if score ${id} quest-status matches 0.. run function generated:quests/${id}-tick`
   ])
 
-  reset = functions[`quests/${id}-end`].slice(3)
+  reset = [
+    `scoreboard players reset ${id} quest-status`,
+    functions[`quests/${id}-end`].slice(4)
+  ]
 
   return {
     reset,

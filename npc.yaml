@@ -79,14 +79,20 @@ npc:
                 color: light_purple
                 italic: true
               - text: '!'
-            quest: bread
+            quest:
+              - bread
             global: true
-          end:  1
+          end: 1
         - messages:
           - You still haven't had the bread?
           - I told you, its really good!
           - Just go try it, I'm sure you'll like it.
           cond: 1
+        - messages:
+          - I see you enjoyed the bread.
+          - I told you it was good!
+          - Anyways, see you later! I've gotta go get some for myself.
+          cond: 2
 
 quest:
   bread:
@@ -97,6 +103,9 @@ quest:
       type: player # this type stores data for every player
       stat: minecraft.used:minecraft.bread
       count: 5
+    end:
+      score:
+        - ${npc.wheatish} dialogue-status 2
   diet:
     name: Balanced Diet
     description: Eat ${condition.value[1].count} pieces of meat (cooked, of course) and ${condition.value[0].count} vegetables
@@ -141,6 +150,7 @@ quest:
       type: nest
       value:
         - type: player
+          all: true
           condition: # each condition in the list, when satisfied, will increment the score by 1. think of each condition as in `execute as @a at @s <conditions> run`
             - if entity @s[nbt={Inventory:[{Slot:100b, id:"minecraft:leather_boots"}]}]
             - if entity @s[nbt={Inventory:[{Slot:101b, id:"minecraft:leather_leggings"}]}]
