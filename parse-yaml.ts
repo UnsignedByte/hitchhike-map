@@ -139,10 +139,13 @@ export type Npc = z.infer<typeof npcSchema>
 
 type qci = 
 {
-  type: "stat",
-  value: string,
+  type: "player",
+  stat?: string,
+  condition?: string[],
+  value?: string,
   count?: number,
-  overflow?: boolean
+  overflow?: boolean,
+  all?: boolean
 } | {
   type: "nest",
   value: qci[],
@@ -152,21 +155,22 @@ type qci =
 
 const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
   z.object({
-    type: z.literal('stat'),
-    value: z.string(),
-    count: z.number().int().default(1),
-    overflow: z.boolean().default(false)
+    type: z.literal('player'),
+    stat: z.string().default('dummy'),
+    condition: z.array(z.string()).default([]),
+    count: z.number().int().default(1)
   }),
   z.object({
     type: z.literal('nest'),
     value: z.array(questConditionSchema),
-    count: z.number().int().default(-1),
-    overflow: z.boolean().default(false)
+    count: z.number().int().default(-1)
   }).transform(x=>{
     if (x.count == -1) x.count = x.value.length;
     return x;
   })
-]))
+]).and(z.object({
+  overflow: z.boolean().default(false)
+})))
 
 export type QuestCondition = z.infer<typeof questConditionSchema>; // i hate this
 

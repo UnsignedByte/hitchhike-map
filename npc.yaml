@@ -66,8 +66,8 @@ quest:
     hint: Maintain a wheat-based diet (whole). # description to show before the quest is done (optional)
     description: Eat ${condition.count} pieces of bread.
     condition:
-      type: stat
-      value: minecraft.used:minecraft.bread
+      type: player # this type stores data for every player
+      stat: minecraft.used:minecraft.bread
       count: 5
   diet:
     name: Balanced Diet
@@ -77,31 +77,45 @@ quest:
       value:
         - type: nest # q-1-0
           value:
-            - type: stat
-              value: minecraft.used:minecraft.carrot #q-1-0-0
+            - type: player
+              stat: minecraft.used:minecraft.carrot #q-1-0-0
               count: 1
               overflow: true # this quest can be completed to over 100% completion
-            - type: stat
-              value: minecraft.used:minecraft.potato #q-1-0-1
+            - type: player
+              stat: minecraft.used:minecraft.potato #q-1-0-1
               count: 1
               overflow: true
-            - type: stat
-              value: minecraft.used:minecraft.beetroot #q-1-0-2
+            - type: player
+              stat: minecraft.used:minecraft.beetroot #q-1-0-2
               count: 1
               overflow: true
           count: 5 # sum of child completeions must total 5% (5 pieces of food)
         - type: nest #q-1-1
           value:
-            - type: stat
-              value: minecraft.used:minecraft.cooked_beef
+            - type: player
+              stat: minecraft.used:minecraft.cooked_beef
               count: 1
               overflow: true
-            - type: stat
-              value: minecraft.used:minecraft.cooked_porkchop
+            - type: player
+              stat: minecraft.used:minecraft.cooked_porkchop
               count: 1
               overflow: true
-            - type: stat
-              value: minecraft.used:minecraft.cooked_chicken
+            - type: player
+              stat: minecraft.used:minecraft.cooked_chicken
               count: 1
               overflow: true
           count: 5
+  leather:
+    name: Dressing Warm
+    description: Wear 3 pieces of leather armor.
+    hint: Make sure to dress warm!
+    condition:
+      type: nest
+      value:
+        - type: player
+          condition: # each condition in the list, when satisfied, will increment the score by 1. think of each condition as in `execute as @a at @s <conditions> run`
+            - if entity @s[nbt={Inventory:[{Slot:100b, id:"minecraft:leather_boots"}]}]
+            - if entity @s[nbt={Inventory:[{Slot:101b, id:"minecraft:leather_leggings"}]}]
+            - if entity @s[nbt={Inventory:[{Slot:102b, id:"minecraft:leather_chestplate"}]}]
+            - if entity @s[nbt={Inventory:[{Slot:103b, id:"minecraft:leather_helmet"}]}]
+          count: 3

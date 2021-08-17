@@ -280,7 +280,7 @@ export function createQuest (
   }
 
   function parse(path: number[] = []) {
-    let obj = path.reduce((o, i) => (o.value as QuestCondition[])[i], condition); //as-es are needed because i hate typescript
+    let obj = path.reduce((o, i) => (o.value! as QuestCondition[])[i], condition); //as-es are needed because i hate typescript
 
     functions[`quests/quest-${id}-start`].push(
       `scoreboard players set ${getQ(path)} ${getQ()} 0` // set all to 0 at start
@@ -292,11 +292,12 @@ export function createQuest (
     ];
 
     switch(obj.type) {
-      case 'stat':
-        functions[`quests/quest-${id}-start`].push(`scoreboard objectives add ${getQ(path)} ${obj.value}`);
+      case 'player':
+        functions[`quests/quest-${id}-start`].push(`scoreboard objectives add ${getQ(path)} ${obj.stat}`);
         functions[`quests/quest-${id}-end`].push(`scoreboard objectives remove ${getQ(path)}`);
 
         functions[`quests/tick/${getQ(path)}`].push([
+          (<string[]>obj.condition).map(x=>`execute as @a at @s ${x} run scoreboard players add @s ${getQ(path)} 1`),
           `scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path)}`,
           `scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`,
         ])
@@ -306,7 +307,7 @@ export function createQuest (
         )
         break;
       case 'nest':
-        for (let i = 0; i < (obj.value as QuestCondition[]).length; i++) {
+        for (let i = 0; i < (<QuestCondition[]>obj.value!).length; i++) {
           const npath = [...path, i];
 
           // add update functions to tick
@@ -321,7 +322,7 @@ export function createQuest (
         functions[`quests/quest-${id}-tick`].push([
           `scoreboard players set - ${getQ()} 0`,
           `execute ${
-            (obj.value as QuestCondition[]).map((v, i)=>`if score ${getQ([...path, i])} ${getQ()} = o${getQ([...path, i])} ${getQ()}`).join(' ')
+            (<QuestCondition[]>obj.value!).map((v, i)=>`if score ${getQ([...path, i])} ${getQ()} = o${getQ([...path, i])} ${getQ()}`).join(' ')
           } run scoreboard players set - ${getQ()} 1`,
           `execute if score - ${getQ()} matches 0 run function generated:quests/tick/${getQ(path)}`
         ])

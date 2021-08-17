@@ -30,3 +30,7 @@ scoreboard objectives remove q-1-0-0-2
 scoreboard objectives remove q-1-0-1-0
 scoreboard objectives remove q-1-0-1-1
 scoreboard objectives remove q-1-0-1-2
+
+scoreboard objectives remove q-2
+scoreboard players reset leather quest-status
+scoreboard objectives remove q-2-0-0
