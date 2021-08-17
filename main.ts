@@ -66,6 +66,19 @@ export async function init (
     )
   )
 
+  let CONSTANTS = {
+    max: 2147483647,
+    min: -2147483648
+  }
+
+  let numericConstants: Set<number> = new Set();
+
+  for (let i = -1; i <= 1000; i++) numericConstants.add(i)
+  for (let i = -1; i <= 9; i++) numericConstants.add(Math.pow(10,i)) // add powers of 10 to 1 billion
+  for (let i = -1; i <= 30; i++) numericConstants.add(Math.pow(2,i)) // add powers of 2 to 2^30
+
+  CONSTANTS = Object.assign(CONSTANTS, Object.fromEntries([...numericConstants].map(x=>[x,x])))
+
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/load.mcfunction`),
     lines(
@@ -87,6 +100,10 @@ export async function init (
       `scoreboard objectives add quest-book-upd dummy`,
       `data modify storage generated:quest_book current set value ${JSON.stringify(Array(questCount).fill(""))}`,
       `data modify storage generated:quest_book completed set value ${JSON.stringify(Array(questCount).fill(""))}`,
+      '',
+      '# SETUP CONSTS',
+      `scoreboard objectives add const dummy`,
+      (()=> Object.entries(CONSTANTS).map(x=>`scoreboard players set ${x[0]} const ${x[1]}`))(),
       onLoad
     )
   )

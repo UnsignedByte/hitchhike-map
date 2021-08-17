@@ -274,7 +274,7 @@ export function createQuest (
   condition = {
     type: 'nest',
     value: [condition],
-    all: false,
+    overflow: false,
     count: condition.count
   }
 
@@ -287,7 +287,7 @@ export function createQuest (
 
     functions[`quests/tick/${getQ(path)}`] = [
       `scoreboard players operation o${getQ(path)} ${getQ()} = ${getQ(path)} ${getQ()}`,
-      `scoreboard players set ${getQ(path)} ${getQ()} ${obj.all ? 2147483647 : 0}`
+      `scoreboard players set ${getQ(path)} ${getQ()} 0`
     ];
 
     switch(obj.type) {
@@ -296,19 +296,8 @@ export function createQuest (
         functions[`quests/quest-${id}-end`].push(`scoreboard objectives remove ${getQ(path)}`);
 
         functions[`quests/tick/${getQ(path)}`].push([
-          ...((): Lines[] => {
-            switch(obj.all){
-              case false:
-                return [
-                  `scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path)}`,
-                ];
-              case true:
-                return [
-                  `execute as @a if score ${getQ(path)} ${getQ()} > @s ${getQ(path)} run scoreboard players operation ${getQ(path)} ${getQ()} = @s ${getQ(path)}`
-                ]
-            }
-            return []; // shouldnt hpapen but typescript is dumb
-          })()
+          `scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path)}`,
+          `scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`,
         ])
 
         functions[`quests/quest-${id}-tick`].push(
@@ -322,20 +311,7 @@ export function createQuest (
           // add update functions to tick
 
           functions[`quests/tick/${getQ(path)}`].push([
-            ...((): Lines[] => {
-              switch(obj.all){
-                case false:
-                  return [
-                    `scoreboard players operation ${getQ(path)} ${getQ()} += ${getQ(npath)} ${getQ()}`,
-                  ];
-                case true:
-                  return [
-                  `scoreboard players set ${getQ(path)} ${getQ()} 2147483647`,
-                    `execute if score ${getQ(path)} ${getQ()} > ${getQ(npath)} ${getQ()} run scoreboard players operation ${getQ(path)} ${getQ()} = ${getQ(npath)} ${getQ()}`
-                  ]
-              }
-              return []; // shouldnt hpapen but typescript is dumb
-            })()
+            `scoreboard players operation ${getQ(path)} ${getQ()} += ${getQ(npath)} ${getQ()}`
           ])
 
           parse(npath)
@@ -350,11 +326,18 @@ export function createQuest (
         ])
         break;
     }
+
+    functions[`quests/tick/${getQ(path)}`].push([
+      `scoreboard players operation ${getQ(path)} ${getQ()} /= ${obj.count} const`,
+      `${obj.overflow ? '' : '# '} execute unless score ${getQ(path)} ${getQ()} matches ..100 run scoreboard players set ${getQ(path)} ${getQ()} 100` // max 100% completion
+    ])
   }
 
   parse();
 
-  functions[`quests/tick/${getQ()}`].push(`execute unless score o${getQ()} ${getQ()} = ${getQ()} ${getQ()} run scoreboard players set @a quest-book-upd 0`)
+  functions[`quests/tick/${getQ()}`].push([
+    `execute unless score o${getQ()} ${getQ()} = ${getQ()} ${getQ()} run scoreboard players set @a quest-book-upd 0`
+  ])
   functions[`quests/quest-${id}-tick`].push([
     `scoreboard players operation ${id} quest-status = ${getQ()} ${getQ()}`
   ])

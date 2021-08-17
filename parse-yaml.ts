@@ -142,28 +142,28 @@ type qci =
   type: "stat",
   value: string,
   count?: number,
-  all?: boolean
+  overflow?: boolean
 } | {
   type: "nest",
   value: qci[],
   count?: number,
-  all?: boolean
+  overflow?: boolean
 }
 
 const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
   z.object({
     type: z.literal('stat'),
     value: z.string(),
-    count: z.number().int().default(1),
-    all: z.boolean().default(false)
+    count: z.number().int().default(1).transform(x=>x*100),
+    overflow: z.boolean().default(false)
   }),
   z.object({
     type: z.literal('nest'),
     value: z.array(questConditionSchema),
-    count: z.number().int().default(-1),
-    all: z.boolean().default(false)
+    count: z.number().int().default(-1).transform(x=>x*100),
+    overflow: z.boolean().default(false)
   }).transform(x=>{
-    if (x.count == -1) x.count = x.value.reduce((o: number, i)=>(o+<number>i.count), 0); // this is possibly the worst thing humans have ever made, other than mask by dream and among us.
+    if (x.count == -100) x.count = x.value.length*100;
     return x;
   })
 ]))

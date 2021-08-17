@@ -73,29 +73,34 @@ quest:
     description: Eat ${condition.value[1].count} pieces of meat (cooked, of course) and ${condition.value[0].count} vegetables
     condition:
       type: nest # listed values are also condition objects
-      all: true # all of the below conditions are required. I.E. the minimum value of all the conditions will be taken. (as opposed to the sum). for type stat (and similar), does the same with @a.
       value:
         - type: nest # q-1-0
           value:
             - type: stat
               value: minecraft.used:minecraft.carrot #q-1-0-0
-              count: 3
+              count: 1
+              overflow: true # this quest can be completed to over 100% completion
             - type: stat
               value: minecraft.used:minecraft.potato #q-1-0-1
-              count: 3
+              count: 1
+              overflow: true
             - type: stat
               value: minecraft.used:minecraft.beetroot #q-1-0-2
-              count: 3
-          count: 5 # MEANING: you can eat up to 3 of each type of food, thus must eat at least 3 of one type and 2 of another.
+              count: 1
+              overflow: true
+          count: 5 # sum of child completeions must total 5% (5 pieces of food)
         - type: nest #q-1-1
           value:
             - type: stat
               value: minecraft.used:minecraft.cooked_beef
-              count: 3
+              count: 1
+              overflow: true
             - type: stat
               value: minecraft.used:minecraft.cooked_porkchop
-              count: 3
+              count: 1
+              overflow: true
             - type: stat
               value: minecraft.used:minecraft.cooked_chicken
-              count: 3
+              count: 1
+              overflow: true
           count: 5
