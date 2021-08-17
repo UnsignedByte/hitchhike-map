@@ -275,7 +275,7 @@ export function createQuest (
     type: 'nest',
     value: [condition],
     all: false,
-    count: 1
+    count: condition.count
   }
 
   function parse(path: number[] = []) {
@@ -287,7 +287,7 @@ export function createQuest (
 
     functions[`quests/tick/${getQ(path)}`] = [
       `scoreboard players operation o${getQ(path)} ${getQ()} = ${getQ(path)} ${getQ()}`,
-      `scoreboard players set ${getQ(path)} ${getQ()} 0`
+      `scoreboard players set ${getQ(path)} ${getQ()} ${obj.all ? 2147483647 : 0}`
     ];
 
     switch(obj.type) {
@@ -304,7 +304,6 @@ export function createQuest (
                 ];
               case true:
                 return [
-                  `scoreboard players set ${getQ(path)} ${getQ()} 2147483647`,
                   `execute as @a if score ${getQ(path)} ${getQ()} > @s ${getQ(path)} run scoreboard players operation ${getQ(path)} ${getQ()} = @s ${getQ(path)}`
                 ]
             }
@@ -357,7 +356,6 @@ export function createQuest (
 
   functions[`quests/tick/${getQ()}`].push(`execute if score o${getQ()} ${getQ()} != ${getQ()} ${getQ()} run scoreboard players set @a quest-book-upd 0`)
   functions[`quests/quest-${id}-tick`].push([
-    `function generated:quests/tick/${getQ()}`,
     `scoreboard players operation ${id} quest-status = ${getQ()} ${getQ()}`
   ])
 
