@@ -235,7 +235,7 @@ export function createQuest (
             objective: 'quest-status'
           }
         },
-        `/${condition.count})`
+        `%)`
       ]
     })}`,
     `scoreboard players set ${id} quest-status 0`,
@@ -261,7 +261,7 @@ export function createQuest (
           text:name,
           italic:true
         },
-        ` (${condition.count}/${condition.count})`
+        ` (100%)`
       ]
     })}`,
     `scoreboard players set @a quest-book-upd -1`,
@@ -275,7 +275,7 @@ export function createQuest (
     type: 'nest',
     value: [condition],
     overflow: false,
-    count: condition.count
+    count: 1
   }
 
   function parse(path: number[] = []) {
