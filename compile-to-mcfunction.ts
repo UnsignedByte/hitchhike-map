@@ -343,9 +343,10 @@ export function createQuest (
         }
 
         functions[`quests/quest-${id}-tick`].push([
-          `execute ${
-            (obj.value as QuestCondition[]).map((v, i)=>`if score ${getQ([...path, i])} ${getQ()} != o${getQ([...path, i])} ${getQ()}`).join(' ')
-          } run function generated:quests/tick/${getQ(path)}`
+          `execute execute store success score - ${getQ()} ${
+            (obj.value as QuestCondition[]).map((v, i)=>`if score ${getQ([...path, i])} ${getQ()} = o${getQ([...path, i])} ${getQ()}`).join(' ')
+          }`,
+          `execute if score - ${getQ()} matches 0 run function generated:quests/tick/${getQ(path)}`
         ])
         break;
     }
