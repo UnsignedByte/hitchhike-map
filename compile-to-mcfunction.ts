@@ -354,7 +354,7 @@ export function createQuest (
 
   parse();
 
-  functions[`quests/tick/${getQ()}`].push(`execute if score o${getQ()} ${getQ()} != ${getQ()} ${getQ()} run scoreboard players set @a quest-book-upd 0`)
+  functions[`quests/tick/${getQ()}`].push(`execute unless score o${getQ()} ${getQ()} = ${getQ()} ${getQ()} run scoreboard players set @a quest-book-upd 0`)
   functions[`quests/quest-${id}-tick`].push([
     `scoreboard players operation ${id} quest-status = ${getQ()} ${getQ()}`
   ])
