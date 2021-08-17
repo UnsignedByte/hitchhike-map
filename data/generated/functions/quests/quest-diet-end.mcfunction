@@ -3,9 +3,9 @@ data modify storage generated:quest_book completed[1] set value '{"text":"","col
 scoreboard players set @a quest-book-upd -1
 scoreboard objectives remove q-1
 scoreboard players reset diet quest-status
-scoreboard objectives remove q-1-0-0
-scoreboard objectives remove q-1-0-1
-scoreboard objectives remove q-1-0-2
-scoreboard objectives remove q-1-1-0
-scoreboard objectives remove q-1-1-1
-scoreboard objectives remove q-1-1-2
+scoreboard objectives remove q-1-0-0-0
+scoreboard objectives remove q-1-0-0-1
+scoreboard objectives remove q-1-0-0-2
+scoreboard objectives remove q-1-0-1-0
+scoreboard objectives remove q-1-0-1-1
+scoreboard objectives remove q-1-0-1-2

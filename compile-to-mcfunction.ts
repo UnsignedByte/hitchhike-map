@@ -270,6 +270,13 @@ export function createQuest (
 
   functions[`quests/quest-${id}-tick`] = [];
 
+  condition = {
+    type: 'nest',
+    value: [condition],
+    all: false,
+    count: 1
+  }
+
   function parse(path: number[] = []) {
     let obj = path.reduce((o, i) => (o.value as QuestCondition[])[i], condition); //as-es are needed because i hate typescript
 
