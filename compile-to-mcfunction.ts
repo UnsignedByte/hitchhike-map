@@ -191,6 +191,7 @@ export function createQuest (
   {
     name,
     description,
+    hint,
     condition
   }: Quest
 ): {
@@ -220,7 +221,7 @@ export function createQuest (
       hoverEvent:{
         action:"show_text",
         contents: {
-          text: eval(`\`${description}\``)
+          text: eval(`\`${hint || description}\``)
         }
       },
       extra:[
@@ -328,7 +329,7 @@ export function createQuest (
     }
 
     functions[`quests/tick/${getQ(path)}`].push([
-      `scoreboard players operation ${getQ(path)} ${getQ()} /= ${<number>obj.count/100} const`,
+      `scoreboard players operation ${getQ(path)} ${getQ()} /= ${<number>obj.count} const`,
       `${obj.overflow ? '# ' : ''} execute unless score ${getQ(path)} ${getQ()} matches ..100 run scoreboard players set ${getQ(path)} ${getQ()} 100` // max 100% completion
     ])
   }

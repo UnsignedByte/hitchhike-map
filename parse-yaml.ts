@@ -154,16 +154,16 @@ const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
   z.object({
     type: z.literal('stat'),
     value: z.string(),
-    count: z.number().int().default(1).transform(x=>x*100),
+    count: z.number().int().default(1),
     overflow: z.boolean().default(false)
   }),
   z.object({
     type: z.literal('nest'),
     value: z.array(questConditionSchema),
-    count: z.number().int().default(-1).transform(x=>x*100),
+    count: z.number().int().default(-1),
     overflow: z.boolean().default(false)
   }).transform(x=>{
-    if (x.count == -100) x.count = x.value.length*100;
+    if (x.count == -1) x.count = x.value.length;
     return x;
   })
 ]))
@@ -174,6 +174,7 @@ const questSchema = z.
   object({
     name: z.string(),
     description: z.string(),
+    hint: z.string().optional(),
     condition: questConditionSchema
   })
   .strict()

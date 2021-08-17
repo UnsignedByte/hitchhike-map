@@ -63,6 +63,7 @@ npc:
 quest:
   bread:
     name: Whole Wheat
+    hint: Maintain a wheat-based diet (whole). # description to show before the quest is done (optional)
     description: Eat ${condition.count} pieces of bread.
     condition:
       type: stat
