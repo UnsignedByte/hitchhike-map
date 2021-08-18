@@ -178,7 +178,7 @@ export async function init (
     `scoreboard objectives add change-count-tmp dummy`,
     Object.entries(item.money).map(([val, item])=>[
       `scoreboard players set val change-count-tmp ${val}`,
-      `execute as @e[type=item,nbt={Item:${toSnbt(item)}},distance=..1] run function generated:count_change_single`
+      `execute as @e[type=item,nbt={Item:${toSnbt(item)}},distance=..1] run function generated:change_count_single`
     ]),
     `scoreboard objectives remove change-count-tmp`,
   ]
