@@ -192,7 +192,7 @@ export async function init (
   ]
 
   functions[`change/dec/root`] = [ // pay for the amount specified in dec change
-    Object.entries(item.money).map(([val, item])=>{
+    Object.entries(item.money).sort((a,b)=>(parseInt(b[0])-parseInt(a[0]))).map(([val, item])=>{
       let itemsel = `@e[type=item,nbt={Item:${toSnbt(item)}},distance=..1,limit=1]`
 
       functions[`change/dec/d-${val}`] = [
