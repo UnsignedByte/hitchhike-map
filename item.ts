@@ -56,7 +56,8 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 0.01 BOV"
           })}]`
-        }
+        },
+        Enchantments:`[{}]`
       }
     },
     5: {
@@ -71,7 +72,8 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 0.05 BOV"
           })}]`
-        }
+        },
+        Enchantments:`[{}]`
       }
     },
     10: {
@@ -86,7 +88,8 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 0.10 BOV"
           })}]`
-        }
+        },
+        Enchantments:`[{}]`
       }
     },
     25: {
@@ -101,7 +104,8 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 0.25 BOV"
           })}]`
-        }
+        },
+        Enchantments:`[{}]`
       }
     },
     100: {
@@ -116,7 +120,8 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 1.00 BOV"
           })}]`
-        }
+        },
+        Enchantments:`[{}]`
       }
     },
     500: {
@@ -131,7 +136,8 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 5.00 BOV"
           })}]`
-        }
+        },
+        Enchantments:`[{}]`
       }
     }
   }
