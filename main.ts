@@ -62,7 +62,7 @@ export async function init (
       'clear @a minecraft:written_book{title:"Quest Book"}',
       '# Give new quest book',
       `give @a ${toGive(item.quest_book)}`,
-      Object.values(item.money).map(x=>`give @a ${toGive(x)}`),
+      Object.values(item.money).map(x=>`give @a ${toGive(x, 64)}`),
       reset
     )
   )
@@ -175,17 +175,17 @@ export async function init (
   })()
 
   functions[`change_count`] = [ // count the amount of cash at a position
-    `scoreboard objectives add change-count-tmp dummy`,
+    `scoreboard objectives add count-change-tmp dummy`,
     Object.entries(item.money).map(([val, item])=>[
-      `scoreboard players set val change-count-tmp ${val}`,
-      `execute as @e[type=item,nbt={Item:${toSnbt(item)}},distance=..1] run function generated:change_count_single`
+      `scoreboard players set val count-change-tmp ${val}`,
+      `execute as @e[type=item,nbt={Item:${toSnbt(item)}},distance=..1] run function generated:count_change_single`
     ]),
-    `scoreboard objectives remove change-count-tmp`,
+    `scoreboard objectives remove count-change-tmp`,
   ]
   functions[`change_count_single`] = [
-    `execute store result score @s change-count-tmp run data get entity @s Item.Count`,
-    `scoreboard players operation @s change-count-tmp *= val change-count-tmp`,
-    `scoreboard players operation changecount vars += @s change-count-tmp`
+    `execute store result score @s count-change-tmp run data get entity @s Item.Count`,
+    `scoreboard players operation @s count-change-tmp *= val count-change-tmp`,
+    `scoreboard players operation changecount vars += @s count-change-tmp`
   ]
 
   for (const [name, contents] of Object.entries(functions)) {
