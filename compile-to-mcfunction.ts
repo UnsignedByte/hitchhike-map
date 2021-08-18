@@ -198,6 +198,7 @@ export function createQuest (
     name,
     description,
     hint,
+    end,
     condition
   }: Quest
 ): {
@@ -273,6 +274,7 @@ export function createQuest (
     })}`,
     `scoreboard players set @a quest-book-upd -1`,
     `scoreboard players set ${id} quest-status -1`,
+    end.command.map(x=>eval(`\`${x}\``)),
     `scoreboard objectives remove ${getQ()}`
   ]
 
@@ -370,7 +372,7 @@ export function createQuest (
 
   reset = [
     `scoreboard players reset ${id} quest-status`,
-    functions[`quests/${id}-end`].slice(4)
+    functions[`quests/${id}-end`].slice(5)
   ]
 
   return {
