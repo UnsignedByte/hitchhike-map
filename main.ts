@@ -174,15 +174,15 @@ export async function init (
     ];
   })()
 
-  functions[`count_change`] = [ // count the amount of cash at a position
+  functions[`change_count`] = [ // count the amount of cash at a position
     `scoreboard objectives add change-count-tmp dummy`,
     Object.entries(item.money).map(([val, item])=>[
       `scoreboard players set val change-count-tmp ${val}`,
-      `execute as @e[type=item,nbt=Item:${toSnbt(item)},distance=..1] run function generated:change_count_single`
+      `execute as @e[type=item,nbt={Item:${toSnbt(item)}},distance=..1] run function generated:change_count_single`
     ]),
     `scoreboard objectives remove change-count-tmp`,
   ]
-  functions[`count_change_single`] = [
+  functions[`change_count_single`] = [
     `execute store result score @s change-count-tmp run data get entity @s Item.Count`,
     `scoreboard players operation @s change-count-tmp *= val change-count-tmp`,
     `scoreboard players operation changecount vars += @s change-count-tmp`
