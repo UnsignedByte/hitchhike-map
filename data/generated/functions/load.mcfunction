@@ -1053,6 +1053,7 @@ scoreboard players set -1 const -1
 
 # SET UP VARIABLES
 scoreboard objectives add vars dummy
+scoreboard objectives add change dummy
 
 tag @a remove victim-of-dialogue-by-billy
 

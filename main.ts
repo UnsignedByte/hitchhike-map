@@ -108,6 +108,7 @@ export async function init (
       '',
       '# SET UP VARIABLES',
       `scoreboard objectives add vars dummy`,
+      `scoreboard objectives add change dummy`,
       onLoad
     )
   )
@@ -174,19 +175,54 @@ export async function init (
     ];
   })()
 
-  functions[`change_count`] = [ // count the amount of cash at a position
-    `scoreboard players set changecount vars 0`,
+  functions[`change/count`] = [ // count the amount of cash at a position
+    `scoreboard players set count change 0`,
     `scoreboard objectives add change-count-tmp dummy`,
     Object.entries(item.money).map(([val, item])=>[
       `scoreboard players set val change-count-tmp ${val}`,
-      `execute as @e[type=item,nbt={Item:${toSnbt(item)}},distance=..1] run function generated:change_count_single`
+      `execute as @e[type=item,nbt={Item:${toSnbt(item)}},distance=..1] run function generated:change/count_single`
     ]),
-    `scoreboard objectives remove change-count-tmp`,
+    `scoreboard objectives remove change-count-tmp`
   ]
-  functions[`change_count_single`] = [
+
+  functions[`change/decrement`] = [ // pay for the amount specified in dec change
+    `execute positioned ~ ~ ~ run function generated:change/count`,
+    `scoreboard players set dec-success change 0`,
+    `execute positioned ~ ~ ~ if score dec change <= count change run function generated:change/dec/root`
+  ]
+
+  functions[`change/dec/root`] = [ // pay for the amount specified in dec change
+    Object.entries(item.money).map(([val, item])=>{
+      let itemsel = `@e[type=item,nbt={Item:${toSnbt(item)}},distance=..1,limit=1]`
+
+      functions[`change/dec/d-${val}`] = [
+        `scoreboard players remove dec change ${val}`,
+        `scoreboard players remove count change ${val}`,
+        `execute as ${itemsel} run function generated:change/dec/dec-self`,
+        `execute positioned ~ ~ ~ if score dec change matches ${val}.. if entity ${itemsel} run function generated:change/dec/d-${val}`
+      ]
+
+      return `execute positioned ~ ~ ~ if score dec change matches ${val}.. if entity ${itemsel} run function generated:change/dec/d-${val}`
+    }),
+    `scoreboard players set dec-success change 1`
+  ]
+
+  functions[`change/dec/dec-self`] = [
+    `kill @s[nbt={Item:{Count:1b}}]`, // kill self at count 1
+    `execute as @s run function generated:change/dec/_dec-self`
+  ]
+
+  functions[`change/dec/_dec-self`] = [
+    `execute store result score @s change run data get entity @s Item.Count`,
+    `scoreboard players remove @s change 1`,
+    `execute store result entity @s Item.Count byte 1 run scoreboard players get @s change`,
+    `scoreboard players reset @s change`
+  ]
+
+  functions[`change/count_single`] = [
     `execute store result score @s change-count-tmp run data get entity @s Item.Count`,
     `scoreboard players operation @s change-count-tmp *= val change-count-tmp`,
-    `scoreboard players operation changecount vars += @s change-count-tmp`
+    `scoreboard players operation count change += @s change-count-tmp`
   ]
 
   for (const [name, contents] of Object.entries(functions)) {
