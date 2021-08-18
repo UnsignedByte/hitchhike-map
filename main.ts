@@ -175,6 +175,7 @@ export async function init (
   })()
 
   functions[`change_count`] = [ // count the amount of cash at a position
+    `scoreboard players set changecount vars 0`,
     `scoreboard objectives add change-count-tmp dummy`,
     Object.entries(item.money).map(([val, item])=>[
       `scoreboard players set val change-count-tmp ${val}`,

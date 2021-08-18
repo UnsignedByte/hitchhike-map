@@ -1,3 +1,4 @@
+scoreboard players set changecount vars 0
 scoreboard objectives add change-count-tmp dummy
 scoreboard players set val change-count-tmp 1
 execute as @e[type=item,nbt={Item:{id: "minecraft:nether_brick", tag: {display: {Name: '{"text":"1b","color":"#3d1e24"}', Lore: ['{"text":"Worth 0.01 BOV"}']}}}},distance=..1] run function generated:change_count_single
