@@ -1,7 +1,7 @@
 import { ensureDir, emptyDir } from 'https://deno.land/std@0.102.0/fs/mod.ts'
 import { join, dirname } from 'https://deno.land/std@0.102.0/path/mod.ts'
 import { parse as parseArgs } from 'https://deno.land/std@0.104.0/flags/mod.ts'
-import { createNpc, createQuest, toSnbt, rawJson } from './compile-to-mcfunction.ts'
+import { createNpc, createQuest, toSnbt, rawJson, toGive } from './compile-to-mcfunction.ts'
 import { parse } from './parse-yaml.ts'
 import { item } from './item.ts'
 
@@ -61,7 +61,8 @@ export async function init (
       '# Clear quest book from all players.',
       'clear @a minecraft:written_book{title:"Quest Book"}',
       '# Give new quest book',
-      `give @a written_book${toSnbt(item.quest_book.tag)}`,
+      `give @a ${toGive(item.quest_book)}`,
+      Object.values(item.money).map(x=>`give @a ${toGive(x)}`),
       reset
     )
   )

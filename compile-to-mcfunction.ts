@@ -8,6 +8,10 @@ type NbtData = {
   [key: string]: NbtValue | NbtData
 }
 
+export function toGive (item: NbtData, count: number = parseInt((<string>item.Count!).slice(0,(<string>item.Count!).length-1))) {
+  return `${(<string>item.id!).slice(1, (<string>item.id!).length-1)}${toSnbt(item.tag as NbtData)} ${count}`
+}
+
 export function toSnbt (nbt: NbtData): string {
   const values = []
   for (const [key, value] of Object.entries(nbt)) {
