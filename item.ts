@@ -3,7 +3,6 @@ import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
 export const item = {
   quest_book: {
     id: '"minecraft:written_book"',
-    Count: '1b',
     tag: {
       display: {
         Name: rawJson({
@@ -46,7 +45,6 @@ export const item = {
   money:{
     1: {
       id: '"minecraft:nether_brick"',
-      Count: '1b',
       tag: {
         display: {
           Name: rawJson({
@@ -56,13 +54,11 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 0.01 BOV"
           })}]`
-        },
-        Enchantments:`[{}]`
+        }
       }
     },
     5: {
       id: '"minecraft:brick"',
-      Count: '1b',
       tag: {
         display: {
           Name: rawJson({
@@ -72,13 +68,11 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 0.05 BOV"
           })}]`
-        },
-        Enchantments:`[{}]`
+        }
       }
     },
     10: {
       id: '"minecraft:copper_ingot"',
-      Count: '1b',
       tag: {
         display: {
           Name: rawJson({
@@ -88,13 +82,11 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 0.10 BOV"
           })}]`
-        },
-        Enchantments:`[{}]`
+        }
       }
     },
     25: {
       id: '"minecraft:gold_ingot"',
-      Count: '1b',
       tag: {
         display: {
           Name: rawJson({
@@ -104,13 +96,11 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 0.25 BOV"
           })}]`
-        },
-        Enchantments:`[{}]`
+        }
       }
     },
     100: {
       id: '"minecraft:iron_ingot"',
-      Count: '1b',
       tag: {
         display: {
           Name: rawJson({
@@ -120,13 +110,11 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 1.00 BOV"
           })}]`
-        },
-        Enchantments:`[{}]`
+        }
       }
     },
     500: {
       id: '"minecraft:netherite_ingot"',
-      Count: '1b',
       tag: {
         display: {
           Name: rawJson({
@@ -136,8 +124,7 @@ export const item = {
           Lore:`[${rawJson({
             text:"Worth 5.00 BOV"
           })}]`
-        },
-        Enchantments:`[{}]`
+        }
       }
     }
   }
