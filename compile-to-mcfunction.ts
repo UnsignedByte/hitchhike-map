@@ -320,8 +320,8 @@ export function createQuest (
         }
 
         functions[`quests/tick/${getQ(path)}`].push(<string[]>obj.value) //custom lines
-        if (<boolean>obj.all) functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} /= playercount vars`)
         functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`)
+        if (<boolean>obj.all) functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} /= playercount vars`)
 
         functions[`quests/${id}-tick`].push(
           `function generated:quests/tick/${getQ(path)}`
