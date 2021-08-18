@@ -80,7 +80,7 @@ export const item = {
       tag: {
         display: {
           Name: rawJson({
-            text: "1b",
+            text: "10b",
             color: "#bf5935"
           }),
           Lore:`[${rawJson({
@@ -95,7 +95,7 @@ export const item = {
       tag: {
         display: {
           Name: rawJson({
-            text: "1b",
+            text: "25b",
             color: "#d99413"
           }),
           Lore:`[${rawJson({
@@ -110,7 +110,7 @@ export const item = {
       tag: {
         display: {
           Name: rawJson({
-            text: "1b",
+            text: "1B",
             color: "#717171"
           }),
           Lore:`[${rawJson({
@@ -125,7 +125,7 @@ export const item = {
       tag: {
         display: {
           Name: rawJson({
-            text: "1b",
+            text: "5B",
             color: "#302829"
           }),
           Lore:`[${rawJson({
