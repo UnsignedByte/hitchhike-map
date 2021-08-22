@@ -175,10 +175,12 @@ export async function init (
     ];
   })()
 
+  let ientries = Object.entries(item.money);
+
   functions[`change/count`] = [ // count the amount of cash at a position
     `scoreboard players set count change 0`,
     `scoreboard objectives add change-count-tmp dummy`,
-    Object.entries(item.money).map(([val, item])=>[
+    ientries.map(([val, item])=>[
       `scoreboard players set val change-count-tmp ${val}`,
       `execute as @e[type=item,nbt={Item:${toSnbt(item)}},distance=..1] run function generated:change/count_single`
     ]),
@@ -191,8 +193,27 @@ export async function init (
     `execute positioned ~ ~ ~ if score dec change <= count change run function generated:change/dec/root`
   ]
 
+  functions[`change/generate`] = [ // generate amount specified in gen change
+    `execute positioned ~ ~ ~ run function generated:change/count`,
+    `scoreboard players set gen-success change 0`,
+    `execute positioned ~ ~ ~ run function generated:change/gen/root`
+  ]
+
+  functions[`change/gen/root`] = [
+    ientries.sort((a,b)=>(parseInt(b[0])-parseInt(a[0]))).map(([val, item])=>{ // generate change from large to small denominations
+      functions[`change/gen/g-${val}`] = [
+        `scoreboard players remove gen change ${val}`,
+        `scoreboard players add count change ${val}`,
+        `summon item ~ ~ ~ {Item:${toSnbt(Object.assign({Count:'1b'}, item))},Age:0,PickupDelay:0}`,
+        `execute positioned ~ ~ ~ if score gen change matches ${val}.. run function generated:change/gen/g-${val}`
+      ]
+
+      return `execute positioned ~ ~ ~ if score gen change matches ${val}.. run function generated:change/gen/g-${val}`
+    })
+  ]
+
   functions[`change/dec/root`] = [ // pay for the amount specified in dec change
-    Object.entries(item.money).sort((a,b)=>(parseInt(b[0])-parseInt(a[0]))).map(([val, item])=>{
+    ientries.sort((a,b)=>(parseInt(b[0])-parseInt(a[0]))).map(([val, item])=>{
       let itemsel = `@e[type=item,nbt={Item:${toSnbt(item)}},distance=..1,limit=1]`
 
       functions[`change/dec/d-${val}`] = [
@@ -204,6 +225,12 @@ export async function init (
 
       return `execute positioned ~ ~ ~ if score dec change matches ${val}.. if entity ${itemsel} run function generated:change/dec/d-${val}`
     }),
+    ientries.sort((a,b)=>(parseInt(a[0])-parseInt(b[0]))).map( // in case we can't get the exact value, allow it to overcharge a little (and generate change later)
+      ([val, item])=>`execute positioned ~ ~ ~ if score dec change > 0 const if entity @e[type=item,nbt={Item:${toSnbt(item)}},distance=..1,limit=1] run function generated:change/dec/d-${val}`
+    ),
+    `execute if score dec change < 0 const run scoreboard players operation gen change = dec change`,
+    `execute if score dec change < 0 const run scoreboard players operation gen change *= -1 const`,
+    `execute if score dec change < 0 const positioned ~ ~ ~ run function generated:change/generate`,
     `scoreboard players set dec-success change 1`
   ]
 
