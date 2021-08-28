@@ -4,7 +4,7 @@ import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
 const s = 0.625; // size of an item (on head)
 const tps = 60;
 
-const offset = 1.8875;
+const necklength = 1.8825;
 
 /* 
 corner: southeastern corner
@@ -17,7 +17,8 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	const cornerV = new CANNON.Vec3(...corner);
 	return simulate_pile(bounds, count, slope).map(x=>{
 		x.position.vadd(cornerV, x.position);
-		return `summon armor_stand ${x.position.x} ${x.position.y-offset} ${x.position.z} ${toSnbt({
+		x.position.vsub(x.quaternion.vmult(new CANNON.Vec3(0, necklength, 0)), x.position); // move by offset
+		return `summon armor_stand ${x.position.x} ${x.position.y} ${x.position.z} ${toSnbt({
 			Pose: {
 				Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${x.rotation.z}f]`
 			},
@@ -97,6 +98,6 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 	return objects.map(x=>{
 		const t = new CANNON.Vec3();
 		x.quaternion.toEuler(t);
-		return {position:x.position, rotation: t.scale(180/Math.PI)}
+		return {position:x.position, rotation: t.scale(180/Math.PI), quaternion:x.quaternion}
 	})
 }
