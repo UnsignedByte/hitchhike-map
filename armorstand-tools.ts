@@ -43,7 +43,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 
 	let groundMat = new CANNON.Material('ground');
 	let itemMat = new CANNON.Material('item');
-	let itemMat = new CANNON.Material('wall');
+	let wallMat = new CANNON.Material('wall');
 
 	world.addContactMaterial(new CANNON.ContactMaterial(groundMat, itemMat, {
 		friction:0.5,
@@ -57,7 +57,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 
 	world.addContactMaterial(new CANNON.ContactMaterial(wallMat, itemMat, {
 		friction:0,
-		restitution: 1
+		restitution: 0
 	}));
 
 	[
