@@ -90,7 +90,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 
 	console.log(`Generated scene with ${count} objects... simulating`)
 
-	for(let i = 0; i < tps*10; i++) {
+	for(let i = 0; i < tps*20; i++) {
 		world.step(1/tps);
 		// console.log(`Simulated frame ${i}/${tps*10}`)
 	}
