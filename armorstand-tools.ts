@@ -19,6 +19,7 @@ slope: rotations of the ground plane about the x, y, and z axes (good for items 
 export function generate_pile(corner: [number, number, number], item: string, count: number, bounds: [number, number], duration: number = 10, slope: [number, number, number] = [0,0,0]) {
 	const cornerV = new CANNON.Vec3(...corner);
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
+		console.log(x);
 		x.position.vadd(cornerV, x.position);
 		x.position.vsub(x.quaternion.vmult(headoffset), x.position); // move by offset
 		return `summon armor_stand ${x.position.x.toFixed(8)} ${(x.position.y - neckstart).toFixed(8)} ${x.position.z.toFixed(8)} ${toSnbt({
