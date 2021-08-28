@@ -5,7 +5,7 @@ const s = 0.625; // size of an item (on head)
 const tps = 60;
 
 const necklength = 0.44625;
-const headoffset = new CANNON.Vec3(0, necklength + s/2, -0.25);
+const headoffset = new CANNON.Vec3(0, necklength + s/2, -0.25+s/32);
 // (65.0075-64.115)/2
 
 /* 
