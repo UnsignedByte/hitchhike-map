@@ -41,31 +41,55 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 
 	slope[0] -= Math.PI / 2;
 
+	let groundMat = new CANNON.Material('ground');
+	let itemMat = new CANNON.Material('item');
+	let itemMat = new CANNON.Material('wall');
+
+	world.addContactMaterial(new CANNON.ContactMaterial(groundMat, itemMat, {
+		friction:0.5,
+		restitution: 0.3
+	}));
+
+	world.addContactMaterial(new CANNON.ContactMaterial(itemMat, itemMat, {
+		friction:0.4,
+		restitution: 0.2
+	}));
+
+	world.addContactMaterial(new CANNON.ContactMaterial(wallMat, itemMat, {
+		friction:0,
+		restitution: 1
+	}));
+
 	[
 		{ // ground
 			mass: 0,
 			quaternion: new CANNON.Quaternion().setFromEuler(...slope),
-			position: new CANNON.Vec3(0, 0, 0)
+			position: new CANNON.Vec3(0, 0, 0),
+			material: groundMat
 		},
 		{
 			mass: 0,
 			quaternion: new CANNON.Quaternion().setFromEuler(0, 0, 0),
-			position: new CANNON.Vec3(0,0,0)
+			position: new CANNON.Vec3(0,0,0),
+			material: wallMat
 		},
 		{
 			mass: 0,
 			quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI, 0),
-			position: new CANNON.Vec3(0,0,bounds[1])
+			position: new CANNON.Vec3(0,0,bounds[1]),
+			material: wallMat
 		},
 		{
 			mass: 0,
 			quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI / 2, 0),
-			position: new CANNON.Vec3(0,0,0)
+			position: new CANNON.Vec3(0,0,0),
+			material: wallMat
 		},
 		{
 			mass: 0,
 			quaternion: new CANNON.Quaternion().setFromEuler(0, - Math.PI / 2, 0),
-			position: new CANNON.Vec3(bounds[0],0,0)
+			position: new CANNON.Vec3(bounds[0],0,0),
+			material: wallMat
 		}
 	].forEach(b=>world.addBody(
 		new CANNON.Body(
@@ -82,6 +106,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 		objects[i] = new CANNON.Body({
 			mass: 1,
 			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/2, s/32)),
+			material: itemMat,
 			position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16+10, Math.random()*(bounds[1]-s)+s/2),
 			quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
 			// position: new CANNON.Vec3(bounds[0]/2, i+5,bounds[1]/2),
