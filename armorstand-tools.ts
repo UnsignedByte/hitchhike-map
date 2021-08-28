@@ -5,6 +5,7 @@ const s = 0.625; // size of an item (on head)
 const tps = 60;
 
 const necklength = 0.44625;
+const headoffset = new CANNON.Vec3(0, necklength + s/2, -0.25-s/16);
 // (65.0075-64.115)/2
 
 /* 
@@ -18,7 +19,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	const cornerV = new CANNON.Vec3(...corner);
 	return simulate_pile(bounds, count, slope).map(x=>{
 		x.position.vadd(cornerV, x.position);
-		x.position.vsub(x.quaternion.vmult(new CANNON.Vec3(0, necklength, 0)), x.position); // move by offset
+		x.position.vsub(x.quaternion.vmult(headoffset), x.position); // move by offset
 		return `summon armor_stand ${x.position.x} ${x.position.y} ${x.position.z} ${toSnbt({
 			Pose: {
 				Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${x.rotation.z}f]`
