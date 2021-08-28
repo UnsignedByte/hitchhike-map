@@ -3,7 +3,7 @@ import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
 
 const s = 0.625; // size of an item (on head)
 const tps = 60;
-const duration = 60; // one minute
+const duration = 20; // duration in seconds
 
 const neckstart = 7/16+1;
 const necklength = 0.44625;
@@ -82,7 +82,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 		objects[i] = new CANNON.Body({
 			mass: 1,
 			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/2, s/32)),
-			position: new CANNON.Vec3(Math.random()*bounds[0], Math.random()*5+3,Math.random()*bounds[1])
+			position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16, Math.random()*(bounds[1]-s)+s/2)
 			// position: new CANNON.Vec3(bounds[0]/2, i+5,bounds[1]/2),
 			// quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i, 0, 0)
 		})
