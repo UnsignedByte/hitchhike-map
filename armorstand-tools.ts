@@ -2,7 +2,7 @@ import * as CANNON from 'https://cdn.skypack.dev/cannon-es'
 import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
 
 const s = 0.625; // size of an item (on head)
-const tps = 60;
+const tps = 120;
 
 const neckstart = 7/16+1;
 const necklength = 0.44625;
@@ -81,7 +81,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 		objects[i] = new CANNON.Body({
 			mass: 1,
 			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/2, s/32)),
-			position: new CANNON.Vec3(Math.random()*bounds[0], Math.random()*10+5,Math.random()*bounds[1])
+			position: new CANNON.Vec3(Math.random()*bounds[0], Math.random()*5+3,Math.random()*bounds[1])
 			// position: new CANNON.Vec3(bounds[0]/2, i+5,bounds[1]/2),
 			// quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i, 0, 0)
 		})
@@ -93,13 +93,13 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 
 	console.log(`Generated scene with ${count} objects... simulating`)
 
-	for(let i = 0; i < tps*20; i++) {
+	for(let i = 0; i < tps*10; i++) {
 		world.step(1/tps);
-		// console.log(`Simulated frame ${i}/${tps*10}`)
+		if (i%tps == 0) console.log(`Simulated second ${i/tps}`)
 	}
-	for(let i = 0; i < count; i++) {
-		console.log(objects[i].position, objects[i].quaternion)
-	}
+	// for(let i = 0; i < count; i++) {
+	// 	console.log(objects[i].position, objects[i].quaternion)
+	// }
 	return objects.map(x=>{
 		const t = new CANNON.Vec3();
 		x.quaternion.toEuler(t);
