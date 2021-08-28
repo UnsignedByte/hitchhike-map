@@ -113,7 +113,7 @@ export async function init (
       ``,
       `# KILL EXISTING ITEM HOLDERS`,
       `kill @e[tag=item_holder]`,
-      generate_pile([0, 64.5, 0], "minecraft:apple", 200, [3, 3], 30, [-Math.PI/4, 0, 0]),
+      generate_pile([0, 64.5, 0], "minecraft:apple", 20, [3, 3], 30, [-Math.PI/4, 0, 0]),
       onLoad
     )
   )
