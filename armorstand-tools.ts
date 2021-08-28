@@ -4,7 +4,8 @@ import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
 const s = 0.625; // size of an item (on head)
 const tps = 60;
 
-const necklength = 1.8825;
+const necklength = 0.44625;
+// (65.0075-64.115)/2
 
 /* 
 corner: southeastern corner
