@@ -22,7 +22,9 @@ export function generate_pile(corner: [number, number, number], item: string, co
 				Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${x.rotation.z}f]`
 			},
 			Tags: `["item_holder"]`,
-			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`
+			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
+			Invulnerable: true,
+			Invisible: true
 		})}`
 	})
 }
