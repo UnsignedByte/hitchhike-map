@@ -95,10 +95,10 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 
 	console.log(`Generated scene with ${count} objects... simulating`)
 
-	for(let i = 0; i < tps*duration; i++) {
-		world.step(1/tps);
-		if (i%tps == 0) console.log(`Simulated second ${i/tps}`)
-	}
+	// for(let i = 0; i < tps*duration; i++) {
+	// 	world.step(1/tps);
+	// 	if (i%tps == 0) console.log(`Simulated second ${i/tps}`)
+	// }
 	// for(let i = 0; i < count; i++) {
 	// 	console.log(objects[i].position, objects[i].quaternion)
 	// }
