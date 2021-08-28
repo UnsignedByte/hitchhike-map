@@ -28,10 +28,10 @@ const cmdSchema = z.object({ // allows custom commands
   score: z.array(z.string()).default([])
 }).transform(x=>(
   {command:[
-    ...x.command,
-    ...x.function.map(f=>`function ${f}`),
+    ...x.score.map(s=>`scoreboard players set ${s}`),
     ...x.quest.map(q=>`function generated:quests/${q}-start`),
-    ...x.score.map(s=>`scoreboard players set ${s}`)
+    ...x.function.map(f=>`function ${f}`),
+    ...x.command
   ]}
 )).default({command:[]})
 

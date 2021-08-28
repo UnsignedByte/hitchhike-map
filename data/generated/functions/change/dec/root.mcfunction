@@ -13,4 +13,5 @@ execute positioned ~ ~ ~ if score dec change > 0 const if entity @e[type=item,nb
 execute if score dec change < 0 const run scoreboard players operation gen change = dec change
 execute if score dec change < 0 const run scoreboard players operation gen change *= -1 const
 execute if score dec change < 0 const positioned ~ ~ ~ run function generated:change/generate
+scoreboard players set dec change 0
 scoreboard players set dec-success change 1

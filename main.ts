@@ -4,6 +4,7 @@ import { parse as parseArgs } from 'https://deno.land/std@0.104.0/flags/mod.ts'
 import { createNpc, createQuest, toSnbt, rawJson, toGive } from './compile-to-mcfunction.ts'
 import { parse } from './parse-yaml.ts'
 import { item } from './item.ts'
+import { generate_pile } from './armorstand-tools.ts'
 
 export type Lines = string | Lines[]
 
@@ -109,6 +110,10 @@ export async function init (
       '# SET UP VARIABLES',
       `scoreboard objectives add vars dummy`,
       `scoreboard objectives add change dummy`,
+      ``,
+      `# KILL EXISTING ITEM HOLDERS`,
+      `kill @e[tag=item_holder]`,
+      generate_pile([0, 64, 0], "minecraft:apple", 20, [3, 3]),
       onLoad
     )
   )
@@ -231,6 +236,7 @@ export async function init (
     `execute if score dec change < 0 const run scoreboard players operation gen change = dec change`,
     `execute if score dec change < 0 const run scoreboard players operation gen change *= -1 const`,
     `execute if score dec change < 0 const positioned ~ ~ ~ run function generated:change/generate`,
+    `scoreboard players set dec change 0`,
     `scoreboard players set dec-success change 1`
   ]
 
