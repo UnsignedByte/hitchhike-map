@@ -21,7 +21,8 @@ export function generate_pile(corner: [number, number, number], item: string, co
 			Pose: {
 				Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${x.rotation.z}f]`
 			},
-			Tags: `["item_holder"]`
+			Tags: `["item_holder"]`,
+			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`
 		})}`
 	})
 }
@@ -72,7 +73,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 	for( let i = 0; i < count; i++ ){
 		objects[i] = new CANNON.Body({
 			mass: 1,
-			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/32, s/2)),
+			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/2, s/32)),
 			position: new CANNON.Vec3(Math.random()*bounds[0], Math.random()*15+20,Math.random()*bounds[1])
 			// position: new CANNON.Vec3(bounds[0]/2, i+5,bounds[1]/2)
 		})
