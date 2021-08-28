@@ -16,7 +16,7 @@ count: number of items
 bounds: x and z width of area
 slope: rotations of the ground plane about the x, y, and z axes (good for items on stairs, etc)
  */
-export function generate_pile(corner: [number, number, number], item: string, count: number, bounds: [number, number], duration: number = 10, slope: [number, number, number] = [-Math.PI / 2,0,0]) {
+export function generate_pile(corner: [number, number, number], item: string, count: number, bounds: [number, number], duration: number = 10, slope: [number, number, number] = [0,0,0]) {
 	const cornerV = new CANNON.Vec3(...corner);
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
 		x.position.vadd(cornerV, x.position);
@@ -39,6 +39,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
     gravity: new CANNON.Vec3(0,-9.8,0)
 	});
 
+	slope[0] -= Math.PI / 2;
 
 	[
 		{ // ground
