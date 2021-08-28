@@ -135,30 +135,29 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 	})
 }
 
-CANNON.Quaternion.prototype.toEuler = function(target: CANNON.Vec3, order: string = 'YZX'): void {
-  let heading
-  let attitude
-  let bank
+CANNON.Quaternion.prototype.toEuler = function(target: CANNON.Vec3, order = 'YZX'): void {
+  let roll
+  let pitch
+  let yaw
   const x = this.x
   const y = this.y
   const z = this.z
   const w = this.w
 
-  console.log("bruh");
+  let t0, t1, t2, t3, t4
 
-  switch (order) {
-    case 'YZX':
-      const sqx = x * x
-	    const sqy = y * y
-	    const sqz = z * z
-	    heading = Math.atan2(2 * y * w - 2 * x * z, 1 - 2 * sqy - 2 * sqz) // Heading
-	    attitude = Math.asin(2 * (x * y + z * w)) // attitude
-	    bank = Math.atan2(2 * x * w - 2 * y * z, 1 - 2 * sqx - 2 * sqz) // bank
-	    break;
-    default:
-      throw new Error(`Euler order ${order} not supported yet.`)
-  }
-  target.y = heading
-  target.z = attitude as number
-  target.x = bank as number
+  t0 = +2.0 * (w * x + y * z)
+  t1 = +1.0 - 2.0 * (x * x + y * y)
+  roll = Math.atan2(t0, t1)
+  t2 = +2.0 * (w * y - z * x)
+  t2 = t2 > +1.0 ? +1.0 : t2
+  t2 = t2 < -1.0 ? -1.0 : t2
+  pitch = Math.asin(t2)
+  t3 = +2.0 * (w * z + x * y)
+  t4 = +1.0 - 2.0 * (y * y + z * z)
+  yaw = Math.atan2(t3, t4)
+  
+  target.x = yaw;
+  target.y = pitch;
+  target.z = roll;
 }
