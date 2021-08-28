@@ -2,7 +2,8 @@ import * as CANNON from 'https://cdn.skypack.dev/cannon-es'
 import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
 
 const s = 0.625; // size of an item (on head)
-const tps = 120;
+const tps = 60;
+const duration = 60; // one minute
 
 const neckstart = 7/16+1;
 const necklength = 0.44625;
@@ -93,7 +94,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 
 	console.log(`Generated scene with ${count} objects... simulating`)
 
-	for(let i = 0; i < tps*10; i++) {
+	for(let i = 0; i < tps*duration; i++) {
 		world.step(1/tps);
 		if (i%tps == 0) console.log(`Simulated second ${i/tps}`)
 	}
