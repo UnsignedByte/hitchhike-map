@@ -144,6 +144,8 @@ CANNON.Quaternion.prototype.toEuler = function(target: CANNON.Vec3, order: strin
   const z = this.z
   const w = this.w
 
+  console.log("bruh");
+
   switch (order) {
     case 'YZX':
       const sqx = x * x
