@@ -3,7 +3,6 @@ import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
 
 const s = 0.625; // size of an item (on head)
 const tps = 60;
-const duration = 20; // duration in seconds
 
 const neckstart = 7/16+1;
 const necklength = 0.44625;
@@ -17,9 +16,9 @@ count: number of items
 bounds: x and z width of area
 slope: rotations of the ground plane about the x, y, and z axes (good for items on stairs, etc)
  */
-export function generate_pile(corner: [number, number, number], item: string, count: number, bounds: [number, number], slope: [number, number, number] = [-Math.PI / 2,0,0]) {
+export function generate_pile(corner: [number, number, number], item: string, count: number, bounds: [number, number], duration: number = 10, slope: [number, number, number] = [-Math.PI / 2,0,0]) {
 	const cornerV = new CANNON.Vec3(...corner);
-	return simulate_pile(bounds, count, slope).map(x=>{
+	return simulate_pile(bounds, count, slope, duration).map(x=>{
 		x.position.vadd(cornerV, x.position);
 		x.position.vsub(x.quaternion.vmult(headoffset), x.position); // move by offset
 		return `summon armor_stand ${x.position.x} ${x.position.y - neckstart} ${x.position.z} ${toSnbt({
@@ -35,7 +34,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	})
 }
 
-function simulate_pile(bounds: [number, number], count: number, slope: [number, number, number]) {
+function simulate_pile(bounds: [number, number], count: number, slope: [number, number, number], duration: number) {
 	let world = new CANNON.World({
     gravity: new CANNON.Vec3(0,-9.8,0)
 	});
@@ -82,7 +81,8 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 		objects[i] = new CANNON.Body({
 			mass: 1,
 			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/2, s/32)),
-			position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16, Math.random()*(bounds[1]-s)+s/2)
+			position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16, Math.random()*(bounds[1]-s)+s/2),
+			quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
 			// position: new CANNON.Vec3(bounds[0]/2, i+5,bounds[1]/2),
 			// quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i, 0, 0)
 		})
