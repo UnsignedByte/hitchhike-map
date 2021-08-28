@@ -122,12 +122,12 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 
 	for(let i = 0; i < tps*duration; i++) {
 		world.step(1/tps);
-		if (i%tps == 0) console.log(`Simulated second ${i/tps}`)
+		if (i%(tps*duration/10) == 0) console.log(`Simulated Second ${i/tps}`)
 	}
 	// for(let i = 0; i < count; i++) {
 	// 	console.log(objects[i].position, objects[i].quaternion)
 	// }
-	return objects.map(x=>{
+	return objects.filter(x=>x.position.x > 0 && x.position.z > 0 && x.position.x < bounds[0] && x.position.z < bounds[1]).map(x=>{
 		const t = new CANNON.Vec3();
 		x.quaternion.toEuler(t);
 		return {position:x.position, rotation: t.scale(180/Math.PI), quaternion:x.quaternion}
