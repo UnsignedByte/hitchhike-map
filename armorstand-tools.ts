@@ -134,3 +134,29 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 		return {position:x.position, rotation: t.scale(180/Math.PI), quaternion:x.quaternion}
 	})
 }
+
+CANNON.Quaternion.prototype.toEuler = function(target: CANNON.Vec3, order: string = 'YZX'): void {
+  let heading
+  let attitude
+  let bank
+  const x = this.x
+  const y = this.y
+  const z = this.z
+  const w = this.w
+
+  switch (order) {
+    case 'YZX':
+      const sqx = x * x
+	    const sqy = y * y
+	    const sqz = z * z
+	    heading = Math.atan2(2 * y * w - 2 * x * z, 1 - 2 * sqy - 2 * sqz) // Heading
+	    attitude = Math.asin(2 * (x * y + z * w)) // attitude
+	    bank = Math.atan2(2 * x * w - 2 * y * z, 1 - 2 * sqx - 2 * sqz) // bank
+	    break;
+    default:
+      throw new Error(`Euler order ${order} not supported yet.`)
+  }
+  target.y = heading
+  target.z = attitude as number
+  target.x = bank as number
+}
