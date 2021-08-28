@@ -82,10 +82,10 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 		objects[i] = new CANNON.Body({
 			mass: 1,
 			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/2, s/32)),
-			position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16, Math.random()*(bounds[1]-s)+s/2),
-			quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
-			// position: new CANNON.Vec3(bounds[0]/2, i+5,bounds[1]/2),
-			// quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i, 0, 0)
+			// position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16, Math.random()*(bounds[1]-s)+s/2),
+			// quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
+			position: new CANNON.Vec3(bounds[0]/2, i+5,bounds[1]/2),
+			quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i, 0, 0)
 		})
 		// objects[i].position.set()
 		// console.log(objects[i].position)
