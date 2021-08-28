@@ -27,7 +27,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 			Tags: `["item_holder"]`,
 			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
 			Invulnerable: true,
-			Invisible: true,
+			// Invisible: true,
 			NoGravity: true
 		})}`
 	})
