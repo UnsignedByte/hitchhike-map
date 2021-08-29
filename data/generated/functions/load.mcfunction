@@ -1058,25 +1058,25 @@ scoreboard objectives add change dummy
 # KILL EXISTING ITEM HOLDERS
 kill @e[tag=item_holder]
 summon armor_stand 3.00000000 67.30375000 2.73046875 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.23446664 68.34088587 2.73046875 {Pose: {Head: [18f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.44598206 69.44865836 2.73046875 {Pose: {Head: [36f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.61384164 70.61651794 2.73046875 {Pose: {Head: [54f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.72161413 71.82803336 2.73046875 {Pose: {Head: [72f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.75875000 73.06250000 2.73046875 {Pose: {Head: [89.99999999999999f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.72161413 74.29696664 2.73046875 {Pose: {Head: [108.00000000000001f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.61384164 75.50848206 2.73046875 {Pose: {Head: [126f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.44598206 76.67634164 2.73046875 {Pose: {Head: [144f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.23446664 77.78411413 2.73046875 {Pose: {Head: [162f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.00000000 78.82125000 2.73046875 {Pose: {Head: [180f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.76553336 79.78411413 2.73046875 {Pose: {Head: [-162f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.55401794 80.67634164 2.73046875 {Pose: {Head: [-144.00000000000003f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.38615836 81.50848206 2.73046875 {Pose: {Head: [-126.00000000000003f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.27838587 82.29696664 2.73046875 {Pose: {Head: [-108.00000000000001f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.24125000 83.06250000 2.73046875 {Pose: {Head: [-90.00000000000003f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.27838587 83.82803336 2.73046875 {Pose: {Head: [-72.00000000000003f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.38615836 84.61651794 2.73046875 {Pose: {Head: [-54.00000000000001f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.55401794 85.44865836 2.73046875 {Pose: {Head: [-36.000000000000014f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.76553336 86.34088587 2.73046875 {Pose: {Head: [-18.000000000000014f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.23446664 68.34088587 2.73046875 {Pose: {Head: [0f, 0f, -18f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.44598206 69.44865836 2.73046875 {Pose: {Head: [0f, 0f, -36f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.61384164 70.61651794 2.73046875 {Pose: {Head: [0f, 0f, -54f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.72161413 71.82803336 2.73046875 {Pose: {Head: [0f, 0f, -72f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.75875000 73.06250000 2.73046875 {Pose: {Head: [0f, 0f, -89.99999999999999f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.72161413 74.29696664 2.73046875 {Pose: {Head: [0f, 0f, -108.00000000000001f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.61384164 75.50848206 2.73046875 {Pose: {Head: [0f, 0f, -126f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.44598206 76.67634164 2.73046875 {Pose: {Head: [0f, 0f, -144f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.23446664 77.78411413 2.73046875 {Pose: {Head: [0f, 0f, -162f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 78.82125000 2.73046875 {Pose: {Head: [0f, 0f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 2.76553336 79.78411413 2.73046875 {Pose: {Head: [0f, 0f, 162f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 2.55401794 80.67634164 2.73046875 {Pose: {Head: [0f, 0f, 144.00000000000003f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 2.38615836 81.50848206 2.73046875 {Pose: {Head: [0f, 0f, 126.00000000000003f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 2.27838587 82.29696664 2.73046875 {Pose: {Head: [0f, 0f, 108.00000000000001f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 2.24125000 83.06250000 2.73046875 {Pose: {Head: [0f, 0f, 90.00000000000003f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 2.27838587 83.82803336 2.73046875 {Pose: {Head: [0f, 0f, 72.00000000000003f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 2.38615836 84.61651794 2.73046875 {Pose: {Head: [0f, 0f, 54.00000000000001f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 2.55401794 85.44865836 2.73046875 {Pose: {Head: [0f, 0f, 36.000000000000014f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 2.76553336 86.34088587 2.73046875 {Pose: {Head: [0f, 0f, 18.000000000000014f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:glass_pane", Count:1b}], Invulnerable: 1b, NoGravity: 1b}
 
 tag @a remove victim-of-dialogue-by-billy
 
