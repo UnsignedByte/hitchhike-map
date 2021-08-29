@@ -26,7 +26,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 		let ang = new CANNON.Vec3(Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI);
 		let q = new CANNON.Quaternion().setFromEuler(ang.y, ang.z, ang.x, 'YZX');
 		let t = new CANNON.Vec3();
-		q.toEuler(t)
+		q.toEuler(t, 'YZX')
 		// let t = toEuler(q);
 		console.log(ang, t)
 		// x.quaternion = fromEuler(x.rotation.z, x.rotation.y, x.rotation.x);
