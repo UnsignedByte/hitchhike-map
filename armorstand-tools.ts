@@ -20,23 +20,23 @@ slope: rotations of the ground plane about the x, y, and z axes (good for items 
 export function generate_pile(corner: [number, number, number], item: string, count: number, bounds: [number, number], duration: number = 10, slope: [number, number, number] = [0,0,0]) {
 	const cornerV = new CANNON.Vec3(...corner);
 
+	let test_objs = [];
 
-	// for(let i = 0; i < 10; i++) {
-	// 	let ang = new CANNON.Vec3(Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI);
-	// 	let q = new CANNON.Quaternion().setFromEuler(ang.z, ang.y, ang.x, 'ZYX');
-	// 	let t = new CANNON.Vec3();
-	// 	q.toEuler(t)
-	// 	console.log(ang, toEuler(q), t)
-	// }
+	for(let i = 0; i < 10; i++) {
+		let ang = new CANNON.Vec3(Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI);
+		let q = new CANNON.Quaternion().setFromEuler(ang.z, ang.y, ang.x, 'ZYX');
+		let t = new CANNON.Vec3();
+		q.toEuler(t)
+		console.log(ang, toEuler(q), t)
+		// x.quaternion = fromEuler(x.rotation.z, x.rotation.y, x.rotation.x);
 
-	return simulate_pile(bounds, count, slope, duration).map(x=>{
-		x.quaternion = fromEuler(x.rotation.z, x.rotation.y, x.rotation.x);
-		x.position.vadd(cornerV, x.position);
-		let noffset = x.quaternion.vmult(headoffset);
-		x.position.vsub(noffset, x.position); // move by offset
-		return `summon armor_stand ${x.position.x.toFixed(8)} ${(x.position.y - neckstart).toFixed(8)} ${x.position.z.toFixed(8)} ${toSnbt({
+		let position = new CANNON.Vec3(0, i*3, 0);
+		position.vadd(cornerV, position);
+		let noffset = q.vmult(headoffset);
+		position.vsub(noffset, position); // move by offset
+		test_objs[i] = `summon armor_stand ${position.x.toFixed(8)} ${(position.y - neckstart).toFixed(8)} ${position.z.toFixed(8)} ${toSnbt({
 			Pose: {
-				Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${x.rotation.z}f]`
+				Head: `[${t.x}f, ${t.y}f, ${t.z}f]`
 			},
 			Tags: `["item_holder"]`,
 			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
@@ -44,7 +44,26 @@ export function generate_pile(corner: [number, number, number], item: string, co
 			Invisible: true,
 			NoGravity: true
 		})}`
-	})
+	}
+
+	return test_objs
+
+	// return simulate_pile(bounds, count, slope, duration).map(x=>{
+	// 	x.quaternion = fromEuler(x.rotation.z, x.rotation.y, x.rotation.x);
+	// 	x.position.vadd(cornerV, x.position);
+	// 	let noffset = x.quaternion.vmult(headoffset);
+	// 	x.position.vsub(noffset, x.position); // move by offset
+	// 	return `summon armor_stand ${x.position.x.toFixed(8)} ${(x.position.y - neckstart).toFixed(8)} ${x.position.z.toFixed(8)} ${toSnbt({
+	// 		Pose: {
+	// 			Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${x.rotation.z}f]`
+	// 		},
+	// 		Tags: `["item_holder"]`,
+	// 		ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
+	// 		Invulnerable: true,
+	// 		Invisible: true,
+	// 		NoGravity: true
+	// 	})}`
+	// })
 }
 
 function simulate_pile(bounds: [number, number], count: number, slope: [number, number, number], duration: number) {
