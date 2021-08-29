@@ -154,7 +154,7 @@ function fromEuler(yaw: number, pitch: number, roll: number): CANNON.Quaternion 
  //  return new CANNON.Quaternion(qx, qy, qz, qw)
  // let q = new THREE.Quaternion().setFromEuler(new THREE.Euler(yaw, pitch, roll, 'XYZ'));
  // return new CANNON.Quaternion(q.x, q.y, q.z, q.w);
- return new CANNON.Quaternion().setFromEuler(yaw, pitch, roll);
+ return new CANNON.Quaternion().setFromEuler(yaw, pitch, roll, 'XYZ');
 }
 
 function toEuler(q: CANNON.Quaternion): CANNON.Vec3 {
