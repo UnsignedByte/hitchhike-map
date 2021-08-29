@@ -24,7 +24,9 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	for(let i = 0; i < 10; i++) {
 		let ang = new CANNON.Vec3(Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI);
 		let q = new CANNON.Quaternion().setFromEuler(ang.x, ang.y, ang.z);
-		console.log(ang, toEuler(q))
+		let t = new CANNON.Vec3();
+		q.toEuler(t)
+		console.log(ang, toEuler(q), t)
 	}
 
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
