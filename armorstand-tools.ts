@@ -30,7 +30,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	// }
 
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
-		x.quaternion = fromEuler(x.rotation.z, x.rotation.y, x.rotation.x);
+		x.quaternion = fromEuler(x.rotation.x, x.rotation.y, x.rotation.z);
 		x.position.vadd(cornerV, x.position);
 		let noffset = x.quaternion.vmult(headoffset);
 		x.position.vsub(noffset, x.position); // move by offset
@@ -148,12 +148,30 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 }
 
 function fromEuler(yaw: number, pitch: number, roll: number): CANNON.Quaternion {
-	let qx, qy, qz, qw
-  qx = Math.sin(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) - Math.cos(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
-  qy = Math.cos(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2)
-  qz = Math.cos(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2) - Math.sin(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2)
-  qw = Math.cos(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
-  return new CANNON.Quaternion(qx, qy, qz, qw)
+
+
+  // Abbreviations for the various angular functions
+  let cy = Math.cos(yaw * 0.5);
+  let sy = Math.sin(yaw * 0.5);
+  let cp = Math.cos(pitch * 0.5);
+  let sp = Math.sin(pitch * 0.5);
+  let cr = Math.cos(roll * 0.5);
+  let sr = Math.sin(roll * 0.5);
+
+  let q = new CANNON.Quaternion();
+  q.w = cr * cp * cy + sr * sp * sy;
+  q.x = sr * cp * cy - cr * sp * sy;
+  q.y = cr * sp * cy + sr * cp * sy;
+  q.z = cr * cp * sy - sr * sp * cy;
+
+  return q;
+	// let qx, qy, qz, qw
+
+  // qx = Math.sin(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) - Math.cos(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
+  // qy = Math.cos(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2)
+  // qz = Math.cos(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2) - Math.sin(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2)
+  // qw = Math.cos(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
+  // return new CANNON.Quaternion(qx, qy, qz, qw)
  // let q = new THREE.Quaternion().setFromEuler(new THREE.Euler(yaw, pitch, roll, 'XYZ'));
  // return new CANNON.Quaternion(q.x, q.y, q.z, q.w);
  // return new CANNON.Quaternion().setFromEuler(yaw, pitch, roll, 'XYZ');
@@ -199,7 +217,7 @@ function toEuler(q: CANNON.Quaternion): CANNON.Vec3 {
   let cosy_cosp = 1 - 2 * (q.y * q.y + q.z * q.z);
   yaw = Math.atan2(siny_cosp, cosy_cosp);
   
-  return new CANNON.Vec3(yaw, pitch, roll);
+  return new CANNON.Vec3(roll, pitch, yaw);
   // let e = new THREE.Euler().setFromRotationMatrix(new THREE.Quaternion(q.x, q.y, q.z, q.w), 'XYZ');
   // return new CANNON.Vec3(e.x, e.y, e.z)
 
