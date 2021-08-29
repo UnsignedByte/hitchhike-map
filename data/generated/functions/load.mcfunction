@@ -1057,26 +1057,26 @@ scoreboard objectives add change dummy
 
 # KILL EXISTING ITEM HOLDERS
 kill @e[tag=item_holder]
-summon armor_stand 3.00000000 67.30375000 3.23046875 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 3.07121876 68.30375000 3.21918881 {Pose: {Head: [0f, 18.000000000000004f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 3.13546613 69.30375000 3.18645314 {Pose: {Head: [0f, 35.99999999999999f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 3.18645314 70.30375000 3.13546613 {Pose: {Head: [0f, 53.99999999999999f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 3.21918881 71.30375000 3.07121876 {Pose: {Head: [0f, 72.00000000000001f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 3.23046875 72.30375000 3.00000000 {Pose: {Head: [0f, 90f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 3.21918881 73.30375000 2.92878124 {Pose: {Head: [180f, 72.00000000000001f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 3.18645314 74.30375000 2.86453387 {Pose: {Head: [180f, 54.00000000000001f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 3.13546613 75.30375000 2.81354686 {Pose: {Head: [180f, 36f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 3.07121876 76.30375000 2.78081119 {Pose: {Head: [180f, 18.00000000000001f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 3.00000000 77.30375000 2.76953125 {Pose: {Head: [180f, 7.016709298534876e-15f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 2.92878124 78.30375000 2.78081119 {Pose: {Head: [180f, -17.999999999999996f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 2.86453387 79.30375000 2.81354686 {Pose: {Head: [180f, -35.99999999999999f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 2.81354686 80.30375000 2.86453387 {Pose: {Head: [180f, -53.99999999999999f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 2.78081119 81.30375000 2.92878124 {Pose: {Head: [180f, -71.99999999999997f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 2.76953125 82.30375000 3.00000000 {Pose: {Head: [180f, -90f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 2.78081119 83.30375000 3.07121876 {Pose: {Head: [0f, -72.00000000000001f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 2.81354686 84.30375000 3.13546613 {Pose: {Head: [0f, -54.00000000000001f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 2.86453387 85.30375000 3.18645314 {Pose: {Head: [0f, -36.000000000000014f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
-summon armor_stand 2.92878124 86.30375000 3.21918881 {Pose: {Head: [0f, -18.000000000000014f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 67.30375000 3.26953125 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.08328974 68.30375000 3.25633945 {Pose: {Head: [0f, 18.000000000000004f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.15842649 69.30375000 3.21805536 {Pose: {Head: [0f, 35.99999999999999f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.21805536 70.30375000 3.15842649 {Pose: {Head: [0f, 53.99999999999999f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.25633945 71.30375000 3.08328974 {Pose: {Head: [0f, 72.00000000000001f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.26953125 72.30375000 3.00000000 {Pose: {Head: [0f, 90f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.25633945 73.30375000 2.91671026 {Pose: {Head: [180f, 72.00000000000001f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.21805536 74.30375000 2.84157351 {Pose: {Head: [180f, 54.00000000000001f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.15842649 75.30375000 2.78194464 {Pose: {Head: [180f, 36f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.08328974 76.30375000 2.74366055 {Pose: {Head: [180f, 18.00000000000001f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 77.30375000 2.73046875 {Pose: {Head: [180f, 7.016709298534876e-15f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 2.91671026 78.30375000 2.74366055 {Pose: {Head: [180f, -17.999999999999996f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 2.84157351 79.30375000 2.78194464 {Pose: {Head: [180f, -35.99999999999999f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 2.78194464 80.30375000 2.84157351 {Pose: {Head: [180f, -53.99999999999999f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 2.74366055 81.30375000 2.91671026 {Pose: {Head: [180f, -71.99999999999997f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 2.73046875 82.30375000 3.00000000 {Pose: {Head: [180f, -90f, -180f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 2.74366055 83.30375000 3.08328974 {Pose: {Head: [0f, -72.00000000000001f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 2.78194464 84.30375000 3.15842649 {Pose: {Head: [0f, -54.00000000000001f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 2.84157351 85.30375000 3.21805536 {Pose: {Head: [0f, -36.000000000000014f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
+summon armor_stand 2.91671026 86.30375000 3.25633945 {Pose: {Head: [0f, -18.000000000000014f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"minecraft:apple", Count:1b}], Invulnerable: 1b, Invisible: 1b, NoGravity: 1b}
 
 tag @a remove victim-of-dialogue-by-billy
 
