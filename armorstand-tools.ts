@@ -21,13 +21,13 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	const cornerV = new CANNON.Vec3(...corner);
 
 
-	for(let i = 0; i < 10; i++) {
-		let ang = new CANNON.Vec3(Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI);
-		let q = new CANNON.Quaternion().setFromEuler(ang.z, ang.y, ang.x, 'ZYX');
-		let t = new CANNON.Vec3();
-		q.toEuler(t)
-		console.log(ang, toEuler(q), t)
-	}
+	// for(let i = 0; i < 10; i++) {
+	// 	let ang = new CANNON.Vec3(Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI);
+	// 	let q = new CANNON.Quaternion().setFromEuler(ang.z, ang.y, ang.x, 'ZYX');
+	// 	let t = new CANNON.Vec3();
+	// 	q.toEuler(t)
+	// 	console.log(ang, toEuler(q), t)
+	// }
 
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
 		x.position.vadd(cornerV, x.position);
@@ -121,7 +121,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 			// position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16+10, Math.random()*(bounds[1]-s)+s/2),
 			// quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
 			position: new CANNON.Vec3(bounds[0], i+5,bounds[1]),
-			quaternion: new CANNON.Quaternion().setFromEuler(0, 1, 2*Math.PI/count*i)
+			quaternion: new CANNON.Quaternion().setFromEuler(0, 1, 2*Math.PI/count*i, 'ZYX')
 		})
 		// objects[i].position.set()
 		// console.log(objects[i].position)
