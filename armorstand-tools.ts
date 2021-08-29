@@ -31,7 +31,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 				Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${-x.rotation.z}f]`
 			},
 			Tags: `["item_holder"]`,
-			// ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
+			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
 			Invulnerable: true,
 			// Invisible: true,
 			NoGravity: true
@@ -183,5 +183,7 @@ function toEuler(q: CANNON.Quaternion): CANNON.Vec3 {
   // let e = new THREE.Euler().setFromRotationMatrix(new THREE.Quaternion(q.x, q.y, q.z, q.w), 'XYZ');
   // return new CANNON.Vec3(e.x, e.y, e.z)
 
-  let v = new CANNON.V?c3(v.y, v.z, v.x);
+  // let v = new CANNON.Vec3();
+  // q.toEuler(v);
+  // return new CANNON.Vec3(v.y, v.z, v.x);
 }
