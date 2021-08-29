@@ -22,37 +22,39 @@ export function generate_pile(corner: [number, number, number], item: string, co
 
 	let test_objs = [];
 
-	// for(let i = 0; i < 10; i++) {
-	// 	let ang = new CANNON.Vec3((Math.random() - 0.5) * 2 * Math.PI, (Math.random() - 0.5) * 2 * Math.PI, (Math.random() - 0.5) * 2 * Math.PI);
-	// 	// let ang = new CANNON.Vec3(Math.PI/4, Math.PI/2, Math.PI/4);
- //    let q = new CANNON.Quaternion().setFromEuler(ang.x, ang.y, ang.z, 'ZYX');
- //    // let t = ang;
- //    q.toEuler(t, 'YZX');
- //    // t = new CANNON.Vec3(t.z, t.y, t.x)
-	// 	// let t = toEuler(q);
-	// 	console.log(ang, t)
-	// 	// x.quaternion = fromEuler(x.rotation.z, x.rotation.y, x.rotation.x);
+	for(let i = 0; i < 10; i++) {
+		let ang = new CANNON.Vec3((Math.random() - 0.5) * 2 * Math.PI, (Math.random() - 0.5) * 2 * Math.PI, (Math.random() - 0.5) * 2 * Math.PI);
+		// let ang = new CANNON.Vec3(Math.PI/4, Math.PI/2, Math.PI/4);
+    let q = new CANNON.Quaternion().setFromEuler(ang.x, ang.y, ang.z, 'YZX');
+    let t = new CANNON.Vec3();
+    // let t = ang;
+    q.toEuler(t, 'YZX');
+    q = new CANNON.Quaternion().setFromEuler(t.x, t.y, t.z, 'ZYX');
+    // t = new CANNON.Vec3(t.z, t.y, t.x)
+		// let t = toEuler(q);
+		console.log(ang, t)
+		// x.quaternion = fromEuler(x.rotation.z, x.rotation.y, x.rotation.x);
 
-	// 	let position = new CANNON.Vec3(0, 5, 0);
-	// 	position.vadd(cornerV, position);
+		let position = new CANNON.Vec3(0, 5, 0);
+		position.vadd(cornerV, position);
 
-	// 	let tmp = new CANNON.Quaternion(offset.x, offset.y, offset.z, 0);
-	// 	let noffset = q.mult(tmp).mult(q.inverse());
-	// 	console.log(noffset)
-	// 	position.vsub(new CANNON.Vec3(noffset.x, noffset.y, noffset.z), position); // move by offset
-	// 	test_objs[i] = `summon armor_stand ${position.x.toFixed(8)} ${(position.y - neckstart).toFixed(8)} ${position.z.toFixed(8)} ${toSnbt({
-	// 		Pose: {
-	// 			Head: `[${t.x*180/Math.PI}f, ${-t.y*180/Math.PI}f, ${-t.z*180/Math.PI}f]`
-	// 		},
-	// 		Tags: `["item_holder"]`,
-	// 		ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
-	// 		Invulnerable: true,
-	// 		Invisible: true,
-	// 		NoGravity: true
-	// 	})}`
-	// }
+		let tmp = new CANNON.Quaternion(offset.x, offset.y, offset.z, 0);
+		let noffset = q.mult(tmp).mult(q.inverse());
+		console.log(noffset)
+		position.vsub(new CANNON.Vec3(noffset.x, noffset.y, noffset.z), position); // move by offset
+		test_objs[i] = `summon armor_stand ${position.x.toFixed(8)} ${(position.y - neckstart).toFixed(8)} ${position.z.toFixed(8)} ${toSnbt({
+			Pose: {
+				Head: `[${t.x*180/Math.PI}f, ${-t.y*180/Math.PI}f, ${-t.z*180/Math.PI}f]`
+			},
+			Tags: `["item_holder"]`,
+			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
+			Invulnerable: true,
+			Invisible: true,
+			NoGravity: true
+		})}`
+	}
 
-	// return test_objs
+	return test_objs
 
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
 		x.quaternion = new CANNON.Quaternion().setFromEuler(x.rotation.x, x.rotation.y, x.rotation.z, 'ZYX');
