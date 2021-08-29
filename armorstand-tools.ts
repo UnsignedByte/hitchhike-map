@@ -161,23 +161,41 @@ function toEuler(q: CANNON.Quaternion): CANNON.Vec3 {
   let roll
   let pitch
   let yaw
-  const x = q.x
-  const y = q.y
-  const z = q.z
-  const w = q.w
+  // const x = q.x
+  // const y = q.y
+  // const z = q.z
+  // const w = q.w
 
-  let t0, t1, t2, t3, t4
+  // let t0, t1, t2, t3, t4
 
-  t0 = +2.0 * (w * x + y * z)
-  t1 = +1.0 - 2.0 * (x * x + y * y)
-  roll = Math.atan2(t0, t1)
-  t2 = +2.0 * (w * y - z * x)
-  t2 = t2 > +1.0 ? +1.0 : t2
-  t2 = t2 < -1.0 ? -1.0 : t2
-  pitch = Math.asin(t2)
-  t3 = +2.0 * (w * z + x * y)
-  t4 = +1.0 - 2.0 * (y * y + z * z)
-  yaw = Math.atan2(t3, t4)
+  // t0 = +2.0 * (w * x + y * z)
+  // t1 = +1.0 - 2.0 * (x * x + y * y)
+  // roll = Math.atan2(t0, t1)
+  // t2 = +2.0 * (w * y - z * x)
+  // t2 = t2 > +1.0 ? +1.0 : t2
+  // t2 = t2 < -1.0 ? -1.0 : t2
+  // pitch = Math.asin(t2)
+  // t3 = +2.0 * (w * z + x * y)
+  // t4 = +1.0 - 2.0 * (y * y + z * z)
+  // yaw = Math.atan2(t3, t4)
+
+  // roll (x-axis rotation)
+  let sinr_cosp = 2 * (q.w * q.x + q.y * q.z);
+  let cosr_cosp = 1 - 2 * (q.x * q.x + q.y * q.y);
+  roll = Math.atan2(sinr_cosp, cosr_cosp);
+
+  // pitch (y-axis rotation)
+  let sinp = 2 * (q.w * q.y - q.z * q.x);
+  if (Math.abs(sinp) >= 1){
+    pitch = Math.sign(sinp) * Math.PI / 2; // use 90 degrees if out of range
+  } else {
+    pitch = Math.asin(sinp);
+  }
+
+  // yaw (z-axis rotation)
+  let siny_cosp = 2 * (q.w * q.z + q.x * q.y);
+  let cosy_cosp = 1 - 2 * (q.y * q.y + q.z * q.z);
+  yaw = Math.atan2(siny_cosp, cosy_cosp);
   
   return new CANNON.Vec3(yaw, pitch, roll);
   // let e = new THREE.Euler().setFromRotationMatrix(new THREE.Quaternion(q.x, q.y, q.z, q.w), 'XYZ');
