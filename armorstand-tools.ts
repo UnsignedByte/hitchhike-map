@@ -7,7 +7,7 @@ const tps = 60;
 
 const neckstart = 7/16+1;
 const necklength = 0.44625;
-const offset = new CANNON.Vec3(0, necklength + s/2, 0.25+s/32);
+const offset = new CANNON.Vec3(0, necklength + s/2, -0.25-s/32);
 // (65.0075-64.115)/2
 
 /* 
@@ -39,7 +39,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 		position.vsub(new CANNON.Vec3(noffset.x, noffset.y, noffset.z), position); // move by offset
 		test_objs[i] = `summon armor_stand ${position.x.toFixed(8)} ${(position.y - neckstart).toFixed(8)} ${position.z.toFixed(8)} ${toSnbt({
 			Pose: {
-				Head: `[${t.x*180/Math.PI}f, ${t.y*180/Math.PI}f, ${t.z*180/Math.PI}f]`
+				Head: `[${t.z*180/Math.PI}f, ${t.x*180/Math.PI}f, ${t.y*180/Math.PI}f]`
 			},
 			Tags: `["item_holder"]`,
 			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
