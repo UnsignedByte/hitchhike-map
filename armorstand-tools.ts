@@ -184,6 +184,6 @@ function toEuler(q: CANNON.Quaternion): CANNON.Vec3 {
   // return new CANNON.Vec3(e.x, e.y, e.z)
 
   let v = new CANNON.Vec3();
-  q.toEuler(new CANNON.Vec3(v.y, v.z, v.x));
-  return v;
+  q.toEuler(v);
+  return new CANNON.Vec3(v.y, v.z, v.x);
 }
