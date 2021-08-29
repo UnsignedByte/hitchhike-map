@@ -36,7 +36,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 
 		let tmp = new CANNON.Quaternion(0, offset.x, offset.y, offset.z);
 		let noffset = q.mult(tmp).mult(q.inverse());
-		position.vsub(noffset, position); // move by offset
+		position.vadd(noffset, position); // move by offset
 		test_objs[i] = `summon armor_stand ${position.x.toFixed(8)} ${(position.y - neckstart).toFixed(8)} ${position.z.toFixed(8)} ${toSnbt({
 			Pose: {
 				Head: `[${t.x*180/Math.PI}f, ${t.y*180/Math.PI}f, ${t.z*180/Math.PI}f]`
