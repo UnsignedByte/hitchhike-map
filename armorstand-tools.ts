@@ -31,7 +31,8 @@ export function generate_pile(corner: [number, number, number], item: string, co
 
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
 		x.position.vadd(cornerV, x.position);
-		x.position.vsub(x.quaternion.vmult(headoffset), x.position); // move by offset
+		let noffset = x.quaternion.vmult(headoffset);
+		x.position.vsub(new CANNON.Vec3(noffset.z, noffset.y, noffset.x), x.position); // move by offset
 		return `summon armor_stand ${x.position.x.toFixed(8)} ${(x.position.y - neckstart).toFixed(8)} ${x.position.z.toFixed(8)} ${toSnbt({
 			Pose: {
 				Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${x.rotation.z}f]`
