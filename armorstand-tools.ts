@@ -107,7 +107,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 	[
 		{ // ground
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(slope[2], slope[1], slope[0], 'XYZ'),
+			quaternion: new CANNON.Quaternion().setFromEuler(slope[0], slope[1], slope[2], 'XYZ'),
 			position: new CANNON.Vec3(0, 0, 0),
 			material: groundMat
 		},
