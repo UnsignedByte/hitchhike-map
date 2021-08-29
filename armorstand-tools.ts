@@ -20,7 +20,7 @@ slope: rotations of the ground plane about the x, y, and z axes (good for items 
 export function generate_pile(corner: [number, number, number], item: string, count: number, bounds: [number, number], duration: number = 10, slope: [number, number, number] = [0,0,0]) {
 	const cornerV = new CANNON.Vec3(...corner);
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
-		console.log(x);
+		// console.log(x);
 		x.position.vadd(cornerV, x.position);
 		// let noffset = new CANNON.Vec3(Math.cos(x.rotation.x)*Math.cos(x.rotation.y)*necklength, Math.sin(x.rotation.y)*necklength, Math.sin(x.rotation.x)*Math.sin(x.rotation.y)*necklength)
 		let noffset = x.quaternion.vmult(headoffset);
@@ -123,7 +123,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 			// position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16+10, Math.random()*(bounds[1]-s)+s/2),
 			// quaternion: fromEuler(- Math.PI/2, 0, 0)
 			position: new CANNON.Vec3(bounds[0], i+5,bounds[1]),
-			quaternion: fromEuler(2*Math.PI/count*i, 0, 0)
+			quaternion: fromEuler(0, 0, 2*Math.PI/count*i)
 		})
 		// objects[i].position.set()
 		// console.log(objects[i].position)
