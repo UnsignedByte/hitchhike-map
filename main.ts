@@ -6,6 +6,8 @@ import { parse } from './parse-yaml.ts'
 import { item } from './item.ts'
 import { generate_pile } from './armorstand-tools.ts'
 
+// \s(?:Paper|Spigot|Bukkit)\..+?:\s(?:\[.+?\]|.+?),
+
 export type Lines = string | Lines[]
 
 function lines (...lines: Lines[]): string {
