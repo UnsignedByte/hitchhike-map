@@ -111,7 +111,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 			// position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16+10, Math.random()*(bounds[1]-s)+s/2),
 			// quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
 			position: new CANNON.Vec3(bounds[0], i+5,bounds[1]),
-			quaternion: new CANNON.Quaternion().setFromEuler(0, 0, -2*Math.PI/count*i)
+			quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i, 0, -2*Math.PI/count*i)
 		})
 		// objects[i].position.set()
 		// console.log(objects[i].position)
@@ -144,29 +144,29 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 //   return [qx, qy, qz, qw]
 // }
 
-// CANNON.Quaternion.prototype.toEuler = function(target: CANNON.Vec3, order = 'YZX'): void {
-//   let roll
-//   let pitch
-//   let yaw
-//   const x = this.x
-//   const y = this.y
-//   const z = this.z
-//   const w = this.w
+CANNON.Quaternion.prototype.toEuler = function(target: CANNON.Vec3, order = 'YZX'): void {
+  let roll
+  let pitch
+  let yaw
+  const x = this.x
+  const y = this.y
+  const z = this.z
+  const w = this.w
 
-//   let t0, t1, t2, t3, t4
+  let t0, t1, t2, t3, t4
 
-//   t0 = +2.0 * (w * x + y * z)
-//   t1 = +1.0 - 2.0 * (x * x + y * y)
-//   roll = Math.atan2(t0, t1)
-//   t2 = +2.0 * (w * y - z * x)
-//   t2 = t2 > +1.0 ? +1.0 : t2
-//   t2 = t2 < -1.0 ? -1.0 : t2
-//   pitch = Math.asin(t2)
-//   t3 = +2.0 * (w * z + x * y)
-//   t4 = +1.0 - 2.0 * (y * y + z * z)
-//   yaw = Math.atan2(t3, t4)
+  t0 = +2.0 * (w * x + y * z)
+  t1 = +1.0 - 2.0 * (x * x + y * y)
+  roll = Math.atan2(t0, t1)
+  t2 = +2.0 * (w * y - z * x)
+  t2 = t2 > +1.0 ? +1.0 : t2
+  t2 = t2 < -1.0 ? -1.0 : t2
+  pitch = Math.asin(t2)
+  t3 = +2.0 * (w * z + x * y)
+  t4 = +1.0 - 2.0 * (y * y + z * z)
+  yaw = Math.atan2(t3, t4)
   
-//   target.x = roll;
-//   target.y = pitch;
-//   target.z = yaw;
-// }
+  target.x = roll;
+  target.y = pitch;
+  target.z = yaw;
+}
