@@ -136,38 +136,29 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 	})
 }
 
-// CANNON.Quaternion.prototype.setFromEuler = function(x: number, y: number, z: number, order = 'XYZ'): CANNON.Quaternion {
-//   (yaw, pitch, roll) = (r[0], r[1], r[2])
-//   qx = np.sin(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) - np.cos(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
-//   qy = np.cos(roll/2) * np.sin(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.cos(pitch/2) * np.sin(yaw/2)
-//   qz = np.cos(roll/2) * np.cos(pitch/2) * np.sin(yaw/2) - np.sin(roll/2) * np.sin(pitch/2) * np.cos(yaw/2)
-//   qw = np.cos(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
-//   return [qx, qy, qz, qw]
-// }
+CANNON.Quaternion.prototype.toEuler = function(target: CANNON.Vec3, order = 'YZX'): void {
+  let roll
+  let pitch
+  let yaw
+  const x = this.x
+  const y = this.y
+  const z = this.z
+  const w = this.w
 
-// CANNON.Quaternion.prototype.toEuler = function(target: CANNON.Vec3, order = 'YZX'): void {
-//   let roll
-//   let pitch
-//   let yaw
-//   const x = this.x
-//   const y = this.y
-//   const z = this.z
-//   const w = this.w
+  let t0, t1, t2, t3, t4
 
-//   let t0, t1, t2, t3, t4
-
-//   t0 = +2.0 * (w * x + y * z)
-//   t1 = +1.0 - 2.0 * (x * x + y * y)
-//   roll = Math.atan2(t0, t1)
-//   t2 = +2.0 * (w * y - z * x)
-//   t2 = t2 > +1.0 ? +1.0 : t2
-//   t2 = t2 < -1.0 ? -1.0 : t2
-//   pitch = Math.asin(t2)
-//   t3 = +2.0 * (w * z + x * y)
-//   t4 = +1.0 - 2.0 * (y * y + z * z)
-//   yaw = Math.atan2(t3, t4)
+  t0 = +2.0 * (w * x + y * z)
+  t1 = +1.0 - 2.0 * (x * x + y * y)
+  roll = Math.atan2(t0, t1)
+  t2 = +2.0 * (w * y - z * x)
+  t2 = t2 > +1.0 ? +1.0 : t2
+  t2 = t2 < -1.0 ? -1.0 : t2
+  pitch = Math.asin(t2)
+  t3 = +2.0 * (w * z + x * y)
+  t4 = +1.0 - 2.0 * (y * y + z * z)
+  yaw = Math.atan2(t3, t4)
   
-//   target.x = roll;
-//   target.y = pitch;
-//   target.z = yaw;
-// }
+  target.x = roll;
+  target.y = pitch;
+  target.z = yaw;
+}
