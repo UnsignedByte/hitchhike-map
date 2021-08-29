@@ -201,7 +201,7 @@ const itemphysicsSchema = z.object({
   count: z.number().default(10), // number of items
   item: z.string(), // item ID
   corner: nplet(3),
-  slope: nplet(3),
+  slope: nplet(3).transform(x=>x.map(v=>v*Math.PI/180)),
   bounds: nplet(2),
   small: z.boolean().default(false),
   type: z.union([
