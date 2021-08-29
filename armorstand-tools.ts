@@ -22,8 +22,8 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
 		console.log(x);
 		x.position.vadd(cornerV, x.position);
-		let noffset = new CANNON.Vec3(Math.cos(x.rotation.x)*Math.cos(x.rotation.y)*necklength, Math.sin(x.rotation.x)*Math.sin(x.rotation.y)*necklength, Math.sin(x.rotation.y)*necklength)
-		// let noffset = x.quaternion.vmult(headoffset);
+		// let noffset = new CANNON.Vec3(Math.cos(x.rotation.x)*Math.cos(x.rotation.y)*necklength, Math.sin(x.rotation.y)*necklength, Math.sin(x.rotation.x)*Math.sin(x.rotation.y)*necklength)
+		let noffset = x.quaternion.vmult(headoffset);
 		// noffset.z *= -1;
 		x.position.vsub(noffset, x.position); // move by offset
 		return `summon armor_stand ${x.position.x.toFixed(8)} ${(x.position.y - neckstart).toFixed(8)} ${x.position.z.toFixed(8)} ${toSnbt({
