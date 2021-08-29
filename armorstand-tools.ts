@@ -3,7 +3,6 @@ import * as CANNON from 'https://cdn.skypack.dev/cannon-es'
 import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
 import { ItemPhysics } from './parse-yaml.ts'
 
-const s = 0.625; // size of an item (on head)
 const tps = 60;
 // (65.0075-64.115)/2
 
@@ -31,6 +30,7 @@ export function generate_pile (
 	const cornerV = new CANNON.Vec3(...corner);
 	let offset = new CANNON.Vec3();
 	let foffset = new CANNON.Vec3();
+	let s = 0.625; // size of an item (on head)
 
 	switch (type) {
 		case 'head':
@@ -43,6 +43,11 @@ export function generate_pile (
 			break;
 		default:
 			return []
+	}
+
+	if (small) {
+		offset.scale(0.5);
+		foffset.scale(0.5);
 	}
 
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
@@ -64,7 +69,8 @@ export function generate_pile (
 			DisabledSlots:4144959,
 			Invulnerable: true,
 			Invisible: true,
-			NoGravity: true
+			NoGravity: true,
+			Small: small
 		})}`
 	})
 }
