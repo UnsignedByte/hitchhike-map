@@ -135,6 +135,15 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 	})
 }
 
+// CANNON.Quaternion.prototype.setFromEuler = function(x: number, y: number, z: number, order = 'XYZ'): CANNON.Quaternion {
+//   (yaw, pitch, roll) = (r[0], r[1], r[2])
+//   qx = np.sin(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) - np.cos(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
+//   qy = np.cos(roll/2) * np.sin(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.cos(pitch/2) * np.sin(yaw/2)
+//   qz = np.cos(roll/2) * np.cos(pitch/2) * np.sin(yaw/2) - np.sin(roll/2) * np.sin(pitch/2) * np.cos(yaw/2)
+//   qw = np.cos(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
+//   return [qx, qy, qz, qw]
+// }
+
 CANNON.Quaternion.prototype.toEuler = function(target: CANNON.Vec3, order = 'YZX'): void {
   let roll
   let pitch
@@ -157,7 +166,7 @@ CANNON.Quaternion.prototype.toEuler = function(target: CANNON.Vec3, order = 'YZX
   t4 = +1.0 - 2.0 * (y * y + z * z)
   yaw = Math.atan2(t3, t4)
   
-  target.x = yaw;
+  target.x = roll;
   target.y = pitch;
-  target.z = roll;
+  target.z = yaw;
 }
