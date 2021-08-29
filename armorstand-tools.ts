@@ -217,7 +217,7 @@ function toEuler(q: CANNON.Quaternion): CANNON.Vec3 {
   let cosy_cosp = 1 - 2 * (q.y * q.y + q.z * q.z);
   yaw = Math.atan2(siny_cosp, cosy_cosp);
   
-  return new CANNON.Vec3(roll, pitch, yaw);
+  return new CANNON.Vec3(yaw, pitch, roll);
   // let e = new THREE.Euler().setFromRotationMatrix(new THREE.Quaternion(q.x, q.y, q.z, q.w), 'XYZ');
   // return new CANNON.Vec3(e.x, e.y, e.z)
 
