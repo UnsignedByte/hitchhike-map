@@ -1058,25 +1058,25 @@ scoreboard objectives add change dummy
 # KILL EXISTING ITEM HOLDERS
 kill @e[tag=item_holder]
 summon armor_stand 3.00000000 67.30375000 2.73046875 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.23446664 68.34088587 2.73046875 {Pose: {Head: [18f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.44598206 69.44865836 2.73046875 {Pose: {Head: [36f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.61384164 70.61651794 2.73046875 {Pose: {Head: [54f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.72161413 71.82803336 2.73046875 {Pose: {Head: [72f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.75875000 73.06250000 2.73046875 {Pose: {Head: [89.99999999999999f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.72161413 74.29696664 2.73046875 {Pose: {Head: [108.00000000000001f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.61384164 75.50848206 2.73046875 {Pose: {Head: [126f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.44598206 76.67634164 2.73046875 {Pose: {Head: [144f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.23446664 77.78411413 2.73046875 {Pose: {Head: [162f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 3.00000000 78.82125000 2.73046875 {Pose: {Head: [180f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.76553336 79.78411413 2.73046875 {Pose: {Head: [-162f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.55401794 80.67634164 2.73046875 {Pose: {Head: [-144.00000000000003f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.38615836 81.50848206 2.73046875 {Pose: {Head: [-126.00000000000003f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.27838587 82.29696664 2.73046875 {Pose: {Head: [-108.00000000000001f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.24125000 83.06250000 2.73046875 {Pose: {Head: [-90.00000000000003f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.27838587 83.82803336 2.73046875 {Pose: {Head: [-72.00000000000003f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.38615836 84.61651794 2.73046875 {Pose: {Head: [-54.00000000000001f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.55401794 85.44865836 2.73046875 {Pose: {Head: [-36.000000000000014f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
-summon armor_stand 2.76553336 86.34088587 2.73046875 {Pose: {Head: [-18.000000000000014f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 68.42417561 2.50919390 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 69.60708485 2.33596258 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 70.83457330 2.22773186 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 72.08437281 2.19509613 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 73.33203125 2.24125000 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 74.55330610 2.36167561 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 75.72653742 2.54458485 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 76.83476814 2.77207330 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 77.86740387 3.02187281 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 78.82125000 3.26953125 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 79.70082439 3.49080610 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 80.51791515 3.66403742 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 81.29042670 3.77226814 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 82.04062719 3.80490387 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 82.79296875 3.75875000 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 83.57169390 3.63832439 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 84.39846258 3.45541515 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 85.29023186 3.22792670 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
+summon armor_stand 3.00000000 86.25759613 2.97812719 {Pose: {Head: [0f, 0f, 0f]}, Tags: ["item_holder"], Invulnerable: 1b, NoGravity: 1b}
 
 tag @a remove victim-of-dialogue-by-billy
 

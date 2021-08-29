@@ -146,35 +146,44 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 }
 
 function fromEuler(yaw: number, pitch: number, roll: number): CANNON.Quaternion {
-	let qx, qy, qz, qw
-  qx = Math.sin(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) - Math.cos(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
-  qy = Math.cos(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2)
-  qz = Math.cos(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2) - Math.sin(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2)
-  qw = Math.cos(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
-  return new CANNON.Quaternion(qx, qy, qz, qw)
+	// let qx, qy, qz, qw
+ //  qx = Math.sin(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) - Math.cos(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
+ //  qy = Math.cos(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2)
+ //  qz = Math.cos(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2) - Math.sin(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2)
+ //  qw = Math.cos(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
+ //  return new CANNON.Quaternion(qx, qy, qz, qw)
+ // let q = new THREE.Quaternion().setFromEuler(new THREE.Euler(yaw, pitch, roll, 'XYZ'));
+ // return new CANNON.Quaternion(q.x, q.y, q.z, q.w);
+ return new CANNON.Quaternion().setFromEuler(yaw, pitch, roll);
 }
 
 function toEuler(q: CANNON.Quaternion): CANNON.Vec3 {
-  let roll
-  let pitch
-  let yaw
-  const x = q.x
-  const y = q.y
-  const z = q.z
-  const w = q.w
+  // let roll
+  // let pitch
+  // let yaw
+  // const x = q.x
+  // const y = q.y
+  // const z = q.z
+  // const w = q.w
 
-  let t0, t1, t2, t3, t4
+  // let t0, t1, t2, t3, t4
 
-  t0 = +2.0 * (w * x + y * z)
-  t1 = +1.0 - 2.0 * (x * x + y * y)
-  roll = Math.atan2(t0, t1)
-  t2 = +2.0 * (w * y - z * x)
-  t2 = t2 > +1.0 ? +1.0 : t2
-  t2 = t2 < -1.0 ? -1.0 : t2
-  pitch = Math.asin(t2)
-  t3 = +2.0 * (w * z + x * y)
-  t4 = +1.0 - 2.0 * (y * y + z * z)
-  yaw = Math.atan2(t3, t4)
+  // t0 = +2.0 * (w * x + y * z)
+  // t1 = +1.0 - 2.0 * (x * x + y * y)
+  // roll = Math.atan2(t0, t1)
+  // t2 = +2.0 * (w * y - z * x)
+  // t2 = t2 > +1.0 ? +1.0 : t2
+  // t2 = t2 < -1.0 ? -1.0 : t2
+  // pitch = Math.asin(t2)
+  // t3 = +2.0 * (w * z + x * y)
+  // t4 = +1.0 - 2.0 * (y * y + z * z)
+  // yaw = Math.atan2(t3, t4)
   
-  return new CANNON.Vec3(yaw, pitch, roll);
+  // return new CANNON.Vec3(yaw, pitch, roll);
+  // let e = new THREE.Euler().setFromRotationMatrix(new THREE.Quaternion(q.x, q.y, q.z, q.w), 'XYZ');
+  // return new CANNON.Vec3(e.x, e.y, e.z)
+
+  let v = new CANNON.Vec3();
+  q.toEuler(new CANNON.Vec3(v.y, v.z, v.x));
+  return v;
 }
