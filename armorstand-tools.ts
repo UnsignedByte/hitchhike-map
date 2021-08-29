@@ -40,7 +40,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	for(let i = 0; i < 10; i++) {
 		let ang = [Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI];
 		let q = new CANNON.Quaternion().setFromEuler(...ang);
-		console.log(ang, q, q.toEuler())
+		console.log(ang, q.toEuler())
 	}
 
 	return []
