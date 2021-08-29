@@ -38,8 +38,8 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	// })
 
 	for(let i = 0; i < 10; i++) {
-		let ang: [number, number, number] = [Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI];
-		let q = fromEuler(...ang);
+		let ang = new CANNON.Vec3(Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI);
+		let q = fromEuler(ang.x, ang.y, ang.z);
 		console.log(ang, toEuler(q))
 	}
 
