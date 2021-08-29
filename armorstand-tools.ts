@@ -31,7 +31,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 		console.log(ang, t)
 		// x.quaternion = fromEuler(x.rotation.z, x.rotation.y, x.rotation.x);
 
-		let position = new CANNON.Vec3(0, 0, 0);
+		let position = new CANNON.Vec3(0, 3, 0);
 		position.vadd(cornerV, position);
 
 		let tmp = new CANNON.Quaternion(0, offset.x, offset.y, offset.z);
