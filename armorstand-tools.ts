@@ -111,7 +111,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 			// position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16+10, Math.random()*(bounds[1]-s)+s/2),
 			// quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
 			position: new CANNON.Vec3(bounds[0], i+5,bounds[1]),
-			quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i, 0, -2*Math.PI/count*i)
+			quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i, 0, 0)
 		})
 		// objects[i].position.set()
 		// console.log(objects[i].position)
