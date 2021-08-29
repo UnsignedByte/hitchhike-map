@@ -25,7 +25,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	for(let i = 0; i < 1; i++) {
 		// let ang = new CANNON.Vec3(0, 0, (Math.random() - 0.5) * 2 * Math.PI);
 		let ang = new CANNON.Vec3(Math.PI/4, Math.PI/4, Math.PI/4);
-    let q = new CANNON.Quaternion().setFromEuler(ang.x, ang.y, ang.z, 'YZX');
+    let q = new CANNON.Quaternion().setFromEuler(ang.z, ang.y, ang.x, 'YZX');
     let t = new CANNON.Vec3();
     q.toEuler(t, 'YZX');
 		// let t = toEuler(q);
@@ -41,7 +41,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 		position.vsub(new CANNON.Vec3(noffset.x, noffset.y, noffset.z), position); // move by offset
 		test_objs[i] = `summon armor_stand ${position.x.toFixed(8)} ${(position.y - neckstart).toFixed(8)} ${position.z.toFixed(8)} ${toSnbt({
 			Pose: {
-				Head: `[${t.z*180/Math.PI}f, ${-t.y*180/Math.PI}f, ${-t.x*180/Math.PI}f]`
+				Head: `[${t.x*180/Math.PI}f, ${-t.y*180/Math.PI}f, ${-t.z*180/Math.PI}f]`
 			},
 			Tags: `["item_holder"]`,
 			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
