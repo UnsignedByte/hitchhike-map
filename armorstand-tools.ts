@@ -25,7 +25,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 		// let noffset = new CANNON.Vec3(Math.cos(x.rotation.x)*Math.cos(x.rotation.y)*necklength, Math.sin(x.rotation.y)*necklength, Math.sin(x.rotation.x)*Math.sin(x.rotation.y)*necklength)
 		let noffset = x.quaternion.vmult(headoffset);
 		// noffset.z *= -1;
-		x.position.vsub(new CANNON.Vec3(noffset.y, noffset.z, -noffset.x), x.position); // move by offset
+		x.position.vsub(new CANNON.Vec3(noffset.y, noffset.z, noffset.x), x.position); // move by offset
 		return `summon armor_stand ${x.position.x.toFixed(8)} ${(x.position.y - neckstart).toFixed(8)} ${x.position.z.toFixed(8)} ${toSnbt({
 			Pose: {
 				Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${-x.rotation.z}f]`
@@ -123,7 +123,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 			// position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16+10, Math.random()*(bounds[1]-s)+s/2),
 			// quaternion: fromEuler(- Math.PI/2, 0, 0)
 			position: new CANNON.Vec3(bounds[0], i+5,bounds[1]),
-			quaternion: fromEuler(0, 0, 2*Math.PI/count*i)
+			quaternion: fromEuler(2*Math.PI/count*i, 0, 0)
 		})
 		// objects[i].position.set()
 		// console.log(objects[i].position)
