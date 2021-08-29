@@ -23,8 +23,8 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	let test_objs = [];
 
 	for(let i = 0; i < 1; i++) {
-		let ang = new CANNON.Vec3((Math.random() - 0.5) * 2 * Math.PI, (Math.random() - 0.5) * 2 * Math.PI, (Math.random() - 0.5) * 2 * Math.PI);
-		// let ang = new CANNON.Vec3(Math.PI/2, 0, 0);
+		// let ang = new CANNON.Vec3((Math.random() - 0.5) * 2 * Math.PI, (Math.random() - 0.5) * 2 * Math.PI, (Math.random() - 0.5) * 2 * Math.PI);
+		let ang = new CANNON.Vec3(Math.PI/4, 0, 0);
     let q = new CANNON.Quaternion().setFromEuler(ang.x, ang.y, ang.z, 'YZX');
     let t = new CANNON.Vec3();
     q.toEuler(t, 'YZX');
