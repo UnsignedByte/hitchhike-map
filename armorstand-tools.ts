@@ -30,7 +30,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 			Tags: `["item_holder"]`,
 			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
 			Invulnerable: true,
-			Invisible: true,
+			// Invisible: true,
 			NoGravity: true
 		})}`
 	})
@@ -130,9 +130,9 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 	// 	console.log(objects[i].position, objects[i].quaternion)
 	// }
 	return objects.map(x=>{
-		const t = new CANNON.Vec3();
-		x.quaternion.toEuler(t);
-		return {position:x.position, rotation: t.scale(180/Math.PI), quaternion:x.quaternion}
+		// const t = new CANNON.Vec3();
+		// x.quaternion.toEuler(t);
+		return {position:x.position, rotation: toEuler(x.quaternion).scale(180/Math.PI), quaternion:x.quaternion}
 	})
 }
 
