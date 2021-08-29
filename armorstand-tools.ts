@@ -39,7 +39,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 
 	for(let i = 0; i < 10; i++) {
 		let ang = [Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI];
-		let q = new CANNON.Quaternion().setFromEuler(...ang, 'YZX');
+		let q = new CANNON.Quaternion().setFromEuler(...ang);
 		console.log(ang, q.toEuler())
 	}
 
@@ -142,6 +142,15 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 	return objects.map(x=>{
 		return {position:x.position, rotation: (<unknown>x.quaternion.toEuler() as CANNON.Vec3).scale(180/Math.PI), quaternion:x.quaternion}
 	})
+}
+
+CANNON.Quaternion.prototype.setFromEuler = function(yaw: number, pitch: number, roll: number, order = 'XYZ'): CANNON.Quaternion {
+	let qx, qy, qz, qw
+  qx = Math.sin(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) - Math.cos(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
+  qy = Math.cos(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2)
+  qz = Math.cos(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2) - Math.sin(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2)
+  qw = Math.cos(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
+  return new CANNON.Quaternion(qx, qy, qz, qw)
 }
 
 CANNON.Quaternion.prototype.toEuler = function(): CANNON.Vec3 {
