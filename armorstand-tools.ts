@@ -40,7 +40,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 		position.vsub(new CANNON.Vec3(noffset.x, noffset.y, noffset.z), position); // move by offset
 		test_objs[i] = `summon armor_stand ${position.x.toFixed(8)} ${(position.y - neckstart).toFixed(8)} ${position.z.toFixed(8)} ${toSnbt({
 			Pose: {
-				Head: `[${t.y*180/Math.PI}f, ${t.z*180/Math.PI}f, ${-t.x*180/Math.PI}f]`
+				Head: `[${t.x*180/Math.PI}f, ${t.y*180/Math.PI}f, ${-t.z*180/Math.PI}f]`
 			},
 			Tags: `["item_holder"]`,
 			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
