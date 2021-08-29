@@ -58,7 +58,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
 		x.quaternion = new CANNON.Quaternion().setFromEuler(x.rotation.x, x.rotation.y, x.rotation.z, 'ZYX');
-		x.rotation.scale(180/Math.PI);
+		x.rotation.scale(180/Math.PI, x.rotation);
 
 		x.position.vadd(cornerV, x.position);
 		let tmp = new CANNON.Quaternion(offset.x, offset.y, offset.z, 0);
