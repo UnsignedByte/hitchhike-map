@@ -7,7 +7,7 @@ const tps = 60;
 
 const neckstart = 7/16+1;
 const necklength = 0.44625;
-const offset = new CANNON.Vec3(0, 1, 0); // necklength + s/2, -0.25-s/32
+const offset = new CANNON.Vec3(0, necklength + s/2, -0.25-s/32);
 // (65.0075-64.115)/2
 
 /* 
