@@ -175,5 +175,5 @@ function toEuler(q: CANNON.Quaternion): CANNON.Vec3 {
   t4 = +1.0 - 2.0 * (y * y + z * z)
   yaw = Math.atan2(t3, t4)
   
-  return new CANNON.Vec3(roll, pitch, yaw);
+  return new CANNON.Vec3(yaw, pitch, roll);
 }
