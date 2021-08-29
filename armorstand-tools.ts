@@ -30,16 +30,18 @@ export function generate_pile (
 	const cornerV = new CANNON.Vec3(...corner);
 	let offset = new CANNON.Vec3();
 	let foffset = new CANNON.Vec3();
-	let s = 0.625; // size of an item (on head)
+	let s = 0; // size of an item
 
 	switch (type) {
 		case 'head':
 			offset.set(0, 0.44625 + s/2, -0.25-s/32);
 			foffset.set(0, 7/16+1, 0);
+			s = 0.625;
 			break;
 		case 'hand':
 			offset.set(0, 0.44625 + s/2, -0.25-s/32);
 			foffset.set(0, 7/16+1, 0);
+			s = 0.625;
 			break;
 		default:
 			return []
@@ -50,7 +52,7 @@ export function generate_pile (
 		foffset.scale(0.5);
 	}
 
-	return simulate_pile(bounds, count, slope, duration).map(x=>{
+	return simulate_pile(bounds, count, slope, duration, s).map(x=>{
 		x.quaternion = new CANNON.Quaternion().setFromEuler(x.rotation.x, x.rotation.y, x.rotation.z, 'ZYX');
 		x.rotation.scale(180/Math.PI, x.rotation);
 
@@ -75,7 +77,7 @@ export function generate_pile (
 	})
 }
 
-function simulate_pile(bounds: number[], count: number, slope: number[], duration: number) {
+function simulate_pile(bounds: number[], count: number, slope: number[], duration: number, s: number) {
 	let world = new CANNON.World({
     gravity: new CANNON.Vec3(0,-9.8,0)
 	});
