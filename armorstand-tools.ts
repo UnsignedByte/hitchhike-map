@@ -30,7 +30,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	// }
 
 	return simulate_pile(bounds, count, slope, duration).map(x=>{
-		x.quaternion = fromEuler(x.rotation.x, x.rotation.y, x.rotation.z);
+		x.quaternion = fromEuler(x.rotation.z, x.rotation.y, x.rotation.x);
 		x.position.vadd(cornerV, x.position);
 		let noffset = x.quaternion.vmult(headoffset);
 		x.position.vsub(noffset, x.position); // move by offset
