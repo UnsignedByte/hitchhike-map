@@ -89,7 +89,7 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 		},
 		{
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, - Math.PI / 2, 0),
+			quaternion: new CANNON.Quaternion().setFromEuler(Math.PI / 2, 0, 0),
 			position: new CANNON.Vec3(bounds[0],0,0),
 			material: wallMat
 		}
