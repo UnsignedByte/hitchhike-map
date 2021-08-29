@@ -107,31 +107,31 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 	[
 		{ // ground
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(slope[2], slope[1], slope[0], 'YZX'),
+			quaternion: new CANNON.Quaternion().setFromEuler(slope[2], slope[1], slope[0], 'XYZ'),
 			position: new CANNON.Vec3(0, 0, 0),
 			material: groundMat
 		},
 		{
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, 0, 0, 'YZX'),
+			quaternion: new CANNON.Quaternion().setFromEuler(0, 0, 0, 'XYZ'),
 			position: new CANNON.Vec3(0,0,0),
 			material: wallMat
 		},
 		{
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI, 0, 'YZX'),
+			quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI, 0, 'XYZ'),
 			position: new CANNON.Vec3(0,0,bounds[1]),
 			material: wallMat
 		},
 		{
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI / 2, 0, 'YZX'),
+			quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI / 2, 0, 'XYZ'),
 			position: new CANNON.Vec3(0,0,0),
 			material: wallMat
 		},
 		{
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, - Math.PI / 2, 0, 'YZX'),
+			quaternion: new CANNON.Quaternion().setFromEuler(0, - Math.PI / 2, 0, 'XYZ'),
 			position: new CANNON.Vec3(bounds[0],0,0),
 			material: wallMat
 		}
