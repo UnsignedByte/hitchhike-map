@@ -152,9 +152,9 @@ function toEuler(q: CANNON.Quaternion): CANNON.Vec3 {
   let roll
   let pitch
   let yaw
-  const x = q.x
-  const y = q.y
-  const z = q.z
+  const y = q.x
+  const z = q.y
+  const x = q.z
   const w = q.w
 
   let t0, t1, t2, t3, t4
