@@ -35,12 +35,12 @@ export function generate_pile (
 	switch (type) {
 		case 'head':
 			offset.set(0, 0.44625 + s/2, -0.25-s/32);
-			foffset.set(0, 7/16+1, 0);
+			foffset.set(0, -(7/16+1), 0);
 			s = 0.625;
 			break;
 		case 'hand':
 			offset.set(0, 0.44625 + s/2, -0.25-s/32);
-			foffset.set(0, 7/16+1, 0);
+			foffset.set(0, -(7/16+1), 0);
 			s = 0.625;
 			break;
 		default:
