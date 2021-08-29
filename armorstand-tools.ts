@@ -18,30 +18,30 @@ bounds: x and z width of area
 slope: rotations of the ground plane about the x, y, and z axes (good for items on stairs, etc)
  */
 export function generate_pile(corner: [number, number, number], item: string, count: number, bounds: [number, number], duration: number = 10, slope: [number, number, number] = [0,0,0]) {
-	// const cornerV = new CANNON.Vec3(...corner);
-	// return simulate_pile(bounds, count, slope, duration).map(x=>{
-	// 	console.log(x);
-	// 	x.position.vadd(cornerV, x.position);
-	// 	// let noffset = x.quaternion.vmult(headoffset);
-	// 	// noffset.z *= -1;
-	// 	// x.position.vsub(noffset, x.position); // move by offset
-	// 	return `summon armor_stand ${x.position.x.toFixed(8)} ${(x.position.y - neckstart).toFixed(8)} ${x.position.z.toFixed(8)} ${toSnbt({
-	// 		Pose: {
-	// 			Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${-x.rotation.z}f]`
-	// 		},
-	// 		Tags: `["item_holder"]`,
-	// 		ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
-	// 		Invulnerable: true,
-	// 		Invisible: true,
-	// 		NoGravity: true
-	// 	})}`
-	// })
+	const cornerV = new CANNON.Vec3(...corner);
+	return simulate_pile(bounds, count, slope, duration).map(x=>{
+		console.log(x);
+		x.position.vadd(cornerV, x.position);
+		// let noffset = x.quaternion.vmult(headoffset);
+		// noffset.z *= -1;
+		// x.position.vsub(noffset, x.position); // move by offset
+		return `summon armor_stand ${x.position.x.toFixed(8)} ${(x.position.y - neckstart).toFixed(8)} ${x.position.z.toFixed(8)} ${toSnbt({
+			Pose: {
+				Head: `[${x.rotation.x}f, ${x.rotation.y}f, ${-x.rotation.z}f]`
+			},
+			Tags: `["item_holder"]`,
+			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
+			Invulnerable: true,
+			Invisible: true,
+			NoGravity: true
+		})}`
+	})
 
-	for(let i = 0; i < 10; i++) {
-		let ang = new CANNON.Vec3(Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI);
-		let q = new CANNON.Quaternion().setFromEuler(ang.x, ang.y, ang.z);
-		console.log(ang, toEuler(q))
-	}
+	// for(let i = 0; i < 10; i++) {
+	// 	let ang = new CANNON.Vec3(Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI);
+	// 	let q = fromEuler(ang.x, ang.y, ang.z);
+	// 	console.log(ang, toEuler(q))
+	// }
 
 	return []
 }
@@ -75,31 +75,31 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 	[
 		{ // ground
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(...slope),
+			quaternion: fromEuler(...slope),
 			position: new CANNON.Vec3(0, 0, 0),
 			material: groundMat
 		},
 		{
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, 0, 0),
+			quaternion: fromEuler(0, 0, 0),
 			position: new CANNON.Vec3(0,0,0),
 			material: wallMat
 		},
 		{
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI, 0),
+			quaternion: fromEuler(0, Math.PI, 0),
 			position: new CANNON.Vec3(0,0,bounds[1]),
 			material: wallMat
 		},
 		{
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI / 2, 0),
+			quaternion: fromEuler(0, Math.PI / 2, 0),
 			position: new CANNON.Vec3(0,0,0),
 			material: wallMat
 		},
 		{
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(Math.PI / 2, 0, 0),
+			quaternion: fromEuler(Math.PI / 2, 0, 0),
 			position: new CANNON.Vec3(bounds[0],0,0),
 			material: wallMat
 		}
@@ -120,9 +120,9 @@ function simulate_pile(bounds: [number, number], count: number, slope: [number, 
 			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/2, s/32)),
 			material: itemMat,
 			// position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16+10, Math.random()*(bounds[1]-s)+s/2),
-			// quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
+			// quaternion: fromEuler(- Math.PI/2, 0, 0)
 			position: new CANNON.Vec3(bounds[0], i+5,bounds[1]),
-			quaternion: new CANNON.Quaternion().setFromEuler(0, 2*Math.PI/count*i, 0.3, 'YZX')
+			quaternion: fromEuler(0, 2*Math.PI/count*i, 0.3)
 		})
 		// objects[i].position.set()
 		// console.log(objects[i].position)
