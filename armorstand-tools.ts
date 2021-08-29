@@ -50,6 +50,7 @@ export function generate_pile (
 	if (small) {
 		offset.scale(0.5);
 		foffset.scale(0.5);
+		s*=0.5;
 	}
 
 	return simulate_pile(bounds, count, slope, duration, s).map(x=>{
