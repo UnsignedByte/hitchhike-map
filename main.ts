@@ -113,8 +113,7 @@ export async function init (
       ``,
       `# KILL EXISTING ITEM HOLDERS`,
       `kill @e[tag=item_holder]`,
-      generate_pile([0, 64.5, 0], "minecraft:glass_pane", 200, [3, 3], 10, [-Math.PI/4, 0, 0]),
-      generate_pile([1057, 50, -236], "minecraft:coal", 5000, [22, 22], 10, [0, 0, 0]),
+      data.itemphysics.map(x=>['', ...generate_pile(x)]),
       onLoad
     )
   )

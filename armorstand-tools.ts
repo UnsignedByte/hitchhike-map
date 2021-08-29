@@ -1,6 +1,7 @@
 import * as CANNON from 'https://cdn.skypack.dev/cannon-es'
 // import * as THREE from 'https://cdn.skypack.dev/three'
 import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
+import { ItemPhysics } from './parse-yaml.ts'
 
 const s = 0.625; // size of an item (on head)
 const tps = 60;
@@ -17,7 +18,20 @@ count: number of items
 bounds: x and z width of area
 slope: rotations of the ground plane about the x, y, and z axes (good for items on stairs, etc)
  */
-export function generate_pile(corner: [number, number, number], item: string, count: number, bounds: [number, number], duration: number = 10, slope: [number, number, number] = [0,0,0]) {
+
+
+export function generate_pile (
+	{
+		corner,
+		item,
+		count,
+		bounds,
+		duration,
+		slope = [0,0,0],
+		type,
+		small
+	}: ItemPhysics
+	): string[] {
 	const cornerV = new CANNON.Vec3(...corner);
 
 	// let test_objs = [];
@@ -71,6 +85,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 			},
 			Tags: `["item_holder"]`,
 			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
+			DisabledSlots:4144959,
 			Invulnerable: true,
 			Invisible: true,
 			NoGravity: true
@@ -78,7 +93,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	})
 }
 
-function simulate_pile(bounds: [number, number], count: number, slope: [number, number, number], duration: number) {
+function simulate_pile(bounds: number[], count: number, slope: number[], duration: number) {
 	let world = new CANNON.World({
     gravity: new CANNON.Vec3(0,-9.8,0)
 	});

@@ -1,6 +1,16 @@
 import * as z from 'https://deno.land/x/zod@v3.5.1/mod.ts'
 import * as YAML from 'https://deno.land/std@0.101.0/encoding/yaml.ts'
 
+function tuple<T extends any[]>(...elements: T): T {
+  return elements;
+}
+
+// return a ZOD type representation for a space separated tuple of n numbers
+function nplet(n: number) {
+  return z.string()
+    .transform((x) => (tuple(...x.split(' ').map(Number).slice(0, n))))
+}
+
 const colourNameSchema = [
   z.literal('black'),
   z.literal('dark_blue'),
@@ -84,25 +94,8 @@ const npcSchema = z
   .object({
     name: z.string(),
     colour: colourSchema,
-    position: z
-      .string()
-      .regex(
-        /^-?\d+.?\d* -?\d+.?\d* -?\d+.?\d*$/i,
-        'Positions must be a triplet of signed numbers.'
-      )
-      .transform((triplet): [number, number, number] => {
-        const [x, y, z] = triplet.split(' ').map(Number)
-        return [x, y, z]
-      }),
-    rotation: z
-      .string().regex(
-        /^-?\d+.?\d* -?\d+.?\d*/i,
-        'Positions must be a pair of signed numbers.'
-      )
-      .transform((pair): [number, number] => {
-        const [rx, ry] = pair.split(' ').map(Number)
-        return [rx, ry]
-      }),
+    position: nplet(3),
+    rotation: nplet(2),
     head: z.string(),
     villager: z.object({
       type: z.union([
@@ -203,6 +196,22 @@ const questSchema = z.
 
 export type Quest = z.infer<typeof questSchema>
 
+const itemphysicsSchema = z.object({
+  duration: z.number().default(10), // duration in seconds for simulation
+  count: z.number().default(10), // number of items
+  item: z.string(), // item ID
+  corner: nplet(3),
+  slope: nplet(3),
+  bounds: nplet(2),
+  small: z.boolean().default(false),
+  type: z.union([
+    z.literal('head'),
+    z.literal('hand')
+  ]).default('head')
+})
+
+export type ItemPhysics = z.infer<typeof itemphysicsSchema>
+
 const fullSchema = z
   .object({
     npc:z.object({
@@ -211,7 +220,8 @@ const fullSchema = z
       }),
       npcs:z.record(npcSchema)
     }),
-    quest: z.record(questSchema)
+    quest: z.record(questSchema),
+    itemphysics: z.array(itemphysicsSchema)
   })
 
 export function parse (yaml: string): z.infer<typeof fullSchema> {
