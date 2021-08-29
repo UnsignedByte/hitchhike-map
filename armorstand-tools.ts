@@ -36,7 +36,7 @@ export function generate_pile(corner: [number, number, number], item: string, co
 		let position = new CANNON.Vec3(0, 5, 0);
 		position.vadd(cornerV, position);
 
-		let tmp = new CANNON.Quaternion(offset.x, offset.y, offset.z, 0);
+		let tmp = new CANNON.Quaternion(offset.z, offset.y, offset.x, 0);
 		let noffset = q.mult(tmp).mult(q.inverse());
 		console.log(noffset)
 		position.vsub(new CANNON.Vec3(noffset.x, noffset.y, noffset.z), position); // move by offset
