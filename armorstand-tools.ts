@@ -25,9 +25,10 @@ export function generate_pile(corner: [number, number, number], item: string, co
 	for(let i = 0; i < 10; i++) {
 		let ang = new CANNON.Vec3(Math.random()*2*Math.PI, Math.random()*2*Math.PI, Math.random()*2*Math.PI);
 		let q = new CANNON.Quaternion().setFromEuler(ang.z, ang.y, ang.x, 'ZYX');
-		let t = new CANNON.Vec3();
-		q.toEuler(t)
-		console.log(ang, toEuler(q), t)
+		// let t = new CANNON.Vec3();
+		// q.toEuler(t)
+		let t = toEuler(q);
+		console.log(ang, t)
 		// x.quaternion = fromEuler(x.rotation.z, x.rotation.y, x.rotation.x);
 
 		let position = new CANNON.Vec3(0, i*3, 0);
