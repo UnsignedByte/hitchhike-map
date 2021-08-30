@@ -36,12 +36,12 @@ export function generate_pile (
 		case 'head':
 			s = 0.625;
 			let necklength = 7/16+1/128;
-			offset.set(0,  + s/2, -0.25-s/32);
+			offset.set(0, necklength + s/2, -0.25-s/32);
 			foffset.set(0, 7/16+1, 0);
 
 			if (small) {
 				s*=7/10;
-				offset.set(0, (7/16+1/128)*3/4 + s/2, -0.25-s/32);
+				offset.set(0, necklength*3/4 + s/2, -0.25-s/32);
 				foffset.set(0, (13/32+1)/2, 0);
 			}
 			break;
