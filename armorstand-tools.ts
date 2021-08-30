@@ -34,23 +34,30 @@ export function generate_pile (
 
 	switch (type) {
 		case 'head':
-			offset.set(0, 0.44625 + s/2, -0.25-s/32);
-			foffset.set(0, 7/16+1, 0);
 			s = 0.625;
+			let necklength = 7/16+1/128;
+			offset.set(0,  + s/2, -0.25-s/32);
+			foffset.set(0, 7/16+1, 0);
+
+			if (small) {
+				s*=7/10;
+				offset.set(0, (7/16+1/128)*3/4 + s/2, -0.25-s/32);
+				foffset.set(0, (13/32+1)/2, 0);
+			}
 			break;
 		case 'hand':
+			s = 0.625;
 			offset.set(0, 0.44625 + s/2, -0.25-s/32);
 			foffset.set(0, 7/16+1, 0);
-			s = 0.625;
+
+			if (small) {
+				offset.scale(0.5);
+				foffset.scale(0.5);
+				s*=0.5;
+			}
 			break;
 		default:
 			return []
-	}
-
-	if (small) {
-		offset.scale(0.5);
-		foffset.scale(0.5);
-		s*=0.5;
 	}
 
 	return simulate_pile(bounds, count, slope, duration, s).map(x=>{
