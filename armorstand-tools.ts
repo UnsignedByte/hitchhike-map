@@ -189,7 +189,7 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, gr
 		let xc = Math.floor(ret.x*2), zc = Math.floor(ret.z*2);
 
 		for(let i = 0; i < 9; i++) {
-			th = Math.max(th, heightAt((i % 3 - 1) * s/2, (Math.floor(i/3) % 3 - 1) * s/2));
+			th = Math.max(th, heightAt(xc + (i % 3 - 1) * s/2, zc + (Math.floor(i/3) % 3 - 1) * s/2));
 		}
 
 		ret.y = th + s/32 + 1 + Math.random()*0.5;
