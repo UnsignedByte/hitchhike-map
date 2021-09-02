@@ -173,14 +173,26 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, gr
 
 	let objects = [];
 
+	function heightAt(x: number, z: number) {
+		let gz = ground[z] || [];
+		return gz[x]/2 || 0;
+	}
+
 	function randPos() {
 		let ret = new CANNON.Vec3(
-								Math.random()*(bounds[0]-spawnrange[2]-spawnrange[0]) + spawnrange[0],
+								Math.random()*(bounds[0]-spawnrange[2]-spawnrange[0]-s) + spawnrange[0] + s/2,
 								0,
-								Math.random()*(bounds[1]-spawnrange[3]-spawnrange[1]) + spawnrange[1]
+								Math.random()*(bounds[1]-spawnrange[3]-spawnrange[1]-s) + spawnrange[1] + s/2
 							);
-		let gz = ground[Math.floor(ret.x*2)] || [];
-		ret.y = (gz[Math.floor(ret.z*2)] || 0)/2 + s/32 + 1 + Math.random()*0.5;
+
+		let th = 0;
+		let xc = Math.floor(ret.x*2), zc = Math.floor(ret.z*2);
+
+		for(let i = 0; i < 9; i++) {
+			th = Math.max(th, heightAt((i % 3 - 1) * s/2, (Math.floor(i/3) % 3 - 1) * s/2));
+		}
+
+		ret.y = th + s/32 + 1 + Math.random()*0.5;
 		return ret;
 	}
 
