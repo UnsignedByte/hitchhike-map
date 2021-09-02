@@ -69,7 +69,7 @@ export async function init (
   // ensureDir expects an absolute path rather than a file:// URL
   await ensureDir(join(basePath, `./data/${namespace}/functions/`))
 
-  schedule(`execute as @e[tag=item_holder] run data modify entity @s Fire set value 2s`, 20, functions); // keep all armor stands lit
+  schedule(`execute as @e[tag=item_holder] run data modify entity @s Fire set value 32767s`, 20, functions); // keep all armor stands lit
 
   let CONSTANTS = {
     max: 2147483647,
