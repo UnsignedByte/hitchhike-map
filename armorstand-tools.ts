@@ -185,7 +185,7 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, gr
 								Math.random()*(bounds[1]-spawnrange[3]-spawnrange[1]) + spawnrange[1]
 							);
 		let gz = ground[Math.floor(ret.x*2)] || [];
-		ret.y = (gz[Math.floor(ret.z*2)] || 0)/2 + s/32;
+		ret.y = (gz[Math.floor(ret.z*2)] || 0)/2 + s/32 + 1 + Math.random()*0.5;
 		return ret;
 	}
 
