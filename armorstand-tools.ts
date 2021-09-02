@@ -128,7 +128,7 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, gr
 		x.map((z, j) => {
 			// console.log(j/2+0.25, ground[i][j]/4, i/2+0.25);
 			if (ground[i][j] <= 0 || i >= 2*bounds[1] || j >= 2*bounds[0]) return;
-			groundBody.addShape(new CANNON.Box(new CANNON.Vec3(0.25, ground[i][j]/4, 0.25)),
+			groundBody.addShape(new CANNON.Box(new CANNON.Vec3(0.251, ground[i][j]/4+0.001, 0.251)),
 													new CANNON.Vec3(j/2+0.25, ground[i][j]/4, i/2+0.25))
 		})
 	});
