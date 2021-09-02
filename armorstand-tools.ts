@@ -100,12 +100,12 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, gr
 
 	world.addContactMaterial(new CANNON.ContactMaterial(groundMat, itemMat, {
 		friction:0.7,
-		restitution: 0.0
+		restitution: 0.2
 	}));
 
 	world.addContactMaterial(new CANNON.ContactMaterial(itemMat, itemMat, {
 		friction:0.6,
-		restitution: 0.1
+		restitution: 0.3
 	}));
 
 	world.addContactMaterial(new CANNON.ContactMaterial(wallMat, itemMat, {
