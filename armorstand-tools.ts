@@ -117,7 +117,7 @@ function simulate_pile(bounds: number[], count: number, slope: number[], ground:
 	let groundBody = new CANNON.Body({
 		material:groundMat,
 		type: CANNON.Body.STATIC,
-		position: new CANNON.Vec3(bounds[0]/2, 0, bounds[1]/2)
+		position: new CANNON.Vec3(0, 0, 0)
 	});
 
 	console.log(ground);
@@ -127,7 +127,7 @@ function simulate_pile(bounds: number[], count: number, slope: number[], ground:
 			// console.log(j/2+0.25-bounds[0]/2, ground[i][j]/4, i/2+0.25-bounds[1]/2);
 			if (ground[i][j] <= 0 || i >= 2*bounds[1] || j >= 2*bounds[0]) return;
 			groundBody.addShape(new CANNON.Box(new CANNON.Vec3(0.25, 0.25, ground[i][j]/4)),
-													new CANNON.Vec3(j/2+0.25-bounds[0]/2, ground[i][j]/4, i/2+0.25-bounds[1]/2))
+													new CANNON.Vec3(j/2+0.25, ground[i][j]/4, i/2+0.25))
 		})
 	});
 
