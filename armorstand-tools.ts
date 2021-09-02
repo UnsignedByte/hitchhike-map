@@ -122,8 +122,8 @@ function simulate_pile(bounds: number[], count: number, slope: number[], ground:
 	ground.map((x, i)=>{
 		x.map((z, j) => {
 			if (ground[i][j] <= 0 || i >= 2*bounds[1] || j >= 2*bounds[0]) return;
-			groundBody.addShape(new CANNON.Box(new CANNON.Vec3(0.25, 0.25, ground[i][j]/2)),
-													new CANNON.Vec3(j/2+0.25-bounds[0]/2, i/2+0.25-bounds[1]/2, ground[i][j]/2))
+			groundBody.addShape(new CANNON.Box(new CANNON.Vec3(0.25, 0.25, ground[i][j]/4)),
+													new CANNON.Vec3(j/2+0.25-bounds[0]/2, ground[i][j]/4, i/2+0.25-bounds[1]/2))
 		})
 	});
 

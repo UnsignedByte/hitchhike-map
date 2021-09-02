@@ -168,7 +168,7 @@ itemphysics:
   #   small: true
   #   type: head
   #   walls: false
-  - duration: 60 # physics simulation duration in seconds
+  - duration: 20 # physics simulation duration in seconds
     count: 100 # number of items
     item: melon_slice
     corner: 908 65 -153
