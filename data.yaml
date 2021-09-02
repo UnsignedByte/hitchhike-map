@@ -177,7 +177,7 @@ itemphysics:
   #     - 5 5 5 5 5 5
   - duration: 30 # physics simulation duration in seconds
     count: 75 # number of items
-    item: glow_berries
+    item: melon_slice
     corner: 907.5 65 -152.5
     bounds: 4 2 # bounds of simulation
     small: true
@@ -191,7 +191,7 @@ itemphysics:
     spawnrange: 0.5 0.5 0 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
   - duration: 30 # physics simulation duration in seconds
     count: 75 # number of items
-    item: glow_berries
+    item: apple
     corner: 903.5 65 -152.5
     bounds: 4 2 # bounds of simulation
     small: true
