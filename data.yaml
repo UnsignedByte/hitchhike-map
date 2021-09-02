@@ -188,7 +188,7 @@ itemphysics:
       - 99 1 1 1 1 1 1 99
       - 99 2 2 2 2 2 2 99
       - 99 99 99 99 99 99 99 99
-    spawnrange: 0.5 0.5 0.5 0 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
+    spawnrange: 0.5 0.5 0.5 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
   - duration: 40 # physics simulation duration in seconds
     count: 100 # number of items
     item: apple
@@ -202,7 +202,7 @@ itemphysics:
       - 99 1 1 1 1 1 1 99
       - 99 2 2 2 2 2 2 99
       - 99 99 99 99 99 99 99 99
-    spawnrange: 0.5 0.5 0.5 0 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
+    spawnrange: 0.5 0.5 0.5 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
   - duration: 40 # physics simulation duration in seconds
     count: 100 # number of items
     item: glow_berries
@@ -216,4 +216,4 @@ itemphysics:
       - 99 1 1 1 1 1 1 99
       - 99 2 2 2 2 2 2 99
       - 99 99 99 99 99 99 99 99
-    spawnrange: 0.5 0.5 0.5 0 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
+    spawnrange: 0.5 0.5 0.5 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
