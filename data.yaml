@@ -185,7 +185,6 @@ itemphysics:
     walls: true
     ground:
       - 0 0 0 0 0 0
-      - 0 0 0 0 0 0
       - 1 1 1 1 1 1
       - 2 2 2 2 2 2
   - duration: 30 # physics simulation duration in seconds
@@ -198,7 +197,6 @@ itemphysics:
     walls: true
     ground:
       - 0 0 0 0 0 0
-      - 0 0 0 0 0 0
       - 1 1 1 1 1 1
       - 2 2 2 2 2 2
   - duration: 30 # physics simulation duration in seconds
@@ -210,7 +208,6 @@ itemphysics:
     type: head
     walls: true
     ground:
-      - 0 0 0 0 0 0
       - 0 0 0 0 0 0
       - 1 1 1 1 1 1
       - 2 2 2 2 2 2
