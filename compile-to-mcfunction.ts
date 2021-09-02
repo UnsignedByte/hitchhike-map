@@ -1,4 +1,4 @@
-import { Lines } from './main.ts'
+import { Lines , schedule } from './main.ts'
 import { Npc, Quest, QuestCondition } from './parse-yaml.ts'
 
 let npc: Record<string, string> = {} // dictionary for npc selectors

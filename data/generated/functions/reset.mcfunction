@@ -1,3 +1,4 @@
+# Reset schedules
 # Kill all existing NPCs.
 kill @e[type=minecraft:villager, tag=npc]
 

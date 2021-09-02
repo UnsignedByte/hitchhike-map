@@ -2,6 +2,7 @@ import * as CANNON from 'https://cdn.skypack.dev/cannon-es'
 // import * as THREE from 'https://cdn.skypack.dev/three'
 import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
 import { ItemPhysics } from './parse-yaml.ts'
+import { Lines, schedule } from './main.ts'
 
 const tps = 60;
 // (65.0075-64.115)/2
@@ -83,6 +84,7 @@ export function generate_pile (
 			Invisible: true,
 			NoGravity: true,
 			Silent: true,
+			Marker: true,
 			Small: small
 		})}`
 	})

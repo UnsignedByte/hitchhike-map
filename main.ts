@@ -21,6 +21,20 @@ function lines (...lines: Lines[]): string {
   return toLines(lines)
 }
 
+let scheduled_rates: Set<number> = new Set();
+
+export function schedule(command: Lines, rate: number, functions: Record<string, Lines>) {
+  if (functions[`scheduled/s-${rate}`] === undefined) {
+    functions[`scheduled/s-${rate}`] = [`schedule function generated:scheduled/s-${rate} ${rate}t`];
+    scheduled_rates.add(rate);
+  }
+
+  functions[`scheduled/s-${rate}`] = [
+    command,
+    functions[`scheduled/s-${rate}`]
+  ]
+}
+
 export async function init (
   yamlPath: string,
   basePath: string,
@@ -58,6 +72,11 @@ export async function init (
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/reset.mcfunction`),
     lines(
+      `# Reset schedules`,
+      Array.from(scheduled_rates).map((x)=>([
+        `schedule clear scheduled/s-${x}`,
+        `function scheduled/s-${x}`
+      ])),
       '# Kill all existing NPCs.',
       'kill @e[type=minecraft:villager, tag=npc]',
       '',
