@@ -173,7 +173,7 @@ itemphysics:
     item: melon_slice
     corner: 908 65 -153
     bounds: 3 2 # bounds of simulation
-    small: true
+    small: false
     type: head
     walls: true
     ground:
