@@ -205,6 +205,7 @@ const itemphysicsSchema = z.object({
   bounds: nplet(2),
   small: z.boolean().default(false),
   walls: z.boolean().default(true),
+  ground: z.array(z.string().transform(x=>x.split(" ").map(Number))),
   type: z.union([
     z.literal('head'),
     z.literal('hand')

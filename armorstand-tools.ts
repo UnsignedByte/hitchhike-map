@@ -23,6 +23,7 @@ export function generate_pile (
 		bounds,
 		duration,
 		slope = [0,0,0],
+		ground = [],
 		type,
 		small,
 		walls
@@ -61,7 +62,7 @@ export function generate_pile (
 			return []
 	}
 
-	return simulate_pile(bounds, count, slope, duration, s, walls).map(x=>{
+	return simulate_pile(bounds, count, slope, ground, duration, s, walls).map(x=>{
 		x.quaternion = new CANNON.Quaternion().setFromEuler(x.rotation.x, x.rotation.y, x.rotation.z, 'ZYX');
 		x.rotation.scale(180/Math.PI, x.rotation);
 
@@ -87,7 +88,7 @@ export function generate_pile (
 	})
 }
 
-function simulate_pile(bounds: number[], count: number, slope: number[], duration: number, s: number, walls: boolean = true) {
+function simulate_pile(bounds: number[], count: number, slope: number[], ground: number[][], duration: number, s: number, walls: boolean = true) {
 	let world = new CANNON.World({
     gravity: new CANNON.Vec3(0,-9.8,0)
 	});
@@ -113,6 +114,21 @@ function simulate_pile(bounds: number[], count: number, slope: number[], duratio
 		restitution: 0.05
 	}));
 
+	let groundBody = new CANNON.Body({
+		material:groundMat,
+		type: CANNON.Body.STATIC
+	});
+
+	ground.map((x, i)=>{
+		x.map((z, j) => {
+			if (ground[i][j] <= 0 || i >= 2*bounds[1] || j >= 2*bounds[0]) return;
+			groundBody.addShape(new CANNON.Box(new CANNON.Vec3(0.25, 0.25, ground[i][j]/2)),
+													new CANNON.Vec3(j/2+0.25-bounds[0]/2, i/2+0.25-bounds[1]/2, ground[i][j]/2))
+		})
+	});
+
+	world.addBody(groundBody);
+
 	[
 		{ // ground
 			mass: 0,
@@ -120,7 +136,7 @@ function simulate_pile(bounds: number[], count: number, slope: number[], duratio
 			position: new CANNON.Vec3(0, 0, 0),
 			material: groundMat
 		},
-		...(()=>(
+		...(
 			walls ? 
 			[
 				{
@@ -147,13 +163,12 @@ function simulate_pile(bounds: number[], count: number, slope: number[], duratio
 					position: new CANNON.Vec3(bounds[0],0,0),
 					material: wallMat
 				}
-			] : []
-			))()
+			] : [])
 	].forEach(b=>world.addBody(
 		new CANNON.Body(
 			Object.assign(
 				b, 
-				{shape: new CANNON.Plane()}
+				{shape: new CANNON.Plane(), type: CANNON.Body.STATIC}
 			)
 		)
 	))
