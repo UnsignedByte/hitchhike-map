@@ -1,4 +1,6 @@
 # Reset schedules
+schedule clear scheduled/s-32767
+function scheduled/s-32767
 # Kill all existing NPCs.
 kill @e[type=minecraft:villager, tag=npc]
 

@@ -69,6 +69,21 @@ export async function init (
   // ensureDir expects an absolute path rather than a file:// URL
   await ensureDir(join(basePath, `./data/${namespace}/functions/`))
 
+  schedule(`execute as @e[tag=item_holder] run data modify entity @s Fire set value 2s`, 32767, functions); // keep all armor stands lit
+
+  let CONSTANTS = {
+    max: 2147483647,
+    min: -2147483648
+  }
+
+  let numericConstants: Set<number> = new Set();
+
+  for (let i = -1; i <= 1000; i++) numericConstants.add(i)
+  for (let i = 0; i <= 9; i++) numericConstants.add(Math.pow(10,i)) // add powers of 10 to 1 billion
+  for (let i = 0; i <= 30; i++) numericConstants.add(Math.pow(2,i)) // add powers of 2 to 2^30
+
+  CONSTANTS = Object.assign(CONSTANTS, Object.fromEntries([...numericConstants].map(x=>[x,x])))
+
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/reset.mcfunction`),
     lines(
@@ -88,20 +103,7 @@ export async function init (
       reset
     )
   )
-
-  let CONSTANTS = {
-    max: 2147483647,
-    min: -2147483648
-  }
-
-  let numericConstants: Set<number> = new Set();
-
-  for (let i = -1; i <= 1000; i++) numericConstants.add(i)
-  for (let i = 0; i <= 9; i++) numericConstants.add(Math.pow(10,i)) // add powers of 10 to 1 billion
-  for (let i = 0; i <= 30; i++) numericConstants.add(Math.pow(2,i)) // add powers of 2 to 2^30
-
-  CONSTANTS = Object.assign(CONSTANTS, Object.fromEntries([...numericConstants].map(x=>[x,x])))
-
+  
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/load.mcfunction`),
     lines(
