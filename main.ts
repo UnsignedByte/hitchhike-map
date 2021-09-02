@@ -69,7 +69,7 @@ export async function init (
   // ensureDir expects an absolute path rather than a file:// URL
   await ensureDir(join(basePath, `./data/${namespace}/functions/`))
 
-  schedule(`execute as @e[tag=item_holder] run data modify entity @s Fire set value 2s`, 32767, functions); // keep all armor stands lit
+  schedule(`execute as @e[tag=item_holder] run data modify entity @s Fire set value 2s`, 20, functions); // keep all armor stands lit
 
   let CONSTANTS = {
     max: 2147483647,
@@ -89,8 +89,8 @@ export async function init (
     lines(
       `# Reset schedules`,
       Array.from(scheduled_rates).map((x)=>([
-        `schedule clear scheduled/s-${x}`,
-        `function scheduled/s-${x}`
+        `schedule clear scheduled:scheduled/s-${x}`,
+        `function scheduled:scheduled/s-${x}`
       ])),
       '# Kill all existing NPCs.',
       'kill @e[type=minecraft:villager, tag=npc]',
@@ -103,7 +103,7 @@ export async function init (
       reset
     )
   )
-  
+
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/load.mcfunction`),
     lines(
