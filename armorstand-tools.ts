@@ -12,7 +12,6 @@ corner: southeastern corner
 item: item id
 count: number of items
 bounds: x and z width of area
-slope: rotations of the ground plane about the x, y, and z axes (good for items on stairs, etc)
  */
 
 
@@ -24,7 +23,6 @@ export function generate_pile (
 		bounds,
 		spawnrange,
 		duration,
-		slope = [0,0,0],
 		ground = [],
 		type,
 		small,
@@ -64,7 +62,7 @@ export function generate_pile (
 			return []
 	}
 
-	return simulate_pile(bounds, spawnrange, count, slope, ground, duration, s, walls).map(x=>{
+	return simulate_pile(bounds, spawnrange, count, ground, duration, s, walls).map(x=>{
 		x.quaternion = new CANNON.Quaternion().setFromEuler(x.rotation.x, x.rotation.y, x.rotation.z, 'ZYX');
 		x.rotation.scale(180/Math.PI, x.rotation);
 
@@ -91,12 +89,10 @@ export function generate_pile (
 	})
 }
 
-function simulate_pile(bounds: number[], spawnrange: number[], count: number, slope: number[], ground: number[][], duration: number, s: number, walls: boolean = true) {
+function simulate_pile(bounds: number[], spawnrange: number[], count: number, ground: number[][], duration: number, s: number, walls: boolean = true) {
 	let world = new CANNON.World({
     gravity: new CANNON.Vec3(0,-9.8,0)
 	});
-
-	slope[0] -= Math.PI / 2;
 
 	let groundMat = new CANNON.Material('ground');
 	let itemMat = new CANNON.Material('item');
@@ -139,7 +135,7 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, sl
 	[
 		{ // ground
 			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(slope[0], slope[1], slope[2], 'XYZ'),
+			quaternion: new CANNON.Quaternion().setFromEuler(-Math.PI / 2, 0, 0, 'XYZ'),
 			position: new CANNON.Vec3(0, 0, 0),
 			material: groundMat
 		},
@@ -182,16 +178,23 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, sl
 
 	let objects = [];
 
+	function randPos() {
+		let ret = new CANNON.Vec3(
+								Math.random()*(bounds[0]-spawnrange[2]-spawnrange[0]) + spawnrange[0],
+								0,
+								Math.random()*(bounds[1]-spawnrange[3]-spawnrange[1]) + spawnrange[1]
+							);
+		let gz = ground[Math.floor(ret.x*2)] || [];
+		ret.y = gz[Math.floor(ret.z*2)] || 0;
+		return ret;
+	}
+
 	for( let i = 0; i < count; i++ ){
 		objects[i] = new CANNON.Body({
 			mass: 1,
 			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/2, s/32)),
 			material: itemMat,
-			position: new CANNON.Vec3(
-				Math.random()*(bounds[0]-spawnrange[2]-spawnrange[0]) + spawnrange[0],
-				(i+0.5)*s/16+10,
-				Math.random()*(bounds[1]-spawnrange[3]-spawnrange[1]) + spawnrange[1]
-			),
+			position: randPos(),
 			quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
 			// position: new CANNON.Vec3(bounds[0], i+5,bounds[1]),
 			// quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i-Math.PI, 2*Math.PI/count*i-Math.PI, 2*Math.PI/count*i-Math.PI, 'YZX')
