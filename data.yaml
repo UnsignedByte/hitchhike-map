@@ -175,7 +175,7 @@ itemphysics:
     bounds: 3 2 # bounds of simulation
     small: true
     type: head
-    walls: false
+    walls: true
     ground:
       - 0 0 0 0 0 0
       - 0 0 0 0 0 0
