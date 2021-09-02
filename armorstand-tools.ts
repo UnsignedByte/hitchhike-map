@@ -215,7 +215,7 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, gr
 	// 	console.log(objects[i].position, objects[i].quaternion)
 	// }
 	// x.position.x <= bounds[0] && x.position.x >= 0 && x.position.z <= bounds[1] && x.position.z >= 0
-	return objects.filter(x=>(x.position.y < 0)).map(x=>{
+	return objects.filter(x=>(x.position.y >= 0)).map(x=>{
 		const t = new CANNON.Vec3();
 		x.quaternion.toEuler(t, 'YZX');
 		return {position:x.position, rotation: t, quaternion:x.quaternion};
