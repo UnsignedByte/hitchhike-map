@@ -24,7 +24,8 @@ export function generate_pile (
 		duration,
 		slope = [0,0,0],
 		type,
-		small
+		small,
+		walls
 	}: ItemPhysics
 	): string[] {
 	const cornerV = new CANNON.Vec3(...corner);
@@ -60,7 +61,7 @@ export function generate_pile (
 			return []
 	}
 
-	return simulate_pile(bounds, count, slope, duration, s).map(x=>{
+	return simulate_pile(bounds, count, slope, duration, s, walls).map(x=>{
 		x.quaternion = new CANNON.Quaternion().setFromEuler(x.rotation.x, x.rotation.y, x.rotation.z, 'ZYX');
 		x.rotation.scale(180/Math.PI, x.rotation);
 
@@ -80,12 +81,13 @@ export function generate_pile (
 			Invulnerable: true,
 			Invisible: true,
 			NoGravity: true,
+			Silent: true,
 			Small: small
 		})}`
 	})
 }
 
-function simulate_pile(bounds: number[], count: number, slope: number[], duration: number, s: number) {
+function simulate_pile(bounds: number[], count: number, slope: number[], duration: number, s: number, walls: boolean = true) {
 	let world = new CANNON.World({
     gravity: new CANNON.Vec3(0,-9.8,0)
 	});
@@ -118,30 +120,35 @@ function simulate_pile(bounds: number[], count: number, slope: number[], duratio
 			position: new CANNON.Vec3(0, 0, 0),
 			material: groundMat
 		},
-		{
-			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, 0, 0, 'XYZ'),
-			position: new CANNON.Vec3(0,0,0),
-			material: wallMat
-		},
-		{
-			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI, 0, 'XYZ'),
-			position: new CANNON.Vec3(0,0,bounds[1]),
-			material: wallMat
-		},
-		{
-			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI / 2, 0, 'XYZ'),
-			position: new CANNON.Vec3(0,0,0),
-			material: wallMat
-		},
-		{
-			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(0, - Math.PI / 2, 0, 'XYZ'),
-			position: new CANNON.Vec3(bounds[0],0,0),
-			material: wallMat
-		}
+		...(()=>(
+			walls ? 
+			[
+				{
+					mass: 0,
+					quaternion: new CANNON.Quaternion().setFromEuler(0, 0, 0, 'XYZ'),
+					position: new CANNON.Vec3(0,0,0),
+					material: wallMat
+				},
+				{
+					mass: 0,
+					quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI, 0, 'XYZ'),
+					position: new CANNON.Vec3(0,0,bounds[1]),
+					material: wallMat
+				},
+				{
+					mass: 0,
+					quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI / 2, 0, 'XYZ'),
+					position: new CANNON.Vec3(0,0,0),
+					material: wallMat
+				},
+				{
+					mass: 0,
+					quaternion: new CANNON.Quaternion().setFromEuler(0, - Math.PI / 2, 0, 'XYZ'),
+					position: new CANNON.Vec3(bounds[0],0,0),
+					material: wallMat
+				}
+			] : []
+			))()
 	].forEach(b=>world.addBody(
 		new CANNON.Body(
 			Object.assign(
@@ -178,88 +185,9 @@ function simulate_pile(bounds: number[], count: number, slope: number[], duratio
 	// for(let i = 0; i < count; i++) {
 	// 	console.log(objects[i].position, objects[i].quaternion)
 	// }
-	return objects.map(x=>{
+	return objects.filter(x=>(x.position.x <= bounds[0] && x.position.x >= 0 && x.position.z <= bounds[1] && x.position.z >= 0)).map(x=>{
 		const t = new CANNON.Vec3();
 		x.quaternion.toEuler(t, 'YZX');
-		return {position:x.position, rotation: t, quaternion:x.quaternion}
+		return {position:x.position, rotation: t, quaternion:x.quaternion};
 	})
-}
-
-function fromEuler(yaw: number, pitch: number, roll: number): CANNON.Quaternion {
-
-
-  // Abbreviations for the various angular functions
-  let cy = Math.cos(yaw * 0.5);
-  let sy = Math.sin(yaw * 0.5);
-  let cp = Math.cos(pitch * 0.5);
-  let sp = Math.sin(pitch * 0.5);
-  let cr = Math.cos(roll * 0.5);
-  let sr = Math.sin(roll * 0.5);
-
-  let q = new CANNON.Quaternion();
-  q.w = cr * cp * cy + sr * sp * sy;
-  q.x = sr * cp * cy - cr * sp * sy;
-  q.y = cr * sp * cy + sr * cp * sy;
-  q.z = cr * cp * sy - sr * sp * cy;
-
-  return q;
-	// let qx, qy, qz, qw
-
-  // qx = Math.sin(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) - Math.cos(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
-  // qy = Math.cos(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2)
-  // qz = Math.cos(roll/2) * Math.cos(pitch/2) * Math.sin(yaw/2) - Math.sin(roll/2) * Math.sin(pitch/2) * Math.cos(yaw/2)
-  // qw = Math.cos(roll/2) * Math.cos(pitch/2) * Math.cos(yaw/2) + Math.sin(roll/2) * Math.sin(pitch/2) * Math.sin(yaw/2)
-  // return new CANNON.Quaternion(qx, qy, qz, qw)
- // let q = new THREE.Quaternion().setFromEuler(new THREE.Euler(yaw, pitch, roll, 'XYZ'));
- // return new CANNON.Quaternion(q.x, q.y, q.z, q.w);
- // return new CANNON.Quaternion().setFromEuler(yaw, pitch, roll, 'XYZ');
-}
-
-function toEuler(q: CANNON.Quaternion): CANNON.Vec3 {
-  let roll
-  let pitch
-  let yaw
-  // const x = q.x
-  // const y = q.y
-  // const z = q.z
-  // const w = q.w
-
-  // let t0, t1, t2, t3, t4
-
-  // t0 = +2.0 * (w * x + y * z)
-  // t1 = +1.0 - 2.0 * (x * x + y * y)
-  // roll = Math.atan2(t0, t1)
-  // t2 = +2.0 * (w * y - z * x)
-  // t2 = t2 > +1.0 ? +1.0 : t2
-  // t2 = t2 < -1.0 ? -1.0 : t2
-  // pitch = Math.asin(t2)
-  // t3 = +2.0 * (w * z + x * y)
-  // t4 = +1.0 - 2.0 * (y * y + z * z)
-  // yaw = Math.atan2(t3, t4)
-
-  // roll (x-axis rotation)
-  let sinr_cosp = 2 * (q.w * q.x + q.y * q.z);
-  let cosr_cosp = 1 - 2 * (q.x * q.x + q.y * q.y);
-  roll = Math.atan2(sinr_cosp, cosr_cosp);
-
-  // pitch (y-axis rotation)
-  let sinp = 2 * (q.w * q.y - q.z * q.x);
-  if (Math.abs(sinp) >= 1){
-    pitch = Math.sign(sinp) * Math.PI / 2; // use 90 degrees if out of range
-  } else {
-    pitch = Math.asin(sinp);
-  }
-
-  // yaw (z-axis rotation)
-  let siny_cosp = 2 * (q.w * q.z + q.x * q.y);
-  let cosy_cosp = 1 - 2 * (q.y * q.y + q.z * q.z);
-  yaw = Math.atan2(siny_cosp, cosy_cosp);
-  
-  return new CANNON.Vec3(yaw, pitch, roll);
-  // let e = new THREE.Euler().setFromRotationMatrix(new THREE.Quaternion(q.x, q.y, q.z, q.w), 'XYZ');
-  // return new CANNON.Vec3(e.x, e.y, e.z)
-
-  // let v = new CANNON.Vec3();
-  // q.toEuler(v);
-  // return new CANNON.Vec3(v.y, v.z, v.x);
 }
