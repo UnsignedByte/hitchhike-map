@@ -175,16 +175,16 @@ itemphysics:
       - 3 3 3 3 3 3
       - 4 4 4 4 4 4
       - 5 5 5 5 5 5
-  # - duration: 20 # physics simulation duration in seconds
-  #   count: 100 # number of items
-  #   item: melon_slice
-  #   corner: 908 65 -153
-  #   bounds: 3 2 # bounds of simulation
-  #   small: true
-  #   type: head
-  #   walls: true
-  #   ground:
-  #     - 0 0 0 0 0 0
-  #     - 0 0 0 0 0 0
-  #     - 1 1 1 1 1 1
-  #     - 2 2 2 2 2 2
+  - duration: 30 # physics simulation duration in seconds
+    count: 100 # number of items
+    item: melon_slice
+    corner: 908 65 -153
+    bounds: 3 2 # bounds of simulation
+    small: true
+    type: head
+    walls: true
+    ground:
+      - 0 0 0 0 0 0
+      - 0 0 0 0 0 0
+      - 1 1 1 1 1 1
+      - 2 2 2 2 2 2
