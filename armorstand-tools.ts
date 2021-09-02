@@ -43,7 +43,7 @@ export function generate_pile (
 
 			if (small) {
 				s*=7/10;
-				offset.set(0, necklength*3/4 + s/2, -0.25-s/32);
+				offset.set(0, necklength*3/4 + s/2, -0.25*3/4-s/32);
 				foffset.set(0, (13/32+1)/2, 0);
 			}
 			break;
