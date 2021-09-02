@@ -217,9 +217,9 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, gr
 	for(let i = 0; i < tps*duration; i++) {
 		world.step(1/tps);
 		objects.forEach(x=>(x.position.y < 0 && world.removeBody(x)));
-		objects.filter(x=>(x.position.y >= 0));
+		objects = objects.filter(x=>(x.position.y >= 0));
 
-		if (i%(tps*duration/10) == 0) console.log(`Simulated Second ${i/tps}, ${objects.length} items remain.`)
+		if (i%(tps*duration/10) == 0) console.log(`Simulated Second ${i/tps} with ${objects.length} items and ${world.bodies.length} elements.`)
 	}
 	// for(let i = 0; i < count; i++) {
 	// 	console.log(objects[i].position, objects[i].quaternion)
