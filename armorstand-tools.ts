@@ -121,6 +121,9 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, gr
 
 	// console.log(ground);
 
+	groundBody.addShape(new CANNON.Box(new CANNON.Vec3(bounds[0]/2, 0.5, bounds[1]/2)),
+																		 new CANNON.Vec3(bounds[0]/2, -0.5, bounds[1]/2));
+
 	ground.map((x, i)=>{
 		x.map((z, j) => {
 			// console.log(j/2+0.25, ground[i][j]/4, i/2+0.25);
@@ -132,49 +135,41 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, gr
 
 	world.addBody(groundBody);
 
-	[
-		{ // ground
-			mass: 0,
-			quaternion: new CANNON.Quaternion().setFromEuler(-Math.PI / 2, 0, 0, 'XYZ'),
-			position: new CANNON.Vec3(0, 0, 0),
-			material: groundMat
-		},
-		...(
-			walls ? 
-			[
-				{
-					mass: 0,
-					quaternion: new CANNON.Quaternion().setFromEuler(0, 0, 0, 'XYZ'),
-					position: new CANNON.Vec3(0,0,0),
-					material: wallMat
-				},
-				{
-					mass: 0,
-					quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI, 0, 'XYZ'),
-					position: new CANNON.Vec3(0,0,bounds[1]),
-					material: wallMat
-				},
-				{
-					mass: 0,
-					quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI / 2, 0, 'XYZ'),
-					position: new CANNON.Vec3(0,0,0),
-					material: wallMat
-				},
-				{
-					mass: 0,
-					quaternion: new CANNON.Quaternion().setFromEuler(0, - Math.PI / 2, 0, 'XYZ'),
-					position: new CANNON.Vec3(bounds[0],0,0),
-					material: wallMat
-				}
-			] : [])
-	].forEach(b=>world.addBody(
-		new CANNON.Body(
-			Object.assign(
-				b, 
-				{shape: new CANNON.Plane(), type: CANNON.Body.STATIC}
+	if (walls) {
+		[
+			{
+				mass: 0,
+				quaternion: new CANNON.Quaternion().setFromEuler(0, 0, 0, 'XYZ'),
+				position: new CANNON.Vec3(0,0,0),
+				material: wallMat
+			},
+			{
+				mass: 0,
+				quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI, 0, 'XYZ'),
+				position: new CANNON.Vec3(0,0,bounds[1]),
+				material: wallMat
+			},
+			{
+				mass: 0,
+				quaternion: new CANNON.Quaternion().setFromEuler(0, Math.PI / 2, 0, 'XYZ'),
+				position: new CANNON.Vec3(0,0,0),
+				material: wallMat
+			},
+			{
+				mass: 0,
+				quaternion: new CANNON.Quaternion().setFromEuler(0, - Math.PI / 2, 0, 'XYZ'),
+				position: new CANNON.Vec3(bounds[0],0,0),
+				material: wallMat
+			}
+		].forEach(b=>world.addBody(
+			new CANNON.Body(
+				Object.assign(
+					b, 
+					{shape: new CANNON.Plane(), type: CANNON.Body.STATIC}
+				)
 			)
-		)
-	))
+		))
+	}
 
 	let objects = [];
 
