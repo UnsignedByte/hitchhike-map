@@ -184,9 +184,9 @@ itemphysics:
     type: head
     walls: false
     ground:
-      - 2 0 0 0 0 0 0 2
-      - 3 1 1 1 1 1 1 3
-      - 3 2 2 2 2 2 2 3
+      - 10 0 0 0 0 0 0 10
+      - 10 1 1 1 1 1 1 10
+      - 10 2 2 2 2 2 2 10
       - 10 10 10 10 10 10 10 10
     spawnrange: 0.5 0.5 0 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
   - duration: 30 # physics simulation duration in seconds
@@ -198,9 +198,9 @@ itemphysics:
     type: head
     walls: false
     ground:
-      - 2 0 0 0 0 0 0 2
-      - 3 1 1 1 1 1 1 3
-      - 3 2 2 2 2 2 2 3
+      - 10 0 0 0 0 0 0 10
+      - 10 1 1 1 1 1 1 10
+      - 10 2 2 2 2 2 2 10
       - 10 10 10 10 10 10 10 10
     spawnrange: 0.5 0.5 0 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
   - duration: 30 # physics simulation duration in seconds
@@ -212,8 +212,8 @@ itemphysics:
     type: head
     walls: false
     ground:
-      - 2 0 0 0 0 0 0 2
-      - 3 1 1 1 1 1 1 3
-      - 3 2 2 2 2 2 2 3
+      - 10 0 0 0 0 0 0 10
+      - 10 1 1 1 1 1 1 10
+      - 10 2 2 2 2 2 2 10
       - 10 10 10 10 10 10 10 10
     spawnrange: 0.5 0.5 0 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
