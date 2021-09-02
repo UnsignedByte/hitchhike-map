@@ -22,6 +22,7 @@ export function generate_pile (
 		item,
 		count,
 		bounds,
+		spawnrange,
 		duration,
 		slope = [0,0,0],
 		ground = [],
@@ -63,7 +64,7 @@ export function generate_pile (
 			return []
 	}
 
-	return simulate_pile(bounds, count, slope, ground, duration, s, walls).map(x=>{
+	return simulate_pile(bounds, spawnrange, count, slope, ground, duration, s, walls).map(x=>{
 		x.quaternion = new CANNON.Quaternion().setFromEuler(x.rotation.x, x.rotation.y, x.rotation.z, 'ZYX');
 		x.rotation.scale(180/Math.PI, x.rotation);
 
@@ -90,7 +91,7 @@ export function generate_pile (
 	})
 }
 
-function simulate_pile(bounds: number[], count: number, slope: number[], ground: number[][], duration: number, s: number, walls: boolean = true) {
+function simulate_pile(bounds: number[], spawnrange: number[], count: number, slope: number[], ground: number[][], duration: number, s: number, walls: boolean = true) {
 	let world = new CANNON.World({
     gravity: new CANNON.Vec3(0,-9.8,0)
 	});
@@ -186,7 +187,11 @@ function simulate_pile(bounds: number[], count: number, slope: number[], ground:
 			mass: 1,
 			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/2, s/32)),
 			material: itemMat,
-			position: new CANNON.Vec3(Math.random()*(bounds[0]-s)+s/2, (i+0.5)*s/16+10, Math.random()*(bounds[1]-s)+s/2),
+			position: new CANNON.Vec3(
+				Math.random()*(bounds[0]-spawnrange[2]-spawnrange[0]) + spawnrange[0],
+				(i+0.5)*s/16+10,
+				Math.random()*(bounds[1]-spawnrange[3]-spawnrange[1]) + spawnrange[1]
+			),
 			quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
 			// position: new CANNON.Vec3(bounds[0], i+5,bounds[1]),
 			// quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i-Math.PI, 2*Math.PI/count*i-Math.PI, 2*Math.PI/count*i-Math.PI, 'YZX')

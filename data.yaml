@@ -202,12 +202,14 @@ itemphysics:
   - duration: 30 # physics simulation duration in seconds
     count: 50 # number of items
     item: glow_berries
-    corner: 900 65 -152.5
-    bounds: 3 1.5 # bounds of simulation
+    corner: 899.5 65 -152.5
+    bounds: 4 2 # bounds of simulation
     small: true
     type: head
     walls: true
     ground:
-      - 0 0 0 0 0 0
-      - 1 1 1 1 1 1
-      - 2 2 2 2 2 2
+      - 2 0 0 0 0 0 0 2
+      - 3 1 1 1 1 1 1 3
+      - 3 2 2 2 2 2 2 3
+      - 10 10 10 10 10 10 10 10
+    spawnrange: 0.5 0.5 0 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
