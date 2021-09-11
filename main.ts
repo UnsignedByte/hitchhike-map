@@ -145,7 +145,7 @@ export async function init (
           data = cache.itemphysics[k];
         } else {
           data = generate_pile(v);
-          cache.itemphysics = data;
+          cache.itemphysics[k] = data;
         }
         return ['', ...data];
       }),
