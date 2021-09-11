@@ -93,6 +93,38 @@ npc:
           - I told you it was good!
           - Anyways, see you later! I've gotta go get some for myself.
           cond: 2
+    sean:
+      name: Sean
+      colour: 0x4FA1A7
+      position: 950.5 70.0 -0.25
+      rotation: 0 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWE2MjRmNTk2NmJlZGQ2ZTY3ZjY1NGI1OWU5MjQ5YjJlY2YzMDdkOTAzMzM5YmMxOTk5MjM5NzdmNGM4YyJ9fX0=
+      villager:
+        type: snow
+        profession: librarian
+      dialogue:
+        - messages:
+          - Didn't care to knock, did you?
+          - Anyways, to what do I owe the pleasure?
+          - Hmm, the internet is down...
+          - That might be correlated with the sudden loss of electricity in my house.
+          - I would recommend you turn it off and on again... your internet, I mean. Not my electricity.
+          - Farewell!
+          end: 1
+        - messages:
+            - Hello again. How'd the internet fixing go? Not great, I presume.
+            - Unfortunately I am unable to fix the power grid through my computer.
+            - message:
+              - text: "If you "
+              - text: require
+                italic: true
+              - text: " internet so desperately, maybe you could find somewhere unaffected by the power outage?"
+            - message: 
+              - text: "I "
+              - text: have
+                italic: true
+              - text: " heard there was a cell tower up on the mountain with its own generator, though that may well be an urban myth."
+          cond: 1
 
 quest:
   bread:
