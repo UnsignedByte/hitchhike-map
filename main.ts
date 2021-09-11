@@ -41,6 +41,9 @@ export async function init (
   { namespace = 'minecraft', description = 'Mysterious datapack' } = {}
 ): Promise<void> {
   await emptyDir(join(basePath, `./data/${namespace}/`))
+  const cache = Object.assign({
+    itemphysics: {}
+  }, JSON.parse(await Deno.readTextFile('./cache.json')));
   const data = parse(await Deno.readTextFile(yamlPath))
   const reset: Lines = []
   const onLoad: Lines = []
@@ -136,7 +139,16 @@ export async function init (
       ``,
       `# KILL EXISTING ITEM HOLDERS`,
       `kill @e[tag=item_holder]`,
-      Object.entries(data.itemphysics).map(([k, v])=>['', ...generate_pile(x)]),
+      Object.entries(data.itemphysics).map(([k, v])=>{
+        let data: Lines;
+        if (k in cache.itemphysics) {
+          data = cache.itemphysics[k];
+        } else {
+          data = generate_pile(v);
+          cache.itemphysics = data;
+        }
+        return ['', ...data];
+      }),
       onLoad
     )
   )
@@ -301,6 +313,8 @@ export async function init (
       }
     )
   )
+
+  await Deno.writeTextFile('./cache.json', JSON.stringify(cache))
 }
 
 if (import.meta.main) {

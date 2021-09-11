@@ -1,1 +1,1 @@
-deno run --allow-write=./data/generated --allow-read=./ --unstable main.ts ./data.yaml ./
+deno run --allow-write=./data/generated,./cache.json --allow-read=./ --unstable main.ts ./data.yaml ./
