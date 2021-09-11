@@ -136,7 +136,7 @@ export async function init (
       ``,
       `# KILL EXISTING ITEM HOLDERS`,
       `kill @e[tag=item_holder]`,
-      data.itemphysics.map(x=>['', ...generate_pile(x)]),
+      Object.entries(data.itemphysics).map(([k, v])=>['', ...generate_pile(x)]),
       onLoad
     )
   )

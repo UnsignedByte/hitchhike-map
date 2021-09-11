@@ -224,7 +224,7 @@ const fullSchema = z
       npcs:z.record(npcSchema)
     }),
     quest: z.record(questSchema),
-    itemphysics: z.array(itemphysicsSchema)
+    itemphysics: z.record(itemphysicsSchema)
   })
 
 export function parse (yaml: string): z.infer<typeof fullSchema> {

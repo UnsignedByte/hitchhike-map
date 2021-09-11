@@ -88,6 +88,10 @@ execute store success score dialogue-begun dialogue-status if entity @a[tag=vict
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] as @e[tag=npc-sean, limit=1] if score @s dialogue-status matches 2 run schedule function generated:npc/sean/2-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
 tag @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-sean
 
 # While in a conversation, make eye contact with the player.
