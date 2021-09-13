@@ -31,19 +31,29 @@ const colourNameSchema = [
 ] as const
 const colourNames = colourNameSchema.map(schema => schema.value)
 
-const cmdSchema = z.object({ // allows custom commands
-  command: z.array(z.string()).default([]),
-  quest: z.array(z.string()).default([]),
-  function: z.array(z.string()).default([]),
-  score: z.array(z.string()).default([])
-}).transform(x=>(
-  {command:[
-    ...x.score.map(s=>`scoreboard players set ${s}`),
-    ...x.quest.map(q=>`function generated:quests/${q}-start`),
-    ...x.function.map(f=>`function ${f}`),
-    ...x.command
-  ]}
-)).default({command:[]})
+const cmdSchema = z.array(z.union([
+  z.object({ // allows custom commands
+    type: z.union([
+      z.literal("command"),
+      z.literal("quest"),
+      z.literal("function"),
+      z.literal("score"),
+    ]).default("command"),
+    value: z.string()
+  }).transform(x=>{
+    switch (x.type) {
+      case "score":
+        return `scoreboard players set ${x.value}`;
+      case "quest":
+        return `function generated:quests/${x.value}-start`;
+      case "function":
+        return `function ${x.value}`;
+      case "command":
+        return x.value;
+    }
+  }),
+  z.string()
+])).default([])
 
 const colourSchema = 
   z.union([
@@ -73,14 +83,15 @@ const msgSchema = z
       z.string().transform(msg=>[{text: msg}]),
       rawJSONTextSchema.transform(json=>[json]),
       z.array(rawJSONTextSchema)
-    ])
-  }).and(cmdSchema)
+    ]),
+    command:cmdSchema
+  })
 
 const dialogueSchema = z
   .object({
     type: z.literal('simple').optional(), // default to simple
     end: z.union([
-      z.number().transform(x=>({command: [`scoreboard players set \${select.self} dialogue-status ${x}`]})),
+      z.number().transform(x=>([{command: [`scoreboard players set \${select.self} dialogue-status ${x}`]}])),
       cmdSchema
     ]),
     cond: z.number().default(0), // scoreboard condition under which to run

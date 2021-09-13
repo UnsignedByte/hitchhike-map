@@ -79,8 +79,9 @@ npc:
                 color: light_purple
                 italic: true
               - text: '!'
-            quest:
-              - bread
+            command:
+              - type: quest
+                value: bread
             global: true
           end: 1
         - messages:
@@ -144,8 +145,8 @@ quest:
       stat: minecraft.used:minecraft.bread
       count: 5
     end:
-      score:
-        - ${npc.wheatish} dialogue-status 2
+      - type: score
+        value: ${npc.wheatish} dialogue-status 2
   diet:
     name: Balanced Diet
     description: Eat ${condition.value[1].count} pieces of meat (cooked, of course) and ${condition.value[0].count} vegetables

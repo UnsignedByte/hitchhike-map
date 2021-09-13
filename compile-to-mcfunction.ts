@@ -66,7 +66,7 @@ export function createNpc (
 
   const START_DIST = 4
   const LEAVE_DIST = 10
-  const HEAR_DIST = 25
+  const HEAR_DIST = 50
 
   const select = {
     self: `@e[tag=${npcTag}, limit=1]`,
@@ -175,7 +175,7 @@ export function createNpc (
           `tag @a[tag=${playerTag}] remove spoken-to`,
           `tag @a[tag=${playerTag}] remove ${playerTag}`,
           `execute as ${select.self} at @s run tp @s ~ ~ ~ ${rx} ${ry}`,
-          dialogue.end.command.map(x=>eval(`\`${x}\``)),
+          dialogue.end.map(x=>eval(`\`${x}\``)),
           `tag ${select.self} remove speaking`
         ]
         return [
@@ -278,7 +278,7 @@ export function createQuest (
     })}`,
     `scoreboard players set @a quest-book-upd -1`,
     `scoreboard players set ${id} quest-status -1`,
-    end.command.map(x=>eval(`\`${x}\``)),
+    end.map(x=>eval(`\`${x}\``)),
     `scoreboard objectives remove ${getQ()}`
   ]
 
