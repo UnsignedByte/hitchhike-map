@@ -91,7 +91,7 @@ const dialogueSchema = z
   .object({
     type: z.literal('simple').optional(), // default to simple
     end: z.union([
-      z.number().transform(x=>([{command: [`scoreboard players set \${select.self} dialogue-status ${x}`]}])),
+      z.number().transform(x=>([`scoreboard players set \${select.self} dialogue-status ${x}`])),
       cmdSchema
     ]),
     cond: z.number().default(0), // scoreboard condition under which to run
