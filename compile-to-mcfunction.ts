@@ -1,5 +1,6 @@
-import { Lines , schedule } from './main.ts'
+import { Lines , schedule, hash } from './main.ts'
 import { Npc, Quest, QuestCondition } from './parse-yaml.ts'
+import { CONSTS } from './consts.ts'
 
 let npc: Record<string, string> = {} // dictionary for npc selectors
 
@@ -385,4 +386,59 @@ export function createQuest (
     onTick,
     functions
   }
+}
+
+function detect_item(functions: Record<string, Lines[]>, it: NbtData, whitelist: number[] = [], blacklist: number[] = []): Lines {
+  let name = hash(JSON.stringify(it));
+  const allslots = Object.values(CONSTS.slots);
+  if (whitelist.length === 0) {
+    whitelist = allslots;
+  } else {
+    whitelist = whitelist.map(x=>(x in CONSTS.slots) ? CONSTS.slots[x] : x);
+  }
+
+  blacklist = blacklist.map(x=>(x in CONSTS.slots) ? CONSTS.slots[x] : x);
+
+  whitelist = whitelist.filter(x=>!blacklist.includes(x));
+
+  const fname = `item/detect-${name}`;
+
+  if (!(fname in functions)) {
+    functions[`${fname}-specific`] = [
+    ];
+    functions[`${fname}`] = [
+      `scoreboard players set @a idetect 0`,
+      `execute as @a[nbt={Inventory:[${toSnbt(it)}]} run scoreboard players set @s idetect 1`
+    ]
+
+
+    const bl = 31; // bitlength
+    for (let i = 0; i < allslots.length; i++) {
+      let r = i % bl;
+      let q = Math.floor(i / bl);
+
+      if (r == 0) {
+        functions[`${fname}-specific`].push([
+          `scoreboard players set @a i${q}detect 0`
+        ])
+      }
+
+      functions[`${fname}-specific`].push(`execute as @a[nbt={Inventory:[${toSnbt(Object.assign(
+        it,
+        {
+          Slot: `${allslots[i]}b`
+        }
+      ))}] run scoreboard players add @s i${q}detect ${1 << r}`);
+    }
+  }
+
+  let cmds: Lines[] = [];
+
+  if (whitelist.length === allslots.length) {
+    return [
+      ``
+    ]
+  }
+
+  return []
 }

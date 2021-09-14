@@ -5,6 +5,7 @@ import { createNpc, createQuest, toSnbt, rawJson, toGive } from './compile-to-mc
 import { parse } from './parse-yaml.ts'
 import { item } from './item.ts'
 import { generate_pile } from './armorstand-tools.ts'
+import { CONSTS } from './consts.ts'
 
 // \s(?:Paper|Spigot|Bukkit)\..+?:\s(?:\[.+?\]|.+?),
 
@@ -33,6 +34,17 @@ export function schedule(command: Lines, rate: number, functions: Record<string,
     command,
     functions[`scheduled/s-${rate}`]
   ]
+}
+
+// https://stackoverflow.com/questions/194846/is-there-any-kind-of-hash-code-function-in-javascript
+export function hash(t: string){
+    var hash = 0;
+    for (var i = 0; i < t.length; i++) {
+        var character = t.charCodeAt(i);
+        hash = ((hash<<5)-hash)+character;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
 }
 
 export async function init (
@@ -149,6 +161,15 @@ export async function init (
         }
         return ['', ...data];
       }),
+      '',
+      `# SET UP ITEM DETECTION`,
+      `scoreboard objectives add idetect dummy`,
+      [...Array(Math.ceil(Object.keys(CONSTS.slots).length / 31)).keys()].map(x=>
+        `scoreboard objectives add i${x}detect dummy`
+      ),
+      '',
+      `# SET UP BITWISE OPERATORS`,
+      `scoreboard objectives add bitwise dummy`,
       onLoad
     )
   )
@@ -215,6 +236,7 @@ export async function init (
     ];
   })()
 
+  // change generating functions
   let ientries = Object.entries(item.money);
 
   functions[`change/count`] = [ // count the amount of cash at a position
@@ -292,6 +314,19 @@ export async function init (
     `scoreboard players operation @s change-count-tmp *= val change-count-tmp`,
     `scoreboard players operation count change += @s change-count-tmp`
   ]
+
+  // bitwise operators
+  functions[`bitwise/and`] = [
+    'scoreboard players operation _l bitwise = l bitwise',
+    'scoreboard players operation _r bitwise = r bitwise',
+    'scoreboard players set result bitwise 0',
+    [...Array(31).keys()].map(x=>1 << (30-x)).map(x=>[
+      `execute if score _l bitwise matches ${x}.. if score _r bitwise matches ${x}.. const run scoreboard players add result bitwise ${x}`,
+      `execute if score _l bitwise matches ${x}.. const run scoreboard players remove _l bitwise ${x}`,
+      `execute if score _r bitwise matches ${x}.. const run scoreboard players remove _r bitwise ${x}`
+    ])
+  ]
+
 
   for (const [name, contents] of Object.entries(functions)) {
     await ensureDir(join(basePath, `./data/${namespace}/functions/`, dirname(name)))

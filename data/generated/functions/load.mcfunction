@@ -1255,6 +1255,14 @@ summon armor_stand 901.30590085 65.51171880 -150.91450376 {Pose: {Head: [-86.352
 summon armor_stand 902.71757224 65.58260927 -150.93900586 {Pose: {Head: [-88.20411792597719f, -0.894440615791196f, -1.5392157445684105f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"glow_berries", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
 summon armor_stand 901.52772289 64.10787474 -152.86027291 {Pose: {Head: [89.76496354409149f, 27.477116509962993f, -0.20437827968514877f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"glow_berries", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
 
+# SET UP ITEM DETECTION
+scoreboard objectives add idetect dummy
+scoreboard objectives add i0detect dummy
+scoreboard objectives add i1detect dummy
+
+# SET UP BITWISE OPERATORS
+scoreboard objectives add bitwise dummy
+
 tag @a remove victim-of-dialogue-by-billy
 
 tag @a remove victim-of-dialogue-by-sam
