@@ -321,9 +321,9 @@ export async function init (
     'scoreboard players operation _r bitwise = r bitwise',
     'scoreboard players set result bitwise 0',
     [...Array(31).keys()].map(x=>1 << (30-x)).map(x=>[
-      `execute if score _l bitwise matches ${x}.. if score _r bitwise matches ${x}.. const run scoreboard players add result bitwise ${x}`,
-      `execute if score _l bitwise matches ${x}.. const run scoreboard players remove _l bitwise ${x}`,
-      `execute if score _r bitwise matches ${x}.. const run scoreboard players remove _r bitwise ${x}`
+      `execute if score _l bitwise matches ${x}.. if score _r bitwise matches ${x}.. run scoreboard players add result bitwise ${x}`,
+      `execute if score _l bitwise matches ${x}.. run scoreboard players remove _l bitwise ${x}`,
+      `execute if score _r bitwise matches ${x}.. run scoreboard players remove _r bitwise ${x}`
     ])
   ]
 
