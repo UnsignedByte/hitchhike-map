@@ -453,7 +453,7 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
 
         console.log(p);
         return p;
-      }, Array(Math.ceil(allslots.length / 31))).map((x, i)=>
+      }, new Array(Math.ceil(allslots.length / 31)).fill(0)).map((x, i)=>
         `scoreboard players set _ i${i}detect ${x}`
       ), 
       `execute as @a run function generated:${compiler}`
