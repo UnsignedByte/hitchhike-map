@@ -452,8 +452,8 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
         p[Math.floor(i / 31)] += 1 << (i % 31);
 
         return p;
-      }, Array(Math.ceil(allslots.length / 31))).map((i, x)=>
-        `scoreboard players set _ i${i}detect ${x}`
+      }, Array(Math.ceil(allslots.length / 31))).map((x, i)=>
+        `scoreboard players set _ i${i}detect ${x[i]}`
       ), 
       `execute as @a run function generated:${compiler}`
     ];
