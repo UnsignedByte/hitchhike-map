@@ -388,7 +388,7 @@ export function createQuest (
   }
 }
 
-function detect_item(functions: Record<string, Lines[]>, it: NbtData, whitelist: number[] = [], blacklist: number[] = []): Lines {
+export function detectItem(functions: Record<string, Lines>, it: NbtData, whitelist: number[] = [], blacklist: number[] = []): Lines {
   let name = hash(JSON.stringify(it));
   const allslots = Object.values(CONSTS.slots);
   if (whitelist.length === 0) {
@@ -402,28 +402,26 @@ function detect_item(functions: Record<string, Lines[]>, it: NbtData, whitelist:
   whitelist = whitelist.filter(x=>!blacklist.includes(x));
 
   const fname = `item/detect-${name}`;
+  const compiler = `item/compile/c-${name}`;
 
   if (!(fname in functions)) {
-    functions[`${fname}-specific`] = [
-    ];
+    functions[`${fname}-specific`] = [];
     functions[`${fname}`] = [
       `scoreboard players set @a idetect 0`,
       `execute as @a[nbt={Inventory:[${toSnbt(it)}]} run scoreboard players set @s idetect 1`
     ]
 
-
-    const bl = 31; // bitlength
     for (let i = 0; i < allslots.length; i++) {
-      let r = i % bl;
-      let q = Math.floor(i / bl);
+      let r = i % 31;
+      let q = Math.floor(i / 31);
 
       if (r == 0) {
-        functions[`${fname}-specific`].push([
+        (functions[`${fname}-specific`] as Lines[]).push([
           `scoreboard players set @a i${q}detect 0`
         ])
       }
 
-      functions[`${fname}-specific`].push(`execute as @a[nbt={Inventory:[${toSnbt(Object.assign(
+      (functions[`${fname}-specific`] as Lines[]).push(`execute as @a[nbt={Inventory:[${toSnbt(Object.assign(
         it,
         {
           Slot: `${allslots[i]}b`
@@ -432,13 +430,32 @@ function detect_item(functions: Record<string, Lines[]>, it: NbtData, whitelist:
     }
   }
 
-  let cmds: Lines[] = [];
+  functions[compiler] = [
+    ... `scoreboard players set @s idetect 0`,
+    [...Array(Math.ceil(allslots.length / 31)).keys()].map(x=>[
+      `scoreboard players operation l bitwise = _ i${x}detect`,
+      `scoreboard players operation r bitwise = @s i${x}detect`,
+      `function generated:bitwise/and`,
+      `execute if score result bitwise matches 1.. run scoreboard players set @s idetect 1`
+    ])
+  ]
 
   if (whitelist.length === allslots.length) {
     return [
-      ``
-    ]
-  }
+      `function generated:${fname}`
+    ];
+  } else {
+    return [
+      `function generated:${fname}-specific`,
+      whitelist.reduce((p, c) => {
+        let i = allslots.indexOf(c);
+        p[Math.floor(i / 31)] += 1 << (i % 31);
 
-  return []
+        return p;
+      }, Array(Math.ceil(allslots.length / 31))).map((i, x)=>
+        `scoreboard players set _ i${i}detect ${x}`
+      ), 
+      `execute as @a run function generated:${compiler}`
+    ];
+  }
 }

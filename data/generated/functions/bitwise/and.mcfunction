@@ -92,5 +92,3 @@ execute if score _l bitwise matches 2.. if score _r bitwise matches 2.. run scor
 execute if score _l bitwise matches 2.. run scoreboard players remove _l bitwise 2
 execute if score _r bitwise matches 2.. run scoreboard players remove _r bitwise 2
 execute if score _l bitwise matches 1.. if score _r bitwise matches 1.. run scoreboard players add result bitwise 1
-execute if score _l bitwise matches 1.. run scoreboard players remove _l bitwise 1
-execute if score _r bitwise matches 1.. run scoreboard players remove _r bitwise 1

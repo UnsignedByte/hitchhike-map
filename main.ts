@@ -1,7 +1,7 @@
 import { ensureDir, emptyDir } from 'https://deno.land/std@0.102.0/fs/mod.ts'
 import { join, dirname } from 'https://deno.land/std@0.102.0/path/mod.ts'
 import { parse as parseArgs } from 'https://deno.land/std@0.104.0/flags/mod.ts'
-import { createNpc, createQuest, toSnbt, rawJson, toGive } from './compile-to-mcfunction.ts'
+import { createNpc, createQuest, detectItem, toSnbt, rawJson, toGive } from './compile-to-mcfunction.ts'
 import { parse } from './parse-yaml.ts'
 import { item } from './item.ts'
 import { generate_pile } from './armorstand-tools.ts'
@@ -322,11 +322,14 @@ export async function init (
     'scoreboard players set result bitwise 0',
     [...Array(31).keys()].map(x=>1 << (30-x)).map(x=>[
       `execute if score _l bitwise matches ${x}.. if score _r bitwise matches ${x}.. run scoreboard players add result bitwise ${x}`,
-      `execute if score _l bitwise matches ${x}.. run scoreboard players remove _l bitwise ${x}`,
-      `execute if score _r bitwise matches ${x}.. run scoreboard players remove _r bitwise ${x}`
+      x === 1 ? [] : [
+        `execute if score _l bitwise matches ${x}.. run scoreboard players remove _l bitwise ${x}`,
+        `execute if score _r bitwise matches ${x}.. run scoreboard players remove _r bitwise ${x}`
+      ]
     ])
   ]
 
+  functions['test/itemdetect'] = detectItem(functions, item.money[1]);
 
   for (const [name, contents] of Object.entries(functions)) {
     await ensureDir(join(basePath, `./data/${namespace}/functions/`, dirname(name)))
