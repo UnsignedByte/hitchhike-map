@@ -422,7 +422,7 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
       }
 
       (functions[`${fname}-specific`] as Lines[]).push(`execute as @a[nbt={Inventory:[${toSnbt(Object.assign(
-        it,
+        Object.assign({}, it),
         {
           Slot: `${allslots[i]}b`
         }

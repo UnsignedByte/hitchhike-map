@@ -329,9 +329,7 @@ export async function init (
     ])
   ]
 
-  console.log(item.money[1]);
   functions['test/itemdetect'] = detectItem(functions, item.money[1]);
-  console.log(item.money[1]);
   functions['test/itemdetectspec'] = detectItem(functions, item.money[1], [0, 1, 2, 3, 4, 5, 6, 7, 8]);
 
   for (const [name, contents] of Object.entries(functions)) {
