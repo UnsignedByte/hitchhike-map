@@ -330,6 +330,7 @@ export async function init (
   ]
 
   functions['test/itemdetect'] = detectItem(functions, item.money[1]);
+  functions['test/itemdetectspec'] = detectItem(functions, item.money[1], ["hotbar.0"]);
 
   for (const [name, contents] of Object.entries(functions)) {
     await ensureDir(join(basePath, `./data/${namespace}/functions/`, dirname(name)))

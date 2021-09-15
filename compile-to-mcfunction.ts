@@ -388,7 +388,7 @@ export function createQuest (
   }
 }
 
-export function detectItem(functions: Record<string, Lines>, it: NbtData, whitelist: number[] = [], blacklist: number[] = []): Lines {
+export function detectItem(functions: Record<string, Lines>, it: NbtData, whitelist: (number | string)[] = [], blacklist: (number | string)[] = []): Lines {
   let name = hash(JSON.stringify(it));
   const allslots = Object.values(CONSTS.slots);
   if (whitelist.length === 0) {
@@ -448,7 +448,7 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
     return [
       `function generated:${fname}-specific`,
       whitelist.reduce((p, c) => {
-        let i = allslots.indexOf(c);
+        let i = allslots.indexOf(<number>c);
         p[Math.floor(i / 31)] += 1 << (i % 31);
 
         return p;
