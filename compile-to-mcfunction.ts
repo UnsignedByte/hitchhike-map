@@ -451,7 +451,6 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
         let i = allslots.indexOf(<number>c);
         p[Math.floor(i / 31)] += 1 << (i % 31);
 
-        console.log(p);
         return p;
       }, new Array(Math.ceil(allslots.length / 31)).fill(0)).map((x, i)=>
         `scoreboard players set _ i${i}detect ${x}`
