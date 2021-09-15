@@ -408,7 +408,7 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
     functions[`${fname}-specific`] = [];
     functions[`${fname}`] = [
       `scoreboard players set @a idetect 0`,
-      `execute as @a[nbt={Inventory:[${toSnbt(it)}]} run scoreboard players set @s idetect 1`
+      `execute as @a[nbt={Inventory:[${toSnbt(it)}]}] run scoreboard players set @s idetect 1`
     ]
 
     for (let i = 0; i < allslots.length; i++) {
@@ -426,7 +426,7 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
         {
           Slot: `${allslots[i]}b`
         }
-      ))}] run scoreboard players add @s i${q}detect ${1 << r}`);
+      ))}]}] run scoreboard players add @s i${q}detect ${1 << r}`);
     }
   }
 
