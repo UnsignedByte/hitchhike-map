@@ -431,7 +431,7 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
   }
 
   functions[compiler] = [
-    ... `scoreboard players set @s idetect 0`,
+    `scoreboard players set @s idetect 0`,
     [...Array(Math.ceil(allslots.length / 31)).keys()].map(x=>[
       `scoreboard players operation l bitwise = _ i${x}detect`,
       `scoreboard players operation r bitwise = @s i${x}detect`,
