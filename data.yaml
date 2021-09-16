@@ -135,7 +135,7 @@ npc:
           cond: 2
           end: -1
     apple_sale:
-      name: Glow Berry ($2)
+      name: "Glow Berry (${toCost(item.store.unsold.berry.tag.cost)})"
       invisible: true
       colour: 0xfad352
       position: 901.5 64 -152.5
@@ -146,7 +146,7 @@ npc:
             command:
               - "give ${select.player} ${toGive(item.store.unsold.berry)}"
     berry_sale:
-      name: Apple ($2)
+      name: "Apple (${toCost(item.store.unsold.apple.tag.cost)})"
       invisible: true
       colour: 0xFF0000
       position: 905.5 64 -152.5
@@ -157,7 +157,7 @@ npc:
             command:
               - "give ${select.player} ${toGive(item.store.unsold.apple)}"
     melon_sale:
-      name: Melon ($2)
+      name: "Watermelon (${toCost(item.store.unsold.melon.tag.cost)})"
       invisible: true
       colour: 0xFF5733
       position: 909.5 64 -152.5
@@ -167,6 +167,8 @@ npc:
             silent: true
             command:
               - "give ${select.player} ${toGive(item.store.unsold.melon)}"
+    # henry:
+      # 891.5 63.5 -154.0
 
 quest:
   bread:

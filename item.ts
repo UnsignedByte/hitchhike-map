@@ -1,4 +1,4 @@
-import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
+import { toSnbt, rawJson, toCost } from './compile-to-mcfunction.ts'
 
 export const item = {
   quest_book: {
@@ -131,13 +131,16 @@ export const item = {
   store: (() => {
     const items = {
       apple: {
-        id: '"minecraft:apple"'
+        id: '"minecraft:apple"',
+        cost: 200
       },
       melon: {
-        id: '"minecraft:melon_slice"'
+        id: '"minecraft:melon_slice"',
+        cost: 200
       },
       berry: {
-        id: '"minecraft:glow_berries"'
+        id: '"minecraft:glow_berries"',
+        cost: 200
       }
     }
 
@@ -148,7 +151,7 @@ export const item = {
 
     for (let [k, v] of Object.entries(items)) {
       store.unsold[k] = Object.assign(v, {tag:{display:{Lore:`[${rawJson({
-        text: "Unsold",
+        text: `Unsold (${toCost(v.cost)})`,
         italic: true,
         color: "dark_gray"
       })}]`}}});

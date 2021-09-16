@@ -35,6 +35,10 @@ export function toSnbt (nbt: NbtData): string {
   return values.length ? `{${values.join(', ')}}` : '{}'
 }
 
+export function toCost(v: number) { // value to $ string
+  return v >= 100 ? `${(v/100).toFixed(2)}B` : `${v}b`
+}
+
 export function rawJson (json: unknown): string {
   return `'${JSON.stringify(json).replace(/['\\]/g, match =>
     match === "'" ? "\\'" : '\\\\'
