@@ -156,11 +156,18 @@ export const item = {
     }
 
     for (let [k, v] of Object.entries(items)) {
-      store.unsold[k] = Object.assign({}, v, {tag:{display:{Lore:`[${rawJson({
+      v = <any> v;
+      store.unsold[k] = v;
+      if (!('tag' in v)) {
+        Object.assign(store.unsold[k], {tag:{display:{Lore:`[]`}}});
+      } else if (!('display' in v.tag)) {
+        Object.assign(store.unsold[k].tag, {display:{Lore:`[]`}});
+      }
+      store.unsold[k].tag.display.Lore = `[${rawJson({
         text: `Unsold (${toCost(v.tag.cost)})`,
         italic: true,
         color: "dark_gray"
-      })}]`}}});
+      })}]`
       store.sold[k] = v;
     }
 
@@ -168,4 +175,4 @@ export const item = {
   })()
 }
 
-console.log(item.store.unsold.berry.tag);
+console.log(item.store.unsold.apple.tag);
