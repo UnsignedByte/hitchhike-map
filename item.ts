@@ -150,7 +150,7 @@ export const item = {
       store.unsold[k] = Object.assign(v, {tag:{display:{Lore:`[${rawJson({
         text: "Unsold",
         italic: true,
-        color: "gray"
+        color: "dark_gray"
       })}]`}}});
       store.sold[k] = v;
     }
