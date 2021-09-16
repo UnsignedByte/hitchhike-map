@@ -124,7 +124,7 @@ export function createNpc (
             ? rawJson({ text: name, color: colour, bold: true })
             : null,
           CustomNameVisible:!!name,
-          Small:true,
+          Marker:true,
           Invulnerable:true,
           Invisible:true,
           DisabledSlots:4144959,
