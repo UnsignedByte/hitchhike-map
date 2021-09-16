@@ -110,7 +110,7 @@ const npcSchema = z
     rotation: nplet(2),
     head: z.string(),
     baby: z.boolean().default(false),
-    invisible: z.boolean().default(true), //used for placeholder npcs used to detect right clicks
+    invisible: z.boolean().default(false), //used for placeholder npcs used to detect right clicks
     villager: z.object({
       type: z.union([
         z.literal('desert'),
