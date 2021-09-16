@@ -160,6 +160,7 @@ export const item = {
       store.unsold[k] = v;
       if (!('tag' in v)) {
         Object.assign(store.unsold[k], {tag:{display:{Lore:`[]`}}});
+        Object.assign(v, {tag:{}});
       } else if (!('display' in v.tag)) {
         Object.assign(store.unsold[k].tag, {display:{Lore:`[]`}});
       }
