@@ -95,7 +95,6 @@ export function createNpc (
         Invulnerable: true,
         NoAI:true,
         NoGravity:true,
-        CustomNameVisible: !!name,
         // `npc` tag is unused but might be nice to kill all NPCs
         Tags: `["npc", "${npcTag}"${baby ? ', "baby"' : ''}${invisible ? ', "invisible"' : ''}]`,
         ArmorItems: head
@@ -124,8 +123,8 @@ export function createNpc (
           CustomName: name
             ? rawJson({ text: name, color: colour, bold: true })
             : null,
-          CustomNameVisible:true,
-          Marker:true,
+          CustomNameVisible:!!name,
+          Small:true,
           Invulnerable:true,
           Invisible:true,
           DisabledSlots:4144959
