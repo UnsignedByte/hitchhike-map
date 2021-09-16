@@ -168,7 +168,9 @@ export const item = {
         italic: true,
         color: "dark_gray"
       })}]`
+      store.unsold[k].tag.sold = false;
       store.sold[k] = v;
+      store.sold[k].tag.sold = true;
     }
 
     return store;
