@@ -167,3 +167,5 @@ export const item = {
     return store;
   })()
 }
+
+console.log(item.store.unsold.berry.tag);
