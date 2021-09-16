@@ -98,9 +98,6 @@ export function createNpc (
         CustomNameVisible: !!name,
         // `npc` tag is unused but might be nice to kill all NPCs
         Tags: `["npc", "${npcTag}"${baby ? ', "baby"' : ''}${invisible ? ', "invisible"' : ''}]`,
-        CustomName: name
-          ? rawJson({ text: name, color: colour, bold: true })
-          : null,
         ArmorItems: head
           ? `[{}, {}, {}, ${toSnbt({
               id: '"minecraft:player_head"',
@@ -123,12 +120,14 @@ export function createNpc (
           level: level
         },
         Passengers:`[${toSnbt({
-          id:'area_effect_cloud',
+          id:'armor_stand',
           CustomName: name
             ? rawJson({ text: name, color: colour, bold: true })
             : null,
-          CustomNameVisible:1,
-          Duration:2147483647
+          CustomNameVisible:true,
+          Marker:true,
+          Invulnerable:true,
+          Invisible:true
         })}]`,
         // `Offers` is empty to prevent trading
         Offers: '{}'
