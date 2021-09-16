@@ -156,7 +156,7 @@ export const item = {
     }
 
     for (let [k, v] of Object.entries(items)) {
-      store.unsold[k] = Object.assign(v, {tag:{display:{Lore:`[${rawJson({
+      store.unsold[k] = Object.assign({}, v, {tag:{display:{Lore:`[${rawJson({
         text: `Unsold (${toCost(v.tag.cost)})`,
         italic: true,
         color: "dark_gray"
@@ -167,5 +167,3 @@ export const item = {
     return store;
   })()
 }
-
-console.log(item.store.unsold.berry.tag);
