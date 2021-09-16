@@ -127,7 +127,8 @@ export function createNpc (
           CustomNameVisible:true,
           Marker:true,
           Invulnerable:true,
-          Invisible:true
+          Invisible:true,
+          DisabledSlots:4144959
         })}]`,
         // `Offers` is empty to prevent trading
         Offers: '{}'
