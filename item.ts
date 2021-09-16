@@ -175,6 +175,3 @@ export const item = {
     return store;
   })()
 }
-
-console.log(item.store.unsold.apple.tag);
-console.log(item.store.sold.apple.tag);
