@@ -95,10 +95,9 @@ export function createNpc (
         Invulnerable: true,
         NoAI:true,
         NoGravity:true,
-        Invisible:invisible,
         CustomNameVisible: !!name,
         // `npc` tag is unused but might be nice to kill all NPCs
-        Tags: `["npc", "${npcTag}"${baby ? ', "baby"' : ''}]`,
+        Tags: `["npc", "${npcTag}"${baby ? ', "baby"' : ''}${invisible ? ', "invisible"' : ''}]`,
         CustomName: name
           ? rawJson({ text: name, color: colour, bold: true })
           : null,

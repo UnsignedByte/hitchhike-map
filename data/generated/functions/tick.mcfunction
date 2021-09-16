@@ -5,8 +5,9 @@ execute as @a run scoreboard players add playercount vars 1
 # Detect right clicks
 execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc
 scoreboard players set @a npc-interact 0
-# turn villagers to babies
-execute as @e[tag=baby] run data modify entity @s Age set value -1000
+# update entities with special tags
+execute as @e[type=villager,tag=baby] run data modify entity @s Age set value -2
+effect give @e[tag=invisible] minecraft:invisibility 2 0 true
 
 # update quest books
 title @a[scores={quest-book-upd=-1}] actionbar [{"text":"[","color":"light_purple","hoverEvent":{"action":"show_item","value":"{id: \"minecraft:written_book\", tag: {display: {Name: '{\"text\":\"Quest Book\",\"color\":\"light_purple\"}'}, resolved: 0b, title: \"Quest Book\", author: \"\", pages: ['[{\"text\":\"Current Quests\\\\n\",\"color\":\"light_purple\",\"underlined\":true,\"bold\":true},{\"nbt\":\"current[]\",\"storage\":\"generated:quest_book\",\"interpret\":true,\"separator\":\"\\\\n\"}]', '[{\"text\":\"Completed Quests\\\\n\",\"color\":\"light_purple\",\"underlined\":true,\"bold\":true},{\"nbt\":\"completed[]\",\"storage\":\"generated:quest_book\",\"interpret\":true,\"separator\":\"\\\\n\"}]']}}"},"extra":[{"text":"Quest Book","italic":true},"]"]},{"color":"white","text":" updated. Open it to view changes!"}]
