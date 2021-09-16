@@ -36,6 +36,7 @@ export function toSnbt (nbt: NbtData): string {
 }
 
 export function toCost(v: number) { // value to $ string
+  console.log(v);
   return v >= 100 ? `${(v/100).toFixed(2)}B` : `${v}b`
 }
 
