@@ -135,16 +135,38 @@ npc:
           cond: 2
           end: -1
     apple_sale:
-      name: Apple ($5)
+      name: Glow Berry ($2)
       invisible: true
-      colour: 0xFF0000
+      colour: 0xfad352
       position: 901.5 64 -152.5
       dialogue:
         - messages:
           - message: taken
             silent: true
             command:
+              - "give ${select.player} ${toGive(item.store.unsold.berry)}"
+    berry_sale:
+      name: Apple ($2)
+      invisible: true
+      colour: 0xFF0000
+      position: 905.5 64 -152.5
+      dialogue:
+        - messages:
+          - message: taken
+            silent: true
+            command:
               - "give ${select.player} ${toGive(item.store.unsold.apple)}"
+    melon_sale:
+      name: Apple ($2)
+      invisible: true
+      colour: 0xFF5733
+      position: 909.5 64 -152.5
+      dialogue:
+        - messages:
+          - message: taken
+            silent: true
+            command:
+              - "give ${select.player} ${toGive(item.store.unsold.melon)}"
 
 quest:
   bread:

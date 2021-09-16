@@ -1275,5 +1275,9 @@ tag @a remove victim-of-dialogue-by-sean
 
 tag @a remove victim-of-dialogue-by-apple_sale
 
+tag @a remove victim-of-dialogue-by-berry_sale
+
+tag @a remove victim-of-dialogue-by-melon_sale
+
 
 
