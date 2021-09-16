@@ -127,7 +127,8 @@ export function createNpc (
           Small:true,
           Invulnerable:true,
           Invisible:true,
-          DisabledSlots:4144959
+          DisabledSlots:4144959,
+          Tags: `["npc"]`
         })}]`,
         // `Offers` is empty to prevent trading
         Offers: '{}'
