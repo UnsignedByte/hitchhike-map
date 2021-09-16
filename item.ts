@@ -147,7 +147,11 @@ export const item = {
     }
 
     for (let [k, v] of Object.entries(items)) {
-      store.unsold[k] = Object.assign(v, {tag:{display:{Lore:`['{"text":" ","bold":true,"italic":true}']`}}});
+      store.unsold[k] = Object.assign(v, {tag:{display:{Lore:`[${rawJson({
+        text: "Unsold",
+        italic: true,
+        color: "gray"
+      })}]`}}});
       store.sold[k] = v;
     }
 
