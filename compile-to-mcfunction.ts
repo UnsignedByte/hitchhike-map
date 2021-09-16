@@ -3,7 +3,7 @@ import { Npc, Quest, QuestCondition } from './parse-yaml.ts'
 import { CONSTS } from './consts.ts'
 import { item } from './item.ts'
 
-console.log(item);
+item; // prevent typescript from eliding this import because i hate typescript and it is cringe
 
 let npc: Record<string, string> = {} // dictionary for npc selectors
 
