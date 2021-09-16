@@ -70,6 +70,7 @@ export function createNpc (
   onTick: Lines
   functions: Record<string, Lines>
 } {
+  name = eval(`\`${name}\``);
   const npcTag = `npc-${id}`
   const playerTag = `victim-of-dialogue-by-${id}`
   // Prevent the dialogue from immediately restarting
