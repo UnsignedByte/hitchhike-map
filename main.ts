@@ -108,7 +108,7 @@ export async function init (
         `function scheduled:scheduled/s-${x}`
       ])),
       '# Kill all existing NPCs.',
-      'kill @e[type=minecraft:villager, tag=npc]',
+      'kill @e[tag=npc]',
       '',
       '# Clear quest book from all players.',
       'clear @a minecraft:written_book{title:"Quest Book"}',

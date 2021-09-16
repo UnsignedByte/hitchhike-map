@@ -2,7 +2,7 @@
 schedule clear scheduled:scheduled/s-20
 function scheduled:scheduled/s-20
 # Kill all existing NPCs.
-kill @e[type=minecraft:villager, tag=npc]
+kill @e[tag=npc]
 
 # Clear quest book from all players.
 clear @a minecraft:written_book{title:"Quest Book"}
