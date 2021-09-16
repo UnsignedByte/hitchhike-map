@@ -128,15 +128,29 @@ export const item = {
       }
     }
   },
-  store: {
-    apple: {
-      id: '"minecraft:apple"'
-    },
-    melon: {
-      id: '"minecraft:melon_slice"'
-    },
-    berry: {
-      id: '"minecraft:glow_berries"'
+  store: (() => {
+    const items = {
+      apple: {
+        id: '"minecraft:apple"'
+      },
+      melon: {
+        id: '"minecraft:melon_slice"'
+      },
+      berry: {
+        id: '"minecraft:glow_berries"'
+      }
     }
-  }
+
+    let store: Record<string, Record<string, any>> = {
+      unsold: {},
+      sold: {}
+    }
+
+    for (let [k, v] of Object.entries(items)) {
+      store.unsold[k] = Object.assign(v, {tag:{display:{Lore:`['{"text":" ","bold":true,"italic":true}']`}}});
+      store.sold[k] = v;
+    }
+
+    return store;
+  })()
 }

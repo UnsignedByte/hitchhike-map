@@ -141,8 +141,9 @@ npc:
       position: 901.5 64 -152.5
       dialogue:
         - messages:
-          - message: bought.
+          - message: taken
             silent: true
+          command: "give ${select.player} ${toGive(item.store.unsold.apple)}"
 
 quest:
   bread:
