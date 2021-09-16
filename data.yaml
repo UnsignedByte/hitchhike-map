@@ -157,7 +157,7 @@ npc:
             command:
               - "give ${select.player} ${toGive(item.store.unsold.apple)}"
     melon_sale:
-      name: Apple ($2)
+      name: Melon ($2)
       invisible: true
       colour: 0xFF5733
       position: 909.5 64 -152.5
