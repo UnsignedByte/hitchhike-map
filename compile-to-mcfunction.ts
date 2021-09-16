@@ -122,6 +122,14 @@ export function createNpc (
           profession: `"minecraft:${profession}"`,
           level: level
         },
+        Passengers:`[${toSnbt({
+          id:'area_effect_cloud',
+          CustomName: name
+            ? rawJson({ text: name, color: colour, bold: true })
+            : null,
+          CustomNameVisible:1,
+          Duration:2147483647
+        })}]`,
         // `Offers` is empty to prevent trading
         Offers: '{}'
       })}`,
