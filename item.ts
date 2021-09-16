@@ -167,6 +167,7 @@ export const item = {
         color: "dark_gray"
       })}]`
       store.unsold[k].tag.sold = false;
+
       store.sold[k] = v;
       store.sold[k].tag.sold = true;
     }
@@ -176,3 +177,4 @@ export const item = {
 }
 
 console.log(item.store.unsold.apple.tag);
+console.log(item.store.sold.apple.tag);
