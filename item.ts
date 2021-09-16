@@ -132,15 +132,21 @@ export const item = {
     const items = {
       apple: {
         id: '"minecraft:apple"',
-        cost: 200
+        tag:{
+          cost: 200
+        }
       },
       melon: {
         id: '"minecraft:melon_slice"',
-        cost: 200
+        tag:{
+          cost: 200
+        }
       },
       berry: {
         id: '"minecraft:glow_berries"',
-        cost: 200
+        tag:{
+          cost: 200
+        }
       }
     }
 
@@ -151,7 +157,7 @@ export const item = {
 
     for (let [k, v] of Object.entries(items)) {
       store.unsold[k] = Object.assign(v, {tag:{display:{Lore:`[${rawJson({
-        text: `Unsold (${toCost(v.cost)})`,
+        text: `Unsold (${toCost(v.tag.cost)})`,
         italic: true,
         color: "dark_gray"
       })}]`}}});
