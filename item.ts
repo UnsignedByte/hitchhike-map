@@ -158,10 +158,7 @@ export const item = {
     for (let [k, v] of Object.entries(items)) {
       v = <any> v;
       store.unsold[k] = v;
-      if (!('tag' in v)) {
-        Object.assign(store.unsold[k], {tag:{display:{Lore:`[]`}}});
-        Object.assign(v, {tag:{}});
-      } else if (!('display' in v.tag)) {
+      if (!('display' in v.tag)) {
         Object.assign(store.unsold[k].tag, {display:{Lore:`[]`}});
       }
       store.unsold[k].tag.display.Lore = `[${rawJson({
