@@ -79,6 +79,7 @@ const rawJSONTextSchema =
 const msgSchema = z
   .object({
     global: z.boolean().default(false),
+    silent: z.boolean().default(false),
     message: z.union([
       z.string().transform(msg=>[{text: msg}]),
       rawJSONTextSchema.transform(json=>[json]),
@@ -108,6 +109,8 @@ const npcSchema = z
     position: nplet(3),
     rotation: nplet(2),
     head: z.string(),
+    baby: z.boolean().default(false),
+    invisible: z.boolean().default(true), //used for placeholder npcs used to detect right clicks
     villager: z.object({
       type: z.union([
         z.literal('desert'),

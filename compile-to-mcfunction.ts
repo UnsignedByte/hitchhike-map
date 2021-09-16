@@ -53,6 +53,8 @@ export function createNpc (
       // Level 99 hides the villager level in the trading UI
       level = 99
     } = {},
+    baby,
+    invisible,
     dialogue = []
   }: Npc
 ): {
@@ -93,9 +95,10 @@ export function createNpc (
         Invulnerable: true,
         NoAI:true,
         NoGravity:true,
+        Invisible:invisible,
         CustomNameVisible: !!name,
         // `npc` tag is unused but might be nice to kill all NPCs
-        Tags: `["npc", "${npcTag}"]`,
+        Tags: `["npc", "${npcTag}"${baby ? ', "baby"' : ''}]`,
         CustomName: name
           ? rawJson({ text: name, color: colour, bold: true })
           : null,
@@ -161,7 +164,7 @@ export function createNpc (
               `> `,
               ...message.message
             ])}`,
-            `execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets}`,
+            `${message.silent ? '# silent // ' : ''}execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets}`,
             message.command.map(x=>eval(`\`${x}\``)),
             `schedule function ${namespace}:${
               i === dialogue.messages.length - 1
@@ -459,3 +462,4 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
     ];
   }
 }
+

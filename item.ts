@@ -127,5 +127,16 @@ export const item = {
         }
       }
     }
+  },
+  store: {
+    apple: {
+      id: '"minecraft:apple"'
+    },
+    melon: {
+      id: '"minecraft:melon_slice"'
+    },
+    berry: {
+      id: '"minecraft:glow_berries"'
+    }
   }
 }

@@ -134,6 +134,16 @@ npc:
           - Farewell again!
           cond: 2
           end: -1
+    apple_sale:
+      name: apple ($5)
+      invisible: true
+      baby: true
+      colour: 0xFF0000
+      position: 901.5 65 -152.5
+      dialogue:
+        - messages:
+          - message: bought.
+            silent: true
 
 quest:
   bread:

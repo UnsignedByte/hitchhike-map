@@ -5,6 +5,8 @@ execute as @a run scoreboard players add playercount vars 1
 # Detect right clicks
 execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc
 scoreboard players set @a npc-interact 0
+# turn villagers to babies
+execute as @e[tag=baby] run data modify entity @s Age set value -1000
 
 # update quest books
 title @a[scores={quest-book-upd=-1}] actionbar [{"text":"[","color":"light_purple","hoverEvent":{"action":"show_item","value":"{id: \"minecraft:written_book\", tag: {display: {Name: '{\"text\":\"Quest Book\",\"color\":\"light_purple\"}'}, resolved: 0b, title: \"Quest Book\", author: \"\", pages: ['[{\"text\":\"Current Quests\\\\n\",\"color\":\"light_purple\",\"underlined\":true,\"bold\":true},{\"nbt\":\"current[]\",\"storage\":\"generated:quest_book\",\"interpret\":true,\"separator\":\"\\\\n\"}]', '[{\"text\":\"Completed Quests\\\\n\",\"color\":\"light_purple\",\"underlined\":true,\"bold\":true},{\"nbt\":\"completed[]\",\"storage\":\"generated:quest_book\",\"interpret\":true,\"separator\":\"\\\\n\"}]']}}"},"extra":[{"text":"Quest Book","italic":true},"]"]},{"color":"white","text":" updated. Open it to view changes!"}]
@@ -96,6 +98,19 @@ tag @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] remove victim-of
 
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-sean, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sean, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-apple_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-apple_sale
+tag @a[tag=victim-of-dialogue-by-apple_sale, limit=1] remove npc_selector
+tag @e[tag=npc-apple_sale, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-apple_sale, tag=!spoken-to, limit=1] as @e[tag=npc-apple_sale, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/apple_sale/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-apple_sale, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-apple_sale, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-apple_sale
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-apple_sale, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-apple_sale, limit=1]
 
 execute if score bread quest-status matches 0.. run function generated:quests/bread-tick
 

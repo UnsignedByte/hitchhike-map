@@ -1273,5 +1273,7 @@ tag @a remove victim-of-dialogue-by-wheatish
 
 tag @a remove victim-of-dialogue-by-sean
 
+tag @a remove victim-of-dialogue-by-apple_sale
+
 
 
