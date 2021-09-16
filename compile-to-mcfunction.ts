@@ -119,16 +119,13 @@ export function createNpc (
           level: level
         },
         Passengers:`[${toSnbt({
-          id:'armor_stand',
+          id:'area_effect_cloud',
           CustomName: name
             ? rawJson({ text: name, color: colour, bold: true })
             : null,
           CustomNameVisible:!!name,
-          Marker:true,
-          Invulnerable:true,
-          Invisible:true,
-          DisabledSlots:4144959,
-          Tags: `["npc"]`
+          Duration:2147483647,
+          Tags: `["npc", "aec"]`
         })}]`,
         // `Offers` is empty to prevent trading
         Offers: '{}'
