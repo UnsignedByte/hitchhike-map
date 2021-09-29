@@ -6,3 +6,6 @@ execute as @a[nbt={Inventory:[{tag:{sold:0b}}]},x=893,z=-151,dx=3,dz=1,y=64,dy=3
 
 # kill thrown items out of safeway
 execute as @e[type=item,nbt={Item:{tag:{sold:0b}}}] unless entity @s[x=882,z=-168,dx=35,dz=17,y=64,dy=32] run kill @s
+
+# PAYMENT MANAGER
+execute at @e[x=889,dx=1,z=-154,dz=1,y=65,dy=1] run tp @s ~0.01 ~ ~
