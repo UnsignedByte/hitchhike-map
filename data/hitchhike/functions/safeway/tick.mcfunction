@@ -8,4 +8,4 @@ execute as @a[nbt={Inventory:[{tag:{sold:0b}}]},x=893,z=-151,dx=3,dz=1,y=64,dy=3
 execute as @e[type=item,nbt={Item:{tag:{sold:0b}}}] unless entity @s[x=882,z=-168,dx=35,dz=17,y=64,dy=32] run kill @s
 
 # PAYMENT MANAGER
-execute as @e[x=889,dx=1,z=-154,dz=1,y=65,dy=1] at @s run tp @s ~0.01 ~ ~
+execute as @e[x=889,dx=1,z=-154,dz=1,y=65,dy=1] run data modify entity @s Motion[0] set value 0.025
