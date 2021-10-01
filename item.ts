@@ -158,7 +158,7 @@ export const item = {
     for (let [k, v] of Object.entries(items)) {
       v = <any> v;
       store.unsold[k] = JSON.parse(JSON.stringify(v));
-      if (!('display' in v.tag)) {
+      if (!('display' in store.unsold[k].tag)) {
         Object.assign(store.unsold[k].tag, {display:{Lore:`[]`}});
       }
       store.unsold[k].tag.display.Lore = `[${rawJson({
@@ -169,7 +169,10 @@ export const item = {
       store.unsold[k].tag.sold = false;
 
       store.sold[k] = JSON.parse(JSON.stringify(v));
-      store.unsold[k].tag.display.Lore = `[${rawJson({
+      if (!('display' in store.sold[k].tag)) {
+        Object.assign(store.sold[k].tag, {display:{Lore:`[]`}});
+      }
+      store.sold[k].tag.display.Lore = `[${rawJson({
         text: `Sold (${toCost(v.tag.cost)})`,
         italic: true,
         color: "dark_purple"
