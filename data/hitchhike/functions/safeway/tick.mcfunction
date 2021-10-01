@@ -18,5 +18,7 @@ tp @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=891,z=-154,y=65,dy=0] 8
 execute as @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=891,z=-154,y=65,dy=0] run data modify entity @s Age set value -32768
 tag @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=891,z=-154,y=65,dy=0] add paying
 
+# reset status if no items to buy
+scoreboard players set @e[tag=npc-cashier] dialogue-status 0
 # set status of cashier to paying
 execute if entity @e[tag=paying] run scoreboard players set @e[tag=npc-cashier] dialogue-status 5
