@@ -335,7 +335,10 @@ export async function init (
   functions[`safeway/sell`] = [
     Object.keys(item.store.unsold).map(k=>
       `execute as @e[tag=paying,nbt={Item:${toSnbt(item.store.unsold[k])}}] run data merge entity @s {Item:${toSnbt(item.store.sold[k])}}`
-    )
+    ),
+    `tp @e[tag=paying] 893.0 64.5 -153.5`,
+    `execute as @e[tag=paying] run data modify entity @s Age set value 0`,
+    `tag @e remove paying`
   ]
 
   // bitwise operators
