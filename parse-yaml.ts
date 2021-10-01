@@ -72,7 +72,11 @@ const rawJSONTextSchema =
     italic: z.boolean(),
     underlined: z.boolean(),
     strikethrough: z.boolean(),
-    obfuscated: z.boolean()
+    obfuscated: z.boolean(),
+    interpret: z.boolean(),
+    nbt: z.string(),
+    entity: z.string(),
+    storage: z.string()
   })
   .deepPartial()
 

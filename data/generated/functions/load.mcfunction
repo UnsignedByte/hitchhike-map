@@ -1279,5 +1279,7 @@ tag @a remove victim-of-dialogue-by-berry_sale
 
 tag @a remove victim-of-dialogue-by-melon_sale
 
+tag @a remove victim-of-dialogue-by-cashier
+
 
 

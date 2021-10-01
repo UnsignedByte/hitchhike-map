@@ -6,6 +6,16 @@ execute as @a[nbt={Inventory:[{tag:{sold:0b}}]},x=893,z=-151,dx=3,dz=1,y=64,dy=3
 
 # kill thrown items out of safeway
 execute as @e[type=item,nbt={Item:{tag:{sold:0b}}}] unless entity @s[x=882,z=-168,dx=35,dz=17,y=64,dy=32] run kill @s
+# unsold items die after 10 seconds, to avoid stuck items, etc.
+execute as @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=882,z=-168,dx=35,dz=17,y=64,dy=32] unless entity @s[type=item,x=889,dx=1,z=-154,y=65,dy=0] run data modify entity @s Age set value 5800
 
 # PAYMENT MANAGER
-execute as @e[x=889,dx=1,z=-154,dz=1,y=65,dy=1] run data modify entity @s Motion[0] set value 0.025
+execute as @e[type=item,x=889,dx=1,z=-154,y=65,dy=0] run data modify entity @s Motion[0] set value 0.025 # move items over
+
+tp @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=891,z=-154,y=65,dy=0] 891 65 -154
+# items being paid for cannot despawn
+execute as @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=891,z=-154,y=65,dy=0] run data modify entity @s Age set value -32768
+tag @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=891,z=-154,y=65,dy=0] add paying
+
+# set status of cashier to paying
+execute if entity @e[tag=paying] run scoreboard players set @e[tag=npc-cashier] dialogue-status 5

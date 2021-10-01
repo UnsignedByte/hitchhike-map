@@ -320,6 +320,18 @@ export async function init (
     `scoreboard players operation count change += @s change-count-tmp`
   ]
 
+  functions[`safeway/countpay`] = [
+    `scoreboard players set paymentcount safeway 0`,
+    `execute as @e[tag=paying] run function generated:safeway/_countpaysingle`
+  ]
+
+  functions[`safeway/_countpaysingle`] = [
+    `execute store result score _count safeway run data get entity @s Item.Count`,
+    `execute store result score _count safeway run data get entity @s Item.tag.cost`,
+    `scoreboard players operation _count safeway *= _cost safeway`,
+    `scoreboard players operation paymentcount safeway += _count safeway`
+  ]
+
   // bitwise operators
   functions[`bitwise/and`] = [
     'scoreboard players operation _l bitwise = l bitwise',

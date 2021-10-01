@@ -47,6 +47,10 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 909.5 64 -152.5 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-melon_sale", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Watermelon (2.00B)","color":"#ff5733","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for cashier.
+summon minecraft:villager 891.5 64 -152.5 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-cashier"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Henry","color":"#eb7060","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 scoreboard players reset bread quest-status
 scoreboard objectives remove q-0
 scoreboard objectives remove s-0-0

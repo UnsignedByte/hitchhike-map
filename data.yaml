@@ -167,9 +167,25 @@ npc:
             silent: true
             command:
               - "give ${select.player} ${toGive(item.store.unsold.melon)}"
-    # henry:
-      # 891.5 63.5 -154.0
-
+    cashier:
+      name: Henry
+      position: 891.5 64 -152.5
+      colour: 0xeb7060
+      dialogue:
+        - messages:
+          - "Hi, welcome to Safeway!"
+          - "If you want to buy anything, just drop it off here on the conveyor."
+        - messages:
+          - message: "Hey, I hope you had a great time shopping!"
+            command:
+              - type: function
+                value: "hitchhike:safeway/pay"
+          - message:
+            - nbt: success_msg
+              storage: hitchhike:safeway
+              interpret: true
+          cond: 5
+              
 quest:
   bread:
     name: Whole Wheat
