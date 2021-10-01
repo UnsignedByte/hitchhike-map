@@ -1,0 +1,3 @@
+scoreboard players operation _b safeway = paymentcount safeway
+execute if score count change matches 0 run data modify storage hitchhike:safeway success_msg set value '["Your charge is ", {"score":{"name":"_B","objective":"safeway"}}, ".", {"score":{"name":"_b","objective":"safeway"}}, "Bov. Please place your payment in the space to your left!"]'
+execute if score count change matches 1.. run data modify storage hitchhike:safeway success_msg set value '["Your charge is ", {"score":{"name":"_B","objective":"safeway"}}, ".", {"score":{"name":"_b","objective":"safeway"}}, "Bov, but you don\'t seem to have provided enough money."]'
