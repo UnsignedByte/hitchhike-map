@@ -132,20 +132,33 @@ export const item = {
     const items = {
       apple: {
         id: '"minecraft:apple"',
-        tag:{
-          cost: 200
+        tag: {
+          cost: 200,
+          display: {
+            Lore:`[${rawJson({
+              text: `A Juicy Red Apple\n`,
+              italic: true,
+              color: "red"
+            })}]`
+          }
         }
       },
       melon: {
         id: '"minecraft:melon_slice"',
         tag:{
-          cost: 200
+          cost: 200,
+          display: {
+            Lore:`[]`
+          }
         }
       },
       berry: {
         id: '"minecraft:glow_berries"',
         tag:{
-          cost: 200
+          cost: 200,
+          display: {
+            Lore:`[]`
+          }
         }
       }
     }
@@ -161,22 +174,22 @@ export const item = {
       if (!('display' in store.unsold[k].tag)) {
         Object.assign(store.unsold[k].tag, {display:{Lore:`[]`}});
       }
-      store.unsold[k].tag.display.Lore = `[${rawJson({
+      store.unsold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.unsold[k].tag.display.Lore}, ${rawJson({
         text: `Unsold (${toCost(v.tag.cost)})`,
         italic: true,
         color: "dark_gray"
-      })}]`
+      })}]`))
       store.unsold[k].tag.sold = false;
 
       store.sold[k] = JSON.parse(JSON.stringify(v));
       if (!('display' in store.sold[k].tag)) {
         Object.assign(store.sold[k].tag, {display:{Lore:`[]`}});
       }
-      store.sold[k].tag.display.Lore = `[${rawJson({
+      store.unsold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.unsold[k].tag.display.Lore}, ${rawJson({
         text: `Sold (${toCost(v.tag.cost)})`,
         italic: true,
         color: "dark_purple"
-      })}]`
+      })}]`))
       store.sold[k].tag.sold = true;
     }
 
