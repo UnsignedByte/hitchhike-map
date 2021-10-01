@@ -10,7 +10,8 @@ execute as @e[type=item,nbt={Item:{tag:{sold:0b}}}] unless entity @s[x=882,z=-16
 execute as @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=882,z=-168,dx=35,dz=17,y=64,dy=32] unless entity @s[type=item,x=889,dx=1,z=-154,y=65,dy=0] run data modify entity @s Age set value 5800
 
 # PAYMENT MANAGER
-execute as @e[type=item,x=889,dx=1,z=-154,y=65,dy=0] run data modify entity @s Motion[0] set value 0.025 # move items over
+# move items over
+execute as @e[type=item,x=889,dx=1,z=-154,y=65,dy=0] run data modify entity @s Motion[0] set value 0.025
 
 tp @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=891,z=-154,y=65,dy=0] 891 65 -154
 # items being paid for cannot despawn
