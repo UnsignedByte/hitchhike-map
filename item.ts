@@ -169,6 +169,11 @@ export const item = {
       store.unsold[k].tag.sold = false;
 
       store.sold[k] = JSON.parse(JSON.stringify(v));
+      store.unsold[k].tag.display.Lore = `[${rawJson({
+        text: `Sold (${toCost(v.tag.cost)})`,
+        italic: true,
+        color: "dark_purple"
+      })}]`
       store.sold[k].tag.sold = true;
     }
 
