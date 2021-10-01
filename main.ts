@@ -334,7 +334,7 @@ export async function init (
 
   functions[`safeway/sell`] = [
     Object.keys(item.store.unsold).map(k=>
-      `execute as @e[tag=paying,nbt={Item:${toSnbt(item.store.unsold[k])}} run data merge entity @s {Item:${toSnbt(item.store.sold[k])}}`
+      `execute as @e[tag=paying,nbt={Item:${toSnbt(item.store.unsold[k])}}] run data merge entity @s {Item:${toSnbt(item.store.sold[k])}}`
     )
   ]
 
