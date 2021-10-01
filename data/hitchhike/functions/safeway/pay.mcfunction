@@ -5,4 +5,4 @@ execute if score dec-success change matches 0 run scoreboard players operation _
 execute if score dec-success change matches 0 run data modify storage hitchhike:safeway success_msg set value '["Your charge is ", {"score":{"name":"_B","objective":"safeway"}}, ".", {"score":{"name":"_b","objective":"safeway"}}, "Bov, but you don\'t seem to have provided enough money."]'
 execute if score dec-success change matches 1 run scoreboard players operation _b safeway = count change
 execute if score dec-success change matches 1 run data modify storage hitchhike:safeway success_msg set value '["Thank you for shopping at safeway! Your change is ", {"score":{"name":"_B","objective":"safeway"}}, ".", {"score":{"name":"_b","objective":"safeway"}}, " Bov."]'
-function hitchhike:safeway/makereadable/e
+function hitchhike:safeway/makereadable
