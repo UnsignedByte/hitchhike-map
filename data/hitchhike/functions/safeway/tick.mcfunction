@@ -13,10 +13,10 @@ execute as @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=882,z=-168,dx=3
 # move items over
 execute as @e[type=item,x=889,dx=1,z=-154,y=65,dy=0] run data modify entity @s Motion[0] set value 0.025
 
-tp @e[tag=paying] unless entity @s[x=891,z=-154,y=65,dy=0] 891 65 -154
 # items being paid for cannot despawn
 execute as @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=891,z=-154,y=65,dy=0] run data modify entity @s Age set value -32768
 tag @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}}},x=891,z=-154,y=65,dy=0] add paying
+execute as @e[tag=paying] unless entity @s[x=891,z=-154,y=65,dy=0] run tp @s 891 65 -154
 
 # reset status if no items to buy
 scoreboard players set @e[tag=npc-cashier] dialogue-status 0
