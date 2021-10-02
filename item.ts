@@ -175,7 +175,7 @@ export const item = {
       }
       store.unsold[k] = JSON.parse(JSON.stringify(v));
       store.unsold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.unsold[k].tag.display.Lore}, ${rawJson({
-        text: `\nUnsold (${toCost(v.tag.cost)})`,
+        text: `Unsold (${toCost(v.tag.cost)})`,
         italic: true,
         color: "dark_gray"
       })}]`))
@@ -183,7 +183,7 @@ export const item = {
 
       store.sold[k] = JSON.parse(JSON.stringify(v));
       store.sold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.sold[k].tag.display.Lore}, ${rawJson({
-        text: `\nSold (${toCost(v.tag.cost)})`,
+        text: `Sold (${toCost(v.tag.cost)})`,
         italic: true,
         color: "dark_purple"
       })}]`))
