@@ -341,6 +341,23 @@ export async function init (
     `tag @e remove paying`
   ]
 
+  functions['safeway/randreturnmessage'] = [
+    ((msgs)=>[
+      `scoreboard players set _rngm vars ${msgs.length}`,
+      `function generated:rng/rng`,
+      msgs.map((x, i)=>`execute if score rng vars matches ${i} run data modify storage hitchhike:safeway welcome_message set value ${rawJson(x)}`)
+    ])([
+      "Let me count up your items real quick...",
+      "Hope you're having a great day!",
+      "Thanks for shopping at safeway!",
+      "Hope you found what you wanted!",
+      "Hi, how's your day going?",
+      "<Insert phatic phrase>",
+      "Enjoyed your time shopping here?",
+      "Nice weather today, huh?"
+    ])
+  ]
+
   // bitwise operators
   functions[`bitwise/and`] = [
     'scoreboard players operation _l bitwise = l bitwise',
@@ -357,6 +374,15 @@ export async function init (
 
   functions['test/itemdetect'] = detectItem(functions, item.money[1]);
   functions['test/itemdetectspec'] = detectItem(functions, item.money[1], [0, 1, 2, 3, 4, 5, 6, 7, 8]);
+
+  functions['rng/rng'] = [
+    '# generate random number from 0 to 2^31-1 (mod m)',
+    `scoreboard players set rng vars 0`,
+    [...Array(31).keys()].map(x=>1 << x).map(x=>
+      `execute if predicate generated:coinflip run scoreboard players add rng vars ${x}`
+    ),
+    `execute if score _rngm vars matches 1.. run scoreboard players operation rng vars %= _rngm vars`
+  ]
 
   for (const [name, contents] of Object.entries(functions)) {
     await ensureDir(join(basePath, `./data/${namespace}/functions/`, dirname(name)))
@@ -376,6 +402,19 @@ export async function init (
       {
         function: "set_nbt",
         tag: toSnbt(item.quest_book.tag)
+      }
+    )
+  )
+
+  // predicates
+  await ensureDir(join(basePath, `./data/${namespace}/predicates`))
+
+  await Deno.writeTextFile(
+    join(basePath, `./data/${namespace}/predicates/coinflip.json`),
+    JSON.stringify(
+      {
+        condition: "random_chance",
+        chance: 0.5
       }
     )
   )

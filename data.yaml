@@ -176,7 +176,10 @@ npc:
           - "Hi, welcome to Safeway!"
           - "If you want to buy anything, just drop it off here on the conveyor."
         - messages:
-          - message: "Hey, I hope you had a great time shopping!"
+          - message:
+            - nbt: welcome_message
+              storage: hitchhike:safeway
+              interpret: true
             command:
               - type: function
                 value: "hitchhike:safeway/pay"
