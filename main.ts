@@ -1,7 +1,7 @@
 import { ensureDir, emptyDir } from 'https://deno.land/std@0.102.0/fs/mod.ts'
 import { join, dirname } from 'https://deno.land/std@0.102.0/path/mod.ts'
 import { parse as parseArgs } from 'https://deno.land/std@0.104.0/flags/mod.ts'
-import { createNpc, createQuest, detectItem, toSnbt, rawJson, toGive } from './compile-to-mcfunction.ts'
+import { story, createNpc, createQuest, detectItem, toSnbt, rawJson, toGive } from './compile-to-mcfunction.ts'
 import { parse } from './parse-yaml.ts'
 import { item } from './item.ts'
 import { generate_pile } from './armorstand-tools.ts'
@@ -98,6 +98,8 @@ export async function init (
   for (let i = 0; i <= 30; i++) numericConstants.add(Math.pow(2,i)) // add powers of 2 to 2^30
 
   CONSTANTS = Object.assign(CONSTANTS, Object.fromEntries([...numericConstants].map(x=>[x,x])))
+
+  story(functions, reset, onLoad, onTick);
 
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/reset.mcfunction`),

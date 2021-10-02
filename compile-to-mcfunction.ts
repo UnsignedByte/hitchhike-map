@@ -475,3 +475,24 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
   }
 }
 
+// Handle all story related function generation
+export function story(functions: Record<string, Lines>, reset: Lines[], load: Lines[], tick: Lines[]) {
+  function addfunc(src: string, cmds: Lines[]) {
+    functions[`story/${src}`] = cmds;
+  }
+
+  // intro stuff
+  (()=> {
+    addfunc('intro/_settv', [
+      [...Array(6).keys()].map(x=>
+        `data modify entity @e[x=1005,dx=0,y=${61 - x % 2}},dy=0,z=${60 - Math.floor(x / 3)},dz=0,limit=1] Item.tag.map set value ${292+x}`
+      )
+    ])
+
+    addfunc('intro/_resettv', [
+      [...Array(6).keys()].map(x=>
+        `data modify entity @e[x=1005,dx=0,y=${61 - x % 2}},dy=0,z=${60 - Math.floor(x / 3)},dz=0,limit=1] Item.tag.map set value ${286+x}`
+      )
+    ])
+  })();
+}
