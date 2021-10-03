@@ -596,6 +596,46 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       {
         seq: {
           cmds: [
+            `setblock 1005 63 66 redstone_block`
+          ],
+          next: [{
+            seq: {
+              cmds: [
+                `setblock 1005 63 66 air`
+              ],
+              next: [{
+                seq: {
+                  cmds: [
+                    `setblock 1005 63 66 redstone_block`
+                  ],
+                  next: [{
+                    seq: {
+                      cmds: [
+                        `setblock 1005 63 66 air`
+                      ],
+                      next: [{
+                        seq: {
+                          cmds: [
+                            `setblock 1005 63 66 redstone_block`
+                          ]
+                        },
+                        wait: 8
+                      }]
+                    },
+                    wait: 6
+                  }]
+                },
+                wait: 11
+              }]
+            },
+            wait: 8
+          }]
+        },
+        wait: 11
+      },
+      {
+        seq: {
+          cmds: [
             `setblock 1011 63 66 redstone_block`
           ],
           next: [{
@@ -619,19 +659,19 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                             `setblock 1011 63 66 redstone_block`
                           ]
                         },
-                        wait: 12
+                        wait: 5
                       }]
                     },
-                    wait: 5
+                    wait: 8
                   }]
                 },
-                wait: 9
+                wait: 6
               }]
             },
-            wait: 7
+            wait: 12
           }]
         },
-        wait: 13
+        wait: 9
       }]
     })
 
