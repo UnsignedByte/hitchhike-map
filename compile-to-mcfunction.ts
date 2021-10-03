@@ -633,7 +633,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                       wait: 9
                     }]
                   },
-                  wait: 7
+                  wait: 14
                 }]
               },
               wait: 11
@@ -710,7 +710,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                           wait: 8
                         }]
                       },
-                      wait: 6
+                      wait: 9
                     }]
                   },
                   wait: 12
