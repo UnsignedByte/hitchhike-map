@@ -1,5 +1,5 @@
-weather thunder 1000000
-time set 23000
+weather clear 1000000
+time set noon
 gamerule doDaylightCycle false
 gamerule doMobSpawning false
 gamerule mobGriefing false
