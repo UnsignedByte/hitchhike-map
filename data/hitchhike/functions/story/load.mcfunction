@@ -1,0 +1,1 @@
+function hitchhike:story/intro/load

@@ -482,7 +482,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   }
 
   function genseq(src: string, seq: any) {
-    console.log(src, seq);
     addfunc(src, [...(seq.cmds ?? []), ...(seq.next ?? []).map((x: any, i: number)=>{
       genseq(`${src}-${i}`, x.seq);
       return `schedule function generated:story/${src}-${i} ${x.wait}t`
@@ -491,6 +490,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
   // intro stuff
   (()=> {
+    load.push([
+      `fill 1013 59 64 1013 60 64 barrier replace air` // lock door
+    ])
+
     genseq('intro/start', {
       cmds: [
         `gamerule doDaylightCycle true`,
@@ -505,7 +508,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             `particle minecraft:falling_dust oak_planks 1008.5 64.00 59.5 2 0.1 5 0 10 force`
           ]
         },
-        wait: 2
+        wait: 5
       }]
     })
 
