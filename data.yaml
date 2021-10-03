@@ -136,7 +136,7 @@ npc:
           cond: 2
           end: -1
     apple_sale:
-      name: "Glow Berry (${toCost(item.store.unsold.berry.tag.cost)})"
+      name: "Glow Berry (${toCost(item.store.unsold.glow_berries.tag.cost)})"
       invisible: true
       colour: 0xfad352
       position: 901.5 64 -152.5
@@ -145,7 +145,7 @@ npc:
           - message: taken
             silent: true
             command:
-              - "give ${select.player} ${toGive(item.store.unsold.berry)}"
+              - "give ${select.player} ${toGive(item.store.unsold.glow_berries)}"
     berry_sale:
       name: "Apple (${toCost(item.store.unsold.apple.tag.cost)})"
       invisible: true
@@ -158,7 +158,7 @@ npc:
             command:
               - "give ${select.player} ${toGive(item.store.unsold.apple)}"
     melon_sale:
-      name: "Watermelon (${toCost(item.store.unsold.melon.tag.cost)})"
+      name: "Watermelon (${toCost(item.store.unsold.melon_slice.tag.cost)})"
       invisible: true
       colour: 0xFF5733
       position: 909.5 64 -152.5
@@ -167,7 +167,7 @@ npc:
           - message: taken
             silent: true
             command:
-              - "give ${select.player} ${toGive(item.store.unsold.melon)}"
+              - "give ${select.player} ${toGive(item.store.unsold.melon_slice)}"
     cashier:
       name: Henry
       position: 891.5 64 -152.5
@@ -709,7 +709,6 @@ itemphysics:
       -  0  0  0  0  0  0  0  0  0
     spawnrange: 0 0.5 0 0
     rotation: 0 0 0
-    forcebuild: true
   pufferfish1:
     duration: 40
     count: 50
@@ -723,5 +722,23 @@ itemphysics:
       - 99 99 99 99 99 99 99 99 99
       -  1  1  1  1  1  1  1  1 99
       -  0  0  0  0  0  0  0  0 99
+    spawnrange: 0 0.5 0.5 0
+    rotation: 0 0 0
+  monster:
+    duration: 40
+    count: 50
+    corner: 900 64.5 -162.5
+    item: monster
+    bounds: 1.5 3
+    small: false
+    type: head
+    walls: false
+    ground:
+      - 99 99 99
+      -  0  0 99
+      -  0  0 99
+      -  0  0 99
+      -  0  0 99
+      -  0  0 99
     spawnrange: 0 0.5 0.5 0
     rotation: 0 0 0

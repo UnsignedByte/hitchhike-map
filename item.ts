@@ -143,7 +143,7 @@ export const item = {
           }
         }
       },
-      melon: {
+      melon_slice: {
         id: '"minecraft:melon_slice"',
         tag:{
           cost: 200,
@@ -152,13 +152,30 @@ export const item = {
           }
         }
       },
-      berry: {
+      glow_berries: {
         id: '"minecraft:glow_berries"',
         tag:{
           cost: 200,
           display: {
             Lore:`[]`
           }
+        }
+      },
+      monster: {
+        id:'"minecraft:potion"',
+        tag:{
+          cost: 500,
+          display:{
+            Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
+            Lore:`['{"text":"The energy drink for","color":"dark_green"}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
+          },
+          CustomPotionEffects:`[${toSnbt(
+            {Id:'3b',Amplifier:'1b',Duration:600})}, ${toSnbt(
+            {Id:'9b',Amplifier:'0b',Duration:200})}, ${toSnbt(
+            {Id:'15b',Amplifier:'0b',Duration:20})}, ${toSnbt(
+            {Id:'16b',Amplifier:'0b',Duration:400})}]`,
+          Potion:`"minecraft:thick"`,
+          CustomPotionColor:846663
         }
       }
     }

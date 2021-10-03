@@ -3,6 +3,7 @@ import * as CANNON from 'https://cdn.skypack.dev/cannon-es'
 import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
 import { ItemPhysics } from './parse-yaml.ts'
 import { Lines, schedule } from './main.ts'
+import { item as ITEMS } from './item.ts'
 
 const tps = 60;
 // (65.0075-64.115)/2
@@ -79,7 +80,10 @@ export function generate_pile (
 				Head: `[${x.rotation.x}f, ${-x.rotation.y}f, ${-x.rotation.z}f]`
 			},
 			Tags: `["item_holder"]`,
-			ArmorItems: `[{},{},{},{id:"${item}", Count:1b}]`,
+			ArmorItems: `[{},{},{},${toSnbt(Object.assign(
+				{id:`"${item}"`, Count:'1b'},
+				ITEMS.store.sold[item] ?? {}
+			))}]`,
 			DisabledSlots:4144959,
 			Invulnerable: true,
 			Invisible: true,
