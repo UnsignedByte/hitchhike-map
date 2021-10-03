@@ -374,7 +374,7 @@ itemphysics:
   porkbottom1:
     duration: 30
     count: 30
-    corner: 913 66 -168
+    corner: 913 65 -168
     item: porkchop
     bounds: 3 1
     small: false
