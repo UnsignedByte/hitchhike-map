@@ -328,7 +328,7 @@ itemphysics:
     spawnrange: 0.5 0.5 0.5 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
   milkbottom1:
     duration: 30
-    count: 20
+    count: 200
     corner: 916 65 -168
     item: milk_bucket
     bounds: 1 4.5
