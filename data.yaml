@@ -569,7 +569,7 @@ itemphysics:
   pickletop1:
     duration: 30
     count: 100
-    corner: 912.5 64.5 -152
+    corner: 912.5 66.5 -152
     item: sea_pickle
     bounds: 3.5 1
     small: true
@@ -580,3 +580,4 @@ itemphysics:
       - 99 99 99 99 99 99 99
     spawnrange: 0.5 0 0 0.5
     rotation: 0 0 180
+    forcebuild: true
