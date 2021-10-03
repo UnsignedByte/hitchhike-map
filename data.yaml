@@ -190,8 +190,8 @@ npc:
           cond: 5
     cameron:
       name: Cameron "Cam" Au-Flauge
-      position: 944 96.7 17
-      rotation: 180 0
+      position: 944 96.5 17
+      rotation: 180 45
       colour: 0x197037
       dialogue:
         - messages:
