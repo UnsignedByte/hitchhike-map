@@ -696,7 +696,7 @@ itemphysics:
     rotation: 0 0 0
   tropicalfish1:
     duration: 40
-    count: 30
+    count: 50
     corner: 900.5 65.5 -168.5
     item: tropical_fish
     bounds: 4.5 1.5
