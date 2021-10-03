@@ -710,3 +710,19 @@ itemphysics:
     spawnrange: 0 0.5 0 0
     rotation: 0 0 0
     forcebuild: true
+  cod1:
+    duration: 40
+    count: 50
+    corner: 905 65.5 -168.5
+    item: cod
+    bounds: 4.5 1.5
+    small: false
+    type: head
+    walls: false
+    ground:
+      - 99 99 99 99 99 99 99 99 99
+      -  1  1  1  1  1  1  1  1 99
+      -  0  0  0  0  0  0  0  0 99
+    spawnrange: 0 0.5 0.5 0
+    rotation: 0 0 0
+    forcebuild: true
