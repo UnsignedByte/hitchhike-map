@@ -331,11 +331,11 @@ itemphysics:
     rotation: 0 0 180
   steakbottom1:
     duration: 30
-    count: 300
+    count: 200
     corner: 916 65 -168
     item: beef
     bounds: 1 4.5
-    small: true
+    small: false
     type: head
     walls: false
     ground:
