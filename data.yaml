@@ -481,4 +481,22 @@ itemphysics:
       - 0 99
     spawnrange: 0 0 0.5 0
     rotation: 0 0 -90
+  shroommid1:
+    duration: 30
+    count: 100
+    corner: 916 65.5 -158
+    item: brown_mushroom
+    bounds: 1 3
+    small: true
+    type: head
+    walls: false
+    ground:
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+    spawnrange: 0 0 0.5 0
+    rotation: 0 0 -90
     forcebuild: true
