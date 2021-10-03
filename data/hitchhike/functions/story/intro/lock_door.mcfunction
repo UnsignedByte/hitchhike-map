@@ -1,8 +1,3 @@
 # lock basement door
-fill 1013 59 64 1013 60 64 barrier replace air
-
-# start the intro if we try to leave
-execute if block 1012 59 64 minecraft:birch_door[facing=west,half=lower,hinge=right,open=true,powered=false] run function hitchhike:story/intro/_close_door
-
-execute if score basement_lock story-intro matches 0 run function hitchhike:story/intro/unlock_door
-execute if score basement_lock story-intro matches 1 run schedule function hitchhike:story/intro/lock_door 1t
+summon magma_cube 1012.5 59.0 64.5 {Size:1,NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,AttachFace:0b,Tags:["basement_lock"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
+summon magma_cube 1012.5 60.0 64.5 {Size:1,NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,AttachFace:0b,Tags:["basement_lock"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
