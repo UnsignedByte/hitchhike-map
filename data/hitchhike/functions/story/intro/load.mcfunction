@@ -1,1 +1,1 @@
-scorebaord objectives add story-intro dummy
+scoreboard objectives add story-intro dummy
