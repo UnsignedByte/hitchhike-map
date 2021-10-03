@@ -135,15 +135,13 @@ export function createNpc (
           CustomName: name
             ? rawJson({ text: name, color: colour, bold: true })
             : null,
-          CustomNameVisible:!!name,
           Duration:2147483647,
           Tags: `["npc", "aec"]`
         })}]`,
       } : {
         CustomName: name
           ? rawJson({ text: name, color: colour, bold: true })
-          : null,
-        CustomNameVisible: false
+          : null
       }))}`,
       `scoreboard players set @e[tag=npc] dialogue-status 0`
     ],
@@ -152,6 +150,9 @@ export function createNpc (
       `tag @a remove ${playerTag}`
     ],
     onTick: [
+      "# make names visible only in range",
+      `execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0`,
+      `execute at @a as @e[tag=npc,distance=..25] run data modify entity @s CustomNameVisible set value 1`,
       "# Start a conversation if it was selected",
       // TODO: Consider `mark` and `if`
       `execute at ${select.selected} run tag @a[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,
