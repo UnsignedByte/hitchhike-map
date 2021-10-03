@@ -744,7 +744,7 @@ itemphysics:
     rotation: 0 0 -90
   lacroix:
     duration: 30
-    count: 10
+    count: 15
     corner: 900 66 -162.5
     item: lacroix
     bounds: 1.5 3
