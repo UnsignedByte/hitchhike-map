@@ -42,7 +42,11 @@ summon minecraft:villager 909.5 64 -152.5 {Rotation: [0f, 0f], Silent: 1b, Invul
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for cashier.
-summon minecraft:villager 891.5 64 -152.5 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-cashier"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Henry","color":"#eb7060","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
+summon minecraft:villager 891.5 64 -152.5 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-cashier"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Henry","color":"#eb7060","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for cameron.
+summon minecraft:villager 944 96.7 17 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-cameron"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Cameron \\"Cam\\" Au-Flauge","color":"#197037","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 scoreboard players reset visitfriend quest-status

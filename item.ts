@@ -42,6 +42,28 @@ export const item = {
       ])}]`
     }
   },
+  spyglass: {
+    id: '"minecraft:spyglass"',
+    tag: {
+      display: {
+        name: rawJson({
+          text: "Cam's Spyglass",
+          color: "gold",
+          bold: true
+        }),
+        Lore: `[${rawJson({
+          text: "Cameron's Spyglass",
+          color: "blue"
+        })}, ${rawJson({
+          text: "Helps you spot",
+          color: "gray"
+        })}, ${rawJson({
+          text: "faraway things.",
+          color: "gray"
+        })}]`
+      }
+    }
+  },
   money:{
     1: {
       id: '"minecraft:nether_brick"',

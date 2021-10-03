@@ -1853,6 +1853,8 @@ tag @a remove victim-of-dialogue-by-melon_sale
 
 tag @a remove victim-of-dialogue-by-cashier
 
+tag @a remove victim-of-dialogue-by-cameron
+
 
 
 
