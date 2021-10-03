@@ -1,3 +1,3 @@
 function hitchhike:story/intro/unlock_door
 scoreboard players set - quest-book-upd 1
-function generated:quests/visitfriend-start
+schedule function generated:quests/visitfriend-start 1t
