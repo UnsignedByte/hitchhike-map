@@ -354,7 +354,7 @@ itemphysics:
     duration: 30
     count: 30
     corner: 916 66 -168
-    item: milk_bucket
+    item: mutton
     bounds: 1 4.5
     small: false
     type: head
