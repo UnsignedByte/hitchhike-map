@@ -507,8 +507,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       next: [{
         seq: {
           cmds: [
-            `particle minecraft:falling_dust oak_planks 1008.5 64.00 59.5 2 0.1 5 0 10 force`,
-            `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 10 force`
+            `particle minecraft:falling_dust oak_planks 1008.5 64.00 59.5 2 0.1 5 0 20 force`,
+            `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 20 force`
           ],
           next: [{
             seq: {
@@ -519,9 +519,27 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               next: [{
                 seq: {
                   cmds: [
-                    `particle minecraft:falling_dust oak_planks 1008.5 64.00 59.5 2 0.1 5 1 5 force`,
+                    `particle minecraft:falling_dust oak_planks 1008.5 64.00 59.5 2 0.1 5 1 20 force`,
                     `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 15 force`
-                  ]
+                  ],
+                  next: [{
+                    seq: {
+                      cmds: [
+                        `particle minecraft:falling_dust oak_planks 1008.5 64.00 59.5 2 0.1 5 1 10 force`,
+                        `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 10 force`
+                      ],
+                      next: [{
+                        seq: {
+                          cmds: [
+                            `particle minecraft:falling_dust oak_planks 1008.5 64.00 59.5 2 0.1 5 1 20 force`,
+                            `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 15 force`
+                          ]
+                        },
+                        wait: 4
+                      }]
+                    },
+                    wait: 9
+                  }]
                 },
                 wait: 5
               }]
