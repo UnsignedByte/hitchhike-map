@@ -508,7 +508,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       {
         seq: {
           cmds: [
-            `function generated:story/intro/_settv`
+            `function generated:story/intro/_settv`,
+            `effect give @a blindness 2 0 true`
           ],
           next: [
             {
