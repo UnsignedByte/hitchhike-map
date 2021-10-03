@@ -743,7 +743,7 @@ itemphysics:
     spawnrange: 0 0.5 0.5 0
     rotation: 0 0 -90
   lacroix:
-    duration: 40
+    duration: 0
     count: 50
     corner: 900 66 -162.5
     item: lacroix
@@ -759,5 +759,5 @@ itemphysics:
       - 0 0 99
       - 0 0 99
     spawnrange: 0.5 0.5 0.5 0
-    rotation: 90 90 0
+    rotation: 90 90 45
     forcebuild: true
