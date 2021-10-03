@@ -384,7 +384,7 @@ export function createQuest (
 
     functions[`quests/tick/${getQ(path)}`].push([
       `scoreboard players operation ${getQ(path)} ${getQ()} /= ${<number>obj.count} const`,
-      `${obj.overflow ? '# ' : ''} execute unless score ${getQ(path)} ${getQ()} matches ..100 run scoreboard players set ${getQ(path)} ${getQ()} 100` // max 100% completion
+      `${obj.overflow ? '# ' : ''}execute unless score ${getQ(path)} ${getQ()} matches ..100 run scoreboard players set ${getQ(path)} ${getQ()} 100` // max 100% completion
     ])
   }
 

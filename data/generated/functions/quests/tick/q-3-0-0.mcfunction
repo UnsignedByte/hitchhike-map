@@ -9,4 +9,4 @@ scoreboard players operation q-3-0-0 q-3 += @a q-3-0-0
 scoreboard players operation q-3-0-0 q-3 *= 100 const
 scoreboard players operation q-3-0-0 q-3 /= playercount vars
 scoreboard players operation q-3-0-0 q-3 /= 3 const
- execute unless score q-3-0-0 q-3 matches ..100 run scoreboard players set q-3-0-0 q-3 100
+execute unless score q-3-0-0 q-3 matches ..100 run scoreboard players set q-3-0-0 q-3 100
