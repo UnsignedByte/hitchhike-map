@@ -190,6 +190,16 @@ npc:
           cond: 5
               
 quest:
+  visitfriend: # visit friend's house
+    name: Phone-A-Friend
+    hint: The internet seems to have gone down, but you don't know why. Luckily, you happen to know a programmer friend, maybe pay him a visit?
+    description: Unlawfully break and enter into your friend's house.
+    condition:
+      type: player
+      all: true
+      condition:
+        - if entity @a[x=947,y=70,z=-3,dz=4,dx=6,dy=3]
+      count: 1
   bread:
     name: Whole Wheat
     hint: Maintain a wheat-based diet (whole). # description to show before the quest is done (optional)

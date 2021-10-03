@@ -1,7 +1,7 @@
-data modify storage generated:quest_book current[0] set value ''
-data modify storage generated:quest_book completed[0] set value '{"text":"","color":"gray","bold":false,"underlined":false,"strikethrough":true,"hoverEvent":{"action":"show_text","contents":{"text":"Eat 5 pieces of bread."}},"extra":[{"text":"Whole Wheat","italic":true}," (100%)"]}'
+data modify storage generated:quest_book current[1] set value ''
+data modify storage generated:quest_book completed[1] set value '{"text":"","color":"gray","bold":false,"underlined":false,"strikethrough":true,"hoverEvent":{"action":"show_text","contents":{"text":"Eat 5 pieces of bread."}},"extra":[{"text":"Whole Wheat","italic":true}," (100%)"]}'
 scoreboard players set @a quest-book-upd -1
 scoreboard players set bread quest-status -1
 scoreboard players set @e[tag=npc-wheatish, limit=1] dialogue-status 2
-scoreboard objectives remove q-0
-scoreboard objectives remove s-0-0
+scoreboard objectives remove q-1
+scoreboard objectives remove s-1-0

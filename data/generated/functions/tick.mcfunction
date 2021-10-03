@@ -162,6 +162,8 @@ tag @a[tag=victim-of-dialogue-by-cashier, tag=!spoken-to, limit=1] remove victim
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-cashier, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cashier, limit=1]
 
+execute if score visitfriend quest-status matches 0.. run function generated:quests/visitfriend-tick
+
 execute if score bread quest-status matches 0.. run function generated:quests/bread-tick
 
 execute if score diet quest-status matches 0.. run function generated:quests/diet-tick

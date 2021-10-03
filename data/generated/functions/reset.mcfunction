@@ -45,19 +45,23 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 891.5 64 -152.5 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-cashier"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Henry","color":"#eb7060","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
-scoreboard players reset bread quest-status
+scoreboard players reset visitfriend quest-status
 scoreboard objectives remove q-0
-scoreboard objectives remove s-0-0
+scoreboard objectives remove q-0-0
+
+scoreboard players reset bread quest-status
+scoreboard objectives remove q-1
+scoreboard objectives remove s-1-0
 
 scoreboard players reset diet quest-status
-scoreboard objectives remove q-1
-scoreboard objectives remove s-1-0-0-0
-scoreboard objectives remove s-1-0-0-1
-scoreboard objectives remove s-1-0-0-2
-scoreboard objectives remove s-1-0-1-0
-scoreboard objectives remove s-1-0-1-1
-scoreboard objectives remove s-1-0-1-2
+scoreboard objectives remove q-2
+scoreboard objectives remove s-2-0-0-0
+scoreboard objectives remove s-2-0-0-1
+scoreboard objectives remove s-2-0-0-2
+scoreboard objectives remove s-2-0-1-0
+scoreboard objectives remove s-2-0-1-1
+scoreboard objectives remove s-2-0-1-2
 
 scoreboard players reset leather quest-status
-scoreboard objectives remove q-2
-scoreboard objectives remove q-2-0-0
+scoreboard objectives remove q-3
+scoreboard objectives remove q-3-0-0
