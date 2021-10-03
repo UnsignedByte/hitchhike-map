@@ -97,7 +97,7 @@ export function createNpc (
     reset: [
       `# Summon the villager for ${id}.`,
       // Summon new villager
-      `summon minecraft:villager ${x} ${y} ${z} ${toSnbt({
+      `summon minecraft:villager ${x} ${y} ${z} ${toSnbt(Object.assign({
         Rotation: `[${rx}f, ${ry}f]`,
         Silent: true,
         Invulnerable: true,
@@ -126,6 +126,10 @@ export function createNpc (
           profession: `"minecraft:${profession}"`,
           level: level
         },
+        // `Offers` is empty to prevent trading
+        Offers: '{}'
+      },
+      invisible ? {
         Passengers:`[${toSnbt({
           id:'area_effect_cloud',
           CustomName: name
@@ -135,9 +139,12 @@ export function createNpc (
           Duration:2147483647,
           Tags: `["npc", "aec"]`
         })}]`,
-        // `Offers` is empty to prevent trading
-        Offers: '{}'
-      })}`,
+      } : {
+        CustomName: name
+          ? rawJson({ text: name, color: colour, bold: true })
+          : null,
+        CustomNameVisible:!!name
+      }))}`,
       `scoreboard players set @e[tag=npc] dialogue-status 0`
     ],
     onLoad: [
