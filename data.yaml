@@ -735,11 +735,11 @@ itemphysics:
     walls: false
     ground:
       - 99 99 99
-      -  0  0 99
-      -  0  0 99
-      -  0  0 99
-      -  0  0 99
-      -  0  0 99
+      - 0 0 99
+      - 0 0 99
+      - 0 0 99
+      - 0 0 99
+      - 0 0 99
     spawnrange: 0 0.5 0.5 0
     rotation: 0 0 -90
     forcebuild: true
