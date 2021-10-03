@@ -5,8 +5,11 @@ gamerule doMobSpawning false
 gamerule mobGriefing false
 gamerule randomTickSpeed 0
 
-# SAFEWAY STUFF
+#> SAFEWAY STUFF
 function hitchhike:safeway/load
+
+#> STORY STUFF
+function hitchhike:story/load
 
 # global clock
 scoreboard objectives add playtime minecraft.custom:minecraft.play_time
