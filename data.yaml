@@ -406,4 +406,27 @@ itemphysics:
       - 0 99
     spawnrange: 0 0.5 0.5 0.5
     rotation: 0 0 -90
+  sweetberrytop1:
+    duration: 30
+    count: 200
+    corner: 916 66.5 -163.5
+    item: sweet_berries
+    bounds: 1 5.5
+    small: true
+    type: head
+    walls: false
+    ground:
+      - 99 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+    spawnrange: 0 0.5 0.5 0.5
+    rotation: 0 0 -90
     forcebuild: true
