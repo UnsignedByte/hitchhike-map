@@ -15,7 +15,7 @@ title @a[scores={quest-book-upd=-1}] actionbar [{"text":"[","color":"light_purpl
 scoreboard players set @a[scores={quest-book-upd=-1}] quest-book-upd 0
 # Kill thrown quest books
 execute as @a if score - quest-book-upd matches 1 unless score @s quest-book-upd matches -2147483648.. run scoreboard players set @s quest-book-upd -2147483648
-execute as @e[type=item,nbt={Item:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] at @s run scoreboard players set @a[nbt=!{Inventory:[{id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] quest-book-upd -2147483648
+execute as @e[type=item,nbt={Item:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] at @s run scoreboard players set @a[sort=nearest,limit=1,nbt=!{Inventory:[{id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] quest-book-upd -2147483648
 kill @e[type=item,nbt={Item:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}]
 # Give new quest book to players who've dropped it
 give @a[scores={quest-book-upd=-2147483648}] minecraft:written_book{display: {Name: '{"text":"Quest Book","color":"light_purple"}'}, resolved: 0b, title: "Quest Book", author: "", pages: ['[{"text":"Current Quests\\n","color":"light_purple","underlined":true,"bold":true},{"nbt":"current[]","storage":"generated:quest_book","interpret":true,"separator":"\\n"}]', '[{"text":"Completed Quests\\n","color":"light_purple","underlined":true,"bold":true},{"nbt":"completed[]","storage":"generated:quest_book","interpret":true,"separator":"\\n"}]']} 1
