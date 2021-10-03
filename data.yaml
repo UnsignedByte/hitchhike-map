@@ -747,7 +747,7 @@ itemphysics:
     duration: 40
     count: 50
     corner: 900 66 -162.5
-    item: monster
+    item: lacroix
     bounds: 1.5 3
     small: false
     type: head
