@@ -429,4 +429,21 @@ itemphysics:
       - 0 99
     spawnrange: 0 0.5 0.5 0.5
     rotation: 0 0 -90
+  potatomid1:
+    duration: 30
+    count: 100
+    corner: 916 65.5 -161
+    item: potato
+    bounds: 1 2.5
+    small: true
+    type: head
+    walls: false
+    ground:
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+    spawnrange: 0 0.5 0.5 0.5
+    rotation: 0 0 -90
     forcebuild: true
