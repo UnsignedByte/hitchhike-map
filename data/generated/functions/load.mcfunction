@@ -1283,4 +1283,3 @@ tag @a remove victim-of-dialogue-by-cashier
 
 
 
-fill 1013 59 64 1013 60 64 barrier replace air

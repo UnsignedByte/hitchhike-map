@@ -490,9 +490,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
   // intro stuff
   (()=> {
-    load.push([
-      `fill 1013 59 64 1013 60 64 barrier replace air` // lock door
-    ])
 
     genseq('intro/start', {
       cmds: [
@@ -505,7 +502,46 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       next: [{
         seq: {
           cmds: [
-            `particle minecraft:falling_dust oak_planks 1008.5 64.00 59.5 2 0.1 5 0 10 force`
+            `particle minecraft:falling_dust oak_planks 1008.5 64.00 59.5 2 0.1 5 0 10 force`,
+            `# remove all light`,
+            `setblock 1005 63 52 air`,
+            `setblock 1011 63 52 air`,
+            `setblock 1011 63 66 air`,
+            `setblock 1005 63 66 air`
+          ],
+          next: [
+            {
+              seq: {
+                cmds: [
+                  `setblock 1005 63 52 redstone_block`
+                ],
+                next: [{
+                  seq: {
+                    cmds: [
+                      `setblock 1005 63 52 air`
+                    ],
+                    next: [{
+                      seq: {
+                        cmds: [
+                          `setblock 1005 63 52 redstone_block`
+                        ]
+                      },
+                      wait: 15
+                    }]
+                  },
+                  wait: 10
+                }]
+              },
+              wait: 20
+            },
+            {
+              seq: {
+                cmds: [
+                  `setblock 1011 63 52 redstone_block`
+                ]
+              },
+              wait: 24
+            }
           ]
         },
         wait: 5
