@@ -428,6 +428,7 @@ itemphysics:
       - 0 99
     spawnrange: 0 0.5 0.5 0.5
     rotation: 0 0 -90
+    forcebuild: true
   potatomid1:
     duration: 30
     count: 200
@@ -464,4 +465,3 @@ itemphysics:
       - 0 99
     spawnrange: 0 0 0.5 0
     rotation: 0 0 -90
-    forcebuild: true
