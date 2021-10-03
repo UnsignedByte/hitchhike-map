@@ -143,7 +143,7 @@ export function createNpc (
         CustomName: name
           ? rawJson({ text: name, color: colour, bold: true })
           : null,
-        CustomNameVisible:!!name
+        CustomNameVisible: false
       }))}`,
       `scoreboard players set @e[tag=npc] dialogue-status 0`
     ],
