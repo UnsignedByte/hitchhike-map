@@ -4,5 +4,5 @@ setblock 1005 63 52 air
 setblock 1011 63 52 air
 setblock 1011 63 66 air
 setblock 1005 63 66 air
-schedule function generated:story/intro/start-0-0 20t
-schedule function generated:story/intro/start-0-1 24t
+schedule function generated:story/intro/start-0-0 8t
+schedule function generated:story/intro/start-0-1 11t
