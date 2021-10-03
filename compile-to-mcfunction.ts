@@ -504,7 +504,16 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `setblock 1005 63 66 air`,
         `playsound minecraft:entity.guardian.attack block @a 1008.5 64.00 59.5 1.3 2`
       ],
-      next: [{
+      next: [
+      {
+        seq: {
+          cmds: [
+            `function generated:story/intro/_settv`
+          ]
+        },
+        wait: 10
+      },
+      {
         seq: {
           cmds: [
             `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 0 20`,

@@ -1,5 +1,7 @@
 scoreboard players reset start story-intro
 
+function generated:story/intro/_resettv
+
 setblock 1005 63 52 redstone_block
 setblock 1011 63 52 redstone_block
 setblock 1011 63 66 redstone_block
