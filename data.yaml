@@ -349,7 +349,7 @@ itemphysics:
     rotation: 0 0 -90
   milktop1:
     duration: 30
-    count: 30
+    count: 2000
     corner: 916 66 -168
     item: milk_bucket
     bounds: 1 4.5
