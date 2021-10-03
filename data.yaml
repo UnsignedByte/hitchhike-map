@@ -385,6 +385,50 @@ itemphysics:
       - 0 0 0 0 0 0
     spawnrange: 0 0.5 0 0
     rotation: 0 0 0
+  rabbitmiddle1:
+    duration: 30
+    count: 30
+    corner: 913 66 -168
+    item: rabbit
+    bounds: 3 1
+    small: false
+    type: head
+    walls: false
+    ground:
+      - 99 99 99 99 99 99
+      - 0 0 0 0 0 0
+    spawnrange: 0 0.5 0 0
+    rotation: 0 0 0
+    forcebuild: true
+  chickenbottom1:
+    duration: 30
+    count: 30
+    corner: 909.5 65 -168
+    item: chicken
+    bounds: 3.5 1
+    small: false
+    type: head
+    walls: false
+    ground:
+      - 99 99 99 99 99 99 99
+      - 99 0 0 0 0 0 0
+    spawnrange: 0 0.5 0 0
+    rotation: 0 0 0
+    forcebuild: true
+  chickenmiddle1:
+    duration: 30
+    count: 30
+    corner: 909.5 66 -168
+    item: chicken
+    bounds: 3.5 1
+    small: false
+    type: head
+    walls: false
+    ground:
+      - 99 99 99 99 99 99 99
+      - 99 0 0 0 0 0 0
+    spawnrange: 0 0.5 0 0
+    rotation: 0 0 0
     forcebuild: true
   carrotbottom1:
     duration: 30
