@@ -1688,6 +1688,7 @@ summon armor_stand 914.24468207 65.71803964 -152.37491129 {Pose: {Head: [-45.968
 summon armor_stand 915.11537005 65.72470512 -152.28251820 {Pose: {Head: [-46.34422213076357f, -170.25282074264314f, -0.5670341061599595f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"sea_pickle", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
 summon armor_stand 913.61485502 65.75259784 -152.31938440 {Pose: {Head: [-46.02137427890951f, -176.74779227689427f, 4.978663733312834f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"sea_pickle", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
 
+summon armor_stand 913.72839812 62.94971479 -152.46215538 {Pose: {Head: [-44.746450587059776f, 179.36840149504718f, 0.000026356590174492328f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"milk_bucket", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
 
 # SET UP ITEM DETECTION
 scoreboard objectives add idetect dummy
