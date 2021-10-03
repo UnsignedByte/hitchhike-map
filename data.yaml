@@ -399,7 +399,6 @@ itemphysics:
       - 0 0 0 0 0 0
     spawnrange: 0 0.5 0 0
     rotation: 0 0 0
-    forcebuild: true
   chickenbottom1:
     duration: 30
     count: 50
@@ -678,3 +677,21 @@ itemphysics:
       - 99 99 99 99 99 99 99
     spawnrange: 0.5 0 0 0.5
     rotation: 0 0 180
+  salmon1:
+    duration: 40
+    count: 40
+    corner: 895.5 65 -168.5
+    item: salmon
+    bounds: 5 2.5
+    small: false
+    type: head
+    walls: false
+    ground:
+      - 99 99 99 99 99 99 99 99 99 99
+      - 99  2  2  2  2  2  2  2  2  2
+      - 99  1  1  1  1  1  1  1  1  1
+      - 99  0  0  0  0  0  0  0  0  0
+      - 99 99 99 99 99 99 99 99 99 99
+    spawnrange: 0.5 0.5 0 0.5
+    rotation: 0 0 0
+    forcebuild: true
