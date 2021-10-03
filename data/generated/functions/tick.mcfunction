@@ -86,25 +86,25 @@ tag @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] remove victi
 execute as @e[tag=npc-wheatish, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-wheatish, limit=1]
 
 # Start a conversation if it was selected
-execute at @e[tag=npc-sean, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-sean
-tag @a[tag=victim-of-dialogue-by-sean, limit=1] remove npc_selector
-tag @e[tag=npc-sean, tag=selected_npc, tag=!speaking, limit=1] add speaking
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] as @e[tag=npc-sean, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/sean/0-0 1t
-execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] add spoken-to
+execute at @e[tag=npc-sawyer, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-sawyer
+tag @a[tag=victim-of-dialogue-by-sawyer, limit=1] remove npc_selector
+tag @e[tag=npc-sawyer, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-sawyer, tag=!spoken-to, limit=1] as @e[tag=npc-sawyer, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/sawyer/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-sawyer, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] as @e[tag=npc-sean, limit=1] if score @s dialogue-status matches 1 run schedule function generated:npc/sean/1-0 1t
-execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] add spoken-to
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-sawyer, tag=!spoken-to, limit=1] as @e[tag=npc-sawyer, limit=1] if score @s dialogue-status matches 1 run schedule function generated:npc/sawyer/1-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-sawyer, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] as @e[tag=npc-sean, limit=1] if score @s dialogue-status matches 2 run schedule function generated:npc/sean/2-0 1t
-execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] add spoken-to
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-sawyer, tag=!spoken-to, limit=1] as @e[tag=npc-sawyer, limit=1] if score @s dialogue-status matches 2 run schedule function generated:npc/sawyer/2-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-sawyer, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
-tag @a[tag=victim-of-dialogue-by-sean, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-sean
+tag @a[tag=victim-of-dialogue-by-sawyer, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-sawyer
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-sean, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sean, limit=1]
+execute as @e[tag=npc-sawyer, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sawyer, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-apple_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-apple_sale

@@ -3,5 +3,4 @@ data modify storage generated:quest_book completed[1] set value '{"text":"","col
 scoreboard players set @a quest-book-upd -1
 scoreboard players set bread quest-status -1
 scoreboard players set @e[tag=npc-wheatish, limit=1] dialogue-status 2
-scoreboard objectives remove q-1
-scoreboard objectives remove s-1-0
+function generated:quests/bread-reset

@@ -25,8 +25,8 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 6 64 18 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-wheatish"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzBkNDE1ZDJlYjlkNjhlNTZkYjUwYWZmNDk0YWJkZWRiODViOTExOTE4OWNmMDFkZDRmOTFjNmRhYjJjNmJhIn19fQ==" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:none", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Mr. Wheat","color":"#c7a946","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
-# Summon the villager for sean.
-summon minecraft:villager 950.5 70 -0.25 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-sean"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWE2MjRmNTk2NmJlZGQ2ZTY3ZjY1NGI1OWU5MjQ5YjJlY2YzMDdkOTAzMzM5YmMxOTk5MjM5NzdmNGM4YyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:librarian", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Sean","color":"#4fa1a7","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
+# Summon the villager for sawyer.
+summon minecraft:villager 950.5 70 -0.25 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-sawyer"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmUwZDhkYmViZTE3YmNhZjIwYThkNmZiYTYyY2JjYWE2YTdlMzRjODEwZjhkNjkxZTViY2MzZmU1NzQ0NzE5NCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:cleric", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Chris Sawyer","color":"#4fa1a7","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for apple_sale.
@@ -46,22 +46,13 @@ summon minecraft:villager 891.5 64 -152.5 {Rotation: [0f, 0f], Silent: 1b, Invul
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 scoreboard players reset visitfriend quest-status
-scoreboard objectives remove q-0
-scoreboard objectives remove q-0-0
+function generated:quests/visitfriend-reset
 
 scoreboard players reset bread quest-status
-scoreboard objectives remove q-1
-scoreboard objectives remove s-1-0
+function generated:quests/bread-reset
 
 scoreboard players reset diet quest-status
-scoreboard objectives remove q-2
-scoreboard objectives remove s-2-0-0-0
-scoreboard objectives remove s-2-0-0-1
-scoreboard objectives remove s-2-0-0-2
-scoreboard objectives remove s-2-0-1-0
-scoreboard objectives remove s-2-0-1-1
-scoreboard objectives remove s-2-0-1-2
+function generated:quests/diet-reset
 
 scoreboard players reset leather quest-status
-scoreboard objectives remove q-3
-scoreboard objectives remove q-3-0-0
+function generated:quests/leather-reset

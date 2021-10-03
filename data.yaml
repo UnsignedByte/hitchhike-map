@@ -94,26 +94,26 @@ npc:
           - I told you it was good!
           - Anyways, see you later! I've gotta go get some for myself.
           cond: 2
-    sean:
-      name: Sean
+    sawyer:
+      name: Chris Sawyer
       colour: 0x4FA1A7
       position: 950.5 70.0 -0.25
       rotation: 0 0
-      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWE2MjRmNTk2NmJlZGQ2ZTY3ZjY1NGI1OWU5MjQ5YjJlY2YzMDdkOTAzMzM5YmMxOTk5MjM5NzdmNGM4YyJ9fX0=
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmUwZDhkYmViZTE3YmNhZjIwYThkNmZiYTYyY2JjYWE2YTdlMzRjODEwZjhkNjkxZTViY2MzZmU1NzQ0NzE5NCJ9fX0=
       villager:
-        type: snow
-        profession: librarian
+        type: savanna
+        profession: cleric
       dialogue:
         - messages:
-          - Didn't care to knock, did you?
-          - Anyways, to what do I owe the pleasure?
+          - You really just broke right in, didn't you?
+          - Anyways, what's up?
           - Hmm, the internet is down...
-          - That might be correlated with the sudden loss of electricity in my house.
+          - That might have something to do with the sudden loss of electricity in my house, or the massive thunderstorm going on outside... who knows?
           - I would recommend you turn it off and on again... your internet, I mean. Not my electricity.
-          - Farewell!
+          - Let me know how that goes!
           end: 1
         - messages:
-            - Greetings again. How'd the internet fixing go? Not great, I presume.
+            - How'd the internet fixing go? Not great, it seems.
             - Unfortunately I am unable to fix the power grid through my computer.
             - message:
               - text: "If you "
@@ -124,14 +124,15 @@ npc:
               - text: "I "
               - text: have
                 italic: true
-              - text: " heard there was a cell tower up on the mountain with its own generator, though that may well be an urban myth."
+              - text: " heard there was a cell tower up on the mountain with its own generator, though that could just be a myth."
           cond: 1
           end: 2
         - messages:
           - Hmm, I'm not sure what else I could do to help.
-          - The mountain is the unmistakeable mass toward the south, if you are having trouble locating it.
-          - I should get on with my typescript.
-          - Farewell again!
+          - The mountain is the unmistakeable mass toward the south, if you can't find it.
+          - Sorry, I'm a bit busy learning x86_64, so I'm afraid I can't go there with you.
+          - I wouldn't mind if you topped something other than the mountain though...
+          - Anyways, see you later!
           cond: 2
           end: -1
     apple_sale:

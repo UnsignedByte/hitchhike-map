@@ -295,6 +295,10 @@ export function createQuest (
     `scoreboard players set @a quest-book-upd -1`,
     `scoreboard players set ${id} quest-status -1`,
     end.map(x=>eval(`\`${x}\``)),
+    `function generated:quests/${id}-reset`
+  ]
+
+  functions[`quests/${id}-reset`] = [
     `scoreboard objectives remove ${getQ()}`
   ]
 
@@ -324,7 +328,7 @@ export function createQuest (
 
         if (obj.condition!.length > 0) {
           functions[`quests/${id}-start`].push(`scoreboard objectives add ${getQ(path)} dummy`);
-          functions[`quests/${id}-end`].push(`scoreboard objectives remove ${getQ(path)}`);
+          functions[`quests/${id}-reset`].push(`scoreboard objectives remove ${getQ(path)}`);
 
           functions[`quests/tick/${getQ(path)}`].push([
             `scoreboard players set @a ${getQ(path)} 0`,
@@ -335,7 +339,7 @@ export function createQuest (
 
         if (obj.stat! !== 'dummy') {
           functions[`quests/${id}-start`].push(`scoreboard objectives add ${getQ(path, "s")} ${obj.stat}`);
-          functions[`quests/${id}-end`].push(`scoreboard objectives remove ${getQ(path, "s")}`);
+          functions[`quests/${id}-reset`].push(`scoreboard objectives remove ${getQ(path, "s")}`);
           functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path, "s")}`)
         }
 
@@ -392,7 +396,7 @@ export function createQuest (
 
   reset = [
     `scoreboard players reset ${id} quest-status`,
-    functions[`quests/${id}-end`].slice(5)
+    `function generated:quests/${id}-reset`
   ]
 
   return {
@@ -735,6 +739,25 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         },
         wait: 12
       }]
+    })
+
+    addfunc('intro/_settv', [
+      [...Array(6).keys()].map(x=>
+        `data modify entity @e[x=1005,dx=0,y=${61 - x % 2},dy=0,z=${60 - Math.floor(x / 2)},dz=0,limit=1] Item.tag.map set value ${292+x}`
+      )
+    ])
+
+    addfunc('intro/_resettv', [
+      [...Array(6).keys()].map(x=>
+        `data modify entity @e[x=1005,dx=0,y=${61 - x % 2},dy=0,z=${60 - Math.floor(x / 2)},dz=0,limit=1] Item.tag.map set value ${286+x}`
+      )
+    ])
+  })();
+
+  // brandon stuff
+  (()=> {
+
+    genseq('brandon/entry', {
     })
 
     addfunc('intro/_settv', [
