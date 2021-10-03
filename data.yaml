@@ -329,7 +329,7 @@ itemphysics:
   milkbottom1:
     duration: 30
     count: 10
-    corner: 915.5 65 -168
+    corner: 915 65 -168
     item: milk_bucket
     bounds: 2 4.5
     small: false
