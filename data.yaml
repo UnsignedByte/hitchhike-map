@@ -191,7 +191,7 @@ npc:
     cameron:
       name: Cameron "Cam" Au-Flauge
       position: 944.3 96.8 17.3
-      rotation: 140 40
+      rotation: 140 35
       colour: 0x197037
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWI4NDE4YzQ2MWY2M2Q2YWFkMzkzMmE2MzlmY2UzZmVjMjI3YTM3NzRhNTliODUxZmZiZTY1NTg3NGViNzkxIn19fQ==
       villager:
@@ -200,15 +200,15 @@ npc:
       dialogue:
         - messages:
           - Whoa! How'd you find me here?
-          - Darn, I thought I had the perfect hiding spot...
-          - I can't believe I didn't see you coming up here.
-          - Wait, you're not part of the game?
+          - Darn, I thought I had the perfect hiding spot... I guess I've lost then. I can't believe I didn't see you coming up here.
+          - Wait, are you not part of the game?
           - Sweet! Can you keep quiet about finding me here? I'm sure nobody else will be able to.
           - Hmm, what can I give you as incentive...
           - message:
             - text: Here, take my spyglass. If you were able to sneak up on me while I was using it, it clearly isnt helping much, anyways.
             command:
               - "give ${select.player} ${toGive(item.spyglass)}"
+          - If you happen to stumble across anyone else, tell them Cam found them so I can win!
           - Remember, there was nobody here.
           end: -1
 
