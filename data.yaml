@@ -710,11 +710,11 @@ itemphysics:
     spawnrange: 0 0.5 0 0
     rotation: 0 0 0
     forcebuild: true
-  cod1:
+  pufferfish1:
     duration: 40
     count: 50
     corner: 905 65.5 -168.5
-    item: cod
+    item: pufferfish
     bounds: 4.5 1.5
     small: false
     type: head
