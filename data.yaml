@@ -329,22 +329,22 @@ itemphysics:
   milkbottom1:
     duration: 30
     count: 20
-    corner: 915 65 -168
+    corner: 915.5 65 -168
     item: milk_bucket
-    bounds: 2 4.5
+    bounds: 1.5 4.5
     small: false
     type: head
     walls: false
     ground:
-      - 99 99 99 99
-      - 0 0 0 99
-      - 0 0 0 99
-      - 99 0 0 99
-      - 99 0 0 99
-      - 99 0 0 99
-      - 99 0 0 99
-      - 99 0 0 99
-      - 99 99 99 99
-    spawnrange: 0.5 0.5 0.5 0.5
+      - 99 99 99
+      - 0 0 99
+      - 0 0 99
+      - 0 0 99
+      - 0 0 99
+      - 0 0 99
+      - 0 0 99
+      - 0 0 99
+      - 99 99 99
+    spawnrange: 0 0.5 0.5 0.5
     rotation: 0 0 -90
     forcebuild: true
