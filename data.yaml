@@ -694,4 +694,19 @@ itemphysics:
       # - 99 99 99 99 99 99 99 99 99 99
     spawnrange: 0.5 0.5 0 0
     rotation: 0 0 0
+  tropicalfish1:
+    duration: 40
+    count: 30
+    corner: 900.5 65.5 -168.5
+    item: tropical_fish
+    bounds: 4.5 1.5
+    small: false
+    type: head
+    walls: false
+    ground:
+      - 99 99 99 99 99 99 99 99 99
+      -  1  1  1  1  1  1  1  1  1
+      -  0  0  0  0  0  0  0  0  0
+    spawnrange: 0 0.5 0 0
+    rotation: 0 0 0
     forcebuild: true

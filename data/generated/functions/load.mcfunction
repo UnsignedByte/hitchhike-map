@@ -1767,6 +1767,11 @@ summon armor_stand 899.96599152 63.67102918 -167.01126735 {Pose: {Head: [-9.5033
 summon armor_stand 898.51841100 63.64144387 -167.18265342 {Pose: {Head: [-0.9071410227175848f, 0.2834828001094009f, 3.690107445233843f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"salmon", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
 summon armor_stand 899.84137419 63.77059646 -166.66759888 {Pose: {Head: [-23.657483782235232f, 2.7357937361695277f, -0.000835316834835616f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"salmon", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
 
+summon armor_stand 902.70217937 63.73362956 -167.13633506 {Pose: {Head: [-2.3264536791360118f, 9.178572111422655f, 14.543433702386917f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"tropical_fish", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
+summon armor_stand 902.54638980 63.67050754 -167.01923841 {Pose: {Head: [-9.432884550745198f, 17.651989036744506f, 0.0010567517176019205f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"tropical_fish", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
+summon armor_stand 901.14119681 63.63786300 -167.13824068 {Pose: {Head: [-3.8974701508645837f, 1.6846033300621461f, -0.00012617178369810197f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"tropical_fish", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
+summon armor_stand 902.09540824 63.67355410 -167.06132457 {Pose: {Head: [-9.90628091508995f, -10.369567913637523f, -0.00018173963237705476f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"tropical_fish", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
+
 # SET UP ITEM DETECTION
 scoreboard objectives add idetect dummy
 scoreboard objectives add i0detect dummy
