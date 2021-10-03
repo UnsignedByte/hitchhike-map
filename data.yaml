@@ -371,7 +371,20 @@ itemphysics:
       - 99 99
     spawnrange: 0 0.5 0.5 0.5
     rotation: 0 0 -90
-    forcebuild: true
+  porkbottom1:
+    duration: 30
+    count: 30
+    corner: 913 66 -168
+    item: porkchop
+    bounds: 3 1
+    small: false
+    type: head
+    walls: false
+    ground:
+      - 99 99 99 99 99 99
+      - 0 0 0 0 0 0
+    spawnrange: 0 0.5 0 0.5
+    rotation: 0 0 0
   carrotbottom1:
     duration: 30
     count: 200
@@ -580,7 +593,6 @@ itemphysics:
       - 99 99
     spawnrange: 0 0.5 0.5 0.5
     rotation: 0 0 -90
-    forcebuild: true
   pickletop1:
     duration: 30
     count: 100
