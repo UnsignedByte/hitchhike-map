@@ -297,7 +297,6 @@ itemphysics:
       - 99 99 99 99 99 99 99 99
     spawnrange: 0.5 0.5 0.5 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset),
     rotation: 0 0 -90
-    forcebuild: true
   groceryApples:
     duration: 40 # physics simulation duration in seconds
     count: 100 # number of items
@@ -358,6 +357,27 @@ itemphysics:
     item: milk_bucket
     bounds: 1 4.5
     small: false
+    type: head
+    walls: false
+    ground:
+      - 99 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 99 99
+    spawnrange: 0 0.5 0.5 0.5
+    rotation: 0 0 -90
+  carrotbottom1:
+    duration: 30
+    count: 200
+    corner: 916 63.5 -163.5
+    item: carrot
+    bounds: 1 4.5
+    small: true
     type: head
     walls: false
     ground:
