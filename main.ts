@@ -114,9 +114,7 @@ export async function init (
       '',
       '# Clear quest book from all players.',
       'clear @a minecraft:written_book{title:"Quest Book"}',
-      '# Give new quest book',
-      `give @a ${toGive(item.quest_book)}`,
-      Object.values(item.money).map(x=>`give @a ${toGive(x, 64)}`),
+      // Object.values(item.money).map(x=>`give @a ${toGive(x, 64)}`),
       reset
     )
   )
@@ -214,6 +212,10 @@ export async function init (
         }
       ])}`,
       `scoreboard players set @a[scores={quest-book-upd=-1}] quest-book-upd 0`,
+      '# Give new quest book to players who\'ve dropped it',
+      `give @a[scores={quest-book-upd=-1..},nbt=!{Inventory:[{id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] ${toGive(item.quest_book)}`,
+      `# Kill thrown quest books`,
+      `kill @e[type=item,nbt={Item:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}]`,
       `execute as @a[scores={quest-book-upd=0},nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] store result score @s quest-book-upd run item modify entity @s weapon.mainhand generated:update_quest_book`,
       `execute as @a[scores={quest-book-upd=0},nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] store result score @s quest-book-upd run item modify entity @s weapon.offhand generated:update_quest_book`,
       '',
