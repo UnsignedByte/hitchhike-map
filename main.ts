@@ -114,6 +114,8 @@ export async function init (
       '',
       '# Clear quest book from all players.',
       'clear @a minecraft:written_book{title:"Quest Book"}',
+      `scoreboard players remove quest-book-upd`,
+      `scoreboard players add quest-book-upd dummy`,
       // Object.values(item.money).map(x=>`give @a ${toGive(x, 64)}`),
       reset
     )
@@ -136,8 +138,6 @@ export async function init (
       'scoreboard objectives add quest-status-old dummy',
       '',
       `# set up quest book`,
-      'kill @e[tag=quest_book]',
-      `scoreboard objectives remove quest-book-upd`,
       `scoreboard objectives add quest-book-upd dummy`,
       `data modify storage generated:quest_book current set value ${JSON.stringify(Array(questCount).fill(""))}`,
       `data modify storage generated:quest_book completed set value ${JSON.stringify(Array(questCount).fill(""))}`,
