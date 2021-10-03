@@ -499,4 +499,45 @@ itemphysics:
       - 0 99
     spawnrange: 0 0 0.5 0
     rotation: 0 0 -90
+  bamboomid1:
+    duration: 30
+    count: 100
+    corner: 916 64.5 -155
+    item: bamboo
+    bounds: 1 4
+    small: true
+    type: head
+    walls: false
+    ground:
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 99 99
+    spawnrange: 0 0 0.5 0.5
+    rotation: 0 0 -90
+    forcebuild: true
+  kelpmid1:
+    duration: 30
+    count: 100
+    corner: 916 65.5 -155
+    item: kelp
+    bounds: 1 4
+    small: true
+    type: head
+    walls: false
+    ground:
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 99 99
+    spawnrange: 0 0 0.5 0.5
+    rotation: 0 0 -90
     forcebuild: true
