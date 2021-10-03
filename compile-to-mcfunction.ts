@@ -164,7 +164,7 @@ export function createNpc (
           });
           // # of vowels (≈ syllables) * 5 ticks/vowel
           const fulltext = message.message.map(x=>x.text || '').join("");
-          const duration = (fulltext.match(/[aiueo]/gi)?.length ?? 4) * 8
+          const duration = (fulltext.match(/[aiueo]/gi)?.length ?? 4) * 7
           const broadcastTargets = message.global ? '@a' : select.eavesdropper;
           functions[`${indexToFuncName(i)}`] = [
             `# Dialogue line #${idx}-${i + 1}: speak and make noise.`,

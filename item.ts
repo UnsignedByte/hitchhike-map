@@ -46,7 +46,7 @@ export const item = {
     id: '"minecraft:spyglass"',
     tag: {
       display: {
-        name: rawJson({
+        Name: rawJson({
           text: "Cam's Spyglass",
           color: "gold",
           bold: true
