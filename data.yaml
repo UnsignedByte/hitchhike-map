@@ -106,7 +106,7 @@ npc:
           - You really just broke right in, didn't you?
           - Anyways, what's up?
           - Hmm, the internet is down...
-          - That might have something to do with the sudden loss of electricity in my house, or the massive thunderstorm going on outside... who knows?
+          - That might have something to do with the sudden loss of electricity in my house, or the massive thunderstorm that's been passing by... who knows?
           - I would recommend you turn it off and on again... your internet, I mean. Not my electricity.
           - Let me know how that goes!
           end: 1
@@ -133,6 +133,15 @@ npc:
           - Anyways, see you later!
           cond: 2
           end: -1
+    simon:
+      name: Simon Ursus Stephens
+      colour: 0x85deb1
+      position: 939.5 68 195.0
+      rotation: 90 15
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Q0ZjNhMDk3YjgyZGVjODBhMzZkYzRhODkxNmI4MWVmZWZhZGFlM2ExNDU1NTMxODI5NjliNDA5OTYwMGIxZSJ9fX0=
+      villager:
+        type: snow
+        profession: librarian
     apple_sale:
       name: "Glow Berry (${toCost(item.store.unsold.glow_berries.tag.cost)})"
       invisible: true
@@ -208,7 +217,7 @@ npc:
             - text: Here, take my spyglass. If you were able to sneak up on me while I was using it, it clearly isnt helping much, anyways.
             command:
               - "give ${select.player} ${toGive(item.spyglass)}"
-          - If you happen to stumble across anyone else, tell them Cam found them so I can win!
+          - I wonder if you'll accidentally stumble across anyone else.
           - Remember, there was nobody here.
           end: -1
 

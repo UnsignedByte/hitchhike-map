@@ -4,6 +4,7 @@ gamerule doDaylightCycle false
 gamerule doMobSpawning false
 gamerule mobGriefing false
 gamerule randomTickSpeed 0
+gamerule doWeatherCycle false
 
 #> SAFEWAY STUFF
 function hitchhike:safeway/load

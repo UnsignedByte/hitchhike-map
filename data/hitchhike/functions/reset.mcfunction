@@ -1,5 +1,5 @@
-# weather thunder 1000000
-# time set 23000
+weather rain 1000000
+time set 23000
 
 function generated:reset
 

@@ -520,6 +520,24 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       {
         seq: {
           cmds: [
+            `# Stop rain after sunrise`,
+            `weather clear 1000000`
+          ]
+        },
+        wait: 1500
+      },
+      {
+        seq: {
+          cmds: [
+            `# Stop daylight cycle at noon`,
+            `gamerule doDaylightCycle false`
+          ]
+        },
+        wait: 7000
+      },
+      {
+        seq: {
+          cmds: [
             `function generated:story/intro/_settv`,
             `effect give @a blindness 2 0 true`,
             `playsound minecraft:entity.lightning_bolt.thunder weather @a 1008.46 100.00 59.65 100 0.6`,

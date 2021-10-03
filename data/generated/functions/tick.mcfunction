@@ -125,6 +125,18 @@ execute as @e[tag=npc-sawyer, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facin
 execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
 execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
+execute at @e[tag=npc-simon, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-simon
+tag @a[tag=victim-of-dialogue-by-simon, limit=1] remove npc_selector
+tag @e[tag=npc-simon, tag=selected_npc, tag=!speaking, limit=1] add speaking
+tag @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-simon
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-simon, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-simon, limit=1]
+
+# make names visible only in range
+execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
+execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
+# Start a conversation if it was selected
 execute at @e[tag=npc-apple_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-apple_sale
 tag @a[tag=victim-of-dialogue-by-apple_sale, limit=1] remove npc_selector
 tag @e[tag=npc-apple_sale, tag=selected_npc, tag=!speaking, limit=1] add speaking

@@ -1845,6 +1845,8 @@ tag @a remove victim-of-dialogue-by-wheatish
 
 tag @a remove victim-of-dialogue-by-sawyer
 
+tag @a remove victim-of-dialogue-by-simon
+
 tag @a remove victim-of-dialogue-by-apple_sale
 
 tag @a remove victim-of-dialogue-by-berry_sale
