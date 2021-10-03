@@ -518,7 +518,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               seq: {
                 cmds: [
                   `function hitchhike:story/intro/unlock_door`,
-                  `scoreboard players set - quest-book-upd 1`
+                  `scoreboard players set - quest-book-upd 1`,
+                  `function generated:quests/visitfriend-start`
                 ]
               },
               wait: 100
