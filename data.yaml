@@ -387,7 +387,7 @@ itemphysics:
     rotation: 0 0 0
   rabbitmiddle1:
     duration: 30
-    count: 30
+    count: 50
     corner: 913 66 -168
     item: rabbit
     bounds: 3 1
@@ -402,7 +402,7 @@ itemphysics:
     forcebuild: true
   chickenbottom1:
     duration: 30
-    count: 30
+    count: 50
     corner: 909.5 65 -168
     item: chicken
     bounds: 3.5 1
@@ -417,7 +417,7 @@ itemphysics:
     forcebuild: true
   chickenmiddle1:
     duration: 30
-    count: 30
+    count: 50
     corner: 909.5 66 -168
     item: chicken
     bounds: 3.5 1
