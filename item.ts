@@ -167,7 +167,7 @@ export const item = {
           cost: 500,
           display:{
             Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
-            Lore:`['{"text":"The energy drink for","color":"dark_green"}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
+            Lore:`['{"text":"The energy drink for","color":"dark_green","bold":false}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
           },
           HideFlags:127,
           CustomPotionEffects:`[${toSnbt(
@@ -177,6 +177,24 @@ export const item = {
             {Id:'16b',Amplifier:'0b',Duration:400})}]`,
           Potion:`"minecraft:thick"`,
           CustomPotionColor:846663
+        }
+      },
+      lacroix: {
+        id:'"minecraft:potion"',
+        tag:{
+          cost: 1000,
+          display:{
+            Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true}'`,
+            Lore:`['{"text":"Water for people","color":"aqua","italic":false}','{"text":"who hate money","color":"aqua"}','{"text":"(and water).","color":"aqua"}']`
+          },
+          HideFlags:127,
+          CustomPotionEffects:`[${toSnbt(
+            {Id:'2b',Amplifier:'0b',Duration:200})}, ${toSnbt(
+            {Id:'4b',Amplifier:'1b',Duration:400})}, ${toSnbt(
+            {Id:'15b',Amplifier:'0b',Duration:20})}, ${toSnbt(
+            {Id:'18b',Amplifier:'9b',Duration:1200})}]`,
+          Potion:`"minecraft:awkward"`,
+          CustomPotionColor:2799851
         }
       }
     }
