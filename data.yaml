@@ -376,14 +376,12 @@ itemphysics:
     count: 200
     corner: 916 64.5 -163.5
     item: carrot
-    bounds: 1 4.5
+    bounds: 1 3.5
     small: true
     type: head
     walls: false
     ground:
       - 99 99
-      - 0 99
-      - 0 99
       - 0 99
       - 0 99
       - 0 99
