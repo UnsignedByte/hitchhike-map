@@ -169,6 +169,7 @@ export const item = {
             Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
             Lore:`['{"text":"The energy drink for","color":"dark_green"}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
           },
+          HideFlags:127,
           CustomPotionEffects:`[${toSnbt(
             {Id:'3b',Amplifier:'1b',Duration:600})}, ${toSnbt(
             {Id:'9b',Amplifier:'0b',Duration:200})}, ${toSnbt(
