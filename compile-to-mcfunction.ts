@@ -481,8 +481,34 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     functions[`story/${src}`] = cmds;
   }
 
+  function genseq(src: string, seq: any) {
+    console.log(src, seq);
+    addfunc(src, [...(seq.cmds ?? []), ...(seq.next ?? []).map((x: any, i: number)=>{
+      genseq(`${src}-${i}`, x.seq);
+      return `schedule function generated:story/${src}-${i} ${x.wait}t`
+    })])
+  }
+
   // intro stuff
   (()=> {
+    genseq('intro/start', {
+      cmds: [
+        `gamerule doDaylightCycle true`,
+        `playsound minecraft:entity.lightning_bolt.thunder weather @a 1038.06 123.00 231.74 100 1.0`,
+        `playsound minecraft:entity.lightning_bolt.thunder weather @a 1192.00 178.00 470.72 100 0.3`,
+        `playsound minecraft:entity.lightning_bolt.thunder weather @a 944.78 72.00 -137.30 100 0.5`,
+        `weather rain`
+      ],
+      next: [{
+        seq: {
+          cmds: [
+            `particle minecraft:falling_dust oak_planks 1008.5 64.00 59.5 2 0.1 5 0 10 force`
+          ]
+        },
+        wait: 2
+      }]
+    })
+
     addfunc('intro/_settv', [
       [...Array(6).keys()].map(x=>
         `data modify entity @e[x=1005,dx=0,y=${61 - x % 2},dy=0,z=${60 - Math.floor(x / 2)},dz=0,limit=1] Item.tag.map set value ${292+x}`
