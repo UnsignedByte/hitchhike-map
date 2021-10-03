@@ -374,7 +374,7 @@ itemphysics:
   carrotbottom1:
     duration: 30
     count: 200
-    corner: 916 63.5 -163.5
+    corner: 916 64.5 -163.5
     item: carrot
     bounds: 1 4.5
     small: true
