@@ -114,8 +114,8 @@ export async function init (
       '',
       '# Clear quest book from all players.',
       'clear @a minecraft:written_book{title:"Quest Book"}',
-      `scoreboard players remove quest-book-upd`,
-      `scoreboard players add quest-book-upd dummy`,
+      `scoreboard objectives remove quest-book-upd`,
+      `scoreboard objectives add quest-book-upd dummy`,
       // Object.values(item.money).map(x=>`give @a ${toGive(x, 64)}`),
       reset
     )
