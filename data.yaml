@@ -449,7 +449,7 @@ itemphysics:
   potatobottom1:
     duration: 30
     count: 200
-    corner: 916 64.5 -161.5
+    corner: 916 64.5 -160.5
     item: potato
     bounds: 1 3
     small: true
