@@ -728,7 +728,7 @@ itemphysics:
     duration: 40
     count: 50
     corner: 900 64.5 -162.5
-    item: monster
+    item: glass_pane
     bounds: 1.5 3
     small: false
     type: head
