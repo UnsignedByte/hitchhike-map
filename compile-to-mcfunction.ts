@@ -559,7 +559,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   wait: 3
                 }]
               },
-              wait: 5
+              wait: 8
             },
             {
               seq: {
@@ -599,7 +599,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   wait: 5
                 }]
               },
-              wait: 8
+              wait: 12
             },
             {
               seq: {
@@ -639,7 +639,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   wait: 14
                 }]
               },
-              wait: 11
+              wait: 16
             },
             {
               seq: {
@@ -679,7 +679,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   wait: 8
                 }]
               },
-              wait: 11
+              wait: 14
             },
             {
               seq: {
@@ -723,7 +723,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             }
           ]
         },
-        wait: 10
+        wait: 12
       }]
     })
 
