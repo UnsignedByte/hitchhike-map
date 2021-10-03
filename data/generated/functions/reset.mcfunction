@@ -26,7 +26,7 @@ summon minecraft:villager 6 64 18 {Rotation: [180f, 0f], Silent: 1b, Invulnerabl
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for sawyer.
-summon minecraft:villager 950.5 70 -0.25 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-sawyer"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmUwZDhkYmViZTE3YmNhZjIwYThkNmZiYTYyY2JjYWE2YTdlMzRjODEwZjhkNjkxZTViY2MzZmU1NzQ0NzE5NCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:cleric", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Chris Sawyer","color":"#4fa1a7","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
+summon minecraft:villager 950.5 70 -0.25 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-sawyer"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWFkMTNmN2Q4ZTVhMTBmNGZiYThiODk3NTVlZGVkNzBmYzk2MTE5YTRlOThkZjc3M2M4NmQzMmNmN2E3ZjNlZiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:cleric", level: 99}, Passengers: [{id: area_effect_cloud, CustomName: '{"text":"Chris Sawyer","color":"#4fa1a7","bold":true}', CustomNameVisible: 1b, Duration: 2147483647, Tags: ["npc", "aec"]}], Offers: {}}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for apple_sale.

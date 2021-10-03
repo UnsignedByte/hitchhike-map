@@ -99,7 +99,7 @@ npc:
       colour: 0x4FA1A7
       position: 950.5 70.0 -0.25
       rotation: 0 0
-      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmUwZDhkYmViZTE3YmNhZjIwYThkNmZiYTYyY2JjYWE2YTdlMzRjODEwZjhkNjkxZTViY2MzZmU1NzQ0NzE5NCJ9fX0=
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWFkMTNmN2Q4ZTVhMTBmNGZiYThiODk3NTVlZGVkNzBmYzk2MTE5YTRlOThkZjc3M2M4NmQzMmNmN2E3ZjNlZiJ9fX0=
       villager:
         type: savanna
         profession: cleric
