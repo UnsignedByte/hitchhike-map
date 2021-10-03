@@ -154,7 +154,7 @@ export async function init (
       `kill @e[tag=item_holder]`,
       Object.entries(data.itemphysics).map(([k, v])=>{
         let data: Lines;
-        if (k in cache.itemphysics) {
+        if (k in cache.itemphysics && v.forcebuild == false) {
           data = cache.itemphysics[k];
         } else {
           data = generate_pile(v);

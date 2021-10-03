@@ -26,7 +26,9 @@ export function generate_pile (
 		ground = [],
 		type,
 		small,
-		walls
+		walls,
+		forcebuild,
+		rotation
 	}: ItemPhysics
 	): string[] {
 	const cornerV = new CANNON.Vec3(...corner);
@@ -62,7 +64,7 @@ export function generate_pile (
 			return []
 	}
 
-	return simulate_pile(bounds, spawnrange, count, ground, duration, s, walls).map(x=>{
+	return simulate_pile(bounds, spawnrange, rotation, count, ground, duration, s, walls).map(x=>{
 		x.quaternion = new CANNON.Quaternion().setFromEuler(x.rotation.x, x.rotation.y, x.rotation.z, 'ZYX');
 		x.rotation.scale(180/Math.PI, x.rotation);
 
@@ -89,7 +91,7 @@ export function generate_pile (
 	})
 }
 
-function simulate_pile(bounds: number[], spawnrange: number[], count: number, ground: number[][], duration: number, s: number, walls: boolean = true) {
+function simulate_pile(bounds: number[], spawnrange: number[], rotation: number[], count: number, ground: number[][], duration: number, s: number, walls: boolean = true) {
 	let world = new CANNON.World({
     gravity: new CANNON.Vec3(0,-9.8,0)
 	});
@@ -202,7 +204,7 @@ function simulate_pile(bounds: number[], spawnrange: number[], count: number, gr
 			shape: new CANNON.Box(new CANNON.Vec3(s/2, s/2, s/32)),
 			material: itemMat,
 			position: randPos(),
-			quaternion: new CANNON.Quaternion().setFromEuler(- Math.PI/2, 0, 0)
+			quaternion: new CANNON.Quaternion().setFromEuler(rotation[0] * Math.PI/180 - Math.PI/2, rotation[1] * Math.PI/180, rotation[2] * Math.PI/180)
 			// position: new CANNON.Vec3(bounds[0], i+5,bounds[1]),
 			// quaternion: new CANNON.Quaternion().setFromEuler(2*Math.PI/count*i-Math.PI, 2*Math.PI/count*i-Math.PI, 2*Math.PI/count*i-Math.PI, 'YZX')
 		})

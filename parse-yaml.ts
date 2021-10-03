@@ -228,7 +228,9 @@ const itemphysicsSchema = z.object({
   type: z.union([
     z.literal('head'),
     z.literal('hand')
-  ]).default('head')
+  ]).default('head'),
+  forcebuild: z.boolean().default(false),
+  rotation: nplet(3).default("0 0 0")
 })
 
 export type ItemPhysics = z.infer<typeof itemphysicsSchema>
