@@ -332,7 +332,7 @@ itemphysics:
     corner: 915.5 65 -168
     item: milk_bucket
     bounds: 1.5 4.5
-    small: true
+    small: false
     type: head
     walls: false
     ground:
