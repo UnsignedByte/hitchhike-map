@@ -501,7 +501,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `setblock 1005 63 52 air`,
         `setblock 1011 63 52 air`,
         `setblock 1011 63 66 air`,
-        `setblock 1005 63 66 air`
+        `setblock 1005 63 66 air`,
+        `playsound minecraft:entity.guardian.attack block @a 1008.5 64.00 59.5 1.3 2`
       ],
       next: [{
         seq: {
@@ -566,7 +567,23 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                 seq: {
                   cmds: [
                     `setblock 1011 63 52 redstone_block`
-                  ]
+                  ],
+                  next: [{
+                    seq: {
+                      cmds: [
+                        `setblock 1011 63 52 air`
+                      ],
+                      next: [{
+                        seq: {
+                          cmds: [
+                            `setblock 1011 63 52 redstone_block`
+                          ]
+                        },
+                        wait: 12
+                      }]
+                    },
+                    wait: 5
+                  }]
                 },
                 wait: 9
               }]
@@ -575,6 +592,46 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           }]
         },
         wait: 11
+      },
+      {
+        seq: {
+          cmds: [
+            `setblock 1011 63 66 redstone_block`
+          ],
+          next: [{
+            seq: {
+              cmds: [
+                `setblock 1011 63 66 air`
+              ],
+              next: [{
+                seq: {
+                  cmds: [
+                    `setblock 1011 63 66 redstone_block`
+                  ],
+                  next: [{
+                    seq: {
+                      cmds: [
+                        `setblock 1011 63 66 air`
+                      ],
+                      next: [{
+                        seq: {
+                          cmds: [
+                            `setblock 1011 63 66 redstone_block`
+                          ]
+                        },
+                        wait: 12
+                      }]
+                    },
+                    wait: 5
+                  }]
+                },
+                wait: 9
+              }]
+            },
+            wait: 7
+          }]
+        },
+        wait: 13
       }]
     })
 
