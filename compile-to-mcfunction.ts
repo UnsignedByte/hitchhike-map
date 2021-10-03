@@ -509,7 +509,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         seq: {
           cmds: [
             `function generated:story/intro/_settv`,
-            `effect give @a blindness 2 0 true`
+            `effect give @a blindness 2 0 true`,
+            `playsound minecraft:entity.lightning_bolt.thunder weather @a 1008.46 100.00 59.65 100 0.6`,
+            `playsound minecraft:entity.lightning_bolt.thunder weather @a 1051.32 72.00 46.34 100 1.2`
           ],
           next: [
             {
