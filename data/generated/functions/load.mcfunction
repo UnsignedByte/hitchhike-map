@@ -1271,6 +1271,9 @@ summon armor_stand 915.76828190 63.21234836 -164.69458636 {Pose: {Head: [-15.754
 summon armor_stand 915.95204699 63.15871977 -166.24447305 {Pose: {Head: [-7.502681379039022f, 84.0016450730504f, -0.00156929301641303f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"milk_bucket", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
 summon armor_stand 915.78434288 63.21107962 -165.13339939 {Pose: {Head: [-15.565208773562217f, 82.2381492808605f, 0.012493363937310832f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"milk_bucket", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
 
+summon armor_stand 915.36929592 64.75033034 -166.68952735 {Pose: {Head: [-79.27856197438868f, 95.33182536794038f, 1.0887599478831336f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"milk_bucket", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
+summon armor_stand 915.07855508 64.71853872 -165.78926171 {Pose: {Head: [-78.17179572978881f, 70.55871883944938f, 0.1599778665920762f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"milk_bucket", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
+summon armor_stand 915.23644521 64.72779423 -165.89297700 {Pose: {Head: [-78.22240508911439f, 74.46277374344672f, 0.9387121358064354f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"milk_bucket", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
 
 # SET UP ITEM DETECTION
 scoreboard objectives add idetect dummy
