@@ -539,4 +539,31 @@ itemphysics:
       - 99 99
     spawnrange: 0 0 0.5 0.5
     rotation: 0 0 -90
+  sugarcanetop1:
+    duration: 30
+    count: 300
+    corner: 916 66.5 -158
+    item: sugar_cane
+    bounds: 1 7
+    small: true
+    type: head
+    walls: false
+    ground:
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 0 99
+      - 99 99
+    spawnrange: 0 0.5 0.5 0.5
+    rotation: 0 0 -90
     forcebuild: true
