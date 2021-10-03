@@ -7,7 +7,7 @@ execute as @a[nbt={Inventory:[{tag:{sold:0b}}]},x=893,z=-151,dx=3,dz=1,y=64,dy=3
 # kill thrown items out of safeway
 execute as @e[type=item,nbt={Item:{tag:{sold:0b}}}] unless entity @s[x=882,z=-168,dx=35,dz=17,y=64,dy=32] run kill @s
 # unsold items die after 10 seconds, to avoid stuck items, etc.
-execute as @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}},Age:0},x=882,z=-168,dx=35,dz=17,y=64,dy=32] unless entity @s[type=item,x=889,dx=1,z=-154,y=65,dy=0] run data modify entity @s Age set value 5800
+execute as @e[type=item,tag=!paying,nbt={Item:{tag:{sold:0b}},Age:0s},x=882,z=-168,dx=35,dz=17,y=64,dy=32] unless entity @s[type=item,x=889,dx=1,z=-154,y=65,dy=0] run data modify entity @s Age set value 5800
 
 # PAYMENT MANAGER
 # move items over
