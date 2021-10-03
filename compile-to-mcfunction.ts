@@ -131,7 +131,7 @@ export function createNpc (
           CustomName: name
             ? rawJson({ text: name, color: colour, bold: true })
             : null,
-          CustomNameVisible: false,
+          // CustomNameVisible: false,
           Duration:2147483647,
           Tags: `["npc", "aec"]`
         })}]`,
