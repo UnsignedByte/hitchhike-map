@@ -594,4 +594,4 @@ itemphysics:
       - 99 99 99 99 99 99 99
     spawnrange: 0.5 0 0 0.5
     rotation: 0 0 180
-    forcebuild: true
+    # forcebuild: true
