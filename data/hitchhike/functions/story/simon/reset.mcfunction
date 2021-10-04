@@ -1,5 +1,5 @@
 # set door to closed state
-clone 935 60 188 936 62 190 938 64 188
+clone 935 60 188 936 62 190 936 64 188
 
 scoreboard players set -door story-simon 0
 scoreboard players set -held story-simon 0

@@ -144,11 +144,11 @@ npc:
         profession: librarian
       dialogue:
         - messages:
-            - "HEY! What are you doing on my driveway??"
-            - message: "Get off my property! I'll call the police on you, I WILL."
+            - message: "HEY! What are you doing on my driveway??"
               command:
                 - 'summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}'
                 - 'scoreboard players set -held story-simon 1'
+            - "Get off my property! I'll call the police on you, I WILL."
             - "What, you want to go up the mountain? You must think that's really easy, huh."
             - message: "You don't look at all prepared to go up that mountain, and you can bet I won't be letting you through MY property unless you are properly prepared."
               globaL: true
@@ -161,9 +161,20 @@ npc:
                   value: diet
                 - type: quest
                   value: preparedness
-            - "Remember, you better not come back until you are truly prepared."
+            - message: "Remember, you better not come back until you are truly prepared."
+              command:
+                - "scoreboard players set -held story-simon 0"
+                - "kill @e[tag=simon-holder]"
+                - "tp ${select.self} 922.5 64 195.0"
             # - "You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?"
           cond: 1
+          end: 2
+        - messages:
+            - What did I tell you? Don't come back until you're done preparing.
+            - How many times should I say it to get it through your thick skull?
+            - Ugh, whatever. I have nothing more to say to you.
+          cond: 2
+          end: -1
     apple_sale:
       name: "Glow Berry (${toCost(item.store.unsold.glow_berries.tag.cost)})"
       invisible: true
