@@ -1,3 +1,3 @@
 kill @e[tag=car]
 
-scoreboard players set speed car 5
+scoreboard players set speed car 10
