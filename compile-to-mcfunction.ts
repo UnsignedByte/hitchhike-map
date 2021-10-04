@@ -93,11 +93,13 @@ export function createNpc (
 
   const functions: Record<string, Lines> = {}
 
+  const nts = (num: number): string => num.toFixed(Math.max(2, (num.toString().split('.')[1] || []).length));
+
   return {
     reset: [
       `# Summon the villager for ${id}.`,
       // Summon new villager
-      `summon minecraft:villager ${x} ${y} ${z} ${toSnbt(Object.assign({
+      `summon minecraft:villager ${nts(x)} ${y} ${nts(z)} ${toSnbt(Object.assign({
         Rotation: `[${rx}f, ${ry}f]`,
         Silent: true,
         Invulnerable: true,
