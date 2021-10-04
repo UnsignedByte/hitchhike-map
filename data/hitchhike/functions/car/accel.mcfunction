@@ -9,7 +9,7 @@ scoreboard players operation @s car-acc -= 45000 const
 
 # we want only between 0 and 30k (beyond that is max acceleration/reverse)
 execute if score @s car-acc matches 1.. run scoreboard players set @s car-acc 0
-execute if score @s car-acc matches ..-75001 run scoreboard players set @s car-acc -75000
+execute if score @s car-acc matches ..-50001 run scoreboard players set @s car-acc -50000
 
 # normalize to between 0 and 1000
-scoreboard players operation @s car-acc /= -75 const
+scoreboard players operation @s car-acc /= -50 const
