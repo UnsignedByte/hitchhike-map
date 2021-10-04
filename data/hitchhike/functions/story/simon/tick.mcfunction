@@ -1,1 +1,1 @@
-execute if score -held story-simon matches 1 at @e[tag=simon-holder,limit=1] run tp @e[tag=npc-simon] ~ ~30 ~
+execute if score -held story-simon matches 1 at @e[tag=simon-holder,limit=1] run tp @e[tag=npc-simon] ~ ~30 ~ ~90 0
