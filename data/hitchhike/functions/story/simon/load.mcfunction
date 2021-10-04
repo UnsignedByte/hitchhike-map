@@ -1,0 +1,1 @@
+scoreboard objectives add story-simon dummy

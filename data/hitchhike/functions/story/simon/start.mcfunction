@@ -1,0 +1,1 @@
+scoreboard players set start story-simon 1

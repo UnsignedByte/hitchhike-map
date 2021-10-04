@@ -136,12 +136,34 @@ npc:
     simon:
       name: Simon Ursus Stephens
       colour: 0x85deb1
-      position: 939.5 68 195.00
+      position: 939.25 68 195.00
       rotation: 90 15
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Q0ZjNhMDk3YjgyZGVjODBhMzZkYzRhODkxNmI4MWVmZWZhZGFlM2ExNDU1NTMxODI5NjliNDA5OTYwMGIxZSJ9fX0=
       villager:
         type: snow
         profession: librarian
+      dialogue:
+        - messages:
+            - "HEY! What are you doing on my driveway??"
+            - message: "Get off my property! I'll call the police on you, I WILL."
+              command:
+                - 'summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}'
+                - 'scoreboard players set -held story-simon 1'
+            - "What, you want to go up the mountain? You must think that's really easy, huh."
+            - message: "You don't look at all prepared to go up that mountain, and you can bet I won't be letting you through MY property unless you are properly prepared."
+              globaL: true
+              command:
+                - type: quest
+                  value: picnic
+                - type: quest
+                  value: leather
+                - type: quest
+                  value: diet
+                - type: quest
+                  value: preparedness
+            - "Remember, you better not come back until you are truly prepared."
+            # - "You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?"
+          cond: 1
     apple_sale:
       name: "Glow Berry (${toCost(item.store.unsold.glow_berries.tag.cost)})"
       invisible: true
@@ -245,8 +267,8 @@ quest:
       - type: score
         value: ${npc.wheatish} dialogue-status 2
   diet:
-    name: Balanced Diet
-    description: Eat ${condition.value[1].count} pieces of meat (cooked, of course) and ${condition.value[0].count} vegetables
+    name: Full Stomach
+    description: Fill your stomach! Remember to keep a balanced diet.
     condition:
       type: nest # listed values are also condition objects
       value:
@@ -279,7 +301,11 @@ quest:
               stat: minecraft.used:minecraft.cooked_chicken
               count: 1
               overflow: true
-          count: 5
+            - type: player
+              stat: minecraft.used:minecraft.rabbit
+              count: 1
+              overflow: true
+          count: 3
   leather:
     name: Dressing Warm
     description: Wear 3 pieces of leather armor.

@@ -152,9 +152,6 @@ export function createNpc (
       `tag @a remove ${playerTag}`
     ],
     onTick: [
-      "# make names visible only in range",
-      `execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0`,
-      `execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1`,
       "# Start a conversation if it was selected",
       // TODO: Consider `mark` and `if`
       `execute at ${select.selected} run tag @a[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,

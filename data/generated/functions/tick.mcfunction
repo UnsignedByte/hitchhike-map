@@ -5,6 +5,10 @@ execute as @a run scoreboard players add playercount vars 1
 # Detect right clicks
 execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc
 scoreboard players set @a npc-interact 0
+# make names visible only in range
+execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
+execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
+
 # update entities with special tags
 execute as @e[type=villager,tag=baby] run data modify entity @s Age set value -2
 effect give @e[tag=invisible] minecraft:invisibility 2 0 true
@@ -21,9 +25,6 @@ execute as @a[scores={quest-book-upd=0},nbt={SelectedItem:{id:"minecraft:written
 execute as @a[scores={quest-book-upd=0},nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] store result score @s quest-book-upd run item modify entity @s weapon.offhand generated:update_quest_book
 
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-billy, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-billy
 tag @a[tag=victim-of-dialogue-by-billy, limit=1] remove npc_selector
@@ -37,9 +38,6 @@ tag @a[tag=victim-of-dialogue-by-billy, tag=!spoken-to, limit=1] remove victim-o
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-billy, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-billy, limit=1]
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-sam, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-sam
 tag @a[tag=victim-of-dialogue-by-sam, limit=1] remove npc_selector
@@ -53,9 +51,6 @@ tag @a[tag=victim-of-dialogue-by-sam, tag=!spoken-to, limit=1] remove victim-of-
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-sam, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sam, limit=1]
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-marc, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-marc
 tag @a[tag=victim-of-dialogue-by-marc, limit=1] remove npc_selector
@@ -73,9 +68,6 @@ tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] remove victim-of
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-marc, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-marc, limit=1]
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-wheatish, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-wheatish
 tag @a[tag=victim-of-dialogue-by-wheatish, limit=1] remove npc_selector
@@ -97,9 +89,6 @@ tag @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] remove victi
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-wheatish, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-wheatish, limit=1]
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-sawyer, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-sawyer
 tag @a[tag=victim-of-dialogue-by-sawyer, limit=1] remove npc_selector
@@ -121,21 +110,19 @@ tag @a[tag=victim-of-dialogue-by-sawyer, tag=!spoken-to, limit=1] remove victim-
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-sawyer, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sawyer, limit=1]
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-simon, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-simon
 tag @a[tag=victim-of-dialogue-by-simon, limit=1] remove npc_selector
 tag @e[tag=npc-simon, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] as @e[tag=npc-simon, limit=1] if score @s dialogue-status matches 1 run schedule function generated:npc/simon/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
 tag @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-simon
 
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-simon, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-simon, limit=1]
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-apple_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-apple_sale
 tag @a[tag=victim-of-dialogue-by-apple_sale, limit=1] remove npc_selector
@@ -149,9 +136,6 @@ tag @a[tag=victim-of-dialogue-by-apple_sale, tag=!spoken-to, limit=1] remove vic
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-apple_sale, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-apple_sale, limit=1]
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-berry_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-berry_sale
 tag @a[tag=victim-of-dialogue-by-berry_sale, limit=1] remove npc_selector
@@ -165,9 +149,6 @@ tag @a[tag=victim-of-dialogue-by-berry_sale, tag=!spoken-to, limit=1] remove vic
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-berry_sale, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-berry_sale, limit=1]
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-melon_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-melon_sale
 tag @a[tag=victim-of-dialogue-by-melon_sale, limit=1] remove npc_selector
@@ -181,9 +162,6 @@ tag @a[tag=victim-of-dialogue-by-melon_sale, tag=!spoken-to, limit=1] remove vic
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-melon_sale, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-melon_sale, limit=1]
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-cashier, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-cashier
 tag @a[tag=victim-of-dialogue-by-cashier, limit=1] remove npc_selector
@@ -201,9 +179,6 @@ tag @a[tag=victim-of-dialogue-by-cashier, tag=!spoken-to, limit=1] remove victim
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-cashier, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cashier, limit=1]
 
-# make names visible only in range
-execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
-execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
 # Start a conversation if it was selected
 execute at @e[tag=npc-cameron, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-cameron
 tag @a[tag=victim-of-dialogue-by-cameron, limit=1] remove npc_selector
