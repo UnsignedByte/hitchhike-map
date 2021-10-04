@@ -17,5 +17,8 @@ scoreboard players operation -oZ car *= @s car-acc
 scoreboard players operation -vX car += -oX car
 scoreboard players operation -vZ car += -oZ car
 
+scoreboard players operation -vX car *= speed car
+scoreboard players operation -vZ car *= speed car
+
 execute store result entity @s Motion[0] double 0.000001 run scoreboard players get -vX car
 execute store result entity @s Motion[2] double 0.000001 run scoreboard players get -vZ car
