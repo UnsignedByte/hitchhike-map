@@ -7,3 +7,6 @@ execute as @e[tag=car-rider] at @s positioned ~ ~0.35 ~ as @e[tag=car-root,sort=
 
 # handle actual calculation of movement.
 execute as @e[tag=car-root] at @s run function hitchhike:car/move
+
+# Render the car
+execute as @e[tag=car-root] at @s run function hitchhike:car/render
