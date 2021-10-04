@@ -93,7 +93,10 @@ export async function init (
 
   let numericConstants: Set<number> = new Set();
 
-  for (let i = -1; i <= 1000; i++) numericConstants.add(i)
+  for (let i = -1000; i <= 1000; i++) {
+    numericConstants.add(i); // -1000 to 1000
+    numericConstants.add(1000*i); // -1M to 1M in increments of 1k
+  }
   for (let i = 0; i <= 9; i++) numericConstants.add(Math.pow(10,i)) // add powers of 10 to 1 billion
   for (let i = 0; i <= 30; i++) numericConstants.add(Math.pow(2,i)) // add powers of 2 to 2^30
 
