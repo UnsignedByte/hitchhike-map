@@ -10,4 +10,4 @@ execute if score @s car-acc matches 15001.. run scoreboard players set @s car-ac
 execute if score @s car-acc matches ..-15001 run scoreboard players set @s car-acc -15000
 
 # normalize to between -1000 and 1000
-scoreboard players operation @s car-acc /= -15000 const
+scoreboard players operation @s car-acc /= -15 const
