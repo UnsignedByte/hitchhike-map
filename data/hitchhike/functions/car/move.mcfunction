@@ -11,6 +11,9 @@ scoreboard players operation -oZ car -= -Z car
 scoreboard players operation -oX car *= @s car-acc
 scoreboard players operation -oZ car *= @s car-acc
 
+scoreboard players operation -oX car /= 100 const
+scoreboard players operation -oZ car /= 100 const
+
 scoreboard players operation -oX car *= speed car
 scoreboard players operation -oZ car *= speed car
 
