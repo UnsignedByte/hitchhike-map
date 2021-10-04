@@ -18,8 +18,8 @@ scoreboard players operation -oX car *= speed car
 scoreboard players operation -oZ car *= speed car
 
 # Friction
-scoreboard players operation @s car-velX *= 90 const
-scoreboard players operation @s car-velZ *= 90 const
+scoreboard players operation @s car-velX *= 80 const
+scoreboard players operation @s car-velZ *= 80 const
 
 scoreboard players operation @s car-velX /= 100 const
 scoreboard players operation @s car-velZ /= 100 const
