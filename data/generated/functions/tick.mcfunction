@@ -36,7 +36,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-billy, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-billy
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-billy, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-billy, limit=1]
+execute as @e[tag=npc-billy, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-billy, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-sam, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-sam
@@ -49,7 +49,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-sam, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-sam
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-sam, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sam, limit=1]
+execute as @e[tag=npc-sam, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sam, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-marc, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-marc
@@ -66,7 +66,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-marc, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-marc
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-marc, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-marc, limit=1]
+execute as @e[tag=npc-marc, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-marc, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-wheatish, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-wheatish
@@ -87,7 +87,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-wheatish, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-wheatish
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-wheatish, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-wheatish, limit=1]
+execute as @e[tag=npc-wheatish, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-wheatish, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-sawyer, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-sawyer
@@ -108,7 +108,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-sawyer, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-sawyer
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-sawyer, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sawyer, limit=1]
+execute as @e[tag=npc-sawyer, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sawyer, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-simon, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-simon
@@ -125,7 +125,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-simon
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-simon, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-simon, limit=1]
+execute as @e[tag=npc-simon, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-simon, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-apple_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-apple_sale
@@ -138,7 +138,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-apple_sale, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-apple_sale
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-apple_sale, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-apple_sale, limit=1]
+execute as @e[tag=npc-apple_sale, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-apple_sale, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-berry_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-berry_sale
@@ -151,7 +151,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-berry_sale, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-berry_sale
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-berry_sale, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-berry_sale, limit=1]
+execute as @e[tag=npc-berry_sale, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-berry_sale, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-melon_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-melon_sale
@@ -164,7 +164,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-melon_sale, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-melon_sale
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-melon_sale, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-melon_sale, limit=1]
+execute as @e[tag=npc-melon_sale, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-melon_sale, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-cashier, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-cashier
@@ -181,7 +181,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-cashier, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-cashier
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-cashier, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cashier, limit=1]
+execute as @e[tag=npc-cashier, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cashier, limit=1]
 
 # Start a conversation if it was selected
 execute at @e[tag=npc-cameron, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-cameron
@@ -194,7 +194,7 @@ scoreboard players set dialogue-begun dialogue-status 0
 tag @a[tag=victim-of-dialogue-by-cameron, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-cameron
 
 # While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-cameron, tag=speaking, limit=1] at @s run tp @s ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cameron, limit=1]
+execute as @e[tag=npc-cameron, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cameron, limit=1]
 
 execute if score visitfriend quest-status matches 0.. run function generated:quests/visitfriend-tick
 

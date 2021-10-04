@@ -211,7 +211,7 @@ export function createNpc (
       `tag ${select.newPlayer} remove ${playerTag}`, //if dialogue failed, remove the playertag
       '',
       '# While in a conversation, make eye contact with the player.',
-      `execute as ${select.speaking} at @s run tp @s ~ ~ ~ facing entity ${select.player}`
+      `execute as ${select.speaking} at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity ${select.player}`
     ],
     functions
   }
