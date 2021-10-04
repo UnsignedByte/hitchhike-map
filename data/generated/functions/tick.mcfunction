@@ -203,5 +203,7 @@ execute if score bread quest-status matches 0.. run function generated:quests/br
 execute if score diet quest-status matches 0.. run function generated:quests/diet-tick
 
 execute if score leather quest-status matches 0.. run function generated:quests/leather-tick
+
+execute if score picnic quest-status matches 0.. run function generated:quests/picnic-tick
 tag @a remove npc_selector
 tag @e[tag=npc] remove selected_npc

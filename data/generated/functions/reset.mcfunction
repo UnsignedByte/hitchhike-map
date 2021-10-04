@@ -64,3 +64,6 @@ function generated:quests/diet-reset
 
 scoreboard players reset leather quest-status
 function generated:quests/leather-reset
+
+scoreboard players reset picnic quest-status
+function generated:quests/picnic-reset

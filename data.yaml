@@ -332,6 +332,22 @@ quest:
             - if entity @s[nbt={Inventory:[{Slot:102b, id:"minecraft:leather_chestplate"}]}]
             - if entity @s[nbt={Inventory:[{Slot:103b, id:"minecraft:leather_helmet"}]}]
           count: 3
+  picnic:
+    name: Picnic Packing
+    description: Bring a picnic of healthy foods with you.
+    hint: Make sure you have enough food for a mid-hike snack!
+    condition:
+      type: player
+      condition: # each condition in the list, when satisfied, will increment the score by 1. think of each condition as in `execute as @a at @s <conditions> run`
+        - if entity @s[nbt={Inventory:[{id:"minecraft:milk_bucket"}]}]
+        - if entity @s[nbt={Inventory:[{id:"minecraft:bread"}]}]
+        - if entity @s[nbt={Inventory:[{id:"minecraft:apple"}]}]
+        - if entity @s[nbt={Inventory:[{id:"minecraft:melon_slice"}]}]
+        - if entity @s[nbt={Inventory:[{id:"minecraft:sweet_berries"}]}]
+        - if entity @s[nbt={Inventory:[{id:"minecraft:glow_berries"}]}]
+        - if entity @s[nbt={Inventory:[{id:"minecraft:cookie"}]}]
+        - if entity @s[nbt={Inventory:[{id:"minecraft:dried_kelp"}]}]
+      count: 5
 
 itemphysics:
   # - duration: 20 # physics simulation duration in seconds
