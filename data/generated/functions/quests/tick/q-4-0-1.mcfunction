@@ -7,4 +7,4 @@ scoreboard players operation q-4-0-1 q-4 /= playercount vars
 scoreboard players operation q-4-0-1 q-4 *= 100 const
 scoreboard players operation q-4-0-1 q-4 *= 1 const
 scoreboard players operation q-4-0-1 q-4 /= 100 const
-execute unless score q-4-0-1 q-4 matches ..100 run scoreboard players set q-4-0-1 q-4 100
+execute unless score q-4-0-1 q-4 matches ..1 run scoreboard players set q-4-0-1 q-4 1

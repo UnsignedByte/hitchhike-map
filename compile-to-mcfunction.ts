@@ -397,11 +397,13 @@ export function createQuest (
         break;
     }
 
+    console.log(obj);
+
     functions[`quests/tick/${getQ(path)}`].push([
       `scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`,
-      `scoreboard players operation ${getQ(path)} ${getQ()} *= ${<number>obj.weight} const`,
-      `scoreboard players operation ${getQ(path)} ${getQ()} /= ${<number>obj.count} const`,
-      `${obj.overflow ? '# ' : ''}execute unless score ${getQ(path)} ${getQ()} matches ..100 run scoreboard players set ${getQ(path)} ${getQ()} 100` // max 100% completion
+      `scoreboard players operation ${getQ(path)} ${getQ()} *= ${obj.weight} const`,
+      `scoreboard players operation ${getQ(path)} ${getQ()} /= ${obj.count} const`,
+      `${obj.overflow ? '# ' : ''}execute unless score ${getQ(path)} ${getQ()} matches ..${obj.weight} run scoreboard players set ${getQ(path)} ${getQ()} ${obj.weight}` // max weight% completion
     ])
   }
 
