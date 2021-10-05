@@ -201,7 +201,7 @@ const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
     value: z.array(questConditionSchema),
     count: z.number().int().default(-1)
   }).transform(x=>{
-    if (x.count == -1) x.count = x.value.length;
+    if (x.count == -1) x.count = x.value.reduce((i, x)=>i+x.weight!, 0);
     return x;
   }),
   z.object({
