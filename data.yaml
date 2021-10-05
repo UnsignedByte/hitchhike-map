@@ -137,7 +137,7 @@ npc:
       name: Simon Ursus Stephens
       colour: 0x85deb1
       position: 939.25 68 195.00
-      rotation: 90 0
+      rotation: 90 15
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Q0ZjNhMDk3YjgyZGVjODBhMzZkYzRhODkxNmI4MWVmZWZhZGFlM2ExNDU1NTMxODI5NjliNDA5OTYwMGIxZSJ9fX0=
       villager:
         type: snow
@@ -149,7 +149,7 @@ npc:
                 - '# Set correct rail path'
                 - 'setblock 945 39 194 minecraft:rail[shape=east_west,waterlogged=false]'
                 - "setblock 911 34 194 minecraft:stone"
-                - 'setblock 922 34 194 minecraft:powered_rail[powered=false,shape=north_south,waterlogged=false]'
+                - 'setblock 912 34 194 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
                 - 'summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'

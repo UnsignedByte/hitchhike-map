@@ -30,7 +30,7 @@ summon minecraft:villager 950.50 70 -0.25 {Rotation: [0f, 0f], Silent: 1b, Invul
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for simon.
-summon minecraft:villager 939.25 68 195.00 {Rotation: [90f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-simon"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Q0ZjNhMDk3YjgyZGVjODBhMzZkYzRhODkxNmI4MWVmZWZhZGFlM2ExNDU1NTMxODI5NjliNDA5OTYwMGIxZSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:librarian", level: 99}, Offers: {}, CustomName: '{"text":"Simon Ursus Stephens","color":"#85deb1","bold":true}'}
+summon minecraft:villager 939.25 68 195.00 {Rotation: [90f, 15f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-simon"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Q0ZjNhMDk3YjgyZGVjODBhMzZkYzRhODkxNmI4MWVmZWZhZGFlM2ExNDU1NTMxODI5NjliNDA5OTYwMGIxZSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:librarian", level: 99}, Offers: {}, CustomName: '{"text":"Simon Ursus Stephens","color":"#85deb1","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for apple_sale.
