@@ -375,8 +375,8 @@ export function createQuest (
         ])
         break;
       case 'nest':
-        if (obj.count == -1) obj.count = obj.value.reduce((i, x)=>i+x.weight!, 0);
-        
+        if (obj.count == -1) obj.count = obj.value.reduce((i, x)=>i+x.weight!, 0)/100;
+
         for (let i = 0; i < (<QuestCondition[]>obj.value!).length; i++) {
           const npath = [...path, i];
 
