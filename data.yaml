@@ -164,7 +164,7 @@ npc:
                 - "kill @e[tag=simon-holder]"
                 - "${tp(912.0, 64, 194.5, 180, 0)}"
             - "What, you want to go up the mountain? You must think that's really easy, huh."
-            - message: "You don't look at all prepared to go up that mountain, and you can bet I won't be letting you through MY property unless you are properly prepared."
+            - message: "You don't look at all prepared to go up that mountain, and you can bet I won't be letting you through MY property until you are."
               globaL: true
               command:
                 - type: quest
@@ -175,8 +175,7 @@ npc:
                   value: diet
                 - type: quest
                   value: preparedness
-            - message: "Remember, you better not come back until you are truly prepared."
-            # - "You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?"
+            - message: "Remember, you better not come back until you're actuall ready to go up."
           cond: 1
           end: 2
         - messages:

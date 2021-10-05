@@ -193,7 +193,7 @@ export function createNpc (
               `> `,
               ...message.message
             ])}`,
-            `${message.silent ? '# silent // ' : ''}execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets}`,
+            `${message.silent ? '# silent // ' : ''}execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets} 100`,
             message.command.map(x=>eval(`\`${x}\``)),
             `schedule function ${namespace}:${
               i === dialogue.messages.length - 1
@@ -380,8 +380,8 @@ export function createQuest (
           // add update functions to tick
 
           functions[`quests/tick/${getQ(path)}`].push([
-            `scoreboard players operation ${getQ(npath)} ${getQ()} *= 100 const`,
-            `scoreboard players operation ${getQ(npath)} ${getQ()} /= ${(<QuestCondition[]>obj.value!)[i].weight} const`,
+            `scoreboard players operation ${getQ(npath)} ${getQ()} *= ${(<QuestCondition[]>obj.value!)[i].weight} const`,
+            `scoreboard players operation ${getQ(npath)} ${getQ()} /= 100 const`,
             `scoreboard players operation ${getQ(path)} ${getQ()} += ${getQ(npath)} ${getQ()}`
           ])
 

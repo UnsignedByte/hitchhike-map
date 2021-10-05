@@ -1,6 +1,6 @@
 # Dialogue line #0-1: speak and make noise.
 execute at @e[tag=npc-simon, limit=1] run tellraw @a[distance=..50] ["<",{"text":"Simon Ursus Stephens","color":"#85deb1","bold":true},"> ",{"text":"HEY! What are you doing on my driveway? In fact, what are you doing HERE?"}]
-execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.ambient player @a[distance=..50]
+execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.ambient player @a[distance=..50] 100
 # Set correct rail path
 setblock 945 39 194 minecraft:rail[shape=east_west,waterlogged=false]
 setblock 911 34 194 minecraft:stone
