@@ -361,7 +361,6 @@ export function createQuest (
         }
 
         functions[`quests/tick/${getQ(path)}`].push(<string[]>obj.value) //custom lines
-        functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`)
         if (<boolean>obj.all) functions[`quests/tick/${getQ(path)}`].push(`scoreboard players operation ${getQ(path)} ${getQ()} /= playercount vars`)
 
         functions[`quests/${id}-tick`].push(
@@ -371,7 +370,6 @@ export function createQuest (
       case 'cond':
         functions[`quests/tick/${getQ(path)}`].push([
           (<string[]>obj.value).map(x=>`execute ${x} run scoreboard players add ${getQ(path)} ${getQ()} 1`),
-          `scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`
         ])
         break;
       case 'nest':
@@ -400,6 +398,7 @@ export function createQuest (
     }
 
     functions[`quests/tick/${getQ(path)}`].push([
+      `scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`,
       `scoreboard players operation ${getQ(path)} ${getQ()} *= ${<number>obj.weight} const`,
       `scoreboard players operation ${getQ(path)} ${getQ()} /= ${<number>obj.count} const`,
       `${obj.overflow ? '# ' : ''}execute unless score ${getQ(path)} ${getQ()} matches ..100 run scoreboard players set ${getQ(path)} ${getQ()} 100` // max 100% completion
