@@ -153,6 +153,7 @@ npc:
                 - 'summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
+            - You definitely should not be all the way up here. This is private!
             - message: "Get off my property! I'll call the police on you, I WILL."
               command:
                 - "scoreboard players set -held story-simon 0"
@@ -201,8 +202,24 @@ npc:
                 italic: true
               - text: " but didn't even ask to confirm after I accidentally clicked OK. Who does that??"
             - Anyways, it's right here in this drawer. Take that card and get it fixed up, and once I can get the map in your hands you can go right on up the mountain.
+            - message:
+              - text: "And while you're at it, get me some water. Not any water: I want "
+              - text: La Croix Sparkling Water
+                bold: true
+                italic: true
+                color: dark_aqua
+              - text: Don't give me any of that "processed tap water" or "mineral water".
+            - What, you don't want to? You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?
+            - Freeloaders, I say, FREELOADERS. That's what you are. I won't stand for it. The least you could do is get me a drink.
+            - I better not see you back here without it.
           cond: 3
           end: 4
+        - messages:
+            - What are you doing back here? I told you I don't let freeloaders on my land.
+            - Don't come back until you have exactly what I want.
+            - Good-Bye.
+          cond: 4
+          end: -1
     apple_sale:
       name: "Glow Berry (${toCost(item.store.unsold.glow_berries.tag.cost)})"
       invisible: true

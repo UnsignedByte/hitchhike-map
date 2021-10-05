@@ -122,7 +122,11 @@ execute store success score dialogue-begun dialogue-status if entity @a[tag=vict
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] as @e[tag=npc-simon, limit=1] if score @s dialogue-status matches 3 run schedule function generated:npc/simon/2-0 1t
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] as @e[tag=npc-simon, limit=1] if score @s dialogue-status matches 3 run schedule function generated:npc/simon/2-00 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] as @e[tag=npc-simon, limit=1] if score @s dialogue-status matches 4 run schedule function generated:npc/simon/3-0 1t
 execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] add spoken-to
 scoreboard players set dialogue-begun dialogue-status 0
 

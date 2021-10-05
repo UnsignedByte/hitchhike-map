@@ -7,4 +7,4 @@ setblock 922 34 194 minecraft:powered_rail[powered=true,shape=ascending_west,wat
 summon minecart 922 34 194 {Silent:1,Tags:["simon-holder"]}
 tag @e[tag=npc-simon, limit=1] add npc-unface
 scoreboard players set -held story-simon 1
-schedule function generated:npc/simon/2-5 105t
+schedule function generated:npc/simon/2-05 105t
