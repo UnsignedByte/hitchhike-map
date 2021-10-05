@@ -102,7 +102,7 @@ export function createNpc (
     rx = rtx;
     ry = rty;
 
-    return `tp ${select.self} ${x} ${y} ${z} ${rx} ${ry}`;
+    return `tp ${select.self} ${nts(x)} ${y} ${nts(z)} ${rx} ${ry}`;
   }
 
   return {
