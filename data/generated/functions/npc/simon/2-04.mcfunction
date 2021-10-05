@@ -6,5 +6,5 @@ setblock 911 34 194 minecraft:redstone_block
 setblock 912 34 194 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]
 summon minecart 912 34 194 {Silent:1,Tags:["simon-holder"]}
 tag @e[tag=npc-simon, limit=1] add npc-unface
-scoreboard players set -held story-simon 1
+scoreboard players set -held story-simon -1
 schedule function generated:npc/simon/2-05 105t

@@ -19,8 +19,9 @@ function generated:quests/tick/q-3-0-2-3
 scoreboard players set - q-3 0
 execute if score q-3-0-2-0 q-3 = oq-3-0-2-0 q-3 if score q-3-0-2-1 q-3 = oq-3-0-2-1 q-3 if score q-3-0-2-2 q-3 = oq-3-0-2-2 q-3 if score q-3-0-2-3 q-3 = oq-3-0-2-3 q-3 run scoreboard players set - q-3 1
 execute if score - q-3 matches 0 run function generated:quests/tick/q-3-0-2
+function generated:quests/tick/q-3-0-3
 scoreboard players set - q-3 0
-execute if score q-3-0-0 q-3 = oq-3-0-0 q-3 if score q-3-0-1 q-3 = oq-3-0-1 q-3 if score q-3-0-2 q-3 = oq-3-0-2 q-3 run scoreboard players set - q-3 1
+execute if score q-3-0-0 q-3 = oq-3-0-0 q-3 if score q-3-0-1 q-3 = oq-3-0-1 q-3 if score q-3-0-2 q-3 = oq-3-0-2 q-3 if score q-3-0-3 q-3 = oq-3-0-3 q-3 run scoreboard players set - q-3 1
 execute if score - q-3 matches 0 run function generated:quests/tick/q-3-0
 scoreboard players set - q-3 0
 execute if score q-3-0 q-3 = oq-3-0 q-3 run scoreboard players set - q-3 1

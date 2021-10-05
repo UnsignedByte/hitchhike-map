@@ -109,6 +109,7 @@ npc:
           - That might have something to do with the sudden loss of electricity in my house, or the massive thunderstorm that's been passing by... who knows?
           - I would recommend you turn it off and on again... your internet, I mean. Not my electricity.
           - Let me know how that goes!
+          cond: 3
           end: 1
         - messages:
             - How'd the internet fixing go? Not great, it seems.
@@ -150,6 +151,7 @@ npc:
                 - 'setblock 945 39 194 minecraft:rail[shape=east_west,waterlogged=false]'
                 - "setblock 911 34 194 minecraft:stone"
                 - 'setblock 912 34 194 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
+                - 'setblock 937 34 190 minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=none]'
                 - 'summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
@@ -195,7 +197,7 @@ npc:
                 - 'setblock 912 34 194 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]'
                 - 'summon minecart 912 34 194 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
-                - 'scoreboard players set -held story-simon 1'
+                - 'scoreboard players set -held story-simon -1'
             - I have an old SD card from a while ago that contains a nice map of the hiking trail up the mountain.
             - message:
               - text: "Unfortunately, it corrupted when windows formatted it without even asking me! I mean, it did ask me "
@@ -209,9 +211,9 @@ npc:
                 bold: true
                 italic: true
                 color: dark_aqua
-              - text: Don't give me any of that "processed tap water" or "mineral water".
+              - text: ". Don't give me any of that \"processed tap water\" or \"mineral water\"."
             - What, you don't want to? You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?
-            - Freeloaders, I say, FREELOADERS. That's what you are. I won't stand for it. The least you could do is get me a drink.
+            - Freeloaders, I say, FREELOADERS. That's what you are. I won't stand for it. The LEAST you could do is get me a drink.
             - I better not see you back here without it.
           cond: 3
           end: 4
@@ -312,6 +314,9 @@ quest:
       condition:
         - if entity @s[x=947,y=70,z=-3,dz=4,dx=6,dy=3]
       count: 1
+    end:
+      - type: score
+        value: ${npc.sawyer} dialogue-status 3
   bread:
     name: Whole Wheat
     hint: Maintain a wheat-based diet (whole). # description to show before the quest is done (optional)
@@ -333,6 +338,9 @@ quest:
         - if score leather quest-status matches -1
         - if score picnic quest-status matches -1
       count: 3
+    end:
+      - type: score
+        value: ${npc.simon} dialogue-status 3
   diet:
     name: Full Stomach
     description: Fill your stomach! Remember to keep a balanced diet. How will Simon know if you followed this? A mystery.
@@ -396,6 +404,12 @@ quest:
               count: 1
               overflow: true
           count: 3
+        - type: player
+          all: true
+          condition:
+            -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
+          count: 1
+          weight: 1
   leather:
     name: Dressing Warm
     description: Wear 3 pieces of leather armor and show your new drip to Simon.
@@ -414,7 +428,7 @@ quest:
         - type: player
           all: true
           condition:
-            - if entity @s[x=905,y=64,z=189,dx=13,dz=15,dy=1]
+            -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
           count: 1
           weight: 1
   picnic:
@@ -438,7 +452,7 @@ quest:
         - type: player
           all: true
           condition:
-            - if entity @s[x=905,y=64,z=189,dx=13,dz=15,dy=1]
+            -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
           count: 1
           weight: 1
 
