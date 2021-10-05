@@ -146,6 +146,10 @@ npc:
         - messages:
             - message: "HEY! What are you doing on my driveway? In fact, what are you doing HERE?"
               command:
+                - '# Set correct rail path'
+                - 'setblock 922 34 194 minecraft:powered_rail[powered=false,shape=north_south,waterlogged=false]'
+                - "setblock 921 34 194 minecraft:stone"
+                - 'setblock 945 39 194 minecraft:rail[shape=east_west,waterlogged=false]'
                 - 'summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
@@ -177,6 +181,28 @@ npc:
             - Ugh, whatever. I have nothing more to say to you.
           cond: 2
           end: -1
+        - messages:
+            - I see you're pretty determined to get up this mountain, huh.
+            - At least I can respect that.
+            - It seems you did listen and diligently prepared as I had requested. Not bad, at least you can listen to directions.
+            - Before you get on your journey, I'll have you do a couple more things to prepare though.
+            - message: Come on in, I have some things to give you.
+              command:
+                - "setblock 945 39 194 minecraft:rail[shape=north_east,waterlogged=false]"
+                - "setblock 921 34 194 minecraft:redstone_block"
+                - "setblock 922 34 194 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]"
+                - 'summon minecart 922 34 194 {Silent:1,Tags:["simon-holder"]}'
+                - "tag ${select.self} add npc-unface"
+                - 'scoreboard players set -held story-simon 1'
+            - I have an old SD card from a while ago that contains a nice map of the hiking trail up the mountain.
+            - message:
+              - text: "Unfortunately, it corrupted when windows formatted it without even asking me! I mean, it did ask me "
+              - text: once
+                italic: true
+              - text: " but didn't even ask to confirm after I accidentally clicked OK. Who does that??"
+            - Anyways, it's right here in this drawer. Take that card and get it fixed up, and once I can get the map in your hands you can go right on up the mountain.
+          cond: 3
+          end: 4
     apple_sale:
       name: "Glow Berry (${toCost(item.store.unsold.glow_berries.tag.cost)})"
       invisible: true

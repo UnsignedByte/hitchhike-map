@@ -1,5 +1,5 @@
-tag @e remove car-rider
-tag @e[nbt={RootVehicle:{Entity:{Tags:[car-root]}}}] add car-rider
+tag @a remove car-rider
+tag @a[nbt={RootVehicle:{Entity:{Tags:[car-root]}}}] add car-rider
 
 scoreboard players set @e[tag=car-root] car-acc 0
 
