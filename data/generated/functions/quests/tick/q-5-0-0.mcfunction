@@ -11,5 +11,7 @@ execute as @a at @s if entity @s[nbt={Inventory:[{id:"minecraft:cookie"}]}] run 
 execute as @a at @s if entity @s[nbt={Inventory:[{id:"minecraft:dried_kelp"}]}] run scoreboard players add @s q-5-0-0 1
 scoreboard players operation q-5-0-0 q-5 += @a q-5-0-0
 scoreboard players operation q-5-0-0 q-5 *= 100 const
+scoreboard players operation q-5-0-0 q-5 *= 100 const
+scoreboard players operation q-5-0-0 q-5 /= 100 const
 scoreboard players operation q-5-0-0 q-5 /= 5 const
 execute unless score q-5-0-0 q-5 matches ..100 run scoreboard players set q-5-0-0 q-5 100

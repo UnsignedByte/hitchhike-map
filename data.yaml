@@ -175,7 +175,7 @@ npc:
                   value: diet
                 - type: quest
                   value: preparedness
-            - message: "Remember, you better not come back until you're actuall ready to go up."
+            - message: "Remember, you better not come back until you're actually ready to go up."
           cond: 1
           end: 2
         - messages:
