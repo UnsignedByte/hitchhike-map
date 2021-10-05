@@ -153,11 +153,12 @@ npc:
                 - 'summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
-            - There is no way you people are welcome up here! This is private property!!
+            - message: There is no way you people are welcome up here! This is private property!!
+              command:
+                - "tag ${select.self} remove npc-unface"
             - message: "Get off my property! I'll call the police on you, I WILL."
               command:
                 - "scoreboard players set -held story-simon 0"
-                - "tag ${select.self} remove npc-unface"
                 - "kill @e[tag=simon-holder]"
                 - "${tp(912.0, 64, 194.5, 180, 0)}"
             - "What, you want to go up the mountain? You must think that's really easy, huh."
