@@ -358,6 +358,11 @@ export function createQuest (
           `function generated:quests/tick/${getQ(path)}`
         )
         break;
+      case 'cond':
+        functions[`quests/tick/${getQ(path)}`].push([
+          (<string[]>obj.value).map(x=>`execute ${x} run scoreboard players add ${getQ(path)} ${getQ()} 1`)
+        ])
+        break;
       case 'nest':
         for (let i = 0; i < (<QuestCondition[]>obj.value!).length; i++) {
           const npath = [...path, i];
@@ -365,6 +370,8 @@ export function createQuest (
           // add update functions to tick
 
           functions[`quests/tick/${getQ(path)}`].push([
+            `scoreboard players operation ${getQ(npath)} ${getQ()} *= 100 const`,
+            `scoreboard players operation ${getQ(npath)} ${getQ()} /= ${(<QuestCondition[]>obj.value!)[i].weight} const`,
             `scoreboard players operation ${getQ(path)} ${getQ()} += ${getQ(npath)} ${getQ()}`
           ])
 

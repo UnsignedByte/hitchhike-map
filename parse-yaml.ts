@@ -171,12 +171,20 @@ type qci =
   value?: string[],
   count?: number,
   overflow?: boolean,
-  all?: boolean
+  all?: boolean,
+  weight?: number
 } | {
   type: "nest",
   value: qci[],
   count?: number,
-  overflow?: boolean
+  overflow?: boolean,
+  weight?: number
+} | {
+  type: "cond",
+  value?: string[],
+  count?: number,
+  overflow?: boolean,
+  weight?: number
 }
 
 const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
@@ -195,9 +203,15 @@ const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
   }).transform(x=>{
     if (x.count == -1) x.count = x.value.length;
     return x;
+  }),
+  z.object({
+    type: z.literal('cond'),
+    value: z.array(z.string()).default([]),
+    count: z.number().int().default(1)
   })
 ]).and(z.object({
-  overflow: z.boolean().default(false)
+  overflow: z.boolean().default(false),
+  weight: z.number().default(100)
 })))
 
 export type QuestCondition = z.infer<typeof questConditionSchema>; // i hate this

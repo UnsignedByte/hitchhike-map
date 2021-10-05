@@ -208,6 +208,8 @@ execute if score visitfriend quest-status matches 0.. run function generated:que
 
 execute if score bread quest-status matches 0.. run function generated:quests/bread-tick
 
+execute if score preparedness quest-status matches 0.. run function generated:quests/preparedness-tick
+
 execute if score diet quest-status matches 0.. run function generated:quests/diet-tick
 
 execute if score leather quest-status matches 0.. run function generated:quests/leather-tick

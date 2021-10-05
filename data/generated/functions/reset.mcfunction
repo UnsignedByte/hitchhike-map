@@ -59,6 +59,9 @@ function generated:quests/visitfriend-reset
 scoreboard players reset bread quest-status
 function generated:quests/bread-reset
 
+scoreboard players reset preparedness quest-status
+function generated:quests/preparedness-reset
+
 scoreboard players reset diet quest-status
 function generated:quests/diet-reset
 
