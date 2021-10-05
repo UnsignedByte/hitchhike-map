@@ -4,5 +4,5 @@ execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.am
 scoreboard players set -held story-simon 0
 tag @e[tag=npc-simon, limit=1] remove npc-unface
 kill @e[tag=simon-holder]
-tp @e[tag=npc-simon, limit=1] 922.5 64 195.0 90 0
+tp @e[tag=npc-simon, limit=1] 912 64 194.5 180 0
 schedule function generated:npc/simon/0-3 105t

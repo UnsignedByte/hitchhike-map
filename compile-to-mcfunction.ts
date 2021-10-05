@@ -95,6 +95,16 @@ export function createNpc (
 
   const nts = (num: number): string => num.toFixed(Math.max(2, (num.toString().split('.')[1] || []).length));
 
+  const tp = (tx: number, ty: number, tz: number, rtx: number = rx, rty: number = ry): string => {
+    x = tx;
+    y = ty;
+    z = tz;
+    rx = rtx;
+    ry = rty;
+
+    return `tp ${select.self} ${x} ${y} ${z} ${rx} ${ry}`;
+  }
+
   return {
     reset: [
       `# Summon the villager for ${id}.`,
