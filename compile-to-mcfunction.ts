@@ -375,7 +375,7 @@ export function createQuest (
         ])
         break;
       case 'nest':
-        if (obj.count == -1) obj.count = obj.value.reduce((i, x)=>i+x.weight!, 0)/100;
+        if (obj.count == -100) obj.count = obj.value.reduce((i, x)=>i+x.weight!, 0);
 
         for (let i = 0; i < (<QuestCondition[]>obj.value!).length; i++) {
           const npath = [...path, i];
@@ -401,7 +401,6 @@ export function createQuest (
 
     functions[`quests/tick/${getQ(path)}`].push([
       `scoreboard players operation ${getQ(path)} ${getQ()} *= ${<number>obj.weight} const`,
-      `scoreboard players operation ${getQ(path)} ${getQ()} /= 100 const`,
       `scoreboard players operation ${getQ(path)} ${getQ()} /= ${<number>obj.count} const`,
       `${obj.overflow ? '# ' : ''}execute unless score ${getQ(path)} ${getQ()} matches ..100 run scoreboard players set ${getQ(path)} ${getQ()} 100` // max 100% completion
     ])

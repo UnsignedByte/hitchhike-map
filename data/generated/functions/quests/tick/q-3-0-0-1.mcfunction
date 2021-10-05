@@ -4,5 +4,4 @@ scoreboard players operation q-3-0-0-1 q-3 += @a s-3-0-0-1
 scoreboard players operation q-3-0-0-1 q-3 *= 100 const
 scoreboard players operation q-3-0-0-1 q-3 *= 100 const
 scoreboard players operation q-3-0-0-1 q-3 /= 100 const
-scoreboard players operation q-3-0-0-1 q-3 /= 1 const
 # execute unless score q-3-0-0-1 q-3 matches ..100 run scoreboard players set q-3-0-0-1 q-3 100

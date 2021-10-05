@@ -193,18 +193,18 @@ const questConditionSchema: z.ZodSchema<qci> = z.lazy(()=>z.union([
     stat: z.string().default('dummy'),
     condition: z.array(z.string()).default([]),
     value: z.array(z.string()).default([]),
-    count: z.number().int().default(1),
+    count: z.number().int().default(1).transform(x=>x*100),
     all: z.boolean().default(false)
   }),
   z.object({
     type: z.literal('nest'),
     value: z.array(questConditionSchema),
-    count: z.number().int().default(-1)
+    count: z.number().int().default(-1).transform(x=>x*100)
   }),
   z.object({
     type: z.literal('cond'),
     value: z.array(z.string()).default([]),
-    count: z.number().int().default(1)
+    count: z.number().int().default(1).transform(x=>x*100)
   })
 ]).and(z.object({
   overflow: z.boolean().default(false),
