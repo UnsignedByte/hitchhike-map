@@ -325,7 +325,8 @@ export function createQuest (
     type: 'nest',
     value: [condition],
     overflow: false,
-    count: 1
+    count: 100,
+    weight: 100
   }
 
   function parse(path: number[] = []) {
@@ -397,7 +398,7 @@ export function createQuest (
         break;
     }
 
-    console.log(obj);
+    // console.log(obj);
 
     functions[`quests/tick/${getQ(path)}`].push([
       `scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`,
