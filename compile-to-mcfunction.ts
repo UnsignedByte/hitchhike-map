@@ -376,6 +376,10 @@ export function createQuest (
           (<string[]>obj.value).map(x=>`execute ${x} run scoreboard players add ${getQ(path)} ${getQ()} 1`),
           `scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`
         ])
+        
+        functions[`quests/${id}-tick`].push(
+          `function generated:quests/tick/${getQ(path)}`
+        )
         break;
       case 'nest':
         if (obj.count == -100) obj.count = obj.value.reduce((i, x)=>i+x.weight!, 0);
