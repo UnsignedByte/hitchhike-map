@@ -247,6 +247,7 @@ export async function init (
       td+=factor;
       cmds.push(`execute at @s positioned ^ ^ ^${td} run tag @e[tag=npc,distance=..${factor}] add player_facing_npc`);
       cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~1 ~ run tag @e[tag=npc,distance=..${factor}] add player_facing_npc`);
+      cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~-1 ~ run tag @e[tag=npc,distance=..${factor}] add player_facing_npc`);
     }
     return [
       ...cmds,
