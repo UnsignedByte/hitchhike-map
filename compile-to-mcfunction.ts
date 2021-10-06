@@ -145,7 +145,7 @@ export function createNpc (
         Passengers:`[${toSnbt({
           id:'area_effect_cloud',
           CustomName: name
-            ? rawJson({ text: name, color: colour, bold: true })
+            ? (colour === "null" ? name : rawJson({ text: name, color: colour, bold: true }))
             : null,
           Duration:2147483647,
           Tags: `["npc", "aec"]`

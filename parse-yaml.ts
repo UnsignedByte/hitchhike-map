@@ -109,7 +109,7 @@ const dialogueSchema = z
 export const npcSchema = z
   .object({
     name: z.string(),
-    colour: colourSchema,
+    colour: z.union([colourSchema, z.literal("null")]),
     position: nplet(3),
     rotation: nplet(2),
     head: z.string(),
