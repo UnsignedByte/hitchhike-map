@@ -241,19 +241,16 @@ export async function init (
   //tag npcs player looks towards
   functions[`player_facing_npc`] = ((): string[] =>{
     const factor = 3/data.npc.params.facing_res;
+    const radii = factor*data.npc.params.leniency;
     let cmds: string[] = [];
     let td: number = 0;
     for(let i: number = data.npc.params.facing_res; i > 0; i--) {
       td+=factor;
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} run tag @e[tag=npc,distance=..${factor*data.npc.params.leniency}] add player_facing_npc`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-0.5 ~ run tag @e[tag=npc,distance=..${factor*data.npc.params.leniency}] add player_facing_npc`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-1 ~ run tag @e[tag=npc,distance=..${factor*data.npc.params.leniency}] add player_facing_npc`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} run particle dust 1 0 0 1 ~ ~ ~`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-0.5 ~ run particle dust 1 0 0 1 ~ ~ ~`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-1 ~ run particle dust 1 0 0 1 ~ ~ ~`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} run effect give @e[type=villager,distance=..${factor*data.npc.params.leniency}] glowing 1 0 true`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-0.5 ~ run effect give @e[type=villager,distance=..${factor*data.npc.params.leniency}] glowing 1 0 true`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-1 ~ run effect give @e[type=villager,distance=..${factor*data.npc.params.leniency}] glowing 1 0 true`);
+      for (let j: number = 0; j <= Math.ceil(1.9/radii); j++) {
+        cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} run tag @e[tag=npc,distance=..${radii}] add player_facing_npc`);
+        cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} run particle dust 1 0 0 1 ~ ~ ~`);
+        cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} run effect give @e[type=villager,distance=..${radii}] glowing 1 0 true`);
+      }
     }
     return [
       ...cmds,
