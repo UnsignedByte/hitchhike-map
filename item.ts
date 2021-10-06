@@ -273,6 +273,7 @@ export const item = {
         color: "dark_gray"
       })}]`))
       store.unsold[k].tag.sold = false;
+      store.unsold[k].id = '"minecraft:paper"';
 
       store.sold[k] = JSON.parse(JSON.stringify(v));
       store.sold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.sold[k].tag.display.Lore}, ${rawJson({text: ""})}, ${rawJson({
