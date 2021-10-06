@@ -150,8 +150,8 @@ npc:
                 - '# Set correct rail path'
                 - 'setblock 945 39 194 minecraft:rail[shape=east_west,waterlogged=false]'
                 - 'setblock 942 39 189 minecraft:rail[shape=south_west,waterlogged=false]'
-                - "setblock 911 34 194 minecraft:stone"
-                - 'setblock 912 34 194 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
+                - "setblock 911 34 193 minecraft:stone"
+                - 'setblock 912 34 193 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
                 - 'setblock 937 34 190 minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=none]'
                 - 'summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
@@ -163,10 +163,10 @@ npc:
               command:
                 - "scoreboard players set -held story-simon 0"
                 - "kill @e[tag=simon-holder]"
-                - "${tp(912.0, 64, 194.5, 180, 0)}"
+                - "${tp(912.0, 64, 193.5, 43, 4)}"
             - "What, you want to go up the mountain? You must think that's really easy, huh."
             - message: "You don't look at all prepared to go up that mountain, and you can bet I won't be letting you through MY property until you are."
-              globaL: true
+              global: true
               command:
                 - type: quest
                   value: picnic
@@ -186,33 +186,45 @@ npc:
           cond: 2
           end: -1
         - messages:
-            - I see you're pretty determined to get up this mountain, huh.
-            - At least I can respect that.
-            - It seems you did listen and diligently prepared as I had requested. Not bad! At least you can listen to directions.
+            - Oh hey! I didn't see you there, sorry.
+            - message:
+              - text: "I was busy admiring my "
+              - text: "1997 Limited Edition Honda, model Civic"
+                color: red
+                bold: true
+              - text: ". 17 million Bov by the way. I know, you must be wishing you had a car this nice."
+            - Don't worry, if you work as hard as I do, one day you might be able to live near here too.
+            - Anyways, I see you're pretty determined to get up this mountain, huh.
+            - At least I can respect that. Determination is very important if you want to be as successful as I.
+            - It seems you did listen and diligently prepared as I had requested.
+            - Not bad! At least you can listen to directions. Most people don't do that very well.
             - Before you get on your journey, I'll have you do a couple more things to prepare though.
             - message: Come on in, I have some things to give you.
               command:
                 - "setblock 945 39 194 minecraft:rail[shape=north_east,waterlogged=false]"
-                - "setblock 911 34 194 minecraft:redstone_block"
-                - 'setblock 912 34 194 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]'
+                - "setblock 911 34 193 minecraft:redstone_block"
+                - 'setblock 912 34 193 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]'
                 - 'setblock 956 44 203 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
-                - 'summon minecart 912 34 194 {Silent:1,Tags:["simon-holder"]}'
+                - 'summon minecart 912 34 193 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon -1'
             - I have an old SD card from a while ago that contains a nice map of the hiking trail up the mountain.
             - message:
-              - text: "Unfortunately, it corrupted when windows formatted it without even asking me! I mean, it did ask me "
-              - text: once
-                italic: true
-              - text: " but didn't even ask to confirm after I accidentally clicked OK. Who does that??"
+              - text: "Unfortunately, it corrupted when windows formatted it without even asking me!"
               command:
                 - "scoreboard players set -held story-simon 0"
                 - "kill @e[tag=simon-holder]"
                 - "${tp(956.5, 74, 203.5, 90, 55)}"
+            - message: 
+              - text: "Okay, it did ask me "
+              - text: once
+                italic: true
+              - text: " but didn't even ask to confirm after I accidentally clicked OK. Who does that??"
             - message: "... found it."
               command:
                 - "tag ${select.self} remove npc-unface"
-            - message: Anyways, it's right here in this drawer. Take that card and get it fixed up, and once I can get the map in your hands you can go right on up the mountain.
+            - message: Anyways, it's right here in this drawer.
+            - Take that card and get it fixed up, and once you get the map in your hands you can go right on up the mountain.
             - message:
               - text: "... And while you're at it, get me some water. Not any water: I want "
               - text: La Croix Sparkling Water
@@ -220,7 +232,8 @@ npc:
                 italic: true
                 color: dark_aqua
               - text: ". Don't give me any of that \"processed tap water\" or \"mineral water\"."
-            - What, you don't want to? You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?
+            - What, you don't want to?
+            - You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?
             - Freeloaders, I say, FREELOADERS. That's what you are. I won't stand for it.
             - message:
               - text: "I just want a drink! It's the "
@@ -236,7 +249,7 @@ npc:
                 - 'setblock 942 39 189 minecraft:rail[shape=north_south,waterlogged=false]'
                 - 'summon minecart 956.5 44 203.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
-                - 'scoreboard players set -held story-simon 1'
+                - 'scoreboard players set -held story-simon -1'
                 - '# set up position for later: ${tp(942.5, 69, 183.5, 135, -10)}'
           cond: 3
           end: -1
