@@ -152,7 +152,7 @@ export function createNpc (
         })}]`,
       } : {
         CustomName: name
-          ? rawJson({ text: name, color: colour, bold: true })
+          ? (colour === "null" ? name : rawJson({ text: name, color: colour, bold: true }))
           : null
       }))}`,
       `scoreboard players set @e[tag=npc] dialogue-status 0`
@@ -189,7 +189,7 @@ export function createNpc (
               broadcastTargets
             } ${JSON.stringify([
               '<',
-              { text: name || 'Passerby', color: colour, bold: true },
+              (colour === "null" ? JSON.parse(eval(name || `'"Passerby"'`)) : { text: name || 'Passerby', color: colour, bold: true }),
               `> `,
               ...message.message
             ])}`,

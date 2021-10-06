@@ -258,7 +258,7 @@ export const item = {
         name: rawJson([
           JSON.parse(eval((Object.assign({Name: `'"${k}"'`}, v.tag.display)).Name)),
           {
-            text: `(\${toCost(item.store.unsold.${k}.tag.cost)})`,
+            text: ` (\${toCost(item.store.unsold.${k}.tag.cost)})`,
             bold: false,
             italic: false,
             strikethrough: false,
