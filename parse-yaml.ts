@@ -250,7 +250,8 @@ const fullSchema = z
   .object({
     npc:z.object({
       params:z.object({
-        facing_res: z.number().default(3)
+        facing_res: z.number().default(3),
+        leniency: z.number().default(1)
       }),
       npcs:z.record(npcSchema)
     }),

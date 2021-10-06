@@ -245,9 +245,9 @@ export async function init (
     let td: number = 0;
     for(let i: number = data.npc.params.facing_res; i > 0; i--) {
       td+=factor;
-      cmds.push(`execute at @s positioned ^ ^ ^${td} run tag @e[tag=npc,distance=..${factor}] add player_facing_npc`);
-      cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~1 ~ run tag @e[tag=npc,distance=..${factor}] add player_facing_npc`);
-      cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~-1 ~ run tag @e[tag=npc,distance=..${factor}] add player_facing_npc`);
+      cmds.push(`execute at @s positioned ^ ^ ^${td} run tag @e[tag=npc,distance=..${factor*data.npc.params.leniency}] add player_facing_npc`);
+      cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~1 ~ run tag @e[tag=npc,distance=..${factor*data.npc.params.leniency}] add player_facing_npc`);
+      cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~-1 ~ run tag @e[tag=npc,distance=..${factor*data.npc.params.leniency}] add player_facing_npc`);
     }
     return [
       ...cmds,
