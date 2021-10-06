@@ -221,7 +221,12 @@ npc:
                 color: dark_aqua
               - text: ". Don't give me any of that \"processed tap water\" or \"mineral water\"."
             - What, you don't want to? You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?
-            - Freeloaders, I say, FREELOADERS. That's what you are. I won't stand for it. I just want a drink! It's the LEAST you could do.
+            - Freeloaders, I say, FREELOADERS. That's what you are. I won't stand for it.
+            - message:
+              - text: "I just want a drink! It's the "
+              - text: least
+                bold: true
+              - text: " you could do."
             - I better not see you back here without it.
             - message: What are you loitering around for? Get on it!
               command:
