@@ -191,7 +191,7 @@ export const item = {
         id:'"minecraft:potion"',
         tag:{
           cost: 500,
-          pos: `'899.7 63.75 -160.5'`,
+          pos: `'899.7 63.25 -160.5'`,
           display:{
             Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
             Lore:`['{"text":"The energy drink for","color":"dark_green","bold":false}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
@@ -210,7 +210,7 @@ export const item = {
         id:'"minecraft:potion"',
         tag:{
           cost: 1000,
-          pos: `'899.71 65.25 -160.5'`,
+          pos: `'899.71 64.75 -160.5'`,
           display:{
             Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true}'`,
             Lore:`['{"text":"Water for people","color":"aqua","italic":false}','{"text":"who hate money","color":"aqua"}','{"text":"(and water).","color":"aqua"}']`
