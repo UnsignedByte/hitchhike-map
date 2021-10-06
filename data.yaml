@@ -156,10 +156,17 @@ npc:
                 - 'summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
-            - message: There is no way you people are welcome up here! This is private property!!
+            - message:
+              - text: "There is no way "
+              - text: you people
+                italic: true
+              - text: " are welcome up here. This is private property, and trespassing is "
+              - text: ILLEGAL
+                bold: true
+              - text: "."
               command:
                 - "tag ${select.self} remove npc-unface"
-            - message: "Get off my property! I'll call the police on you, I WILL."
+            - message: "Get off my land! I'll call the police on you, I WILL."
               command:
                 - "scoreboard players set -held story-simon 0"
                 - "kill @e[tag=simon-holder]"
@@ -186,16 +193,19 @@ npc:
           cond: 2
           end: -1
         - messages:
-            - Oh hey! I didn't see you there, sorry.
+            - message:
+              - text: "Oh hey again, I didn't see you there. "
+              - text: Sorry.
+                italic: true
             - message:
               - text: "I was busy admiring my "
-              - text: "1997 Limited Edition Honda, model Civic"
-                color: red
+              - text: "1997 Limited Edition Honda model Civic"
+                color: dark_red
                 bold: true
               - text: ". 17 million Bov by the way. I know, you must be wishing you had a car this nice."
             - Don't worry, if you work as hard as I do, one day you might be able to live near here too.
             - Anyways, I see you're pretty determined to get up this mountain, huh.
-            - At least I can respect that. Determination is very important if you want to be as successful as I.
+            - At least I can respect that. Determination (which I have a lot of) is very important if you want to be as successful as I.
             - It seems you did listen and diligently prepared as I had requested.
             - Not bad! At least you can listen to directions. Most people don't do that very well.
             - Before you get on your journey, I'll have you do a couple more things to prepare though.
@@ -219,11 +229,11 @@ npc:
               - text: "Okay, it did ask me "
               - text: once
                 italic: true
-              - text: " but didn't even ask to confirm after I accidentally clicked OK. Who does that??"
+              - text: " but didn't even ask to confirm after I accidentally clicked OK. Who does that?"
             - message: "... found it."
               command:
                 - "tag ${select.self} remove npc-unface"
-            - message: Anyways, it's right here in this drawer.
+            - message: Anyways, it was right here in this drawer.
             - Take that card and get it fixed up, and once you get the map in your hands you can go right on up the mountain.
             - message:
               - text: "... And while you're at it, get me some water. Not any water: I want "
@@ -240,6 +250,10 @@ npc:
               - text: least
                 bold: true
               - text: " you could do."
+            - message: Here, I'll even give you some money to buy it with. This is probably more than enough.
+              command:
+                - "give ${select.player} ${toGive(item.money[500], 1)}"
+                - "give ${select.player} ${toGive(item.money[100], 2)}"
             - I better not see you back here without it.
             - message: What are you loitering around for? Get on it!
               command:
