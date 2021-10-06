@@ -159,8 +159,12 @@ export const item = {
           cost: 200,
           pos: `'905.5 64 -152.5'`,
           display: {
+            Name: `${rawJson({
+              text: "Fuji Apple",
+              color: "#FF0000"
+            })}`,
             Lore:`[${rawJson({
-              text: `A Juicy Red Apple\n`,
+              text: `A Juicy Fuji Apple`,
               italic: true,
               color: "red"
             })}]`
@@ -173,7 +177,20 @@ export const item = {
           cost: 200,
           pos: `'909.5 64 -152.5'`,
           display: {
-            Lore:`[]`
+            Name: `${rawJson({
+              text: "Watermelon",
+              color: "#cc3968"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Ingredients:`,
+              bold: true,
+              underlined: true,
+              color: "gray"
+            })},${rawJson({
+              text: `Powdered Melon`
+            })},${rawJson({
+              text: `Water`
+            })}]`
           }
         }
       },
@@ -183,7 +200,15 @@ export const item = {
           cost: 200,
           pos: `'901.5 64 -152.5'`,
           display: {
-            Lore:`[]`
+            Name: `${rawJson({
+              text: "Rainier Cherry",
+              color: "#f2b91d"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Fresh from ?????`,
+              italic: true,
+              color: "gold"
+            })}]`
           }
         }
       },
