@@ -255,14 +255,17 @@ export const item = {
       store.sold[k].tag.sold = true;
 
       store.npc[k] = npcSchema.parse({
-        name: `[${(Object.assign({Name: `"${k}"`}, v.tag.display)).Name},${rawJson({
-          text: `(\${toCost(item.store.unsold.${k}.tag.cost)})`,
-          bold: false,
-          italic: false,
-          strikethrough: false,
-          obfuscated: false,
-          underlined: false
-        })}]`,
+        name: rawJson([
+          (Object.assign({Name: `"${k}"`}, v.tag.display)).Name,
+          {
+            text: `(\${toCost(item.store.unsold.${k}.tag.cost)})`,
+            bold: false,
+            italic: false,
+            strikethrough: false,
+            obfuscated: false,
+            underlined: false
+          }
+        ]),
         invisible: true,
         colour: "null",
         position: eval(v.tag.pos),
