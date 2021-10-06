@@ -185,11 +185,14 @@ export const item = {
               text: `Ingredients:`,
               bold: true,
               underlined: true,
+              italic: false,
               color: "gray"
             })},${rawJson({
-              text: `Powdered Melon`
+              text: `Powdered Melon`,
+              color: "dark_gray"
             })},${rawJson({
-              text: `Water`
+              text: `Water`,
+              color: "dark_gray"
             })}]`
           }
         }
