@@ -246,10 +246,10 @@ export async function init (
     for(let i: number = data.npc.params.facing_res; i > 0; i--) {
       td+=factor;
       cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} run tag @e[tag=npc,distance=..${factor*data.npc.params.leniency}] add player_facing_npc`);
-      cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~1 ~ run tag @e[tag=npc,distance=..${factor*data.npc.params.leniency}] add player_facing_npc`);
+      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~1 ~ run tag @e[tag=npc,distance=..${factor*data.npc.params.leniency}] add player_facing_npc`);
       cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-1 ~ run tag @e[tag=npc,distance=..${factor*data.npc.params.leniency}] add player_facing_npc`);
       cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} run particle dust 1 0 0 1 ~ ~ ~`);
-      cmds.push(`execute at @s positioned ^ ^ ^${td} positioned ~ ~1 ~ run particle dust 1 0 0 1 ~ ~ ~`);
+      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~1 ~ run particle dust 1 0 0 1 ~ ~ ~`);
       cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-1 ~ run particle dust 1 0 0 1 ~ ~ ~`);
     }
     return [
