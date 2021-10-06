@@ -251,9 +251,9 @@ export async function init (
       cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} run particle dust 1 0 0 1 ~ ~ ~`);
       cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-0.5 ~ run particle dust 1 0 0 1 ~ ~ ~`);
       cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-1 ~ run particle dust 1 0 0 1 ~ ~ ~`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} run effect give @e[type=villager,distance=..${factor*data.npc.params.leniency} glowing 1 0 true`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-0.5 ~ run effect give @e[type=villager,distance=..${factor*data.npc.params.leniency} glowing 1 0 true`);
-      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-1 ~ run effect give @e[type=villager,distance=..${factor*data.npc.params.leniency} glowing 1 0 true`);
+      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} run effect give @e[type=villager,distance=..${factor*data.npc.params.leniency}] glowing 1 0 true`);
+      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-0.5 ~ run effect give @e[type=villager,distance=..${factor*data.npc.params.leniency}] glowing 1 0 true`);
+      cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~-1 ~ run effect give @e[type=villager,distance=..${factor*data.npc.params.leniency}] glowing 1 0 true`);
     }
     return [
       ...cmds,
