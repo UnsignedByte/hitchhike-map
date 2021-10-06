@@ -78,7 +78,6 @@ execute at @s anchored eyes positioned ^ ^ ^2.9999999999999996 positioned ~ ~-1.
 execute at @s anchored eyes positioned ^ ^ ^2.9999999999999996 positioned ~ ~-1.5 ~ run tag @e[tag=npc,type=villager,distance=..0.3] add player_facing_npc
 execute at @s anchored eyes positioned ^ ^ ^2.9999999999999996 positioned ~ ~-1.7999999999999998 ~ run tag @e[tag=npc,type=villager,distance=..0.3] add player_facing_npc
 execute at @s anchored eyes positioned ^ ^ ^2.9999999999999996 positioned ~ ~-2.1 ~ run tag @e[tag=npc,type=villager,distance=..0.3] add player_facing_npc
-say @e[tag=player_facing_npc]
 execute at @s run tag @e[tag=player_facing_npc,sort=nearest,limit=1] add selected_npc
 tag @e remove player_facing_npc
 execute if entity @e[tag=selected_npc] run tag @s add npc_selector
