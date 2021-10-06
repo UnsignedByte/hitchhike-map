@@ -5,7 +5,7 @@ npc:
     # how accurate the line checking facing npc is
     facing_res: 10
     # how lenient to be with the line
-    leniency: 2
+    leniency: 1
   npcs:
     billy:
       name: Billy

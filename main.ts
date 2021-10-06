@@ -248,7 +248,7 @@ export async function init (
       td+=factor;
       for (let j: number = 0; j <= Math.ceil(1.9/radii); j++) {
         cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} ~ run tag @e[tag=npc,type=villager,distance=..${radii}] add player_facing_npc`);
-        cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} ~ run effect give @e[type=villager,distance=..${radii}] glowing 1 0 true`);
+        // cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} ~ run effect give @e[type=villager,distance=..${radii}] glowing 1 0 true`);
       }
     }
     return [
