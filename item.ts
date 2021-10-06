@@ -267,7 +267,7 @@ export const item = {
         Object.assign(v.tag, {display:{Lore:`[]`}});
       }
       store.unsold[k] = JSON.parse(JSON.stringify(v));
-      store.unsold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.unsold[k].tag.display.Lore}, ${rawJson({
+      store.unsold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.unsold[k].tag.display.Lore}, "", ${rawJson({
         text: `Unsold (${toCost(v.tag.cost)})`,
         italic: true,
         color: "dark_gray"
@@ -275,7 +275,7 @@ export const item = {
       store.unsold[k].tag.sold = false;
 
       store.sold[k] = JSON.parse(JSON.stringify(v));
-      store.sold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.sold[k].tag.display.Lore}, ${rawJson({
+      store.sold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.sold[k].tag.display.Lore}, "", ${rawJson({
         text: `Sold (${toCost(v.tag.cost)})`,
         italic: true,
         color: "dark_purple"
