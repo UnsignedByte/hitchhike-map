@@ -5,4 +5,4 @@ function generated:quests/picnic-start
 function generated:quests/leather-start
 function generated:quests/diet-start
 function generated:quests/preparedness-start
-schedule function generated:npc/simon/0-5 280t
+schedule function generated:npc/simon/0-5 240t
