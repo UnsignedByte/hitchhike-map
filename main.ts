@@ -248,12 +248,12 @@ export async function init (
       td+=factor;
       for (let j: number = 0; j <= Math.ceil(1.9/radii); j++) {
         cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} ~ run tag @e[tag=npc,distance=..${radii}] add player_facing_npc`);
-        cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} ~ run particle dust 1 0 0 1 ~ ~ ~`);
         cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} ~ run effect give @e[type=villager,distance=..${radii}] glowing 1 0 true`);
       }
     }
     return [
       ...cmds,
+      `say @e[tag=player_facing_npc]`,
       `execute at @s run tag @e[tag=player_facing_npc,sort=nearest,limit=1] add selected_npc`,
       `tag @e remove player_facing_npc`,
       `execute if entity @e[tag=selected_npc] run tag @s add npc_selector`
