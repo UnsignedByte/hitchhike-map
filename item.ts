@@ -210,7 +210,7 @@ export const item = {
         id:'"minecraft:potion"',
         tag:{
           cost: 1000,
-          pos: `'899.71 64.75 -160.5'`,
+          pos: `'899.73 64.75 -160.5'`,
           display:{
             Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true}'`,
             Lore:`['{"text":"Water for people","color":"aqua","italic":false}','{"text":"who hate money","color":"aqua"}','{"text":"(and water).","color":"aqua"}']`
