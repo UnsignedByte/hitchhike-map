@@ -8,5 +8,5 @@ setblock 942 39 189 minecraft:rail[shape=north_south,waterlogged=false]
 summon minecart 956.5 44 203.5 {Silent:1,Tags:["simon-holder"]}
 tag @e[tag=npc-simon, limit=1] add npc-unface
 scoreboard players set -held story-simon 1
-# set up position for later: tp @e[tag=npc-simon, limit=1] 942.50 39 183.50 135 -10
+# set up position for later: tp @e[tag=npc-simon, limit=1] 942.50 69 183.50 135 -10
 schedule function generated:npc/simon/2-end 112t

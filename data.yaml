@@ -214,14 +214,14 @@ npc:
                 - "tag ${select.self} remove npc-unface"
             - message: Anyways, it's right here in this drawer. Take that card and get it fixed up, and once I can get the map in your hands you can go right on up the mountain.
             - message:
-              - text: "And while you're at it, get me some water. Not any water: I want "
+              - text: "... And while you're at it, get me some water. Not any water: I want "
               - text: La Croix Sparkling Water
                 bold: true
                 italic: true
                 color: dark_aqua
               - text: ". Don't give me any of that \"processed tap water\" or \"mineral water\"."
             - What, you don't want to? You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?
-            - Freeloaders, I say, FREELOADERS. That's what you are. I won't stand for it. The LEAST you could do is get me a drink.
+            - Freeloaders, I say, FREELOADERS. That's what you are. I won't stand for it. I just want a drink! It's the LEAST you could do.
             - I better not see you back here without it.
             - message: What are you loitering around for? Get on it!
               command:
@@ -232,7 +232,7 @@ npc:
                 - 'summon minecart 956.5 44 203.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
-                - '# set up position for later: ${tp(942.5, 39, 183.5, 135, -10)}'
+                - '# set up position for later: ${tp(942.5, 69, 183.5, 135, -10)}'
           cond: 3
           end: -1
         - messages:
