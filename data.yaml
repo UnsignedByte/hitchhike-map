@@ -205,7 +205,7 @@ npc:
               - text: ". 17 million Bov by the way. I know, you must be wishing you had a car this nice."
             - Don't worry, if you work as hard as I do, one day you might be able to live near here too.
             - Anyways, I see you're pretty determined to get up this mountain, huh.
-            - At least I can respect that. Determination (which I have a lot of) is very important if you want to be as successful as I.
+            - At least I can respect that. Determination (of which I have a lot) is very important if you want to be as successful as I.
             - It seems you did listen and diligently prepared as I had requested.
             - Not bad! At least you can listen to directions. Most people don't do that very well.
             - Before you get on your journey, I'll have you do a couple more things to prepare though.
@@ -236,12 +236,15 @@ npc:
             - message: Anyways, it was right here in this drawer.
             - Take that card and get it fixed up, and once you get the map in your hands you can go right on up the mountain.
             - message:
-              - text: "... And while you're at it, get me some water. Not any water: I want "
+              - text: "... And while you're at it, get me some water. Not just any water: I want "
               - text: La Croix Sparkling Water
                 bold: true
                 italic: true
                 color: dark_aqua
-              - text: ". Don't give me any of that \"processed tap water\" or \"mineral water\"."
+              - text: ". Don't give me any of that \"processed tap water\" or \"mineral water\" "
+              - text: normal
+                italic: true
+              - text: " people drink."
             - What, you don't want to?
             - You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?
             - Freeloaders, I say, FREELOADERS. That's what you are. I won't stand for it.
@@ -273,39 +276,39 @@ npc:
             - Good-Bye.
           cond: 4
           end: -1
-    apple_sale:
-      name: "Glow Berry (${toCost(item.store.unsold.glow_berries.tag.cost)})"
-      invisible: true
-      colour: 0xfad352
-      position: 901.5 64 -152.5
-      dialogue:
-        - messages:
-          - message: taken
-            silent: true
-            command:
-              - "give ${select.player} ${toGive(item.store.unsold.glow_berries)}"
-    berry_sale:
-      name: "Apple (${toCost(item.store.unsold.apple.tag.cost)})"
-      invisible: true
-      colour: 0xFF0000
-      position: 905.5 64 -152.5
-      dialogue:
-        - messages:
-          - message: taken
-            silent: true
-            command:
-              - "give ${select.player} ${toGive(item.store.unsold.apple)}"
-    melon_sale:
-      name: "Watermelon (${toCost(item.store.unsold.melon_slice.tag.cost)})"
-      invisible: true
-      colour: 0xFF5733
-      position: 909.5 64 -152.5
-      dialogue:
-        - messages:
-          - message: taken
-            silent: true
-            command:
-              - "give ${select.player} ${toGive(item.store.unsold.melon_slice)}"
+    # apple_sale:
+    #   name: "Glow Berry (${toCost(item.store.unsold.glow_berries.tag.cost)})"
+    #   invisible: true
+    #   colour: 0xfad352
+    #   position: 901.5 64 -152.5
+    #   dialogue:
+    #     - messages:
+    #       - message: taken
+    #         silent: true
+    #         command:
+    #           - "give ${select.player} ${toGive(item.store.unsold.glow_berries)}"
+    # berry_sale:
+    #   name: "Apple (${toCost(item.store.unsold.apple.tag.cost)})"
+    #   invisible: true
+    #   colour: 0xFF0000
+    #   position: 905.5 64 -152.5
+    #   dialogue:
+    #     - messages:
+    #       - message: taken
+    #         silent: true
+    #         command:
+    #           - "give ${select.player} ${toGive(item.store.unsold.apple)}"
+    # melon_sale:
+    #   name: "Watermelon (${toCost(item.store.unsold.melon_slice.tag.cost)})"
+    #   invisible: true
+    #   colour: 0xFF5733
+    #   position: 909.5 64 -152.5
+    #   dialogue:
+    #     - messages:
+    #       - message: taken
+    #         silent: true
+    #         command:
+    #           - "give ${select.player} ${toGive(item.store.unsold.melon_slice)}"
     cashier:
       name: Henry
       position: 891.5 64 -152.5

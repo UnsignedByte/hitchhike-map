@@ -1,4 +1,5 @@
 import { toSnbt, rawJson, toCost } from './compile-to-mcfunction.ts'
+import { npcSchema } from './parse-yaml.ts'
 
 export const item = {
   quest_book: {
@@ -156,6 +157,7 @@ export const item = {
         id: '"minecraft:apple"',
         tag: {
           cost: 200,
+          pos: `'905.5 64 -152.5'`,
           display: {
             Lore:`[${rawJson({
               text: `A Juicy Red Apple\n`,
@@ -169,6 +171,7 @@ export const item = {
         id: '"minecraft:melon_slice"',
         tag:{
           cost: 200,
+          pos: `'909.5 64 -152.5'`,
           display: {
             Lore:`[]`
           }
@@ -178,6 +181,7 @@ export const item = {
         id: '"minecraft:glow_berries"',
         tag:{
           cost: 200,
+          pos: `'901.5 64 -152.5'`,
           display: {
             Lore:`[]`
           }
@@ -187,6 +191,7 @@ export const item = {
         id:'"minecraft:potion"',
         tag:{
           cost: 500,
+          pos: `'899.7 63.75 -160.5'`,
           display:{
             Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
             Lore:`['{"text":"The energy drink for","color":"dark_green","bold":false}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
@@ -205,6 +210,7 @@ export const item = {
         id:'"minecraft:potion"',
         tag:{
           cost: 1000,
+          pos: `'899.71 65.25 -160.5'`,
           display:{
             Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true}'`,
             Lore:`['{"text":"Water for people","color":"aqua","italic":false}','{"text":"who hate money","color":"aqua"}','{"text":"(and water).","color":"aqua"}']`
@@ -223,7 +229,8 @@ export const item = {
 
     let store: Record<string, Record<string, any>> = {
       unsold: {},
-      sold: {}
+      sold: {},
+      npc: {}
     }
 
     for (let [k, v] of Object.entries(items)) {
@@ -246,6 +253,22 @@ export const item = {
         color: "dark_purple"
       })}]`))
       store.sold[k].tag.sold = true;
+
+      store.npc[k] = npcSchema.parse({
+        name: `\${(item.store.unsold.${k}.tag.display ?? {Name: '${k}'}).Name} (\${toCost(item.store.unsold.${k}.tag.cost)})`,
+        invisible: true,
+        colour: 0,
+        position: eval(v.tag.pos),
+        dialogue: [{
+          messages: [{
+            message: "taken",
+            silent: true,
+            command: [
+              `give \${select.player} \${toGive(item.store.unsold.${k})}`
+            ]
+          }]
+        }]
+      })
     }
 
     return store;

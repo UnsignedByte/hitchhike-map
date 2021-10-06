@@ -61,6 +61,9 @@ export async function init (
   const onLoad: Lines = []
   const onTick: Lines = []
   const functions: Record<string, Lines> = {}
+
+  Object.assign(data.npc.npcs, item.store.npc);
+
   for (const [id, dat] of Object.entries(data.npc.npcs)) {
     const result = createNpc(namespace, id, dat)
     // The empty string is to have an empty between each entry

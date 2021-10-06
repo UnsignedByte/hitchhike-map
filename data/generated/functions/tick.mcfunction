@@ -136,45 +136,6 @@ tag @a[tag=victim-of-dialogue-by-simon, tag=!spoken-to, limit=1] remove victim-o
 execute as @e[tag=npc-simon, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-simon, limit=1]
 
 # Start a conversation if it was selected
-execute at @e[tag=npc-apple_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-apple_sale
-tag @a[tag=victim-of-dialogue-by-apple_sale, limit=1] remove npc_selector
-tag @e[tag=npc-apple_sale, tag=selected_npc, tag=!speaking, limit=1] add speaking
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-apple_sale, tag=!spoken-to, limit=1] as @e[tag=npc-apple_sale, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/apple_sale/0-0 1t
-execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-apple_sale, tag=!spoken-to, limit=1] add spoken-to
-scoreboard players set dialogue-begun dialogue-status 0
-
-tag @a[tag=victim-of-dialogue-by-apple_sale, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-apple_sale
-
-# While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-apple_sale, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-apple_sale, limit=1]
-
-# Start a conversation if it was selected
-execute at @e[tag=npc-berry_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-berry_sale
-tag @a[tag=victim-of-dialogue-by-berry_sale, limit=1] remove npc_selector
-tag @e[tag=npc-berry_sale, tag=selected_npc, tag=!speaking, limit=1] add speaking
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-berry_sale, tag=!spoken-to, limit=1] as @e[tag=npc-berry_sale, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/berry_sale/0-0 1t
-execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-berry_sale, tag=!spoken-to, limit=1] add spoken-to
-scoreboard players set dialogue-begun dialogue-status 0
-
-tag @a[tag=victim-of-dialogue-by-berry_sale, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-berry_sale
-
-# While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-berry_sale, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-berry_sale, limit=1]
-
-# Start a conversation if it was selected
-execute at @e[tag=npc-melon_sale, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-melon_sale
-tag @a[tag=victim-of-dialogue-by-melon_sale, limit=1] remove npc_selector
-tag @e[tag=npc-melon_sale, tag=selected_npc, tag=!speaking, limit=1] add speaking
-execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-melon_sale, tag=!spoken-to, limit=1] as @e[tag=npc-melon_sale, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/melon_sale/0-0 1t
-execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-melon_sale, tag=!spoken-to, limit=1] add spoken-to
-scoreboard players set dialogue-begun dialogue-status 0
-
-tag @a[tag=victim-of-dialogue-by-melon_sale, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-melon_sale
-
-# While in a conversation, make eye contact with the player.
-execute as @e[tag=npc-melon_sale, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-melon_sale, limit=1]
-
-# Start a conversation if it was selected
 execute at @e[tag=npc-cashier, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-cashier
 tag @a[tag=victim-of-dialogue-by-cashier, limit=1] remove npc_selector
 tag @e[tag=npc-cashier, tag=selected_npc, tag=!speaking, limit=1] add speaking
@@ -203,6 +164,71 @@ tag @a[tag=victim-of-dialogue-by-cameron, tag=!spoken-to, limit=1] remove victim
 
 # While in a conversation, make eye contact with the player.
 execute as @e[tag=npc-cameron, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cameron, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-apple, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-apple
+tag @a[tag=victim-of-dialogue-by-apple, limit=1] remove npc_selector
+tag @e[tag=npc-apple, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-apple, tag=!spoken-to, limit=1] as @e[tag=npc-apple, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/apple/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-apple, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-apple, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-apple
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-apple, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-apple, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-melon_slice, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-melon_slice
+tag @a[tag=victim-of-dialogue-by-melon_slice, limit=1] remove npc_selector
+tag @e[tag=npc-melon_slice, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-melon_slice, tag=!spoken-to, limit=1] as @e[tag=npc-melon_slice, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/melon_slice/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-melon_slice, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-melon_slice, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-melon_slice
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-melon_slice, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-melon_slice, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-glow_berries, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-glow_berries
+tag @a[tag=victim-of-dialogue-by-glow_berries, limit=1] remove npc_selector
+tag @e[tag=npc-glow_berries, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-glow_berries, tag=!spoken-to, limit=1] as @e[tag=npc-glow_berries, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/glow_berries/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-glow_berries, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-glow_berries, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-glow_berries
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-glow_berries, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-glow_berries, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-monster, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-monster
+tag @a[tag=victim-of-dialogue-by-monster, limit=1] remove npc_selector
+tag @e[tag=npc-monster, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-monster, tag=!spoken-to, limit=1] as @e[tag=npc-monster, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/monster/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-monster, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-monster, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-monster
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-monster, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-monster, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-lacroix, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-lacroix
+tag @a[tag=victim-of-dialogue-by-lacroix, limit=1] remove npc_selector
+tag @e[tag=npc-lacroix, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-lacroix, tag=!spoken-to, limit=1] as @e[tag=npc-lacroix, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/lacroix/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-lacroix, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-lacroix, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-lacroix
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-lacroix, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-lacroix, limit=1]
 
 execute if score visitfriend quest-status matches 0.. run function generated:quests/visitfriend-tick
 

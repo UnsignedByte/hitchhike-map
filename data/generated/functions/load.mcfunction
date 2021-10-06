@@ -4841,15 +4841,19 @@ tag @a remove victim-of-dialogue-by-sawyer
 
 tag @a remove victim-of-dialogue-by-simon
 
-tag @a remove victim-of-dialogue-by-apple_sale
-
-tag @a remove victim-of-dialogue-by-berry_sale
-
-tag @a remove victim-of-dialogue-by-melon_sale
-
 tag @a remove victim-of-dialogue-by-cashier
 
 tag @a remove victim-of-dialogue-by-cameron
+
+tag @a remove victim-of-dialogue-by-apple
+
+tag @a remove victim-of-dialogue-by-melon_slice
+
+tag @a remove victim-of-dialogue-by-glow_berries
+
+tag @a remove victim-of-dialogue-by-monster
+
+tag @a remove victim-of-dialogue-by-lacroix
 
 
 

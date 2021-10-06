@@ -106,7 +106,7 @@ const dialogueSchema = z
     ])) // list of sequential messages to present, along with some parameters (I.E. globality)
   })
 
-const npcSchema = z
+export const npcSchema = z
   .object({
     name: z.string(),
     colour: colourSchema,
