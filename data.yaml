@@ -530,7 +530,7 @@ quest:
       value:
         - type: cond
           value:
-            - "if entity @a[nbt={Inventory:[${item.store.sold.lacroix}]]"
+            - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]]"
         - type: player
           all: true
           condition:
