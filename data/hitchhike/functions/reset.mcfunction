@@ -6,3 +6,5 @@ function generated:reset
 function hitchhike:story/reset
 
 function hitchhike:car/reset
+
+function hitchhike:safeway/reset
