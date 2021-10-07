@@ -238,6 +238,9 @@ npc:
             - message: Anyways, it was right here in this drawer.
             - message: Take that card and get it fixed up, and once you get the map in your hands you can go right on up the mountain.
               command:
+                - "scoreboard players set -sdcard story-simon 0"
+                - type: quest
+                  value: sdcard
                 - "give ${select.player} ${toGive(item.sdcardcorrupted)}"
               global: true
             - message:
@@ -248,6 +251,9 @@ npc:
                 color: dark_aqua
               - text: .
               global: true
+              command:
+                - type: quest
+                  value: lacroix
             - message:
               - text: "Don't give me any of that \"processed tap water\" or \"mineral water\" "
               - text: normal
@@ -516,6 +522,36 @@ quest:
             -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
           count: 1
           weight: 1
+  lacroix:
+    name: LaCroix Delivery
+    description: Get Simon some LaCroix sparkling water.
+    condition:
+      type: nest
+      value:
+        - type: cond
+          value:
+            - "if entity @a[nbt={Inventory:[${item.store.sold.lacroix}]]"
+        - type: player
+          all: true
+          condition:
+            -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
+          count: 1
+          weight: 1
+  sdcard:
+    name: Decorruption
+    description: Decorrupt the SD Card given by Simon. Don't know how? Maybe someone familiar with programming would know better...
+    condition:
+      type: nest
+      value:
+        - type: cond
+          value:
+            - if score -sdcard story-simon matches 1
+        - type: player
+          all: true
+          condition:
+            -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
+          count: 1
+          weight: 1
 
 itemphysics:
   # - duration: 20 # physics simulation duration in seconds
@@ -566,7 +602,6 @@ itemphysics:
       - 99 99 99 99 99 99 99 99
     spawnrange: 0.5 0.5 0.5 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
     rotation: 0 0 180
-    forcebuild: true
   groceryGlowBerries:
     duration: 40 # physics simulation duration in seconds
     count: 30 # number of items

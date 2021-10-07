@@ -13,8 +13,8 @@ scoreboard objectives add quest-status-old dummy
 
 # set up quest book
 scoreboard objectives add quest-book-upd dummy
-data modify storage generated:quest_book current set value ["","","","","",""]
-data modify storage generated:quest_book completed set value ["","","","","",""]
+data modify storage generated:quest_book current set value ["","","","","","","",""]
+data modify storage generated:quest_book completed set value ["","","","","","","",""]
 
 # SET UP CONSTS
 scoreboard objectives add const dummy
@@ -4740,6 +4740,8 @@ tag @a remove victim-of-dialogue-by-salmon
 tag @a remove victim-of-dialogue-by-monster
 
 tag @a remove victim-of-dialogue-by-lacroix
+
+
 
 
 

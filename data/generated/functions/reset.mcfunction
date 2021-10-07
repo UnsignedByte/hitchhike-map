@@ -158,3 +158,9 @@ function generated:quests/leather-reset
 
 scoreboard players reset picnic quest-status
 function generated:quests/picnic-reset
+
+scoreboard players reset lacroix quest-status
+function generated:quests/lacroix-reset
+
+scoreboard players reset sdcard quest-status
+function generated:quests/sdcard-reset

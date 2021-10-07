@@ -501,5 +501,9 @@ execute if score diet quest-status matches 0.. run function generated:quests/die
 execute if score leather quest-status matches 0.. run function generated:quests/leather-tick
 
 execute if score picnic quest-status matches 0.. run function generated:quests/picnic-tick
+
+execute if score lacroix quest-status matches 0.. run function generated:quests/lacroix-tick
+
+execute if score sdcard quest-status matches 0.. run function generated:quests/sdcard-tick
 tag @a remove npc_selector
 tag @e[tag=npc] remove selected_npc
