@@ -550,6 +550,7 @@ itemphysics:
       - 99 99 99 99 99 99 99 99
     spawnrange: 0.5 0.5 0.5 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset),
     rotation: 0 0 -90
+    forcebuild: true
   groceryApples:
     duration: 40 # physics simulation duration in seconds
     count: 100 # number of items
@@ -566,6 +567,7 @@ itemphysics:
       - 99 99 99 99 99 99 99 99
     spawnrange: 0.5 0.5 0.5 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
     rotation: 0 0 180
+    forcebuild: true
   groceryGlowBerries:
     duration: 40 # physics simulation duration in seconds
     count: 100 # number of items
@@ -582,6 +584,7 @@ itemphysics:
       - 99 99 99 99 99 99 99 99
     spawnrange: 0.5 0.5 0.5 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset)
     rotation: 0 0 180
+    forcebuild: true
   steakbottom1:
     duration: 30
     count: 30
