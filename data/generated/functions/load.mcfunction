@@ -4855,6 +4855,8 @@ tag @a remove victim-of-dialogue-by-milk
 
 tag @a remove victim-of-dialogue-by-egg
 
+tag @a remove victim-of-dialogue-by-pickle
+
 tag @a remove victim-of-dialogue-by-monster
 
 tag @a remove victim-of-dialogue-by-lacroix
