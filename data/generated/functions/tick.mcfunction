@@ -283,6 +283,45 @@ tag @a[tag=victim-of-dialogue-by-cane, tag=!spoken-to, limit=1] remove victim-of
 execute as @e[tag=npc-cane, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cane, limit=1]
 
 # Start a conversation if it was selected
+execute at @e[tag=npc-mysterhyshrooms, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-mysterhyshrooms
+tag @a[tag=victim-of-dialogue-by-mysterhyshrooms, limit=1] remove npc_selector
+tag @e[tag=npc-mysterhyshrooms, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-mysterhyshrooms, tag=!spoken-to, limit=1] as @e[tag=npc-mysterhyshrooms, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/mysterhyshrooms/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-mysterhyshrooms, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-mysterhyshrooms, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-mysterhyshrooms
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-mysterhyshrooms, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-mysterhyshrooms, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-shiitake, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-shiitake
+tag @a[tag=victim-of-dialogue-by-shiitake, limit=1] remove npc_selector
+tag @e[tag=npc-shiitake, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-shiitake, tag=!spoken-to, limit=1] as @e[tag=npc-shiitake, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/shiitake/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-shiitake, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-shiitake, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-shiitake
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-shiitake, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-shiitake, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-beet, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-beet
+tag @a[tag=victim-of-dialogue-by-beet, limit=1] remove npc_selector
+tag @e[tag=npc-beet, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-beet, tag=!spoken-to, limit=1] as @e[tag=npc-beet, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/beet/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-beet, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-beet, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-beet
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-beet, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-beet, limit=1]
+
+# Start a conversation if it was selected
 execute at @e[tag=npc-salmon, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-salmon
 tag @a[tag=victim-of-dialogue-by-salmon, limit=1] remove npc_selector
 tag @e[tag=npc-salmon, tag=selected_npc, tag=!speaking, limit=1] add speaking

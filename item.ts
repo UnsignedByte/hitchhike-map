@@ -361,21 +361,29 @@ export const item = {
           }
         }
       },
-      red_mushrooms: {
-        id: '"minecraft:Shrooms"',
+      mysterhyshrooms: {
+        id: '"minecraft:red_mushrooms"',
         tag:{
           cost: 149,
           pos: `'915.5 62.75 -156.5'`,
           display: {
             Name: `${rawJson({
-              text: "Bamboo Shoots",
+              text: "Mystery Shrooms",
               bold: false,
-              color: "#16ba2c"
+              color: "#e64037"
             })}`,
             Lore:`[${rawJson({
-              text: `Rich in fiber.`,
+              text: `No Toads were harmed`,
               italic: false,
-              color: "#0d8c1e"
+              color: "#f25e70"
+            })},${rawJson({
+              text: `in the making of`,
+              italic: false,
+              color: "#f25e70"
+            })},${rawJson({
+              text: `this shroom (probably).`,
+              italic: false,
+              color: "#f25e70"
             })}]`
           }
         }
@@ -387,37 +395,37 @@ export const item = {
           pos: `'915.51 63.625 -156.5'`,
           display: {
             Name: `${rawJson({
-              text: "Seaweed",
+              text: "Shiitake Mushrooms",
               bold: false,
-              color: "#3bbd17"
+              color: "#917250"
             })}`,
             Lore:`[${rawJson({
-              text: `Fresh and Undried`,
+              text: `Tasty`,
               italic: false,
-              color: "#2fa315"
+              color: "#826246"
             })}]`
           }
         }
       },
-      cane: {
-        id: '"minecraft:sugar_cane"',
+      beet: {
+        id: '"minecraft:beetroot"',
         tag:{
           cost: 99,
           pos: `'915.52 64.5 -156.5'`,
           display: {
             Name: `${rawJson({
-              text: "Sugarcane",
+              text: "Beet",
               bold: false,
-              color: "#009903"
+              color: "#7a1f3d"
             })}`,
             Lore:`[${rawJson({
-              text: `Not candy,`,
+              text: `Beet red`,
               italic: false,
-              color: "#d1261d"
+              color: "#4d0000"
             })}, ${rawJson({
-              text: `sadly.`,
+              text: `:flushed:`,
               italic: false,
-              color: "#d1261d"
+              color: "#4d0000"
             })}]`
           }
         }
