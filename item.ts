@@ -280,7 +280,7 @@ export const item = {
       pickle: {
         id: '"minecraft:sea_pickle"',
         tag:{
-          cost: 0.99,
+          cost: 99,
           pos: `'914.5 64.5 -152.7'`,
           display: {
             Name: `${rawJson({
