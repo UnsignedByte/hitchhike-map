@@ -258,11 +258,10 @@ export async function init (
     }
 
     return [
-      `say @e[tag=player_facing_npc]`,
       ...cmds,
       `scoreboard players add -detect-count npc-interact 1`,
+      `tag @e[tag=player_facing_npc,sort=nearest,limit=1] add selected_npc`,
       `execute if score -detect-count npc-interact matches ..${data.npc.params.facing_res} unless entity @e[tag=player_facing_npc] rotated ~ ~ positioned ^ ^ ^${factor} run function generated:npc/_detect_interact`,
-      `tag @e[tag=player_facing_npc,sort=nearest,limit=1] add selected_npc`
     ]
   })();
 
