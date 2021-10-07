@@ -362,7 +362,7 @@ export const item = {
         }
       },
       mysterhyshrooms: {
-        id: '"minecraft:red_mushrooms"',
+        id: '"minecraft:red_mushroom"',
         tag:{
           cost: 149,
           pos: `'915.5 62.75 -156.5'`,
@@ -426,6 +426,67 @@ export const item = {
               text: `:flushed:`,
               italic: false,
               color: "#6c1b36"
+            })}]`
+          }
+        }
+      },
+      potato: {
+        id: '"minecraft:potato"',
+        tag:{
+          cost: 124,
+          pos: `'915.5 63.25 -159.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Potato",
+              bold: false,
+              color: "#dbbb70"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Unbaked and Unabashed`,
+              italic: false,
+              color: "#a67429"
+            })}]`
+          }
+        }
+      },
+      carrot: {
+        id: '"minecraft:carrot"',
+        tag:{
+          cost: 149,
+          pos: `'915.5 63.25 -162'`,
+          display: {
+            Name: `${rawJson({
+              text: "Carrot",
+              bold: false,
+              color: "#e6671e"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Recommended by`,
+              italic: false,
+              color: "#e36f17"
+            })}, ${rawJson({
+              text: `Pastor Ssempa`,
+              italic: false,
+              color: "#e36f17"
+            })}]`
+          }
+        }
+      },
+      berries: {
+        id: '"minecraft:sweet_berries"',
+        tag:{
+          cost: 149,
+          pos: `'915.5 64.5 -160.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Strawberry",
+              bold: false,
+              color: "#db324f"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Berry Delicious™`,
+              italic: false,
+              color: "#d43d7c"
             })}]`
           }
         }

@@ -322,6 +322,45 @@ tag @a[tag=victim-of-dialogue-by-beet, tag=!spoken-to, limit=1] remove victim-of
 execute as @e[tag=npc-beet, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-beet, limit=1]
 
 # Start a conversation if it was selected
+execute at @e[tag=npc-potato, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-potato
+tag @a[tag=victim-of-dialogue-by-potato, limit=1] remove npc_selector
+tag @e[tag=npc-potato, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-potato, tag=!spoken-to, limit=1] as @e[tag=npc-potato, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/potato/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-potato, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-potato, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-potato
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-potato, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-potato, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-carrot, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-carrot
+tag @a[tag=victim-of-dialogue-by-carrot, limit=1] remove npc_selector
+tag @e[tag=npc-carrot, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-carrot, tag=!spoken-to, limit=1] as @e[tag=npc-carrot, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/carrot/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-carrot, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-carrot, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-carrot
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-carrot, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-carrot, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-berries, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-berries
+tag @a[tag=victim-of-dialogue-by-berries, limit=1] remove npc_selector
+tag @e[tag=npc-berries, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-berries, tag=!spoken-to, limit=1] as @e[tag=npc-berries, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/berries/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-berries, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-berries, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-berries
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-berries, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-berries, limit=1]
+
+# Start a conversation if it was selected
 execute at @e[tag=npc-salmon, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-salmon
 tag @a[tag=victim-of-dialogue-by-salmon, limit=1] remove npc_selector
 tag @e[tag=npc-salmon, tag=selected_npc, tag=!speaking, limit=1] add speaking

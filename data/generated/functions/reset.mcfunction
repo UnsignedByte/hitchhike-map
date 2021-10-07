@@ -89,6 +89,18 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 915.52 64.5 -156.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-beet", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Beet","bold":false,"color":"#7a1f3d"},{"text":" (0.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for potato.
+summon minecraft:villager 915.50 63.25 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-potato", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Potato","bold":false,"color":"#dbbb70"},{"text":" (1.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for carrot.
+summon minecraft:villager 915.50 63.25 -162.00 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-carrot", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Carrot","bold":false,"color":"#e6671e"},{"text":" (1.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for berries.
+summon minecraft:villager 915.50 64.5 -160.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-berries", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Strawberry","bold":false,"color":"#db324f"},{"text":" (1.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 # Summon the villager for salmon.
 summon minecraft:villager 898.00 64 -166.30 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-salmon", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fresh Salmon","bold":false,"color":"#FFC3B5"},{"text":" (14.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
