@@ -252,9 +252,9 @@ export async function init (
     const radii = factor*data.npc.params.leniency;
     let cmds: string[] = [];
 
-    for (let i = 0; i <= Math.ceil(1.9/factor); i++) {
+    for (let i = Math.ceil(1.9/factor); i >= 0; i--) {
       cmds.push(`execute positioned ~ ~${-i*factor} ~ run tag @e[tag=npc,type=villager,distance=..${radii}] add player_facing_npc`);
-      cmds.push(`execute positioned ~ ~${-i*factor} ~ run particle dust 1 0 0 1 ~ ~ ~`);
+      // cmds.push(`execute positioned ~ ~${-i*factor} ~ run particle dust 1 0 0 1 ~ ~ ~`);
     }
 
     return [
