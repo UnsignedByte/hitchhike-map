@@ -579,6 +579,75 @@ export const item = {
           }
         }
       },
+      chicken: {
+        id: '"minecraft:chicken"',
+        tag:{
+          cost: 699,
+          pos: `'914.25 64.5 -166.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Chicken",
+              bold: false,
+              color: "#e3aa81"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Kentucky Unfried`,
+              italic: true,
+              color: "blue"
+            })}]`
+          }
+        }
+      },
+      pufferfish: {
+        id: '"minecraft:pufferfish"',
+        tag:{
+          cost: 999,
+          pos: `'905.0 64 -166.3'`,
+          display: {
+            Name: `${rawJson({
+              text: "Pufferfish",
+              bold: false,
+              color: "#f0e143"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Food for`,
+              italic: false,
+              color: "#e4ed2d"
+            })}, ${rawJson({
+              text: `Masochists`,
+              italic: false,
+              color: "#e4ed2d"
+            })}]`
+          }
+        }
+      },
+      clownfish: {
+        id: '"minecraft:tropical_fish"',
+        tag:{
+          cost: 1299,
+          pos: `'902.5 64 -166.3'`,
+          display: {
+            Name: `${rawJson({
+              text: "Clownfish",
+              bold: false,
+              color: "#ed8c37"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Here Lies`,
+              italic: false,
+              color: "#ffc59e"
+            })}, ${rawJson({
+              text: `Nemo (2003-2003)`,
+              italic: false,
+              color: "#ffc59e"
+            })}, ${rawJson({
+              text: `Rest in Peace.`,
+              italic: false,
+              color: "#ffc59e"
+            })}]`
+          }
+        }
+      },
       salmon: {
         id: '"minecraft:salmon"',
         tag:{
