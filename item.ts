@@ -536,7 +536,7 @@ export const item = {
       porkchop: {
         id: '"minecraft:porkchop"',
         tag:{
-          cost: 899,
+          cost: 799,
           pos: `'914.25 63.25 -166.5'`,
           display: {
             Name: `${rawJson({
@@ -559,7 +559,7 @@ export const item = {
       rabbit: {
         id: '"minecraft:rabbit"',
         tag:{
-          cost: 699,
+          cost: 749,
           pos: `'914.25 64.5 -166.5'`,
           display: {
             Name: `${rawJson({
