@@ -257,6 +257,32 @@ tag @a[tag=victim-of-dialogue-by-bamboo, tag=!spoken-to, limit=1] remove victim-
 execute as @e[tag=npc-bamboo, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-bamboo, limit=1]
 
 # Start a conversation if it was selected
+execute at @e[tag=npc-kelp, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-kelp
+tag @a[tag=victim-of-dialogue-by-kelp, limit=1] remove npc_selector
+tag @e[tag=npc-kelp, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-kelp, tag=!spoken-to, limit=1] as @e[tag=npc-kelp, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/kelp/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-kelp, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-kelp, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-kelp
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-kelp, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-kelp, limit=1]
+
+# Start a conversation if it was selected
+execute at @e[tag=npc-cane, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-cane
+tag @a[tag=victim-of-dialogue-by-cane, limit=1] remove npc_selector
+tag @e[tag=npc-cane, tag=selected_npc, tag=!speaking, limit=1] add speaking
+execute store success score dialogue-begun dialogue-status if entity @a[tag=victim-of-dialogue-by-cane, tag=!spoken-to, limit=1] as @e[tag=npc-cane, limit=1] if score @s dialogue-status matches 0 run schedule function generated:npc/cane/0-0 1t
+execute if score dialogue-begun dialogue-status matches 1 run tag @a[tag=victim-of-dialogue-by-cane, tag=!spoken-to, limit=1] add spoken-to
+scoreboard players set dialogue-begun dialogue-status 0
+
+tag @a[tag=victim-of-dialogue-by-cane, tag=!spoken-to, limit=1] remove victim-of-dialogue-by-cane
+
+# While in a conversation, make eye contact with the player.
+execute as @e[tag=npc-cane, tag=speaking, limit=1] at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cane, limit=1]
+
+# Start a conversation if it was selected
 execute at @e[tag=npc-salmon, tag=selected_npc, tag=!speaking, limit=1] run tag @a[tag=npc_selector,sort=nearest,limit=1] add victim-of-dialogue-by-salmon
 tag @a[tag=victim-of-dialogue-by-salmon, limit=1] remove npc_selector
 tag @e[tag=npc-salmon, tag=selected_npc, tag=!speaking, limit=1] add speaking

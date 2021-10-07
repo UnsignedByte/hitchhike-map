@@ -299,7 +299,7 @@ export const item = {
       bamboo: {
         id: '"minecraft:bamboo"',
         tag:{
-          cost: 599,
+          cost: 149,
           pos: `'915.5 62.75 -153.5'`,
           display: {
             Name: `${rawJson({
@@ -318,7 +318,7 @@ export const item = {
       kelp: {
         id: '"minecraft:kelp"',
         tag:{
-          cost: 599,
+          cost: 99,
           pos: `'915.51 63.625 -153.5'`,
           display: {
             Name: `${rawJson({
@@ -330,6 +330,29 @@ export const item = {
               text: `Fresh and Undried`,
               italic: false,
               color: "#2fa315"
+            })}]`
+          }
+        }
+      },
+      cane: {
+        id: '"minecraft:sugar_cane"',
+        tag:{
+          cost: 99,
+          pos: `'915.52 64.5 -153.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Sugarcane",
+              bold: false,
+              color: "#009903"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Not candy,`,
+              italic: false,
+              color: "#d1261d"
+            })}, ${rawJson({
+              text: `sadly.`,
+              italic: false,
+              color: "#d1261d"
             })}]`
           }
         }
