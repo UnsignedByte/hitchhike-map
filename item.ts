@@ -243,16 +243,36 @@ export const item = {
         id: '"minecraft:milk_bucket"',
         tag:{
           cost: 599,
-          pos: `'914.5 63.25 -152.5'`,
+          pos: `'914.5 62.75 -152.5'`,
           display: {
             Name: `${rawJson({
               text: "Whole Milk",
+              bold: true,
               color: "#f5f3e6"
             })}`,
             Lore:`[${rawJson({
               text: `Got Milk?`,
               italic: false,
               color: "aqua"
+            })}]`
+          }
+        }
+      },
+      egg: {
+        id: '"minecraft:egg"',
+        tag:{
+          cost: 9,
+          pos: `'914.5 63.75 -152.51'`,
+          display: {
+            Name: `${rawJson({
+              text: "Egg",
+              bold: false,
+              color: "#f2e1aa"
+            })}`,
+            Lore:`[${rawJson({
+              text: `A Dollar a Dozen`,
+              italic: false,
+              color: "#d9ac59"
             })}]`
           }
         }
