@@ -421,11 +421,11 @@ export const item = {
             Lore:`[${rawJson({
               text: `Beet red`,
               italic: false,
-              color: "#4d0000"
+              color: "#6c1b36"
             })}, ${rawJson({
               text: `:flushed:`,
               italic: false,
-              color: "#4d0000"
+              color: "#6c1b36"
             })}]`
           }
         }
