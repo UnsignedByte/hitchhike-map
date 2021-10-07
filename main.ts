@@ -253,7 +253,7 @@ export async function init (
     let cmds: string[] = [];
 
     for (let i = Math.ceil(1.9/factor); i >= 0; i--) {
-      cmds.push(`execute positioned ~ ~${-i*factor} ~ run tag @e[tag=npc,type=villager,distance=..${radii}] add player_facing_npc`);
+      cmds.push(`execute unless entity @e[tag=player_facing_npc] positioned ~ ~${-i*factor} ~ run tag @e[tag=npc,type=villager,distance=..${radii}] add player_facing_npc`);
       // cmds.push(`execute positioned ~ ~${-i*factor} ~ run particle dust 1 0 0 1 ~ ~ ~`);
     }
 
