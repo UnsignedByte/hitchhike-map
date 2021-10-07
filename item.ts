@@ -62,7 +62,8 @@ export const item = {
           text: "faraway things.",
           color: "gray"
         })}]`
-      }
+      },
+      Enchantments:`[{}]`
     }
   },
   sdcardcorrupted: {
@@ -70,13 +71,13 @@ export const item = {
     tag: {
       display: {
         Name: rawJson({
-          text: "Simon's SD Card (Corrupted)",
+          text: "SD Card (Corrupted)",
           color: "#d6679f",
           bold: true
         }),
         Lore: `[${rawJson({
           text: "A corrupted SD Card",
-          color: "dark_purple"
+          color: "blue"
         })}, ${rawJson({
           text: "What secrets might",
           color: "gray"
@@ -179,7 +180,7 @@ export const item = {
       apple: {
         id: '"minecraft:apple"',
         tag: {
-          cost: 200,
+          cost: 199,
           pos: `'905.5 64 -152.5'`,
           display: {
             Name: `${rawJson({
@@ -197,7 +198,7 @@ export const item = {
       melon_slice: {
         id: '"minecraft:melon_slice"',
         tag:{
-          cost: 200,
+          cost: 249,
           pos: `'909.5 64 -152.5'`,
           display: {
             Name: `${rawJson({
@@ -223,7 +224,7 @@ export const item = {
       glow_berries: {
         id: '"minecraft:glow_berries"',
         tag:{
-          cost: 200,
+          cost: 149,
           pos: `'901.5 64 -152.5'`,
           display: {
             Name: `${rawJson({
@@ -238,10 +239,28 @@ export const item = {
           }
         }
       },
+      milk: {
+        id: '"minecraft:milk_bucket"',
+        tag:{
+          cost: 599,
+          pos: `'914.5 63.25 -152.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Whole Milk",
+              color: "#f5f3e6"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Got Milk?`,
+              italic: false,
+              color: "aqua"
+            })}]`
+          }
+        }
+      },
       monster: {
         id:'"minecraft:potion"',
         tag:{
-          cost: 500,
+          cost: 799,
           pos: `'899.7 63.25 -160.5'`,
           display:{
             Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
@@ -260,7 +279,7 @@ export const item = {
       lacroix: {
         id:'"minecraft:potion"',
         tag:{
-          cost: 1000,
+          cost: 999,
           pos: `'899.73 64.75 -160.5'`,
           display:{
             Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true}'`,

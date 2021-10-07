@@ -201,11 +201,11 @@ npc:
                 italic: true
             - message:
               - text: "I was busy admiring my "
-              - text: "1997 Limited Edition Honda model Civic"
+              - text: "1997 Limited Edition Honda Civic"
                 color: dark_red
                 bold: true
               - text: ". 17 million Bov by the way. I know, you must be wishing you had a car this nice."
-            - Don't worry, if you work as hard as I do, one day you might be able to live near here too.
+            - Don't worry, if you work as hard as I do, one day you might be almost as successful too.
             - Anyways, I see you're pretty determined to get up this mountain, huh.
             - At least I can respect that. Determination (of which I have a lot) is very important if you want to be as successful as I.
             - It seems you did listen and diligently prepared as I had requested.
@@ -239,13 +239,17 @@ npc:
             - message: Take that card and get it fixed up, and once you get the map in your hands you can go right on up the mountain.
               command:
                 - "give ${select.player} ${toGive(item.sdcardcorrupted)}"
+              global: true
             - message:
               - text: "... And while you're at it, get me some water. Not just any water: I want "
               - text: La Croix Sparkling Water
                 bold: true
                 italic: true
                 color: dark_aqua
-              - text: ". Don't give me any of that \"processed tap water\" or \"mineral water\" "
+              - text: .
+              global: true
+            - message:
+              - text: "Don't give me any of that \"processed tap water\" or \"mineral water\" "
               - text: normal
                 italic: true
               - text: " people drink."

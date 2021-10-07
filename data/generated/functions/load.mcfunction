@@ -4851,6 +4851,8 @@ tag @a remove victim-of-dialogue-by-melon_slice
 
 tag @a remove victim-of-dialogue-by-glow_berries
 
+tag @a remove victim-of-dialogue-by-milk
+
 tag @a remove victim-of-dialogue-by-monster
 
 tag @a remove victim-of-dialogue-by-lacroix
