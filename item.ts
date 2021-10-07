@@ -65,6 +65,29 @@ export const item = {
       }
     }
   },
+  sdcardcorrupted: {
+    id: '"minecraft:daylight_detector"',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "Simon's SD Card (Corrupted)",
+          color: "#d6679f",
+          bold: true
+        }),
+        Lore: `[${rawJson({
+          text: "A corrupted SD Card",
+          color: "dark_purple"
+        })}, ${rawJson({
+          text: "What secrets might",
+          color: "gray"
+        })}, ${rawJson({
+          text: "it hold inside?",
+          color: "gray"
+        })}]`
+      },
+      Enchantments:`[{}]`
+    }
+  },
   money:{
     1: {
       id: '"minecraft:nether_brick"',

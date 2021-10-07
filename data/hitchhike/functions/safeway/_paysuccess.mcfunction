@@ -5,4 +5,4 @@ data modify storage hitchhike:safeway success_msg set value '["Thank you for sho
 function generated:safeway/sell
 
 # Reset welcome message
-data modify storage hitchhike:safeway welcome_message set value "Hey, I hope you had a great time shopping!"
+data modify storage hitchhike:safeway welcome_message set value '"Hey, I hope you had a great time shopping!"'
