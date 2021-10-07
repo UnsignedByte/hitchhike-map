@@ -550,7 +550,6 @@ itemphysics:
       - 99 99 99 99 99 99 99 99
     spawnrange: 0.5 0.5 0.5 0.5 #Relative northwest corner to northwest, relative southeast corner to southeast (positive is inset),
     rotation: 0 0 180
-    forcebuild: true
   groceryApples:
     duration: 40 # physics simulation duration in seconds
     count: 30 # number of items
