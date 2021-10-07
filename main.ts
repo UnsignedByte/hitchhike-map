@@ -189,7 +189,7 @@ export async function init (
       `execute as @a run scoreboard players add playercount vars 1`,
       '# NPC dialogue',
       `# Detect right clicks`,
-      `execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc`,
+      `execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:npc/detect_interact`,
       `scoreboard players set @a npc-interact 0`,
       "# make names visible only in range",
       `execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0`,
@@ -239,26 +239,30 @@ export async function init (
   //generate helper functions
 
   //tag npcs player looks towards
-  functions[`player_facing_npc`] = ((): string[] =>{
+  functions[`npc/detect_interact`] = [
+    `scoreboard players set -detect-count npc-interact 0`,
+    `execute at @s run function generated:npc/_detect_interact`,
+    `tag @e remove player_facing_npc`,
+    `execute if entity @e[tag=selected_npc] run tag @s add npc_selector`
+  ]
+
+  functions[`npc/_detect_interact`] = (():string[] => {
     const factor = 3/data.npc.params.facing_res;
     const radii = factor*data.npc.params.leniency;
     let cmds: string[] = [];
-    let td: number = 0;
-    for(let i: number = data.npc.params.facing_res; i > 0; i--) {
-      td+=factor;
-      for (let j: number = 0; j <= Math.ceil(1.9/radii); j++) {
-        cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} ~ run tag @e[tag=npc,type=villager,distance=..${radii}] add player_facing_npc`);
-        // cmds.push(`execute at @s anchored eyes positioned ^ ^ ^${td} positioned ~ ~${-j*radii} ~ run effect give @e[type=villager,distance=..${radii}] glowing 1 0 true`);
-      }
+
+    for (let i = 0; i <= Math.ceil(1.9/factor); i++) {
+      cmds.push(`execute positioned ~ ~${-i*factor} ~ run tag @e[tag=npc,type=villager,distance=..${radii}] add player_facing_npc`);
+      cmds.push(`execute positioned ~ ~${-i*factor} ~ run particle dust 1 0 0 1 ~ ~ ~`);
     }
+
     return [
       ...cmds,
-      // `say @e[tag=player_facing_npc]`,
-      `execute at @s run tag @e[tag=player_facing_npc,sort=nearest,limit=1] add selected_npc`,
-      `tag @e remove player_facing_npc`,
-      `execute if entity @e[tag=selected_npc] run tag @s add npc_selector`
-    ];
-  })()
+      `scoreboard players add -detect-count npc-interact 1`,
+      `execute if score -detect-count npc-interact matches ..${data.npc.params.facing_res} unless entity @e[tag=npc,type=villager,tag=player_facing_npc] rotated ~ ~ positioned ^ ^ ^${factor} run function generated:npc/_detect_interact`,
+      `tag @e[tag=player_facing_npc,sort=nearest,limit=1] add selected_npc`
+    ]
+  })();
 
   // change generating functions
   let ientries = Object.entries(item.money);

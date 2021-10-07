@@ -3,7 +3,7 @@ scoreboard players set playercount vars 0
 execute as @a run scoreboard players add playercount vars 1
 # NPC dialogue
 # Detect right clicks
-execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:player_facing_npc
+execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:npc/detect_interact
 scoreboard players set @a npc-interact 0
 # make names visible only in range
 execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
