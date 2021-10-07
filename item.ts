@@ -582,7 +582,7 @@ export const item = {
       chicken: {
         id: '"minecraft:chicken"',
         tag:{
-          cost: 699,
+          cost: 599,
           pos: `'911.5 64.5 -166.5'`,
           display: {
             Name: `${rawJson({
