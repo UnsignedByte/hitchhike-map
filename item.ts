@@ -247,7 +247,7 @@ export const item = {
           display: {
             Name: `${rawJson({
               text: "Whole Milk",
-              bold: true,
+              bold: false,
               color: "#f5f3e6"
             })}`,
             Lore:`[${rawJson({
