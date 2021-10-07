@@ -236,7 +236,9 @@ npc:
               command:
                 - "tag ${select.self} remove npc-unface"
             - message: Anyways, it was right here in this drawer.
-            - Take that card and get it fixed up, and once you get the map in your hands you can go right on up the mountain.
+            - message: Take that card and get it fixed up, and once you get the map in your hands you can go right on up the mountain.
+              command:
+                - "give ${select.player} ${toGive(item.sdcardcorrupted)}"
             - message:
               - text: "... And while you're at it, get me some water. Not just any water: I want "
               - text: La Croix Sparkling Water
