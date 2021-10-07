@@ -351,7 +351,7 @@ export function createQuest (
 
           functions[`quests/tick/${getQ(path)}`].push([
             `scoreboard players set @a ${getQ(path)} 0`,
-            (<string[]>obj.condition).map(x=>`execute as @a at @s ${x} run scoreboard players add @s ${getQ(path)} 1`),
+            (<string[]>obj.condition).map(x=>`execute as @a at @s ${eval(`\`x\``)} run scoreboard players add @s ${getQ(path)} 1`),
             `scoreboard players operation ${getQ(path)} ${getQ()} += @a ${getQ(path)}`
           ])
         }
@@ -374,7 +374,7 @@ export function createQuest (
         break;
       case 'cond':
         functions[`quests/tick/${getQ(path)}`].push([
-          (<string[]>obj.value).map(x=>`execute ${x} run scoreboard players add ${getQ(path)} ${getQ()} 1`),
+          (<string[]>obj.value).map(x=>`execute ${eval(`\`x\``)} run scoreboard players add ${getQ(path)} ${getQ()} 1`),
           `scoreboard players operation ${getQ(path)} ${getQ()} *= 100 const`
         ])
         

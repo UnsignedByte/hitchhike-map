@@ -1,6 +1,6 @@
 scoreboard players operation oq-6-0-0 q-6 = q-6-0-0 q-6
 scoreboard players set q-6-0-0 q-6 0
-execute if entity @a[nbt={Inventory:[${item.store.sold.lacroix}]] run scoreboard players add q-6-0-0 q-6 1
+execute x run scoreboard players add q-6-0-0 q-6 1
 scoreboard players operation q-6-0-0 q-6 *= 100 const
 scoreboard players operation q-6-0-0 q-6 *= 100 const
 scoreboard players operation q-6-0-0 q-6 /= 100 const
