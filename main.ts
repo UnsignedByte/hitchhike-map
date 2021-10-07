@@ -245,7 +245,6 @@ export async function init (
     `effect give @e[tag=player_facing_npc] glowing 1 0 true`,
     `tag @e remove player_facing_npc`,
     `execute if entity @e[tag=selected_npc] run tag @s add npc_selector`,
-    `say @e[tag=selected_npc]`
   ]
 
   functions[`npc/_detect_interact`] = (():string[] => {
@@ -259,6 +258,7 @@ export async function init (
     }
 
     return [
+      `say @e[tag=player_facing_npc]`,
       ...cmds,
       `scoreboard players add -detect-count npc-interact 1`,
       `execute if score -detect-count npc-interact matches ..${data.npc.params.facing_res} unless entity @e[tag=player_facing_npc] rotated ~ ~ positioned ^ ^ ^${factor} run function generated:npc/_detect_interact`,

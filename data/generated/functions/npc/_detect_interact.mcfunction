@@ -1,3 +1,4 @@
+say @e[tag=player_facing_npc]
 execute positioned ~ ~0 ~ run tag @e[tag=npc,type=villager,distance=..0.3] add player_facing_npc
 execute positioned ~ ~0 ~ run particle dust 1 0 0 1 ~ ~ ~
 execute positioned ~ ~-0.3 ~ run tag @e[tag=npc,type=villager,distance=..0.3] add player_facing_npc
