@@ -1,6 +1,6 @@
 scoreboard players operation oq-7-0-0 q-7 = q-7-0-0 q-7
 scoreboard players set q-7-0-0 q-7 0
-execute x run scoreboard players add q-7-0-0 q-7 1
+execute if score -sdcard story-simon matches 1 run scoreboard players add q-7-0-0 q-7 1
 scoreboard players operation q-7-0-0 q-7 *= 100 const
 scoreboard players operation q-7-0-0 q-7 *= 100 const
 scoreboard players operation q-7-0-0 q-7 /= 100 const
