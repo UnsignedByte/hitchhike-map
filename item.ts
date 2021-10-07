@@ -300,7 +300,7 @@ export const item = {
         id: '"minecraft:salmon"',
         tag:{
           cost: 1499,
-          pos: `'898.0 65 -166.3'`,
+          pos: `'898.0 64 -166.3'`,
           display: {
             Name: `${rawJson({
               text: "Fresh Salmon",
