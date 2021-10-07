@@ -252,10 +252,10 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `Got Milk?`,
-              italic: false,
+              italic: true,
               color: "aqua"
             })}, ${rawJson({
-              text: `Homogenized`,
+              text: `Homogenized.`,
               italic: true,
               color: "gray"
             })}]`
@@ -266,7 +266,7 @@ export const item = {
         id: '"minecraft:egg"',
         tag:{
           cost: 9,
-          pos: `'914 63.625 -152.49'`,
+          pos: `'914 63.625 -152.5'`,
           display: {
             Name: `${rawJson({
               text: "Egg",
@@ -275,7 +275,7 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `A Dollar a Dozen`,
-              italic: false,
+              italic: true,
               color: "#d9ac59"
             })}]`
           }
@@ -285,7 +285,7 @@ export const item = {
         id: '"minecraft:sea_pickle"',
         tag:{
           cost: 99,
-          pos: `'914 64.5 -152.48'`,
+          pos: `'914 64.5 -152.5'`,
           display: {
             Name: `${rawJson({
               text: "Dill Pickle",
@@ -294,7 +294,7 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `pickle.dumps(obj)`,
-              italic: false,
+              italic: true,
               color: "dark_green"
             })}]`
           }
@@ -313,7 +313,7 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `Rich in fiber.`,
-              italic: false,
+              italic: true,
               color: "#0d8c1e"
             })}]`
           }
@@ -323,7 +323,7 @@ export const item = {
         id: '"minecraft:kelp"',
         tag:{
           cost: 119,
-          pos: `'915.51 63.625 -153.5'`,
+          pos: `'915.5 63.625 -153.5'`,
           display: {
             Name: `${rawJson({
               text: "Seaweed",
@@ -332,7 +332,7 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `Fresh and Undried`,
-              italic: false,
+              italic: true,
               color: "#2fa315"
             })}]`
           }
@@ -342,7 +342,7 @@ export const item = {
         id: '"minecraft:sugar_cane"',
         tag:{
           cost: 89,
-          pos: `'915.52 64.5 -153.5'`,
+          pos: `'915.5 64.5 -153.5'`,
           display: {
             Name: `${rawJson({
               text: "Sugarcane",
@@ -351,11 +351,11 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `Not candy,`,
-              italic: false,
+              italic: true,
               color: "#d1261d"
             })}, ${rawJson({
               text: `sadly.`,
-              italic: false,
+              italic: true,
               color: "#d1261d"
             })}]`
           }
@@ -374,15 +374,15 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `No Toads were harmed`,
-              italic: false,
+              italic: true,
               color: "#f25e70"
             })},${rawJson({
               text: `in the making of`,
-              italic: false,
+              italic: true,
               color: "#f25e70"
             })},${rawJson({
               text: `this shroom (probably).`,
-              italic: false,
+              italic: true,
               color: "#f25e70"
             })}]`
           }
@@ -392,7 +392,7 @@ export const item = {
         id: '"minecraft:brown_mushroom"',
         tag:{
           cost: 174,
-          pos: `'915.51 63.625 -156.5'`,
+          pos: `'915.5 63.625 -156.5'`,
           display: {
             Name: `${rawJson({
               text: "Shiitake Mushrooms",
@@ -401,7 +401,7 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `Tasty`,
-              italic: false,
+              italic: true,
               color: "#826246"
             })}]`
           }
@@ -411,7 +411,7 @@ export const item = {
         id: '"minecraft:beetroot"',
         tag:{
           cost: 149,
-          pos: `'915.52 64.5 -156.5'`,
+          pos: `'915.5 64.5 -156.5'`,
           display: {
             Name: `${rawJson({
               text: "Beet",
@@ -420,11 +420,11 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `Beet red`,
-              italic: false,
+              italic: true,
               color: "#6c1b36"
             })}, ${rawJson({
               text: `:flushed:`,
-              italic: false,
+              italic: true,
               color: "#6c1b36"
             })}]`
           }
@@ -434,7 +434,7 @@ export const item = {
         id: '"minecraft:potato"',
         tag:{
           cost: 124,
-          pos: `'915.5 63 -159.5'`,
+          pos: `'915.5 63.625 -159.5'`,
           display: {
             Name: `${rawJson({
               text: "Potato",
@@ -443,7 +443,7 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `Unbaked and Unabashed`,
-              italic: false,
+              italic: true,
               color: "#a67429"
             })}]`
           }
@@ -453,7 +453,7 @@ export const item = {
         id: '"minecraft:carrot"',
         tag:{
           cost: 124,
-          pos: `'915.5 63 -162'`,
+          pos: `'915.5 63.625 -162'`,
           display: {
             Name: `${rawJson({
               text: "Carrot",
@@ -462,11 +462,11 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `Recommended by`,
-              italic: false,
+              italic: true,
               color: "#e36f17"
             })}, ${rawJson({
               text: `Pastor Ssempa`,
-              italic: false,
+              italic: true,
               color: "#e36f17"
             })}]`
           }
@@ -485,8 +485,96 @@ export const item = {
             })}`,
             Lore:`[${rawJson({
               text: `Berry Delicious™`,
-              italic: false,
+              italic: true,
               color: "#d43d7c"
+            })}]`
+          }
+        }
+      },
+      rawbeef: {
+        id: '"minecraft:beef"',
+        tag:{
+          cost: 899,
+          pos: `'915.5 63.25 -165.25'`,
+          display: {
+            Name: `${rawJson({
+              text: "Raw Beef",
+              bold: false,
+              color: "#a8180d"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Basically Rare`,
+              italic: true,
+              color: "blue"
+            })}, ${rawJson({
+              text: `Steak...`,
+              italic: true,
+              color: "blue"
+            })}]`
+          }
+        }
+      },
+      rawmutton: {
+        id: '"minecraft:mutton"',
+        tag:{
+          cost: 699,
+          pos: `'915.5 64.5 -165.25'`,
+          display: {
+            Name: `${rawJson({
+              text: "Mutton",
+              bold: false,
+              color: "#a30b2c"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Wool not included.`,
+              italic: true,
+              color: "blue"
+            })}]`
+          }
+        }
+      },
+      porkchop: {
+        id: '"minecraft:porkchop"',
+        tag:{
+          cost: 899,
+          pos: `'914.25 63.25 -166.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Porkchops",
+              bold: false,
+              color: "#e36d6d"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Only 1 Peppa Pig was`,
+              italic: true,
+              color: "blue"
+            })}, ${rawJson({
+              text: `harmed in its creation.`,
+              italic: true,
+              color: "blue"
+            })}]`
+          }
+        }
+      },
+      rabbit: {
+        id: '"minecraft:rabbit"',
+        tag:{
+          cost: 699,
+          pos: `'914.25 64.5 -166.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Rabbit Meat",
+              bold: false,
+              color: "#d1816b"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Where's`,
+              italic: true,
+              color: "blue"
+            })}, ${rawJson({
+              text: `Big Chungus??`,
+              italic: true,
+              color: "blue"
             })}]`
           }
         }
@@ -537,7 +625,7 @@ export const item = {
         id:'"minecraft:potion"',
         tag:{
           cost: 999,
-          pos: `'899.73 64.75 -160.75'`,
+          pos: `'899.7 64.75 -160.75'`,
           display:{
             Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true}'`,
             Lore:`['{"text":"Water for people","color":"aqua","italic":false}','{"text":"who hate money","color":"aqua"}','{"text":"(and water).","color":"aqua"}']`
