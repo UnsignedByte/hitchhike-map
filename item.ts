@@ -296,11 +296,34 @@ export const item = {
           }
         }
       },
+      salmon: {
+        id: '"minecraft:salmon"',
+        tag:{
+          cost: 1499,
+          pos: `'898.0 65 -166.3'`,
+          display: {
+            Name: `${rawJson({
+              text: "Fresh Salmon",
+              bold: false,
+              color: "#FFC3B5"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Watch out for`,
+              italic: false,
+              color: "#FA8072"
+            })}, ${rawJson({
+              text: `samonella...`,
+              italic: false,
+              color: "#FA8072"
+            })}]`
+          }
+        }
+      },
       monster: {
         id:'"minecraft:potion"',
         tag:{
           cost: 799,
-          pos: `'899.7 63.25 -160.2'`,
+          pos: `'899.7 63.25 -160.75'`,
           display:{
             Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
             Lore:`['{"text":"The energy drink for","color":"dark_green","bold":false}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
@@ -319,7 +342,7 @@ export const item = {
         id:'"minecraft:potion"',
         tag:{
           cost: 999,
-          pos: `'899.73 64.75 -160.5'`,
+          pos: `'899.73 64.75 -160.75'`,
           display:{
             Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true}'`,
             Lore:`['{"text":"Water for people","color":"aqua","italic":false}','{"text":"who hate money","color":"aqua"}','{"text":"(and water).","color":"aqua"}']`
