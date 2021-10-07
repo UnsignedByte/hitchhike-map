@@ -303,7 +303,7 @@ export const item = {
       bamboo: {
         id: '"minecraft:bamboo"',
         tag:{
-          cost: 149,
+          cost: 119,
           pos: `'915.5 62.75 -153.5'`,
           display: {
             Name: `${rawJson({
@@ -322,7 +322,7 @@ export const item = {
       kelp: {
         id: '"minecraft:kelp"',
         tag:{
-          cost: 99,
+          cost: 119,
           pos: `'915.51 63.625 -153.5'`,
           display: {
             Name: `${rawJson({
@@ -341,7 +341,7 @@ export const item = {
       cane: {
         id: '"minecraft:sugar_cane"',
         tag:{
-          cost: 99,
+          cost: 89,
           pos: `'915.52 64.5 -153.5'`,
           display: {
             Name: `${rawJson({
@@ -364,7 +364,7 @@ export const item = {
       mysterhyshrooms: {
         id: '"minecraft:red_mushroom"',
         tag:{
-          cost: 149,
+          cost: 349,
           pos: `'915.5 62.75 -156.5'`,
           display: {
             Name: `${rawJson({
@@ -391,7 +391,7 @@ export const item = {
       shiitake: {
         id: '"minecraft:brown_mushroom"',
         tag:{
-          cost: 99,
+          cost: 174,
           pos: `'915.51 63.625 -156.5'`,
           display: {
             Name: `${rawJson({
@@ -410,7 +410,7 @@ export const item = {
       beet: {
         id: '"minecraft:beetroot"',
         tag:{
-          cost: 99,
+          cost: 149,
           pos: `'915.52 64.5 -156.5'`,
           display: {
             Name: `${rawJson({
@@ -452,7 +452,7 @@ export const item = {
       carrot: {
         id: '"minecraft:carrot"',
         tag:{
-          cost: 149,
+          cost: 124,
           pos: `'915.5 63.25 -162'`,
           display: {
             Name: `${rawJson({
@@ -475,7 +475,7 @@ export const item = {
       berries: {
         id: '"minecraft:sweet_berries"',
         tag:{
-          cost: 149,
+          cost: 249,
           pos: `'915.5 64.5 -160.5'`,
           display: {
             Name: `${rawJson({
