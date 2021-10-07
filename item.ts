@@ -262,7 +262,7 @@ export const item = {
         id: '"minecraft:egg"',
         tag:{
           cost: 9,
-          pos: `'914.5 63.75 -152.51'`,
+          pos: `'914.5 63.75 -152.3'`,
           display: {
             Name: `${rawJson({
               text: "Egg",
@@ -281,7 +281,7 @@ export const item = {
         id:'"minecraft:potion"',
         tag:{
           cost: 799,
-          pos: `'899.7 63.25 -160.5'`,
+          pos: `'899.7 63.25 -160.2'`,
           display:{
             Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
             Lore:`['{"text":"The energy drink for","color":"dark_green","bold":false}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
