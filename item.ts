@@ -602,7 +602,7 @@ export const item = {
         id: '"minecraft:pufferfish"',
         tag:{
           cost: 999,
-          pos: `'905.0 64 -166.3'`,
+          pos: `'907.0 64 -166.3'`,
           display: {
             Name: `${rawJson({
               text: "Pufferfish",
