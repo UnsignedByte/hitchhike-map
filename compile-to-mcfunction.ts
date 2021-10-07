@@ -36,7 +36,8 @@ export function toSnbt (nbt: NbtData): string {
 }
 
 export function toCost(v: number) { // value to $ string
-  return v >= 100 ? `${(v/100).toFixed(2)}B` : `${v}b`
+  return `${(v/100).toFixed(2)}B`
+  // return v >= 100 ? `${(v/100).toFixed(2)}B` : `${v}b`
 }
 
 export function rawJson (json: unknown): string {

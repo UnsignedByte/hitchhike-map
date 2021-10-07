@@ -243,7 +243,7 @@ export const item = {
         id: '"minecraft:milk_bucket"',
         tag:{
           cost: 599,
-          pos: `'914.5 62.75 -152.9'`,
+          pos: `'914.5 62.75 -153'`,
           display: {
             Name: `${rawJson({
               text: "Whole Milk",
@@ -262,7 +262,7 @@ export const item = {
         id: '"minecraft:egg"',
         tag:{
           cost: 9,
-          pos: `'914.5 63.625 -152.8'`,
+          pos: `'914.5 63.625 -152.85'`,
           display: {
             Name: `${rawJson({
               text: "Egg",
@@ -280,7 +280,7 @@ export const item = {
       pickle: {
         id: '"minecraft:sea_pickle"',
         tag:{
-          cost: 9,
+          cost: 0.99,
           pos: `'914.5 64.5 -152.7'`,
           display: {
             Name: `${rawJson({
