@@ -361,6 +361,67 @@ export const item = {
           }
         }
       },
+      red_mushrooms: {
+        id: '"minecraft:Shrooms"',
+        tag:{
+          cost: 149,
+          pos: `'915.5 62.75 -156.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Bamboo Shoots",
+              bold: false,
+              color: "#16ba2c"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Rich in fiber.`,
+              italic: false,
+              color: "#0d8c1e"
+            })}]`
+          }
+        }
+      },
+      shiitake: {
+        id: '"minecraft:brown_mushroom"',
+        tag:{
+          cost: 99,
+          pos: `'915.51 63.625 -156.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Seaweed",
+              bold: false,
+              color: "#3bbd17"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Fresh and Undried`,
+              italic: false,
+              color: "#2fa315"
+            })}]`
+          }
+        }
+      },
+      cane: {
+        id: '"minecraft:sugar_cane"',
+        tag:{
+          cost: 99,
+          pos: `'915.52 64.5 -156.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Sugarcane",
+              bold: false,
+              color: "#009903"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Not candy,`,
+              italic: false,
+              color: "#d1261d"
+            })}, ${rawJson({
+              text: `sadly.`,
+              italic: false,
+              color: "#d1261d"
+            })}]`
+          }
+        }
+      },
       salmon: {
         id: '"minecraft:salmon"',
         tag:{
