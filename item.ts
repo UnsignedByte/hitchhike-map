@@ -296,6 +296,44 @@ export const item = {
           }
         }
       },
+      bamboo: {
+        id: '"minecraft:bamboo"',
+        tag:{
+          cost: 599,
+          pos: `'915.5 62.75 -153.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Bamboo Shoots",
+              bold: false,
+              color: "#16ba2c"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Rich in fiber.`,
+              italic: false,
+              color: "#0d8c1e"
+            })}]`
+          }
+        }
+      },
+      kelp: {
+        id: '"minecraft:kelp"',
+        tag:{
+          cost: 599,
+          pos: `'915.51 63.625 -153.5'`,
+          display: {
+            Name: `${rawJson({
+              text: "Seaweed",
+              bold: false,
+              color: "#3bbd17"
+            })}`,
+            Lore:`[${rawJson({
+              text: `Fresh and Undried`,
+              italic: false,
+              color: "#2fa315"
+            })}]`
+          }
+        }
+      },
       salmon: {
         id: '"minecraft:salmon"',
         tag:{
