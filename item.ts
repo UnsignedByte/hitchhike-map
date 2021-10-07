@@ -434,7 +434,7 @@ export const item = {
         id: '"minecraft:potato"',
         tag:{
           cost: 124,
-          pos: `'915.5 63.25 -159.5'`,
+          pos: `'915.5 63 -159.5'`,
           display: {
             Name: `${rawJson({
               text: "Potato",
@@ -453,7 +453,7 @@ export const item = {
         id: '"minecraft:carrot"',
         tag:{
           cost: 124,
-          pos: `'915.5 63.25 -162'`,
+          pos: `'915.5 63 -162'`,
           display: {
             Name: `${rawJson({
               text: "Carrot",
