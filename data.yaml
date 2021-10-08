@@ -290,39 +290,27 @@ npc:
             - Good-Bye.
           cond: 4
           end: -1
-    # apple_sale:
-    #   name: "Glow Berry (${toCost(item.store.unsold.glow_berries.tag.cost)})"
-    #   invisible: true
-    #   colour: 0xfad352
-    #   position: 901.5 64 -152.5
-    #   dialogue:
-    #     - messages:
-    #       - message: taken
-    #         silent: true
-    #         command:
-    #           - "give ${select.player} ${toGive(item.store.unsold.glow_berries)}"
-    # berry_sale:
-    #   name: "Apple (${toCost(item.store.unsold.apple.tag.cost)})"
-    #   invisible: true
-    #   colour: 0xFF0000
-    #   position: 905.5 64 -152.5
-    #   dialogue:
-    #     - messages:
-    #       - message: taken
-    #         silent: true
-    #         command:
-    #           - "give ${select.player} ${toGive(item.store.unsold.apple)}"
-    # melon_sale:
-    #   name: "Watermelon (${toCost(item.store.unsold.melon_slice.tag.cost)})"
-    #   invisible: true
-    #   colour: 0xFF5733
-    #   position: 909.5 64 -152.5
-    #   dialogue:
-    #     - messages:
-    #       - message: taken
-    #         silent: true
-    #         command:
-    #           - "give ${select.player} ${toGive(item.store.unsold.melon_slice)}"
+        - messages:
+            - Oh, you're back already?
+            - message:
+              - text: "Sorry, I was distracted again; I was admiring my one-of-a-kind "
+              - text: Sedimentary Cryptocrystalline Quartz
+                color: 0x9ba5a8
+              - text: ", or Chert for short."
+            - Notice the beautiful tumescent shape? I chose it myself.
+            - Amazing, isn't it? It takes a keen eye to notice the beautifully detailed ridges along the surface, almost like blood vessels spiraling their way upward.
+            - I just can't help but just take it in every now and then... its beauty, I mean.
+            - So, I see you brought back my LaCroix! Admirable.
+            - message:
+              - text: "I'll take that..."
+                italic: true
+              command:
+              - type: function
+                value: generated:story/simon/drink
+          cond: 5
+          end:
+            - scoreboard players set ${select.self} dialogue-status -1
+            - execute if score sdcard quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 6
     cashier:
       name: Henry
       position: 891.5 64 -152.5
@@ -537,6 +525,9 @@ quest:
             -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
           count: 1
           weight: 1
+    end:
+      - type: score
+        value: "@e[tag=npc-simon,limit=1] dialogue-status 5"
   sdcard:
     name: Decorruption
     description: Decorrupt the SD Card given by Simon. Don't know how? Maybe someone familiar with programming would know better...

@@ -808,10 +808,155 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
   })();
 
-  // brandon stuff
+  // simon stuff
   (()=> {
 
-    genseq('brandon/entry', {
+    genseq('simon/drink', {
+      cmds: [
+        `data modify entity @e[tag=npc-simon,limit=1] HandItems[0] set value ${toSnbt(Object.assign({Count:'1b'}, item.store.sold.lacroix))}`,
+        `clear @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},limit=1] ${toGive(item.store.sold.lacroix)} 1`,
+        `playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1`
+      ],
+      next: [
+        {
+          wait: 12,
+          seq: {
+            cmds: [
+              `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.9`
+            ],
+            next: [
+              {
+                wait: 5,
+                seq: {
+                  cmds: [
+                    `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.85`
+                  ],
+                  next: [
+                    {
+                      wait: 6,
+                      seq: {
+                        cmds: [
+                          `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1`
+                        ],
+                        next: [
+                          {
+                            wait: 4,
+                            seq: {
+                              cmds: [
+                                `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.93`
+                              ],
+                              next: [
+                                {
+                                  wait: 5,
+                                  seq: {
+                                    cmds: [
+                                      `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.9`
+                                    ],
+                                    next: [
+                                      {
+                                        wait: 6,
+                                        seq: {
+                                          cmds: [
+                                            `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.85`
+                                          ],
+                                          next: [
+                                            {
+                                              wait: 6,
+                                              seq: {
+                                                cmds: [
+                                                  `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1`
+                                                ],
+                                                next: [
+                                                  {
+                                                    wait: 7,
+                                                    seq: {
+                                                      cmds: [
+                                                        `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.9`
+                                                      ],
+                                                      next: [
+                                                        {
+                                                          wait: 8,
+                                                          seq: {
+                                                            cmds: [
+                                                              `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.1`
+                                                            ],
+                                                            next: [
+                                                              {
+                                                                wait: 8,
+                                                                seq: {
+                                                                  cmds: [
+                                                                    `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.95`
+                                                                  ],
+                                                                  next: [
+                                                                    {
+                                                                      wait: 12,
+                                                                      seq: {
+                                                                        cmds: [
+                                                                          `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.85`
+                                                                        ],
+                                                                        next: [
+                                                                          {
+                                                                            wait: 15,
+                                                                            seq: {
+                                                                              cmds: [
+                                                                                `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.87`
+                                                                              ],
+                                                                              next: [
+                                                                                {
+                                                                                  wait: 20,
+                                                                                  seq: {
+                                                                                    cmds: [
+                                                                                      `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.92`
+                                                                                    ],
+                                                                                    next: [
+                                                                                      {
+                                                                                        wait: 20,
+                                                                                        seq: {
+                                                                                          cmds: [
+                                                                                            `playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.85`
+                                                                                          ]
+                                                                                        }
+                                                                                      }
+                                                                                    ]
+                                                                                  }
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
     })
 
     addfunc('intro/_settv', [
