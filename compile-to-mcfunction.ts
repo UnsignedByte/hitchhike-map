@@ -182,7 +182,7 @@ export function createNpc (
           });
           // # of vowels (≈ syllables) * 5 ticks/vowel
           const fulltext = message.message.map(x=>x.text || '').join("");
-          const duration = (fulltext.match(/[aiueo]/gi)?.length ?? 4) * 6
+          const duration = message.wait ?? ((fulltext.match(/[aiueo]/gi)?.length ?? 4) * 6)
           const broadcastTargets = message.global ? '@a' : select.eavesdropper;
           functions[`${indexToFuncName(i)}`] = [
             `# Dialogue line #${idx}-${i + 1}: speak and make noise.`,
@@ -913,7 +913,46 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                                         wait: 10,
                                                                                         seq: {
                                                                                           cmds: [
-                                                                                            `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.2`
+                                                                                            `data modify entity @e[tag=npc-simon,limit=1] HandItems[0] set value ${toSnbt({
+                                                                                              id:'"minecraft:glass_bottle"',
+                                                                                              Count:'1b',
+                                                                                              tag: {
+                                                                                                Enchantments: `[{}]`
+                                                                                              }
+                                                                                            })}`,
+                                                                                            `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.95`
+                                                                                          ],
+                                                                                          next: [
+                                                                                            {
+                                                                                              wait: 10,
+                                                                                              seq: {
+                                                                                                cmds: [
+                                                                                                  `execute at @e[tag=npc-simon,limit=1] playsound entity.player.burp neutral @a ~ ~ ~ 10 0.9`
+                                                                                                ],
+                                                                                                next: [
+                                                                                                  {
+                                                                                                    wait: 10,
+                                                                                                    seq: {
+                                                                                                      cmds: [
+                                                                                                        `data modify entity @e[tag=npc-simon,limit=1] HandItems[0] set value {}`,
+                                                                                                        `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.ender_pearl.throw neutral @a ~ ~ ~ 1 0.6`,
+                                                                                                        `execute at @e[tag=npc-simon,limit=1] run summon item ~ ~1 ~ ${toSnbt({
+                                                                                                          Motion:'[-0.5,0.3,0.125]',
+                                                                                                          PickupDelay: 20,
+                                                                                                          Item:{
+                                                                                                            id:'"minecraft:glass_bottle"',
+                                                                                                            Count: '1b',
+                                                                                                            tag:{
+                                                                                                              Enchantments:'[{}]'
+                                                                                                            }
+                                                                                                          }
+                                                                                                        })}`
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  }
+                                                                                                ]
+                                                                                              }
+                                                                                            }
                                                                                           ]
                                                                                         }
                                                                                       }

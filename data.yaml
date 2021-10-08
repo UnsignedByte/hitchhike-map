@@ -307,6 +307,13 @@ npc:
               command:
               - type: function
                 value: generated:story/simon/drink
+              wait: 100
+            - message:
+              - text: Ahh
+                italic: true
+              - text: ", That was pretty good. You don't need to give me back the change, don't worry."
+            - Consider it a gift; I'm just generous like that.
+
           cond: 5
           end:
             - scoreboard players set ${select.self} dialogue-status -1

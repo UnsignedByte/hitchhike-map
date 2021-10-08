@@ -8,4 +8,4 @@ setblock 956 44 203 minecraft:powered_rail[powered=false,shape=east_west,waterlo
 summon minecart 912 34 193 {Silent:1,Tags:["simon-holder"]}
 tag @e[tag=npc-simon, limit=1] add npc-unface
 scoreboard players set -held story-simon -1
-schedule function generated:npc/simon/2-09 90t
+schedule function generated:npc/simon/2-09 -1t

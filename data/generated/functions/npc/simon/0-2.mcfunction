@@ -4,4 +4,4 @@ execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.am
 scoreboard players set -held story-simon 0
 kill @e[tag=simon-holder]
 tp @e[tag=npc-simon, limit=1] 912.00 64 193.50 43 4
-schedule function generated:npc/simon/0-3 84t
+schedule function generated:npc/simon/0-3 -1t

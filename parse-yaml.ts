@@ -89,7 +89,8 @@ const msgSchema = z
       rawJSONTextSchema.transform(json=>[json]),
       z.array(rawJSONTextSchema)
     ]),
-    command:cmdSchema
+    command:cmdSchema,
+    wait: z.number().default(-1)
   })
 
 const dialogueSchema = z

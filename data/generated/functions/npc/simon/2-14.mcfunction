@@ -4,4 +4,4 @@ execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.am
 scoreboard players set -sdcard story-simon 0
 function generated:quests/sdcard-start
 give @a[tag=victim-of-dialogue-by-simon, limit=1] minecraft:daylight_detector{display: {Name: '{"text":"SD Card (Corrupted)","color":"#d6679f","bold":true}', Lore: ['{"text":"A corrupted SD Card","color":"blue"}', '{"text":"What secrets might","color":"gray"}', '{"text":"it hold inside?","color":"gray"}']}, Enchantments: [{}]} 1
-schedule function generated:npc/simon/2-15 204t
+schedule function generated:npc/simon/2-15 -1t
