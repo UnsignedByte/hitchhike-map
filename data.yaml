@@ -295,9 +295,9 @@ npc:
             - Oh, you're back already?
             - message:
               - text: "Sorry, I was distracted again; I was admiring my one-of-a-kind "
-              - text: Sedimentary Cryptocrystalline Quartz
+              - text: Sedimentary Cryptocrystalline Quartz (Chert)
                 color: 0x9ba5a8
-              - text: ", or Chert for short."
+              - text: " stone."
             - Notice the beautiful tumescent shape? I chose it myself.
             - Amazing, isn't it? It takes a keen eye to notice the beautifully detailed ridges along the surface, almost like blood vessels spiraling their way upward.
             - I just can't help but just take it in every now and then... its beauty, I mean.

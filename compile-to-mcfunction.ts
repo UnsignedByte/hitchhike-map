@@ -927,7 +927,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                                               wait: 10,
                                                                                               seq: {
                                                                                                 cmds: [
-                                                                                                  `execute at @e[tag=npc-simon,limit=1] playsound entity.player.burp neutral @a ~ ~ ~ 10 0.9`
+                                                                                                  `execute at @e[tag=npc-simon,limit=1] run playsound entity.player.burp neutral @a ~ ~ ~ 10 0.9`
                                                                                                 ],
                                                                                                 next: [
                                                                                                   {
