@@ -814,7 +814,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     genseq('simon/drink', {
       cmds: [
         `data modify entity @e[tag=npc-simon,limit=1] HandItems[0] set value ${toSnbt(Object.assign({Count:'1b'}, item.store.sold.lacroix))}`,
-        `clear @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},limit=1] ${toGive(item.store.sold.lacroix)} 1`,
+        `clear @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},limit=1] ${toGive(item.store.sold.lacroix)}`,
         `playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1`
       ],
       next: [
