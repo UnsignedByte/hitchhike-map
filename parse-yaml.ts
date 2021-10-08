@@ -90,7 +90,7 @@ const msgSchema = z
       z.array(rawJSONTextSchema)
     ]),
     command:cmdSchema,
-    wait: z.number().default(-1)
+    wait: z.number().optional()
   })
 
 const dialogueSchema = z
