@@ -822,53 +822,53 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           wait: 12,
           seq: {
             cmds: [
-              `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.1`
+              `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1`
             ],
             next: [
               {
                 wait: 3,
                 seq: {
                   cmds: [
-                    `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.9`
+                    `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.95`
                   ],
                   next: [
                     {
                       wait: 4,
                       seq: {
                         cmds: [
-                          `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1`
+                          `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.05`
                         ],
                         next: [
                           {
                             wait: 4,
                             seq: {
                               cmds: [
-                                `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.05`
+                                `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.025`
                               ],
                               next: [
                                 {
                                   wait: 3,
                                   seq: {
                                     cmds: [
-                                      `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.95`
+                                      `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1`
                                     ],
                                     next: [
                                       {
-                                        wait: 6,
+                                        wait: 2,
                                         seq: {
                                           cmds: [
                                             `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.95`
                                           ],
                                           next: [
                                             {
-                                              wait: 5,
+                                              wait: 4,
                                               seq: {
                                                 cmds: [
                                                   `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1`
                                                 ],
                                                 next: [
                                                   {
-                                                    wait: 7,
+                                                    wait: 3,
                                                     seq: {
                                                       cmds: [
                                                         `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.05`

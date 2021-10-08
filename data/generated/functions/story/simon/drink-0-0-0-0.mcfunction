@@ -1,2 +1,2 @@
-execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.05
+execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.025
 schedule function generated:story/simon/drink-0-0-0-0-0 3t
