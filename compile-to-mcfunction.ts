@@ -889,7 +889,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                   ],
                                                                   next: [
                                                                     {
-                                                                      wait: 12,
+                                                                      wait: 9,
                                                                       seq: {
                                                                         cmds: [
                                                                           `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.15`
@@ -903,14 +903,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                               ],
                                                                               next: [
                                                                                 {
-                                                                                  wait: 20,
+                                                                                  wait: 5,
                                                                                   seq: {
                                                                                     cmds: [
                                                                                       `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.1`
                                                                                     ],
                                                                                     next: [
                                                                                       {
-                                                                                        wait: 20,
+                                                                                        wait: 10,
                                                                                         seq: {
                                                                                           cmds: [
                                                                                             `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.2`
