@@ -5,6 +5,8 @@ function scheduled:scheduled/s-20
 kill @e[tag=npc]
 
 # Clear quest book from all players.
+data modify storage generated:quest_book current set value ["","","","","","","",""]
+data modify storage generated:quest_book completed set value ["","","","","","","",""]
 clear @a minecraft:written_book{title:"Quest Book"}
 scoreboard objectives remove quest-book-upd
 scoreboard objectives add quest-book-upd dummy

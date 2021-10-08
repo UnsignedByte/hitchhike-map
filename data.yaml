@@ -252,6 +252,7 @@ npc:
               - text: .
               global: true
               command:
+                - scoreboard players set -lacroix story-simon 0
                 - type: quest
                   value: lacroix
             - message:
@@ -469,7 +470,7 @@ quest:
         - type: player
           all: true
           condition:
-            -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
+            -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
           count: 1
           weight: 1
   leather:
@@ -490,7 +491,7 @@ quest:
         - type: player
           all: true
           condition:
-            -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
+            -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
           count: 1
           weight: 1
   picnic:
@@ -514,7 +515,7 @@ quest:
         - type: player
           all: true
           condition:
-            -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
+            -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
           count: 1
           weight: 1
   lacroix:
@@ -527,8 +528,9 @@ quest:
           value:
             - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]}]"
         - type: cond
-          condition:
-            -  "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},x=939,y=69,z=181,dx=6,dy=2,dz=5]"
+          value:
+            - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},x=939,y=69,z=181,dx=6,dy=2,dz=5]"
+            - "if score -lacroix story-simon matches 1"
           weight: 1
     end:
       - type: score
@@ -543,7 +545,7 @@ quest:
           value:
             - if score -sdcard story-simon matches 1
         - type: cond
-          condition:
+          value:
             -  "if entity @a[x=939,y=69,z=181,dx=6,dy=2,dz=5]"
           weight: 1
 

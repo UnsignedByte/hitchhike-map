@@ -1,4 +1,5 @@
 scoreboard players set -held story-simon 0
+scoreboard players set -lacroix story-simon 1
 kill @e[tag=simon-holder]
 tag @e[tag=npc-simon] remove npc-unface
 
