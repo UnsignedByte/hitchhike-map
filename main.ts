@@ -396,8 +396,7 @@ export async function init (
     ])
   ]
 
-  functions['test/itemdetect'] = detectItem(functions, item.money[1]);
-  functions['test/itemdetectspec'] = detectItem(functions, item.money[1], [0, 1, 2, 3, 4, 5, 6, 7, 8]);
+  functions['test/givebook'] = `give @a ${toGive(item.quest_book)}`;
 
   functions['rng/rng'] = [
     '# generate random number from 0 to 2^31-1 (mod m)',

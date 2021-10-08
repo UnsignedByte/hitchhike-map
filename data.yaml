@@ -526,11 +526,9 @@ quest:
         - type: cond
           value:
             - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]}]"
-        - type: player
-          all: true
+        - type: cond
           condition:
-            -  if entity @s[x=906,y=64,z=186,dx=13,dz=4,dy=1]
-          count: 1
+            -  "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},x=939,y=69,z=181,dx=6,dy=2,dz=5]"
           weight: 1
     end:
       - type: score
