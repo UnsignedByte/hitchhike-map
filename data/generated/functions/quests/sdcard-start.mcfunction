@@ -6,4 +6,3 @@ scoreboard players set q-7 q-7 0
 scoreboard players set q-7-0 q-7 0
 scoreboard players set q-7-0-0 q-7 0
 scoreboard players set q-7-0-1 q-7 0
-scoreboard objectives add q-7-0-1 dummy
