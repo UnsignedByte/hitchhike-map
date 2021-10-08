@@ -882,7 +882,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                             ],
                                                             next: [
                                                               {
-                                                                wait: 8,
+                                                                wait: 3,
                                                                 seq: {
                                                                   cmds: [
                                                                     `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1`
@@ -896,7 +896,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                         ],
                                                                         next: [
                                                                           {
-                                                                            wait: 6,
+                                                                            wait: 4,
                                                                             seq: {
                                                                               cmds: [
                                                                                 `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1`
