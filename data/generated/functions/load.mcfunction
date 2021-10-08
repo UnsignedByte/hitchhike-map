@@ -4691,7 +4691,55 @@ tag @a remove victim-of-dialogue-by-cashier
 
 tag @a remove victim-of-dialogue-by-cameron
 
-tag @a remove victim-of-dialogue-by-__k
+tag @a remove victim-of-dialogue-by-__apple
+
+tag @a remove victim-of-dialogue-by-__melon_slice
+
+tag @a remove victim-of-dialogue-by-__glow_berries
+
+tag @a remove victim-of-dialogue-by-__milk
+
+tag @a remove victim-of-dialogue-by-__egg
+
+tag @a remove victim-of-dialogue-by-__pickle
+
+tag @a remove victim-of-dialogue-by-__bamboo
+
+tag @a remove victim-of-dialogue-by-__kelp
+
+tag @a remove victim-of-dialogue-by-__cane
+
+tag @a remove victim-of-dialogue-by-__mysterhyshrooms
+
+tag @a remove victim-of-dialogue-by-__shiitake
+
+tag @a remove victim-of-dialogue-by-__beet
+
+tag @a remove victim-of-dialogue-by-__potato
+
+tag @a remove victim-of-dialogue-by-__carrot
+
+tag @a remove victim-of-dialogue-by-__berries
+
+tag @a remove victim-of-dialogue-by-__rawbeef
+
+tag @a remove victim-of-dialogue-by-__rawmutton
+
+tag @a remove victim-of-dialogue-by-__porkchop
+
+tag @a remove victim-of-dialogue-by-__rabbit
+
+tag @a remove victim-of-dialogue-by-__chicken
+
+tag @a remove victim-of-dialogue-by-__pufferfish
+
+tag @a remove victim-of-dialogue-by-__clownfish
+
+tag @a remove victim-of-dialogue-by-__salmon
+
+tag @a remove victim-of-dialogue-by-__monster
+
+tag @a remove victim-of-dialogue-by-__lacroix
 
 
 
