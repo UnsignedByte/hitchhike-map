@@ -739,7 +739,7 @@ export const item = {
       })}]`))
       store.sold[k].tag.sold = true;
 
-      store.npc[k] = npcSchema.parse({
+      store.npc[`__k`] = npcSchema.parse({
         name: rawJson([
           JSON.parse(eval((Object.assign({Name: `'"${k}"'`}, v.tag.display)).Name)),
           {
