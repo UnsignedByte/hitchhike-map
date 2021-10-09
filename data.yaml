@@ -533,7 +533,8 @@ quest:
           value:
             - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},x=939,y=69,z=181,dx=6,dy=2,dz=5]"
             - "if score -lacroix story-simon matches 1"
-          weight: 2
+          count: 2
+          weight: 1
     end:
       - type: score
         value: "@e[tag=npc-simon,limit=1] dialogue-status 5"
