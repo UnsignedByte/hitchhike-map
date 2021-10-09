@@ -299,7 +299,7 @@ npc:
                 color: 0x9ba5a8
               - text: " stone."
             - Notice the beautiful tumescent shape? I chose it myself.
-            - Amazing, isn't it? It takes a keen eye to notice the beautifully detailed ridges along the surface, almost like blood vessels spiraling their way upward.
+            - Amazing, isn't it? It takes a keen eye to notice the beautifully detailed ridges along the surface, almost vascular in their branching pattern.
             - I just can't help but just take it in every now and then... its beauty, I mean.
             - So, I see you brought back my LaCroix! Admirable.
             - message:
@@ -314,11 +314,22 @@ npc:
                 italic: true
               - text: ", That was pretty good. You don't need to give me back the change, don't worry."
             - Consider it a gift; I'm just generous like that.
-
+            - Anyways, see you later!
           cond: 5
           end:
-            - scoreboard players set ${select.self} dialogue-status -1
-            - execute if score sdcard quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 6
+            - scoreboard players set ${select.self} dialogue-status 6
+            - execute if score sdcard quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 7
+        - messages:
+            - Hi again! I see you're as interested in Morton as I am!
+            - Oh, Morton is the name of the rock, in case you couldn't tell.
+            - Anyways, glad to see another connoisseur of mineral collection; it's hard to find people interested in such a high-class hobby nowadays.
+            - Feel free to observe as long as you want.
+          cond: 6
+          end: 6
+        - messages:
+            - Nice, I see you've fixed my SD card.
+          cond: 7
+          end: -1
     cashier:
       name: Henry
       position: 891.5 64 -152.5
@@ -367,7 +378,7 @@ npc:
           - Remember, there was nobody here.
           end: -1
 
-              
+
 quest:
   visitfriend: # visit friend's house
     name: Phone-A-Friend
@@ -551,6 +562,8 @@ quest:
           value:
             -  "if entity @a[x=939,y=69,z=181,dx=6,dy=2,dz=5]"
           weight: 1
+    end:
+      - execute as @e[tag=npc-simon,limit=1] if score @s dialogue-status matches 6 run scoreboard players set @s dialogue-status 7
 
 itemphysics:
   # - duration: 20 # physics simulation duration in seconds

@@ -575,7 +575,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {
               seq: {
                 cmds: [
-                  `function hitchhike:story/intro/unlock_door`,
+                  `function hitchhike:story/intro/unlock_basement_door`,
                   `scoreboard players set - quest-book-upd 1`,
                   `schedule function generated:quests/visitfriend-start 1t`
                 ]
@@ -912,7 +912,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                                     ],
                                                                                     next: [
                                                                                       {
-                                                                                        wait: 10,
+                                                                                        wait: 5,
                                                                                         seq: {
                                                                                           cmds: [
                                                                                             `data modify entity @e[tag=npc-simon,limit=1] HandItems[0] set value ${toSnbt({
@@ -926,7 +926,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                                           ],
                                                                                           next: [
                                                                                             {
-                                                                                              wait: 10,
+                                                                                              wait: 15,
                                                                                               seq: {
                                                                                                 cmds: [
                                                                                                   `execute at @e[tag=npc-simon,limit=1] run playsound entity.player.burp neutral @a ~ ~ ~ 10 0.9`,
