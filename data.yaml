@@ -747,7 +747,7 @@ itemphysics:
     rotation: 0 0 -90
   carrotmid1:
     duration: 30
-    count: 50
+    count: 100
     corner: 916 65.5 -163.5
     item: carrot
     bounds: 1 2.5
@@ -788,7 +788,7 @@ itemphysics:
     rotation: 0 0 -90
   potatomid1:
     duration: 30
-    count: 50
+    count: 100
     corner: 916 65.5 -161
     item: potato
     bounds: 1 3
