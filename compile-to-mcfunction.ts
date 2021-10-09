@@ -798,6 +798,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     })
 
     addfunc('intro/_resetkey', [
+      `setblock 1024 66 61 air`,
       `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${toSnbt(Object.assign({Count:'1b',Slot:'13b'}, item.housekey))}]}`
     ]);
 
