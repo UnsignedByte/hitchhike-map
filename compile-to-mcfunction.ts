@@ -815,7 +815,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       cmds: [
         `data modify entity @e[tag=npc-simon,limit=1] HandItems[0] set value ${toSnbt(Object.assign({Count:'1b'}, item.store.sold.lacroix))}`,
         `execute at @e[tag=npc-simon,limit=1] run clear @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},sort=nearest,limit=1] ${toGive(item.store.sold.lacroix)}`,
-        `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1`
+        `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1`,
+        `tag @e[tag=npc-simon,limit=1] add npc-unface`,
+        `execute as @e[tag=npc-simon,limit=1] at @s run tp @s ~ ~ ~ 75 20`
       ],
       next: [
         {
@@ -833,7 +835,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   ],
                   next: [
                     {
-                      wait: 5,
+                      wait: 4,
                       seq: {
                         cmds: [
                           `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 1.05`
@@ -854,7 +856,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                     ],
                                     next: [
                                       {
-                                        wait: 5,
+                                        wait: 3,
                                         seq: {
                                           cmds: [
                                             `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.generic.drink neutral @a ~ ~ ~ 1 0.95`
@@ -927,7 +929,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                                               wait: 10,
                                                                                               seq: {
                                                                                                 cmds: [
-                                                                                                  `execute at @e[tag=npc-simon,limit=1] run playsound entity.player.burp neutral @a ~ ~ ~ 10 0.9`
+                                                                                                  `execute at @e[tag=npc-simon,limit=1] run playsound entity.player.burp neutral @a ~ ~ ~ 10 0.9`,
+                                                                                                  `execute as @e[tag=npc-simon,limit=1] at @s run tp @s ~ ~ ~ ~ -5`
                                                                                                 ],
                                                                                                 next: [
                                                                                                   {
@@ -947,6 +950,16 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                                                             }
                                                                                                           }
                                                                                                         })}`
+                                                                                                      ],
+                                                                                                      next: [
+                                                                                                        {
+                                                                                                          wait: 10,
+                                                                                                          seq: {
+                                                                                                            cmds: [
+                                                                                                              `tag @e[tag=npc-simon,limit=1] remove npc-unface`
+                                                                                                            ]
+                                                                                                          }
+                                                                                                        }
                                                                                                       ]
                                                                                                     }
                                                                                                   }

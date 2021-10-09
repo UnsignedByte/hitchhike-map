@@ -353,14 +353,16 @@ npc:
       dialogue:
         - messages:
           - Whoa! How'd you find me here?
-          - Darn, I thought I had the perfect hiding spot... I guess I've lost then. I can't believe I didn't see you coming up here.
+          - Darn, I thought I had the perfect hiding spot...
+          - I guess I've lost then. I can't believe I didn't see you coming up here.
           - Wait, are you not part of the game?
           - Sweet! Can you keep quiet about finding me here? I'm sure nobody else will be able to.
           - Hmm, what can I give you as incentive...
           - message:
-            - text: Here, take my spyglass. If you were able to sneak up on me while I was using it, it clearly isnt helping much, anyways.
+            - text: Here, take my spyglass.
             command:
               - "give ${select.player} ${toGive(item.spyglass)}"
+          - If you were able to sneak up on me while I was using it, it clearly isnt helping much, anyways.
           - I wonder if you'll accidentally stumble across anyone else.
           - Remember, there was nobody here.
           end: -1
@@ -531,7 +533,7 @@ quest:
           value:
             - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},x=939,y=69,z=181,dx=6,dy=2,dz=5]"
             - "if score -lacroix story-simon matches 1"
-          weight: 1
+          weight: 2
     end:
       - type: score
         value: "@e[tag=npc-simon,limit=1] dialogue-status 5"
