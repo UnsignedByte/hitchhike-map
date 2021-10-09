@@ -766,7 +766,7 @@ itemphysics:
     duration: 30
     count: 300
     corner: 916 66.5 -163.5
-    item: sweet_berries
+    item: berries
     bounds: 1 5.5
     small: true
     type: head
@@ -785,6 +785,7 @@ itemphysics:
       - 0 99
     spawnrange: 0 0.5 0.5 0.5
     rotation: 0 0 -90
+    forcebuild: true
   potatomid1:
     duration: 30
     count: 100
@@ -803,7 +804,6 @@ itemphysics:
       - 0 99
     spawnrange: 0 0 0.5 0
     rotation: 0 0 -90
-    forcebuild: true
   potatobottom1:
     duration: 30
     count: 50
