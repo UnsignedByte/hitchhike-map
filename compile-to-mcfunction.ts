@@ -797,6 +797,32 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       }]
     })
 
+    addfunc('intro/_resetkey', [
+      `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${Object.assign({Count:'1b',Slot:'13b'}, item.housekey)}]}`
+    ]);
+
+    addfunc('intro/lock_back_door', [
+      `execute unless entity @a[x=1004,y=65,z=61,dx=6,dy=1,dz=4,nbt={Inventory:${toSnbt(item.housekey)}}] run function generated:story/intro/close_back_door`,
+      `execute if entity @a[x=1004,y=65,z=61,dx=6,dy=1,dz=4,nbt={Inventory:${toSnbt(item.housekey)}}] run schedule function hitchhike:story/intro/unlock_external_doors 1t`
+    ])
+
+    addfunc('intro/close_back_door', [
+      `execute unless block 1007 65 65 minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false] run title @a actionbar [{"text":"The back door is locked. Maybe look for a key?"}]`,
+      `execute unless block 1007 65 65 minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false] run setblock 1009 64 65 minecraft:redstone_block`,
+      `setblock 1009 64 65 air`
+    ])
+
+    addfunc('intro/lock_front_door', [
+      `execute unless entity @a[x=1011,y=65,z=53,dz=4,dx=3,nbt={Inventory:${toSnbt(item.housekey)}}] run function generated:story/intro/close_front_door`,
+      `execute if entity @a[x=1011,y=65,z=53,dz=4,dx=3,nbt={Inventory:${toSnbt(item.housekey)}}] run schedule function hitchhike:story/intro/unlock_external_doors 1t`
+    ])
+
+    addfunc('intro/close_front_door', [
+      `execute unless block 1012 65 52 minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false] run title @a actionbar [{"text":"The front door is locked. Maybe look for a key?"}]`,
+      `execute unless block 1012 65 52 minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false] run setblock 1014 63 51 minecraft:redstone_block`,
+      `setblock 1014 63 51 air`
+    ])
+
     addfunc('intro/_settv', [
       [...Array(6).keys()].map(x=>
         `data modify entity @e[x=1005,dx=0,y=${61 - x % 2},dy=0,z=${60 - Math.floor(x / 2)},dz=0,limit=1] Item.tag.map set value ${292+x}`
@@ -1012,17 +1038,5 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         }
       ]
     })
-
-    addfunc('intro/_settv', [
-      [...Array(6).keys()].map(x=>
-        `data modify entity @e[x=1005,dx=0,y=${61 - x % 2},dy=0,z=${60 - Math.floor(x / 2)},dz=0,limit=1] Item.tag.map set value ${292+x}`
-      )
-    ])
-
-    addfunc('intro/_resettv', [
-      [...Array(6).keys()].map(x=>
-        `data modify entity @e[x=1005,dx=0,y=${61 - x % 2},dy=0,z=${60 - Math.floor(x / 2)},dz=0,limit=1] Item.tag.map set value ${286+x}`
-      )
-    ])
   })();
 }

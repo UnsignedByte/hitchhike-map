@@ -43,6 +43,16 @@ export const item = {
       ])}]`
     }
   },
+  housekey: {
+    id:'"minecraft:tripwire_hook"',
+    tag:{
+      Enchantments:`[{}]`,
+      display:{
+        Lore:`['{"text":"Unlocks Doors","color":"dark_gray"}']`,
+        Name:`'{"text":"House Key","color":"dark_aqua","bold":true}'`
+      }
+    }
+  },
   spyglass: {
     id: '"minecraft:spyglass"',
     tag: {
