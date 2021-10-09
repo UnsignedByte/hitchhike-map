@@ -371,7 +371,7 @@ export const item = {
           }
         }
       },
-      mysterhyshrooms: {
+      mysteryshrooms: {
         id: '"minecraft:red_mushroom"',
         tag:{
           cost: 349,

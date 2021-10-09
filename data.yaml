@@ -826,7 +826,7 @@ itemphysics:
     duration: 30
     count: 100
     corner: 916 64.5 -157.5
-    item: red_mushroom
+    item: mysteryshrooms
     bounds: 1 2.5
     small: true
     type: head
@@ -843,7 +843,7 @@ itemphysics:
     duration: 30
     count: 100
     corner: 916 65.5 -158
-    item: brown_mushroom
+    item: shiitake
     bounds: 1 3
     small: true
     type: head
@@ -919,7 +919,7 @@ itemphysics:
     duration: 30
     count: 200
     corner: 916 66.5 -155
-    item: sugar_cane
+    item: cane
     bounds: 1 4
     small: true
     type: head

@@ -79,8 +79,8 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 915.50 64.5 -153.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__cane", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Sugarcane","bold":false,"color":"#009903"},{"text":" (0.89B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
-# Summon the villager for __mysterhyshrooms.
-summon minecraft:villager 915.50 62.75 -156.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__mysterhyshrooms", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Mystery Shrooms","bold":false,"color":"#e64037"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+# Summon the villager for __mysteryshrooms.
+summon minecraft:villager 915.50 62.75 -156.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__mysteryshrooms", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Mystery Shrooms","bold":false,"color":"#e64037"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __shiitake.
