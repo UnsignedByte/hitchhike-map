@@ -141,6 +141,8 @@ export function populate_shelf (
 			break;
 	}
 
+	yrot += 90;
+
 	let objs = [];
 
 	for( let i = 0; i < count; i++ ){
