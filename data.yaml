@@ -1068,4 +1068,5 @@ shelves:
     dir: south
     length: 5
     item: glass_pane
+    small: true
     forcebuild: true
