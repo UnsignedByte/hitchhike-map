@@ -1067,5 +1067,5 @@ shelves:
     pos: 910 64 -162
     dir: south
     length: 5
-    item: cookie
+    item: glass_pane
     forcebuild: true
