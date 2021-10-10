@@ -146,7 +146,7 @@ export function populate_shelf (
 	let objs = [];
 
 	for( let i = 0; i < count; i++ ){
-		let theta = Math.PI/4 + Math.pow(2*Math.random()-1, 3) * Math.PI/4;
+		let theta = Math.PI/4 + Math.pow(2*Math.random()-1, 5) * Math.PI/4;
 		let offs = [(i+0.5)*length/count, s/2 * (Math.cos(theta) + Math.sin(theta)/16)];
 		console.log(offs, theta);
 
