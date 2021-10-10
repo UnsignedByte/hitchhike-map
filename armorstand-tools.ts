@@ -141,7 +141,7 @@ export function populate_shelf (
 			break;
 	}
 
-	yrot += 90;
+	yrot += Math.PI/2;
 
 	let objs = [];
 
