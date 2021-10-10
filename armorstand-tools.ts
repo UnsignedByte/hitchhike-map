@@ -151,7 +151,7 @@ export function populate_shelf (
 		console.log(offs, theta);
 
 		objs.push({
-			quaternion: new CANNON.Quaternion().setFromEuler(0, yrot, Math.PI/5, 'XYZ'),
+			quaternion: new CANNON.Quaternion().setFromEuler(0, yrot, Math.PI/2-theta, 'XYZ'),
 			position: new CANNON.Vec3(x+rdir[0]*offs[0] - rdir[1]*offs[1], y + s/2 * (Math.sin(theta) + Math.cos(theta)/16), z+rdir[1]*offs[0] - rdir[0]*offs[1])
 		})
 	}
