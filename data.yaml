@@ -856,7 +856,6 @@ itemphysics:
       - 0 99
     spawnrange: 0 0 0.5 0
     rotation: 0 0 -90
-    forcebuild: true
   bamboomid1:
     duration: 30
     count: 100
@@ -996,6 +995,7 @@ itemphysics:
       # - 99 99 99 99 99 99 99 99 99 99
     spawnrange: 0.5 0.5 0 0
     rotation: 0 0 0
+    forcebuild: true
   tropicalfish1:
     duration: 40
     count: 50
@@ -1011,6 +1011,7 @@ itemphysics:
       -  0  0  0  0  0  0  0  0  0
     spawnrange: 0 0.5 0 0
     rotation: 0 0 0
+    forcebuild: true
   pufferfish1:
     duration: 40
     count: 50
@@ -1026,6 +1027,7 @@ itemphysics:
       -  0  0  0  0  0  0  0  0 99
     spawnrange: 0 0.5 0.5 0
     rotation: 0 0 0
+    forcebuild: true
   monster:
     duration: 40
     count: 50
