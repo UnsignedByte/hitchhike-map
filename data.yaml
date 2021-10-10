@@ -998,7 +998,7 @@ itemphysics:
     forcebuild: true
   tropicalfish1:
     duration: 40
-    count: 50
+    count: 30
     corner: 900.5 65.5 -168.5
     item: tropical_fish
     bounds: 4.5 1.5
@@ -1014,7 +1014,7 @@ itemphysics:
     forcebuild: true
   pufferfish1:
     duration: 40
-    count: 50
+    count: 30
     corner: 905 65.5 -168.5
     item: pufferfish
     bounds: 4.5 1.5
