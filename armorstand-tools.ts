@@ -39,7 +39,7 @@ function getS(type: string, small: boolean): number {
 export function toStand(x: any, item: string, type: string, small: boolean): string {
 	let offset = new CANNON.Vec3();
 	let foffset = new CANNON.Vec3();
-	let s = 0; // size of an item
+	let s = getS(type, small); // size of an item
 
 	switch (type) {
 		case 'head':
