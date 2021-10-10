@@ -247,6 +247,28 @@ const itemphysicsSchema = z.object({
 
 export type ItemPhysics = z.infer<typeof itemphysicsSchema>
 
+
+const shelfSchema = z.object({
+  length: z.number(),
+  count: z.number().optional(), // number of items
+  item: z.string(), // item ID
+  pos: nplet(3),
+  dir: z.union([
+    z.literal("south"),
+    z.literal("north"),
+    z.literal("east"),
+    z.literal("west")
+  ]),
+  small: z.boolean().default(false),
+  type: z.union([
+    z.literal('head'),
+    z.literal('hand')
+  ]).default('head'),
+  forcebuild: z.boolean().default(false)
+})
+
+export type Shelf = z.infer<typeof shelfSchema>
+
 const fullSchema = z
   .object({
     npc:z.object({
@@ -257,7 +279,8 @@ const fullSchema = z
       npcs:z.record(npcSchema)
     }),
     quest: z.record(questSchema),
-    itemphysics: z.record(itemphysicsSchema)
+    itemphysics: z.record(itemphysicsSchema),
+    shelves: z.record(shelfSchema)
   })
 
 export function parse (yaml: string): z.infer<typeof fullSchema> {

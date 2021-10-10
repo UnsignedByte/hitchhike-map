@@ -1061,3 +1061,10 @@ itemphysics:
       - 0 99
     spawnrange: 0 0.5 0.5 0
     rotation: 0 0 -90
+
+shelves:
+  cookiebottom:
+    pos: 910 64 -162
+    dir: south
+    length: 5
+    item: cookie

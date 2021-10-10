@@ -1,7 +1,7 @@
 import * as CANNON from 'https://cdn.skypack.dev/cannon-es'
 // import * as THREE from 'https://cdn.skypack.dev/three'
 import { toSnbt, rawJson } from './compile-to-mcfunction.ts'
-import { ItemPhysics } from './parse-yaml.ts'
+import { ItemPhysics, Shelf } from './parse-yaml.ts'
 import { Lines, schedule } from './main.ts'
 import { item as ITEMS } from './item.ts'
 
@@ -15,6 +15,146 @@ count: number of items
 bounds: x and z width of area
  */
 
+function getS(type: string, small: boolean): number {
+	let s = 0;
+	switch (type) {
+		case 'head':
+			s = 0.625;
+
+			if (small) {
+				s*=7/10;
+			}
+			break;
+		case 'hand':
+			s = 0.625;
+
+			if (small) {
+				s*=0.5;
+			}
+			break;
+	}
+	return s;
+}
+
+export function toStand(x: any, item: string, type: string, small: boolean): string {
+	let offset = new CANNON.Vec3();
+	let foffset = new CANNON.Vec3();
+	let s = 0; // size of an item
+
+	switch (type) {
+		case 'head':
+			let necklength = 7/16+1/128;
+			offset.set(0, necklength + s/2, -0.25-s/32);
+			foffset.set(0, 7/16+1, 0);
+
+			if (small) {
+				offset.set(0, necklength*3/4 + s/2, -0.25*3/4-s/32);
+				foffset.set(0, (13/32+1)/2, 0);
+			}
+			break;
+		case 'hand':
+			offset.set(0, 0.44625 + s/2, -0.25-s/32);
+			foffset.set(0, 7/16+1, 0);
+
+			if (small) {
+				offset.scale(0.5);
+				foffset.scale(0.5);
+			}
+			break;
+		default:
+			return ''
+	}
+
+	x.rotation = new CANNON.Vec3();
+	x.quaternion.toEuler(x.rotation, 'YZX');
+
+	x.quaternion = new CANNON.Quaternion().setFromEuler(x.rotation.x, x.rotation.y, x.rotation.z, 'ZYX');
+	x.rotation.scale(180/Math.PI, x.rotation);
+
+	// x.position.vadd(cornerV, x.position);
+	let tmp = new CANNON.Quaternion(offset.x, offset.y, offset.z, 0);
+	let noffset = x.quaternion.mult(tmp).mult(x.quaternion.inverse());
+	x.position.vsub(new CANNON.Vec3(noffset.x, noffset.y, noffset.z), x.position); // move by offset
+	x.position.vsub(foffset, x.position);
+
+	return `summon armor_stand ${x.position.x.toFixed(8)} ${(x.position.y).toFixed(8)} ${x.position.z.toFixed(8)} ${toSnbt({
+		Pose: {
+			Head: `[${x.rotation.x}f, ${-x.rotation.y}f, ${-x.rotation.z}f]`
+		},
+		Tags: `["item_holder"]`,
+		ArmorItems: `[{},{},{},${toSnbt(Object.assign(
+			{id:`"${item}"`, Count:'1b'},
+			ITEMS.store.sold[item] ?? {}
+		))}]`,
+		DisabledSlots:4144959,
+		Invulnerable: true,
+		Invisible: true,
+		NoGravity: true,
+		Silent: true,
+		Marker: true,
+		Small: small
+	})}`
+}
+
+export function populate_shelf (
+	{
+    pos: [x, y, z],
+    dir,
+    item,
+    length,
+    count,
+    type,
+    small
+	}: Shelf
+	): string[] {
+
+	const s = getS(type, small);
+
+	count = count ?? length;
+
+	let rdir = [0,0];
+	let yrot = 0;
+	y+=0.5;
+
+	switch(dir) {
+		case 'south':
+			x+=0.5;
+			rdir = [0,1];
+			yrot = 0;
+			break;
+		case 'north':
+			x+=0.5;
+			rdir = [0,-1];
+			yrot = Math.PI;
+			z++;
+			break;
+		case 'east':
+			z+=0.5;
+			rdir = [1,0];
+			yrot = -Math.PI/2;
+			break;
+		case 'west':
+			z+=0.5;
+			rdir = [-1,0];
+			yrot = Math.PI/2;
+			x++;
+			break;
+	}
+
+	let objs = [];
+
+	for( let i = 0; i < count; i++ ){
+		let theta = Math.PI/4 + Math.pow(2*Math.random()-1, 3) * Math.PI/4;
+		let offs = (i+0.5)*length/count + s/2 * (Math.cos(theta) + Math.sin(theta)/16);
+
+		objs.push({
+			quaternion: new CANNON.Quaternion().setFromEuler(Math.PI/2-theta, yrot, 0, 'ZYX'),
+			position: new CANNON.Vec3(x+rdir[0]*offs, y + s/2 * (Math.sin(theta) + Math.cos(theta)/16), z+rdir[0]*offs)
+		})
+	}
+
+	return objs.map(x=>toStand(x, item, type, small));
+}
 
 export function generate_pile (
 	{
@@ -32,66 +172,9 @@ export function generate_pile (
 		rotation
 	}: ItemPhysics
 	): string[] {
-	const cornerV = new CANNON.Vec3(...corner);
-	let offset = new CANNON.Vec3();
-	let foffset = new CANNON.Vec3();
-	let s = 0; // size of an item
-
-	switch (type) {
-		case 'head':
-			s = 0.625;
-			let necklength = 7/16+1/128;
-			offset.set(0, necklength + s/2, -0.25-s/32);
-			foffset.set(0, 7/16+1, 0);
-
-			if (small) {
-				s*=7/10;
-				offset.set(0, necklength*3/4 + s/2, -0.25*3/4-s/32);
-				foffset.set(0, (13/32+1)/2, 0);
-			}
-			break;
-		case 'hand':
-			s = 0.625;
-			offset.set(0, 0.44625 + s/2, -0.25-s/32);
-			foffset.set(0, 7/16+1, 0);
-
-			if (small) {
-				offset.scale(0.5);
-				foffset.scale(0.5);
-				s*=0.5;
-			}
-			break;
-		default:
-			return []
-	}
-
-	return simulate_pile(bounds, spawnrange, rotation, count, ground, duration, s, walls).map(x=>{
-		x.quaternion = new CANNON.Quaternion().setFromEuler(x.rotation.x, x.rotation.y, x.rotation.z, 'ZYX');
-		x.rotation.scale(180/Math.PI, x.rotation);
-
-		x.position.vadd(cornerV, x.position);
-		let tmp = new CANNON.Quaternion(offset.x, offset.y, offset.z, 0);
-		let noffset = x.quaternion.mult(tmp).mult(x.quaternion.inverse());
-		x.position.vsub(new CANNON.Vec3(noffset.x, noffset.y, noffset.z), x.position); // move by offset
-		x.position.vsub(foffset, x.position);
-
-		return `summon armor_stand ${x.position.x.toFixed(8)} ${(x.position.y).toFixed(8)} ${x.position.z.toFixed(8)} ${toSnbt({
-			Pose: {
-				Head: `[${x.rotation.x}f, ${-x.rotation.y}f, ${-x.rotation.z}f]`
-			},
-			Tags: `["item_holder"]`,
-			ArmorItems: `[{},{},{},${toSnbt(Object.assign(
-				{id:`"${item}"`, Count:'1b'},
-				ITEMS.store.sold[item] ?? {}
-			))}]`,
-			DisabledSlots:4144959,
-			Invulnerable: true,
-			Invisible: true,
-			NoGravity: true,
-			Silent: true,
-			Marker: true,
-			Small: small
-		})}`
+	return simulate_pile(bounds, spawnrange, rotation, count, ground, duration, getS(type, small), walls).map(x=>{
+		x.position.vadd(new CANNON.Vec3(...corner));
+		return toStand(x, item, type, small);
 	})
 }
 
@@ -231,9 +314,5 @@ function simulate_pile(bounds: number[], spawnrange: number[], rotation: number[
 	// 	console.log(objects[i].position, objects[i].quaternion)
 	// }
 	// x.position.x <= bounds[0] && x.position.x >= 0 && x.position.z <= bounds[1] && x.position.z >= 0
-	return objects.map(x=>{
-		const t = new CANNON.Vec3();
-		x.quaternion.toEuler(t, 'YZX');
-		return {position:x.position, rotation: t, quaternion:x.quaternion};
-	})
+	return objects;
 }

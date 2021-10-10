@@ -4,7 +4,7 @@ import { parse as parseArgs } from 'https://deno.land/std@0.104.0/flags/mod.ts'
 import { story, createNpc, createQuest, detectItem, toSnbt, rawJson, toGive } from './compile-to-mcfunction.ts'
 import { parse } from './parse-yaml.ts'
 import { item } from './item.ts'
-import { generate_pile } from './armorstand-tools.ts'
+import { generate_pile, populate_shelf } from './armorstand-tools.ts'
 import { CONSTS } from './consts.ts'
 
 // \s(?:Paper|Spigot|Bukkit)\..+?:\s(?:\[.+?\]|.+?),
@@ -54,7 +54,8 @@ export async function init (
 ): Promise<void> {
   await emptyDir(join(basePath, `./data/${namespace}/`))
   const cache = Object.assign({
-    itemphysics: {}
+    itemphysics: {},
+    shelves: {}
   }, JSON.parse(await Deno.readTextFile('./cache.json')));
   const data = parse(await Deno.readTextFile(yamlPath))
   const reset: Lines = []
@@ -166,7 +167,17 @@ export async function init (
           data = generate_pile(v);
           cache.itemphysics[k] = data;
         }
-        return ['', ...data];
+        return ['# ITEM PHYSICS', ...data];
+      }),
+      Object.entries(data.shelves).map(([k, v])=>{
+        let data: Lines;
+        if (k in cache.shelves && v.forcebuild == false) {
+          data = cache.shelves[k];
+        } else {
+          data = populate_shelf(v);
+          cache.shelves[k] = data;
+        }
+        return ['# SHELVES', ...data];
       }),
       '',
       `# SET UP ITEM DETECTION`,
