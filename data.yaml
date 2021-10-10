@@ -785,7 +785,6 @@ itemphysics:
       - 0 99
     spawnrange: 0 0.5 0.5 0.5
     rotation: 0 0 -90
-    forcebuild: true
   potatomid1:
     duration: 30
     count: 100
@@ -839,6 +838,7 @@ itemphysics:
       - 0 99
     spawnrange: 0 0 0.5 0
     rotation: 0 0 -90
+    forcebuild: true
   shroommid1:
     duration: 30
     count: 100
@@ -857,6 +857,7 @@ itemphysics:
       - 0 99
     spawnrange: 0 0 0.5 0
     rotation: 0 0 -90
+    forcebuild: true
   bamboomid1:
     duration: 30
     count: 100
