@@ -1,0 +1,1 @@
+scoreboard players set -held story-sawyer 0
