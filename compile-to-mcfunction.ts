@@ -1060,7 +1060,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '',
       'execute as @e[type=marker,tag=maze-marker,tag=maze-create-root] at @s run function generated:story/maze/create/_y',
       'scoreboard players remove _x maze 1',
-      `execute as @e[type=marker,tag=maze-marker,tag=maze-create-root] at @s tp run ~${cellsize-1} ${(cellsize-1)/2} 0`,
+      `execute as @e[type=marker,tag=maze-marker,tag=maze-create-root] at @s run tp ~${cellsize-1} ${(cellsize-1)/2} 0`,
       'execute unless score _x maze matches 0 run schedule function generated:story/maze/create/_x 1t'
     ]);
     addfunc('maze/create/_y', [
