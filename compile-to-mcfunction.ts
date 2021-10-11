@@ -1093,9 +1093,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '#> Tag the neighbors of a given cell',
       'tag @e[type=marker,tag=maze-marker] remove maze-neighbor',
       neighbors.map((x, i)=>[
-        `execute positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} run tag @e[type=marker,tag=maze-marker,tag=maze-node,distance=0,sort=nearest,limit=1] add maze-neighbor`,
+        `execute positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} run tag @e[type=marker,tag=maze-marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] add maze-neighbor`,
         `tag @e[type=marker,tag=maze-marker] remove maze-neighbor-${i}`,
-        `execute positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} run tag @e[type=marker,tag=maze-marker,tag=maze-node,distance=0,sort=nearest,limit=1] add maze-neighbor-${i}`
+        `execute positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} run tag @e[type=marker,tag=maze-marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] add maze-neighbor-${i}`
       ])
     ])
 
@@ -1120,12 +1120,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/_propogatebatch', [
       'scoreboard players operation _batchleft maze = batchsize maze',
       'function generated:story/maze/create/_propogate',
-      'execute unless score _batchleft maze matches -1 run schedule function generated:story/maze/create/_propogatebatch 1t'
+      'execute unless score _batchleft maze matches ..-1 run schedule function generated:story/maze/create/_propogatebatch 1t'
     ])
 
     addfunc('maze/create/_propogate', [
       '# Use Prim\'s modified maze generation algorithm',
-      'execute unless entity @e[type=marker,tag=maze-marker,tag=maze-adjacent] run scoreboard players set _batchleft maze -1',
+      'execute unless entity @e[type=marker,tag=maze-marker,tag=maze-adjacent] run scoreboard players set _batchleft maze 0',
       'execute as @e[type=marker,tag=maze-marker,tag=maze-adjacent,sort=random,limit=1] at @s run function generated:story/maze/create/_insertcell',
       'scoreboard players remove _batchleft maze 1',
       'execute unless score _batchleft maze matches ..0 run function generated:story/maze/create/_propogate'
