@@ -87,7 +87,7 @@ export function createNpc (
 
     player: `@a[tag=${playerTag}, limit=1]`,
     newPlayer: `@a[tag=${playerTag}, tag=!spoken-to, limit=1]`,
-    eavesdropper: `@a[distance=..${HEAR_DIST}]`
+    eavesdropper: `@a[tag=npc-eavesdropper]`
   }
 
   npc[id] = select.self;
@@ -183,24 +183,24 @@ export function createNpc (
           // # of vowels (≈ syllables) * 5 ticks/vowel
           const fulltext = message.message.map(x=>x.text || '').join("");
           const duration = message.wait ?? ((fulltext.match(/[aiueo]/gi)?.length ?? 4) * 6)
-          const broadcastTargets = message.global ? '@a' : select.eavesdropper;
           functions[`${indexToFuncName(i)}`] = [
+            `tag ${select.player} add npc-eavesdropper`,
+            `execute at ${select.self} run tag ${message.global ? '@a' : `@a[distance=..${HEAR_DIST}`} add npc-eavesdropper`,
             `# Dialogue line #${idx}-${i + 1}: speak and make noise.`,
-            `execute at ${select.self} run tellraw ${
-              broadcastTargets
-            } ${JSON.stringify([
+            `execute at ${select.self} run tellraw ${select.eavesdropper} ${JSON.stringify([
               '<',
               (colour === "null" ? JSON.parse(eval(name || `'"Passerby"'`)) : { text: name || 'Passerby', color: colour, bold: true }),
               `> `,
               ...message.message
             ])}`,
-            `${message.silent ? '# silent // ' : ''}execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${broadcastTargets} ~ ~ ~ 100`,
+            `${message.silent ? '# silent // ' : ''}execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${select.eavesdropper} ~ ~ ~ 100`,
             message.command.map(x=>eval(`\`${x}\``)),
             `schedule function ${namespace}:${
               i === dialogue.messages.length - 1
                 ? `npc/${id}/${idx}-end`
                 : indexToFuncName(i + 1)
-            } ${duration}t`
+            } ${duration}t`,
+            `tag @a remove npc-eavesdropper`,
           ]
         }
         functions[`npc/${id}/${idx}-end`] = [
