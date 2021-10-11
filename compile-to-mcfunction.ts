@@ -218,7 +218,7 @@ export function createNpc (
       }),
       `execute if score dialogue-begun dialogue-status matches 1 run tag ${select.newPlayer} add spoken-to`,
       `tag ${select.newPlayer} remove ${playerTag}`, //if dialogue failed, remove the playertag
-      `execute if score dialogue-begun dialogue-status matches 0 run tag ${select.self} remove speaking`, // no dialogue to start, don't speak
+      `execute if score dialogue-begun dialogue-status matches 0 if entity ${select.newPlayer} run tag ${select.self} remove speaking`, // no dialogue to start, don't speak
       '',
       '# While in a conversation, make eye contact with the player.',
       `execute as ${select.speaking} at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity ${select.player}`
