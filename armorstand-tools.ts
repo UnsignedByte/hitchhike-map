@@ -148,7 +148,7 @@ export function populate_shelf (
 
 	for( let i = 0; i < count; i++ ){
 		let theta = Math.PI/4 + (2*Math.random()-1)**3 * Math.PI/4;
-		let offs = [(i+0.5)*length/count + vari*(Math.random()*2-1), 0];
+		let offs = [(i+0.5)*length/count, 0];
 
 		let ntheta = Math.PI/2;
 
@@ -160,7 +160,7 @@ export function populate_shelf (
 
 			objs.push({
 				quaternion: new CANNON.Quaternion().setFromEuler(Math.PI/2-ntheta, yrot, 0, 'ZYX'),
-				position: new CANNON.Vec3(x+rdir[0]*offs[0] - rdir[1]*offs[1], y + s/2 * (Math.sin(ntheta) + Math.cos(ntheta)/16), z+rdir[1]*offs[0] - rdir[0]*offs[1])
+				position: new CANNON.Vec3(x+rdir[0]*(offs[0] + vari*(Math.random()*2-1)) - rdir[1]*offs[1], y + s/2 * (Math.sin(ntheta) + Math.cos(ntheta)/16), z+rdir[1]*(offs[0] + vari*(Math.random()*2-1)) - rdir[0]*offs[1])
 			})
 			// offs[1] += toffs1;
 		}
@@ -171,7 +171,7 @@ export function populate_shelf (
 
 		objs.push({
 			quaternion: new CANNON.Quaternion().setFromEuler(Math.PI/2-theta, yrot, 0, 'ZYX'),
-			position: new CANNON.Vec3(x+rdir[0]*offs[0] - rdir[1]*offs[1], y + s/2 * (Math.sin(theta) + Math.cos(theta)/16), z+rdir[1]*offs[0] - rdir[0]*offs[1])
+			position: new CANNON.Vec3(x+rdir[0]*(offs[0] + vari*(Math.random()*2-1)) - rdir[1]*offs[1], y + s/2 * (Math.sin(theta) + Math.cos(theta)/16), z+rdir[1]*(offs[0] + vari*(Math.random()*2-1)) - rdir[0]*offs[1])
 		})
 	}
 
