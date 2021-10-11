@@ -1075,10 +1075,10 @@ shelves:
     pos: 913 65 -152
     dir: east
     length: 3.5
-    count: 8
+    count: 6
     vari: 0.2
     item: egg
-    small: true
+    small: false
     forcebuild: true
   cookiebottom:
     pos: 910 64 -162
