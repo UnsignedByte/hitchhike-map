@@ -155,7 +155,7 @@ npc:
               - 'tag @e[tag=npc-sawyer] add npc-unface'
               - 'summon minecart 957 35 0 {Silent:1,Tags:["sawyer-holder"]}'
               - 'scoreboard players set -held story-sawyer 1'
-            wait: 80
+            wait: 90
           - message: Let me boot up my computer and I'll see what I can do.
             command:
               - '${tp(950.5, 70.0, -0.25, 0, 0)}'

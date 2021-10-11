@@ -11,5 +11,5 @@ setblock 950 40 -1 minecraft:powered_rail[powered=false,shape=east_west,waterlog
 tag @e[tag=npc-sawyer] add npc-unface
 summon minecart 957 35 0 {Silent:1,Tags:["sawyer-holder"]}
 scoreboard players set -held story-sawyer 1
-schedule function generated:npc/sawyer/3-5 80t
+schedule function generated:npc/sawyer/3-5 90t
 tag @a remove npc-eavesdropper
