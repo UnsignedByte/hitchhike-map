@@ -149,12 +149,12 @@ export function populate_shelf (
 		let theta = Math.PI/4 + (2*Math.random()-1)**3 * Math.PI/4;
 		let offs = [(i+0.5)*length/count, 0];
 
-		let ntheta = 0;
+		let ntheta = Math.PI/2;
 
 		while (Math.random() < 0.5) {
 			offs[1] += s/32;
 
-			ntheta += Math.random()**4 * (theta-ntheta);
+			ntheta -= Math.random()**4 * (ntheta-theta);
 
 			let toffs1 = s/2 * (Math.cos(ntheta) + Math.sin(ntheta)/16);
 
