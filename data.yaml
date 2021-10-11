@@ -145,7 +145,7 @@ npc:
               - 'clear @a ${toGive(item.sdcardcorrupted, 2147483647)}'
               - 'data modify entity ${select.self} HandItems[0] set value ${toSnbt(Object.assign({Count:"1b"}, item.sdcardcorrupted))}'
               - 'execute at ${select.self} run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1'
-          - message: Ok, I'll take this to my PC upstairs.
+          - message: Follow me; I'll take this to my PC upstairs.
             command:
               - "setblock 958 35 0 minecraft:redstone_block"
               - 'setblock 957 35 0 minecraft:powered_rail[powered=true,shape=ascending_east,waterlogged=false]'
@@ -161,14 +161,14 @@ npc:
               - '${tp(950.5, 70.0, -0.25, 0, 0)}'
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298'
               - 'scoreboard players set -held story-sawyer 0'
-            wait: 100
-          - message: It's booted up; I'll take a look now.
+            wait: 120
+          - message: I'll take a look at the card now and let you know what I think is going on.
             command:
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 275'
               - 'data modify entity ${select.self} HandItems[0] set value {}'
-            wait: 100
+            wait: 120
           - message: Interesting...
-            wait: 100
+            wait: 120
           - message: So I've taken a look at the file.
             command:
               - 'tag @e[tag=npc-sawyer] remove npc-unface'
