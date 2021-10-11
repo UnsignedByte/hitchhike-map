@@ -157,7 +157,7 @@ npc:
             wait: 40
           - message: OK, let me boot up my computer and I'll see what I can do.
             command:
-              - '${tp(939.25, 68, 195, 0, 0)}'
+              - '${tp(950.5, 70.0, -0.25, 0, 0)}'
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298'
               - 'scoreboard players set -held story-sawyer 0'
               - 'tag @e[tag=npc-sawyer] remove npc-unface'
