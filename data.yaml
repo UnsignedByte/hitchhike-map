@@ -155,16 +155,19 @@ npc:
               - 'tag @e[tag=npc-sawyer] add npc-unface'
               - 'summon minecart 957 35 0 {Silent:1,Tags:["sawyer-holder"]}'
               - 'scoreboard players set -held story-sawyer 1'
-            wait: 70
+            wait: 80
           - message: Let me boot up my computer and I'll see what I can do.
             command:
               - '${tp(950.5, 70.0, -0.25, 0, 0)}'
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298'
               - 'scoreboard players set -held story-sawyer 0'
-            wait: 60
+            wait: 100
           - message: It's booted up; I'll take a look now.
             command:
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 275'
+              - 'data modify entity ${select.self} HandItems[0] set value {}'
+            wait: 100
+          - message: Interesting...
             wait: 100
           - message: So I've taken a look at the file.
             command:

@@ -6,5 +6,5 @@ execute at @e[tag=npc-sawyer, limit=1] run playsound minecraft:entity.villager.a
 tp @e[tag=npc-sawyer, limit=1] 950.50 70 -0.25 0 0
 data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298
 scoreboard players set -held story-sawyer 0
-schedule function generated:npc/sawyer/3-6 60t
+schedule function generated:npc/sawyer/3-6 100t
 tag @a remove npc-eavesdropper
