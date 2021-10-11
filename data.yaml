@@ -1070,7 +1070,6 @@ shelves:
     count: 6
     item: cookie
     small: true
-    forcebuild: true
   cookiemid:
     pos: 910 65 -162
     dir: south
