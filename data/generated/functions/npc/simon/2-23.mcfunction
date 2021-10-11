@@ -2,7 +2,7 @@ tag @a[tag=victim-of-dialogue-by-simon, limit=1] add npc-eavesdropper
 execute at @e[tag=npc-simon, limit=1] run tag @a[distance=..50] add npc-eavesdropper
 # Dialogue line #2-24: speak and make noise.
 execute at @e[tag=npc-simon, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Simon Ursus Stephens","color":"#85deb1","bold":true},"> ",{"text":"What are you loitering around for? Get on it!"}]
-execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 100
+execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 setblock 956 44 204 minecraft:redstone_block
 setblock 956 44 203 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]
 setblock 945 39 194 minecraft:rail[shape=north_west,waterlogged=false]

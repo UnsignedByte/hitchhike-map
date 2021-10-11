@@ -114,18 +114,18 @@ npc:
           cond: 3
           end: 1
         - messages:
-            - How'd the internet fixing go? Not great, it seems.
-            - Unfortunately I am unable to fix the power grid through my computer.
-            - message:
-              - text: "If you "
-              - text: require
-                italic: true
-              - text: " internet so desperately, maybe you could find somewhere unaffected by the power outage?"
-            - message: 
-              - text: "I "
-              - text: have
-                italic: true
-              - text: " heard there was a cell tower up on the mountain with its own generator, though that could just be a myth."
+          - How'd the internet fixing go? Not great, it seems.
+          - Unfortunately I am unable to fix the power grid through my computer.
+          - message:
+            - text: "If you "
+            - text: require
+              italic: true
+            - text: " internet so desperately, maybe you could find somewhere unaffected by the power outage?"
+          - message: 
+            - text: "I "
+            - text: have
+              italic: true
+            - text: " heard there was a cell tower up on the mountain with its own generator, though that could just be a myth."
           cond: 1
           end: 2
         - messages:
@@ -135,6 +135,29 @@ npc:
           - I wouldn't mind if you topped something other than the mountain though...
           - Anyways, see you later!
           cond: 2
+          end: -1
+        - messages:
+          - Oh, hey again. Internet fixed?
+          - No? You have something for me to look at?
+          - Hmm, an SD card... It's corrupted, you say?
+          - message: Let me take a look at it...
+            command:
+              - 'clear @a ${toGive(item.sdcardcorrupted, -1)}'
+              - 'data modify entity ${select.self} HandItems[0] set value ${toSnbt(Object.assign({Count:"1b"}, item.sdcardcorrupted))}'
+          - message: Ok, I'll take this to my PC upstairs.
+            command:
+              - "setblock 958 35 0 minecraft:redstone_block"
+              - 'setblock 957 35 0 minecraft:powered_rail[powered=true,shape=ascending_east,waterlogged=false]'
+              - 'setblock 958 36 0 minecraft:powered_rail[powered=true,shape=east_west,waterlogged=false]'
+              - 'tag @e[tag=npc-sawyer] add npc-unface'
+              - 'summon minecart 957 35 0 {Silent:1,Tags:["sawyer-holder"]}'
+              - 'scoreboard players set -held story-sawyer 1'
+            wait: 60
+          - message: OK, let me boot up my computer and I'll see what I can do.
+            command:
+              - '${tp(939.25, 68, 195, 0, 0)}'
+              - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298'
+          cond: 4
           end: -1
     simon:
       name: Simon Ursus Stephens
@@ -209,12 +232,12 @@ npc:
             - message: Anyways, I see you're pretty determined to get up this mountain, huh.
               command:
                 - 'setblock 949 40 -1 minecraft:redstone_block'
-                - 'setblock 949 41 -1 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
-                - 'setblock 950 40 -1 minecraft:powered_rail[powered=false,shape=ascending_west,waterlogged=false]'
+                - 'setblock 949 41 -1 minecraft:powered_rail[powered=true,shape=east_west,waterlogged=false]'
+                - 'setblock 950 40 -1 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]'
                 - 'setblock 957 35 0 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
                 - 'setblock 958 35 0 minecraft:stone'
-                - 'tag @e[tag=npc-sawyer] remove npc-unface'
                 - 'setblock 955 35 1 minecraft:redstone_wire[east=side,north=none,power=0,south=none,west=side]'
+                - 'tag @e[tag=npc-sawyer] add npc-unface'
                 - 'summon minecart 950 40 -1 {Silent:1,Tags:["sawyer-holder"]}'
                 - 'scoreboard players set @e[tag=npc-sawyer] dialogue-status -1'
                 - 'scoreboard players set -held story-sawyer -1'

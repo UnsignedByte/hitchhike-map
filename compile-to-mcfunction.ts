@@ -193,7 +193,7 @@ export function createNpc (
               `> `,
               ...message.message
             ])}`,
-            `${message.silent ? '# silent // ' : ''}execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${select.eavesdropper} ~ ~ ~ 100`,
+            `${message.silent ? '# silent // ' : ''}execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${select.eavesdropper} ~ ~ ~ 1000 1 1`,
             message.command.map(x=>eval(`\`${x}\``)),
             `schedule function ${namespace}:${
               i === dialogue.messages.length - 1
