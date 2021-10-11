@@ -6,8 +6,10 @@ execute at @e[tag=npc-sawyer, limit=1] run playsound minecraft:entity.villager.a
 setblock 958 35 0 minecraft:redstone_block
 setblock 957 35 0 minecraft:powered_rail[powered=true,shape=ascending_east,waterlogged=false]
 setblock 958 36 0 minecraft:powered_rail[powered=true,shape=east_west,waterlogged=false]
+setblock 949 40 -1 stone
+setblock 950 40 -1 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]
 tag @e[tag=npc-sawyer] add npc-unface
 summon minecart 957 35 0 {Silent:1,Tags:["sawyer-holder"]}
 scoreboard players set -held story-sawyer 1
-schedule function generated:npc/sawyer/3-5 60t
+schedule function generated:npc/sawyer/3-5 40t
 tag @a remove npc-eavesdropper

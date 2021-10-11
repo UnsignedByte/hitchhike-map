@@ -5,5 +5,7 @@ execute at @e[tag=npc-sawyer, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<"
 execute at @e[tag=npc-sawyer, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 tp @e[tag=npc-sawyer, limit=1] 939.25 68 195.00 0 0
 data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298
+scoreboard players set -held story-sawyer 0
+tag @e[tag=npc-sawyer] remove npc-unface
 schedule function generated:npc/sawyer/3-end 102t
 tag @a remove npc-eavesdropper
