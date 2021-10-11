@@ -142,7 +142,7 @@ npc:
           - Hmm, an SD card... It's corrupted, you say?
           - message: Let me take a look at it...
             command:
-              - 'clear @a ${toGive(item.sdcardcorrupted, -1)}'
+              - 'clear @a ${toGive(item.sdcardcorrupted, 2147483647)}'
               - 'data modify entity ${select.self} HandItems[0] set value ${toSnbt(Object.assign({Count:"1b"}, item.sdcardcorrupted))}'
           - message: Ok, I'll take this to my PC upstairs.
             command:
