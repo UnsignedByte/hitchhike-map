@@ -1067,7 +1067,7 @@ shelves:
     pos: 910 64 -162
     dir: south
     length: 5
-    count: 8
+    count: 10
     item: cookie
     small: true
     forcebuild: true
