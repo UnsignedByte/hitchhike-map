@@ -964,20 +964,20 @@ itemphysics:
       - 99 99 99 99 99 99 99
     spawnrange: 0.5 0 0 0.5
     rotation: 0 0 180
-  eggmiddle1:
-    duration: 30
-    count: 100
-    corner: 912.5 65.5 -152
-    item: egg
-    bounds: 3.5 1
-    small: true
-    type: head
-    walls: false
-    ground:
-      - 99 0 0 0 0 0 0
-      - 99 99 99 99 99 99 99
-    spawnrange: 0.5 0 0 0.5
-    rotation: 0 0 180
+  # eggmiddle1:
+  #   duration: 30
+  #   count: 100
+  #   corner: 912.5 65.5 -152
+  #   item: egg
+  #   bounds: 3.5 1
+  #   small: true
+  #   type: head
+  #   walls: false
+  #   ground:
+  #     - 99 0 0 0 0 0 0
+  #     - 99 99 99 99 99 99 99
+  #   spawnrange: 0.5 0 0 0.5
+  #   rotation: 0 0 180
   salmon1:
     duration: 40
     count: 30
@@ -1070,6 +1070,14 @@ shelves:
     count: 12
     vari: 0.1
     item: berries
+    small: true
+  eggmid:
+    pos: 915.5 65 -152
+    dir: west
+    length: 3.5
+    count: 8
+    vari: 0.2
+    item: egg
     small: true
     forcebuild: true
   cookiebottom:
