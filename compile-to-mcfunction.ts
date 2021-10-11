@@ -185,7 +185,7 @@ export function createNpc (
           const duration = message.wait ?? ((fulltext.match(/[aiueo]/gi)?.length ?? 4) * 6)
           functions[`${indexToFuncName(i)}`] = [
             `tag ${select.player} add npc-eavesdropper`,
-            `execute at ${select.self} run tag ${message.global ? '@a' : `@a[distance=..${HEAR_DIST}`} add npc-eavesdropper`,
+            `execute at ${select.self} run tag ${message.global ? '@a' : `@a[distance=..${HEAR_DIST}]`} add npc-eavesdropper`,
             `# Dialogue line #${idx}-${i + 1}: speak and make noise.`,
             `execute at ${select.self} run tellraw ${select.eavesdropper} ${JSON.stringify([
               '<',

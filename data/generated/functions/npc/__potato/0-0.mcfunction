@@ -1,5 +1,5 @@
 tag @a[tag=victim-of-dialogue-by-__potato, limit=1] add npc-eavesdropper
-execute at @e[tag=npc-__potato, limit=1] run tag @a[distance=..50 add npc-eavesdropper
+execute at @e[tag=npc-__potato, limit=1] run tag @a[distance=..50] add npc-eavesdropper
 # Dialogue line #0-1: speak and make noise.
 execute at @e[tag=npc-__potato, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",[{"text":"Potato","bold":false,"color":"#dbbb70"},{"text":" (1.24B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}],"> ",{"text":"taken"}]
 # silent // execute at @e[tag=npc-__potato, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 100
