@@ -264,6 +264,7 @@ const shelfSchema = z.object({
     z.literal('head'),
     z.literal('hand')
   ]).default('head'),
+  vari: z.number().default(0),
   forcebuild: z.boolean().default(false)
 })
 

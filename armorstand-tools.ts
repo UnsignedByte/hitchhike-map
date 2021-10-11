@@ -104,6 +104,7 @@ export function populate_shelf (
     length,
     count,
     type,
+    vari,
     small
 	}: Shelf
 	): string[] {
@@ -147,7 +148,7 @@ export function populate_shelf (
 
 	for( let i = 0; i < count; i++ ){
 		let theta = Math.PI/4 + (2*Math.random()-1)**3 * Math.PI/4;
-		let offs = [(i+0.5)*length/count, 0];
+		let offs = [(i+0.5)*length/count + vari*(Math.random()*2-1), 0];
 
 		let ntheta = Math.PI/2;
 

@@ -1068,6 +1068,7 @@ shelves:
     dir: south
     length: 5
     count: 12
+    vari: 0.1
     item: berries
     small: true
   cookiebottom:
