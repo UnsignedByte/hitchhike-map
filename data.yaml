@@ -1075,7 +1075,7 @@ shelves:
     pos: 910 65 -162
     dir: south
     length: 2.5
-    count: 5
+    count: 6
     item: cookie
     small: true
     forcebuild: true
@@ -1083,7 +1083,7 @@ shelves:
     pos: 910 66 -162
     dir: south
     length: 2.5
-    count: 7
+    count: 6
     item: cookie
     small: true
     forcebuild: true
