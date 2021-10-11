@@ -1072,8 +1072,8 @@ shelves:
     item: berries
     small: true
   eggmid:
-    pos: 915.5 65 -152
-    dir: west
+    pos: 912 65 -152
+    dir: east
     length: 3.5
     count: 8
     vari: 0.2
