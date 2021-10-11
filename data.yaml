@@ -1071,3 +1071,19 @@ shelves:
     item: cookie
     small: true
     forcebuild: true
+  cookiemid:
+    pos: 910 65 -162
+    dir: south
+    length: 2.5
+    count: 5
+    item: cookie
+    small: true
+    forcebuild: true
+  cookietop:
+    pos: 910 66 -162
+    dir: south
+    length: 2.5
+    count: 7
+    item: cookie
+    small: true
+    forcebuild: true
