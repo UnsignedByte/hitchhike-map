@@ -1043,6 +1043,15 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   (() => {
     const cellsize = 9;
 
+    const neighbors = [
+      [0, 0, 1],
+      [0, 0, -1],
+      [0, 1, 0],
+      [0, -1, 0],
+      [1, 0, 0],
+      [-1, 0, 0]
+    ]
+
     addfunc('maze/create', [
       '# Reset maze',
       `execute as @e[tag=maze-marker] at @s run forceload remove ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
@@ -1080,9 +1089,64 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute unless score _z maze matches 0 as @s at @s run function generated:story/maze/create/_z'
     ]);
 
+    addfunc('maze/neighbors', [
+      '#> Tag the neighbors of a given cell',
+      'tag @e[type=marker,tag=maze-marker] remove maze-neighbor',
+      neighbors.map((x, i)=>[
+        `execute positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} run tag @e[type=marker,tag=maze-marker,tag=maze-node,distance=0,sort=nearest,limit=1] add maze-neighbor`,
+        `tag @e[type=marker,tag=maze-marker] remove maze-neighbor-${i}`,
+        `execute positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} run tag @e[type=marker,tag=maze-marker,tag=maze-node,distance=0,sort=nearest,limit=1] add maze-neighbor-${i}`
+      ])
+    ])
+
     addfunc('maze/create/_generatepaths', [
       '# We finished building the maze, kill the root',
-      'kill @e[type=marker,tag=maze-marker,tag=maze-create-root]'
+      'kill @e[type=marker,tag=maze-marker,tag=maze-create-root]',
+      '# Start node of the maze',
+      'tag @e[type=marker,tag=maze-marker,tag=maze-node,sort=random,limit=1] add maze-start',
+      'tag @e[type=marker,tag=maze-marker,tag=maze-start] add maze-visited',
+      'execute at @e[type=marker,tag=maze-marker,tag=maze-start] run function generated:story/maze/neighbors',
+      'tag @e[type=marker,tag=maze-marker,tag=maze-neighbor] add maze-adjacent',
+      '',
+      '#> Start propogation',
+      '#> Propogate in batches',
+      '# size^2',
+      'scoreboard players operation batchsize maze = size maze',
+      'scoreboard players operation batchsize maze *= size maze',
+      'function generated:story/maze/create/_propogatebatch',
+      'function generated:story/maze/create/_propogate'
+    ])
+
+    addfunc('maze/create/_propogatebatch', [
+      'scoreboard players operation _batchleft maze = batchsize maze',
+      'function generated:story/maze/create/_propogate',
+      'execute unless score _batchleft maze matches -1 run schedule function generated:story/maze/create/_propogatebatch 1t'
+    ])
+
+    addfunc('maze/create/_propogate', [
+      '# Use Prim\'s modified maze generation algorithm',
+      'execute unless entity @e[type=marker,tag=maze-marker,tag=maze-adjacent] run scoreboard players set _batchleft maze -1',
+      'execute as @e[type=marker,tag=maze-marker,tag=maze-adjacent,sort=random,limit=1] at @s run function generated:story/maze/create/_insertcell',
+      'scoreboard players remove _batchleft maze 1',
+      'execute unless score _batchleft maze matches ..0 run function generated:story/maze/create/_propogate'
+    ])
+
+    addfunc('maze/create/_insertcell', [
+      '#> Insert adjacent cell into maze',
+      'tag @s remove maze-adjacent',
+      'function generated:story/maze/neighbors',
+      '# Add neighbors to adjacent list',
+      'tag @e[type=marker,tag=maze-marker,tag=maze-neighbor,tag=!maze-visited] add maze-adjacent',
+      '# Select random node in maze to connect to from neighbors',
+      'tag @e[type=marker,tag=maze-marker,tag=maze-neighbor,tag=maze-visited,sort=random,limit=1] add maze-connect',
+      '# Delete wall',
+      neighbors.map((x, i) => [
+        `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${-(cellsize-5)/2} ~${-(cellsize-5)/2} ~${-(cellsize-5)/2} ~${(cellsize-5)/2} ~${(cellsize-5)/2} ~${(cellsize-5)/2} air`
+      ]),
+      'tag @e[type=marker,tag=maze-marker] remove maze-connect',
+      '# add self to maze',
+      'tag @s remove maze-adjacent',
+      'tag @s add maze-visited'
     ])
   })();
 }
