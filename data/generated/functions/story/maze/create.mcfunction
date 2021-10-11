@@ -7,4 +7,3 @@ summon marker -1500 4 0 {Tags:["maze-marker","maze-create-root"]}
 
 scoreboard players operation _x maze = size maze
 function generated:story/maze/create/_x
-kill @e[type=marker,tag=maze-marker,tag=maze-create-root]
