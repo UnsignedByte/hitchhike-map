@@ -1128,4 +1128,3 @@ shelves:
     count: 6
     item: cookie
     small: true
-    forcebuild: true

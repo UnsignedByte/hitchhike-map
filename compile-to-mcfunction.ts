@@ -168,7 +168,7 @@ export function createNpc (
       `execute at ${select.selected} run tag @a[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,
       `tag ${select.player} remove npc_selector`,
       `tag ${select.selected} add speaking`,
-
+      `scoreboard players set dialogue-begun dialogue-status 0`,
       dialogue.map((dialogue, idx) => {
         const indexToFuncName = (i: number) =>
           `npc/${id}/${idx}-${i
@@ -213,13 +213,12 @@ export function createNpc (
           `tag ${select.self} remove speaking`
         ]
         return [
-          `execute store success score dialogue-begun dialogue-status if entity ${select.newPlayer} as ${select.self} if score @s dialogue-status matches ${dialogue.cond} run schedule function ${namespace}:${indexToFuncName(0)} 1t`,
-          `execute if score dialogue-begun dialogue-status matches 1 run tag ${select.newPlayer} add spoken-to`,
-          `scoreboard players set dialogue-begun dialogue-status 0`,
-          ''
+          `execute unless score dialogue-begun dialogue-status matches 1 store success score dialogue-begun dialogue-status if entity ${select.newPlayer} as ${select.self} if score @s dialogue-status matches ${dialogue.cond} run schedule function ${namespace}:${indexToFuncName(0)} 1t`
         ]
       }),
+      `execute if score dialogue-begun dialogue-status matches 1 run tag ${select.newPlayer} add spoken-to`,
       `tag ${select.newPlayer} remove ${playerTag}`, //if dialogue failed, remove the playertag
+      `execute if score dialogue-begun dialogue-status matches 0 run tag ${select.self} remove speaking`, // no dialogue to start, don't speak
       '',
       '# While in a conversation, make eye contact with the player.',
       `execute as ${select.speaking} at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity ${select.player}`
