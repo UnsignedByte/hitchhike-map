@@ -146,14 +146,21 @@ export function populate_shelf (
 	let objs = [];
 
 	for( let i = 0; i < count; i++ ){
-		let theta = Math.PI/4 + Math.pow(2*Math.random()-1, 3) * Math.PI/4;
+		let theta = Math.PI/4 + (2*Math.random()-1)**3 * Math.PI/4;
 		let offs = [(i+0.5)*length/count, 0];
+
+		let ntheta = 0;
 
 		while (Math.random() < 0.5) {
 			offs[1] += s/32;
+
+			ntheta += Math.random()**4 * (theta-ntheta);
+
+			let toffs1 = s/2 * (Math.cos(ntheta) + Math.sin(ntheta)/16);
+
 			objs.push({
-				quaternion: new CANNON.Quaternion().setFromEuler(0, yrot, 0, 'ZYX'),
-				position: new CANNON.Vec3(x+rdir[0]*offs[0] - rdir[1]*offs[1], y + s/2, z+rdir[1]*offs[0] - rdir[0]*offs[1])
+				quaternion: new CANNON.Quaternion().setFromEuler(Math.PI/2-ntheta, yrot, 0, 'ZYX'),
+				position: new CANNON.Vec3(x+rdir[0]*offs[0] - rdir[1]*(offs[1] + toffs1), y + s/2 * (Math.sin(ntheta) + Math.cos(ntheta)/16), z+rdir[1]*offs[0] - rdir[0]*(offs[1] + toffs1))
 			})
 			offs[1] += s/32;
 		}
