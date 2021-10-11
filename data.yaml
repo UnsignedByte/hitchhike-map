@@ -1080,7 +1080,7 @@ shelves:
     item: egg
     small: false
   carrotbottom:
-    pos: 914 64 -161
+    pos: 916 64 -163
     dir: south
     length: 2.5
     count: 6
@@ -1089,7 +1089,7 @@ shelves:
     small: true
     forcebuild: true
   potatobottom:
-    pos: 916.5 64 -161
+    pos: 916 64 -160.5
     dir: south
     length: 3
     count: 8
