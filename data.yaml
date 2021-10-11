@@ -1071,6 +1071,7 @@ shelves:
     vari: 0.1
     item: berries
     small: true
+    forcebuild: true
   cookiebottom:
     pos: 910 64 -162
     dir: south
