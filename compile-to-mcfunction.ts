@@ -1041,12 +1041,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   })();
 
   (() => {
+    const cellsize = 9;
+
     addfunc('maze/create', [
       '# Reset maze',
       'kill @e[tag=maze-marker]',
       '# Set Size of maze',
       'scoreboard players set size maze 20',
-      'summon marker -1500 3 0 {Tags:["maze-marker","maze-create-root"]}',
+      `summon marker -1500 ${(cellsize-1)/2} 0 {Tags:["maze-marker","maze-create-root"]}`,
       '',
       'scoreboard players operation _x maze = size maze',
       'execute as @e[type=marker,tag=maze-marker,tag=maze-create-root] at @s run function generated:story/maze/create/_x',
@@ -1057,7 +1059,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '',
       'execute as @s at @s run function generated:story/maze/create/_y',
       'scoreboard players remove _x maze 1',
-      'tp @s ~6 3 ~',
+      `tp @s ~${cellsize-1} ${(cellsize-1)/2} ~`,
       'execute unless score _x maze matches 0 as @s at @s run function generated:story/maze/create/_x'
     ]);
     addfunc('maze/create/_y', [
@@ -1065,14 +1067,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '',
       'execute as @s at @s run function generated:story/maze/create/_z',
       'scoreboard players remove _y maze 1',
-      'tp @s ~ ~6 0',
+      `tp @s ~ ~${cellsize-1} 0`,
       'execute unless score _y maze matches 0 as @s at @s run function generated:story/maze/create/_y'
     ]);
     addfunc('maze/create/_z', [
       'summon marker ~ ~ ~ {Tags:["maze-marker","maze-node"]}',
-      `clone -1003 47 -3 -997 53 3 ~-3 ~-3 ~-3`,
+      `clone ${-1000-(cellsize-1)/2} ${50-(cellsize-1)/2} ${-(cellsize-1)/2} ${-1000+(cellsize-1)/2} ${50-(cellsize-1)/2} ${(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2}`,
       'scoreboard players remove _z maze 1',
-      'tp @s ~ ~ ~6',
+      `tp @s ~ ~ ~${cellsize-1}`,
       'execute unless score _z maze matches 0 as @s at @s run function generated:story/maze/create/_z'
     ]);
 
