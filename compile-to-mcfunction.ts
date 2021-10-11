@@ -1045,6 +1045,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/create', [
       '# Reset maze',
+      `execute as @e[tag=maze-marker] at @s run forceload remove ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
       'kill @e[tag=maze-marker]',
       '# Set Size of maze',
       'scoreboard players set size maze 15',
@@ -1057,10 +1058,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/_x', [
       'scoreboard players operation _y maze = size maze',
       '',
-      'execute as @s at @s run function generated:story/maze/create/_y',
+      'execute as @e[type=marker,tag=maze-marker,tag=maze-create-root] at @s run function generated:story/maze/create/_y',
       'scoreboard players remove _x maze 1',
-      `tp @s ~${cellsize-1} ${(cellsize-1)/2} 0`,
-      'execute unless score _x maze matches 0 as @s at @s run function generated:story/maze/create/_x'
+      `tp @e[type=marker,tag=maze-marker,tag=maze-create-root] ~${cellsize-1} ${(cellsize-1)/2} 0`,
+      'execute unless score _x maze matches 0 as @s at @s run schedule function generated:story/maze/create/_x 1t'
     ]);
     addfunc('maze/create/_y', [
       'scoreboard players operation _z maze = size maze',
@@ -1072,6 +1073,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ]);
     addfunc('maze/create/_z', [
       'summon marker ~ ~ ~ {Tags:["maze-marker","maze-node"]}',
+      `forceload add ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
       `clone ${-1000-(cellsize-1)/2} ${50-(cellsize-1)/2} ${-(cellsize-1)/2} ${-1000+(cellsize-1)/2} ${50+(cellsize-1)/2} ${(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2}`,
       'scoreboard players remove _z maze 1',
       `tp @s ~ ~ ~${cellsize-1}`,

@@ -1,4 +1,5 @@
 # Reset maze
+execute as @e[tag=maze-marker] at @s run forceload remove ~-4 ~-4 ~4 ~4
 kill @e[tag=maze-marker]
 # Set Size of maze
 scoreboard players set size maze 15
