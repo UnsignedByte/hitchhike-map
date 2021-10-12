@@ -1267,8 +1267,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation @s maze-path = length maze-path',
       'scoreboard players add length maze-path 1',
       neighbors.map((x, i) => [
-        `execute if score @s maze-path-parent matches ${i} at @s positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} as @e[type=marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] run say @s`,
-        `execute if score @s maze-path-parent matches ${i} at @s positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} as @e[type=marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] run function maze/pathfind/_pathgetnext`
+        `execute if score @s maze-path-parent matches ${i} at @s positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} as @e[type=marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] run function generated:story/maze/pathfind/_pathgetnext`
       ])
     ])
   })();
