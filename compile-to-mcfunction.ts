@@ -1044,12 +1044,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const cellsize = 9;
 
     const neighbors = [
-      [0, 0, 1],
-      [0, 0, -1],
+      [1, 0, 0],
+      [-1, 0, 0],
       [0, 1, 0],
       [0, -1, 0],
-      [1, 0, 0],
-      [-1, 0, 0]
+      [0, 0, 1],
+      [0, 0, -1]
     ]
 
     addfunc('maze/create', [
@@ -1164,6 +1164,40 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/pathfind', [
 
+    ])
+
+    addfunc('maze/getPos', [
+      '# Store position of a given node in grid coordinates',
+      'execute store result score _markerx maze run data get entity @s Pos[0]',
+      'execute store result score _markery maze run data get entity @s Pos[1]',
+      'execute store result score _markerz maze run data get entity @s Pos[2]',
+      'scoreboard players add _markerx maze 1500',
+      'scoreboard players remove _markery maze 3',
+      `scoreboard players operation _markerx maze /= ${cellsize-1} const`,
+      `scoreboard players operation _markery maze /= ${cellsize-1} const`,
+      `scoreboard players operation _markerz maze /= ${cellsize-1} const`
+    ])
+
+    addfunc('maze/pathfind/getg', [
+      '#> Get G cost of a given marker',
+      'execute as @s run function generated:story/maze/getPos',
+      '# Use euclidian distance',
+      'scoreboard players operation _tmpx maze-pathGcost = _markerx maze',
+      'scoreboard players operation _tmpy maze-pathGcost = _markery maze',
+      'scoreboard players operation _tmpz maze-pathGcost = _markerz maze',
+      '# Subtract distance of goal',
+      'execute as @e[type=marker,tag=path-goal] run function generated:story/maze/getPos',
+      'scoreboard players operation _tmpx maze-pathGcost -= _markerx maze',
+      'scoreboard players operation _tmpy maze-pathGcost -= _markery maze',
+      'scoreboard players operation _tmpz maze-pathGcost -= _markerz maze',
+      '# get absolute value',
+      'execute if score _tmpx maze-pathGcost matches ..-1 run scoreboard players operation _tmpx maze-pathGcost *= -1 const',
+      'execute if score _tmpy maze-pathGcost matches ..-1 run scoreboard players operation _tmpy maze-pathGcost *= -1 const',
+      'execute if score _tmpz maze-pathGcost matches ..-1 run scoreboard players operation _tmpz maze-pathGcost *= -1 const',
+      '# add to total cost',
+      'scoreboard players operation @s maze-pathGcost = _tmpx maze-pathGcost',
+      'scoreboard players operation @s maze-pathGcost += _tmpy maze-pathGcost',
+      'scoreboard players operation @s maze-pathGcost += _tmpz maze-pathGcost'
     ])
   })();
 }
