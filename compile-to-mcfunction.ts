@@ -1172,6 +1172,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
 
     addfunc('maze/pathfind', [
+      'kill @e[tag=maze-path-lit]',
       '# Cleanup',
       'schedule clear generated:story/maze/pathfind/selectcell',
       'tag @e[type=marker,tag=maze-node] remove path-visited',
