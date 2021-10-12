@@ -1177,9 +1177,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation _goaly maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-ypos',
       'scoreboard players operation _goalz maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-zpos',
       'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathGcost 2147483647',
-      'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathRcost 2147483647',
+      'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathHcost 2147483647',
       'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathTcost 2147483647',
-      'scoreboard players set _tmpcost maze-pathRcost 0',
+      'scoreboard players set _tmpcost maze-pathHcost 0',
       'scoreboard players set _tmp maze-path-parent -1',
       'execute as @e[type=marker,tag=maze-marker,tag=path-start] run function generated:story/maze/pathfind/activatecell',
       'function generated:story/maze/pathfind/selectcell'
@@ -1191,8 +1191,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/pathfind/updatecost', [
       '#> update cost of given cell',
-      'scoreboard players operation @s maze-pathRcost < _tmpcost maze-pathRcost',
-      'scoreboard players operation @s maze-pathTcost = @s maze-pathRcost',
+      'scoreboard players operation @s maze-pathHcost < _tmpcost maze-pathHcost',
+      'scoreboard players operation @s maze-pathTcost = @s maze-pathHcost',
       '# Calculate G cost if it has never been done before',
       'execute if score @s maze-pathGcost matches 2147483647 as @s run function generated:story/maze/pathfind/getg',
       'scoreboard players operation @s maze-pathTcost += @s maze-pathGcost'
@@ -1212,12 +1212,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'tag @s remove path-activated',
       '# get neighbors',
       'function generated:story/maze/neighbors',
-      'scoreboard players operation _tmpcost maze-pathRcost = @s maze-pathRcost',
-      'scoreboard players add _tmpcost maze-pathRcost 1',
+      'scoreboard players operation _tmpcost maze-pathHcost = @s maze-pathHcost',
+      'scoreboard players add _tmpcost maze-pathHcost 1',
       neighbors.map((x, i)=>[
         '# update parent if this is closer',
         `scoreboard players set _tmp maze-path-parent ${neighbors.length-i-1}`,
-        `execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-${i}] if score @s maze-pathRcost > _tmpcost maze-pathRcost run function generated:story/maze/pathfind/activatecell`
+        `execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-${i}] if score @s maze-pathHcost > _tmpcost maze-pathHcost run function generated:story/maze/pathfind/activatecell`
       ])
     ])
 
