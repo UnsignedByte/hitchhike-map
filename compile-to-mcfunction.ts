@@ -1172,17 +1172,17 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
 
     addfunc('maze/pathfind', [
-      'kill @e[tag=maze-path-lit]',
+      // 'kill @e[tag=maze-path-lit]',
       '# Cleanup',
       'schedule clear generated:story/maze/pathfind/selectcell',
       'tag @e[type=marker,tag=maze-node] remove path-visited',
       'tag @e[type=marker,tag=maze-node] remove path-activated',
       'scoreboard players set @e[type=marker,tag=maze-node] maze-pathHcost 2147483647',
       'scoreboard players set @e[type=marker,tag=maze-node] maze-pathTcost 2147483647',
-      '# set Gpos root',
-      'scoreboard players operation _goalx maze-pathGcost = @e[type=marker,tag=maze-node,tag=path-goal] maze-xpos',
-      'scoreboard players operation _goaly maze-pathGcost = @e[type=marker,tag=maze-node,tag=path-goal] maze-ypos',
-      'scoreboard players operation _goalz maze-pathGcost = @e[type=marker,tag=maze-node,tag=path-goal] maze-zpos',
+      // '# set Gpos root',
+      // 'scoreboard players operation _goalx maze-pathGcost = @e[type=marker,tag=maze-node,tag=path-goal] maze-xpos',
+      // 'scoreboard players operation _goaly maze-pathGcost = @e[type=marker,tag=maze-node,tag=path-goal] maze-ypos',
+      // 'scoreboard players operation _goalz maze-pathGcost = @e[type=marker,tag=maze-node,tag=path-goal] maze-zpos',
       '# activate start',
       'scoreboard players set _tmpcost maze-pathHcost 0',
       'scoreboard players set _tmp maze-path-parent -1',
@@ -1206,7 +1206,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/visitcell', [
-      'execute at @s run team join blue @e[tag=maze-path-lit,sort=nearest,limit=1]',
+      // 'execute at @s run team join blue @e[tag=maze-path-lit,sort=nearest,limit=1]',
       '# This is now visited',
       'tag @s add path-visited',
       'tag @s remove path-activated',
@@ -1227,24 +1227,24 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '#> update cost of given cell',
       'scoreboard players operation @s maze-pathHcost < _tmpcost maze-pathHcost',
       '# Calculate G cost if it has never been done before',
-      'execute unless entity @s[tag=path-activated] as @s run function generated:story/maze/pathfind/getg',
+      'execute unless entity @s[tag=path-activated] as @s at @s run function generated:story/maze/pathfind/getg',
       'scoreboard players operation @s maze-pathTcost = @s maze-pathHcost',
       'scoreboard players operation @s maze-pathTcost += @s maze-pathGcost',
       'tag @s add path-activated'
     ])
 
     addfunc('maze/pathfind/getg', [
-      'execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"],Team:"blue"}',
+      // 'execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"],Team:"blue"}',
       '#> Get G cost of a given marker',
       'execute as @s run function generated:story/maze/getpos',
       '# Use euclidian distance',
       'scoreboard players operation _tmpx maze-pathGcost = @s maze-xpos',
       'scoreboard players operation _tmpy maze-pathGcost = @s maze-ypos',
       'scoreboard players operation _tmpz maze-pathGcost = @s maze-zpos',
-      '# Subtract distance of goal',
-      'scoreboard players operation _tmpx maze-pathGcost -= _goalx maze-pathGcost',
-      'scoreboard players operation _tmpy maze-pathGcost -= _goaly maze-pathGcost',
-      'scoreboard players operation _tmpz maze-pathGcost -= _goalz maze-pathGcost',
+      '# Subtract distance of nearest goal',
+      'scoreboard players operation _tmpx maze-pathGcost -= @e[type=marker,tag=maze-node,tag=path-goal,sort=nearest,limit=1] maze-xpos',
+      'scoreboard players operation _tmpy maze-pathGcost -= @e[type=marker,tag=maze-node,tag=path-goal,sort=nearest,limit=1] maze-ypos',
+      'scoreboard players operation _tmpz maze-pathGcost -= @e[type=marker,tag=maze-node,tag=path-goal,sort=nearest,limit=1] maze-zpos',
       '# get absolute value',
       'execute if score _tmpx maze-pathGcost matches ..-1 run scoreboard players operation _tmpx maze-pathGcost *= -1 const',
       'execute if score _tmpy maze-pathGcost matches ..-1 run scoreboard players operation _tmpy maze-pathGcost *= -1 const',
@@ -1265,7 +1265,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/_pathgetnext', [
-      'execute at @s run team join magenta @e[tag=maze-path-lit,sort=nearest,limit=1]',
+      // 'execute at @s run team join magenta @e[tag=maze-path-lit,sort=nearest,limit=1]',
       '#> Propogate through path recursively',
       'scoreboard players operation @s maze-path = length maze-path',
       'scoreboard players add length maze-path 1',
