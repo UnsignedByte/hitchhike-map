@@ -1176,7 +1176,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation _goalx maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-xpos',
       'scoreboard players operation _goaly maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-ypos',
       'scoreboard players operation _goalz maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-zpos',
-      'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathGcost 2147483647',
       'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathHcost 2147483647',
       'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathTcost 2147483647',
       'scoreboard players set _tmpcost maze-pathHcost 0',
@@ -1189,21 +1188,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       // 'tag @e[type=marker,tag=maze-marker] remove path-start'
     ])
 
-    addfunc('maze/pathfind/updatecost', [
-      '#> update cost of given cell',
-      'scoreboard players operation @s maze-pathHcost < _tmpcost maze-pathHcost',
-      'scoreboard players operation @s maze-pathTcost = @s maze-pathHcost',
-      '# Calculate G cost if it has never been done before',
-      'execute if score @s maze-pathGcost matches 2147483647 as @s run function generated:story/maze/pathfind/getg',
-      'scoreboard players operation @s maze-pathTcost += @s maze-pathGcost'
-    ])
-
     addfunc('maze/pathfind/selectcell', [
       '# select the cell with the lowest cost',
       'scoreboard players operation #MIN maze-pathTcost < @e[type=marker,tag=maze-marker,tag=path-activated] maze-pathTcost',
       '# visit all the minimum t cost cells',
       'execute as @e[type=marker,tag=maze-marker,tag=path-activated] if score @s maze-pathTcost = #MIN maze-pathTcost at @s run function generated:story/maze/pathfind/visitcell',
-      'execute unless entity @e[type=marker,tag=maze-marker,tag=path-goal,tag=path-activated] run function generated:story/maze/pathfind/selectcell'
+      'execute unless entity @e[type=marker,tag=maze-marker,tag=path-goal,tag=path-activated] run schedule function generated:story/maze/pathfind/selectcell 1t'
     ])
 
     addfunc('maze/pathfind/visitcell', [
@@ -1222,8 +1212,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/activatecell', [
+      '# Update parent',
       `scoreboard players operation @s maze-path-parent = _tmp maze-path-parent`,
-      `execute as @s run function generated:story/maze/pathfind/updatecost`,
+      '#> update cost of given cell',
+      'scoreboard players operation @s maze-pathHcost < _tmpcost maze-pathHcost',
+      '# Calculate G cost if it has never been done before',
+      'execute unless entity @s[tag=path-activated] as @s run function generated:story/maze/pathfind/getg',
+      'scoreboard players operation @s maze-pathTcost = @s maze-pathHcost',
+      'scoreboard players operation @s maze-pathTcost += @s maze-pathGcost',
       'tag @s add path-activated'
     ])
 
