@@ -1,25 +1,5 @@
-# This is now visited
-tag @s add path-visited
-tag @s remove path-activated
-# get neighbors
-function generated:story/maze/neighbors
-scoreboard players operation _tmpcost maze-pathRcost = @s maze-pathRcost
-scoreboard players add _tmpcost maze-pathRcost 1
-# update parent if this is closer
-scoreboard players set _tmp maze-path-parent 5
-execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-0 if score @s maze-pathRcost > _tmpcost maze-pathRcost run function generated:story/maze/pathfind/activatecell
-# update parent if this is closer
-scoreboard players set _tmp maze-path-parent 4
-execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-1 if score @s maze-pathRcost > _tmpcost maze-pathRcost run function generated:story/maze/pathfind/activatecell
-# update parent if this is closer
-scoreboard players set _tmp maze-path-parent 3
-execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-2 if score @s maze-pathRcost > _tmpcost maze-pathRcost run function generated:story/maze/pathfind/activatecell
-# update parent if this is closer
-scoreboard players set _tmp maze-path-parent 2
-execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-3 if score @s maze-pathRcost > _tmpcost maze-pathRcost run function generated:story/maze/pathfind/activatecell
-# update parent if this is closer
-scoreboard players set _tmp maze-path-parent 1
-execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-4 if score @s maze-pathRcost > _tmpcost maze-pathRcost run function generated:story/maze/pathfind/activatecell
-# update parent if this is closer
-scoreboard players set _tmp maze-path-parent 0
-execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-5 if score @s maze-pathRcost > _tmpcost maze-pathRcost run function generated:story/maze/pathfind/activatecell
+# select the cell with the lowest cost
+scoreboard players operation #MIN maze-pathTcost < @e[type=marker,tag=maze-marker,tag=path-activated] maze-pathTcost
+# visit all the minimum t cost cells
+execute as @e[type=marker,tag=maze-marker,tag=path-activated] if score @s maze-pathTcost = #MIN maze-pathTcost run at @s run function generated:story/maze/pathfind/visitcell
+execute unless entity @e[type=marker,tag=maze-marker,tag=path-goal,tag=path-activated] run function generated:story/maze/pathfind/selectcell

@@ -1206,7 +1206,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute unless entity @e[type=marker,tag=maze-marker,tag=path-goal,tag=path-activated] run function generated:story/maze/pathfind/selectcell'
     ])
 
-    addfunc('maze/pathfind/selectcell', [
+    addfunc('maze/pathfind/visitcell', [
       '# This is now visited',
       'tag @s add path-visited',
       'tag @s remove path-activated',
