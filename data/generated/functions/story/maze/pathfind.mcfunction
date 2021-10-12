@@ -13,6 +13,4 @@ scoreboard players operation _goalz maze-pathGcost = @e[type=marker,tag=maze-nod
 scoreboard players set _tmpcost maze-pathHcost 0
 scoreboard players set _tmp maze-path-parent -1
 execute as @e[type=marker,tag=maze-node,tag=path-start] run function generated:story/maze/pathfind/activatecell
-scoreboard players set batchsize maze-path 1
-scoreboard players set _batchleft maze-path 0
 function generated:story/maze/pathfind/selectcell
