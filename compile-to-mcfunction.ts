@@ -1043,13 +1043,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   (() => {
     const cellsize = 9;
 
+    // Neighbor set such that index i is the reverse move of index (length - i - 1`)
     const neighbors = [
       [1, 0, 0],
-      [-1, 0, 0],
       [0, 1, 0],
-      [0, -1, 0],
       [0, 0, 1],
-      [0, 0, -1]
+      [0, 0, -1],
+      [0, -1, 0],
+      [-1, 0, 0]
     ]
 
     addfunc('maze/create', [
@@ -1118,6 +1119,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create/_generatecleanup', [
+      'execute as @e[type=marker,tag=maze-marker] run function generated:story/maze/create/getpos',
       'tag @e[type=marker,tag=maze-marker] remove maze-visited'
     ])
 
@@ -1148,12 +1150,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       neighbors.map((x, i) => [
         `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : 0} ~${x[1] === 0 ? (cellsize-5)/2 : 0} ~${x[2] === 0 ? (cellsize-5)/2 : 0} air`,
         `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${i}`,
-        `execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${neighbors.reduce((i, a, j) => (
-          (i === -1 &&
-           (x[0] === -a[0]) &&
-           (x[1] === -a[1]) &&
-           (x[2] === -a[2])) ? j : i
-        ), -1)}`
+        `execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${neighbors.length-i-1}`
       ]),
       'tag @e[type=marker,tag=maze-marker] remove maze-connect',
       '# add self to maze',
@@ -1161,35 +1158,86 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'tag @s add maze-visited'
     ])
 
-
-    addfunc('maze/pathfind', [
-
+    addfunc('maze/create/getpos', [
+      '# Store position of a given node in grid coordinates',
+      'execute store result score @s maze-xpos run data get entity @s Pos[0]',
+      'execute store result score @s maze-ypos run data get entity @s Pos[1]',
+      'execute store result score @s maze-zpos run data get entity @s Pos[2]',
+      'scoreboard players add @s maze-xpos 1500',
+      'scoreboard players remove @s maze-ypos 3',
+      `scoreboard players operation @s maze-xpos /= ${cellsize-1} const`,
+      `scoreboard players operation @s maze-ypos /= ${cellsize-1} const`,
+      `scoreboard players operation @s maze-zpos /= ${cellsize-1} const`
     ])
 
-    addfunc('maze/getpos', [
-      '# Store position of a given node in grid coordinates',
-      'execute store result score _markerx maze run data get entity @s Pos[0]',
-      'execute store result score _markery maze run data get entity @s Pos[1]',
-      'execute store result score _markerz maze run data get entity @s Pos[2]',
-      'scoreboard players add _markerx maze 1500',
-      'scoreboard players remove _markery maze 3',
-      `scoreboard players operation _markerx maze /= ${cellsize-1} const`,
-      `scoreboard players operation _markery maze /= ${cellsize-1} const`,
-      `scoreboard players operation _markerz maze /= ${cellsize-1} const`
+
+    addfunc('maze/pathfind', [
+      '# set Gpos root',
+      'scoreboard players operation _goalx maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-xpos',
+      'scoreboard players operation _goaly maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-ypos',
+      'scoreboard players operation _goalz maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-zpos',
+      'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathGcost 2147483647',
+      'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathRcost 2147483647',
+      'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathTcost 2147483647',
+      'scoreboard players set _tmpcost maze-pathRcost 0',
+      'scoreboard players set _tmp maze-path-parent -1',
+      'execute as @e[type=marker,tag=maze-marker,tag=path-start] run function generated:story/maze/pathfind/activatecell',
+      'function generated:story/maze/pathfind/selectcell'
+
+
+      // 'tag @e[type=marker,tag=maze-marker] remove path-goal'
+      // 'tag @e[type=marker,tag=maze-marker] remove path-start'
+    ])
+
+    addfunc('maze/pathfind/updatecost', [
+      '#> update cost of given cell',
+      'scoreboard players operation @s maze-pathRcost < _tmpcost maze-pathRcost',
+      'scoreboard players operation @s maze-pathTcost = @s maze-pathRcost',
+      '# Calculate G cost if it has never been done before',
+      'execute if score @s maze-pathGcost matches 2147483647 as @s run function generated:story/maze/pathfind/getg',
+      'scoreboard players operation @s maze-pathTcost += @s maze-pathGcost'
+    ])
+
+    addfunc('maze/pathfind/selectcell', [
+      '# select the cell with the lowest cost',
+      'scoreboard players operation #MIN maze-pathTcost < @e[type=marker,tag=maze-marker,tag=path-activated] maze-pathTcost',
+      '# visit all the minimum t cost cells',
+      'execute as @e[type=marker,tag=maze-marker,tag=path-activated] if score @s maze-pathTcost = #MIN maze-pathTcost run at @s run function generated:story/maze/pathfind/visitcell',
+      'execute unless entity @e[type=marker,tag=maze-marker,tag=path-goal,tag=path-activated] run function generated:story/maze/pathfind/selectcell'
+    ])
+
+    addfunc('maze/pathfind/selectcell', [
+      '# This is now visited',
+      'tag @s add path-visited',
+      'tag @s remove path-activated',
+      '# get neighbors',
+      'function generated:story/maze/neighbors',
+      'scoreboard players operation _tmpcost maze-pathRcost = @s maze-pathRcost',
+      'scoreboard players add _tmpcost maze-pathRcost 1',
+      neighbors.map((x, i)=>[
+        '# update parent if this is closer',
+        `scoreboard players set _tmp maze-path-parent ${neighbors.length-i-1}`,
+        `execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-${i} if score @s maze-pathRcost > _tmpcost maze-pathRcost run function generated:story/maze/pathfind/activatecell`
+      ])
+    ])
+
+    addfunc('maze/pathfind/activatecell', [
+      `scoreboard players operation @s maze-path-parent = _tmp maze-path-parent`,
+      `execute as @s function generated:story/maze/pathfind/updatecost`,
+      'tag @s add path-activated'
     ])
 
     addfunc('maze/pathfind/getg', [
       '#> Get G cost of a given marker',
       'execute as @s run function generated:story/maze/getpos',
       '# Use euclidian distance',
-      'scoreboard players operation _tmpx maze-pathGcost = _markerx maze',
-      'scoreboard players operation _tmpy maze-pathGcost = _markery maze',
-      'scoreboard players operation _tmpz maze-pathGcost = _markerz maze',
+      'scoreboard players operation _tmpx maze-pathGcost = @s maze-xpos',
+      'scoreboard players operation _tmpy maze-pathGcost = @s maze-ypos',
+      'scoreboard players operation _tmpz maze-pathGcost = @s maze-zpos',
       '# Subtract distance of goal',
-      'execute as @e[type=marker,tag=path-goal] run function generated:story/maze/getpos',
-      'scoreboard players operation _tmpx maze-pathGcost -= _markerx maze',
-      'scoreboard players operation _tmpy maze-pathGcost -= _markery maze',
-      'scoreboard players operation _tmpz maze-pathGcost -= _markerz maze',
+      'scoreboard players operation _tmpx maze-pathGcost -= _goalx maze-pathGcost',
+      'scoreboard players operation _tmpy maze-pathGcost -= _goaly maze-pathGcost',
+      'scoreboard players operation _tmpz maze-pathGcost -= _goalz maze-pathGcost',
       '# get absolute value',
       'execute if score _tmpx maze-pathGcost matches ..-1 run scoreboard players operation _tmpx maze-pathGcost *= -1 const',
       'execute if score _tmpy maze-pathGcost matches ..-1 run scoreboard players operation _tmpy maze-pathGcost *= -1 const',
