@@ -1152,13 +1152,18 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           (i === -1 &&
            (x[0] === -a[0]) &&
            (x[1] === -a[1]) &&
-           (x[2] === -a[2])) ? j : -1
+           (x[2] === -a[2])) ? j : i
         ), -1)}`
       ]),
       'tag @e[type=marker,tag=maze-marker] remove maze-connect',
       '# add self to maze',
       'tag @s remove maze-adjacent',
       'tag @s add maze-visited'
+    ])
+
+
+    addfunc('maze/pathfind', [
+
     ])
   })();
 }
