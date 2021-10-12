@@ -1213,7 +1213,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       neighbors.map((x, i)=>[
         '# update parent if this is closer',
         `scoreboard players set _tmp maze-path-parent ${neighbors.length-i-1}`,
-        `execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-${i}] if score @s maze-pathHcost > _tmpcost maze-pathHcost run function generated:story/maze/pathfind/activatecell`
+        `execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-${i},tag=maze-connect-${neighbors.length-i-1}] if score @s maze-pathHcost > _tmpcost maze-pathHcost run function generated:story/maze/pathfind/activatecell`
       ])
     ])
 
