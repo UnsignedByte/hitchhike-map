@@ -1199,11 +1199,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation #MIN maze-pathTcost < @e[type=marker,tag=maze-marker,tag=path-activated] maze-pathTcost',
       '# visit all the minimum t cost cells',
       'execute as @e[type=marker,tag=maze-marker,tag=path-activated] if score @s maze-pathTcost = #MIN maze-pathTcost at @s run function generated:story/maze/pathfind/visitcell',
-      'execute unless entity @e[type=marker,tag=maze-marker,tag=path-goal,tag=path-activated] run schedule function generated:story/maze/pathfind/selectcell 20t'
+      'execute unless entity @e[type=marker,tag=maze-marker,tag=path-goal,tag=path-activated] run schedule function generated:story/maze/pathfind/selectcell 1t'
     ])
 
     addfunc('maze/pathfind/visitcell', [
-      'execute at @s run team leave @e[tag=maze-path-lit,sort=nearest,limit=1]',
+      'execute at @s run team join blue @e[tag=maze-path-lit,sort=nearest,limit=1]',
       '# This is now visited',
       'tag @s add path-visited',
       'tag @s remove path-activated',
@@ -1250,6 +1250,24 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation @s maze-pathGcost = _tmpx maze-pathGcost',
       'scoreboard players operation @s maze-pathGcost += _tmpy maze-pathGcost',
       'scoreboard players operation @s maze-pathGcost += _tmpz maze-pathGcost'
+    ])
+
+    addfunc('maze/pathfind/finalizepath', [
+      '#> Reverse the path to get from start to goal',
+      '# First, clear the scoreboard',
+      'scoreboard objectives remove maze-path',
+      'scoreboard objectives add maze-path',
+      'scoreboard players set length maze-path 0',
+      'execute as @e[type=marker,tag=maze-marker,tag=path-goal] run function generated:story/maze/pathfind/_getpathnext'
+    ])
+
+    addfunc('maze/pathfind/_pathgetnext', [
+      '#> Propogate through path recursively',
+      'scoreboard players operation @s maze-path = length maze-path',
+      'scoreboard players add length maze-path 1',
+      neighbors.map((x, i) => [
+        `execute if score @s maze-path-parent matches ${i} at @s positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} as @e[type=marker,tag=maze-marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] run function maze/pathfind/_pathgetnext`
+      ])
     ])
   })();
 }

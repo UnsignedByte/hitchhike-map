@@ -1,4 +1,4 @@
-execute at @s run team leave @e[tag=maze-path-lit,sort=nearest,limit=1]
+execute at @s run team join blue @e[tag=maze-path-lit,sort=nearest,limit=1]
 # This is now visited
 tag @s add path-visited
 tag @s remove path-activated
