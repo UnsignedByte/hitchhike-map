@@ -1,3 +1,4 @@
+execute at @s run team join magenta @e[tag=maze-path-lit,sort=nearest,limit=1]
 #> Propogate through path recursively
 scoreboard players operation @s maze-path = length maze-path
 scoreboard players add length maze-path 1

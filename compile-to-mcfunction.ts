@@ -1172,7 +1172,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
 
     addfunc('maze/pathfind', [
-      // 'kill @e[tag=maze-path-lit]',
+      'kill @e[tag=maze-path-lit]',
       '# Cleanup',
       'schedule clear generated:story/maze/pathfind/selectcell',
       'tag @e[type=marker,tag=maze-node] remove path-visited',
@@ -1206,7 +1206,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/visitcell', [
-      // 'execute at @s run team join blue @e[tag=maze-path-lit,sort=nearest,limit=1]',
+      'execute at @s run team join blue @e[tag=maze-path-lit,sort=nearest,limit=1]',
       '# This is now visited',
       'tag @s add path-visited',
       'tag @s remove path-activated',
@@ -1234,7 +1234,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/getg', [
-      // 'execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"],Team:"blue"}',
+      'execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"],Team:"blue"}',
       '#> Get G cost of a given marker',
       'execute as @s run function generated:story/maze/getpos',
       '# Use euclidian distance',
@@ -1265,7 +1265,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/_pathgetnext', [
-      // 'execute at @s run team join magenta @e[tag=maze-path-lit,sort=nearest,limit=1]',
+      'execute at @s run team join magenta @e[tag=maze-path-lit,sort=nearest,limit=1]',
       '#> Propogate through path recursively',
       'scoreboard players operation @s maze-path = length maze-path',
       'scoreboard players add length maze-path 1',
