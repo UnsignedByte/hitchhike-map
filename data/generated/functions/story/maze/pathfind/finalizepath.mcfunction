@@ -3,4 +3,4 @@
 scoreboard objectives remove maze-path
 scoreboard objectives add maze-path dummy
 scoreboard players set length maze-path 0
-execute as @e[type=marker,tag=maze-marker,tag=path-goal] run function generated:story/maze/pathfind/_getpathnext
+execute as @e[type=marker,tag=maze-marker,tag=path-goal] run function generated:story/maze/pathfind/_pathgetnext
