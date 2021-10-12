@@ -1190,6 +1190,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/pathfind/selectcell', [
       '# select the cell with the lowest cost',
+      'scoreboard players set #MIN maze-pathTcost 2147483647',
       'scoreboard players operation #MIN maze-pathTcost < @e[type=marker,tag=maze-marker,tag=path-activated] maze-pathTcost',
       '# visit all the minimum t cost cells',
       'execute as @e[type=marker,tag=maze-marker,tag=path-activated] if score @s maze-pathTcost = #MIN maze-pathTcost at @s run function generated:story/maze/pathfind/visitcell',
