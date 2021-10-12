@@ -1223,7 +1223,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/pathfind/activatecell', [
       `scoreboard players operation @s maze-path-parent = _tmp maze-path-parent`,
-      `execute as @s function generated:story/maze/pathfind/updatecost`,
+      `execute as @s run function generated:story/maze/pathfind/updatecost`,
       'tag @s add path-activated'
     ])
 
