@@ -1119,6 +1119,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create/_generatecleanup', [
+      '#> Clean up maze generation and finalize maze',
+      '# Remove random walls from the maze to make it imperfect',
+      'scoreboard players operation _removeleft maze = size maze',
+      'scoreboard players operation _removeleft maze *= size maze',
+      'function generated:story/maze/create/removerandomwalls',
       'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
       'tag @e[type=marker,tag=maze-node] remove maze-visited'
     ])
@@ -1146,16 +1151,35 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'tag @e[type=marker,tag=maze-node,tag=maze-neighbor,tag=!maze-visited] add maze-adjacent',
       '# Select random node in maze to connect to from neighbors',
       'tag @e[type=marker,tag=maze-node,tag=maze-neighbor,tag=maze-visited,sort=random,limit=1] add maze-connect',
-      '# Delete wall',
+      'execute as @s run function generated:story/maze/create/_deletewall',
+      '# add self to maze',
+      'tag @s remove maze-adjacent',
+      'tag @s add maze-visited'
+    ])
+
+    addfunc('maze/create/removerandomwalls', [
+      '#> Remove n random walls from the maze',
+      'execute as @e[type=marker,tag=maze-node,sort=random,limit=1] at @s run function generated:story/maze/create/_removerandomwall',
+      'scoreboard players remove _removeleft maze 1',
+      'execute unless score _removeleft maze matches 0 run function generated:story/maze/create/removerandomwalls'
+    ])
+
+    addfunc('maze/create/_deletewall', [
+      '# Delete wall between self and node marked maze-connect',
       neighbors.map((x, i) => [
         `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : 0} ~${x[1] === 0 ? (cellsize-5)/2 : 0} ~${x[2] === 0 ? (cellsize-5)/2 : 0} air`,
         `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${i}`,
         `execute as @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${neighbors.length-i-1}`
       ]),
-      'tag @e[type=marker,tag=maze-node] remove maze-connect',
-      '# add self to maze',
-      'tag @s remove maze-adjacent',
-      'tag @s add maze-visited'
+      'tag @e[type=marker,tag=maze-node] remove maze-connect'
+    ])
+
+    addfunc('maze/create/_removerandomwall', [
+      '#> Remove a random neighboring wall',
+      'function generated:story/maze/neighbors',
+      '# Select random node in maze to remove wall between',
+      'tag @e[type=marker,tag=maze-node,tag=maze-neighbor,sort=random,limit=1] add maze-connect',
+      'execute as @s run function generated:story/maze/create/_deletewall'
     ])
 
     addfunc('maze/create/getpos', [
