@@ -1211,7 +1211,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players set _tmpcost maze-pathHcost 0',
       'scoreboard players set _tmp maze-path-parent -1',
       'execute as @e[type=marker,tag=maze-node,tag=path-start] run function generated:story/maze/pathfind/activatecell',
-      'scoreboard players set batchsize maze-path 50',
+      'scoreboard players set batchsize maze-path 10',
       'scoreboard players set _batchleft maze-path 0',
       'function generated:story/maze/pathfind/selectcell'
 
