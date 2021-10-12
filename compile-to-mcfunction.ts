@@ -1055,7 +1055,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/create', [
       '# Reset maze',
-      `execute as @e[tag=maze-marker] at @s run forceload remove ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
+      `execute as @e[tag=maze-node] at @s run forceload remove ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
       'kill @e[tag=maze-marker]',
       '# Set Size of maze',
       'scoreboard players set size maze 15',
@@ -1092,11 +1092,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/neighbors', [
       '#> Tag the neighbors of a given cell',
-      'tag @e[type=marker,tag=maze-marker] remove maze-neighbor',
+      'tag @e[type=marker,tag=maze-node] remove maze-neighbor',
       neighbors.map((x, i)=>[
-        `execute positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} run tag @e[type=marker,tag=maze-marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] add maze-neighbor`,
-        `tag @e[type=marker,tag=maze-marker] remove maze-neighbor-${i}`,
-        `execute positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} run tag @e[type=marker,tag=maze-marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] add maze-neighbor-${i}`
+        `execute positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} run tag @e[type=marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] add maze-neighbor`,
+        `tag @e[type=marker,tag=maze-node] remove maze-neighbor-${i}`,
+        `execute positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} run tag @e[type=marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] add maze-neighbor-${i}`
       ])
     ])
 
@@ -1104,10 +1104,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '# We finished building the maze, kill the root',
       'kill @e[type=marker,tag=maze-marker,tag=maze-create-root]',
       '# Start node of the maze',
-      'tag @e[type=marker,tag=maze-marker,tag=maze-node,sort=random,limit=1] add maze-start',
-      'tag @e[type=marker,tag=maze-marker,tag=maze-start] add maze-visited',
-      'execute at @e[type=marker,tag=maze-marker,tag=maze-start] run function generated:story/maze/neighbors',
-      'tag @e[type=marker,tag=maze-marker,tag=maze-neighbor] add maze-adjacent',
+      'tag @e[type=marker,tag=maze-node,sort=random,limit=1] add maze-start',
+      'tag @e[type=marker,tag=maze-node,tag=maze-start] add maze-visited',
+      'execute at @e[type=marker,tag=maze-node,tag=maze-start] run function generated:story/maze/neighbors',
+      'tag @e[type=marker,tag=maze-node,tag=maze-neighbor] add maze-adjacent',
       '',
       '#> Start propogation',
       '#> Propogate in batches',
@@ -1119,8 +1119,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create/_generatecleanup', [
-      'execute as @e[type=marker,tag=maze-marker] run function generated:story/maze/create/getpos',
-      'tag @e[type=marker,tag=maze-marker] remove maze-visited'
+      'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
+      'tag @e[type=marker,tag=maze-node] remove maze-visited'
     ])
 
     addfunc('maze/create/_propogatebatch', [
@@ -1132,8 +1132,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/create/_propogate', [
       '# Use Prim\'s modified maze generation algorithm',
-      'execute unless entity @e[type=marker,tag=maze-marker,tag=maze-adjacent] run scoreboard players set _batchleft maze 0',
-      'execute as @e[type=marker,tag=maze-marker,tag=maze-adjacent,sort=random,limit=1] at @s run function generated:story/maze/create/_insertcell',
+      'execute unless entity @e[type=marker,tag=maze-node,tag=maze-adjacent] run scoreboard players set _batchleft maze 0',
+      'execute as @e[type=marker,tag=maze-node,tag=maze-adjacent,sort=random,limit=1] at @s run function generated:story/maze/create/_insertcell',
       'scoreboard players remove _batchleft maze 1',
       'execute unless score _batchleft maze matches ..0 run function generated:story/maze/create/_propogate'
     ])
@@ -1143,16 +1143,16 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'tag @s remove maze-adjacent',
       'function generated:story/maze/neighbors',
       '# Add neighbors to adjacent list',
-      'tag @e[type=marker,tag=maze-marker,tag=maze-neighbor,tag=!maze-visited] add maze-adjacent',
+      'tag @e[type=marker,tag=maze-node,tag=maze-neighbor,tag=!maze-visited] add maze-adjacent',
       '# Select random node in maze to connect to from neighbors',
-      'tag @e[type=marker,tag=maze-marker,tag=maze-neighbor,tag=maze-visited,sort=random,limit=1] add maze-connect',
+      'tag @e[type=marker,tag=maze-node,tag=maze-neighbor,tag=maze-visited,sort=random,limit=1] add maze-connect',
       '# Delete wall',
       neighbors.map((x, i) => [
-        `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : 0} ~${x[1] === 0 ? (cellsize-5)/2 : 0} ~${x[2] === 0 ? (cellsize-5)/2 : 0} air`,
-        `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${i}`,
-        `execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${neighbors.length-i-1}`
+        `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : 0} ~${x[1] === 0 ? (cellsize-5)/2 : 0} ~${x[2] === 0 ? (cellsize-5)/2 : 0} air`,
+        `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${i}`,
+        `execute as @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${neighbors.length-i-1}`
       ]),
-      'tag @e[type=marker,tag=maze-marker] remove maze-connect',
+      'tag @e[type=marker,tag=maze-node] remove maze-connect',
       '# add self to maze',
       'tag @s remove maze-adjacent',
       'tag @s add maze-visited'
@@ -1174,32 +1174,32 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/pathfind', [
       '# Cleanup',
       'schedule clear generated:story/maze/pathfind/selectcell',
-      'tag @e[type=marker,tag=maze-marker] remove path-visited',
-      'tag @e[type=marker,tag=maze-marker] remove path-activated',
-      'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathHcost 2147483647',
-      'scoreboard players set @e[type=marker,tag=maze-marker] maze-pathTcost 2147483647',
+      'tag @e[type=marker,tag=maze-node] remove path-visited',
+      'tag @e[type=marker,tag=maze-node] remove path-activated',
+      'scoreboard players set @e[type=marker,tag=maze-node] maze-pathHcost 2147483647',
+      'scoreboard players set @e[type=marker,tag=maze-node] maze-pathTcost 2147483647',
       '# set Gpos root',
-      'scoreboard players operation _goalx maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-xpos',
-      'scoreboard players operation _goaly maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-ypos',
-      'scoreboard players operation _goalz maze-pathGcost = @e[type=marker,tag=maze-marker,tag=path-goal] maze-zpos',
+      'scoreboard players operation _goalx maze-pathGcost = @e[type=marker,tag=maze-node,tag=path-goal] maze-xpos',
+      'scoreboard players operation _goaly maze-pathGcost = @e[type=marker,tag=maze-node,tag=path-goal] maze-ypos',
+      'scoreboard players operation _goalz maze-pathGcost = @e[type=marker,tag=maze-node,tag=path-goal] maze-zpos',
       '# activate start',
       'scoreboard players set _tmpcost maze-pathHcost 0',
       'scoreboard players set _tmp maze-path-parent -1',
-      'execute as @e[type=marker,tag=maze-marker,tag=path-start] run function generated:story/maze/pathfind/activatecell',
+      'execute as @e[type=marker,tag=maze-node,tag=path-start] run function generated:story/maze/pathfind/activatecell',
       'function generated:story/maze/pathfind/selectcell'
 
 
-      // 'tag @e[type=marker,tag=maze-marker] remove path-goal'
-      // 'tag @e[type=marker,tag=maze-marker] remove path-start'
+      // 'tag @e[type=marker,tag=maze-node] remove path-goal'
+      // 'tag @e[type=marker,tag=maze-node] remove path-start'
     ])
 
     addfunc('maze/pathfind/selectcell', [
       '# select the cell with the lowest cost',
       'scoreboard players set #MIN maze-pathTcost 2147483647',
-      'scoreboard players operation #MIN maze-pathTcost < @e[type=marker,tag=maze-marker,tag=path-activated] maze-pathTcost',
+      'scoreboard players operation #MIN maze-pathTcost < @e[type=marker,tag=maze-node,tag=path-activated] maze-pathTcost',
       '# visit all the minimum t cost cells',
-      'execute as @e[type=marker,tag=maze-marker,tag=path-activated] if score @s maze-pathTcost = #MIN maze-pathTcost at @s run function generated:story/maze/pathfind/visitcell',
-      'execute unless entity @e[type=marker,tag=maze-marker,tag=path-goal,tag=path-activated] run schedule function generated:story/maze/pathfind/selectcell 1t'
+      'execute as @e[type=marker,tag=maze-node,tag=path-activated] if score @s maze-pathTcost = #MIN maze-pathTcost at @s run function generated:story/maze/pathfind/visitcell',
+      'execute unless entity @e[type=marker,tag=maze-node,tag=path-goal,tag=path-activated] run schedule function generated:story/maze/pathfind/selectcell 1t'
     ])
 
     addfunc('maze/pathfind/visitcell', [
@@ -1214,7 +1214,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       neighbors.map((x, i)=>[
         '# update parent if this is closer',
         `scoreboard players set _tmp maze-path-parent ${neighbors.length-i-1}`,
-        `execute as @e[type=marker,tag=maze-marker,tag=!path-visited,tag=maze-neighbor-${i},tag=maze-connect-${neighbors.length-i-1}] if score @s maze-pathHcost > _tmpcost maze-pathHcost run function generated:story/maze/pathfind/activatecell`
+        `execute as @e[type=marker,tag=maze-node,tag=!path-visited,tag=maze-neighbor-${i},tag=maze-connect-${neighbors.length-i-1}] if score @s maze-pathHcost > _tmpcost maze-pathHcost run function generated:story/maze/pathfind/activatecell`
       ])
     ])
 
@@ -1258,7 +1258,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard objectives remove maze-path',
       'scoreboard objectives add maze-path dummy',
       'scoreboard players set length maze-path 0',
-      'execute as @e[type=marker,tag=maze-marker,tag=path-goal] run function generated:story/maze/pathfind/_pathgetnext'
+      'execute as @e[type=marker,tag=maze-node,tag=path-goal] run function generated:story/maze/pathfind/_pathgetnext'
     ])
 
     addfunc('maze/pathfind/_pathgetnext', [
@@ -1267,7 +1267,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation @s maze-path = length maze-path',
       'scoreboard players add length maze-path 1',
       neighbors.map((x, i) => [
-        `execute if score @s maze-path-parent matches ${i} at @s positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} as @e[type=marker,tag=maze-marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] run function maze/pathfind/_pathgetnext`
+        `execute if score @s maze-path-parent matches ${i} at @s positioned ~${x[0]*(cellsize-1)} ~${x[1]*(cellsize-1)} ~${x[2]*(cellsize-1)} as @e[type=marker,tag=maze-node,tag=maze-node,distance=..0.01,sort=nearest,limit=1] run function maze/pathfind/_pathgetnext`
       ])
     ])
   })();
