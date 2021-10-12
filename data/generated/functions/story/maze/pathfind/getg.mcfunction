@@ -1,11 +1,11 @@
 #> Get G cost of a given marker
-execute as @s run function generated:story/maze/getPos
+execute as @s run function generated:story/maze/getpos
 # Use euclidian distance
 scoreboard players operation _tmpx maze-pathGcost = _markerx maze
 scoreboard players operation _tmpy maze-pathGcost = _markery maze
 scoreboard players operation _tmpz maze-pathGcost = _markerz maze
 # Subtract distance of goal
-execute as @e[type=marker,tag=path-goal] run function generated:story/maze/getPos
+execute as @e[type=marker,tag=path-goal] run function generated:story/maze/getpos
 scoreboard players operation _tmpx maze-pathGcost -= _markerx maze
 scoreboard players operation _tmpy maze-pathGcost -= _markery maze
 scoreboard players operation _tmpz maze-pathGcost -= _markerz maze
