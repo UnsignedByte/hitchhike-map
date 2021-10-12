@@ -1117,10 +1117,15 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'function generated:story/maze/create/_propogate'
     ])
 
+    addfunc('maze/create/_generatecleanup', [
+      'tag @e[type=marker,tag=maze-marker] remove maze-visited'
+    ])
+
     addfunc('maze/create/_propogatebatch', [
       'scoreboard players operation _batchleft maze = batchsize maze',
       'function generated:story/maze/create/_propogate',
-      'execute unless score _batchleft maze matches ..-1 run schedule function generated:story/maze/create/_propogatebatch 1t'
+      'execute unless score _batchleft maze matches ..-1 run schedule function generated:story/maze/create/_propogatebatch 1t',
+      'execute if score _batchleft maze matches ..-1 run function generated:story/maze/create/_generatecleanup'
     ])
 
     addfunc('maze/create/_propogate', [
@@ -1141,7 +1146,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'tag @e[type=marker,tag=maze-marker,tag=maze-neighbor,tag=maze-visited,sort=random,limit=1] add maze-connect',
       '# Delete wall',
       neighbors.map((x, i) => [
-        `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${-(cellsize-5)/2} ~${-(cellsize-5)/2} ~${-(cellsize-5)/2} ~${(cellsize-5)/2} ~${(cellsize-5)/2} ~${(cellsize-5)/2} air`
+        `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : 0} ~${x[1] === 0 ? (cellsize-5)/2 : 0} ~${x[2] === 0 ? (cellsize-5)/2 : 0} air`,
+        `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-open-${i}`,
+        `execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-open-${neighbors.reduce((i, a, j) => (
+          (i === -1 &&
+           (x[0] === -a[0]) &&
+           (x[1] === -a[1]) &&
+           (x[2] === -a[2])) ? j : -1
+        ), -1)}`
       ]),
       'tag @e[type=marker,tag=maze-marker] remove maze-connect',
       '# add self to maze',

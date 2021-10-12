@@ -6,12 +6,24 @@ tag @e[type=marker,tag=maze-marker,tag=maze-neighbor,tag=!maze-visited] add maze
 # Select random node in maze to connect to from neighbors
 tag @e[type=marker,tag=maze-marker,tag=maze-neighbor,tag=maze-visited,sort=random,limit=1] add maze-connect
 # Delete wall
-execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-0] positioned ~0 ~0 ~4 run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air
-execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-1] positioned ~0 ~0 ~-4 run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air
-execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-2] positioned ~0 ~4 ~0 run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air
-execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-3] positioned ~0 ~-4 ~0 run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air
-execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-4] positioned ~4 ~0 ~0 run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air
-execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-5] positioned ~-4 ~0 ~0 run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-0] positioned ~0 ~0 ~4 run fill ~-2 ~-2 ~0 ~2 ~2 ~0 air
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-0] run tag @s add maze-open-0
+execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-0] run tag @s add maze-open--1
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-1] positioned ~0 ~0 ~-4 run fill ~-2 ~-2 ~0 ~2 ~2 ~0 air
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-1] run tag @s add maze-open-1
+execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-1] run tag @s add maze-open--1
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-2] positioned ~0 ~4 ~0 run fill ~-2 ~0 ~-2 ~2 ~0 ~2 air
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-2] run tag @s add maze-open-2
+execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-2] run tag @s add maze-open--1
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-3] positioned ~0 ~-4 ~0 run fill ~-2 ~0 ~-2 ~2 ~0 ~2 air
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-3] run tag @s add maze-open-3
+execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-3] run tag @s add maze-open--1
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-4] positioned ~4 ~0 ~0 run fill ~0 ~-2 ~-2 ~0 ~2 ~2 air
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-4] run tag @s add maze-open-4
+execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-4] run tag @s add maze-open-5
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-5] positioned ~-4 ~0 ~0 run fill ~0 ~-2 ~-2 ~0 ~2 ~2 air
+execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-5] run tag @s add maze-open-5
+execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-5] run tag @s add maze-open--1
 tag @e[type=marker,tag=maze-marker] remove maze-connect
 # add self to maze
 tag @s remove maze-adjacent
