@@ -5,10 +5,10 @@ execute as @s run function generated:story/maze/getpos
 scoreboard players operation _tmpx maze-pathGcost = @s maze-xpos
 scoreboard players operation _tmpy maze-pathGcost = @s maze-ypos
 scoreboard players operation _tmpz maze-pathGcost = @s maze-zpos
-# Subtract distance of nearest goal
-scoreboard players operation _tmpx maze-pathGcost -= @e[type=marker,tag=maze-node,tag=path-goal,sort=nearest,limit=1] maze-xpos
-scoreboard players operation _tmpy maze-pathGcost -= @e[type=marker,tag=maze-node,tag=path-goal,sort=nearest,limit=1] maze-ypos
-scoreboard players operation _tmpz maze-pathGcost -= @e[type=marker,tag=maze-node,tag=path-goal,sort=nearest,limit=1] maze-zpos
+# Subtract distance of goal
+scoreboard players operation _tmpx maze-pathGcost -= _goalx maze-pathGcost
+scoreboard players operation _tmpy maze-pathGcost -= _goaly maze-pathGcost
+scoreboard players operation _tmpz maze-pathGcost -= _goalz maze-pathGcost
 # get absolute value
 execute if score _tmpx maze-pathGcost matches ..-1 run scoreboard players operation _tmpx maze-pathGcost *= -1 const
 execute if score _tmpy maze-pathGcost matches ..-1 run scoreboard players operation _tmpy maze-pathGcost *= -1 const
