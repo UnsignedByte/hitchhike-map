@@ -1221,6 +1221,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/selectcell', [
+      'execute if score _batchleft maze-path matches 0 run say batch',
       'execute if score _batchleft maze-path matches 0 run scoreboard players operation _batchleft maze-path = batchsize maze-path',
       '# select the cell with the lowest cost',
       'scoreboard players set #MIN maze-pathTcost 2147483647',
@@ -1263,7 +1264,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/getg', [
-      'execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"],Team:"blue"}',
+      'execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"]}',
       '#> Get G cost of a given marker',
       'execute as @s run function generated:story/maze/getpos',
       '# Use euclidian distance',

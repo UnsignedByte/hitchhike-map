@@ -1,4 +1,4 @@
-execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"],Team:"blue"}
+execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"]}
 #> Get G cost of a given marker
 execute as @s run function generated:story/maze/getpos
 # Use euclidian distance

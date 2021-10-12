@@ -1,3 +1,4 @@
+execute if score _batchleft maze-path matches 0 run say batch
 execute if score _batchleft maze-path matches 0 run scoreboard players operation _batchleft maze-path = batchsize maze-path
 # select the cell with the lowest cost
 scoreboard players set #MIN maze-pathTcost 2147483647
