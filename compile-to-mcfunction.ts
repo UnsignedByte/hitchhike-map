@@ -1199,10 +1199,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation #MIN maze-pathTcost < @e[type=marker,tag=maze-marker,tag=path-activated] maze-pathTcost',
       '# visit all the minimum t cost cells',
       'execute as @e[type=marker,tag=maze-marker,tag=path-activated] if score @s maze-pathTcost = #MIN maze-pathTcost at @s run function generated:story/maze/pathfind/visitcell',
-      'execute unless entity @e[type=marker,tag=maze-marker,tag=path-goal,tag=path-activated] run function generated:story/maze/pathfind/selectcell'
+      'execute unless entity @e[type=marker,tag=maze-marker,tag=path-goal,tag=path-activated] run schedule function generated:story/maze/pathfind/selectcell 20t'
     ])
 
     addfunc('maze/pathfind/visitcell', [
+      'execute at @s run team leave @e[tag=maze-path-lit,sort=nearest,limit=1]',
       '# This is now visited',
       'tag @s add path-visited',
       'tag @s remove path-activated',
@@ -1230,6 +1231,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/getg', [
+      'execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"],Team:"blue"}',
       '#> Get G cost of a given marker',
       'execute as @s run function generated:story/maze/getpos',
       '# Use euclidian distance',
