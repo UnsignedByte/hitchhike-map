@@ -1147,8 +1147,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '# Delete wall',
       neighbors.map((x, i) => [
         `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : 0} ~${x[1] === 0 ? (cellsize-5)/2 : 0} ~${x[2] === 0 ? (cellsize-5)/2 : 0} air`,
-        `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-open-${i}`,
-        `execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-open-${neighbors.reduce((i, a, j) => (
+        `execute if entity @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${i}`,
+        `execute as @e[type=marker,tag=maze-marker,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${neighbors.reduce((i, a, j) => (
           (i === -1 &&
            (x[0] === -a[0]) &&
            (x[1] === -a[1]) &&
