@@ -65,14 +65,22 @@ export async function init (
 
   Object.assign(data.npc.npcs, item.store.npc);
 
+  functions['npc/init_dialogue'] = [];
+  functions['npc/speaking'] = [];
+
   for (const [id, dat] of Object.entries(data.npc.npcs)) {
     const result = createNpc(namespace, id, dat)
     // The empty string is to have an empty between each entry
     reset.push('', result.reset)
     onLoad.push('', result.onLoad)
-    onTick.push('', result.onTick)
+    functions['npc/init_dialogue'].push(result.initDialogue);
+    functions['npc/speaking'].push(result.speaking);
     Object.assign(functions, result.functions)
   }
+  onTick.push([
+    'execute as @e[tag=npc, tag=selected_npc, tag=!speaking] run function generated:npc/init_dialogue',
+    'execute as @e[tag=npc, tag=speaking] at @s run function generated:npc/init_dialogue'
+  ])
 
   let questCount = 0;
 

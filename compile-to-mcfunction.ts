@@ -68,7 +68,8 @@ export function createNpc (
 ): {
   reset: Lines
   onLoad: Lines
-  onTick: Lines
+  initDialogue: Lines,
+  speaking: Lines,
   functions: Record<string, Lines>
 } {
   name = eval(`\`${name}\``);
@@ -162,7 +163,7 @@ export function createNpc (
       // Reset conversations, if possible (player may be offline)
       `tag @a remove ${playerTag}`
     ],
-    onTick: [
+    initDialogue: [
       "# Start a conversation if it was selected",
       // TODO: Consider `mark` and `if`
       (() => {
@@ -223,11 +224,12 @@ export function createNpc (
           `execute if score dialogue-begun dialogue-status matches 0 if entity ${select.newPlayer} run tag @s remove speaking`, // no dialogue to start, don't speak
         ];
 
-        return `execute as ${select.selected} at @s run function generated:npc/${id}/tick`;
-      })(),
-      '',
+        return `execute as @s[tag=${npcTag}] at @s run function generated:npc/${id}/tick`;
+      })()
+    ],
+    speaking: [
       '# While in a conversation, make eye contact with the player.',
-      `execute as ${select.speaking} at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity ${select.player}`
+      `tp @s[tag=${npcTag},tag=!npc-unface] ~ ~ ~ facing entity ${select.player}`
     ],
     functions
   }
