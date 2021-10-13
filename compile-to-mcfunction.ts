@@ -165,60 +165,66 @@ export function createNpc (
     onTick: [
       "# Start a conversation if it was selected",
       // TODO: Consider `mark` and `if`
-      `execute at ${select.selected} run tag @a[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,
-      `tag ${select.player} remove npc_selector`,
-      `tag ${select.selected} add speaking`,
-      `scoreboard players set dialogue-begun dialogue-status 0`,
-      dialogue.map((dialogue, idx) => {
-        const indexToFuncName = (i: number) =>
-          `npc/${id}/${idx}-${i
-            .toString()
-            .padStart(String(dialogue.messages.length - 1).length, '0')}`
-        for (const [i, message] of dialogue.messages.entries()) {
-          // console.log(message)
-          message.message.map(msg => {
-            if ('selector' in msg && (<string>msg.selector)[0] !== '@') msg.selector = <string>eval(<string>msg.selector);
-            return msg
-          });
-          // # of vowels (≈ syllables) * 5 ticks/vowel
-          const fulltext = message.message.map(x=>x.text || '').join("");
-          const duration = message.wait ?? ((fulltext.match(/[aiueo]/gi)?.length ?? 4) * 6)
-          functions[`${indexToFuncName(i)}`] = [
-            `tag ${select.player} add npc-eavesdropper`,
-            `execute at ${select.self} run tag ${message.global ? '@a' : `@a[distance=..${HEAR_DIST}]`} add npc-eavesdropper`,
-            `# Dialogue line #${idx}-${i + 1}: speak and make noise.`,
-            `execute at ${select.self} run tellraw ${select.eavesdropper} ${JSON.stringify([
-              '<',
-              (colour === "null" ? JSON.parse(eval(name || `'"Passerby"'`)) : { text: name || 'Passerby', color: colour, bold: true }),
-              `> `,
-              ...message.message
-            ])}`,
-            `${message.silent ? '# silent // ' : ''}execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${select.eavesdropper} ~ ~ ~ 1000 1 1`,
-            message.command.map(x=>eval(`\`${x}\``)),
-            `schedule function ${namespace}:${
-              i === dialogue.messages.length - 1
-                ? `npc/${id}/${idx}-end`
-                : indexToFuncName(i + 1)
-            } ${duration}t`,
-            `tag @a remove npc-eavesdropper`,
-          ]
-        }
-        functions[`npc/${id}/${idx}-end`] = [
-          '# Handle the end of the conversation.',
-          // No `limit=1` just in case there are multiple players with the tag
-          `tag @a[tag=${playerTag}] remove spoken-to`,
-          `tag @a[tag=${playerTag}] remove ${playerTag}`,
-          `execute as ${select.self} at @s run tp @s ~ ~ ~ ${rx} ${ry}`,
-          dialogue.end.map(x=>eval(`\`${x}\``)),
-          `tag ${select.self} remove speaking`
-        ]
-        return [
-          `execute unless score dialogue-begun dialogue-status matches 1 store success score dialogue-begun dialogue-status if entity ${select.newPlayer} as ${select.self} if score @s dialogue-status matches ${dialogue.cond} run schedule function ${namespace}:${indexToFuncName(0)} 1t`
-        ]
-      }),
-      `execute if score dialogue-begun dialogue-status matches 1 run tag ${select.newPlayer} add spoken-to`,
-      `tag ${select.newPlayer} remove ${playerTag}`, //if dialogue failed, remove the playertag
-      `execute if score dialogue-begun dialogue-status matches 0 if entity ${select.newPlayer} run tag ${select.self} remove speaking`, // no dialogue to start, don't speak
+      (() => {
+        functions[`npc/${id}/tick`] = [
+          `tag @a[tag=npc_selector,sort=nearest,limit=1] add ${playerTag}`,
+          `tag ${select.player} remove npc_selector`,
+          `tag @s add speaking`,
+          `scoreboard players set dialogue-begun dialogue-status 0`,
+          dialogue.map((dialogue, idx) => {
+            const indexToFuncName = (i: number) =>
+              `npc/${id}/${idx}-${i
+                .toString()
+                .padStart(String(dialogue.messages.length - 1).length, '0')}`
+            for (const [i, message] of dialogue.messages.entries()) {
+              // console.log(message)
+              message.message.map(msg => {
+                if ('selector' in msg && (<string>msg.selector)[0] !== '@') msg.selector = <string>eval(<string>msg.selector);
+                return msg
+              });
+              // # of vowels (≈ syllables) * 5 ticks/vowel
+              const fulltext = message.message.map(x=>x.text || '').join("");
+              const duration = message.wait ?? ((fulltext.match(/[aiueo]/gi)?.length ?? 4) * 6)
+              functions[`${indexToFuncName(i)}`] = [
+                `tag ${select.player} add npc-eavesdropper`,
+                `execute at ${select.self} run tag ${message.global ? '@a' : `@a[distance=..${HEAR_DIST}]`} add npc-eavesdropper`,
+                `# Dialogue line #${idx}-${i + 1}: speak and make noise.`,
+                `execute at ${select.self} run tellraw ${select.eavesdropper} ${JSON.stringify([
+                  '<',
+                  (colour === "null" ? JSON.parse(eval(name || `'"Passerby"'`)) : { text: name || 'Passerby', color: colour, bold: true }),
+                  `> `,
+                  ...message.message
+                ])}`,
+                `${message.silent ? '# silent // ' : ''}execute at ${select.self} run playsound minecraft:entity.villager.ambient player ${select.eavesdropper} ~ ~ ~ 1000 1 1`,
+                message.command.map(x=>eval(`\`${x}\``)),
+                `schedule function ${namespace}:${
+                  i === dialogue.messages.length - 1
+                    ? `npc/${id}/${idx}-end`
+                    : indexToFuncName(i + 1)
+                } ${duration}t`,
+                `tag @a remove npc-eavesdropper`,
+              ]
+            }
+            functions[`npc/${id}/${idx}-end`] = [
+              '# Handle the end of the conversation.',
+              // No `limit=1` just in case there are multiple players with the tag
+              `tag @a[tag=${playerTag}] remove spoken-to`,
+              `tag @a[tag=${playerTag}] remove ${playerTag}`,
+              `execute as ${select.self} at @s run tp @s ~ ~ ~ ${rx} ${ry}`,
+              dialogue.end.map(x=>eval(`\`${x}\``)),
+              `tag ${select.self} remove speaking`
+            ]
+            return [
+              `execute unless score dialogue-begun dialogue-status matches 1 store success score dialogue-begun dialogue-status if entity ${select.newPlayer} if score @s dialogue-status matches ${dialogue.cond} run schedule function ${namespace}:${indexToFuncName(0)} 1t`
+            ]
+          }),
+          `execute if score dialogue-begun dialogue-status matches 1 run tag ${select.newPlayer} add spoken-to`,
+          `tag ${select.newPlayer} remove ${playerTag}`, //if dialogue failed, remove the playertag
+          `execute if score dialogue-begun dialogue-status matches 0 if entity ${select.newPlayer} run tag @s remove speaking`, // no dialogue to start, don't speak
+        ];
+
+        return `execute as ${select.selected} at @s run function generated:npc/${id}/tick`;
+      })(),
       '',
       '# While in a conversation, make eye contact with the player.',
       `execute as ${select.speaking} at @s run tp @s[tag=!npc-unface] ~ ~ ~ facing entity ${select.player}`
