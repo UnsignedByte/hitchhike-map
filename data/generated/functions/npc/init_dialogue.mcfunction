@@ -64,3 +64,4 @@ execute as @s[tag=npc-__salmon] at @s run function generated:npc/__salmon/tick
 execute as @s[tag=npc-__monster] at @s run function generated:npc/__monster/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-__lacroix] at @s run function generated:npc/__lacroix/tick
+tag @s remove selected_npc

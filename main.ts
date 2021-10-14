@@ -82,6 +82,10 @@ export async function init (
     'execute as @e[tag=npc, tag=speaking] at @s run function generated:npc/init_dialogue'
   ])
 
+  functions['npc/init_dialogue'].push(
+    `tag @s remove selected_npc`
+  )
+
   let questCount = 0;
 
   for (const [id, dat] of Object.entries(data.quest)) {
@@ -133,6 +137,29 @@ export async function init (
       'clear @a minecraft:written_book{title:"Quest Book"}',
       `scoreboard objectives remove quest-book-upd`,
       `scoreboard objectives add quest-book-upd dummy`,
+      ``,
+      `# KILL EXISTING ITEM HOLDERS`,
+      `kill @e[tag=item_holder]`,
+      Object.entries(data.itemphysics).map(([k, v])=>{
+        let data: Lines;
+        if (k in cache.itemphysics && v.forcebuild == false) {
+          data = cache.itemphysics[k];
+        } else {
+          data = generate_pile(v);
+          cache.itemphysics[k] = data;
+        }
+        return ['# ITEM PHYSICS', ...data];
+      }),
+      Object.entries(data.shelves).map(([k, v])=>{
+        let data: Lines;
+        if (k in cache.shelves && v.forcebuild == false) {
+          data = cache.shelves[k];
+        } else {
+          data = populate_shelf(v);
+          cache.shelves[k] = data;
+        }
+        return ['# SHELVES', ...data];
+      }),
       // Object.values(item.money).map(x=>`give @a ${toGive(x, 64)}`),
       reset
     )
@@ -164,29 +191,6 @@ export async function init (
       '# SET UP VARIABLES',
       `scoreboard objectives add vars dummy`,
       `scoreboard objectives add change dummy`,
-      ``,
-      `# KILL EXISTING ITEM HOLDERS`,
-      `kill @e[tag=item_holder]`,
-      Object.entries(data.itemphysics).map(([k, v])=>{
-        let data: Lines;
-        if (k in cache.itemphysics && v.forcebuild == false) {
-          data = cache.itemphysics[k];
-        } else {
-          data = generate_pile(v);
-          cache.itemphysics[k] = data;
-        }
-        return ['# ITEM PHYSICS', ...data];
-      }),
-      Object.entries(data.shelves).map(([k, v])=>{
-        let data: Lines;
-        if (k in cache.shelves && v.forcebuild == false) {
-          data = cache.shelves[k];
-        } else {
-          data = populate_shelf(v);
-          cache.shelves[k] = data;
-        }
-        return ['# SHELVES', ...data];
-      }),
       '',
       `# SET UP ITEM DETECTION`,
       `scoreboard objectives add idetect dummy`,
@@ -249,9 +253,7 @@ export async function init (
       `execute as @a[scores={quest-book-upd=0},nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] store result score @s quest-book-upd run item modify entity @s weapon.mainhand generated:update_quest_book`,
       `execute as @a[scores={quest-book-upd=0},nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] store result score @s quest-book-upd run item modify entity @s weapon.offhand generated:update_quest_book`,
       '',
-      onTick,
-      `tag @a remove npc_selector`,
-      `tag @e[tag=npc] remove selected_npc`)
+      onTick)
   )
 
 
