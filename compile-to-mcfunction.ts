@@ -1120,8 +1120,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '#> Start propogation',
       '#> Propogate in batches',
       '# size^2',
-      'scoreboard players operation batchsize maze = size maze',
-      'scoreboard players operation batchsize maze *= size maze',
+      'scoreboard players set batchsize maze 50',
       'function generated:story/maze/create/_propogatebatch',
       'function generated:story/maze/create/_propogate'
     ])
@@ -1175,7 +1174,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/_deletewall', [
       '# Delete wall between self and node marked maze-connect',
       neighbors.map((x, i) => [
-        `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : 1} ~${x[1] === 0 ? (cellsize-5)/2 : 1} ~${x[2] === 0 ? (cellsize-5)/2 : 1} air`,
+        `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : x[0]} ~${x[1] === 0 ? (cellsize-5)/2 : x[1]} ~${x[2] === 0 ? (cellsize-5)/2 : x[2]} air`,
         `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${i}`,
         `execute as @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${neighbors.length-i-1}`
       ]),
