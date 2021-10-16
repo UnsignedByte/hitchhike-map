@@ -9,6 +9,6 @@ tag @e[type=marker,tag=maze-node,tag=maze-neighbor] add maze-adjacent
 #> Start propogation
 #> Propogate in batches
 # size^2
-scoreboard players set batchsize maze 1
+scoreboard players set batchsize maze 10
 function generated:story/maze/create/_propogatebatch
 function generated:story/maze/create/_propogate
