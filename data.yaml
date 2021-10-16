@@ -183,8 +183,7 @@ npc:
             global: true
             command:
               - 'tp @a -1400.0 11 -150.0'
-              - type: function
-                value: generated:story/maze/create
+              - 'schedule function generated:story/maze/create 1t'
           cond: 4
           end: -1
     simon:

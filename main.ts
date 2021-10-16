@@ -79,7 +79,7 @@ export async function init (
   }
   onTick.push([
     'execute as @e[tag=npc, tag=selected_npc, tag=!speaking] run function generated:npc/init_dialogue',
-    'execute as @e[tag=npc, tag=speaking, tag=!npc-unface] at @s run function generated:npc/init_dialogue'
+    'execute as @e[tag=npc, tag=speaking, tag=!npc-unface] at @s run function generated:npc/speaking'
   ])
 
   functions['npc/init_dialogue'].push(

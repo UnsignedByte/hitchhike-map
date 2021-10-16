@@ -25,7 +25,7 @@ execute as @a[scores={quest-book-upd=0},nbt={SelectedItem:{id:"minecraft:written
 execute as @a[scores={quest-book-upd=0},nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",tag:{title: "Quest Book"}}]}] store result score @s quest-book-upd run item modify entity @s weapon.offhand generated:update_quest_book
 
 execute as @e[tag=npc, tag=selected_npc, tag=!speaking] run function generated:npc/init_dialogue
-execute as @e[tag=npc, tag=speaking, tag=!npc-unface] at @s run function generated:npc/init_dialogue
+execute as @e[tag=npc, tag=speaking, tag=!npc-unface] at @s run function generated:npc/speaking
 
 execute if score visitfriend quest-status matches 0.. run function generated:quests/visitfriend-tick
 
