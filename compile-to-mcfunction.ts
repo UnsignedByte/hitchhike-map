@@ -229,7 +229,7 @@ export function createNpc (
     ],
     speaking: [
       '# While in a conversation, make eye contact with the player.',
-      `tp @s[tag=${npcTag},tag=!npc-unface] ~ ~ ~ facing entity ${select.player}`
+      `tp @s[tag=${npcTag}] ~ ~ ~ facing entity ${select.player}`
     ],
     functions
   }
