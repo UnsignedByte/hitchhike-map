@@ -1067,6 +1067,15 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'kill @e[tag=maze-marker]',
       '# Set Size of maze',
       'scoreboard players set size maze 15',
+      '# Set up bossbar',
+      'bossbar set minecraft:maze name [{"text":"Clearing Memory"}]',
+      'bossbar set minecraft:maze color blue',
+      'execute store result bossbar minecraft:maze max run scoreboard players get size maze',
+      'bossbar set minecraft:maze players @a',
+      'bossbar set minecraft:maze visible true',
+      'bossbar set minecraft:maze style progress',
+      'bossbar set minecraft:maze value 0',
+      'scoreboard players set bossbar maze 0',
       `summon marker -1500 ${(cellsize-1)/2} 0 {Tags:["maze-marker","maze-create-root"]}`,
       '',
       'scoreboard players operation _x maze = size maze',
@@ -1074,6 +1083,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ]);
     addfunc('maze/create/_x', [
       'scoreboard players operation _y maze = size maze',
+      'scoreboard players add bossbar maze 1',
+      'execute store result bossbar minecraft:maze value run scoreboard players get bossbar maze',
       '',
       'execute as @e[type=marker,tag=maze-marker,tag=maze-create-root] at @s run function generated:story/maze/create/_y',
       'scoreboard players remove _x maze 1',
@@ -1117,26 +1128,43 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute at @e[type=marker,tag=maze-node,tag=maze-start] run function generated:story/maze/neighbors',
       'tag @e[type=marker,tag=maze-node,tag=maze-neighbor] add maze-adjacent',
       '',
+      '# Set up bossbar',
+      'bossbar set minecraft:maze name [{"text":"Loading SD Card"}]',
+      'bossbar set minecraft:maze color green',
+      'scoreboard players operation bossbar maze = size maze',
+      'scoreboard players operation bossbar maze *= size maze',
+      'execute store result bossbar minecraft:maze max run scoreboard players get bossbar maze',
+      'bossbar set minecraft:maze players @a',
+      'bossbar set minecraft:maze visible true',
+      'bossbar set minecraft:maze style progress',
+      'bossbar set minecraft:maze value 0',
+      'scoreboard players set bossbar maze 0',
+      '',
       '#> Start propogation',
       '#> Propogate in batches',
       '# size^2',
-      'scoreboard players set batchsize maze 10',
+      'scoreboard players operation batchsize maze = size maze',
       'function generated:story/maze/create/_propogatebatch',
       'function generated:story/maze/create/_propogate'
     ])
 
     addfunc('maze/create/_generatecleanup', [
+      'bossbar set minecraft:maze name [{"text":"Finalizing Data"}]',
+      'bossbar set minecraft:maze color red',
       '#> Clean up maze generation and finalize maze',
       '# Remove random walls from the maze to make it imperfect',
       'scoreboard players operation _removeleft maze = size maze',
       'scoreboard players operation _removeleft maze *= size maze',
       'function generated:story/maze/create/removerandomwalls',
       'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
-      'tag @e[type=marker,tag=maze-node] remove maze-visited'
+      'tag @e[type=marker,tag=maze-node] remove maze-visited',
+      'bossbar set minecraft:maze visible false'
     ])
 
     addfunc('maze/create/_propogatebatch', [
       'scoreboard players operation _batchleft maze = batchsize maze',
+      'scoreboard players add bossbar maze 1',
+      'execute store result bossbar minecraft:maze value run scoreboard players get bossbar maze',
       'function generated:story/maze/create/_propogate',
       'execute unless score _batchleft maze matches ..-1 run schedule function generated:story/maze/create/_propogatebatch 1t',
       'execute if score _batchleft maze matches ..-1 run function generated:story/maze/create/_generatecleanup'

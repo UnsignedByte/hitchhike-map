@@ -169,9 +169,18 @@ npc:
             wait: 120
           - message: Interesting...
             wait: 120
-          - message: So I've taken a look at the file.
+          - message: I've taken a look at the file. Give me a second and then we can start fixing it up.
             command:
               - 'tag @e[tag=npc-sawyer] remove npc-unface'
+          - message: Did I mention you'll be the one doing most of it? Well, anyways, here we go...
+          - message:
+            - text: "Welcome to the "
+            - text: waiting room
+              italic: true
+            - text: ". Please be patient while I load the SD card data into memory..."
+            global: true
+            command:
+              - 'tp -1400.0 11 -150.0'
           cond: 4
           end: -1
     simon:

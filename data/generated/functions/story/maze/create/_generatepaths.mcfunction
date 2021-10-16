@@ -6,9 +6,21 @@ tag @e[type=marker,tag=maze-node,tag=maze-start] add maze-visited
 execute at @e[type=marker,tag=maze-node,tag=maze-start] run function generated:story/maze/neighbors
 tag @e[type=marker,tag=maze-node,tag=maze-neighbor] add maze-adjacent
 
+# Set up bossbar
+bossbar set minecraft:maze name [{"text":"Loading SD Card"}]
+bossbar set minecraft:maze color green
+scoreboard players operation bossbar maze = size maze
+scoreboard players operation bossbar maze *= size maze
+execute store result bossbar minecraft:maze max run scoreboard players get bossbar maze
+bossbar set minecraft:maze players @a
+bossbar set minecraft:maze visible true
+bossbar set minecraft:maze style progress
+bossbar set minecraft:maze value 0
+scoreboard players set bossbar maze 0
+
 #> Start propogation
 #> Propogate in batches
 # size^2
-scoreboard players set batchsize maze 10
+scoreboard players operation batchsize maze = size maze
 function generated:story/maze/create/_propogatebatch
 function generated:story/maze/create/_propogate
