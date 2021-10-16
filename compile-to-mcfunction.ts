@@ -1092,7 +1092,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/_z', [
       'summon marker ~ ~ ~ {Tags:["maze-marker","maze-node"]}',
       `forceload add ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
-      `clone ${-1000-(cellsize-1)/2} ${50-(cellsize-1)/2} ${-(cellsize-1)/2} ${-1000+(cellsize-1)/2} ${50+(cellsize-1)/2} ${(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2}`,
+      `clone ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2} ${-1000+(cellsize-1)/2} ${200+(cellsize-1)/2} ${(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2}`,
       'scoreboard players remove _z maze 1',
       `tp @s ~ ~ ~${cellsize}`,
       'execute unless score _z maze matches 0 as @s at @s run function generated:story/maze/create/_z'
@@ -1173,8 +1173,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/create/_deletewall', [
       '# Delete wall between self and node marked maze-connect',
+      `execute at @s facing entity @e[type=marker,tag=maze-node,tag=maze-connect] run fill ^${-(cellsize-1)/2} ^${-(cellsize-1)/2} ^${(cellsize-1)/2} ^${(cellsize-1)/2} ^${(cellsize-1)/2} ^${(cellsize-1)/2+1} air`,
       neighbors.map((x, i) => [
-        `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : x[0]} ~${x[1] === 0 ? (cellsize-5)/2 : x[1]} ~${x[2] === 0 ? (cellsize-5)/2 : x[2]} air`,
+        // `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : x[0]} ~${x[1] === 0 ? (cellsize-5)/2 : x[1]} ~${x[2] === 0 ? (cellsize-5)/2 : x[2]} air`,
         `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${i}`,
         `execute as @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${neighbors.length-i-1}`
       ]),
@@ -1203,7 +1204,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
 
     addfunc('maze/pathfind', [
-      'kill @e[tag=maze-path-lit]',
+      // 'kill @e[tag=maze-path-lit]',
       '# Cleanup',
       'schedule clear generated:story/maze/pathfind/selectcell',
       'tag @e[type=marker,tag=maze-node] remove path-visited',
@@ -1244,7 +1245,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/visitcell', [
-      'execute at @s run team join blue @e[tag=maze-path-lit,sort=nearest,limit=1]',
+      // 'execute at @s run team join blue @e[tag=maze-path-lit,sort=nearest,limit=1]',
       '# This is now visited',
       'tag @s add path-visited',
       'tag @s remove path-activated',
@@ -1272,7 +1273,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/getg', [
-      'execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"]}',
+      // 'execute at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,NoAI:1,Glowing:1,Tags:["maze-path-lit"]}',
       '#> Get G cost of a given marker',
       'execute as @s run function generated:story/maze/getpos',
       '# Use euclidian distance',
@@ -1302,7 +1303,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/pathfind/_pathgetnext', [
-      'execute at @s run team join magenta @e[tag=maze-path-lit,sort=nearest,limit=1]',
+      // 'execute at @s run team join magenta @e[tag=maze-path-lit,sort=nearest,limit=1]',
       '#> Propogate through path recursively',
       'scoreboard players operation @s maze-path = length maze-path',
       'scoreboard players add length maze-path 1',
