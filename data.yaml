@@ -108,8 +108,9 @@ npc:
           - You really just broke right in, didn't you?
           - Anyways, what's up?
           - Hmm, the internet is down...
-          - That might have something to do with the sudden loss of electricity in my house, or the massive thunderstorm that's been passing by... who knows?
-          - I would recommend you turn it off and on again... your internet, I mean. Not my electricity.
+          - That might have something to do with the sudden loss of electricity in my house...
+          - ...or the massive thunderstorm that's been passing by.
+          - Who knows? I would recommend you turn it off and on again... your internet, I mean. Not my electricity.
           - Let me know how that goes!
           cond: 3
           end: 1
