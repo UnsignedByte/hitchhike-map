@@ -1,5 +1,5 @@
 # Delete wall between self and node marked maze-connect
-execute at @s facing entity @e[type=marker,tag=maze-node,tag=maze-connect,limit=1] run fill ^-4 ^-4 ^4 ^4 ^4 ^5 air
+execute at @s facing entity @e[type=marker,tag=maze-node,tag=maze-connect] feet run fill ^-4 ^-4 ^4 ^4 ^4 ^5 air
 execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-0] run tag @s add maze-connect-0
 execute as @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-0] run tag @s add maze-connect-5
 execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-1] run tag @s add maze-connect-1
