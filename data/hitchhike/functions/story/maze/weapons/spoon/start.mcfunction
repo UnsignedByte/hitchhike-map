@@ -1,4 +1,4 @@
-summon minecraft:marker ~ ~ ~ {Tags:["thrown-item-marker-init","thrown-item-host","thrown-spoon"]}
+summon minecraft:marker ~ ~ ~ {Tags:["thrown-item-marker-init","thrown-item","thrown-spoon"]}
 
 execute positioned ~ ~-0.4 ~ anchored eyes run tp @e[tag=thrown-item-marker-init] ^ ^ ^1 ~ ~
 
