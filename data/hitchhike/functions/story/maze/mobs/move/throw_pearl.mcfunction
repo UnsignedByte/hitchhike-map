@@ -15,5 +15,6 @@ execute store result entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1]
 execute store result entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Motion[2] double 0.001 run scoreboard players get _thisZ maze-mob-phase
 
 data modify entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Owner set from entity @s UUID
+data modify entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] NoGravity set value 0
 
 tag @e[type=ender_pearl] remove maze-mob-pearl-init
