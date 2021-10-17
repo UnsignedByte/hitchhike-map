@@ -1077,7 +1077,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ]
     }
 
-    schedule('function generated:story/maze/mobs/move', 5, functions);
+    schedule('function generated:story/maze/mobs/move', 10, functions);
 
     functions[`story/maze/mobs/move`] = ``;
 
