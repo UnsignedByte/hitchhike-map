@@ -5,5 +5,5 @@ execute at @e[tag=npc-sawyer, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<"
 execute at @e[tag=npc-sawyer, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 tp @a -1400.0 11 -150.0
 schedule function generated:story/maze/create 1t
-schedule function generated:npc/sawyer/3-end 180t
+schedule function generated:npc/sawyer/3-12 180t
 tag @a remove npc-eavesdropper

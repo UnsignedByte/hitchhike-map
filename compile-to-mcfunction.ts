@@ -1061,6 +1061,23 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [-1, 0, 0]
     ]
 
+    const mobs = {
+      common: [
+      ``
+      ],
+      rare: [
+        `summon wither_skeleton ~ ~ ~ {NoGravity:0b,Silent:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Health:80f,Tags:["maze-rare","maze-mob","maze-ip"],CustomName:'{"text":"8.8.8.8","color":"dark_red","bold":true}',HandItems:[{id:'minecraft:cookie',Count:1b,tag:{Enchantments:[{id:'minecraft:sharpness',lvl:5s},{id:'minecraft:knockback',lvl:1s}]}},{id:'minecraft:cookie',Count:1b,tag:{Enchantments:[{id:'minecraft:sharpness',lvl:5s},{id:'minecraft:knockback',lvl:1s}]}}],ArmorItems:[{},{},{},{id:'minecraft:tinted_glass',Count:1b}],Attributes:[{Name:generic.max_health,Base:80},{Name:generic.follow_range,Base:32},{Name:generic.knockback_resistance,Base:0.8},{Name:generic.movement_speed,Base:0.1},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:10},{Name:generic.armor_toughness,Base:20}]}`,
+
+      ],
+      boss: [
+      ],
+      ip_minion: [
+
+      ]
+    }
+
+    schedule(`execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p`, 20, functions);
+
     addfunc('maze/create', [
       '# Reset maze',
       `execute as @e[tag=maze-node] at @s run forceload remove ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
@@ -1081,6 +1098,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation _x maze = size maze',
       'function generated:story/maze/create/_x'
     ]);
+
     addfunc('maze/create/_x', [
       'scoreboard players operation _y maze = size maze',
       'scoreboard players add bossbar maze 1',
@@ -1092,6 +1110,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute unless score _x maze matches 0 run schedule function generated:story/maze/create/_x 1t',
       'execute if score _x maze matches 0 run function generated:story/maze/create/_generatepaths'
     ]);
+
     addfunc('maze/create/_y', [
       'scoreboard players operation _z maze = size maze',
       '',
@@ -1100,6 +1119,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `tp @s ~ ~${cellsize} 0`,
       'execute unless score _y maze matches 0 as @s at @s run function generated:story/maze/create/_y'
     ]);
+
     addfunc('maze/create/_z', [
       'summon marker ~ ~ ~ {Tags:["maze-marker","maze-node"]}',
       `forceload add ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,

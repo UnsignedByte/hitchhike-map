@@ -163,7 +163,7 @@ npc:
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298'
               - 'scoreboard players set -held story-sawyer 0'
             wait: 120
-          - message: I'll take a look at the card now and let you know what I think is going on.
+          - message: Let's take a quick look at the card... I'll let you know what I think is going on.
             command:
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 275'
               - 'data modify entity ${select.self} HandItems[0] set value {}'
@@ -184,6 +184,12 @@ npc:
             command:
               - 'tp @a -1400.0 11 -150.0'
               - 'schedule function generated:story/maze/create 1t'
+          - message: Oh, sorry. A little confused?
+            global: true
+          - message: I mentioned you would be doing most of the work with fixing it, but don't worry!
+            global: true
+          - message: I'll be helping you out along the way.
+            global: true
           cond: 4
           end: -1
     simon:
