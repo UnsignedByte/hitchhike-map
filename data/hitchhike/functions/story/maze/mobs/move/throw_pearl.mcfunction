@@ -8,9 +8,9 @@ execute store result score _thisZ maze-mob-phase run data get entity @e[type=mar
 
 kill @e[type=marker,tag=maze-mob-pearl-marker]
 
-execute store result entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Motion[0] double 0.0005 run scoreboard players get _pearlX maze-mob-phase
-execute store result entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Motion[1] double 0.0005 run scoreboard players get _pearlY maze-mob-phase
-execute store result entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Motion[2] double 0.0005 run scoreboard players get _pearlZ maze-mob-phase
+execute store result entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Motion[0] double 0.0005 run scoreboard players get _thisX maze-mob-phase
+execute store result entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Motion[1] double 0.0005 run scoreboard players get _thisY maze-mob-phase
+execute store result entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Motion[2] double 0.0005 run scoreboard players get _thisZ maze-mob-phase
 
 data modify entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Owner set from entity @s UUID
 
