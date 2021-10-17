@@ -1,4 +1,6 @@
-execute anchored eyes run summon ender_pearl ^ ^ ^1 {Tags:["maze-mob-pearl-init","maze-mob"]}
+execute anchored eyes run playsound minecraft:entity.ender_pearl.throw neutral @a ~ ~ ~ 1 1
+
+execute anchored eyes run summon ender_pearl ^ ^ ^1 {Tags:["maze-mob-pearl-init","maze-mob"],NoGravity:1}
 
 execute positioned 0.0 0.0 0.0 run summon marker ^ ^ ^1 {Tags:["maze-mob-pearl-marker"]}
 
