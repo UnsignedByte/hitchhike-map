@@ -7,6 +7,9 @@ gamerule doMobLoot false
 gamerule randomTickSpeed 0
 gamerule doWeatherCycle false
 
+# Forceload 0 0 chunks bc useful
+forceload add -1 -1 1 1
+
 #> SAFEWAY STUFF
 function hitchhike:safeway/load
 
