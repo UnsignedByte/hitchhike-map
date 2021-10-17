@@ -1,11 +1,15 @@
 #> moves an armor stand holding the physics item relative to the entity given
 
-execute store result score #CMP UUID1 run data get entity @s data.ItemUUID[0]
-execute store result score #CMP UUID2 run data get entity @s data.ItemUUID[1]
-execute store result score #CMP UUID3 run data get entity @s data.ItemUUID[2]
-execute store result score #CMP UUID4 run data get entity @s data.ItemUUID[3]
+execute store result score #CMP UUID0 run data get entity @s data.ItemUUID[0]
+execute store result score #CMP UUID1 run data get entity @s data.ItemUUID[1]
+execute store result score #CMP UUID2 run data get entity @s data.ItemUUID[2]
+execute store result score #CMP UUID3 run data get entity @s data.ItemUUID[3]
 
-execute as @s run function hitchhike:uuid/match
+function hitchhike:uuid/match
+
+say @s
+
+say @e[tag=match-uuid-select]
 
 execute store result score #R1 thrown-item run data get entity @s Rotation[1] 1000
 scoreboard players remove #R1 thrown-item 10000
