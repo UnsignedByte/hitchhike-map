@@ -1110,6 +1110,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `effect give @p minecraft:levitation 3 3`,
         // `data modify entity @s Motion[1] set value 1d`,
         `playsound minecraft:block.fire.extinguish hostile @a ~ ~ ~ 1 0.5`
+      ],
+      [
+        `function hitchhike:story/maze/mobs/move/throw_pearl`
       ]
     ])
 
