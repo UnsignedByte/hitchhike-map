@@ -1083,7 +1083,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         id: `'minecraft:iron_shovel'`,
         tag: {
           display:{
-            Name:`'{"text":"Digitally Enlarged Spoon","color":"aqua","bold":true}'`,
+            Name: rawJson({
+              text:"Digitally Enlarged Spoon",
+              color:"aqua",
+              bold:true
+            }),
             Lore:`[${rawJson({
                       text:"Soup is a problem of the past!",
                       color:"blue"
