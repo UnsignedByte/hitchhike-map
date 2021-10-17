@@ -1087,16 +1087,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             Lore:`[${rawJson({
                       text:"Soup is a problem of the past!",
                       color:"blue"
-                    })},
-                    ${rawJson({
+                    })}, ${rawJson({
                       text:"Worry not, for this weapon's",
                       color:"blue"
-                    })},
-                    ${rawJson({
+                    })}, ${rawJson({
                       text:"Immense surface area will be",
                       color:"blue"
-                    })},
-                    ${rawJson({
+                    })}, ${rawJson({
                       text:"sure to satisfy.",
                       color:"blue"
                     })}]`
