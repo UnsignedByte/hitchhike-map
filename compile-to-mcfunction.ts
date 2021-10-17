@@ -1076,7 +1076,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ]
     }
 
-    schedule(`execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p`, 20, functions);
+    schedule(`execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p UUID`, 20, functions);
 
     addfunc('maze/create', [
       '# Reset maze',
