@@ -1,6 +1,6 @@
 execute anchored eyes run playsound minecraft:entity.ender_pearl.throw neutral @a ~ ~ ~ 1 1
 
-execute anchored eyes run summon ender_pearl ^ ^ ^1 {Tags:["maze-mob-pearl-init","maze-mob"],NoGravity:1}
+execute anchored eyes run summon ender_pearl ^ ^ ^1 {Tags:["maze-mob-pearl-init","maze-mob"]}
 
 execute positioned 0.0 0.0 0.0 run summon marker ^ ^ ^1 {Tags:["maze-mob-pearl-marker"]}
 
@@ -15,6 +15,5 @@ execute store result entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1]
 execute store result entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Motion[2] double 0.001 run scoreboard players get _thisZ maze-mob-phase
 
 data modify entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] Owner set from entity @s UUID
-data modify entity @e[type=ender_pearl,tag=maze-mob-pearl-init,limit=1] NoGravity set value 0
 
 tag @e[type=ender_pearl] remove maze-mob-pearl-init
