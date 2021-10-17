@@ -1112,7 +1112,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc(`maze/mobs/move/ip/summon_minions`, [
       `function generated:story/maze/mobs/summon/ip_minion`,
-      `execute if predicate hitchhike:ipminionchance positioned ~ ~ ~ run function generated:maze/mobs/move/ip/summon_minions`
+      `execute if predicate hitchhike:ipminionchance positioned ~ ~ ~ run function generated:story/maze/mobs/move/ip/summon_minions`
     ])
 
     schedule(`execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p UUID`, 20, functions);
