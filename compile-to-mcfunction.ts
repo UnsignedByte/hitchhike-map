@@ -1094,6 +1094,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       }
     }
 
+    Object.entries(weapons).forEach(([k, v]) => {
+      weapons[k] = Object.assign({tag:{weapon:`'${k}'`}},v);
+    })
+
     schedule('function generated:story/maze/mobs/move', 10, functions);
 
     functions[`story/maze/mobs/move`] = ``;
@@ -1150,7 +1154,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ])
     })
 
-    Object.entries(weapons).forEach(([k, v]) => addfunc(`maze/weapons/give/${k}`, [`give @s ${toGive(Object.assign({tag:{weapon:`'${k}'`}},v), 1)}`]));
+    Object.entries(weapons).forEach(([k, v]) => addfunc(`maze/weapons/give/${k}`, [`give @s ${toGive(v, 1)}`]));
 
     addfunc('maze/create', [
       '# Reset maze',
