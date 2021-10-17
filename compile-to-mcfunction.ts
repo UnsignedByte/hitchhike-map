@@ -1061,7 +1061,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [-1, 0, 0]
     ]
 
-    const mobs = {
+    const mobs: Record<string, string[]> = {
       common: [
       ``
       ],
@@ -1072,11 +1072,19 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       boss: [
       ],
       ip_minion: [
-
+        `summon bee ~ ~ ~ {Silent:1b,Invulnerable:1b,AngerTime:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:area_effect_cloud",CustomNameVisible:1b,Duration:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:zombie",Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:2f,IsBaby:1b,Tags:["maze-mob"],ArmorItems:[{},{},{},{id:"minecraft:red_stained_glass",Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2},{Name:generic.attack_damage,Base:2}]}],CustomName:'{"text":"Malicious Packet","color":"red"}'}],ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:0}]}`,
       ]
     }
 
     schedule(`execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p UUID`, 20, functions);
+
+    Object.entries(mobs).forEach(([k, v]) => {
+      addfunc(`maze/mobs/${k}`, [
+        `scoreboard players set _rngm vars ${mobs[k].length}`,
+        `function generated:rng/rng`,
+        mobs[k].map((x: any, i: number)=>`execute if score rng vars matches ${i} run ${x}`)
+      ])
+    })
 
     addfunc('maze/create', [
       '# Reset maze',
