@@ -1,8 +1,8 @@
 # Reset schedules
-schedule clear scheduled:scheduled/s-20
-function scheduled:scheduled/s-20
-schedule clear scheduled:scheduled/s-10
-function scheduled:scheduled/s-10
+schedule clear generated:scheduled/s-20
+function generated:scheduled/s-20
+schedule clear generated:scheduled/s-10
+function generated:scheduled/s-10
 # Kill all existing NPCs.
 kill @e[tag=npc]
 

@@ -125,8 +125,8 @@ export async function init (
     lines(
       `# Reset schedules`,
       Array.from(scheduled_rates).map((x)=>([
-        `schedule clear scheduled:scheduled/s-${x}`,
-        `function scheduled:scheduled/s-${x}`
+        `schedule clear generated:scheduled/s-${x}`,
+        `function generated:scheduled/s-${x}`
       ])),
       '# Kill all existing NPCs.',
       'kill @e[tag=npc]',
