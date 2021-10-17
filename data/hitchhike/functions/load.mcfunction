@@ -19,6 +19,8 @@ function hitchhike:story/load
 # car stuff
 function hitchhike:car/load
 
+function hitchhike:thrownitem/load
+
 # global clock
 scoreboard objectives add playtime minecraft.custom:minecraft.play_time
 
