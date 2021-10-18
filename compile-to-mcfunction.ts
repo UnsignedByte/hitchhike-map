@@ -1175,7 +1175,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     });
 
     addfunc('maze/weapons/start', [
-      Object.entries(weapons).map(([k, v])=>`execute if entity @s[type=item,nbt={Item:${toSnbt(v)}}] run function hitchhike:story/maze/weapons/${k}/start`)
+      'execute store result score #CMP UUID0 run data get entity @s Thrower[0]',
+      'execute store result score #CMP UUID1 run data get entity @s Thrower[1]',
+      'execute store result score #CMP UUID2 run data get entity @s Thrower[2]',
+      'execute store result score #CMP UUID3 run data get entity @s Thrower[3]',
+      'tag @a add match-selectable',
+      'function hitchhike:uuid/match',
+      Object.entries(weapons).map(([k, v])=>`execute if entity @s[type=item,nbt={Item:${toSnbt(v)}}] as @a[tag=match-uuid-select] at @s run function hitchhike:story/maze/weapons/${k}/start`)
     ])
 
     addfunc('maze/weapons/tick', [
