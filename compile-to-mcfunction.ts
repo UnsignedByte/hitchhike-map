@@ -1114,6 +1114,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       weapons[k] = Object.assign({tag:{weapon:`'${k}'`}},v);
     })
 
+    addfunc('maze/mobs/weapons/tick', [
+      Object.keys(weapons).map(x=>`execute as @e[tag=maze-weapon-${x}] run function hitchhike:story/maze/weapons/${x}/tick`)
+    ])
+
     schedule('function generated:story/maze/mobs/move', 10, functions);
 
     functions[`story/maze/mobs/move`] = ``;
