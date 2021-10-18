@@ -100,7 +100,51 @@ export async function init (
   // ensureDir expects an absolute path rather than a file:// URL
   await ensureDir(join(basePath, `./data/${namespace}/functions/`))
 
-  schedule(`execute as @e[tag=item_holder] run data modify entity @s Fire set value 32767s`, 20, functions); // keep all armor stands lit
+  schedule([
+    '# update quest books',
+    `title @a[scores={quest-book-upd=-1}] actionbar ${JSON.stringify([
+      {
+        text: "[",
+        color: "light_purple",
+        hoverEvent: {
+          action: "show_item",
+          value: toSnbt(item.quest_book)
+        },
+        extra: [
+          {
+            text: "Quest Book",
+            italic: true
+          },
+          "]"
+        ]
+      },
+      {
+        color: "white",
+        text: " updated. Open it to view changes!"
+      }
+    ])}`,
+    `scoreboard players set @a[scores={quest-book-upd=-1}] quest-book-upd 0`
+  ], 5, functions);
+
+  schedule([
+    "# make names visible only in range",
+    `execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0`,
+    `execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1`,
+    '# update entities with special tags',
+    'execute as @e[type=villager,tag=baby] run data modify entity @s Age set value -30',
+    'effect give @e[tag=invisible] minecraft:invisibility 2 0 true'
+  ], 20, functions);
+
+  schedule([
+    `execute as @e[tag=item_holder] run data modify entity @s Fire set value 32767s`
+  ], 32766, functions); // keep all armor stands lit
+
+  schedule([
+    `# prevent death of thrown quest books`,
+    `execute as @e[type=item,nbt={Item:{id:"minecraft:written_book",tag:{title: "Quest Book"}}},nbt=!{Age:-32768}] run data modify entity @s Age set value -32768`
+  ], 5999, functions);
+
+  schedule('execute as @e[type=area_effect_cloud,tag=aec] run data modify entity @s Duration set value 2147483647', 2147483646, functions);
 
   let CONSTANTS = {
     max: 2147483647,
@@ -214,40 +258,7 @@ export async function init (
       `# Detect right clicks`,
       `execute as @a[scores={npc-interact=1..},tag=!spoken-to] run function generated:npc/detect_interact`,
       `scoreboard players set @a npc-interact 0`,
-      "# make names visible only in range",
-      `execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0`,
-      `execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1`,
       '',
-      '# update entities with special tags',
-      'execute as @e[type=villager,tag=baby] run data modify entity @s Age set value -2',
-      'effect give @e[tag=invisible] minecraft:invisibility 2 0 true',
-      'execute as @e[type=area_effect_cloud,tag=aec] run data modify entity @s Duration set value 2147483647',
-      '',
-      '# update quest books',
-      `title @a[scores={quest-book-upd=-1}] actionbar ${JSON.stringify([
-        {
-          text: "[",
-          color: "light_purple",
-          hoverEvent: {
-            action: "show_item",
-            value: toSnbt(item.quest_book)
-          },
-          extra: [
-            {
-              text: "Quest Book",
-              italic: true
-            },
-            "]"
-          ]
-        },
-        {
-          color: "white",
-          text: " updated. Open it to view changes!"
-        }
-      ])}`,
-      `scoreboard players set @a[scores={quest-book-upd=-1}] quest-book-upd 0`,
-      `# prevent death of thrown quest books`,
-      `execute as @e[type=item,nbt={Item:{id:"minecraft:written_book",tag:{title: "Quest Book"}}},nbt=!{Age:-32768}] run data modify entity @s Age set value -32768`,
       `execute as @a if score - quest-book-upd matches 1 unless score @s quest-book-upd matches -2147483648.. run give @s ${toGive(item.quest_book)}`,
       `execute if score - quest-book-upd matches 1 run scoreboard players add @a quest-book-upd 0`,
       `execute as @a[scores={quest-book-upd=0},nbt={SelectedItem:{id:"minecraft:written_book",tag:{title: "Quest Book"}}}] store result score @s quest-book-upd run item modify entity @s weapon.mainhand generated:update_quest_book`,
