@@ -7,7 +7,7 @@ execute at @s if score @s maze-weapon-age matches ..19 run function hitchhike:st
 
 execute if score @s maze-weapon-age matches 25 run tp @s ~ ~ ~ ~ 90
 execute if score @s maze-weapon-age matches 30 run playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 0.2 0
-execute at @s if score @s maze-weapon-age matches 30.. unless block ~ ~ ~-1 air run scoreboard players set @s maze-weapon-age 60
+execute at @s if score @s maze-weapon-age matches 30.. unless block ~ ~ ~-0.9 air run scoreboard players set @s maze-weapon-age 60
 execute at @s if score @s maze-weapon-age matches 30..59 run function hitchhike:story/maze/weapons/spoon/drop
 
 function hitchhike:thrownitem/calculateoffset
