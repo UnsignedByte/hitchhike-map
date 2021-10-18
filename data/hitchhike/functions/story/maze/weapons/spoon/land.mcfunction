@@ -4,5 +4,5 @@ playsound block.anvil.land player @a ~ ~ ~ 1 0.8
 particle minecraft:crit ~ ~ ~ 1 0.5 1 1 100
 
 kill @e[tag=match-uuid-select]
-execute as @s run function generated:story/maze/weapons/return
+function generated:story/maze/weapons/return
 kill @s
