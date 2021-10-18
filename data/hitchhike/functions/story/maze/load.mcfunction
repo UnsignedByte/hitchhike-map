@@ -9,5 +9,7 @@ scoreboard objectives add maze-path-parent dummy
 scoreboard objectives add maze-path dummy
 scoreboard objectives add maze-mob-phase dummy
 
+scoreboard objectives add maze-weapon-age dummy
+
 bossbar add maze
 bossbar set minecraft:maze visible false

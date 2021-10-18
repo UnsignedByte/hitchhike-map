@@ -4,6 +4,7 @@ summon armor_stand 0 0 0 {NoGravity:1b,Silent:1b,Invulnerable:1b,ShowArms:1b,Inv
 
 data modify entity @s data.ItemUUID set from entity @e[tag=thrown-item-init,limit=1] UUID
 
-execute as @s run function hitchhike:thrownitem/calculateoffset
+function hitchhike:thrownitem/match
+function hitchhike:thrownitem/calculateoffset
 
 tag @e remove thrown-item-init

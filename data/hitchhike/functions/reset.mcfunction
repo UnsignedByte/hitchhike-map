@@ -9,3 +9,5 @@ function hitchhike:story/reset
 function hitchhike:car/reset
 
 function hitchhike:safeway/reset
+
+function hitchhike:thrownitem/reset
