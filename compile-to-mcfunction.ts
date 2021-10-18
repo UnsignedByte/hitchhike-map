@@ -1180,6 +1180,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute store result score #CMP UUID2 run data get entity @s Thrower[2]',
       'execute store result score #CMP UUID3 run data get entity @s Thrower[3]',
       'tag @a add match-selectable',
+      'say @a[tag=match-uuid-select]',
       'function hitchhike:uuid/match',
       Object.entries(weapons).map(([k, v])=>`execute if entity @s[type=item,nbt={Item:${toSnbt(v)}}] as @a[tag=match-uuid-select] at @s run function hitchhike:story/maze/weapons/${k}/start`)
     ])
