@@ -1111,7 +1111,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     }
 
     Object.entries(weapons).forEach(([k, v]) => {
-      weapons[k].tag = Object.assign({weapon:`'${k}'`}, v.tag);
+      weapons[k].tag = Object.assign({weapon:`'${k}'`, isweapon: true}, v.tag);
     })
 
     schedule('function generated:story/maze/mobs/move', 10, functions);
