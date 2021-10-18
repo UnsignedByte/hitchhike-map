@@ -1181,7 +1181,15 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute store result score #CMP UUID3 run data get entity @s Thrower[3]',
       'tag @a add match-selectable',
       'function hitchhike:uuid/match',
-      Object.entries(weapons).map(([k, v])=>`execute if entity @s[type=item,nbt={Item:${toSnbt(v)}}] as @a[tag=match-uuid-select] at @s run function hitchhike:story/maze/weapons/${k}/start`)
+      Object.entries(weapons).map(([k, v])=>{
+        addfunc(`maze/weapons/${k}/start`, [
+          `summon minecraft:marker ~ ~ ~ {Tags:["maze-weapon-init","maze-weapon-${k}"]}`,
+          `data modify entity @e[tag=maze-weapon-init,limit=1] data.PlayerUUID set from entity @s UUID`,
+          `execute as @s at @s run function hitchhike:story/maze/weapons/${k}/start`,
+          `tag @e remove maze-weapon-init`
+        ])
+        return `execute if entity @s[type=item,nbt={Item:${toSnbt(v)}}] as @a[tag=match-uuid-select] at @s run function generated:story/maze/weapons/${k}/start`
+      })
     ])
 
     addfunc('maze/weapons/tick', [
