@@ -1,4 +1,4 @@
-summon creeper ~ ~1 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Fuse:0,ExplosionRadius:1}
+summon creeper ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Fuse:0,ExplosionRadius:1}
 playsound block.anvil.land player @a ~ ~ ~ 1 0.8
 
 particle minecraft:crit ~ ~ ~ 1 0.5 1 1 100
