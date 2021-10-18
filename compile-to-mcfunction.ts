@@ -1078,7 +1078,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     }
 
     // main weapons
-    const weapons: Record<string, any> = {
+    let weapons: Record<string, any> = {
       spoon: {
         id: `'minecraft:iron_shovel'`,
         tag: {
@@ -1112,11 +1112,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     Object.entries(weapons).forEach(([k, v]) => {
       weapons[k] = Object.assign({tag:{weapon:`'${k}'`}},v);
+      console.log(weapons[k]);
     })
-
-    addfunc('maze/weapons/tick', [
-      Object.keys(weapons).map(x=>`execute as @e[tag=maze-weapon-${x}] at @s run function hitchhike:story/maze/weapons/${x}/tick`)
-    ])
 
     schedule('function generated:story/maze/mobs/move', 10, functions);
 
@@ -1174,7 +1171,20 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ])
     })
 
-    Object.entries(weapons).forEach(([k, v]) => addfunc(`maze/weapons/give/${k}`, [`give @s ${toGive(v, 1)}`]));
+    Object.entries(weapons).forEach(([k, v]) => {
+      addfunc(`maze/weapons/${k}/give`, [`give @s ${toGive(v, 1)}`]);
+    });
+
+    addfunc('maze/weapons/start', [
+      Object.entries(weapons).map(([k, v])=>`execute if entity @s[type=item,nbt={Item:${toSnbt(v)}}] run function hitchhike:story/maze/weapons/${k}/start`)
+    ])
+
+    addfunc('maze/weapons/tick', [
+      'execute as @e[type=item,nbt={}]',
+      Object.keys(weapons).map(x=>`execute as @e[tag=maze-weapon-${x}] at @s run function hitchhike:story/maze/weapons/${x}/tick`)
+    ])
+
+
 
     addfunc('maze/create', [
       '# Reset maze',
