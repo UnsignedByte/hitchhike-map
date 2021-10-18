@@ -1,4 +1,2 @@
-summon minecraft:marker ~ ~ ~ {Tags:["maze-weapon-init","maze-weapon-frenchflag"]}
-data modify entity @e[tag=maze-weapon-init,limit=1] data.PlayerUUID set from entity @s UUID
-execute as @s at @s run function hitchhike:story/maze/weapons/frenchflag/start
-tag @e remove maze-weapon-init
+execute as @e[tag=maze-weapon-frenchflag-ticker-init] run data modify entity @s MarkerUUID set from entity @e[tag=maze-weapon-init,limit=1] UUID
+tag @e remove maze-weapon-frenchflag-ticker
