@@ -1179,7 +1179,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/weapons/tick', [
-      'execute as @e[type=item,nbt={}]',
+      'execute as @e[type=item,nbt={Item:{tag:{isweapon:1b}}}] run function generated:story/maze/weapons/start',
+      'kill @e[type=item,nbt={Item:{tag:{isweapon:1b}}}]',
       Object.keys(weapons).map(x=>`execute as @e[tag=maze-weapon-${x}] at @s run function hitchhike:story/maze/weapons/${x}/tick`)
     ])
 
