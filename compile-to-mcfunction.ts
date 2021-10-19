@@ -1238,7 +1238,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `execute as @e[tag=maze-weapon-frenchflag-ticker-init-init] rotated ~${i*5} ~${j*5} run function hitchhike:story/maze/weapons/frenchflag/initticker`
       ]))),
       `execute as @e[tag=maze-weapon-frenchflag-ticker-init] run data modify entity @s MarkerUUID set from entity @e[tag=maze-weapon-init,limit=1] UUID`,
-      `tag @e remove maze-weapon-frenchflag-ticker`
+      `tag @e remove maze-weapon-frenchflag-ticker-init`
     ])
 
     addfunc('maze/create', [

@@ -181,4 +181,4 @@ execute as @e[tag=maze-weapon-frenchflag-ticker-init-init] rotated ~25 ~5 run fu
 summon marker ~ ~ ~ {Tags:["maze-weapon", "maze-weapon-frenchflag-ticker","maze-weapon-frenchflag-ticker-init","maze-weapon-frenchflag-ticker-init-init"]}
 execute as @e[tag=maze-weapon-frenchflag-ticker-init-init] rotated ~25 ~10 run function hitchhike:story/maze/weapons/frenchflag/initticker
 execute as @e[tag=maze-weapon-frenchflag-ticker-init] run data modify entity @s MarkerUUID set from entity @e[tag=maze-weapon-init,limit=1] UUID
-tag @e remove maze-weapon-frenchflag-ticker
+tag @e remove maze-weapon-frenchflag-ticker-init
