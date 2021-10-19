@@ -1177,7 +1177,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addmovesequence("null", [
       [
-        mobs.common[0]
+        `execute unless entity @e[tag=mob-null,distance=0.1..2] run ${mobs.common[0]}`
       ]
     ])
 
