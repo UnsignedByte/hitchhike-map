@@ -1230,7 +1230,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       Object.keys(weapons).map(k=>`execute if entity @s[tag=maze-weapon-${k}] as @a[tag=match-uuid-select] run function generated:story/maze/weapons/${k}/give`)
     ])
 
-    const dims = [5, 3]
+    const dims = [4, 2]
 
     addfunc('maze/weapons/frenchflag/inittickers', [
       [...new Array(dims[0]*2+1)].map((x, i) => i-dims[0]-1).map(i=>([...new Array(dims[1]*2+1)].map((x, j)=> j-dims[1]-1).map(j=>[
