@@ -1175,6 +1175,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ]
     ])
 
+    addmovesequence("null", [
+      [
+        mobs.common[0]
+      ]
+    ])
+
     addmovesequence("gridbug", [
       [
         `setblock ~ ~ ~ cobweb keep`,
