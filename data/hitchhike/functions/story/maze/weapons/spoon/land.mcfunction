@@ -5,4 +5,3 @@ particle minecraft:crit ~ ~ ~ 1 0.5 1 1 100
 
 kill @e[tag=match-uuid-select]
 function generated:story/maze/weapons/return
-kill @s

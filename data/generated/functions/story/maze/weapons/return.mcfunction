@@ -6,3 +6,4 @@ tag @a add match-selectable
 function hitchhike:uuid/match
 execute if entity @s[tag=maze-weapon-spoon] as @a[tag=match-uuid-select] run function generated:story/maze/weapons/spoon/give
 execute if entity @s[tag=maze-weapon-frenchflag] as @a[tag=match-uuid-select] run function generated:story/maze/weapons/frenchflag/give
+kill @s
