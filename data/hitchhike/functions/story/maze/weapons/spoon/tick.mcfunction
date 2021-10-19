@@ -12,6 +12,6 @@ execute at @s if score @s maze-weapon-age matches 30..59 run function hitchhike:
 
 function hitchhike:thrownitem/calculateoffset
 
-execute at @s if score @s maze-weapon-age matches 60 run function hitchhike:story/maze/weapons/spoon/land
+execute at @s if score @s maze-weapon-age matches 140 run function hitchhike:story/maze/weapons/spoon/land
 
 scoreboard players add @s maze-weapon-age 1
