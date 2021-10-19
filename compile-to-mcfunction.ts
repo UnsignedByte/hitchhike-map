@@ -1231,7 +1231,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/weapons/frenchflag/start', [
-      new Array(21).map((x, i) => i-11).map(i=>(new Array(11).map((x, j)=> j-6).map(j=>[
+      [...new Array(21)].map((x, i) => i-11).map(i=>([...new Array(11)].map((x, j)=> j-6).map(j=>[
         `summon marker ~ ~ ~ {Tags:["maze-weapon", "maze-weapon-frenchflag-ticker","maze-weapon-frenchflag-ticker-init","maze-weapon-frenchflag-ticker-init-init"]}`,
         `execute as @e[tag=maze-weapon-frenchflag-ticker-init-init] rotated ~${i} ~${j} run function hitchhike:story/maze/weapons/frenchflag/initticker`
       ]))),
