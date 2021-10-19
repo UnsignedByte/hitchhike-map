@@ -1230,12 +1230,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       Object.keys(weapons).map(k=>`execute if entity @s[tag=maze-weapon-${k}] as @a[tag=match-uuid-select] run function generated:story/maze/weapons/${k}/give`)
     ])
 
-    const dims = [6, 3]
+    const dims = [5, 3]
 
     addfunc('maze/weapons/frenchflag/inittickers', [
       [...new Array(dims[0]*2+1)].map((x, i) => i-dims[0]-1).map(i=>([...new Array(dims[1]*2+1)].map((x, j)=> j-dims[1]-1).map(j=>[
         `summon marker ~ ~ ~ {Tags:["maze-weapon", "maze-weapon-frenchflag-ticker","maze-weapon-frenchflag-ticker-init","maze-weapon-frenchflag-ticker-init-init"]}`,
-        `execute as @e[tag=maze-weapon-frenchflag-ticker-init-init] rotated ~${i*5} ~${j*5} run function hitchhike:story/maze/weapons/frenchflag/initticker`
+        `execute as @e[tag=maze-weapon-frenchflag-ticker-init-init] rotated ~${i*6} ~${j*6} run function hitchhike:story/maze/weapons/frenchflag/initticker`
       ]))),
       `execute as @e[tag=maze-weapon-frenchflag-ticker-init] run data modify entity @s MarkerUUID set from entity @e[tag=maze-weapon-init,limit=1] UUID`,
       `tag @e remove maze-weapon-frenchflag-ticker-init`
