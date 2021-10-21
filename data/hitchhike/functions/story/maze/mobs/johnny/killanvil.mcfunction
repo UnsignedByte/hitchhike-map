@@ -1,5 +1,5 @@
 execute as @s at @s unless block ~ ~ ~ #anvil run function hitchhike:story/maze/mobs/johnny/detectanvil
 
-fill ~ ~ ~ ~ ~ ~ air replace #anvil
+execute at @s run fill ~ ~ ~ ~ ~ ~ air replace #anvil
 
 kill @s
