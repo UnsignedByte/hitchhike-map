@@ -1,4 +1,6 @@
 execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p UUID
+execute as @e[tag=maze-mob,type=bee] run data modify entity @s AngerTime set value 2147483647
+execute as @e[tag=maze-mob,type=bee] run data modify entity @s HasStung set value 0
 # make names visible only in range
 execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
 execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1

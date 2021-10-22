@@ -1081,7 +1081,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `summon bee ~ ~ ~ {Silent:1b,Invulnerable:1b,AngerTime:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:area_effect_cloud",CustomNameVisible:1b,Duration:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:zombie",Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:2f,IsBaby:1b,Tags:["maze-mob"],HandItems:[{id:"minecraft:cookie",Count:1b},{}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2},{Name:generic.attack_damage,Base:1}]}],CustomName:'{"text":"Tracking Cookie","color":"#875822"}'}],ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:0}]}`,
       ],
       stackoverflow: [
-        `summon phantom ~ ~ ~ {DeathLootTable:"minecraft:empty",Health:5f,Size:0,Tags:["maze-mob","maze-mob-stackoverflow"],CustomName:'{"text":"StackOverflow","color":"red"}',Attributes:[{Name:generic.max_health,Base:5},{Name:generic.follow_range,Base:16},{Name:generic.attack_damage,Base:2}]}`
+        `summon bee ~ ~ ~ {Silent:1b,DeathLootTable:"minecraft:empty",Health:5f,AngerTime:2147483647,Tags:["maze-mob","maze-mob-stackoverflow"],CustomName:'{"text":"StackOverflow","color":"red"}',Attributes:[{Name:generic.max_health,Base:5},{Name:generic.follow_range,Base:16},{Name:generic.attack_damage,Base:2}]}`
       ]
     }
 
@@ -1229,7 +1229,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute if predicate hitchhike:ipminionchance positioned ~ ~ ~ run function generated:story/maze/mobs/move/stack/summon_overflows`
     ])
 
-    schedule(`execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p UUID`, 20, functions);
+    schedule([
+      `execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p UUID`,
+      `execute as @e[tag=maze-mob,type=bee] run data modify entity @s AngerTime set value 2147483647`,
+      `execute as @e[tag=maze-mob,type=bee] run data modify entity @s HasStung set value 0`
+    ], 20, functions);
 
     schedule(`execute at @e[tag=maze-pearl] run particle minecraft:firework ~ ~ ~ 0 0 0 1 0`, 5, functions);
 
