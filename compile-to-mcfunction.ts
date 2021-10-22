@@ -1303,8 +1303,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/weapons/detecthit', [
       'execute as @s at @s run function hitchhike:hitdetect/detect',
-      'say @s',
-      Object.entries(weapons).map(([k, v])=>`execute if entity @s[nbt={SelectedItem:${toSnbt(v)}}] as @e[tag=hitdetect-hit] at @s run function hitchhike:story/maze/weapons/${k}/onhit`)
+      Object.entries(weapons).map(([k, v])=>`execute if entity @s[nbt={SelectedItem:${toSnbt(v)}}] as @e[tag=hitdetect-hit] at @s run function hitchhike:story/maze/weapons/${k}/onihit`)
     ])
 
     addfunc('maze/weapons/return', [
