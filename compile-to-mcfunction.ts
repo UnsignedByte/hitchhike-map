@@ -1063,7 +1063,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     const mobs: Record<string, string[]> = {
       common: [
-        `summon zombie ~ ~ ~ {NoGravity:0b,Silent:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Health:10f,IsBaby:1b,Tags:["maze-common","maze-mob","maze-mob-null"],CustomName:'{"text":"nullptr","color":"red","bold":true}',ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],Attributes:[{Name:generic.max_health,Base:10},{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.25},{Name:generic.attack_damage,Base:4}]}`,
+        `summon zombie ~ ~ ~ {NoGravity:0b,Silent:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Health:5f,IsBaby:1b,Tags:["maze-common","maze-mob","maze-mob-null"],CustomName:'{"text":"nullptr","color":"red","bold":true}',ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],Attributes:[{Name:generic.max_health,Base:5},{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.25},{Name:generic.attack_damage,Base:4}]}`,
         `summon cave_spider ~ ~ ~ {DeathLootTable:"minecraft:empty",FallFlying:1b,PersistenceRequired:0b,Health:15f,Tags:["maze-common","maze-mob","maze-mob-gridbug"],CustomName:'{"text":"gridbug","color":"red","bold":true}',Attributes:[{Name:generic.max_health,Base:15},{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:3}]}`,
         `summon bee ~ ~ ~ {Silent:1b,Invulnerable:1b,AngerTime:2147483647,Tags:["maze-mob","maze-host","maze-mob-walrus"],Passengers:[{id:"minecraft:area_effect_cloud",CustomNameVisible:1b,Duration:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:zombie",Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:2f,IsBaby:1b,Tags:["maze-mob"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1585053926,-215070752,-1100916127,789778227],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdiYWVkYWY5YWQ5NTQ3NGViMWJlNTg5MjQ0NDVkZmM3N2JiZGMyNTJjYzFjODE2NDRjZjcxNTRjNDQxIn19fQ=="}]}}}}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2},{Name:generic.attack_damage,Base:1}]}],CustomName:'{"text":"Walrus Operator","color":"red"}'}],ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:0}]}`,
         `summon skeleton ~ ~ ~ {Health:15f,Tags:["maze-mob","maze-symlink"],CustomName:'{"text":"SymLink","color":"red"}',HandItems:[{id:"minecraft:bow",Count:1b},{}],Attributes:[{Name:generic.movement_speed,Base:0.2}]}`,
@@ -1148,7 +1148,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     schedule([
       `scoreboard players set mobcount maze 0`,
       `execute as @e[tag=maze-mob,type=!player] run scoreboard players add mobcount maze 1`,
-      'execute if score enabled maze matches 1 if score mobcount maze matches ..100 if predicate hitchhike:batchchance at @r as @e[tag=maze-node,distance=4..16,sort=random,limit=1] at @s run function hitchhike:story/maze/mobs/summonbatch'
+      'execute if score enabled maze matches 1 if score mobcount maze matches ..50 if predicate hitchhike:batchchance at @r as @e[tag=maze-node,distance=4..16,sort=random,limit=1] at @s run function hitchhike:story/maze/mobs/summonbatch'
     ], 20, functions)
 
     functions[`story/maze/mobs/move`] = ``;
@@ -1213,7 +1213,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addmovesequence("null", [
       [
-        `execute if predicate generated:coinflip unless entity @e[tag=maze-mob-null,distance=0.1..2] run ${mobs.common[0]}`
+        `execute if predicate generated:coinflip unless entity @e[tag=maze-mob-null,distance=0.1..5] run ${mobs.common[0]}`
       ]
     ])
 
@@ -1389,8 +1389,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/_generatecleanup', [
       'bossbar set minecraft:maze name [{"text":"Finalizing Data"}]',
       'bossbar set minecraft:maze color red',
-      'scoreboard players operation bossbar maze = size maze',
-      'execute store result bossbar minecraft:maze max run scoreboard players get bossbar maze',
+      'scoreboard players operation _removeleft maze = size maze',
+      'scoreboard players operation _removeleft maze *= 8 const',
+      'scoreboard players operation batchsize maze = size maze',
+      'execute store result bossbar minecraft:maze max run scoreboard players get _removeleft maze',
       'bossbar set minecraft:maze players @a',
       'bossbar set minecraft:maze visible true',
       'bossbar set minecraft:maze style progress',
@@ -1398,9 +1400,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players set bossbar maze 0',
       '#> Clean up maze generation and finalize maze',
       '# Remove random walls from the maze to make it imperfect',
-      'scoreboard players operation _removeleft maze = size maze',
-      'scoreboard players operation _removeleft maze *= 8 const',
-      'scoreboard players operation batchsize maze = size maze',
       'function generated:story/maze/create/removerandomwalls',
     ])
 
