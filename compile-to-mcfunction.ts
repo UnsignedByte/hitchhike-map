@@ -1174,9 +1174,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `scoreboard players operation #rotX vars /= 3 const`,
         `scoreboard players operation #rotY vars /= 2 const`,
         `scoreboard players operation #rotZ vars /= 3 const`,
-        `execute at @s positioned ~ ~1 ~ run function hitchhike:story/maze/mobs/johnny/anvil`,
-        `say hi`
-      ]
+        `execute at @s positioned ~ ~2 ~ run function hitchhike:story/maze/mobs/johnny/anvil`,
+      ],
+      [
+        `execute at @e[tag=maze-mob,distance=..10] positioned ~ ~2 ~ run function hitchhike:story/maze/mobs/johnny/anvil`,
+      ],
     ])
 
     addmovesequence("ip", [
@@ -1376,7 +1378,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'function generated:story/maze/create/removerandomwalls',
       'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
       'tag @e[type=marker,tag=maze-node] remove maze-visited',
-      'bossbar set minecraft:maze visible false'
+      'bossbar set minecraft:maze visible false',
+      `scoreboard players set enabled maze 1`
     ])
 
     addfunc('maze/create/_propogatebatch', [
