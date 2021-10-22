@@ -11,9 +11,5 @@ scoreboard players set bossbar maze 0
 # Remove random walls from the maze to make it imperfect
 scoreboard players operation _removeleft maze = size maze
 scoreboard players operation batchsize maze = size maze
-scoreboard players operation batchsize maze *= size maze
+scoreboard players operation batchsize maze *= 8 const
 function generated:story/maze/create/removerandomwalls
-execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos
-tag @e[type=marker,tag=maze-node] remove maze-visited
-bossbar set minecraft:maze visible false
-scoreboard players set enabled maze 1

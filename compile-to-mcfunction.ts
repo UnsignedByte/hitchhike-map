@@ -1400,8 +1400,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '# Remove random walls from the maze to make it imperfect',
       'scoreboard players operation _removeleft maze = size maze',
       'scoreboard players operation batchsize maze = size maze',
-      'scoreboard players operation batchsize maze *= size maze',
+      'scoreboard players operation batchsize maze *= 8 const',
       'function generated:story/maze/create/removerandomwalls',
+    ])
+
+    addfunc('maze/create/_cleanupall', [
       'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
       'tag @e[type=marker,tag=maze-node] remove maze-visited',
       'bossbar set minecraft:maze visible false',
@@ -1446,7 +1449,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `scoreboard players operation _batchleft maze = batchsize maze`,
       'scoreboard players remove _removeleft 1',
       'function generated:story/maze/create/_removerandomwalls',
-      'execute unless score _removeleft maze matches 0 run schedule function generated:story/maze/create/removerandomwalls 1t'
+      'execute unless score _removeleft maze matches 0 run schedule function generated:story/maze/create/removerandomwalls 1t',
+      `execute if score _removeleft maze matches 0 run function generated:story/maze/create/_cleanupall`
     ])
 
     addfunc('maze/create/_removerandomwalls', [

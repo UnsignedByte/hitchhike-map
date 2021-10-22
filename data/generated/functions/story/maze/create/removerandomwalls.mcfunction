@@ -5,3 +5,4 @@ scoreboard players operation _batchleft maze = batchsize maze
 scoreboard players remove _removeleft 1
 function generated:story/maze/create/_removerandomwalls
 execute unless score _removeleft maze matches 0 run schedule function generated:story/maze/create/removerandomwalls 1t
+execute if score _removeleft maze matches 0 run function generated:story/maze/create/_cleanupall
