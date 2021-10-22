@@ -1152,7 +1152,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ], 20, functions)
 
     schedule([
-      `execute at @a run tag @e[tag=maze-mob,type=!player,distance=..24] add maze-mob-safe`,
+      `execute at @a run tag @e[tag=maze-mob,type=!player,distance=..24,sort=nearest,limit=30] add maze-mob-safe`,
       `tp @e[tag=maze-mob,tag=!maze-mob-safe,type=!player] 0 -1000 0`,
       `tag @e remove maze-mob-safe`
     ], 100, functions)
