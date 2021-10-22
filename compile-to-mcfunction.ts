@@ -1145,7 +1145,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     })
 
     schedule('function generated:story/maze/mobs/move', 10, functions);
-    schedule('execute if score enabled maze matches 1 if predicate hitchhike:batchchance at @r as @e[tag=maze-node,distance=4..16,sort=random,limit=1] at @s run function hitchhike:story/maze/mobs/summonbatch', 20, functions)
+    schedule([
+      `scoreboard players set mobcount maze 0`,
+      `execute as @e[tag=maze-mob,type=!player] run scoreboard players add mobcount maze 1`,
+      'execute if score enabled maze matches 1 if score mobcount maze matches ..100 if predicate hitchhike:batchchance at @r as @e[tag=maze-node,distance=4..16,sort=random,limit=1] at @s run function hitchhike:story/maze/mobs/summonbatch'
+    ], 20, functions)
 
     functions[`story/maze/mobs/move`] = ``;
 
@@ -1295,6 +1299,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '# Reset maze',
       `execute as @e[tag=maze-node] at @s run forceload remove ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
       'kill @e[tag=maze-marker]',
+      `function hitchhike:story/maze/reset`,
       '# Set Size of maze',
       'scoreboard players set size maze 15',
       '# Set up bossbar',
@@ -1387,6 +1392,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '#> Clean up maze generation and finalize maze',
       '# Remove random walls from the maze to make it imperfect',
       'scoreboard players operation _removeleft maze = size maze',
+      'scoreboard players operation _removeleft maze *= size maze',
       'scoreboard players operation _removeleft maze *= size maze',
       'function generated:story/maze/create/removerandomwalls',
       'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
