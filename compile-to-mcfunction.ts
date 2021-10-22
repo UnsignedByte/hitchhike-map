@@ -1148,7 +1148,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const addmovesequence = (id: string, moves: Lines[][]) => {
       functions[`story/maze/mobs/move`] = [
         functions[`story/maze/mobs/move`],
-        `execute as @e[tag=maze-mob,tag=maze-mob-${id}] at @s if predicate hitchhike:movechance if entity @p[distance=..16] run function generated:story/maze/mobs/move/${id}/main`
+        `execute as @e[tag=maze-mob,tag=maze-mob-${id}] at @s if entity @p[distance=..16] if predicate hitchhike:movechance run function generated:story/maze/mobs/move/${id}/main`
       ]
       addfunc(`maze/mobs/move/${id}/main`, [
         `scoreboard players operation @s maze-mob-phase %= ${moves.length} const`,
