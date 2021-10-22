@@ -12,7 +12,7 @@ scoreboard players operation #tmpx2 maze-weapon-age -= #tmpx maze-weapon-age
 scoreboard players operation #tmpy2 maze-weapon-age -= #tmpy maze-weapon-age
 scoreboard players operation #tmpz2 maze-weapon-age -= #tmpz maze-weapon-age
 
-execute as @e[tag=maze-mob,dx=0,dy=0,dz=0] run function hitchhike:story/maze/weapons/frenchflag/throwmobs
+execute as @e[tag=maze-mob,dx=0,dy=0,dz=0,type=!player] run function hitchhike:story/maze/weapons/frenchflag/throwmobs
 
 scoreboard players operation #tmp maze-weapon-age = @s maze-weapon-age
 scoreboard players operation #tmp maze-weapon-age %= 5 const
