@@ -1389,11 +1389,18 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/_generatecleanup', [
       'bossbar set minecraft:maze name [{"text":"Finalizing Data"}]',
       'bossbar set minecraft:maze color red',
+      'scoreboard players operation bossbar maze = size maze',
+      'execute store result bossbar minecraft:maze max run scoreboard players get bossbar maze',
+      'bossbar set minecraft:maze players @a',
+      'bossbar set minecraft:maze visible true',
+      'bossbar set minecraft:maze style progress',
+      'bossbar set minecraft:maze value 0',
+      'scoreboard players set bossbar maze 0',
       '#> Clean up maze generation and finalize maze',
       '# Remove random walls from the maze to make it imperfect',
       'scoreboard players operation _removeleft maze = size maze',
-      'scoreboard players operation _removeleft maze *= size maze',
-      'scoreboard players operation _removeleft maze *= size maze',
+      'scoreboard players operation batchsize maze == size maze',
+      'scoreboard players operation batchsize maze *= size maze',
       'function generated:story/maze/create/removerandomwalls',
       'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
       'tag @e[type=marker,tag=maze-node] remove maze-visited',
@@ -1434,9 +1441,19 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/create/removerandomwalls', [
       '#> Remove n random walls from the maze',
+      'scoreboard players add bossbar maze 1',
+      'execute store result bossbar minecraft:maze value run scoreboard players get bossbar maze',
+      `scoreboard players operation _batchleft maze = batchsize maze`,
+      'scoreboard players remove _removeleft 1',
+      'function generated:story/maze/create/_removerandomwalls',
+      'execute unless score _removeleft maze matches 0 run schedule function generated:story/maze/create/removerandomwalls 1t'
+    ])
+
+    addfunc('maze/create/_removerandomwalls', [
+      '#> Remove n random walls from the maze',
       'execute as @e[type=marker,tag=maze-node,sort=random,limit=1] at @s run function generated:story/maze/create/_removerandomwall',
-      'scoreboard players remove _removeleft maze 1',
-      'execute unless score _removeleft maze matches 0 run function generated:story/maze/create/removerandomwalls'
+      'scoreboard players remove _batchleft maze 1',
+      'execute unless score _batchleft maze matches 0 run function generated:story/maze/create/_removerandomwalls'
     ])
 
     addfunc('maze/create/_deletewall', [
