@@ -1,2 +1,1 @@
 summon shulker_bullet ~ ~ ~ {Steps:10,Tags:["maze-mob","maze-shulker-bullet","maze-shulker-bullet-init"],CustomName:'{"text":"@e[sort=random,limit=1]","color":"aqua","bold":true}'}
-execute as @e[tag=maze-shulker-bullet-init] run function hitchhike:story/maze/weapons/commandblock/initbullet
