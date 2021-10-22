@@ -1,1 +1,1 @@
-execute anchored eyes positioned ^ ^ ^1 run function hitchhike:story/maze/weapons/commandblock/summonbullets
+execute anchored eyes positioned ^ ^ ^5 run function hitchhike:story/maze/weapons/commandblock/summonbullets
