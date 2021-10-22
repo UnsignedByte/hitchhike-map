@@ -1177,7 +1177,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `execute at @s positioned ~ ~2 ~ run function hitchhike:story/maze/mobs/johnny/anvil`,
       ],
       [
-        `execute at @e[tag=maze-mob,distance=..10] positioned ~ ~2 ~ run function hitchhike:story/maze/mobs/johnny/anvil`,
+        `scoreboard players set #rotX vars 0`,
+        `scoreboard players set #rotY vars 0`,
+        `scoreboard players set #rotZ vars 0`,
+        `execute at @e[tag=maze-mob,distance=..6] positioned ~ ~2 ~ run function hitchhike:story/maze/mobs/johnny/anvil`,
       ],
     ])
 
