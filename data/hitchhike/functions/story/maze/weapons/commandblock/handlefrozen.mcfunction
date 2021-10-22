@@ -1,4 +1,4 @@
-execute if predicate hitchhike:spreadfreeze as @e[tag=maze-mob,type=!player,tag=!maze-mob-frozen,distance=..3,sort=random,limit=1] run function hitchhike:story/maze/weapons/commandblock/onhit
+execute if predicate hitchhike:spreadfreeze as @e[tag=maze-mob,type=!player,tag=!maze-mob-frozen,distance=..5] run function hitchhike:story/maze/weapons/commandblock/onhit
 
 scoreboard players remove @s maze-weapon-age 1
 
