@@ -1,0 +1,1 @@
+scoreboard objectives add hit-detect minecraft.custom:minecraft.damage_dealt

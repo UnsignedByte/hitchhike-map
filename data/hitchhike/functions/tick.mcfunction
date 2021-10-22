@@ -1,3 +1,5 @@
+function hitchhike:hitdetect/tick
+
 # run safeway functions
 function hitchhike:safeway/tick
 

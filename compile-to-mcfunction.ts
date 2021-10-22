@@ -1137,6 +1137,28 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           Enchantments:`[{id:"minecraft:knockback",lvl:10s}]`,
           AttributeModifiers:`[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.2,Operation:2,UUID:[I;1383535789,-2064168012,-1710632262,864343479],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1000,Operation:2,UUID:[I;1404153545,785992977,-1535149632,1770570515],Slot:"mainhand"}]`
         }
+      },
+      commandblock: {
+        id: `'minecraft:command_block'`,
+        tag: {
+          display:{
+            Name: rawJson({
+              text:"Command Block",
+              color:"aqua",
+              bold:true
+            }),
+            Lore:`[${rawJson({
+                      text:"Now if only you were",
+                      color:"blue"
+                    })}, ${rawJson({
+                      text:"in creative mode...",
+                      color:"blue"
+                    })}]`
+          },
+          HideFlags:7,
+          Enchantments:`[{}]`,
+          AttributeModifiers:`[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1000,Operation:2,UUID:[I;-236452543,409881411,-1774864685,1481938920],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:1,Operation:1,UUID:[I;-1658005475,239224106,-1186363263,-590591408],Slot:"mainhand"},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,Operation:0,UUID:[I;1355955642,-1776204605,-1097579002,-1040650905],Slot:"mainhand"}]`
+        }
       }
     }
 
@@ -1152,8 +1174,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ], 20, functions)
 
     schedule([
-      `execute at @a run tag @e[tag=maze-mob,type=!player,distance=..24,sort=nearest,limit=30] add maze-mob-safe`,
-      `tp @e[tag=maze-mob,tag=!maze-mob-safe,type=!player] 0 -1000 0`,
+      `execute at @a run tag @e[tag=maze-mob,tag=!maze-host,type=!player,distance=..24,sort=nearest,limit=40] add maze-mob-safe`,
+      `tp @e[tag=maze-mob,tag=!maze-mob-safe,type=!player,tag=!maze-host] 0 -1000 0`,
       `tag @e remove maze-mob-safe`
     ], 100, functions)
 
@@ -1277,6 +1299,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute as @e[type=item,nbt={Item:{tag:{isweapon:1b}}}] run function generated:story/maze/weapons/start',
       'kill @e[type=item,nbt={Item:{tag:{isweapon:1b}}}]',
       Object.keys(weapons).map(x=>`execute as @e[tag=maze-weapon-${x}] at @s run function hitchhike:story/maze/weapons/${x}/tick`)
+    ])
+
+    addfunc('maze/weapons/detecthit', [
+      'execute as @s at @s run function hitchhike:hitdetect/detect',
+      Object.entries(weapons).map(([k, v])=>`execute if entity @s[nbt={SelectedItem:${toSnbt(v)}}] as @s at @s run function hitchhike:story/maze/weapons/${k}/onhit`)
     ])
 
     addfunc('maze/weapons/return', [
