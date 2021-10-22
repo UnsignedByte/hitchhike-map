@@ -1,5 +1,4 @@
 execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p UUID
-execute as @e[tag=maze-shulker-bullet,nbt=!{Target:[1,1,1,1]}] at @s run data modify entity @s Target set from entity @e[tag=maze-mob,distance=..10,sort=nearest,limit=1] UUID
 execute as @e[tag=maze-mob,type=bee] run data modify entity @s AngerTime set value 2147483647
 execute as @e[tag=maze-mob,type=bee] run data modify entity @s HasStung set value 0
 scoreboard players set mobcount maze 0
