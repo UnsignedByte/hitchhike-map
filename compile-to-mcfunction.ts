@@ -1070,8 +1070,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `summon zombie ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:guardian",Health:30f,CustomName:'{"text":".DS_Store","color":"red"}'}],CustomName:'{"text":"SymLink","color":"red"}',ArmorItems:[{id:"minecraft:netherite_boots",Count:1b,tag:{Enchantments:[{}]}},{},{},{}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647}],Attributes:[{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.5}]}`
       ],
       rare: [
-        `summon wither_skeleton ~ ~ ~ {NoGravity:0b,Silent:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Health:60f,Tags:["maze-rare","maze-mob","maze-mob-ip"],CustomName:'{"text":"8.8.8.8","color":"dark_red","bold":true}',HandItems:[{id:'minecraft:cookie',Count:1b,tag:{Enchantments:[{id:'minecraft:sharpness',lvl:5s},{id:'minecraft:knockback',lvl:1s}]}},{id:'minecraft:cookie',Count:1b,tag:{Enchantments:[{id:'minecraft:sharpness',lvl:5s},{id:'minecraft:knockback',lvl:1s}]}}],ArmorItems:[{},{},{},{id:'minecraft:tinted_glass',Count:1b}],Attributes:[{Name:generic.max_health,Base:60},{Name:generic.follow_range,Base:32},{Name:generic.knockback_resistance,Base:0.8},{Name:generic.movement_speed,Base:0.15},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:10},{Name:generic.armor_toughness,Base:20}]}`,
-        `summon vindicator ~ ~ ~ {LeftHanded:1b,Health:80f,Tags:["maze-mob-johnny","maze-mob","maze-rare"],CustomName:'{"text":"Johnny\\'); DROP ANVIL Entities;--","color":"dark_red","bold":true}',HandItems:[{id:"minecraft:anvil",Count:1b,tag:{Enchantments:[{}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:iron_trapdoor",Count:1b}],Attributes:[{Name:generic.max_health,Base:80},{Name:generic.follow_range,Base:20},{Name:generic.knockback_resistance,Base:0.8},{Name:generic.movement_speed,Base:0.1},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:10},{Name:generic.armor_toughness,Base:5},{Name:generic.attack_knockback,Base:1}]}`
+        `summon wither_skeleton ~ ~ ~ {Silent:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Health:60f,Tags:["maze-rare","maze-mob","maze-mob-ip"],CustomName:'{"text":"8.8.8.8","color":"dark_red","bold":true}',HandItems:[{id:'minecraft:cookie',Count:1b,tag:{Enchantments:[{id:'minecraft:sharpness',lvl:5s},{id:'minecraft:knockback',lvl:1s}]}},{id:'minecraft:cookie',Count:1b,tag:{Enchantments:[{id:'minecraft:sharpness',lvl:5s},{id:'minecraft:knockback',lvl:1s}]}}],ArmorItems:[{},{},{},{id:'minecraft:tinted_glass',Count:1b}],Attributes:[{Name:generic.max_health,Base:60},{Name:generic.follow_range,Base:32},{Name:generic.knockback_resistance,Base:0.8},{Name:generic.movement_speed,Base:0.15},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:10},{Name:generic.armor_toughness,Base:20}]}`,
+        `summon vindicator ~ ~ ~ {Silent:1b,LeftHanded:1b,Health:80f,DeathLootTable:"minecraft:empty",Tags:["maze-mob-johnny","maze-mob","maze-rare"],CustomName:'{"text":"Johnny\\'); DROP ANVIL Entities;--","color":"dark_red","bold":true}',HandItems:[{id:"minecraft:anvil",Count:1b,tag:{Enchantments:[{}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:iron_trapdoor",Count:1b}],Attributes:[{Name:generic.max_health,Base:80},{Name:generic.follow_range,Base:20},{Name:generic.knockback_resistance,Base:0.8},{Name:generic.movement_speed,Base:0.1},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:10},{Name:generic.armor_toughness,Base:5},{Name:generic.attack_knockback,Base:1}]}`
       ],
       boss: [
       ],
@@ -1170,17 +1170,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addmovesequence("johnny", [
       [
-        `execute as @s run function hitchhike:storerot`,
-        `scoreboard players operation #rotX vars /= 3 const`,
-        `scoreboard players operation #rotY vars /= 2 const`,
-        `scoreboard players operation #rotZ vars /= 3 const`,
-        `execute at @s positioned ~ ~2 ~ run function hitchhike:story/maze/mobs/johnny/anvil`,
+        `execute at @s positioned ^ ^ ^3 positioned ~ ~2 ~ run function hitchhike:story/maze/mobs/johnny/anvil`,
+        `playsound minecraft:entity.vindicator.celebrate hostile @a ~ ~ ~`
       ],
       [
-        `scoreboard players set #rotX vars 0`,
-        `scoreboard players set #rotY vars 0`,
-        `scoreboard players set #rotZ vars 0`,
-        `execute at @e[tag=maze-mob,distance=0.01..6,sort=random,limit=5] positioned ~ ~3 ~ run function hitchhike:story/maze/mobs/johnny/anvil`,
+        `execute at @e[tag=maze-mob,distance=0.01..10,sort=random,limit=7] positioned ~ ~3 ~ run function hitchhike:story/maze/mobs/johnny/anvil`,
+        `playsound minecraft:entity.vindicator.celebrate hostile @a ~ ~ ~`
       ],
     ])
 
