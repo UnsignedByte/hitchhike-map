@@ -1145,7 +1145,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     })
 
     schedule('function generated:story/maze/mobs/move', 10, functions);
-    schedule('execute if score enabled maze matches 1 if predicate hitchhike:batchchance as @r at @s run at @e[tag=maze-node,distance=4..16,sort=random,limit=1] function hitchhike:story/maze/mobs/summonbatch', 20, functions)
+    schedule('execute if score enabled maze matches 1 if predicate hitchhike:batchchance at @r as @e[tag=maze-node,distance=4..16,sort=random,limit=1] at @s run function hitchhike:story/maze/mobs/summonbatch', 20, functions)
 
     functions[`story/maze/mobs/move`] = ``;
 
