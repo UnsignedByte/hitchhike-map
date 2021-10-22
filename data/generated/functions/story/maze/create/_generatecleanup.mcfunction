@@ -10,6 +10,6 @@ scoreboard players set bossbar maze 0
 #> Clean up maze generation and finalize maze
 # Remove random walls from the maze to make it imperfect
 scoreboard players operation _removeleft maze = size maze
+scoreboard players operation _removeleft maze *= 8 const
 scoreboard players operation batchsize maze = size maze
-scoreboard players operation batchsize maze *= 8 const
 function generated:story/maze/create/removerandomwalls
