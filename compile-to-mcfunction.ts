@@ -1151,6 +1151,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute if score enabled maze matches 1 if score mobcount maze matches ..50 if predicate hitchhike:batchchance at @r as @e[tag=maze-node,distance=4..16,sort=random,limit=1] at @s run function hitchhike:story/maze/mobs/summonbatch'
     ], 20, functions)
 
+    schedule([
+      `execute at @a run tag @e[tag=maze-mob,type=!player,distance=..24] add maze-mob-safe`,
+      `tp @e[tag=maze-mob,tag=!maze-mob-safe,type=!player] 0 -1000 0`,
+      `tag @e remove maze-mob-safe`
+    ], 100, functions)
+
     functions[`story/maze/mobs/move`] = ``;
 
     // add mob attack phases
