@@ -1185,7 +1185,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addmovesequence("stack", [
       [
-        `execute if entity @s[nbt=!{Passengers:[{}]}] at @s run function generated:story/maze/mobs/move/stack/summon_overflows`
+        `execute if entity @s[nbt=!{Passengers:[{}]}] at @s run function generated:story/maze/mobs/summon/stackoverflow`
       ]
     ])
 
@@ -1222,11 +1222,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc(`maze/mobs/move/ip/summon_minions`, [
       `function generated:story/maze/mobs/summon/ip_minion`,
       `execute if predicate hitchhike:ipminionchance positioned ~ ~ ~ run function generated:story/maze/mobs/move/ip/summon_minions`
-    ])
-
-    addfunc(`maze/mobs/move/stack/summon_overflows`, [
-      `function generated:story/maze/mobs/summon/stackoverflow`,
-      `execute if predicate hitchhike:ipminionchance positioned ~ ~ ~ run function generated:story/maze/mobs/move/stack/summon_overflows`
     ])
 
     schedule([
