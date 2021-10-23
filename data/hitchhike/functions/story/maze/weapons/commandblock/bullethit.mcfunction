@@ -1,7 +1,7 @@
 tag @e[sort=nearest,distance=..2,limit=1,nbt={ActiveEffects:[{Id:25b}]}] add maze-shulker-hit
 
 execute as @e[tag=maze-shulker-hit] at @s run function hitchhike:story/maze/weapons/commandblock/onhit
-execute as @e[tag=maze-shulker-hit] at @s positioned ^ ^1 ^ run function hitchhike:story/maze/weapons/commandblock/summonbullet
+execute if predicate hitchhike:continuebullets as @e[tag=maze-shulker-hit] at @s positioned ^ ^1 ^ run function hitchhike:story/maze/weapons/commandblock/summonbullet
 
 tag @e remove maze-shulker-hit
 
