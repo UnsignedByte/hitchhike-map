@@ -1,10 +1,8 @@
-# function hitchhike:hitdetect/tick
+function hitchhike:hitdetect/tick
 
-# # run safeway functions
-# function hitchhike:safeway/tick
+# run safeway functions
+function hitchhike:safeway/tick
 
-# function hitchhike:car/tick
+function hitchhike:car/tick
 
-# function hitchhike:story/tick
-
-kill @e[tag=maze-shulker-bullet]
+function hitchhike:story/tick
