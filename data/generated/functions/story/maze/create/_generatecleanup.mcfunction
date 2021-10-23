@@ -1,8 +1,8 @@
 bossbar set minecraft:maze name [{"text":"Finalizing Allocation"}]
 bossbar set minecraft:maze color green
 scoreboard players operation _removeleft maze = size maze
-scoreboard players operation _removeleft maze *= 8 const
 scoreboard players operation batchsize maze = size maze
+scoreboard players operation batchsize maze *= 8 const
 execute store result bossbar minecraft:maze max run scoreboard players get _removeleft maze
 bossbar set minecraft:maze players @a
 bossbar set minecraft:maze visible true

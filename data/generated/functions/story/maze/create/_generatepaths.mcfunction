@@ -10,7 +10,6 @@ tag @e[type=marker,tag=maze-node,tag=maze-neighbor] add maze-adjacent
 bossbar set minecraft:maze name [{"text":"Preparing New Memory"}]
 bossbar set minecraft:maze color green
 scoreboard players operation bossbar maze = size maze
-scoreboard players operation bossbar maze *= size maze
 execute store result bossbar minecraft:maze max run scoreboard players get bossbar maze
 bossbar set minecraft:maze players @a
 bossbar set minecraft:maze visible true
@@ -22,5 +21,6 @@ scoreboard players set bossbar maze 0
 #> Propogate in batches
 # size^2
 scoreboard players operation batchsize maze = size maze
+scoreboard players operation batchsize maze *= size maze
 function generated:story/maze/create/_propogatebatch
 function generated:story/maze/create/_propogate
