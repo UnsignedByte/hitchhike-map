@@ -1640,6 +1640,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const mazecols = 24;
     const mazeorigin = [-1000, 10, 0];
 
+    const primes = [2, 3, 5, 7, 11, 13];
+
     const rotations = [
       "NONE",
       "CLOCKWISE_90",
@@ -1660,15 +1662,16 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `summon marker ${mazeorigin[0]+15*x} ${mazeorigin[1]} ${mazeorigin[2]+15*z} {Tags:["maze-tile","maze-tile-init"]}`
         ])
       )),
-      `execute as @e[tag=maze-tile-init] at @s run function generated:story/maze/create/wave/rotate`
+      `execute as @e[tag=maze-tile-init] at @s run function generated:story/maze/create/wave/rotate`,
+      `execute as @e[tag=maze-tile] at @s run function generated:story/maze/create/wave/initconnections`
     ])
 
     addfunc('maze/create/wave/rotate', [
       `tag @s remove maze-tile-init`,
-      `setblock ~ ~-6 ~ air`,
-      `setblock ~ ~-6 ~ minecraft:structure_block[mode=save]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"NONE",mode:"SAVE",name:"hitchhike:maze/tmptile",posX:-5,posY:1,posZ:-5,powered:0b,rotation:"NONE",seed:0L,showair:0b,showboundingbox:1b,sizeX:11,sizeY:11,sizeZ:11}`,
-      `setblock ~ ~-7 ~ redstone_block`,
-      `setblock ~ ~-7 ~ air`,
+      `setblock ~ ~${-(cellsize+1)/2-1} ~ air`,
+      `setblock ~ ~${-(cellsize+1)/2-1} ~ minecraft:structure_block[mode=save]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"NONE",mode:"SAVE",name:"hitchhike:maze/tmptile",posX:-5,posY:1,posZ:-5,powered:0b,rotation:"NONE",seed:0L,showair:0b,showboundingbox:0b,sizeX:11,sizeY:11,sizeZ:11}`,
+      `setblock ~ ~${-(cellsize+1)/2-2} ~ redstone_block`,
+      `setblock ~ ~${-(cellsize+1)/2-2} ~ air`,
       reflections.map((ref, refi) => rotations.map((rot, roti) => {
         let i = refi * rotations.length + roti;
         if (i == 0) return [];
@@ -1678,12 +1681,19 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
         return [
           `summon marker ~ ~${y} ~ {Tags:["maze-tile"]}`,
-          `setblock ~ ~${y-6} ~ air`,
-          `setblock ~ ~${y-6} ~ minecraft:structure_block[mode=load]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"${ref}",mode:"LOAD",name:"hitchhike:maze/tmptile",posX:${refi ? offsetz : offsetx},posY:1,posZ:${refi ? -offsetx: offsetz},powered:0b,rotation:"${rot}",seed:0L,showair:0b,showboundingbox:1b,sizeX:11,sizeY:11,sizeZ:11}`,
-          `setblock ~ ~${y-7} ~ redstone_block`,
-          `setblock ~ ~${y-7} ~ air`
+          `setblock ~ ~${y-(cellsize+1)/2-1} ~ air`,
+          `setblock ~ ~${y-(cellsize+1)/2-1} ~ minecraft:structure_block[mode=load]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"${ref}",mode:"LOAD",name:"hitchhike:maze/tmptile",posX:${refi ? offsetz : offsetx},posY:1,posZ:${refi ? -offsetx: offsetz},powered:0b,rotation:"${rot}",seed:0L,showair:0b,showboundingbox:0b,sizeX:11,sizeY:11,sizeZ:11}`,
+          `setblock ~ ~${y-(cellsize+1)/2-2} ~ redstone_block`,
+          `setblock ~ ~${y-(cellsize+1)/2-2} ~ air`
         ]
       }))
+    ])
+
+    addfunc('maze/create/wave/initconnections', [
+      `scoreboard players set @s maze-connections 1`,
+      neighbors.map((n, i) => [
+        `execute if block ~${n[0]*((cellsize+1)/2+1)} ~${n[1]*((cellsize+1)/2+1)} ~${n[2]*((cellsize+1)/2+1)} lime_stained_glass run scoreboard players operation @s maze-connections *= ${primes[i]} const`
+      ])
     ])
   })();
 }

@@ -49,3 +49,4 @@ summon marker -670 10 15 {Tags:["maze-tile","maze-tile-init"]}
 summon marker -655 10 0 {Tags:["maze-tile","maze-tile-init"]}
 summon marker -655 10 15 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] at @s run function generated:story/maze/create/wave/rotate
+execute as @e[tag=maze-tile] at @s run function generated:story/maze/create/wave/initconnections
