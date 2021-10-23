@@ -1679,7 +1679,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         return [
           `summon marker ~ ~${y} ~ {Tags:["maze-tile"]}`,
           `setblock ~ ~${y-6} ~ air`,
-          `setblock ~ ~${y-6} ~ minecraft:structure_block[mode=load]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"${ref}",mode:"LOAD",name:"hitchhike:maze/tmptile",posX:${roti ? offsetx : offsetz},posY:1,posZ:${roti ? offsetz : -offsetx},powered:0b,rotation:"${rot}",seed:0L,showair:0b,showboundingbox:1b,sizeX:11,sizeY:11,sizeZ:11}`,
+          `setblock ~ ~${y-6} ~ minecraft:structure_block[mode=load]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"${ref}",mode:"LOAD",name:"hitchhike:maze/tmptile",posX:${refi ? offsetx : offsetz},posY:1,posZ:${refi ? offsetz : -offsetx},powered:0b,rotation:"${rot}",seed:0L,showair:0b,showboundingbox:1b,sizeX:11,sizeY:11,sizeZ:11}`,
           // `setblock ~ ~${y-7} ~ redstone_block`,
           // `setblock ~ ~${y-7} ~ air`
         ]
