@@ -1664,7 +1664,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create/wave/rotate', [
-      `tag @s remove maze-tile`,
+      `tag @s remove maze-tile-init`,
       `setblock ~ ~-6 ~ minecraft:structure_block[mode=save]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"NONE",mode:"SAVE",name:"hitchhike:maze/tmptile",posX:-5,posY:1,posZ:-5,powered:0b,rotation:"NONE",seed:0L,showair:0b,showboundingbox:1b,sizeX:11,sizeY:11,sizeZ:11}`,
       `setblock ~ ~-7 ~ redstone_block`,
       `setblock ~ ~-7 ~ air`,
