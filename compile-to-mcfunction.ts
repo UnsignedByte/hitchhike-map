@@ -1653,7 +1653,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ]
 
     addfunc('maze/create/wave/reset', [
-      `forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+0)/2} ${mazeorigin[2]+15*(mazerows-1)+(cellsize+1)/2}`,
+      `forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(mazerows-1)+(cellsize+1)/2}`,
       `kill @e[tag=maze-tile]`,
       [...Array(mazecols)].map((xx, x) => (
         [...Array(mazerows)].map((zz, z) => [

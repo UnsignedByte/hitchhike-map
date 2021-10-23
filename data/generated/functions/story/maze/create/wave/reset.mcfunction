@@ -1,4 +1,4 @@
-forceload add -1005 -5 -650.5 20
+forceload add -1005 -5 -650 20
 kill @e[tag=maze-tile]
 summon marker -1000 10 0 {Tags:["maze-tile","maze-tile-init"]}
 summon marker -1000 10 15 {Tags:["maze-tile","maze-tile-init"]}
