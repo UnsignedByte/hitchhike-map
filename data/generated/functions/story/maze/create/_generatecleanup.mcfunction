@@ -1,5 +1,5 @@
-bossbar set minecraft:maze name [{"text":"Finalizing Data"}]
-bossbar set minecraft:maze color red
+bossbar set minecraft:maze name [{"text":"Finalizing Allocation"}]
+bossbar set minecraft:maze color green
 scoreboard players operation _removeleft maze = size maze
 scoreboard players operation _removeleft maze *= 8 const
 scoreboard players operation batchsize maze = size maze

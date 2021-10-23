@@ -1061,6 +1061,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [-1, 0, 0]
     ]
 
+    const primes = [2, 3, 5, 7, 11, 13];
+
     const mobs: Record<string, string[]> = {
       common: [
         `summon zombie ~ ~ ~ {NoGravity:0b,Silent:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Health:5f,IsBaby:1b,Tags:["maze-common","maze-mob","maze-mob-null"],CustomName:'{"text":"nullptr","color":"red","bold":true}',ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],Attributes:[{Name:generic.max_health,Base:5},{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.25},{Name:generic.attack_damage,Base:4}]}`,
@@ -1338,7 +1340,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players set size maze 15',
       '# Set up bossbar',
       'bossbar set minecraft:maze name [{"text":"Clearing Memory"}]',
-      'bossbar set minecraft:maze color blue',
+      'bossbar set minecraft:maze color red',
       'execute store result bossbar minecraft:maze max run scoreboard players get size maze',
       'bossbar set minecraft:maze players @a',
       'bossbar set minecraft:maze visible true',
@@ -1401,7 +1403,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'tag @e[type=marker,tag=maze-node,tag=maze-neighbor] add maze-adjacent',
       '',
       '# Set up bossbar',
-      'bossbar set minecraft:maze name [{"text":"Loading SD Card"}]',
+      'bossbar set minecraft:maze name [{"text":"Preparing New Memory"}]',
       'bossbar set minecraft:maze color green',
       'scoreboard players operation bossbar maze = size maze',
       'scoreboard players operation bossbar maze *= size maze',
@@ -1420,9 +1422,58 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'function generated:story/maze/create/_propogate'
     ])
 
+    addfunc('maze/create/loadcells', [
+      `execute as @e[tag=maze-node] at @s run function generated:story/maze/create/_updateconnections`,
+      '# Set up bossbar',
+      'bossbar set minecraft:maze name [{"text":"Loading SD Card"}]',
+      'bossbar set minecraft:maze color blue',
+      'scoreboard players operation bossbar maze = size maze',
+      'execute store result bossbar minecraft:maze max run scoreboard players get bossbar maze',
+      'bossbar set minecraft:maze players @a',
+      'bossbar set minecraft:maze visible true',
+      'bossbar set minecraft:maze style progress',
+      'bossbar set minecraft:maze value 0',
+      'scoreboard players set bossbar maze 0',
+      'scoreboard players operation batchsize maze = size maze',
+      'scoreboard players operation batchsize maze *= size maze',
+      '',
+      'function generated:story/maze/create/_loadcellbatch'
+    ])
+
+    addfunc('maze/create/_loadcellbatch', [
+      'scoreboard players operation _batchleft maze = batchsize maze',
+      'scoreboard players add bossbar maze 1',
+      'execute store result bossbar minecraft:maze value run scoreboard players get bossbar maze',
+      'function generated:story/maze/create/_loadcells',
+      'execute unless score _batchleft maze matches ..-1 run schedule function generated:story/maze/create/_loadcellbatch 1t',
+      'execute if score _batchleft maze matches ..-1 run function generated:story/maze/create/_cleanupall'
+    ])
+
+    addfunc('maze/create/_loadcells', [
+      '# Clone in random cells',
+      'execute unless entity @e[type=marker,tag=maze-node,tag=maze-visited] run scoreboard players set _batchleft maze 0',
+      'execute as @e[type=marker,tag=maze-node,tag=maze-visited,sort=random,limit=1] at @s run function generated:story/maze/create/_loadcell',
+      'scoreboard players remove _batchleft maze 1',
+      'execute unless score _batchleft maze matches ..0 run function generated:story/maze/create/_loadcells'
+    ])
+
+    addfunc('maze/create/_loadcell', [
+      'scoreboard players operation #tmp maze-connections = @s maze-connections',
+      'execute as @e[tag=maze-tile] if score @s maze-connections = #tmp maze-connections run tag @s add maze-tile-selectable',
+      `execute at @e[tag=maze-tile-selectable,sort=random,limit=1] run clone ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2} ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2}`,
+      `clone ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2} ${-1000+(cellsize-1)/2} ${200+(cellsize-1)/2} ${+(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} `,
+      'tag @e[tag=maze-tile] remove maze-tile-selectable',
+      'tag @s remove maze-visited'
+    ])
+
+    addfunc('maze/create/_updateconnections', [
+      `scoreboard players set @s maze-connections 1`,
+      neighbors.map((x, i) => `execute if entity @s[tag=maze-connect-${i}] run scoreboard players operation @s maze-connections *= ${primes[i]} const`)
+    ])
+
     addfunc('maze/create/_generatecleanup', [
-      'bossbar set minecraft:maze name [{"text":"Finalizing Data"}]',
-      'bossbar set minecraft:maze color red',
+      'bossbar set minecraft:maze name [{"text":"Finalizing Allocation"}]',
+      'bossbar set minecraft:maze color green',
       'scoreboard players operation _removeleft maze = size maze',
       'scoreboard players operation _removeleft maze *= 8 const',
       'scoreboard players operation batchsize maze = size maze',
@@ -1439,7 +1490,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/create/_cleanupall', [
       'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
-      'tag @e[type=marker,tag=maze-node] remove maze-visited',
+      // 'tag @e[type=marker,tag=maze-node] remove maze-visited',
       'bossbar set minecraft:maze visible false',
       `scoreboard players set enabled maze 1`
     ])
@@ -1483,7 +1534,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players remove _removeleft maze 1',
       'function generated:story/maze/create/_removerandomwalls',
       'execute unless score _removeleft maze matches 0 run schedule function generated:story/maze/create/removerandomwalls 1t',
-      `execute if score _removeleft maze matches 0 run function generated:story/maze/create/_cleanupall`
+      `execute if score _removeleft maze matches 0 run function generated:story/maze/create/loadcells`
     ])
 
     addfunc('maze/create/_removerandomwalls', [
@@ -1494,8 +1545,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create/_deletewall', [
-      '# Delete wall between self and node marked maze-connect',
-      `execute at @s facing entity @e[type=marker,tag=maze-node,tag=maze-connect] feet run fill ^${-((cellsize-1)/2-1)} ^${-((cellsize-1)/2-1)} ^${(cellsize-1)/2} ^${((cellsize-1)/2-1)} ^${((cellsize-1)/2-1)} ^${(cellsize-1)/2+1} air`,
+      // '# Delete wall between self and node marked maze-connect',
+      // `execute at @s facing entity @e[type=marker,tag=maze-node,tag=maze-connect] feet run fill ^${-((cellsize-1)/2-1)} ^${-((cellsize-1)/2-1)} ^${(cellsize-1)/2} ^${((cellsize-1)/2-1)} ^${((cellsize-1)/2-1)} ^${(cellsize-1)/2+1} air`,
       neighbors.map((x, i) => [
         // `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] positioned ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} run fill ~${x[0] === 0 ? -(cellsize-5)/2 : 0} ~${x[1] === 0 ? -(cellsize-5)/2 : 0} ~${x[2] === 0 ? -(cellsize-5)/2 : 0} ~${x[0] === 0 ? (cellsize-5)/2 : x[0]} ~${x[1] === 0 ? (cellsize-5)/2 : x[1]} ~${x[2] === 0 ? (cellsize-5)/2 : x[2]} air`,
         `execute if entity @e[type=marker,tag=maze-node,tag=maze-connect,tag=maze-neighbor-${i}] run tag @s add maze-connect-${i}`,
@@ -1639,8 +1690,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const mazerows = 2;
     const mazecols = 24;
     const mazeorigin = [-1000, 10, 0];
-
-    const primes = [2, 3, 5, 7, 11, 13];
 
     const rotations = [
       "NONE",

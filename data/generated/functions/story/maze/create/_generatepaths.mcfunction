@@ -7,7 +7,7 @@ execute at @e[type=marker,tag=maze-node,tag=maze-start] run function generated:s
 tag @e[type=marker,tag=maze-node,tag=maze-neighbor] add maze-adjacent
 
 # Set up bossbar
-bossbar set minecraft:maze name [{"text":"Loading SD Card"}]
+bossbar set minecraft:maze name [{"text":"Preparing New Memory"}]
 bossbar set minecraft:maze color green
 scoreboard players operation bossbar maze = size maze
 scoreboard players operation bossbar maze *= size maze
