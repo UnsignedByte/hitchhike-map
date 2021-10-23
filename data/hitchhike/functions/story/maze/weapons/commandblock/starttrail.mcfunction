@@ -1,2 +1,2 @@
 particle minecraft:end_rod ~ ~ ~ 0 0 0 0 1 normal
-tp @s ^ ^ ^1
+execute positioned ^ ^ ^1 if block ~ ~ ~ air run tp @s ~ ~ 
