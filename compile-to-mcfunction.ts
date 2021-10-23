@@ -1633,5 +1633,54 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `execute if score @s maze-path-parent matches ${i} at @s positioned ~${x[0]*(cellsize)} ~${x[1]*(cellsize)} ~${x[2]*(cellsize)} as @e[type=marker,tag=maze-node,distance=..0.01,sort=nearest,limit=1] run function generated:story/maze/pathfind/_pathgetnext`
       ])
     ])
+
+    // WAVE FUNCTION STUFF
+
+    const mazerows = 2;
+    const mazecols = 24;
+    const mazeorigin = [-1000, 10, -5];
+
+    const rotations = [
+      "NONE",
+      "CLOCKWISE_90",
+      "CLOCKWISE_180",
+      "COUNTERCLOCKWISE_90"
+    ]
+
+    const reflections = [
+      "NONE",
+      "LEFT_RIGHT"
+    ]
+
+    addfunc('maze/create/wave/reset', [
+      `forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*mazecols+(cellsize+1)/2} ${mazeorigin[2]+15*mazerows+(cellsize+1)/2}`,
+      `kill @e[tag=maze-tile]`,
+      Array(mazecols).map((xx, x) => (
+        Array(mazerows).map((zz, z) => [
+          `summon marker ${mazeorigin[0]+15*x} ${mazeorigin[1]} ${mazeorigin[2]+15*z} {Tags:["maze-tile","maze-tile-init"]}`
+        ])
+      )),
+      `execute as @e[tag=maze-tile-init] at @s run function generated:story/maze/create/wave/rotate`
+    ])
+
+    addfunc('maze/create/wave/rotate', [
+      `setblock ~ ~-6 ~ minecraft:structure_block[mode=save]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"NONE",mode:"SAVE",name:"hitchhike:maze/tmptile",posX:-5,posY:1,posZ:-5,powered:0b,rotation:"NONE",seed:0L,showair:0b,showboundingbox:1b,sizeX:11,sizeY:11,sizeZ:11}`,
+      `setblock ~ ~-7 ~ redstone_block`,
+      `setblock ~ ~-7 ~ air`,
+      reflections.map((ref, refi) => rotations.map((rot, roti) => {
+        let i = refi * rotations.length + roti;
+        if (i == 0) return [];
+        let y = 15*i;
+        let offsetx = (roti%2) ? 5 : -5;
+        let offsetz = roti < 2 ? -5 : 5;
+
+        return [
+          `summon marker ~ ~${y} ~ {Tags:["maze-tile"]}`,
+          `setblock ~ ${y-6} ~ minecraft:structure_block[mode=load]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"${ref}",mode:"LOAD",name:"hitchhike:maze/tmptile",posX:${roti ? offsetx : offsetz},posY:1,posZ:${roti ? offsetz : -offsetx},powered:0b,rotation:"${rot}",seed:0L,showair:0b,showboundingbox:1b,sizeX:11,sizeY:11,sizeZ:11}`,
+          `setblock ~ ${y-7} ~ redstone_block`,
+          `setblock ~ ${y-7} ~ air`
+        ]
+      }))
+    ])
   })();
 }
