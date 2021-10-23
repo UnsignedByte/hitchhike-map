@@ -1406,6 +1406,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'bossbar set minecraft:maze name [{"text":"Preparing New Memory"}]',
       'bossbar set minecraft:maze color green',
       'scoreboard players operation bossbar maze = size maze',
+      'scoreboard players operation bossbar maze *= size maze',
       'execute store result bossbar minecraft:maze max run scoreboard players get bossbar maze',
       'bossbar set minecraft:maze players @a',
       'bossbar set minecraft:maze visible true',
@@ -1417,7 +1418,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '#> Propogate in batches',
       '# size^2',
       'scoreboard players operation batchsize maze = size maze',
-      'scoreboard players operation batchsize maze *= size maze',
       'function generated:story/maze/create/_propogatebatch',
       'function generated:story/maze/create/_propogate'
     ])
@@ -1475,8 +1475,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'bossbar set minecraft:maze name [{"text":"Finalizing Allocation"}]',
       'bossbar set minecraft:maze color green',
       'scoreboard players operation _removeleft maze = size maze',
+      'scoreboard players operation _removeleft maze *= 8 const',
       'scoreboard players operation batchsize maze = size maze',
-      'scoreboard players operation batchsize maze *= 8 const',
       'execute store result bossbar minecraft:maze max run scoreboard players get _removeleft maze',
       'bossbar set minecraft:maze players @a',
       'bossbar set minecraft:maze visible true',
@@ -1687,7 +1687,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     // WAVE FUNCTION STUFF
 
-    const mazerows = 2;
+    const mazerows = 3;
     const mazecols = 24;
     const mazeorigin = [-1000, 10, 0];
 
