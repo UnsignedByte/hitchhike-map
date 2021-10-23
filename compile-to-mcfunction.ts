@@ -1673,7 +1673,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         let i = refi * rotations.length + roti;
         if (i == 0) return [];
         let y = 15*i;
-        let offsetx = (roti%2) ? 5 : -5;
+        let offsetx = !!(roti%2) ? 5 : -5;
         let offsetz = roti < 2 ? -5 : 5;
 
         return [
