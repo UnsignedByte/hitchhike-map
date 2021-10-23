@@ -1692,7 +1692,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/wave/initconnections', [
       `scoreboard players set @s maze-connections 1`,
       neighbors.map((n, i) => [
-        `execute if block ~${n[0]*((cellsize+1)/2)} ~${n[1]*((cellsize+1)/2)} ~${n[2]*((cellsize+1)/2)} lime_stained_glass run scoreboard players operation @s maze-connections *= ${primes[i]} const`
+        `execute if block ~${n[0]*(cellsize+1)/2} ~${n[1]*(cellsize+1)/2} ~${n[2]*(cellsize+1)/2} lime_stained_glass run scoreboard players operation @s maze-connections *= ${primes[i]} const`
       ])
     ])
   })();
