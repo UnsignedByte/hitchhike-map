@@ -1655,8 +1655,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/wave/reset', [
       `forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*mazecols+(cellsize+1)/2} ${mazeorigin[2]+15*mazerows+(cellsize+1)/2}`,
       `kill @e[tag=maze-tile]`,
-      Array(mazecols).map((xx, x) => (
-        Array(mazerows).map((zz, z) => [
+      [...Array(mazecols)].map((xx, x) => (
+        [...Array(mazerows)].map((zz, z) => [
           `summon marker ${mazeorigin[0]+15*x} ${mazeorigin[1]} ${mazeorigin[2]+15*z} {Tags:["maze-tile","maze-tile-init"]}`
         ])
       )),
@@ -1664,6 +1664,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create/wave/rotate', [
+      `tag @s remove maze-tile`,
       `setblock ~ ~-6 ~ minecraft:structure_block[mode=save]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"NONE",mode:"SAVE",name:"hitchhike:maze/tmptile",posX:-5,posY:1,posZ:-5,powered:0b,rotation:"NONE",seed:0L,showair:0b,showboundingbox:1b,sizeX:11,sizeY:11,sizeZ:11}`,
       `setblock ~ ~-7 ~ redstone_block`,
       `setblock ~ ~-7 ~ air`,
