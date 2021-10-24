@@ -819,7 +819,7 @@ export const item = {
         let page: any[] = [];
 
         while (text.length > 0) {
-          let res = text.match(/^\s*(([^\s]+?)([^\S\r\n]*|$))/g);
+          let res = text.match(/^(\s*([^\s]+?)([^\S\r\n]*|$))/g);
 
           if (res === null || res[0] === null) {
             res = text.match(/[\r\n]+/);
