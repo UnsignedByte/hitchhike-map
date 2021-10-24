@@ -785,13 +785,17 @@ export const item = {
       1984: {
         author:"George Orwell",
         title: "1984"
+      },
+      C: {
+        author:"GNU",
+        title:"The GNU C Reference Manual"
       }
     }
 
     ensureDir("./files");
 
     return Object.fromEntries(await Promise.all(Object.entries(books).map(async ([k, v]) => {
-      let text = await Deno.readTextFile(join('./files', `./${v.title}.txt`));
+      let text = await Deno.readTextFile(join('./files', `./${k}.txt`));
 
       let pages: string[] = [];
 
