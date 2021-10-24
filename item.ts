@@ -810,10 +810,10 @@ export const item = {
         author: "José Raúl Capablanca",
         title: "Chess Fundamentals"
       },
-      bible: {
-        title: "The King James Bible",
-        author: "God"
-      },
+      // bible: {
+      //   title: "The King James Bible",
+      //   author: "God"
+      // },
       paradiselost: {
         title: "Paradise Lost",
         author: "John Milton"
