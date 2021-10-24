@@ -805,6 +805,10 @@ export const item = {
       vim: {
         author: "GNU",
         title: "Vim Manual"
+      },
+      chess: {
+        author: "José Raúl Capablanca",
+        title: "Chess Fundamentals"
       }
     }
 
