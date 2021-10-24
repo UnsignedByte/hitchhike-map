@@ -786,7 +786,7 @@ export const item = {
         author:"George Orwell",
         title: "1984"
       },
-      C: {
+      c: {
         author:"GNU",
         title:"The GNU C Reference Manual"
       }
