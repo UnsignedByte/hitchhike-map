@@ -811,7 +811,6 @@ export const item = {
             res = text.match(/[\r\n]+/);
 
             if (res === null || res[0] === null) {
-              console.log(text.slice(100))
               break;
             }
 
