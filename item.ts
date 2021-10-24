@@ -801,10 +801,28 @@ export const item = {
         let page: any[] = [];
 
         while (1) {
-          let res = text.match(/^(([^\s]+)(\s+|$))/g);
+          let res = text.match(/^(([^\s]+)[^\S\r\n]*)/g);
 
-          if (res === null) {
-            break;
+          if (res === null || res[0] === null) {
+            res = text.match(/[\r\n]+/);
+
+            if (res === null || res[0] === null) {
+              console.log(text.slice(100))
+              break;
+            }
+
+            const count: number = res[0].length;
+
+            for (let i = 0; i < count; i++) {
+              page.push("\n");
+              max = 19*Math.floor((max-1)/19);
+
+              if (max <= 0) break;
+            }
+
+            text = text.slice(count, text.length);
+
+            continue;
           }
 
           if (max - res[0].length >= 0) {
