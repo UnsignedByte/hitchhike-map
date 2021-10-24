@@ -789,13 +789,27 @@ export const item = {
       c: {
         author:"GNU",
         title:"The GNU C Reference Manual"
+      },
+      scarletletter: {
+        author: "Nathaniel Hawthorne",
+        title:"The Scarlet Letter"
+      },
+      proposal: {
+        author: "Jonathan Swift",
+        title: "A Modest Proposal"
+      },
+      assembly: {
+        author: "Wikipedia, the Free Encyclopedia",
+        title: "x86 Assembly Language"
       }
     }
 
     ensureDir("./files");
 
     return Object.fromEntries(await Promise.all(Object.entries(books).map(async ([k, v]) => {
-      let text = await Deno.readTextFile(join('./files', `./${k}.txt`));
+      let text = await Deno.readTextFile(`./files/${k}.txt`);
+
+      console.log(`Loading ${k}...`)
 
       let pages: string[] = [];
 
@@ -804,17 +818,20 @@ export const item = {
 
         let page: any[] = [];
 
-        while (1) {
-          let res = text.match(/^(([^\s]+)[^\S\r\n]*)/g);
+        while (text.length > 0) {
+          let res = text.match(/^\s*(([^\s]+?)([^\S\r\n]*|$))/g);
 
           if (res === null || res[0] === null) {
             res = text.match(/[\r\n]+/);
 
             if (res === null || res[0] === null) {
+              // text = text.slice(1, text.length);
               break;
             }
 
             const count: number = res[0].length;
+
+            text = text.slice(count, text.length);
 
             for (let i = 0; i < count; i++) {
               page.push("\n");
@@ -822,8 +839,6 @@ export const item = {
 
               if (max <= 0) break;
             }
-
-            text = text.slice(count, text.length);
 
             continue;
           }
