@@ -801,6 +801,10 @@ export const item = {
       assembly: {
         author: "Wikipedia, the Free Encyclopedia",
         title: "x86 Assembly Language"
+      },
+      vim: {
+        author: "GNU",
+        title: "Vim Manual"
       }
     }
 
