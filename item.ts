@@ -841,8 +841,8 @@ export const item = {
       return [k, {
         id: '"minecraft:written_book"',
         tag: {
-          title: rawJson(v.title),
-          author: rawJson(v.author),
+          title: JSON.stringify(v.title),
+          author: JSON.stringify(v.author),
           resolved: true,
           pages:JSON.stringify(pages)
         }
