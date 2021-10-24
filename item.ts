@@ -800,49 +800,24 @@ export const item = {
 
         let page: any[] = [];
 
-        let curr = "";
-
-        const flush = () => {
-          page.push({text: curr});
-          curr = "";
-        }
-
         while (1) {
-          let res = text.match(/^(([^\s]+)[^\S\r\n]*)/);
+          let res = text.match(/^(([^\s]+)(\s+|$))/g);
 
           if (res === null) {
-            res = text.match(/[\r\n]+/);
-
-            if (res === null) {
-              console.log(text.slice(100))
-              break;
-            }
-
-            const count: number = res[0].length;
-
-            for (let i = 0; i < count; i++) {
-              flush();
-              max = 19*Math.floor((max-1)/19);
-
-              if (max <= 0) break;
-            }
-
-            text = text.slice(count, text.length);
-
-            continue;
+            break;
           }
 
           if (max - res[0].length >= 0) {
             max -= res[0].length;
             text = text.slice(res[0].length, text.length);
 
-            curr += res[0];
+            page.push(res[0]);
           } else {
             break;
           }
         }
 
-        pages.push(JSON.stringify(page));
+        pages.push(JSON.stringify([{text: page.join("")}]));
       }
 
       return [k, {
