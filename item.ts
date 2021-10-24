@@ -809,6 +809,18 @@ export const item = {
       chess: {
         author: "José Raúl Capablanca",
         title: "Chess Fundamentals"
+      },
+      bible: {
+        title: "The King James Bible",
+        author: "God"
+      },
+      paradiselost: {
+        title: "Paradise Lost",
+        author: "John Milton"
+      },
+      tomsawyer: {
+        title: "The Adventures of Tom Sawyer",
+        author: "Mark Twain"
       }
     }
 
