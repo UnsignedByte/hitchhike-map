@@ -819,21 +819,19 @@ export const item = {
         let page: any[] = [];
 
         while (text.length > 0) {
-          let res = text.match(/^\s*([^\s]+)([^\S\r\n]+|$)/g);
+          let res = text.match(/^([^\s]+)([^\S\r\n]*|$)/g);
 
-          if (res === null || res[0] === null) {
-            res = text.match(/[\r\n]+/);
+          if (res === null) {
+            res = text.match(/([\r\n]+)\s*/);
 
-            if (res === null || res[0] === null) {
+            if (res === null) {
               // text = text.slice(1, text.length);
               break;
             }
 
-            const count: number = res[0].length;
+            text = text.slice(res[0].length, text.length);
 
-            text = text.slice(count, text.length);
-
-            for (let i = 0; i < count; i++) {
+            for (let i = 0; i < res[1].length; i++) {
               page.push("\n");
               max = 19*Math.floor((max-1)/19);
 
