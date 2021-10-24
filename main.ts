@@ -430,6 +430,10 @@ export async function init (
 
   functions['test/givebook'] = `give @a ${toGive(item.quest_book)}`;
 
+  Object.entries(item.books).map(([k, v]: [string, any])=>{
+    functions[`test/book/${k}`] = `give @s ${toGive(v)}`;
+  })
+
   functions['rng/rng'] = [
     '# generate random number from 0 to 2^31-1 (mod m)',
     `scoreboard players set rng vars 0`,

@@ -1,5 +1,7 @@
 import { toSnbt, rawJson, toCost } from './compile-to-mcfunction.ts'
 import { npcSchema } from './parse-yaml.ts'
+import { ensureDir, emptyDir } from 'https://deno.land/std@0.102.0/fs/mod.ts'
+import { join, dirname } from 'https://deno.land/std@0.102.0/path/mod.ts'
 
 export const item = {
   quest_book: {
@@ -777,5 +779,81 @@ export const item = {
     }
 
     return store;
+  })(),
+  books: await (async ()=> {
+    let books = {
+      1984: {
+        author:"George Orwell",
+        title: "1984"
+      }
+    }
+
+    ensureDir("./files");
+
+    return Object.fromEntries(await Promise.all(Object.entries(books).map(async ([k, v]) => {
+      let text = await Deno.readTextFile(join('./files', `./${v.title}.txt`));
+
+      let pages: string[] = [];
+
+      while (text.length > 0) {
+        let max = 19*14; // 19 characters per line, 14 lines
+
+        let page: any[] = [];
+
+        let curr = "";
+
+        const flush = () => {
+          page.push({text: curr});
+          curr = "";
+        }
+
+        while (1) {
+          let res = text.match(/^(([^\s]+)[^\S\r\n]*)/);
+
+          if (res === null) {
+            res = text.match(/[\r\n]+/);
+
+            if (res === null) {
+              console.log(text.slice(100))
+              break;
+            }
+
+            const count: number = res[0].length;
+
+            for (let i = 0; i < count; i++) {
+              flush();
+              max = 19*Math.floor((max-1)/19);
+
+              if (max <= 0) break;
+            }
+
+            text = text.slice(count, text.length);
+
+            continue;
+          }
+
+          if (max - res[0].length >= 0) {
+            max -= res[0].length;
+            text = text.slice(res[0].length, text.length);
+
+            curr += res[0];
+          } else {
+            break;
+          }
+        }
+
+        pages.push(JSON.stringify(page));
+      }
+
+      return [k, {
+        id: '"minecraft:written_book"',
+        tag: {
+          title: rawJson(v.title),
+          author: rawJson(v.author),
+          resolved: true,
+          pages:JSON.stringify(pages)
+        }
+      }]
+    })));
   })()
 }
