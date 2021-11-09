@@ -1061,7 +1061,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [-1, 0, 0]
     ]
 
-    const primes = [2, 3, 5, 7, 11, 13];
+    const primes = [2, 3, 5, 7, 11, 13, 17];
 
     const mobs: Record<string, string[]> = {
       common: [
@@ -1467,8 +1467,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create/_updateconnections', [
-      `scoreboard players set @s maze-connections 1`,
-      neighbors.map((x, i) => `execute if entity @s[tag=maze-connect-${i}] run scoreboard players operation @s maze-connections *= ${primes[i]} const`)
+      `scoreboard players set @s maze-connections 0`,
+      neighbors.map((x, i) => `execute if entity @s[tag=maze-connect-${i}] run scoreboard players operation @s maze-connections += ${1 << i} const`)
     ])
 
     addfunc('maze/create/_generatecleanup', [
@@ -1512,6 +1512,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute unless score _batchleft maze matches ..0 run function generated:story/maze/create/_propogate'
     ])
 
+    const propogate_thresholds = [50, 70]
+
     addfunc('maze/create/_insertcell', [
       '#> Insert adjacent cell into maze',
       'tag @s remove maze-adjacent',
@@ -1522,6 +1524,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'tag @e[type=marker,tag=maze-node,tag=maze-neighbor,tag=maze-visited,sort=random,limit=1] add maze-connect',
       'execute as @s run function generated:story/maze/create/_deletewall',
       '# add self to maze',
+      'execute store result score #tmp maze run bossbar get minecraft:maze value',
+      'execute store result score #tmpmax maze run bossbar get minecraft:maze max',
+      'scoreboard players operation #tmp maze *= 100 const',
+      'scoreboard players operation #tmp maze /= #tmpmax maze',
+      `execute if score #tmp maze matches ..${propogate_thresholds[0]-1} run scoreboard players set @s maze-tile-type 0`,
+      `execute if score #tmp maze matches ${propogate_thresholds[0]}..${propogate_thresholds[1]-1} run scoreboard players set @s maze-tile-type 1`,
+      `execute if score #tmp maze matches ${propogate_thresholds[1]}.. run scoreboard players set @s maze-tile-type 2`,
       'tag @s remove maze-adjacent',
       'tag @s add maze-visited'
     ])
@@ -1687,7 +1696,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     // WAVE FUNCTION STUFF
 
-    const mazerows = 7;
+    const mazerows = [0, 0, 0, 0, 0, 0, 1, 2];
     const mazecols = 24;
     const mazeorigin = [-1000, 10, 0];
 
@@ -1704,11 +1713,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ]
 
     addfunc('maze/create/wave/reset', [
-      `forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(mazerows-1)+(cellsize+1)/2}`,
+      `forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(mazerows.length-1)+(cellsize+1)/2}`,
       `kill @e[tag=maze-tile]`,
       [...Array(mazecols)].map((xx, x) => (
-        [...Array(mazerows)].map((zz, z) => [
-          `summon marker ${mazeorigin[0]+15*x} ${mazeorigin[1]} ${mazeorigin[2]+15*z} {Tags:["maze-tile","maze-tile-init"]}`
+        mazerows.map((zz, z) => [
+          `summon marker ${mazeorigin[0]+15*x} ${mazeorigin[1]} ${mazeorigin[2]+15*z} {Tags:["maze-tile","maze-tile-init"]}`,
+          `execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] scoreboard players set @s maze-tile-type ${zz}`,
+          ``
         ])
       )),
       `execute as @e[tag=maze-tile-init] at @s run function generated:story/maze/create/wave/rotate`,
@@ -1739,9 +1750,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create/wave/initconnections', [
-      `scoreboard players set @s maze-connections 1`,
+      `scoreboard players set @s maze-connections 0`,
       neighbors.map((n, i) => [
-        `execute if block ~${n[0]*(cellsize+1)/2} ~${n[1]*(cellsize+1)/2} ~${n[2]*(cellsize+1)/2} lime_stained_glass run scoreboard players operation @s maze-connections *= ${primes[i]} const`
+        `execute if block ~${n[0]*(cellsize+1)/2} ~${n[1]*(cellsize+1)/2} ~${n[2]*(cellsize+1)/2} lime_stained_glass run scoreboard players operation @s maze-connections += ${1 << i} const`
       ])
     ])
   })();

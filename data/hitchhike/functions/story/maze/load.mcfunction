@@ -12,6 +12,7 @@ scoreboard objectives add maze-mob-phase dummy
 scoreboard objectives add maze-weapon-age dummy
 
 scoreboard objectives add maze-connections dummy
+scoreboard objectives add maze-tile-type dummy
 
 bossbar add maze
 bossbar set minecraft:maze visible false
