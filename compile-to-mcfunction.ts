@@ -1741,13 +1741,15 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         let offsetz = roti < 2 ? -5 : 5;
 
         return [
-          `summon marker ~ ~${y} ~ {Tags:["maze-tile"]}`,
+          `summon marker ~ ~${y} ~ {Tags:["maze-tile","maze-tile-dupe-init"]}`,
           `setblock ~ ~${y-(cellsize+1)/2-1} ~ air`,
           `setblock ~ ~${y-(cellsize+1)/2-1} ~ minecraft:structure_block[mode=load]{author:"",ignoreEntities:1b,integrity:1.0f,metadata:"",mirror:"${ref}",mode:"LOAD",name:"hitchhike:maze/tmptile",posX:${refi ? offsetz : offsetx},posY:1,posZ:${refi ? -offsetx: offsetz},powered:0b,rotation:"${rot}",seed:0L,showair:0b,showboundingbox:0b,sizeX:11,sizeY:11,sizeZ:11}`,
           `setblock ~ ~${y-(cellsize+1)/2-2} ~ redstone_block`,
           `setblock ~ ~${y-(cellsize+1)/2-2} ~ air`
         ]
-      }))
+      })),
+      `scoreboard players operation @e[tag=maze-tile-dupe-init] maze-tile-type = @s maze-tile-type`,
+      `tag @e remove maze-tile-dupe-init`
     ])
 
     addfunc('maze/create/wave/initconnections', [
