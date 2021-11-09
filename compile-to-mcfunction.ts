@@ -1459,8 +1459,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/create/_loadcell', [
       'scoreboard players operation #tmp maze-connections = @s maze-connections',
-      // 'scoreboard players operation #tmp maze-tile-type = @s maze-tile-type',
-      'execute as @e[tag=maze-tile] if score @s maze-connections = #tmp maze-connections run tag @s add maze-tile-selectable',
+      'scoreboard players operation #tmp maze-tile-type = @s maze-tile-type',
+      'execute as @e[tag=maze-tile] if score @s maze-connections = #tmp maze-connections if score @s maze-tile-type = #tmp maze-tile-type run tag @s add maze-tile-selectable',
       `execute at @e[tag=maze-tile-selectable,sort=random,limit=1] run clone ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2} ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2}`,
       `clone ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2} ${-1000+(cellsize-1)/2} ${200+(cellsize-1)/2} ${+(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} `,
       'tag @e[tag=maze-tile] remove maze-tile-selectable',
