@@ -1172,7 +1172,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     schedule([
       `scoreboard players set mobcount maze 0`,
       `execute as @e[tag=maze-mob,type=!player] run scoreboard players add mobcount maze 1`,
-      'execute if score enabled maze matches 1 if score mobcount maze matches ..50 if predicate hitchhike:batchchance at @r as @e[tag=maze-node,distance=4..16,sort=random,limit=1] at @s run function hitchhike:story/maze/mobs/summonbatch'
+      'execute if score enabled maze matches 1 if score mobcount maze matches ..50 as @e[tag=maze-mob-spawn-attempt,limit=1,sort=random] at @s run function hitchhike:story/maze/mobs/summonbatch',
+      'kill @e[tag=maze-mob-spawn-attempt]'
     ], 20, functions)
 
     schedule([
@@ -1474,7 +1475,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute as @e[tag=maze-tile] if score @s maze-connections = #tmp maze-connections if score @s maze-tile-type = #tmp maze-tile-type run tag @s add maze-tile-selectable',
       `execute at @e[tag=maze-tile-selectable,sort=random,limit=1] run clone ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2} ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2}`,
       `clone ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2} ${-1000+(cellsize-1)/2} ${200+(cellsize-1)/2} ${+(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} `,
-      corners.map(x=>`setblock ~${x[0]*(cellsize-1/2)} ~${x[1]*(cellsize-1/2)} ~${x[2]*(cellsize-1/2)} spawner{SpawnCount:5,SpawnRange:${(cellsize-1)/2},Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}`),
+      corners.map(x=>`setblock ~${x[0]*(cellsize-1)/2} ~${x[1]*(cellsize-1)/2} ~${x[2]*(cellsize-1)/2} spawner{SpawnCount:5,SpawnRange:${(cellsize-1)/2},Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}`),
       'tag @e[tag=maze-tile] remove maze-tile-selectable',
       'tag @s remove maze-visited'
     ])
