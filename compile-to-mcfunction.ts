@@ -1719,7 +1719,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [...Array(mazecols)].map((xx, x) => (
         mazerows.map((zz, z) => [
           `summon marker ${mazeorigin[0]+15*x} ${mazeorigin[1]} ${mazeorigin[2]+15*z} {Tags:["maze-tile","maze-tile-init"]}`,
-          `execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] scoreboard players set @s maze-tile-type ${zz}`,
+          `execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type ${zz}`,
           ``
         ])
       )),
