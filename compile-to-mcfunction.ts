@@ -1460,7 +1460,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/_loadcell', [
       'scoreboard players operation #tmp maze-connections = @s maze-connections',
       'scoreboard players operation #tmp maze-tile-type = @s maze-tile-type',
-      'execute as @e[tag=maze-tile] if score @s maze-connections = #tmp maze-connections if score @s maze-tile-type matches #tmp maze-tile-type run tag @s add maze-tile-selectable',
+      'execute as @e[tag=maze-tile] if score @s maze-connections = #tmp maze-connections if score @s maze-tile-type = #tmp maze-tile-type run tag @s add maze-tile-selectable',
       `execute at @e[tag=maze-tile-selectable,sort=random,limit=1] run clone ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2} ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2}`,
       `clone ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2} ${-1000+(cellsize-1)/2} ${200+(cellsize-1)/2} ${+(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} `,
       'tag @e[tag=maze-tile] remove maze-tile-selectable',
@@ -1469,7 +1469,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/create/_updateconnections', [
       `scoreboard players set @s maze-connections 0`,
-      neighbors.map((x, i) => `execute if entity @s[tag=maze-connect-${i}] run scoreboard players operation @s maze-connections += ${1 << i} const`)
+      neighbors.map((x, i) => `execute if entity @s[tag=maze-connect-${i}] run scoreboard players add @s maze-connections ${1 << i}`)
     ])
 
     addfunc('maze/create/_generatecleanup', [
@@ -1753,7 +1753,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/wave/initconnections', [
       `scoreboard players set @s maze-connections 0`,
       neighbors.map((n, i) => [
-        `execute if block ~${n[0]*(cellsize+1)/2} ~${n[1]*(cellsize+1)/2} ~${n[2]*(cellsize+1)/2} lime_stained_glass run scoreboard players operation @s maze-connections += ${1 << i} const`
+        `execute if block ~${n[0]*(cellsize+1)/2} ~${n[1]*(cellsize+1)/2} ~${n[2]*(cellsize+1)/2} lime_stained_glass run scoreboard players add @s maze-connections ${1 << i}`
       ])
     ])
   })();
