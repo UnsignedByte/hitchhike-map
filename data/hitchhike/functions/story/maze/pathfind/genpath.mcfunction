@@ -9,4 +9,4 @@ tag @e[tag=path-goal-candidate,sort=random,limit=1] add path-goal
 
 tag @e remove path-goal-candidate
 
-execute at @e[tag=maze-path] run summon marker ~ ~ ~ {Tags:["maze-path-display","maze-marker"]}
+function generated:story/maze/pathfind
