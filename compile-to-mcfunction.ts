@@ -1171,7 +1171,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     schedule('function generated:story/maze/mobs/move', 10, functions);
     schedule([
       `scoreboard players set mobcount maze 0`,
-      `execute as @e[tag=maze-mob,type=!player] run scoreboard players add mobcount maze 1`,
+      `execute as @e[tag=maze-mob,type=!player,tag=!maze-mob-spawn-attempt] run scoreboard players add mobcount maze 1`,
       'execute if score enabled maze matches 1 if score mobcount maze matches ..50 as @e[tag=maze-mob-spawn-attempt,limit=1,sort=random] at @s run function hitchhike:story/maze/mobs/summonbatch',
       'kill @e[tag=maze-mob-spawn-attempt]'
     ], 20, functions)
@@ -1269,6 +1269,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     schedule(`execute at @e[tag=maze-pearl] run particle minecraft:firework ~ ~ ~ 0 0 0 1 0`, 5, functions);
 
+    schedule(`execute as @e[tag=maze-path-display,type=marker] at @s run function hitchhike:story/maze/displaytick`, 10, functions)
+
     Object.entries(mobs).forEach(([k, v]) => {
       addfunc(`maze/mobs/summon/${k}`, [
         `scoreboard players set _rngm vars ${mobs[k].length}`,
@@ -1338,6 +1340,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'kill @e[tag=maze-marker]',
       `function hitchhike:story/maze/reset`,
       '# Set Size of maze',
+      `scoreboard players set cellsize maze ${cellsize}`,
       'scoreboard players set size maze 15',
       '# Set up bossbar',
       'bossbar set minecraft:maze name [{"text":"Clearing Memory"}]',
@@ -1461,12 +1464,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const corners = [
       [-1, -1, -1],
       [-1, -1, 1],
-      [-1, 1, -1],
-      [-1, 1, 1],
+      // [-1, 1, -1],
+      // [-1, 1, 1],
       [1, -1, -1],
       [1, -1, 1],
-      [1, 1, -1],
-      [1, 1, 1]
+      // [1, 1, -1],
+      // [1, 1, 1]
     ]
 
     addfunc('maze/create/_loadcell', [

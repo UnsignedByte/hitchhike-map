@@ -3,6 +3,7 @@ execute as @e[tag=maze-node] at @s run forceload remove ~-4 ~-4 ~4 ~4
 kill @e[tag=maze-marker]
 function hitchhike:story/maze/reset
 # Set Size of maze
+scoreboard players set cellsize maze 9
 scoreboard players set size maze 15
 # Set up bossbar
 bossbar set minecraft:maze name [{"text":"Clearing Memory"}]

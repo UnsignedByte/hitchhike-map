@@ -5,11 +5,7 @@ execute at @e[tag=maze-tile-selectable,sort=random,limit=1] run clone ~-4 ~-4 ~-
 clone -1004 196 -4 -996 204 4 ~-4 ~-4 ~-4 
 setblock ~-4 ~-4 ~-4 spawner{SpawnCount:5,SpawnRange:4,Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}
 setblock ~-4 ~-4 ~4 spawner{SpawnCount:5,SpawnRange:4,Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}
-setblock ~-4 ~4 ~-4 spawner{SpawnCount:5,SpawnRange:4,Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}
-setblock ~-4 ~4 ~4 spawner{SpawnCount:5,SpawnRange:4,Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}
 setblock ~4 ~-4 ~-4 spawner{SpawnCount:5,SpawnRange:4,Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}
 setblock ~4 ~-4 ~4 spawner{SpawnCount:5,SpawnRange:4,Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}
-setblock ~4 ~4 ~-4 spawner{SpawnCount:5,SpawnRange:4,Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}
-setblock ~4 ~4 ~4 spawner{SpawnCount:5,SpawnRange:4,Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}
 tag @e[tag=maze-tile] remove maze-tile-selectable
 tag @s remove maze-visited

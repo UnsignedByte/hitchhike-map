@@ -1,0 +1,6 @@
+# Tick for a display marker
+tp @s ^ ^ ^0.5
+
+particle dust 1 0 0 1 ~ ~ ~ 0 0 0 0 1 force
+
+execute as @e at entity @e[tag=maze-node,scores={maze-path=0..},distance=..1,limit=1] run function hitchhike:story/maze/pathfind/displaynext
