@@ -12,4 +12,4 @@ tag @e remove maze-selected-next
 
 scoreboard players add #tmp maze-path 1
 
-execute if score #tmp maze-path = length maze-path at @e[tag=path-start,limit=1] facing entity @e[scores={maze-path=1},limit=1] feet run tp @s ~ ~ ~ ~ ~
+execute if score #tmp maze-path = length maze-path run tp @s @e[tag=path-start,limit=1]
