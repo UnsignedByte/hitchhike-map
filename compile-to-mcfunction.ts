@@ -1478,7 +1478,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute as @e[tag=maze-tile] if score @s maze-connections = #tmp maze-connections if score @s maze-tile-type = #tmp maze-tile-type run tag @s add maze-tile-selectable',
       `execute at @e[tag=maze-tile-selectable,sort=random,limit=1] run clone ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2} ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2}`,
       `clone ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2} ${-1000+(cellsize-1)/2} ${200+(cellsize-1)/2} ${+(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} `,
-      corners.map(x=>`execute align xyz positioned ~1 ~1 ~1 run setblock ~${x[0]*cellsize/2} ~${x[1]*cellsize/2} ~${x[2]*cellsize/2} spawner{SpawnCount:5,SpawnRange:${cellsize/2},Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}`),
+      corners.map(x=>`execute align xyz positioned ~1 ~1 ~1 run setblock ~${x[0]*cellsize/2} ~${x[1]*cellsize/2} ~${x[2]*cellsize/2} spawner{SpawnCount:5,SpawnRange:${(cellsize+1)/2},Delay:20,MinSpawnDelay:20,MaxSpawnDelay:100,MaxNearbyEntities:15,RequiredPlayerRange:15,SpawnData:{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["maze-mob","maze-mob-spawn-attempt"]}}`),
       'tag @e[tag=maze-tile] remove maze-tile-selectable',
       'tag @s remove maze-visited'
     ])
