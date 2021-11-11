@@ -8,7 +8,7 @@ scoreboard players operation @s maze-path = #tmp maze-path
 
 execute as @e[tag=maze-node,sort=nearest,distance=1..,limit=6] if score @s maze-path = #tmp maze-path run tag @s add maze-selected-next
 
-execute positioned ~ ~ ~ facing entity @e[tag=maze-selected-next,limit=1] run tp @s ~ ~ ~ ~ ~
+execute positioned ~ ~ ~ facing entity @e[tag=maze-selected-next,limit=1] feet run tp @s ~ ~ ~ ~ ~
 
 tag @e remove maze-selected-next
 
