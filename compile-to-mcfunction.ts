@@ -1269,7 +1269,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     schedule(`execute at @e[tag=maze-pearl] run particle minecraft:firework ~ ~ ~ 0 0 0 1 0`, 5, functions);
 
-    schedule(`execute as @e[tag=maze-path-display,type=marker] at @s run function hitchhike:story/maze/displaytick`, 10, functions)
+    schedule(`execute as @e[tag=maze-path-display,type=marker] at @s run function hitchhike:story/maze/pathfind/displaytick`, 10, functions)
 
     Object.entries(mobs).forEach(([k, v]) => {
       addfunc(`maze/mobs/summon/${k}`, [
