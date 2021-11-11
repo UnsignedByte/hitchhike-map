@@ -1506,6 +1506,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create/_cleanupall', [
+      // 'execute as @e[tag=maze-node] if score @s maze-tile-type matches 2 run tag @s add maze-tile-corrupted', //tag all maze corrupted nodes for later selection
       'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
       // 'tag @e[type=marker,tag=maze-node] remove maze-visited',
       'bossbar set minecraft:maze visible false',
