@@ -203,7 +203,8 @@ npc:
             global: true
           - message: Anyways, when you're ready, enter the teleporter and I'll send you into a (hopefully uncorrupted) section of the SD card. No promises, though!
           cond: 5
-          end: -1
+          end:
+            - 'scoreboard players set maze-started story-sawyer 0'
     simon:
       name: Simon Ursus Stephens
       colour: 0x85deb1
