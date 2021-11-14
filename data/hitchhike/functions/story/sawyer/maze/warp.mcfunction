@@ -1,7 +1,7 @@
 #> Warp player into the maze and start cutscene if necessary
 
 tag @p add maze-warping
-effect give @p regeneration 1000000 0 true
+effect give @a[tag=maze-warping] regeneration 1000000 0 true
 execute unless entity @a[tag=maze-mob] run tp @a[tag=maze-warping] @e[tag=maze-start,limit=1]
 tp @a[tag=maze-warping] @r[tag=maze-mob]
 tag @a[tag=maze-warping] add maze-mob
