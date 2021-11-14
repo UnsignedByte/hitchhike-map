@@ -205,6 +205,12 @@ npc:
           cond: 5
           end:
             - 'scoreboard players set maze-started story-sawyer 0'
+            - 'scoreboard players set ${select.self} dialogue-status -1'
+        - messages:
+          - message: Here we are, the inside of the SD Card.
+            global: true
+          cond: 6
+          end: -1
     simon:
       name: Simon Ursus Stephens
       colour: 0x85deb1
