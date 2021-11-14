@@ -1380,6 +1380,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/create/_z', [
       'summon marker ~ ~ ~ {Tags:["maze-marker","maze-node"]}',
       `forceload add ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
+      `fill ~-${(cellsize-1)/2} ~-${(cellsize-1)/2} ~-${(cellsize-1)/2} ~${(cellsize+1)/2} ~${(cellsize+1)/2} ~${(cellsize+1)/2} air`,
       // `clone ${-1000-(cellsize-1)/2} ${200-(cellsize-1)/2} ${-(cellsize-1)/2} ${-1000+(cellsize-1)/2} ${200+(cellsize-1)/2} ${(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2}`,
       'scoreboard players remove _z maze 1',
       `tp @s ~ ~ ~${cellsize}`,

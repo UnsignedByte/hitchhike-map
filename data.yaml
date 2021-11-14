@@ -199,8 +199,6 @@ npc:
             global: true
           - message: It seems a big portion of the card is corrupted, which might make it dangerous, so I would recommend you take some tools with you!
             global: true
-          - message: Try throwing them out with "Q" (or whatever button you have that bound to)... throwing things at enemies often works, after all.
-            global: true
           - message: Anyways, when you're ready, enter the teleporter and I'll send you into a (hopefully uncorrupted) section of the SD card. No promises, though!
           cond: 5
           end:
@@ -208,6 +206,10 @@ npc:
             - 'scoreboard players set ${select.self} dialogue-status -1'
         - messages:
           - message: Here we are, the inside of the SD Card.
+            global: true
+          - message: Be careful, the corrupted areas might be a little dangerous. Hopefully my tools can help you out, though.
+            global: true
+          - message: Try throwing them out with "Q" (or whatever button you have that bound to)... throwing things at enemies often works, after all.
             global: true
           cond: 6
           end: -1
