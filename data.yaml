@@ -211,6 +211,8 @@ npc:
             global: true
           - message: Try throwing them out with "Q" (or whatever button you have that bound to)... throwing things at enemies often works, after all.
             global: true
+          - message: Of course, you could also just slap your enemies like a barbarian, that's always an option.
+            global: true
           cond: 6
           end: -1
     simon:
