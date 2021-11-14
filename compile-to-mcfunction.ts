@@ -1172,8 +1172,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     schedule([
       `scoreboard players set mobcount maze 0`,
       `execute as @e[tag=maze-mob,type=!player,tag=!maze-mob-spawn-attempt] run scoreboard players add mobcount maze 1`,
-      'execute if score enabled maze matches 1 if score mobcount maze matches ..50 as @e[tag=maze-mob-spawn-attempt,limit=1,sort=random] at @s run function hitchhike:story/maze/mobs/summonbatch',
-      'kill @e[tag=maze-mob-spawn-attempt]'
+      'execute if score enabled maze matches 1 if score mobcount maze matches ..50 run function hitchhike:story/maze/mobs/attemptsummon'
     ], 20, functions)
 
     schedule([
