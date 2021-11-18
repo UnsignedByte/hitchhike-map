@@ -1,4 +1,5 @@
 scoreboard players set -held story-sawyer 0
+scoreboard players set maze-stage story-sawyer 0
 
 # kill minecarts
 kill @e[tag=sawyer-holder]

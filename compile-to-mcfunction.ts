@@ -1076,8 +1076,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `summon vindicator ~ ~ ~ {Silent:1b,LeftHanded:1b,Health:80f,DeathLootTable:"minecraft:empty",Tags:["maze-mob-johnny","maze-mob","maze-rare"],CustomName:'{"text":"Johnny\\'); DROP ANVIL Entities;--","color":"dark_red","bold":true}',HandItems:[{id:"minecraft:anvil",Count:1b,tag:{Enchantments:[{}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:iron_trapdoor",Count:1b}],Attributes:[{Name:generic.max_health,Base:80},{Name:generic.follow_range,Base:20},{Name:generic.knockback_resistance,Base:0.8},{Name:generic.movement_speed,Base:0.1},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:10},{Name:generic.armor_toughness,Base:5},{Name:generic.attack_knockback,Base:1}]}`,
         `summon bee ~ ~ ~ {Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:8f,AngerTime:2147483647,Tags:["maze-mob","maze-rare","maze-mob-stack"],Passengers:[{id:"minecraft:bee",Silent:1b,CanPickUpLoot:0b,Health:8f,AngerTime:2147483647,Tags:["maze-mob","maze-rare","maze-mob-stack"],Passengers:[{id:"minecraft:bee",Silent:1b,CanPickUpLoot:0b,Health:8f,AngerTime:2147483647,Tags:["maze-mob","maze-rare","maze-mob-stack"],Passengers:[{id:"minecraft:bee",Silent:1b,CanPickUpLoot:0b,Health:8f,AngerTime:2147483647,Tags:["maze-mob","maze-rare","maze-mob-stack"],Passengers:[{id:"minecraft:bee",Silent:1b,CanPickUpLoot:0b,Health:8f,AngerTime:2147483647,Tags:["maze-mob","maze-rare","maze-mob-stack"],CustomName:'{"text":"Stack","color":"dark_red","bold":true}',Attributes:[{Name:generic.max_health,Base:8},{Name:generic.follow_range,Base:16},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.1},{Name:generic.attack_damage,Base:3}]}],CustomName:'{"text":"Stack","color":"dark_red","bold":true}',Attributes:[{Name:generic.max_health,Base:8},{Name:generic.follow_range,Base:16},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.1},{Name:generic.attack_damage,Base:3}]}],CustomName:'{"text":"Stack","color":"dark_red","bold":true}',Attributes:[{Name:generic.max_health,Base:8},{Name:generic.follow_range,Base:16},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.1},{Name:generic.attack_damage,Base:3}]}],CustomName:'{"text":"Stack","color":"dark_red","bold":true}',Attributes:[{Name:generic.max_health,Base:8},{Name:generic.follow_range,Base:16},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.1},{Name:generic.attack_damage,Base:3}]}],CustomName:'{"text":"Stack","color":"dark_red","bold":true}',Attributes:[{Name:generic.max_health,Base:8},{Name:generic.follow_range,Base:16},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.1},{Name:generic.attack_damage,Base:3}]}`
       ],
-      boss: [
-      ],
       ip_minion: [
         `summon bee ~ ~ ~ {Silent:1b,Invulnerable:1b,AngerTime:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:area_effect_cloud",CustomNameVisible:1b,Duration:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:zombie",Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:2f,IsBaby:1b,Tags:["maze-mob"],ArmorItems:[{},{},{},{id:"minecraft:red_stained_glass",Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2},{Name:generic.attack_damage,Base:1}]}],CustomName:'{"text":"Malicious Packet","color":"red"}'}],ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:0}]}`,
         `summon bee ~ ~ ~ {Silent:1b,Invulnerable:1b,AngerTime:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:area_effect_cloud",CustomNameVisible:1b,Duration:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:zombie",Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:2f,IsBaby:1b,Tags:["maze-mob"],HandItems:[{id:"minecraft:cookie",Count:1b},{}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2},{Name:generic.attack_damage,Base:1}]}],CustomName:'{"text":"Tracking Cookie","color":"#875822"}'}],ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:0}]}`,
@@ -1086,6 +1084,25 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `summon bee ~ ~ ~ {Silent:1b,DeathLootTable:"minecraft:empty",Health:5f,AngerTime:2147483647,Tags:["maze-mob","maze-mob-stackoverflow"],CustomName:'{"text":"StackOverflow","color":"red"}',Attributes:[{Name:generic.max_health,Base:5},{Name:generic.follow_range,Base:16},{Name:generic.attack_damage,Base:2}]}`
       ]
     }
+
+    const bosses: Record<string, any> = {
+      segfault: {
+        summon: `summon magma_cube ~ ~ ~ {PersistenceRequired:1b,Health:2048f,Size:3,Tags:["maze-mob","maze-boss"],CustomName:'{"text":"Segmentation Fault","color":"dark_purple","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.knockback_resistance,Base:1},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:30}]}`,
+        health: 100
+      }
+    }
+
+    Object.entries(bosses).forEach(([k, v]) => {
+      addfunc(`maze/mobs/summon/boss/${k}`, [
+        v.summon,
+        'bossbar set maze:boss players @a',
+        'bossbar set maze:boss color purple',
+        `bossbar set maze:boss max ${v.health*100}`,
+        `bossbar set maze:boss visible true`,
+        `bossbar set maze:boss style notched_6`,
+        `schedule function hitchhike:story/sawyer/maze/bossbar 1t`
+      ])
+    })
 
     // main weapons
     let weapons: Record<string, any> = {
@@ -1177,7 +1194,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     schedule([
       `execute at @a run tag @e[tag=maze-mob,tag=!maze-host,type=!player,distance=..24,sort=nearest,limit=40] add maze-mob-safe`,
-      `tp @e[tag=maze-mob,tag=!maze-mob-safe,type=!player,tag=!maze-host] 0 -1000 0`,
+      `tp @e[tag=maze-mob,tag=!maze-mob-safe,type=!player,tag=!maze-host,tag=!maze-boss] 0 -1000 0`,
       `tag @e remove maze-mob-safe`,
       `execute if score enabled maze matches 1 run effect give @a minecraft:saturation 1000000 0 true`
     ], 100, functions)
@@ -1775,6 +1792,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       neighbors.map((n, i) => [
         `execute if block ~${n[0]*(cellsize+1)/2} ~${n[1]*(cellsize+1)/2} ~${n[2]*(cellsize+1)/2} lime_stained_glass run scoreboard players add @s maze-connections ${1 << i}`
       ])
+    ])
+
+
+    addfunc('sawyer/maze/awaitpathend', [
+      `scoreboard players set #tmp maze 0`,
+      `execute store success score #tmp maze at @e[tag=path-goal,tag=maze-node] positioned ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} if entity @a[dx=${cellsize},dz=${cellsize},dy=${cellsize}] run function hitchhike:story/sawyer/maze/goalreached`,
+      `execute if score #tmp maze matches 0 run schedule function generated:story/sawyer/maze/awaitpathend 5t`
     ])
   })();
 }

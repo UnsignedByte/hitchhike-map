@@ -213,6 +213,14 @@ npc:
             global: true
           - message: Of course, you could also just slap your enemies like a barbarian, that's always an option.
             global: true
+          - message: Anyways, can you see the floating green path I've lit up?
+            global: true
+          - message: That should lead you toward a corrupted section of the SD card.
+            global: true
+          - message: If you could follow it there and collect some important information, I can decorrupt more of the SD card for you!
+            global: true
+          - message: Best of luck! Remember, running away is rarely a bad choice; you don't have to fight everything.
+            global: true
           cond: 6
           end: -1
     simon:
