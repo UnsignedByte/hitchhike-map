@@ -2,7 +2,8 @@
 
 execute store result score bossbar maze run bossbar get maze:boss max
 scoreboard players operation bossbar maze *= 100 const
-execute store result score bossbar maze run data get entity @e[tag=maze-boss,limit=1] Health 100
+execute store result score #tmp maze run data get entity @e[tag=maze-boss,limit=1] Health 100
+scoreboard players operation bossbar maze += #tmp maze
 scoreboard players remove bossbar maze 204800
 execute store result bossbar maze:boss value run scoreboard players get bossbar maze
 
