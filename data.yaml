@@ -207,9 +207,9 @@ npc:
         - messages:
           - message: Here we are, the inside of the SD Card.
             global: true
-          - message: Be careful, the corrupted areas might be a little dangerous. Hopefully my tools can help you out, though.
+          - message: Be careful, corrupted areas can be a little dangerous. Hopefully my tools can help you out, though.
             global: true
-          - message: Try throwing them out with "Q" (or whatever button you have that bound to)... throwing things at enemies often works, after all.
+          - message: Try throwing them out with "Q"... throwing things at enemies often works, after all.
             global: true
           - message: Of course, you could also just slap your enemies like a barbarian, that's always an option.
             global: true
@@ -217,11 +217,20 @@ npc:
             global: true
           - message: That should lead you toward a corrupted section of the SD card.
             global: true
-          - message: If you could follow it there and collect some important information, I can decorrupt more of the SD card for you!
+          - message: If you could follow it there and take care of the source of the corruption there, I can fix up more of the SD card for you!
             global: true
-          - message: Best of luck! Remember, running away is rarely a bad choice; you don't have to fight everything.
+          - message: Best of luck!
             global: true
           cond: 6
+          end: -1
+        - messages:
+          - message: Great job! I see you've taken care of the first source.
+            global: true
+          - message: I've looked at the rest, and there should only be two more.
+            global: true
+          - message: Onward, Dorothy! Follow the green dust road.
+            global: true
+          cond: 7
           end: -1
     simon:
       name: Simon Ursus Stephens
