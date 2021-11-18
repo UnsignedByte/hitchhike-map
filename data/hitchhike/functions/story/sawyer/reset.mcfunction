@@ -1,5 +1,6 @@
 scoreboard players set -held story-sawyer 0
 scoreboard players set maze-stage story-sawyer 0
+bossbar set maze:boss visible false
 
 # kill minecarts
 kill @e[tag=sawyer-holder]
