@@ -9,4 +9,4 @@ execute store result bossbar maze:boss value run scoreboard players get bossbar 
 
 execute if score bossbar maze matches ..0 run function hitchhike:story/sawyer/maze/killboss
 
-execute if score bossbar maze matches 1.. run schedule function hitchhike:story/sawyer/bossbar 1t
+execute if score bossbar maze matches 1.. run schedule function hitchhike:story/sawyer/maze/bossbar 1t
