@@ -8,3 +8,5 @@ tag @e[tag=npc-sawyer] add selected_npc
 execute at @e[tag=maze-start,limit=1] run tag @p add npc_selector
 
 function hitchhike:story/maze/pathfind/genpath
+
+function generated:story/sawyer/maze/awaitpathend
