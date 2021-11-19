@@ -1091,7 +1091,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     schedule([
       `execute if score enabled maze matches 1 as @e[tag=maze-headswap] run function generated:story/maze/mobs/move/magma/swaphead`
-    ], 5, functions)
+    ], 20, functions)
 
     const swap_items = ['red_stained_glass', 'barrier', 'melon_slice', 'apple', 'redstone_block', 'red_mushroom', 'tnt', 'red_mushroom_block', 'red_dye', 'fermented_spider_eye', 'poppy', 'red_shulker_box']
 
