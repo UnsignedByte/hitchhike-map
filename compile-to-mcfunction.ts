@@ -1130,9 +1130,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/mobs/boss/segfault/summon_arrows', [
       'summon marker ~ ~ ~ {Tags:["maze-arrow-source","maze-mob"]}',
-      [...Array(18)].map((x, i)=>i).map(x=>[...Array(7)].map((y, i)=>i).map(y=>{
+      [...Array(18)].map((x, i)=>i).map(x=>[...Array(9)].map((y, i)=>i).map(y=>{
         let xdeg = x*20;
-        let ydeg = y*20-40;
+        let ydeg = y*20-90;
 
         let xrad = xdeg*Math.PI/180;
         let yrad = ydeg*Math.PI/180;
