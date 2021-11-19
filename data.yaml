@@ -226,6 +226,8 @@ npc:
         - messages:
           - message: Great job! I see you've taken care of the first source.
             global: true
+          - message: You should see portions of the card being fixed up soon.
+            gloabl: true
           - message: I've looked at the rest, and there should only be two more.
             global: true
           - message: Onward, Dorothy! Follow the green dust road.

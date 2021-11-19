@@ -1065,8 +1065,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     const mobs: Record<string, string[]> = {
       common: [
-        `summon zombie ~ ~ ~ {NoGravity:0b,Silent:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Health:5f,IsBaby:1b,Tags:["maze-common","maze-mob","maze-mob-null"],CustomName:'{"text":"nullptr","color":"red","bold":true}',ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],Attributes:[{Name:generic.max_health,Base:5},{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.25},{Name:generic.attack_damage,Base:4}]}`,
-        `summon cave_spider ~ ~ ~ {DeathLootTable:"minecraft:empty",FallFlying:1b,PersistenceRequired:0b,Health:15f,Tags:["maze-common","maze-mob","maze-mob-gridbug"],CustomName:'{"text":"gridbug","color":"red","bold":true}',Attributes:[{Name:generic.max_health,Base:15},{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:3}]}`,
+        `summon zombie ~ ~ ~ {NoGravity:0b,Silent:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Health:4f,IsBaby:1b,Tags:["maze-common","maze-mob","maze-mob-null"],CustomName:'{"text":"nullptr","color":"red","bold":true}',ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],Attributes:[{Name:generic.max_health,Base:4},{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.25},{Name:generic.attack_damage,Base:4}]}`,
+        `summon cave_spider ~ ~ ~ {DeathLootTable:"minecraft:empty",FallFlying:1b,PersistenceRequired:0b,Health:10f,Tags:["maze-common","maze-mob","maze-mob-gridbug"],CustomName:'{"text":"gridbug","color":"red","bold":true}',Attributes:[{Name:generic.max_health,Base:10},{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:3}]}`,
         `summon bee ~ ~ ~ {Silent:1b,Invulnerable:0b,AngerTime:2147483647,Tags:["maze-mob","maze-host","maze-mob-walrus"],Passengers:[{id:"minecraft:area_effect_cloud",CustomNameVisible:1b,Duration:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:zombie",Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:2f,IsBaby:1b,Tags:["maze-mob"],ArmorItems:[{},{},{},{id:'minecraft:player_head',Count:1b,tag:{SkullOwner:{Id:[I;-1585053926,-215070752,-1100916127,789778227],Properties:{textures:[{Value:'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdiYWVkYWY5YWQ5NTQ3NGViMWJlNTg5MjQ0NDVkZmM3N2JiZGMyNTJjYzFjODE2NDRjZjcxNTRjNDQxIn19fQ=='}]}}}}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2},{Name:generic.attack_damage,Base:1}]}],CustomName:'{"text":"Walrus Operator","color":"red"}'}],ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],ActiveEffects:[{Id:11b,Amplifier:5b,Duration:2147483647},{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:0}]}`,
         `summon skeleton ~ ~ ~ {Health:15f,Tags:["maze-mob","maze-symlink"],CustomName:'{"text":"SymLink","color":"red"}',HandItems:[{id:"minecraft:bow",Count:1b},{}],Attributes:[{Name:generic.movement_speed,Base:0.2}]}`,
         `summon zombie ~ ~ ~ {Silent:1b,Invulnerable:0b,PersistenceRequired:1b,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:guardian",Health:2f,Tags:["maze-mob","maze-common","maze-mob-dsstore"],CustomName:'{"text":".DS_Store","color":"red"}',Attributes:[{Name:generic.max_health,Base:2}]}],CustomName:'{"text":"SymLink","color":"red"}',ArmorItems:[{id:'minecraft:netherite_boots',Count:1b,tag:{Enchantments:[{}]}},{},{},{}],ActiveEffects:[{Id:11b,Amplifier:5b,Duration:2147483647},{Id:14b,Amplifier:0b,Duration:2147483647}],Attributes:[{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.5}]}`
@@ -1080,17 +1080,80 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `summon bee ~ ~ ~ {Silent:1b,Invulnerable:1b,AngerTime:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:area_effect_cloud",CustomNameVisible:1b,Duration:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:zombie",Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:2f,IsBaby:1b,Tags:["maze-mob"],ArmorItems:[{},{},{},{id:"minecraft:red_stained_glass",Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2},{Name:generic.attack_damage,Base:1}]}],CustomName:'{"text":"Malicious Packet","color":"red"}'}],ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:0}]}`,
         `summon bee ~ ~ ~ {Silent:1b,Invulnerable:1b,AngerTime:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:area_effect_cloud",CustomNameVisible:1b,Duration:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:zombie",Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:2f,IsBaby:1b,Tags:["maze-mob"],HandItems:[{id:"minecraft:cookie",Count:1b},{}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2},{Name:generic.attack_damage,Base:1}]}],CustomName:'{"text":"Tracking Cookie","color":"#875822"}'}],ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:0}]}`,
       ],
+      magma: [
+        `summon magma_cube ~ ~ ~ {Health:5f,Size:0,Tags:["maze-mob"],CustomName:'{"text":"(Core Dumped)","color":"red","bold":true}',Attributes:[{Name:generic.max_health,Base:5}]}`,
+        `summon bee ~ ~ ~ {Silent:1b,Invulnerable:1b,AngerTime:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:area_effect_cloud",CustomNameVisible:1b,Duration:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:zombie",Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:2f,IsBaby:1b,Tags:["maze-mob","maze-headswap"],ArmorItems:[{},{},{},{id:'minecraft:red_stained_glass',Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2},{Name:generic.attack_damage,Base:1}]}],CustomName:'{"text":"error C2664: \'void std::vector<block,std::allocator<_Ty>>::push_back(const block &)\': cannot convert argument 1 from \'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<block>>>\' to \'block &&\'","color":"red"}'}],ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:0}]}`
+      ],
       stackoverflow: [
         `summon bee ~ ~ ~ {Silent:1b,DeathLootTable:"minecraft:empty",Health:5f,AngerTime:2147483647,Tags:["maze-mob","maze-mob-stackoverflow"],CustomName:'{"text":"StackOverflow","color":"red"}',Attributes:[{Name:generic.max_health,Base:5},{Name:generic.follow_range,Base:16},{Name:generic.attack_damage,Base:2}]}`
       ]
     }
 
+    schedule([
+      `execute if score enabled maze matches 1 as @e[tag=maze-headswap] run function generated:story/maze/mobs/move/magma/swaphead`
+    ], 5, functions)
+
+    const swap_items = ['red_stained_glass', 'barrier', 'melon_slice', 'apple', 'redstone_block', 'red_mushroom', 'tnt', 'red_mushroom_block', 'red_dye', 'fermented_spider_eye', 'poppy', 'red_shulker_box']
+
+    addfunc('maze/mobs/move/magma/swaphead', [
+      `scoreboard players set _rngm vars ${swap_items.length}`,
+      `function generated:rng/rng`,
+      swap_items.map(x=>`data modify entity @s ArmorItems[3] set value {id:"minecraft:${x}",Count:1b}`)
+    ])
+
     const bosses: Record<string, any> = {
       segfault: {
-        summon: `summon magma_cube ~ ~ ~ {PersistenceRequired:1b,Health:2048f,Size:3,Tags:["maze-mob","maze-boss"],CustomName:'{"text":"Segmentation Fault","color":"dark_purple","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.knockback_resistance,Base:1},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:30}]}`,
-        health: 100
+        summon: `summon magma_cube ~ ~ ~ {PersistenceRequired:1b,Health:2048f,Size:3,Tags:["maze-mob","maze-boss","maze-segfault"],CustomName:'{"text":"Segmentation Fault","color":"dark_purple","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.knockback_resistance,Base:1},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:30}]}`,
+        health: 150,
+        stages: [
+          {
+            moves: [
+              [
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/summon_magma`
+              ]
+            ],
+            init: [
+              'say hi'
+            ]
+          }
+        ]
       }
     }
+
+    addfunc('maze/mobs/boss/segfault/summon_magma', [
+      `function generated:story/maze/mobs/summon/magma`,
+      `execute if predicate hitchhike:ipminionchance positioned ~ ~ ~ run function generated:story/maze/mobs/boss/segfault/summon_magma`
+    ])
+
+    functions[`story/maze/mobs/move`] = ``;
+    // add mob attack phases
+    const addmovesequence = (id: string, moves: Lines[][], stage: number = -1) => {
+      if (stage === -1) {
+        functions[`story/maze/mobs/move`] = [
+          functions[`story/maze/mobs/move`],
+          `execute as @e[tag=maze-mob,tag=maze-mob-${id}] at @s if entity @p[distance=..16] if predicate hitchhike:movechance run function generated:story/maze/mobs/move/${id}/main`
+        ]
+      } else {
+        functions[`story/maze/mobs/move`] = [
+          functions[`story/maze/mobs/move`],
+          `execute as @e[tag=maze-boss,tag=maze-boss-${id},scores={boss-stage=${stage}}] at @s if entity @p[distance=..16] if predicate hitchhike:movechance run function generated:story/maze/mobs/move/boss/stage/${stage}/${id}/main`
+        ]
+        id = `boss/stage/${stage}/${id}`;
+      }
+
+      addfunc(`maze/mobs/move/${id}/main`, [
+        `scoreboard players operation @s maze-mob-phase %= ${moves.length} const`,
+        ``,
+        moves.map((x: Lines[], i: number)=>{
+          addfunc(`maze/mobs/move/${id}/move-${i}`, x)
+
+          return `execute if score @s maze-mob-phase matches ${i} run function generated:story/maze/mobs/move/${id}/move-${i}`
+        }),
+        `scoreboard players add @s maze-mob-phase 1`,
+      ])
+    }
+
+    addfunc('maze/mobs/boss/getstage', [])
 
     Object.entries(bosses).forEach(([k, v]) => {
       addfunc(`maze/mobs/summon/boss/${k}`, [
@@ -1102,6 +1165,30 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `bossbar set maze:boss style notched_6`,
         `schedule function hitchhike:story/sawyer/maze/bossbar 1t`
       ])
+      addfunc(`maze/mobs/boss/init/${k}`, [])
+      v.stages.forEach((stage: any, i: number)=> {
+        functions[`story/maze/mobs/boss/init/${k}`] = [
+          functions[`story/maze/mobs/boss/init/${k}`],
+          `execute if score @s boss-stage matches ${i} as @s run function generated:story/maze/mobs/boss/init/${k}/stage-${i}`
+        ]
+
+        addfunc(`maze/mobs/boss/init/${k}/stage-${i}`, stage.init);
+        addmovesequence(k, stage.moves, i);
+      })
+
+      addfunc(`maze/mobs/boss/getstage/${k}`, [
+        'scoreboard players operation #tmp boss-stage = @s boss-stage',
+        'scoreboard players operation @s boss-stage = bossbar maze',
+        `scoreboard players operation @s boss-stage /= ${v.health} const`,
+        'scoreboard players remove @s boss-stage 1',
+        `scoreboard players operation @s boss-stage /= ${Math.ceil(100/v.stages.length)} const`, // now the stage is from 0 to v.stages.length-1
+        `execute as @s unless score @s boss-stage = #tmp boss-stage run function generated:story/maze/mobs/boss/init/${k}`
+      ])
+
+      functions[`story/maze/mobs/boss/getstage`] = [
+        functions[`story/maze/mobs/boss/getstage`],
+        `execute as @s[tag=maze-boss-${k}] run function generated:story/maze/mobs/boss/getstage/${k}`
+      ]
     })
 
     // main weapons
@@ -1198,26 +1285,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `tag @e remove maze-mob-safe`,
       `execute if score enabled maze matches 1 run effect give @a minecraft:saturation 1000000 0 true`
     ], 100, functions)
-
-    functions[`story/maze/mobs/move`] = ``;
-
-    // add mob attack phases
-    const addmovesequence = (id: string, moves: Lines[][]) => {
-      functions[`story/maze/mobs/move`] = [
-        functions[`story/maze/mobs/move`],
-        `execute as @e[tag=maze-mob,tag=maze-mob-${id}] at @s if entity @p[distance=..16] if predicate hitchhike:movechance run function generated:story/maze/mobs/move/${id}/main`
-      ]
-      addfunc(`maze/mobs/move/${id}/main`, [
-        `scoreboard players operation @s maze-mob-phase %= ${moves.length} const`,
-        ``,
-        moves.map((x: Lines[], i: number)=>{
-          addfunc(`maze/mobs/move/${id}/move-${i}`, x)
-
-          return `execute if score @s maze-mob-phase matches ${i} run function generated:story/maze/mobs/move/${id}/move-${i}`
-        }),
-        `scoreboard players add @s maze-mob-phase 1`,
-      ])
-    }
 
     addmovesequence("symlink", [
       [

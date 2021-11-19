@@ -10,7 +10,7 @@ execute at @e[tag=path-goal] run tag @e[tag=maze-visited,sort=furthest,limit=100
 execute unless score maze-stage story-sawyer matches 3.. as @e[tag=maze-visited] unless predicate hitchhike:onethird run tag @s remove maze-visited
 scoreboard players set @e[tag=maze-visited] maze-tile-type 0
 scoreboard players operation batchsize maze = size maze
-function generated:story/maze/create/_loadcellbatch
+schedule function generated:story/maze/create/_loadcellbatch 200t
 
 tag @e remove path-goal
 
