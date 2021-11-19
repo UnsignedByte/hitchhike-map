@@ -1110,6 +1110,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             moves: [
               [
                 `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/summon_magma`
+              ],
+              [
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/summon_arrows`
               ]
             ],
             init: [
