@@ -1158,6 +1158,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     Object.entries(bosses).forEach(([k, v]) => {
       addfunc(`maze/mobs/summon/boss/${k}`, [
         v.summon,
+        `scoreboard players set @e[tag=maze-boss,sort=nearest,limit=1,distance=..0.1] boss-stage -1`,
         'bossbar set maze:boss players @a',
         'bossbar set maze:boss color purple',
         `bossbar set maze:boss max ${v.health*100}`,
