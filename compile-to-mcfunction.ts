@@ -1131,7 +1131,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/mobs/boss/segfault/initiate_arrows', [
       `particle minecraft:flame ~ ~ ~ 2 2 2 0.1 100`,
       `playsound minecraft:entity.ravager.step hostile @a ~ ~ ~ 100 0.2`,
-      `schedule function generated:story/maze/mobs/boss/segfault/do_summon_arrows 20t`
+      `schedule function generated:story/maze/mobs/boss/segfault/do_summon_arrows 20t`,
+      `schedule function generated:story/maze/mobs/boss/segfault/kill_arrows 30t`
     ])
 
     addfunc('maze/mobs/boss/segfault/do_summon_arrows', [
@@ -1140,6 +1141,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `effect give @e[tag=maze-boss-segfault,limit=1] regeneration 2 2 true`,
       `execute at @e[tag=maze-boss-segfault,limit=1] positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/summon_arrows`
     ])
+
+    addfunc('maze/mobs/boss/segfault/kill_arrows', [`kill @e[tag=maze-arrow]`])
 
     addfunc('maze/mobs/boss/segfault/summon_arrows', [
       // 'summon marker ~ ~ ~ {Tags:["maze-arrow-source","maze-mob"]}',
