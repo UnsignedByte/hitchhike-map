@@ -1112,7 +1112,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                 `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/summon_magma`
               ],
               [
-                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/summon_arrows`
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/initiate_arrows`
               ]
             ],
             init: [
@@ -1128,6 +1128,17 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute if predicate hitchhike:ipminionchance positioned ~ ~ ~ run function generated:story/maze/mobs/boss/segfault/summon_magma`
     ])
 
+    addfunc('maze/mobs/boss/segfault/initiate_arrows', [
+      `particle minecraft:flame ~ ~ ~ 2 2 2 0.1 100`,
+      `playsound minecraft:entity.ravager.step hostile @a ~ ~ ~ 100 0.2`,
+      `schedule function generated:story/maze/mobs/boss/segfault/do_summon_arrows 20t`
+    ])
+
+    addfunc('maze/mobs/segfault/do_summon_arrows', [
+      'playsound minecraft:entity.ghast.shoot hostile @a ~ ~ ~ 100 1.4',
+      `execute at @e[tag=maze-boss-segfault,limit=1] positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segrault/summon_arrows`
+    ])
+
     addfunc('maze/mobs/boss/segfault/summon_arrows', [
       'summon marker ~ ~ ~ {Tags:["maze-arrow-source","maze-mob"]}',
       [...Array(18)].map((x, i)=>i).map(x=>[...Array(9)].map((y, i)=>i).map(y=>{
@@ -1137,7 +1148,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         let xrad = xdeg*Math.PI/180;
         let yrad = ydeg*Math.PI/180;
         return [
-          `execute rotated ${xdeg} ${ydeg} run summon arrow ^ ^ ^2 {NoGravity:0b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,Motion:[${(-Math.cos(yrad)*Math.sin(xrad)).toFixed(4)},${(Math.sin(yrad)).toFixed(4)},${(Math.cos(yrad)*Math.cos(xrad)).toFixed(4)}],Tags:["maze-arrow","maze-mob"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`
+          `execute rotated ${xdeg} ${ydeg} run summon arrow ^ ^ ^3 {NoGravity:0b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,Motion:[${(-Math.cos(yrad)*Math.sin(xrad)).toFixed(4)},${(Math.sin(yrad)).toFixed(4)},${(Math.cos(yrad)*Math.cos(xrad)).toFixed(4)}],Tags:["maze-arrow","maze-mob"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`
         ]
       }))
     ])
