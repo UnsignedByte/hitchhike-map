@@ -1103,7 +1103,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     const bosses: Record<string, any> = {
       segfault: {
-        summon: `summon magma_cube ~ ~ ~ {PersistenceRequired:1b,Health:2048f,Size:3,Tags:["maze-mob","maze-boss","maze-segfault"],CustomName:'{"text":"Segmentation Fault","color":"dark_purple","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.knockback_resistance,Base:1},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:30}]}`,
+        summon: `summon magma_cube ~ ~ ~ {PersistenceRequired:1b,Health:2048f,Size:3,Tags:["maze-mob","maze-boss","maze-boss-segfault"],CustomName:'{"text":"Segmentation Fault","color":"dark_purple","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.knockback_resistance,Base:1},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:30}]}`,
         health: 150,
         stages: [
           {
@@ -1113,7 +1113,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               ]
             ],
             init: [
-              'say hi'
+              'effect give @s regeneration 1000000 0 true'
             ]
           }
         ]
@@ -1123,6 +1123,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/mobs/boss/segfault/summon_magma', [
       `function generated:story/maze/mobs/summon/magma`,
       `execute if predicate hitchhike:ipminionchance positioned ~ ~ ~ run function generated:story/maze/mobs/boss/segfault/summon_magma`
+    ])
+
+    addfunc('maze/mobs/boss/segfault/summon_arrows', [
+      'summon marker ~ ~ ~ {Tags:["maze-arrow-source","maze-mob"]}',
+      [...Array(36)].map((x, i)=>i).map(x=>[...Array(10)].map((y, i)=>i).map(y=>[
+        `execute rotated ${x*10} ${y*18-90} run summon arrow ^ ^ ^1 {NoGravity:0b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,Motion:[0.0,1.0,0.0],Tags:["maze-arrow","maze-mob"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`
+      ]))
     ])
 
     functions[`story/maze/mobs/move`] = ``;
