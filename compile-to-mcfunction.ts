@@ -1134,7 +1134,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         let xrad = xdeg*Math.PI/180;
         let yrad = ydeg*Math.PI/180;
         return [
-          `execute rotated ${xdeg} ${ydeg} run summon arrow ^ ^ ^2 {NoGravity:1b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,Motion:[${-Math.cos(yrad)*Math.sin(xrad)},${Math.sin(yrad)},${Math.cos(yrad)*Math.cos(xrad)}],Tags:["maze-arrow","maze-mob"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`
+          `execute rotated ${xdeg} ${ydeg} run summon arrow ^ ^ ^2 {NoGravity:1b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,Motion:[${(-Math.cos(yrad)*Math.sin(xrad)).toFixed(4)},${(Math.sin(yrad)).toFixed(4)},${(Math.cos(yrad)*Math.cos(xrad)).toFixed(4)}],Tags:["maze-arrow","maze-mob"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`
         ]
       }))
     ])
