@@ -1127,9 +1127,16 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/mobs/boss/segfault/summon_arrows', [
       'summon marker ~ ~ ~ {Tags:["maze-arrow-source","maze-mob"]}',
-      [...Array(18)].map((x, i)=>i).map(x=>[...Array(9)].map((y, i)=>i).map(y=>[
-        `execute rotated ${x*20} ${y*20-90} run summon arrow ^ ^ ^2 {NoGravity:1b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,Motion:[0.0,0.0,0.0],Tags:["maze-arrow","maze-mob"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`
-      ]))
+      [...Array(18)].map((x, i)=>i).map(x=>[...Array(9)].map((y, i)=>i).map(y=>{
+        let xdeg = x*20;
+        let ydeg = y*20-90;
+
+        let xrad = xdeg*Math.PI/180;
+        let yrad = ydeg*Math.PI/180;
+        return [
+          `execute rotated ${xdeg} ${ydeg} run summon arrow ^ ^ ^2 {NoGravity:1b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,Motion:[${-Math.cos(yrad)*Math.sin(xrad)},${Math.sin(yrad)},${Math.cos(yrad)*Math.cos(xrad)}],Tags:["maze-arrow","maze-mob"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`
+        ]
+      }))
     ])
 
     functions[`story/maze/mobs/move`] = ``;
