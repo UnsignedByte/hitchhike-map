@@ -1098,7 +1098,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/mobs/move/magma/swaphead', [
       `scoreboard players set _rngm vars ${swap_items.length}`,
       `function generated:rng/rng`,
-      swap_items.map(x=>`data modify entity @s ArmorItems[3] set value {id:"minecraft:${x}",Count:1b}`)
+      swap_items.map((x, i)=>`execute if score rng vars matches ${i} run data modify entity @s ArmorItems[3] set value {id:"minecraft:${x}",Count:1b}`)
     ])
 
     const bosses: Record<string, any> = {
