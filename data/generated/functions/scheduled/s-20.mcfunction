@@ -3,7 +3,7 @@ execute as @e[tag=maze-shulker-bullet] at @s run data modify entity @s Target se
 execute as @e[tag=maze-mob,type=bee] run data modify entity @s AngerTime set value 2147483647
 execute as @e[tag=maze-mob,type=bee] run data modify entity @s HasStung set value 0
 scoreboard players set mobcount maze 0
-execute as @e[tag=maze-mob,type=!player,tag=!maze-mob-spawn-attempt] run scoreboard players add mobcount maze 1
+execute as @e[tag=maze-mob,type=!arrow,type=!player,tag=!maze-mob-spawn-attempt] run scoreboard players add mobcount maze 1
 execute if score enabled maze matches 1 if score mobcount maze matches ..40 run function hitchhike:story/maze/mobs/attemptsummon
 execute if score enabled maze matches 1 as @e[tag=maze-headswap] run function generated:story/maze/mobs/move/magma/swaphead
 # make names visible only in range
