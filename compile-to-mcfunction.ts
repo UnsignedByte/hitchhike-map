@@ -1130,6 +1130,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                 `summon area_effect_cloud ~ ~ ~ {Particle:"flame",ReapplicationDelay:20,Radius:1f,RadiusPerTick:0.1f,RadiusOnUse:-1f,Duration:80,DurationOnUse:20f,Effects:[{Id:7b,Amplifier:1b,Duration:100}]}`,
                 `effect give @s resistance 10 5 true`,
                 `playsound minecraft:block.lava.extinguish hostile @a ~ ~ ~ 10 0.3`
+              ],
+              [
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/summon_sprayturrets`
               ]
             ],
             init: [
@@ -1141,7 +1144,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       }
     }
 
-    // /summon item ~ ~ ~ {Glowing:1b,Age:5800,PickupDelay:32767,Motion:[0.0,0.0,0.0],Tags:["maze-magma-spray"],Item:{id:"minecraft:magma_block",Count:1b}}
+    addfunc('maze/mobs/boss/segfault/summon_sprayturrets', [
+      [...Array(6)].map((x, i)=>i).map(x=>`summon item ~ ~ ~ {Glowing:1b,Age:5700,PickupDelay:32767,Motion:[${(-Math.sin(x*Math.PI/3)).toFixed(4)},0.5,${Math.cos(x*Math.PI/3).toFixed(4)}],Tags:["maze-magma-spray"],Item:{id:"minecraft:magma_block",Count:1b}}`)
+    ])
 
     addfunc('maze/mobs/boss/segfault/summon_magma', [
       `function generated:story/maze/mobs/summon/magma`,
