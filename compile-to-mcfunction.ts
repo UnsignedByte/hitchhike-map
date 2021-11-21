@@ -1145,7 +1145,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     }
 
     addfunc('maze/mobs/boss/segfault/summon_sprayturrets', [
-      [...Array(6)].map((x, i)=>i).map(x=>`summon item ~ ~ ~ {Glowing:1b,Age:5700,PickupDelay:32767,Motion:[${(-Math.sin(x*Math.PI/3)).toFixed(4)},0.5,${Math.cos(x*Math.PI/3).toFixed(4)}],Tags:["maze-magma-spray"],Item:{id:"minecraft:magma_block",Count:1b}}`)
+      [...Array(6)].map((x, i)=>i).map(x=>`summon item ~ ~ ~ {Glowing:1b,Age:5700,PickupDelay:32767,Motion:[${(-Math.sin(x*Math.PI/3)/3).toFixed(4)},0.3,${(Math.cos(x*Math.PI/3)/3).toFixed(4)}],Tags:["maze-magma-spray"],Item:{id:"minecraft:magma_block",Count:1b}}`)
     ])
 
     addfunc('maze/mobs/boss/segfault/summon_magma', [
