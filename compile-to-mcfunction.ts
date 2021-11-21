@@ -1116,12 +1116,32 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               ]
             ],
             init: [
-              'effect give @s regeneration 1000000 0 true'
+            ]
+          },
+          {
+            moves: [
+              [
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/summon_magma`
+              ],
+              [
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/initiate_arrows`
+              ],
+              [
+                `summon area_effect_cloud ~ ~ ~ {Particle:"flame",ReapplicationDelay:20,Radius:1f,RadiusPerTick:0.1f,RadiusOnUse:-1f,Duration:80,DurationOnUse:20f,Effects:[{Id:7b,Amplifier:1b,Duration:100}]}`,
+                `effect give @s resistance 10 5 true`,
+                `playsound minecraft:block.lava.extinguish hostile @a ~ ~ ~ 10 0.3`
+              ]
+            ],
+            init: [
+              'effect give @s resistance 1000000 0 true',
+              'effect give @s speed 1000000 0 true'
             ]
           }
         ]
       }
     }
+
+    // /summon item ~ ~ ~ {Glowing:1b,Age:5800,PickupDelay:32767,Motion:[0.0,0.0,0.0],Tags:["maze-magma-spray"],Item:{id:"minecraft:magma_block",Count:1b}}
 
     addfunc('maze/mobs/boss/segfault/summon_magma', [
       `function generated:story/maze/mobs/summon/magma`,
