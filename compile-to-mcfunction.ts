@@ -1168,7 +1168,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           }
         }
 
-        schedule(`execute as @e[tag=maze-magma-spray] at @s if entity @p[distance=..16] if predicate hitchhike:movechance run function generated:story/maze/mobs/boss/segfault/sprayturret_tick`, 3, functions)
+        schedule(`execute as @e[tag=maze-magma-spray] at @s if entity @p[distance=..16] if predicate hitchhike:movechance run function generated:story/maze/mobs/boss/segfault/sprayturret_tick`, 2, functions)
 
         return [
           `scoreboard players set _rngm vars ${t.length}`,
