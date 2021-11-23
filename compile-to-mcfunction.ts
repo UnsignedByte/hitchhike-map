@@ -1163,17 +1163,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             let yrad = ydeg*Math.PI/180;
 
             for (let s = 1; s <= 4; s++) {
-              for (let type = 0; type < 2; type++) {
-                t.push(`execute if score rng vars matches ${t.length} run summon arrow ~ ~ ~ {NoGravity:0b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,${["Motion", "power"][type]}:[${(-s/2*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)},${(s/2*Math.sin(yrad)).toFixed(4)},${(s/2*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)}],Tags:["maze-arrow"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`);
-              }
+              t.push(`execute if score rng vars matches ${t.length} run summon arrow ~ ~ ~ {NoGravity:0b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,Motion:[${(-s/2*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)},${(s/2*Math.sin(yrad)).toFixed(4)},${(s/2*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)}],Tags:["maze-arrow"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`);
             }
           }
         }
 
-        functions[`story/maze/mobs/move`] = [
-          functions[`story/maze/mobs/move`],
-          `execute as @e[tag=maze-magma-spray] at @s if entity @p[distance=..16] run function generated:story/maze/mobs/boss/segfault/sprayturret_tick`
-        ]
+        schedule(`execute as @e[tag=maze-magma-spray] at @s if entity @p[distance=..16] if predicate hitchhike:movechance run function generated:story/maze/mobs/boss/segfault/sprayturret_tick`, 3, functions)
 
         return [
           `scoreboard players set _rngm vars ${t.length}`,
