@@ -1157,7 +1157,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         for (let x = 0; x < 18; x++) {
           for (let y = 0; y < 4; y++) {
             let xdeg = x*20;
-            let ydeg = y*20-70;
+            let ydeg = y*20+10;
 
             let xrad = xdeg*Math.PI/180;
             let yrad = ydeg*Math.PI/180;
