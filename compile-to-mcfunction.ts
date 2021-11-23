@@ -1164,7 +1164,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
             for (let s = 1; s <= 4; s++) {
               for (let type = 0; type < 2; type++) {
-                t.push(`execute if score rng vars matches ${t.length} run summon arrow ~ ~ ~ {NoGravity:0b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,${["Motion", "power"][type]}:[${(-s/4*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)},${(s/4*Math.sin(yrad)).toFixed(4)},${(s/4*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)}],Tags:["maze-arrow"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`);
+                t.push(`execute if score rng vars matches ${t.length} run summon arrow ~ ~ ~ {NoGravity:0b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,${["Motion", "power"][type]}:[${(-s/2*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)},${(s/2*Math.sin(yrad)).toFixed(4)},${(s/2*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)}],Tags:["maze-arrow"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`);
               }
             }
           }
