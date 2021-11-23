@@ -1172,7 +1172,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
         functions[`story/maze/mobs/move`] = [
           functions[`story/maze/mobs/move`],
-          `execute as @e[tag=maze-magma-spray] at @s if entity @p[distance=..16] if predicate hitchhike:movechance run function generated:story/maze/mobs/boss/segfault/sprayturret_tick`
+          `execute as @e[tag=maze-magma-spray] at @s if entity @p[distance=..16] run function generated:story/maze/mobs/boss/segfault/sprayturret_tick`
         ]
 
         return [
