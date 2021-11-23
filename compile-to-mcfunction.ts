@@ -1148,6 +1148,34 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [...Array(6)].map((x, i)=>i).map(x=>`summon item ~ ~ ~ {Glowing:1b,Age:5700,PickupDelay:32767,Motion:[${(-Math.sin(x*Math.PI/3)/3).toFixed(4)},0.3,${(Math.cos(x*Math.PI/3)/3).toFixed(4)}],Tags:["maze-magma-spray"],Item:{id:"minecraft:magma_block",Count:1b}}`)
     ])
 
+    addfunc('maze/mobs/boss/segfault/sprayturret_tick', [
+      (()=>{
+        let t = [];
+
+        for (let x = 0; x < 18; x++) {
+          for (let y = 0; y < 4; y++) {
+            let xdeg = x*20;
+            let ydeg = y*20-70;
+
+            let xrad = xdeg*Math.PI/180;
+            let yrad = ydeg*Math.PI/180;
+
+            for (let s = 1; s <= 6; s++) {
+              for (let type = 0; type < 2; type++) {
+                t.push(`execute if score rng vars matches ${t.length} run summon arrow ~ ~ ~ {NoGravity:0b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,${["Motion", "power"][type]}:[${(-s/4*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)},${(s/4*Math.sin(yrad)).toFixed(4)},${(s/4*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)}],Tags:["maze-arrow"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}`);
+              }
+            }
+          }
+        }
+
+        return [
+          `scoreboard players set _rngm vars ${t.length}`,
+          `function generated:rng/rng`,
+          t
+        ]
+      })()
+    ])
+
     addfunc('maze/mobs/boss/segfault/summon_magma', [
       `function generated:story/maze/mobs/summon/magma`,
       `execute if predicate hitchhike:ipminionchance positioned ~ ~ ~ run function generated:story/maze/mobs/boss/segfault/summon_magma`
