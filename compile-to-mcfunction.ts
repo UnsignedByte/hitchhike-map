@@ -1171,6 +1171,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         schedule(`execute as @e[tag=maze-magma-spray] at @s if entity @p[distance=..16] if predicate hitchhike:movechance run function generated:story/maze/mobs/boss/segfault/sprayturret_tick`, 2, functions)
 
         return [
+          `particle lava ~ ~ ~ 0 0 0 0 5`,
+          `playsound minecraft:block.lava.extinguish hostile @a ~ ~ ~ 100 1.3`,
           `scoreboard players set _rngm vars ${t.length}`,
           `function generated:rng/rng`,
           t

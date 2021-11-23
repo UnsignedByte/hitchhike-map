@@ -1,3 +1,5 @@
+particle lava ~ ~ ~ 0 0 0 0 5
+playsound minecraft:block.lava.extinguish hostile @a ~ ~ ~ 100 1.3
 scoreboard players set _rngm vars 288
 function generated:rng/rng
 execute if score rng vars matches 0 run summon arrow ~ ~ ~ {NoGravity:0b,Fire:1000,damage:4d,shake:0b,PierceLevel:10b,Color:16748836,Motion:[0.0000,0.0868,0.4924],Tags:["maze-arrow"],CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:100}]}
