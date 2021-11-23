@@ -1101,6 +1101,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       swap_items.map((x, i)=>`execute if score rng vars matches ${i} run data modify entity @s ArmorItems[3] set value {id:"minecraft:${x}",Count:1b}`)
     ])
 
+    functions[`story/maze/mobs/move`] = ``;
+
     const bosses: Record<string, any> = {
       segfault: {
         summon: `summon magma_cube ~ ~ ~ {PersistenceRequired:1b,Health:2048f,Size:3,Tags:["maze-mob","maze-boss","maze-boss-segfault"],CustomName:'{"text":"Segmentation Fault","color":"dark_purple","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.knockback_resistance,Base:1},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:30}]}`,
@@ -1168,6 +1170,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           }
         }
 
+        functions[`story/maze/mobs/move`] = [
+          functions[`story/maze/mobs/move`],
+          `execute as @e[tag=maze-magma-spray] at @s if entity @p[distance=..16] if predicate hitchhike:movechance run function generated:story/maze/mobs/boss/segfault/sprayturret_tick`
+        ]
+
         return [
           `scoreboard players set _rngm vars ${t.length}`,
           `function generated:rng/rng`,
@@ -1209,8 +1216,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ]
       }))
     ])
-
-    functions[`story/maze/mobs/move`] = ``;
     // add mob attack phases
     const addmovesequence = (id: string, moves: Lines[][], stage: number = -1) => {
       if (stage === -1) {
