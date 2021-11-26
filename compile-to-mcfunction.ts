@@ -1329,7 +1329,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         'scoreboard players remove @s boss-stage 1',
         `scoreboard players operation @s boss-stage /= ${Math.ceil(100/v.stages.length)} const`, // now the stage is from 0 to v.stages.length-1
         'scoreboard players operation @s boss-stage *= -1 const',
-        `scoreboard players add @s boss-stage ${v.stages.length}`,
+        `scoreboard players add @s boss-stage ${v.stages.length-1}`,
         `execute as @s unless score @s boss-stage = #tmp boss-stage run function generated:story/maze/mobs/boss/init/${k}`
       ])
 
