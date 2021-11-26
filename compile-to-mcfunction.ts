@@ -1141,10 +1141,67 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               'effect give @s resistance 1000000 0 true',
               'effect give @s speed 1000000 0 true'
             ]
+          },
+          {
+            moves: [
+              [
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/initiate_arrows`
+              ],
+              [
+                `summon area_effect_cloud ~ ~ ~ {Particle:"flame",ReapplicationDelay:20,Radius:1f,RadiusPerTick:0.1f,RadiusOnUse:-1f,Duration:80,DurationOnUse:20f,Effects:[{Id:7b,Amplifier:1b,Duration:100}]}`,
+                `effect give @s resistance 10 5 true`,
+                `playsound minecraft:block.lava.extinguish hostile @a ~ ~ ~ 10 0.3`
+              ],
+              [
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/summon_sprayturrets`
+              ],
+              [
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boos/segfault/summon_firesource`
+              ]
+            ],
+            init: [
+              'effect give @s resistance 1000000 0 true',
+              'effect give @s speed 1000000 0 true'
+            ]
           }
         ]
       }
     }
+
+    addfunc('maze/mobs/boss/segfault/summon_firesource', [
+      (()=>{
+        let t = [];
+
+        for (let x = 0; x < 9; x++) {
+          for (let y = 0; y < 4; y++) {
+            let xdeg = x*40;
+            let ydeg = y*20+10;
+
+            let xrad = xdeg*Math.PI/180;
+            let yrad = ydeg*Math.PI/180;
+
+            for (let s = 1; s <= 4; s++) {
+              t.push(`execute if predicate hitchhike:onetwelth run summon armor_stand ~ ~ ~ {Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,Motion:[${(-s/2*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)},${(s/2*Math.sin(yrad)).toFixed(4)},${(s/2*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)}],Tags:["maze-firesummon"]}`);
+            }
+          }
+        }
+
+        schedule(`execute as @e[tag=maze-firesummon] at @s if entity @p[distance=..16] unless block ~ ~-0.1 ~ air run function generated:story/maze/mobs/boss/segfault/firesource_tick`, 5, functions)
+
+        return [
+          `playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~`,
+          t
+        ]
+      })()
+    ])
+
+    addfunc('maze/mobs/boss/segfault/firesource_tick', [
+      `particle minecraft:small_flame ~ ~2 ~ 0.25 4 0.25 0 50`,
+      `particle lava ~ ~ ~ 0.25 0.25 0.25 0 3`,
+      `playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 1`,
+      `summon small_fireball ~ ~ ~ {HasVisualFire:0b,power:[0.0,-1.0,0.0],Item:{id:"minecraft:air",Count:1b}}`,
+      `execute if predicate hitchhike:onetwelth run kill @s`
+    ])
 
     addfunc('maze/mobs/boss/segfault/summon_sprayturrets', [
       [...Array(6)].map((x, i)=>i).map(x=>`summon item ~ ~ ~ {Glowing:1b,Age:5700,PickupDelay:32767,Motion:[${(-Math.sin(x*Math.PI/3)/3).toFixed(4)},0.3,${(Math.cos(x*Math.PI/3)/3).toFixed(4)}],Tags:["maze-magma-spray"],Item:{id:"minecraft:magma_block",Count:1b}}`)
