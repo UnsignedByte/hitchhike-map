@@ -9,10 +9,10 @@ schedule clear generated:scheduled/s-5999
 function generated:scheduled/s-5999
 schedule clear generated:scheduled/s-2147483646
 function generated:scheduled/s-2147483646
-schedule clear generated:scheduled/s-2
-function generated:scheduled/s-2
 schedule clear generated:scheduled/s-10
 function generated:scheduled/s-10
+schedule clear generated:scheduled/s-2
+function generated:scheduled/s-2
 schedule clear generated:scheduled/s-100
 function generated:scheduled/s-100
 # Kill all existing NPCs.
