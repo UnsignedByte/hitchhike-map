@@ -1,5 +1,6 @@
 weather clear 1000000
 time set noon
+gamerule maxCommandChainLength 1000000
 gamerule doDaylightCycle false
 gamerule doMobSpawning false
 gamerule mobGriefing false

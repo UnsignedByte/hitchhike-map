@@ -1129,7 +1129,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                 `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/initiate_arrows`
               ],
               [
-                `summon area_effect_cloud ~ ~ ~ {Particle:"flame",ReapplicationDelay:20,Radius:1f,RadiusPerTick:0.1f,RadiusOnUse:-1f,Duration:80,DurationOnUse:20f,Effects:[{Id:7b,Amplifier:1b,Duration:100}]}`,
+                `summon area_effect_cloud ~ ~ ~ {Particle:"flame",ReapplicationDelay:20,Radius:1f,RadiusPerTick:0.1f,RadiusOnUse:-1f,Duration:80,DurationOnUse:0f,Effects:[{Id:7b,Amplifier:1b,Duration:100}]}`,
                 `effect give @s resistance 10 5 true`,
                 `playsound minecraft:block.lava.extinguish hostile @a ~ ~ ~ 10 0.3`
               ],
@@ -1160,8 +1160,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               ]
             ],
             init: [
-              'effect give @s resistance 1000000 0 true',
-              'effect give @s speed 1000000 0 true'
+              'effect give @s resistance 1000000 1 true',
+              'effect give @s strength 1000000 0 true'
             ]
           }
         ]
