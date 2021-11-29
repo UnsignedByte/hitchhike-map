@@ -1191,17 +1191,16 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       (()=>{
         let t = [];
 
-        for (let x = 0; x < 9; x++) {
-          for (let y = 0; y < 5; y++) {
-            let xdeg = x*40;
-            let ydeg = y*36-90;
+        for (let x = 0; x < 18; x++) {
+          for (let y = 0; y < 9; y++) {
+            let xdeg = x*20;
+            let ydeg = y*20-90;
 
             let xrad = xdeg*Math.PI/180;
             let yrad = ydeg*Math.PI/180;
 
-            for (let s = 1; s <= 4; s++) {
-              t.push(`particle snowflake ^${(-s*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)} ^${(s*Math.sin(yrad)).toFixed(4)} ^${(s*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)} 0.25 0.25 0.25 0.1 10`);
-            }
+            let s = 4;
+            t.push(`particle snowflake ^${(-s*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)} ^${(s*Math.sin(yrad)).toFixed(4)} ^${(s*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)} 0.1 0.1 0.1 0.05 5`);
           }
         }
 
