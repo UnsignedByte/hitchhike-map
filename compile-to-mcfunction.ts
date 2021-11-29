@@ -1129,7 +1129,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                 `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/segfault/initiate_arrows`
               ],
               [
-                `summon area_effect_cloud ~ ~ ~ {Particle:"flame",ReapplicationDelay:20,Radius:1f,RadiusPerTick:0.1f,RadiusOnUse:-1f,Duration:200,DurationOnUse:0f,Effects:[{Id:7b,Amplifier:1b,Duration:100}]}`,
+                `summon area_effect_cloud ~ ~ ~ {Particle:"flame",ReapplicationDelay:20,Radius:1f,RadiusPerTick:0.1f,RadiusOnUse:-1f,Duration:200,DurationOnUse:0f,Effects:[{Id:7b,Amplifier:1b,Duration:100}],CustomName:'{"text":"Segmentation Fault","color":"dark_purple","bold":true}'}`,
                 `effect give @s resistance 10 10 true`,
                 `playsound minecraft:block.lava.extinguish hostile @a ~ ~ ~ 10 0.3`
               ],
@@ -1165,8 +1165,58 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             ]
           }
         ]
+      },
+      explorer: {
+        summon: `summon iron_golem ~ ~ ~ {CustomNameVisible:1b,Health:2048f,AngerTime:2147483647,Tags:["maze-mob","maze-boss","maze-boss-explorer"],CustomName:'{"text":"Internet Explorer","color":"aqua","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.15},{Name:generic.attack_damage,Base:20},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:5}]}`,
+        health: 300,
+        stages: [
+          {
+            moves: [
+              [
+                `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
+              ]
+            ],
+            init: [
+            ]
+          }
+        ]
       }
     }
+
+    addfunc('maze/mobs/boss/explorer/start_freezefield', [
+      `summon marker ~ ~ ~ {Tags:["maze-freezefield"]}`
+    ])
+
+    addfunc('maze/mobs/boss/explorer/tick_freezefield', [
+      (()=>{
+        let t = [];
+
+        for (let x = 0; x < 9; x++) {
+          for (let y = 0; y < 5; y++) {
+            let xdeg = x*40;
+            let ydeg = y*36-90;
+
+            let xrad = xdeg*Math.PI/180;
+            let yrad = ydeg*Math.PI/180;
+
+            for (let s = 1; s <= 4; s++) {
+              t.push(`particle snowflake ^${(-s*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)} ^${(s*Math.sin(yrad)).toFixed(4)} ^${(s*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)} 0.25 0.25 0.25 0.1 10`);
+            }
+          }
+        }
+
+        schedule('execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield', 5, functions);
+
+        return [
+          `playsound minecraft:item.elytra.flying hostile @a ~ ~ ~ 0.6 2`,
+          `playsound minecraft:item.elytra.flying hostile @a ~ ~ ~ 0.4 1`,
+          `effect give @e[tag=maze-mob,distance=..4] minecraft:slowness 2 9 true`,
+          `effect give @e[tag=maze-mob,distance=..4] minecraft:jump_boost 2 128 true`,
+          `effect give @a minecraft:blindness 2 0 true`,
+          t
+        ]
+      })()
+    ])
 
     addfunc('maze/mobs/boss/segfault/summon_firesource', [
       (()=>{
@@ -1496,7 +1546,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p UUID`,
       `execute as @e[tag=maze-shulker-bullet] at @s run data modify entity @s Target set from entity @e[tag=maze-mob,distance=..10,sort=nearest,limit=1] UUID`,
       `execute as @e[tag=maze-mob,type=bee] run data modify entity @s AngerTime set value 2147483647`,
-      `execute as @e[tag=maze-mob,type=bee] run data modify entity @s HasStung set value 0`
+      `execute as @e[tag=maze-mob,type=bee] run data modify entity @s HasStung set value 0`,
+      `execute as @e[tag=maze-mob,type=iron_golem] at @s run data modify entity @s AngryAt set from entity @p UUID`,
+      `execute as @e[tag=maze-mob,type=iron_golem] run data modify entity @s AngerTime set value 2147483647`,
     ], 20, functions);
 
     schedule(`execute at @e[tag=maze-pearl] run particle minecraft:firework ~ ~ ~ 0 0 0 1 0`, 5, functions);
