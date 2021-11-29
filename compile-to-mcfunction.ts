@@ -1167,7 +1167,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ]
       },
       explorer: {
-        summon: `summon iron_golem ~ ~ ~ {CustomNameVisible:1b,Health:2048f,AngerTime:2147483647,Tags:["maze-mob","maze-boss","maze-boss-explorer"],CustomName:'{"text":"Internet Explorer","color":"aqua","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.15},{Name:generic.attack_damage,Base:20},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:5}]}`,
+        summon: `summon iron_golem ~ ~ ~ {CustomNameVisible:1b,Health:2048f,AngerTime:2147483647,Tags:["maze-mob","maze-boss","maze-boss-explorer"],CustomName:'{"text":"Internet Explorer","color":"aqua","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.15},{Name:generic.attack_damage,Base:15},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:5}]}`,
         health: 300,
         stages: [
           {
