@@ -1200,7 +1200,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             let yrad = ydeg*Math.PI/180;
 
             let s = 4;
-            t.push(`particle snowflake ^${(-s*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)} ^${(s*Math.sin(yrad)).toFixed(4)} ^${(s*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)} 0.1 0.1 0.1 0.05 5`);
+            t.push(`particle snowflake ^${(-s*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)} ^${(s*Math.sin(yrad)).toFixed(4)} ^${(s*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)} 0.25 0.25 0.25 0.05 5`);
           }
         }
 
