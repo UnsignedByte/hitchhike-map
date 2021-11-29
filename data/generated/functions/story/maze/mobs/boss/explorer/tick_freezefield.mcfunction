@@ -2,7 +2,7 @@ playsound minecraft:item.elytra.flying hostile @a ~ ~ ~ 0.6 2
 playsound minecraft:item.elytra.flying hostile @a ~ ~ ~ 0.4 1
 effect give @e[tag=maze-mob,distance=..4] minecraft:slowness 2 9 true
 effect give @e[tag=maze-mob,distance=..4] minecraft:jump_boost 2 128 true
-effect give @a minecraft:blindness 2 0 true
+effect give @e[tag=maze-mob,distance=..4] minecraft:blindness 2 0 true
 particle snowflake ^0.0000 ^-1.0000 ^0.0000 0.25 0.25 0.25 0.1 10
 particle snowflake ^0.0000 ^-2.0000 ^0.0000 0.25 0.25 0.25 0.1 10
 particle snowflake ^0.0000 ^-3.0000 ^0.0000 0.25 0.25 0.25 0.1 10

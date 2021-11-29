@@ -1212,7 +1212,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `playsound minecraft:item.elytra.flying hostile @a ~ ~ ~ 0.4 1`,
           `effect give @e[tag=maze-mob,distance=..4] minecraft:slowness 2 9 true`,
           `effect give @e[tag=maze-mob,distance=..4] minecraft:jump_boost 2 128 true`,
-          `effect give @a minecraft:blindness 2 0 true`,
+          `effect give @e[tag=maze-mob,distance=..4] minecraft:blindness 2 0 true`,
           t
         ]
       })()
