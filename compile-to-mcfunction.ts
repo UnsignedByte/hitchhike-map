@@ -1174,6 +1174,28 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             moves: [
               [
                 `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
+              ],
+              [
+                (()=>{
+                  let t = [];
+
+                  for (let x = 0; x < 18; x++) {
+                    for (let y = 0; y < 9; y++) {
+                      let xdeg = x*20;
+
+                      let xrad = xdeg*Math.PI/180;
+
+                      let s = 5;
+                      t.push(`summon area_effect_cloud ~${(-s*Math.sin(xrad)).toFixed(4)} ~ ~${(s*Math.cos(xrad)).toFixed(4)} {Particle:"block ice",ReapplicationDelay:0,Radius:1f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100,DurationOnUse:0f,Effects:[{Id:2b,Amplifier:3b,Duration:40},{Id:4b,Amplifier:3b,Duration:40},{Id:8b,Amplifier:128b,Duration:40},{Id:18b,Amplifier:3b,Duration:40},{Id:20b,Amplifier:1b,Duration:40}]}`);
+                    }
+                  }
+
+                  schedule('execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield', 5, functions);
+
+                  return [
+                    t
+                  ]
+                })()
               ]
             ],
             init: [
@@ -1212,6 +1234,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `effect give @e[tag=maze-mob,tag=!maze-boss-explorer,distance=..4] minecraft:slowness 2 9 true`,
           `effect give @e[tag=maze-mob,tag=!maze-boss-explorer,distance=..4] minecraft:jump_boost 2 128 true`,
           `effect give @e[tag=maze-mob,tag=!maze-boss-explorer,distance=..4] minecraft:blindness 2 0 true`,
+          'effect give @e[tag=maze-mob,tag=!maze-boss-explorer,distance=..4] minecraft:weakness 2 128 true',
           t,
           `execute if score @s maze-weapon-age matches 40 run kill @s`,
           `scoreboard players add @s maze-weapon-age 1`
