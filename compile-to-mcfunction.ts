@@ -1207,12 +1207,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         schedule('execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield', 5, functions);
 
         return [
-          `playsound minecraft:item.elytra.flying hostile @a ~ ~ ~ 0.6 2`,
-          `playsound minecraft:item.elytra.flying hostile @a ~ ~ ~ 0.4 1`,
+          `playsound minecraft:item.elytra.flying hostile @a[distance=..5] ~ ~ ~ 0.3 2`,
+          `playsound minecraft:item.elytra.flying hostile @a[distance=..5] ~ ~ ~ 0.2 1`,
           `effect give @e[tag=maze-mob,tag=!maze-boss-explorer,distance=..4] minecraft:slowness 2 9 true`,
           `effect give @e[tag=maze-mob,tag=!maze-boss-explorer,distance=..4] minecraft:jump_boost 2 128 true`,
           `effect give @e[tag=maze-mob,tag=!maze-boss-explorer,distance=..4] minecraft:blindness 2 0 true`,
-          t
+          t,
+          `execute if score @s maze-weapon-age matches 40 run kill @s`,
+          `scoreboard players add @s maze-weapon-age 1`
         ]
       })()
     ])

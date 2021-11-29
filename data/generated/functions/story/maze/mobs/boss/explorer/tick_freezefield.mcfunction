@@ -1,5 +1,5 @@
-playsound minecraft:item.elytra.flying hostile @a ~ ~ ~ 0.6 2
-playsound minecraft:item.elytra.flying hostile @a ~ ~ ~ 0.4 1
+playsound minecraft:item.elytra.flying hostile @a[distance=..5] ~ ~ ~ 0.3 2
+playsound minecraft:item.elytra.flying hostile @a[distance=..5] ~ ~ ~ 0.2 1
 effect give @e[tag=maze-mob,tag=!maze-boss-explorer,distance=..4] minecraft:slowness 2 9 true
 effect give @e[tag=maze-mob,tag=!maze-boss-explorer,distance=..4] minecraft:jump_boost 2 128 true
 effect give @e[tag=maze-mob,tag=!maze-boss-explorer,distance=..4] minecraft:blindness 2 0 true
@@ -165,3 +165,5 @@ particle snowflake ^1.3473 ^0.6946 ^3.7017 0.1 0.1 0.1 0.05 5
 particle snowflake ^1.1848 ^2.0000 ^3.2552 0.1 0.1 0.1 0.05 5
 particle snowflake ^0.8794 ^3.0642 ^2.4161 0.1 0.1 0.1 0.05 5
 particle snowflake ^0.4679 ^3.7588 ^1.2856 0.1 0.1 0.1 0.05 5
+execute if score @s maze-weapon-age matches 40 run kill @s
+scoreboard players add @s maze-weapon-age 1
