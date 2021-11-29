@@ -1,6 +1,5 @@
 #> Starts the main sd card sequence
 
-scoreboard players set maze-started story-sawyer 1
 scoreboard players set maze-stage story-sawyer 0
 
 scoreboard players set @e[tag=npc-sawyer] dialogue-status 6

@@ -207,6 +207,8 @@ npc:
         - messages:
           - message: Here we are, the inside of the SD Card.
             global: true
+            command: 
+              - 'scoreboard players set maze-started story-sawyer 1'
           - message: Be careful, corrupted areas can be a little dangerous. Hopefully my tools can help you out, though.
             global: true
           - message: Try throwing them out with "Q"... throwing things at enemies often works, after all.
