@@ -1180,14 +1180,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   let t = [];
 
                   for (let x = 0; x < 18; x++) {
-                    for (let y = 0; y < 9; y++) {
-                      let xdeg = x*20;
+                    let xdeg = x*20;
 
-                      let xrad = xdeg*Math.PI/180;
+                    let xrad = xdeg*Math.PI/180;
 
-                      let s = 5;
-                      t.push(`summon area_effect_cloud ~${(-s*Math.sin(xrad)).toFixed(4)} ~ ~${(s*Math.cos(xrad)).toFixed(4)} {Particle:"block ice",ReapplicationDelay:0,Radius:1f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100,DurationOnUse:0f,Effects:[{Id:2b,Amplifier:3b,Duration:40},{Id:4b,Amplifier:3b,Duration:40},{Id:8b,Amplifier:128b,Duration:40},{Id:18b,Amplifier:3b,Duration:40},{Id:20b,Amplifier:1b,Duration:40}]}`);
-                    }
+                    let s = 5;
+                    t.push(`summon area_effect_cloud ~${(-s*Math.sin(xrad)).toFixed(4)} ~ ~${(s*Math.cos(xrad)).toFixed(4)} {Particle:"block ice",ReapplicationDelay:0,Radius:1f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100,DurationOnUse:0f,Effects:[{Id:2b,Amplifier:3b,Duration:40},{Id:4b,Amplifier:3b,Duration:40},{Id:8b,Amplifier:128b,Duration:40},{Id:18b,Amplifier:3b,Duration:40},{Id:20b,Amplifier:1b,Duration:40}]}`);
                   }
 
                   schedule('execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield', 5, functions);
