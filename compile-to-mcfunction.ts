@@ -1571,6 +1571,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute as @e[tag=maze-mob,type=bee] run data modify entity @s HasStung set value 0`,
       `execute as @e[tag=maze-mob,type=iron_golem] at @s run data modify entity @s AngryAt set from entity @p UUID`,
       `execute as @e[tag=maze-mob,type=iron_golem] run data modify entity @s AngerTime set value 2147483647`,
+      `execute as @e[tag=maze-mob,type=snow_golem] at @s run data modify entity @s AngryAt set from entity @p UUID`,
+      `execute as @e[tag=maze-mob,type=snow_golem] run data modify entity @s AngerTime set value 2147483647`,
     ], 20, functions);
 
     schedule(`execute at @e[tag=maze-pearl] run particle minecraft:firework ~ ~ ~ 0 0 0 1 0`, 5, functions);

@@ -4,6 +4,8 @@ execute as @e[tag=maze-mob,type=bee] run data modify entity @s AngerTime set val
 execute as @e[tag=maze-mob,type=bee] run data modify entity @s HasStung set value 0
 execute as @e[tag=maze-mob,type=iron_golem] at @s run data modify entity @s AngryAt set from entity @p UUID
 execute as @e[tag=maze-mob,type=iron_golem] run data modify entity @s AngerTime set value 2147483647
+execute as @e[tag=maze-mob,type=snow_golem] at @s run data modify entity @s AngryAt set from entity @p UUID
+execute as @e[tag=maze-mob,type=snow_golem] run data modify entity @s AngerTime set value 2147483647
 scoreboard players set mobcount maze 0
 execute as @e[tag=maze-mob,type=!arrow,type=!player,tag=!maze-mob-spawn-attempt] run scoreboard players add mobcount maze 1
 execute if score enabled maze matches 1 if score mobcount maze matches ..40 run function hitchhike:story/maze/mobs/attemptsummon
