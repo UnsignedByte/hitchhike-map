@@ -1170,38 +1170,57 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         summon: `summon iron_golem ~ ~ ~ {CustomNameVisible:1b,Health:2048f,AngerTime:2147483647,Tags:["maze-mob","maze-boss","maze-boss-explorer"],CustomName:'{"text":"Internet Explorer","color":"aqua","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.15},{Name:generic.attack_damage,Base:15},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:5}]}`,
         health: 300,
         stages: [
+          // {
+          //   moves: [
+          //     [
+          //       `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
+          //     ],
+          //     [
+          //       (()=>{
+          //         let t = [];
+
+          //         for (let x = 0; x < 9; x++) {
+          //           let xdeg = x*40;
+
+          //           let xrad = xdeg*Math.PI/180;
+
+          //           let s = 5;
+          //           t.push(`summon area_effect_cloud ~${(-s*Math.sin(xrad)).toFixed(4)} ~ ~${(s*Math.cos(xrad)).toFixed(4)} {Particle:"block ice",ReapplicationDelay:0,Radius:2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100,DurationOnUse:0f,Effects:[{Id:2b,Amplifier:3b,Duration:40},{Id:4b,Amplifier:3b,Duration:40},{Id:8b,Amplifier:128b,Duration:40},{Id:18b,Amplifier:3b,Duration:40},{Id:20b,Amplifier:2b,Duration:40}]}`);
+          //         }
+
+          //         schedule('execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield', 5, functions);
+
+          //         return [
+          //           t
+          //         ]
+          //       })()
+          //     ]
+          //   ],
+          //   init: [
+          //   ]
+          // },
           {
             moves: [
+              // [
+              //   `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
+              // ],
               [
-                `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
-              ],
-              [
-                (()=>{
-                  let t = [];
-
-                  for (let x = 0; x < 9; x++) {
-                    let xdeg = x*40;
-
-                    let xrad = xdeg*Math.PI/180;
-
-                    let s = 5;
-                    t.push(`summon area_effect_cloud ~${(-s*Math.sin(xrad)).toFixed(4)} ~ ~${(s*Math.cos(xrad)).toFixed(4)} {Particle:"block ice",ReapplicationDelay:0,Radius:2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100,DurationOnUse:0f,Effects:[{Id:2b,Amplifier:3b,Duration:40},{Id:4b,Amplifier:3b,Duration:40},{Id:8b,Amplifier:128b,Duration:40},{Id:18b,Amplifier:3b,Duration:40},{Id:20b,Amplifier:2b,Duration:40}]}`);
-                  }
-
-                  schedule('execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield', 5, functions);
-
-                  return [
-                    t
-                  ]
-                })()
+                `execute as @s facing entity @r[distance=..10] feet positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/explorer/summon_wave`
               ]
             ],
             init: [
+              'effect give @s speed 1000000 0 true'
             ]
           }
         ]
       }
     }
+
+    addfunc('maze/mobs/boss/explorer/summon_wave', [
+      [...Array(5)].map((a,i)=>i-2).map(x=>`execute positioned ^${x} ^ ^2 at @s run summon marker ~ ~ ~ {Tags:["maze-explorer-wave-init","maze-explorer-wave"]}`),
+      'execute rotated as @s as @e[tag=maze-explorer-wave-init] positioned as @s run tp @s ~ ~ ~ ~ ~',
+      `tag @e remove maze-explorer-wave-init`
+    ])
 
     addfunc('maze/mobs/boss/explorer/start_freezefield', [
       `summon marker ~ ~ ~ {Tags:["maze-freezefield"]}`
@@ -1571,8 +1590,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute as @e[tag=maze-mob,type=bee] run data modify entity @s HasStung set value 0`,
       `execute as @e[tag=maze-mob,type=iron_golem] at @s run data modify entity @s AngryAt set from entity @p UUID`,
       `execute as @e[tag=maze-mob,type=iron_golem] run data modify entity @s AngerTime set value 2147483647`,
-      `execute as @e[tag=maze-mob,type=snow_golem] at @s run data modify entity @s AngryAt set from entity @p UUID`,
-      `execute as @e[tag=maze-mob,type=snow_golem] run data modify entity @s AngerTime set value 2147483647`,
     ], 20, functions);
 
     schedule(`execute at @e[tag=maze-pearl] run particle minecraft:firework ~ ~ ~ 0 0 0 1 0`, 5, functions);
