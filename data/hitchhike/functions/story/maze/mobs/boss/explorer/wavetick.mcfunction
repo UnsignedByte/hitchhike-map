@@ -21,4 +21,6 @@ tag @e remove maze-wave-caught
 
 execute if score @s maze-weapon-age matches 100.. run kill @s
 
+execute unless block ^ ^ ^0.2 air run kill @s
+
 scoreboard players add @s maze-weapon-age 1
