@@ -1205,7 +1205,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               //   `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
               // ],
               [
-                `execute as @s facing entity @r[distance=..10] feet positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/explorer/summon_wave`
+                `execute as @s at @s positioned ~ ~2 ~ rotated ~ 0 run function generated:story/maze/mobs/boss/explorer/summon_wave`
               ]
             ],
             init: [
