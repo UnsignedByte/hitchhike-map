@@ -1224,7 +1224,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             let y = Math.sin(Math.PI*(i+1)/6)/2;
             let x = i/16;
             let z = j/4;
-            t.push(`particle minecraft:dripping_water ^${z} ^${y} ^${x} 0.1 0.1 0.1 0 1`)
+            t.push([
+              `particle minecraft:dripping_water ^${z} ^${y} ^${x} 0.1 0.1 0.1 0 5`
+            ])
           }
         }
         return t;
