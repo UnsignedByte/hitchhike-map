@@ -1225,7 +1225,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             let x = i/16;
             let z = j/4;
             t.push([
-              `particle minecraft:dripping_water ^${z} ^${y} ^${x} 0.1 0.1 0.1 0 5`
+              `particle minecraft:dolphin ^${z} ^${y} ^${x} 0.1 0.1 0.1 0 3`
             ])
           }
         }
