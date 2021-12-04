@@ -1,5 +1,4 @@
-execute if entity @e[tag=maze-mob,tag=!maze-boss,distance=..1.5] run playsound minecraft:block.bubble_column.whirlpool_inside hostile @a ~ ~ ~ 0.7 0.3
-tp @e[tag=maze-mob,tag=!maze-boss,distance=..1.5] ^ ^ ^0.2
+tag @e[tag=maze-mob,tag=!maze-boss,distance=..1.5] add maze-wave-caught
 
 tp @s ^ ^ ^0.2
 
@@ -10,6 +9,13 @@ execute if score #tmp maze-weapon-age matches 0 at @s run function generated:sto
 execute if score #tmp maze-weapon-age matches 0 if predicate hitchhike:onethird run playsound minecraft:block.bubble_column.upwards_inside hostile @a ~ ~ ~ 0.08 0.3
 execute if score #tmp maze-weapon-age matches 0 if predicate hitchhike:onetwelth run playsound minecraft:block.bubble_column.upwards_inside hostile @a ~ ~ ~ 0.1 0.4
 execute if score #tmp maze-weapon-age matches 0 if predicate hitchhike:onethird run playsound minecraft:block.water.ambient hostile @a ~ ~ ~ 0.4 1.6
+
+execute if score #tmp maze-weapon-age matches 0 if entity @e[tag=maze-wave-caught] run playsound minecraft:block.bubble_column.whirlpool_inside hostile @a ~ ~ ~ 0.3 0.3
+tp @e[tag=maze-wave-caught] ^ ^ ^0.2
+
+effect give @e[tag=maze-wave-caught] minecraft:slowness 3 3 true
+
+tag @e remove maze-wave-caught
 
 execute if score @s maze-weapon-age matches 100.. run kill @s
 
