@@ -1,7 +1,7 @@
-tp @s ^ ^ ^0.2
-
 execute if entity @e[tag=maze-mob,tag=!maze-boss,distance=..1] run playsound minecraft:block.bubble_column.whirlpool_inside hostile @a ~ ~ ~ 0.7 1.1
 tp @e[tag=maze-mob,tag=!maze-boss,distance=..1] ^ ^ ^0.2
+
+tp @s ^ ^ ^0.2
 
 scoreboard players operation #tmp maze-weapon-age = @s maze-weapon-age
 scoreboard players operation #tmp maze-weapon-age %= 3 const
