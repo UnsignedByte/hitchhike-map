@@ -1229,7 +1229,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/mobs/boss/explorer/summon_wave', [
-      [...Array(5)].map((a,i)=>i-2).map(x=>`execute positioned ^${x} ^ ^2 at @s run summon marker ~ ~ ~ {Tags:["maze-explorer-wave-init","maze-explorer-wave"]}`),
+      [...Array(5)].map((a,i)=>i-2).map(x=>`execute positioned ^${x} ^ ^2 run summon marker ~ ~ ~ {Tags:["maze-explorer-wave-init","maze-explorer-wave"]}`),
       'execute rotated ~ 0 as @e[tag=maze-explorer-wave-init] positioned as @s run tp @s ~ ~ ~ ~ ~',
       `tag @e remove maze-explorer-wave-init`
     ])
