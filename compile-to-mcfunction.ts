@@ -1205,7 +1205,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               //   `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
               // ],
               [
-                `execute as @s at @s positioned ~ ~2 ~ rotated ~ 0 run function generated:story/maze/mobs/boss/explorer/summon_wave`
+                `execute as @s at @s positioned ~ ~1 ~ rotated ~ 0 run function generated:story/maze/mobs/boss/explorer/summon_wave`
               ]
             ],
             init: [
@@ -1221,7 +1221,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         let t = [];
         for (let i = -4; i <= 4; i+=2) {
           for (let j = -2; j <= 2; j++) {
-            let y = Math.sin(Math.PI*(i+1)/6)/2;
+            let y = Math.sin(Math.PI*(i+1)/6);
             let x = i/16;
             let z = j/4;
             t.push([
