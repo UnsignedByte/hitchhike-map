@@ -1221,8 +1221,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         let t = [];
         for (let i = -4; i <= 4; i+=2) {
           for (let j = -2; j <= 2; j++) {
-            let y = Math.sin(Math.PI*(i+1)/6);
             let x = i/16;
+            let y = i/4;
             let z = j/4;
             t.push([
               `particle minecraft:dolphin ^${z} ^${y} ^${x} 0.1 0.1 0.1 0 3`
