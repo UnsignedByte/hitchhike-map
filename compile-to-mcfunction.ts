@@ -1170,40 +1170,40 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         summon: `summon iron_golem ~ ~ ~ {CustomNameVisible:1b,Health:2048f,AngerTime:2147483647,Tags:["maze-mob","maze-boss","maze-boss-explorer"],CustomName:'{"text":"Internet Explorer","color":"aqua","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.15},{Name:generic.attack_damage,Base:15},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:5}]}`,
         health: 300,
         stages: [
-          // {
-          //   moves: [
-          //     [
-          //       `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
-          //     ],
-          //     [
-          //       (()=>{
-          //         let t = [];
-
-          //         for (let x = 0; x < 9; x++) {
-          //           let xdeg = x*40;
-
-          //           let xrad = xdeg*Math.PI/180;
-
-          //           let s = 5;
-          //           t.push(`summon area_effect_cloud ~${(-s*Math.sin(xrad)).toFixed(4)} ~ ~${(s*Math.cos(xrad)).toFixed(4)} {Particle:"block ice",ReapplicationDelay:0,Radius:2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100,DurationOnUse:0f,Effects:[{Id:2b,Amplifier:3b,Duration:40},{Id:4b,Amplifier:3b,Duration:40},{Id:8b,Amplifier:128b,Duration:40},{Id:18b,Amplifier:3b,Duration:40},{Id:20b,Amplifier:2b,Duration:40}]}`);
-          //         }
-
-          //         schedule('execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield', 5, functions);
-
-          //         return [
-          //           t
-          //         ]
-          //       })()
-          //     ]
-          //   ],
-          //   init: [
-          //   ]
-          // },
           {
             moves: [
-              // [
-              //   `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
-              // ],
+              [
+                `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
+              ],
+              [
+                (()=>{
+                  let t = [];
+
+                  for (let x = 0; x < 9; x++) {
+                    let xdeg = x*40;
+
+                    let xrad = xdeg*Math.PI/180;
+
+                    let s = 5;
+                    t.push(`summon area_effect_cloud ~${(-s*Math.sin(xrad)).toFixed(4)} ~ ~${(s*Math.cos(xrad)).toFixed(4)} {Particle:"block ice",ReapplicationDelay:0,Radius:2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100,DurationOnUse:0f,Effects:[{Id:2b,Amplifier:3b,Duration:40},{Id:4b,Amplifier:3b,Duration:40},{Id:8b,Amplifier:128b,Duration:40},{Id:18b,Amplifier:3b,Duration:40},{Id:20b,Amplifier:2b,Duration:40}]}`);
+                  }
+
+                  schedule('execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield', 5, functions);
+
+                  return [
+                    t
+                  ]
+                })()
+              ]
+            ],
+            init: [
+            ]
+          },
+          {
+            moves: [
+              [
+                `execute as @s at @s run function generated:story/maze/mobs/boss/explorer/start_freezefield`
+              ],
               [
                 `execute as @s at @s positioned ~ ~1 ~ rotated ~ 0 run function generated:story/maze/mobs/boss/explorer/summon_wave`
               ]
