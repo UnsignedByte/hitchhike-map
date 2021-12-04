@@ -1,4 +1,5 @@
-tag @e[tag=maze-mob,tag=!maze-boss,distance=..1.5] add maze-wave-caught
+tag @e[tag=maze-mob,tag=!maze-boss,distance=..1] add maze-wave-caught
+execute positioned ~ ~1 ~ run tag @e[tag=maze-mob,tag=!maze-boss,distance=..1] add maze-wave-caught
 
 tp @s ^ ^ ^0.2
 
