@@ -11,7 +11,7 @@ execute if score #tmp maze-weapon-age matches 0 if predicate hitchhike:onetwelth
 execute if score #tmp maze-weapon-age matches 0 if predicate hitchhike:onethird run playsound minecraft:block.water.ambient hostile @a ~ ~ ~ 0.4 1.6
 
 execute if score #tmp maze-weapon-age matches 0 if entity @e[tag=maze-wave-caught] run playsound minecraft:block.bubble_column.whirlpool_inside hostile @a ~ ~ ~ 0.3 0.3
-tp @e[tag=maze-wave-caught] ^ ^ ^0.2
+execute as @e[tag=maze-wave-caught] positioned as @s run tp @s ^ ^ ^0.2
 
 effect give @e[tag=maze-wave-caught] minecraft:slowness 3 3 true
 
