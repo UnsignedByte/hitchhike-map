@@ -1219,14 +1219,19 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/mobs/boss/explorer/render_wave', [
       (() => {
         let t = [];
-        for (let i = -4; i <= 4; i+=2) {
-          for (let j = -2; j <= 2; j++) {
+        for (let j = -2; j <= 2; j++) {
+          for (let i = -4; i <= 4; i+=2) {
             let x = i/16;
             let y = i/8;
             let z = j/4;
             t.push([
               `particle minecraft:dolphin ^${z} ^${y} ^${x} 0.1 0.1 0.1 0 3`
             ])
+            if (i === -4) {
+              t.push([
+                `particle minecraft:snowflake ^${z} ^${y} ^${x} 0.1 0.1 0.1 0 3`
+              ])
+            }
           }
         }
         return t;
