@@ -1216,6 +1216,18 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       }
     }
 
+    addfunc('maze/mobs/boss/explorer/render_wave', [
+      (() => {
+        let t = [];
+        for (let i = -4; i <= 4; i+=2) {
+          let y = Math.sin(Math.PI*(i+1)/6)/2;
+          let x = i/8;
+          t.push(`particle minecraft:dripping_water ^ ^${y} ^${x} 0 0 0 0 1`)
+        }
+        return t;
+      })()
+    ])
+
     addfunc('maze/mobs/boss/explorer/summon_wave', [
       [...Array(5)].map((a,i)=>i-2).map(x=>`execute positioned ^${x} ^ ^2 at @s run summon marker ~ ~ ~ {Tags:["maze-explorer-wave-init","maze-explorer-wave"]}`),
       'execute rotated as @s as @e[tag=maze-explorer-wave-init] positioned as @s run tp @s ~ ~ ~ ~ ~',
