@@ -1225,13 +1225,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             let y = i/8;
             let z = j/4;
             t.push([
-              `particle minecraft:dolphin ^${z} ^${y} ^${x} 0.1 0.1 0.1 0 3`
+              `particle minecraft:${i === -4 ? "snowflake" : "dolphin"} ^${z} ^${y} ^${x} 0.1 0.1 0.1 0 3`
             ])
-            if (i === -4) {
-              t.push([
-                `particle minecraft:snowflake ^${z} ^${y} ^${x} 0.1 0.1 0.1 0 3`
-              ])
-            }
           }
         }
         return t;
