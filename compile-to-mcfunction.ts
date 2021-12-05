@@ -1793,7 +1793,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute store result bossbar minecraft:maze value run scoreboard players get bossbar maze',
       'function generated:story/maze/create/_loadcells',
       'execute unless score _batchleft maze matches ..-1 run schedule function generated:story/maze/create/_loadcellbatch 1t',
-      'execute if score _batchleft maze matches ..-1 run function generated:story/maze/create/_cleanupall'
+      'execute unless score enabled maze matches 1 if score _batchleft maze matches ..-1 run function generated:story/maze/create/_cleanupall'
     ])
 
     addfunc('maze/create/_loadcells', [
