@@ -230,11 +230,16 @@ npc:
             global: true
           - message: You should see portions of the card being fixed up soon.
             gloabl: true
-          - message: I've looked at the rest, and there should only be two more.
+          - message: I've looked at the rest of the SD card, and there should only be two more.
             global: true
           - message: Onward, Dorothy! Follow the green dust road.
             global: true
           cond: 7
+          end: -1
+        - messages:
+          - message: Bruh.
+            global: true
+          cond: 8
           end: -1
     simon:
       name: Simon Ursus Stephens
