@@ -1213,8 +1213,53 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             ]
           }
         ]
+      },
+      garbagecollector: {
+        summon: `summon ravager ~ ~ ~ {CustomNameVisible:1b,Health:2048f,Tags:["maze-mob","maze-boss","maze-boss-garbagecollector"],CustomName:'{"text":"Garbage Collector","color":"dark_green","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.05},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:0}]}`,
+        health: 200,
+        stages: [
+          {
+            moves: [
+              `execute as @e[tag=maze-mob,tag=!maze-boss,distance=..10,sort=random,limit=10] at @s run summon marker ~ ~ ~ {Tags:["maze-deletion-mark"]}`
+            ],
+            init: [
+            ]
+          },
+          {
+            moves: [
+
+            ],
+            init: [
+              `data modify entity @s Attributes[{Name:"minecraft:generic.attack_damage"}].Base set value 9d`,
+              `data modify entity @s Attributes[{Name:"minecraft:generic.attack_knockback"}].Base set value 5d`
+            ]
+          },
+          {
+            moves: [
+
+            ],
+            init: [
+              `data modify entity @s Attributes[{Name:"minecraft:generic.attack_damage"}].Base set value 12d`
+            ]
+          }
+        ]
       }
     }
+
+    addfunc('maze/mobs/boss/garbagecollector/deletion_mark', [
+      `#> mark random areas for death`,
+      `scoreboard players add @s maze-weapon-age 1`,
+      [...Array(10)].map((x, i)=> {
+        addfunc(`maze/mobs/boss/garbagecollector/deletion_mark/state_${i}`, [
+          `particle dust 1 ${1-(i+1)/10} ${1-(i+1)/10} ${1+i/10} ~ ~ ~ ${i/10+0.05} 10 ${i/10+0.05} 0 ${200+i*10} normal`,
+          `execute positioned ~-${i/10+0.05} ~-10 ~-${i/10+0.05} run tag @e[tag=maze-mob,tag=!maze-boss,dx=${i/5+0.1},dy=20,dz=${i/5+0.1}] add maze-marked-mob`,
+          `effect give @e[tag=maze-marked-mob] glowing 1 0 true`,
+          `tag @e remove maze-marked-mob`
+        ])
+        return `execute if score @s maze-weapon-age matches ${i+1} as @s at @s run function generated:story/maze/mobs/boss/garbagecollector/deletion_mark/state_${i}`
+      }),
+      `execute if score @s maze-weapon-age matches 11 run kill @s`
+    ])
 
     addfunc('maze/mobs/boss/explorer/render_wave', [
       (() => {
