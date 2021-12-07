@@ -1246,13 +1246,15 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       }
     }
 
+    schedule('execute as @e[tag=maze-deletion-mark] at @s run function generated:story/maze/mobs/boss/garbagecollector/deletion_mark', 10, functions)
+
     addfunc('maze/mobs/boss/garbagecollector/deletion_mark', [
       `#> mark random areas for death`,
       `scoreboard players add @s maze-weapon-age 1`,
       [...Array(10)].map((x, i)=> {
         addfunc(`maze/mobs/boss/garbagecollector/deletion_mark/state_${i}`, [
-          `particle dust 1 ${1-(i+1)/10} ${1-(i+1)/10} ${1+i/10} ~ ~ ~ ${i/10+0.05} 10 ${i/10+0.05} 0 ${200+i*10} normal`,
-          `execute positioned ~-${i/10+0.05} ~-10 ~-${i/10+0.05} run tag @e[tag=maze-mob,tag=!maze-boss,dx=${i/5+0.1},dy=20,dz=${i/5+0.1}] add maze-marked-mob`,
+          `particle dust 1 ${1-(i+1)/10} ${1-(i+1)/10} ${1+i/10} ~ ~ ~ ${i/20+0.05} 10 ${i/20+0.05} 0 ${200+i*10} normal`,
+          `execute positioned ~-${i/20+0.05} ~-10 ~-${i/20+0.05} run tag @e[tag=maze-mob,tag=!maze-boss,dx=${i/10+0.1},dy=20,dz=${i/10+0.1}] add maze-marked-mob`,
           `effect give @e[tag=maze-marked-mob] glowing 1 0 true`,
           `tag @e remove maze-marked-mob`
         ])
