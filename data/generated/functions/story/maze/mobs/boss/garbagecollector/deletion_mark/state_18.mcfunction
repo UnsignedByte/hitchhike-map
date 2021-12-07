@@ -3,4 +3,6 @@ execute positioned ~-0.275 ~-10 ~-0.275 run tag @e[tag=maze-mob,tag=!maze-boss,d
 effect give @e[tag=maze-marked-mob] resistance 1 1 true
 effect give @e[tag=maze-marked-mob] instant_damage 1 0 true
 effect give @e[tag=maze-marked-mob] slowness 1 3 true
+effect give @e[tag=maze-marked-mob] leviation 1 0 true
+playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 1 1.8
 tag @e remove maze-marked-mob
