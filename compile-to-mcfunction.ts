@@ -1255,7 +1255,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         addfunc(`maze/mobs/boss/garbagecollector/deletion_mark/state_${i}`, [
           `particle dust 1 ${1-(i+1)/20} ${1-(i+1)/20} ${1+i/20} ~ ~ ~ ${i/40+0.05} 10 ${i/40+0.05} 0 ${200+i*10} normal`,
           `execute positioned ~-${i/80+0.05} ~-10 ~-${i/80+0.05} run tag @e[tag=maze-mob,tag=!maze-boss,dx=${i/40+0.1},dy=20,dz=${i/40+0.1}] add maze-marked-mob`,
-          `effect give @e[tag=maze-marked-mob] glowing 1 0 true`,
+          `effect give @e[tag=maze-marked-mob] resistance 1 1 true`,
+          `effect give @e[tag=maze-marked-mob] instant_damage 1 0 true`,
+          `effect give @e[tag=maze-marked-mob] slowness 1 3 true`,
           `tag @e remove maze-marked-mob`
         ])
         return `execute if score @s maze-weapon-age matches ${i+1} as @s at @s run function generated:story/maze/mobs/boss/garbagecollector/deletion_mark/state_${i}`
