@@ -20,4 +20,4 @@ execute if score @s maze-weapon-age matches 17 as @s at @s run function generate
 execute if score @s maze-weapon-age matches 18 as @s at @s run function generated:story/maze/mobs/boss/garbagecollector/deletion_mark/state_17
 execute if score @s maze-weapon-age matches 19 as @s at @s run function generated:story/maze/mobs/boss/garbagecollector/deletion_mark/state_18
 execute if score @s maze-weapon-age matches 20 as @s at @s run function generated:story/maze/mobs/boss/garbagecollector/deletion_mark/state_19
-execute if score @s maze-weapon-age matches 11 run kill @s
+execute if score @s maze-weapon-age matches 21 run kill @s

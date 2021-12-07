@@ -1260,7 +1260,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ])
         return `execute if score @s maze-weapon-age matches ${i+1} as @s at @s run function generated:story/maze/mobs/boss/garbagecollector/deletion_mark/state_${i}`
       }),
-      `execute if score @s maze-weapon-age matches 11 run kill @s`
+      `execute if score @s maze-weapon-age matches 21 run kill @s`
     ])
 
     addfunc('maze/mobs/boss/explorer/render_wave', [
