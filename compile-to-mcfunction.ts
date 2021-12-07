@@ -1261,7 +1261,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           ] : [
             `effect give @e[tag=maze-marked-mob] resistance 1 3 true`,
             `effect give @e[tag=maze-marked-mob] instant_damage 1 1 true`,
-            `effect give @e[tag=maze-marked-mob] slowness 2 3 true`,
+            `effect give @e[tag=maze-marked-mob] slowness 2 5 true`,
             `effect give @e[tag=maze-marked-mob] jump_boost 2 128 true`
           ],
           `playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 10 ${0.9+i/20}`,
