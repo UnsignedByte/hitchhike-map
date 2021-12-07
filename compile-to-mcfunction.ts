@@ -1254,7 +1254,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [...Array(20)].map((x, i)=> {
         addfunc(`maze/mobs/boss/garbagecollector/deletion_mark/state_${i}`, [
           `particle dust 1 ${1-(i+1)/20} ${1-(i+1)/20} ${1+i/20} ~ ~ ~ ${i/40+0.05} 10 ${i/40+0.05} 0 ${200+i*10} normal`,
-          `execute positioned ~-${i/80+0.05} ~-10 ~-${i/80+0.05} run tag @e[tag=maze-mob,tag=!maze-boss,dx=${i/40+0.1},dy=20,dz=${i/40+0.1}] add maze-marked-mob`,
+          `execute positioned ~-${i/40+0.05} ~-10 ~-${i/40+0.05} run tag @e[tag=maze-mob,tag=!maze-boss,dx=${i/20+0.1},dy=20,dz=${i/20+0.1}] add maze-marked-mob`,
           (i === 19) ? [
             `effect clear @e[tag=maze-marked-mob] resistance`,
             `execute at @e[tag=maze-marked-mob] run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:0,CustomName:'{"text":"Garbage Collector","color":"dark_green","bold":true}'}`
