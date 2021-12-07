@@ -1,5 +1,6 @@
 data modify entity @s NoAI set value 1
 scoreboard players set @s maze-weapon-age 100
+scoreboard players set @s[tag=maze-boss] maze-weapon-age 20
 tag @s add maze-mob-frozen
 
 effect give @s glowing 5 0 true
