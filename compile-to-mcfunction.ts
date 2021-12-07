@@ -1260,7 +1260,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `effect give @e[tag=maze-marked-mob] slowness 1 3 true`,
           `effect give @e[tag=maze-marked-mob] levitation 1 0 true`,
           `playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 1 ${0.9+i/20}`,
-          (i === 19) ? `` : `summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:0,CustomName:'{"text":"Garbage Collector","color":"dark_green","bold":true}'}`,
+          (i === 19) ? `execute at @e[tag=maze-marked-mob] run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:0,CustomName:'{"text":"Garbage Collector","color":"dark_green","bold":true}'}` : ``,
           `tag @e remove maze-marked-mob`
         ])
         return `execute if score @s maze-weapon-age matches ${i+1} as @s at @s run function generated:story/maze/mobs/boss/garbagecollector/deletion_mark/state_${i}`
