@@ -1220,14 +1220,18 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         stages: [
           {
             moves: [
-              `execute as @e[tag=maze-mob,tag=!maze-boss,distance=..10,sort=random,limit=10] at @s run summon marker ~ ~ ~ {Tags:["maze-deletion-mark"]}`
+              [
+                `execute as @e[tag=maze-mob,tag=!maze-boss,distance=..5,sort=random,limit=10] at @s run summon marker ~ ~ ~ {Tags:["maze-deletion-mark"]}`
+              ]
             ],
             init: [
             ]
           },
           {
             moves: [
-
+              [
+                `execute as @e[tag=maze-mob,tag=!maze-boss,distance=..10,sort=random,limit=10] at @s run summon marker ~ ~ ~ {Tags:["maze-deletion-mark"]}`
+              ]
             ],
             init: [
               `data modify entity @s Attributes[{Name:"minecraft:generic.attack_damage"}].Base set value 9d`,
@@ -1236,7 +1240,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           },
           {
             moves: [
-
+              [
+                `execute as @e[tag=maze-mob,tag=!maze-boss,distance=..10,sort=random,limit=10] at @s run summon marker ~ ~ ~ {Tags:["maze-deletion-mark"]}`
+              ]
             ],
             init: [
               `data modify entity @s Attributes[{Name:"minecraft:generic.attack_damage"}].Base set value 12d`
@@ -1261,7 +1267,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           ] : [
             `effect give @e[tag=maze-marked-mob] resistance 1 3 true`,
             `effect give @e[tag=maze-marked-mob] instant_damage 1 1 true`,
-            `effect give @e[tag=maze-marked-mob] slowness 2 5 true`,
+            `effect give @e[tag=maze-marked-mob] slowness 2 4 true`,
             `effect give @e[tag=maze-marked-mob] jump_boost 2 128 true`
           ],
           `playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 10 ${0.9+i/20}`,
