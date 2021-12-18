@@ -11,3 +11,5 @@ execute if score @s maze-weapon-age matches 40.. run kill @s
 effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] slowness 1 3 true
 effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] resistance 1 3 true
 effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] instant_damage 1 1 true
+effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] wither 1 1 true
+effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] jump_boost 1 128 true
