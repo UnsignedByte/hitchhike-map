@@ -1086,6 +1086,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ],
       stackoverflow: [
         `summon bee ~ ~ ~ {Silent:1b,DeathLootTable:"minecraft:empty",Health:5f,AngerTime:2147483647,Tags:["maze-mob","maze-mob-stackoverflow"],CustomName:'{"text":"StackOverflow","color":"red"}',Attributes:[{Name:generic.max_health,Base:5},{Name:generic.follow_range,Base:16},{Name:generic.attack_damage,Base:2}]}`
+      ],
+      garbagecollector_minion: [
+        `summon pillager ~ ~ ~ {Tags:["maze-mob"],CustomName:'{"text":"free(void* ptr)","color":"red","bold":true}',HandItems:[{id:"minecraft:crossbow",Count:1b},{}]}`,
+        `summon vindicator ~ ~ ~ {Tags:["maze-mob"],CustomName:'{"text":"operator delete (void* ptr)","color":"red","bold":true}',HandItems:[{id:"minecraft:iron_axe",Count:1b},{}]}`
       ]
     }
 
@@ -1222,6 +1226,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             moves: [
               [
                 `execute as @e[tag=maze-mob,tag=!maze-boss,distance=..3,sort=random,limit=10] at @s run summon marker ~ ~ ~ {Tags:["maze-deletion-mark"]}`
+              ],
+              [
+                `execute at @e[tag=maze-mob,tag=!maze-boss,distance=..7,sort=random,limit=10] run summon marker ~ ~ ~ {Tags:["maze-garbagecollector-minion-summon"]}`
               ]
             ],
             init: [
@@ -1234,6 +1241,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               ],
               [
                 `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/garbagecollector/summon_warper`
+              ],
+              [
+                `execute at @e[tag=maze-mob,tag=!maze-boss,distance=..7,sort=random,limit=10] run summon marker ~ ~ ~ {Tags:["maze-garbagecollector-minion-summon"]}`
               ]
             ],
             init: [
@@ -1248,6 +1258,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               ],
               [
                 `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/garbagecollector/summon_warper`
+              ],
+              [
+                `execute at @e[tag=maze-mob,tag=!maze-boss,distance=..7,sort=random,limit=10] run summon marker ~ ~ ~ {Tags:["maze-garbagecollector-minion-summon"]}`
               ]
             ],
             init: [
@@ -1258,9 +1271,20 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       }
     }
 
-    schedule('execute as @e[tag=maze-warp-display] at @s run function generated:story/maze/mobs/boss/garbagecollector/warp_display', 5, functions)
-    schedule('execute as @e[tag=maze-warp-root] at @s run function generated:story/maze/mobs/boss/garbagecollector/warp_inward', 5, functions)
+    schedule([
+      `execute as @e[tag=maze-garbagecollector-minion-summon] at @s run function generated:story/maze/mobs/boss/garbagecollector/summoner_tick`,
+      'execute as @e[tag=maze-warp-display] at @s run function generated:story/maze/mobs/boss/garbagecollector/warp_display',
+      'execute as @e[tag=maze-warp-root] at @s run function generated:story/maze/mobs/boss/garbagecollector/warp_inward'
+    ], 5, functions)
     schedule('execute as @e[tag=maze-deletion-mark] at @s run function generated:story/maze/mobs/boss/garbagecollector/deletion_mark', 10, functions)
+
+    addfunc(`maze/mobs/boss/garbagecollector/summoner_tick`, [
+      `scoreboard players add @s maze-weapon-age 1`,
+      `particle minecraft:poof ~ ~ ~ 0.2 0.5 0.2 0 10`,
+      `execute if score @s maze-weapon-age matches 20.. at @s run function generated:story/maze/mobs/summon/garbagecollector_minion`,
+      `execute if score @s maze-weapon-age matches 20.. run playsound minecraft:entity.generic.extinguish_fire hostile @a ~ ~ ~ 1 1.3`,
+      'kill @s[scores={maze-weapon-age=20..}]'
+    ])
 
     addfunc(`maze/mobs/boss/garbagecollector/summon_warper`, [
       (()=>{
