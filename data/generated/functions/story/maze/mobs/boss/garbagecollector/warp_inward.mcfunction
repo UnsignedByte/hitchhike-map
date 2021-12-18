@@ -9,5 +9,5 @@ execute if score @s maze-weapon-age matches 40.. run tp @e[tag=maze-mob,distance
 execute if score @s maze-weapon-age matches 40.. run playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 1 0.8
 execute if score @s maze-weapon-age matches 40.. run kill @s
 effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] slowness 1 3 true
-effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] resistance 1 4 true
+effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] resistance 1 3 true
 effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] instant_damage 1 1 true
