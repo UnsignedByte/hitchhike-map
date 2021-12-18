@@ -1231,6 +1231,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             moves: [
               [
                 `execute as @e[tag=maze-mob,tag=!maze-boss,distance=..7,sort=random,limit=10] at @s run summon marker ~ ~ ~ {Tags:["maze-deletion-mark"]}`
+              ],
+              [
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/garbagecollector/summon_warper`
               ]
             ],
             init: [
@@ -1242,6 +1245,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             moves: [
               [
                 `execute as @e[tag=maze-mob,tag=!maze-boss,distance=..10,sort=random,limit=10] at @s run summon marker ~ ~ ~ {Tags:["maze-deletion-mark"]}`
+              ],
+              [
+                `execute positioned ~ ~1 ~ run function generated:story/maze/mobs/boss/garbagecollector/summon_warper`
               ]
             ],
             init: [
@@ -1252,7 +1258,54 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       }
     }
 
+    schedule('execute as @e[tag=maze-warp-display] at @s run function generated:story/maze/mobs/boss/garbagecollector/warp_display', 5, functions)
+    schedule('execute as @e[tag=maze-warp-root] at @s run function generated:story/maze/mobs/boss/garbagecollector/warp_inward', 5, functions)
     schedule('execute as @e[tag=maze-deletion-mark] at @s run function generated:story/maze/mobs/boss/garbagecollector/deletion_mark', 10, functions)
+
+    addfunc(`maze/mobs/boss/garbagecollector/summon_warper`, [
+      (()=>{
+        let t = [];
+
+        for (let x = 0; x < 18; x++) {
+          for (let y = 0; y < 9; y++) {
+            let xdeg = x*20;
+            let ydeg = y*20-90;
+
+            let xrad = xdeg*Math.PI/180;
+            let yrad = ydeg*Math.PI/180;
+
+            let s = 5;
+            t.push(`summon marker ~${(-s*Math.cos(yrad)*Math.sin(xrad)).toFixed(4)} ~${(s*Math.sin(yrad)).toFixed(4)} ~${(s*Math.cos(yrad)*Math.cos(xrad)).toFixed(4)} {Tags:["maze-warp-display","maze-warp-display-init"]}`);
+          }
+        }
+
+        schedule('execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield', 5, functions);
+
+        return [
+          `summon marker ~ ~ ~ {Tags:["maze-warp-root","maze-warp-root-init"]}`,
+          t,
+          `execute as @e[tag=maze-warp-display-init] at @s facing entity @e[tag=maze-warp-root-init,limit=1] feet run tp @s ~ ~ ~ ~ ~`,
+          'tag @e remove maze-warp-root-init',
+          'tag @e remove maze-warp-display-init'
+        ];
+      })()
+    ])
+
+    addfunc(`maze/mobs/boss/garbagecollector/warp_display`, [
+      `tp @s ^ ^ ^1`,
+      `scoreboard players add @s maze-weapon-age 1`,
+      `scoreboard players operation #tmp maze-weapon-age = @s maze-weapon-age`,
+      `scoreboard players operation #tmp maze-weapon-age %= 5 const`,
+      `execute if score #tmp maze-weapon-age matches 0 run tp @s ^ ^ ^-5`,
+      'execute if score @s maze-weapon-age matches 20.. run kill @s'
+    ])
+
+    addfunc('maze/mobs/boss/garbagecollector/warp_inward', [
+      `scoreboard players add @s maze-weapon-age 1`,
+      'execute if score @s maze-weapon-age matches 20.. run tp @e[tag=maze-mob,distance=..5,tag=!maze-boss] @s',
+      'execute if score @s maze-weapon-age matches 20.. run playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 1 0.8',
+      `execute if score @s maze-weapon-age matches 20.. run kill @s`
+    ])
 
     addfunc('maze/mobs/boss/garbagecollector/deletion_mark', [
       `#> mark random areas for death`,
