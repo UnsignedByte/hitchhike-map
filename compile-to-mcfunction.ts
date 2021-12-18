@@ -1293,19 +1293,19 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc(`maze/mobs/boss/garbagecollector/warp_display`, [
       `particle minecraft:block barrier ~ ~ ~ 0 0 0 0 10`,
-      `tp @s ^ ^ ^1`,
+      `tp @s ^ ^ ^0.5`,
       `scoreboard players add @s maze-weapon-age 1`,
       `scoreboard players operation #tmp maze-weapon-age = @s maze-weapon-age`,
-      `scoreboard players operation #tmp maze-weapon-age %= 5 const`,
+      `scoreboard players operation #tmp maze-weapon-age %= 10 const`,
       `execute if score #tmp maze-weapon-age matches 0 run tp @s ^ ^ ^-5`,
-      'execute if score @s maze-weapon-age matches 20.. run kill @s'
+      'execute if score @s maze-weapon-age matches 40.. run kill @s'
     ])
 
     addfunc('maze/mobs/boss/garbagecollector/warp_inward', [
       `scoreboard players add @s maze-weapon-age 1`,
-      'execute if score @s maze-weapon-age matches 20.. run tp @e[tag=maze-mob,distance=..5,tag=!maze-boss] @s',
-      'execute if score @s maze-weapon-age matches 20.. run playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 1 0.8',
-      `execute if score @s maze-weapon-age matches 20.. run kill @s`
+      'execute if score @s maze-weapon-age matches 40.. run tp @e[tag=maze-mob,distance=..5,tag=!maze-boss] @s',
+      'execute if score @s maze-weapon-age matches 40.. run playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 1 0.8',
+      `execute if score @s maze-weapon-age matches 40.. run kill @s`
     ])
 
     addfunc('maze/mobs/boss/garbagecollector/deletion_mark', [
