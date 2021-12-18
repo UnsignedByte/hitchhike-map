@@ -1315,6 +1315,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] slowness 1 3 true`,
       `effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] resistance 1 4 true`,
       `effect give @e[tag=!maze-boss,tag=maze-mob,distance=..5] instant_damage 1 1 true`,
+      `effect clear @e[tag=!maze-boss,tag=maze-mob,distance=..5] resistance`
     ])
 
     addfunc('maze/mobs/boss/garbagecollector/deletion_mark', [
