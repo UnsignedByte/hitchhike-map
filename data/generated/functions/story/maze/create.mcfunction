@@ -14,7 +14,7 @@ bossbar set minecraft:maze visible true
 bossbar set minecraft:maze style progress
 bossbar set minecraft:maze value 0
 scoreboard players set bossbar maze 0
-summon marker -1500 4 0 {Tags:["maze-marker","maze-create-root"]}
+summon marker -1500 13 0 {Tags:["maze-marker","maze-create-root"]}
 
 scoreboard players operation _x maze = size maze
 function generated:story/maze/create/_x

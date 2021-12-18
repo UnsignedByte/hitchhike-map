@@ -2,5 +2,6 @@
 
 execute if score maze-stage story-sawyer matches 0 at @e[tag=path-goal,limit=1] run function hitchhike:story/sawyer/maze/stage/1
 execute if score maze-stage story-sawyer matches 1 at @e[tag=path-goal,limit=1] run function hitchhike:story/sawyer/maze/stage/2
+execute if score maze-stage story-sawyer matches 2 at @e[tag=path-goal,limit=1] run function hitchhike:story/sawyer/maze/stage/3
 
 scoreboard players add maze-stage story-sawyer 1

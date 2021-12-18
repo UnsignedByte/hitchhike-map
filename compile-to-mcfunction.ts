@@ -1846,7 +1846,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'bossbar set minecraft:maze style progress',
       'bossbar set minecraft:maze value 0',
       'scoreboard players set bossbar maze 0',
-      `summon marker -1500 ${(cellsize-1)/2} 0 {Tags:["maze-marker","maze-create-root"]}`,
+      `summon marker -1500 ${cellsize+(cellsize-1)/2} 0 {Tags:["maze-marker","maze-create-root"]}`,
       '',
       'scoreboard players operation _x maze = size maze',
       'function generated:story/maze/create/_x'

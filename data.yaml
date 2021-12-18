@@ -237,7 +237,9 @@ npc:
           cond: 7
           end: -1
         - messages:
-          - message: Bruh.
+          - message: Nice, we should be almost done now.
+            global: true
+          - message: Most of the card is fixed up, just one sector left to finish off.
             global: true
           cond: 8
           end: -1
