@@ -1292,6 +1292,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc(`maze/mobs/boss/garbagecollector/warp_display`, [
+      `particle minecraft:block barrier ~ ~ ~ 0 0 0 0 10`,
       `tp @s ^ ^ ^1`,
       `scoreboard players add @s maze-weapon-age 1`,
       `scoreboard players operation #tmp maze-weapon-age = @s maze-weapon-age`,
