@@ -1674,6 +1674,25 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           Enchantments:`[{}]`,
           AttributeModifiers:`[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1000,Operation:2,UUID:[I;-236452543,409881411,-1774864685,1481938920],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:1,Operation:1,UUID:[I;-1658005475,239224106,-1186363263,-590591408],Slot:"mainhand"},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,Operation:0,UUID:[I;1355955642,-1776204605,-1097579002,-1040650905],Slot:"mainhand"}]`
         }
+      },
+      buildtool: {
+        id: `'minecraft:barrier'`,
+        tag: {
+          display:{
+            Name: rawJson({
+              text:"Build Tool",
+              color:"light_purple",
+              bold:true
+            }),
+            Lore:`[${rawJson({
+                      text:"Infinite Possibilities",
+                      color:"blue"
+                    })}]`
+          },
+          HideFlags:7,
+          Enchantments:`[{}]`,
+          AttributeModifiers:`[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:-1,Operation:1,UUID:[I;-339360344,2031963198,-1834550935,770994111],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:-1,Operation:1,UUID:[I;-948468744,-933934091,-1747102494,-1736394265],Slot:"offhand"}]`
+        }
       }
     }
 
