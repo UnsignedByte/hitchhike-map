@@ -1676,6 +1676,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         }
       },
       buildtool: {
+        count: 32,
         id: `'minecraft:barrier'`,
         tag: {
           display:{
@@ -1794,7 +1795,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     })
 
     Object.entries(weapons).forEach(([k, v]) => {
-      addfunc(`maze/weapons/${k}/give`, [`give @s ${toGive(v, 1)}`]);
+      addfunc(`maze/weapons/${k}/give`, [`give @s ${toGive(v, v.count || 1)}`]);
     });
 
     addfunc('maze/weapons/start', [
