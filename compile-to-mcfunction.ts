@@ -1864,16 +1864,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           }
         }
 
-        
-
         t.sort((a, b) => a[3]-b[3]);
 
         // console.log(t);
 
         t.forEach((x, i)=>{
           addfunc(`maze/weapons/buildtool/detector/increment-${i}`, [
-            `execute positioned ~${x[0]} ~${x[1]} ~${x[2]} if block ~ ~ ~ barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`,
-            `execute unless entity @e[tag=maze-buildtool-timer-init] positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/detector/increment-${i+1}`
+            `execute as @s positioned ~${x[0]} ~${x[1]} ~${x[2]} if block ~ ~ ~ barrier run function generated:story/maze/weapons/buildtool/summontimer_`,
+            `execute as @s unless score @s maze-placed matches ..0 positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/detector/increment-${i+1}`
           ])
         })
 
@@ -1881,9 +1879,16 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
         return `execute positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/detector/increment-0`;
       })(),
-      `data modify entity @e[tag=maze-buildtool-timer-init,limit=1] PlayerUUID set from entity @s UUID`,
+      `tag @a remove match-uuid-select`,
+      `tag @s add match-uuid-select`,
+      `execute as @e[tag=maze-buildtool-timer-init] run data modify entity @s PlayerUUID set from entity @a[tag=match-uuid-select,limit=1] UUID`,
       `execute at @e[tag=maze-buildtool-timer-init] if block ~ ~ ~ barrier run setblock ~ ~ ~ light_gray_wool`,
       `tag @e remove maze-buildtool-timer-init`
+    ])
+
+    addfunc('maze/weapons/buildtool/summontimer_', [
+      `summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`,
+      `scoreboard players remove @s maze-placed 1`
     ])
 
     addfunc('maze/create', [

@@ -6,8 +6,6 @@ execute as @a[tag=maze-mob,tag=hitdetect-hitter] at @s run function generated:st
 
 execute as @a[tag=maze-mob,scores={maze-placed=1..}] at @s anchored eyes positioned ^ ^ ^ align xyz positioned ~0.5 ~0.5 ~0.5 run function generated:story/maze/weapons/buildtool/detect
 
-scoreboard players remove @a[tag=maze-mob,scores={maze-placed=1..}] maze-placed 1
-
 execute as @e[tag=maze-buildtool-timer,scores={maze-weapon-age=100..}] at @s run function hitchhike:story/maze/weapons/buildtool/destroytimer
 
 scoreboard players add @e[tag=maze-buildtool-timer] maze-weapon-age 1
