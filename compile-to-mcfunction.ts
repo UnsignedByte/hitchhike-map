@@ -1882,7 +1882,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       })(),
       `tag @a remove match-uuid-select`,
       `tag @s add match-uuid-select`,
-      `execute as @e[tag=maze-buildtool-timer-init] run data modify entity @s PlayerUUID set from entity @a[tag=match-uuid-select,limit=1] UUID`,
+      `execute as @e[tag=maze-buildtool-timer-init] run data modify entity @s data.PlayerUUID set from entity @a[tag=match-uuid-select,limit=1] UUID`,
       `execute at @e[tag=maze-buildtool-timer-init] if block ~ ~ ~ barrier run setblock ~ ~ ~ light_gray_wool`,
       `tag @e remove maze-buildtool-timer-init`
     ])
