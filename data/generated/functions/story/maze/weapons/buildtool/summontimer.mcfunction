@@ -1,1333 +1,1333 @@
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~-5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~-4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~-3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~-2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~-1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~0 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~1 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~2 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~3 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~4 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
-execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~5 light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-5 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-4 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-3 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-2 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~-1 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~0 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~1 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~2 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~3 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~4 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~-1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~0 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~1 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~2 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~3 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~4 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~-5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~-4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~-3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~-2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~-1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~0 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~1 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~2 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~3 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~4 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
+execute unless entity @e[tag=maze-buildtool-timer-init] if block ~5 ~5 ~5 barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
 data modify entity @e[tag=maze-buildtool-timer-init,limit=1] PlayerUUID set from entity @s UUID
 tag @e remove maze-buildtool-timer-init

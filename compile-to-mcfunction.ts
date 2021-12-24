@@ -1849,8 +1849,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/weapons/buildtool/detect', [
-      `fill ~-5 ~-5 ~-5 ~5 ~5 ~5 light_gray_wool replace barrier`,
-      `execute as @s positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/summontimer`
+      `execute as @s positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/summontimer`,
+      `fill ~-5 ~-5 ~-5 ~5 ~5 ~5 light_gray_wool replace barrier`
     ])
 
     addfunc('maze/weapons/buildtool/summontimer', [
@@ -1860,7 +1860,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         for (let x = -5; x <= 5; x++) {
           for (let y = -5; y <= 5; y++) {
             for (let z = -5; z <= 5; z++) {
-              t.push(`execute unless entity @e[tag=maze-buildtool-timer-init] if block ~${x} ~${y} ~${z} light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`)
+              t.push(`execute unless entity @e[tag=maze-buildtool-timer-init] if block ~${x} ~${y} ~${z} barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`)
             }
           }
         }
