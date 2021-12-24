@@ -1860,7 +1860,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         for (let x = -5; x <= 5; x++) {
           for (let y = -5; y <= 5; y++) {
             for (let z = -5; z <= 5; z++) {
-              t.push(`execute unless entity @e[tag=maze-buildtool-timer-init] if block ~${x} ~${y} ~${z} barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`)
+              t.push(`execute unless entity @e[tag=maze-buildtool-timer-init] positioned ~${x} ~${y} ~${z} if block ~ ~ ~ barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`)
             }
           }
         }
