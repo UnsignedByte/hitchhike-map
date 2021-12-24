@@ -9,7 +9,7 @@ scoreboard objectives add maze-path-parent dummy
 scoreboard objectives add maze-path dummy
 scoreboard objectives add maze-mob-phase dummy
 scoreboard objectives add boss-stage dummy
-scoreboard objectives add maze-placed minecraft.used:minecraft.light_gray_wool
+scoreboard objectives add maze-placed minecraft.used:minecraft.barrier
 
 scoreboard objectives add maze-weapon-age dummy
 

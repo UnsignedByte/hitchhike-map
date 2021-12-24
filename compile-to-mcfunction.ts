@@ -1848,6 +1848,30 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `tag @e remove maze-weapon-frenchflag-ticker-init`
     ])
 
+    addfunc('maze/weapons/buildtool/detect', [
+      `scoreboard players set #tmp maze-placed 0`,
+      `execute store result score #tmp maze-placed run fill ~-5 ~-5 ~-5 ~5 ~5 ~5 light_gray_wool replace barrier`,
+      `execute as @s positioned ~ ~ ~ if score #tmp maze-placed matches 1.. run function generated:story/maze/weapons/buildtool/summontimer`
+    ])
+
+    addfunc('maze/weapons/buildtool/summontimer', [
+      (() => {
+        let t: Lines[] = [];
+
+        for (let x = -5; x <= 5; x++) {
+          for (let y = -5; y <= 5; y++) {
+            for (let z = -5; z <= 5; z++) {
+              `execute unless entity @e[tag=maze-buildtool-timer-init] if block ~${x} ~${y} ~${z} light_gray_wool unless entity @e[tag=maze-buildtool-timer] run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`
+            }
+          }
+        }
+
+        return t;
+      })(),
+      `data modify entity @e[tag=maze-buildtool-timer-init,limit=1] PlayerUUID set from entity @s UUID`,
+      `tag @e remove maze-buildtool-timer-init`
+    ])
+
     addfunc('maze/create', [
       '# Reset maze',
       `execute as @e[tag=maze-node] at @s run forceload remove ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
