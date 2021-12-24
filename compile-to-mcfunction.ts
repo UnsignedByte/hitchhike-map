@@ -1854,17 +1854,32 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/weapons/buildtool/summontimer', [
       (() => {
-        let t: Lines[] = [];
+        let t: [number, number, number, number][] = [];
 
         for (let x = -5; x <= 5; x++) {
           for (let y = -5; y <= 5; y++) {
             for (let z = -5; z <= 5; z++) {
-              t.push(`execute unless entity @e[tag=maze-buildtool-timer-init] positioned ~${x} ~${y} ~${z} if block ~ ~ ~ barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`)
+              t.push([x, y, z, x*x+y*y+z*z])
             }
           }
         }
 
-        return t;
+        
+
+        t.sort((a, b) => a[3]-b[3]);
+
+        console.log(t);
+
+        t.forEach((x, i)=>{
+          addfunc(`maze/weapons/buildtool/detector/increment-${i}`, [
+            `execute store result score #success maze-placed unless entity @e[tag=maze-buildtool-timer-init] positioned ~${x[0]} ~${x[1]} ~${x[2]} if block ~ ~ ~ barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`,
+            `execute if score #success maze-placed matches 0 positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/detector/increment-${i+1}`
+          ])
+        })
+
+        addfunc(`maze/weapons/buildtool/detector/increment-${t.length}`, [])
+
+        return `execute positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/detector/increment-0`;
       })(),
       `data modify entity @e[tag=maze-buildtool-timer-init,limit=1] PlayerUUID set from entity @s UUID`,
       `execute at @e[tag=maze-buildtool-timer-init] if block ~ ~ ~ barrier run setblock ~ ~ ~ light_gray_wool`,
