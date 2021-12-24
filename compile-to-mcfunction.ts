@@ -1849,8 +1849,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/weapons/buildtool/detect', [
-      `execute as @s positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/summontimer`,
-      `fill ~-5 ~-5 ~-5 ~5 ~5 ~5 light_gray_wool replace barrier`
+      `execute as @s positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/summontimer`
     ])
 
     addfunc('maze/weapons/buildtool/summontimer', [
@@ -1868,6 +1867,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         return t;
       })(),
       `data modify entity @e[tag=maze-buildtool-timer-init,limit=1] PlayerUUID set from entity @s UUID`,
+      `execute at @e[tag=maze-buildtool-timer-init] if block ~ ~ ~ barrier run setblock ~ ~ ~ light_gray_wool`,
       `tag @e remove maze-buildtool-timer-init`
     ])
 

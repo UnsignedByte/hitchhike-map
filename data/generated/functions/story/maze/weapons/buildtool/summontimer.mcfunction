@@ -1330,4 +1330,5 @@ execute unless entity @e[tag=maze-buildtool-timer-init] positioned ~5 ~5 ~3 if b
 execute unless entity @e[tag=maze-buildtool-timer-init] positioned ~5 ~5 ~4 if block ~ ~ ~ barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
 execute unless entity @e[tag=maze-buildtool-timer-init] positioned ~5 ~5 ~5 if block ~ ~ ~ barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}
 data modify entity @e[tag=maze-buildtool-timer-init,limit=1] PlayerUUID set from entity @s UUID
+execute at @e[tag=maze-buildtool-timer-init] if block ~ ~ ~ barrier run setblock ~ ~ ~ light_gray_wool
 tag @e remove maze-buildtool-timer-init
