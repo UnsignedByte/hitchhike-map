@@ -1868,7 +1868,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
         t.sort((a, b) => a[3]-b[3]);
 
-        console.log(t);
+        // console.log(t);
 
         t.forEach((x, i)=>{
           addfunc(`maze/weapons/buildtool/detector/increment-${i}`, [
