@@ -4,9 +4,7 @@ execute if score enabled maze matches 1 run function hitchhike:story/maze/weapon
 
 execute as @a[tag=maze-mob,tag=hitdetect-hitter] at @s run function generated:story/maze/weapons/detecthit
 
-say @a[tag=maze-mob,scores={maze-placed=1..}]
-
-execute as @a[tag=maze-mob,scores={maze-placed=1..}] anchored eyes positioned ^ ^ ^ align xyz positioned ~0.5 ~0.5 ~0.5 run function generated:story/maze/weapons/buildtool/detect
+execute as @a[tag=maze-mob,scores={maze-placed=1..}] at @s anchored eyes positioned ^ ^ ^ align xyz positioned ~0.5 ~0.5 ~0.5 run function generated:story/maze/weapons/buildtool/detect
 
 scoreboard players set @a[tag=maze-mob] maze-placed 0
 
