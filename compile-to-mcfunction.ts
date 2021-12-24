@@ -1872,7 +1872,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
         t.forEach((x, i)=>{
           addfunc(`maze/weapons/buildtool/detector/increment-${i}`, [
-            `execute store result score #success maze-placed unless entity @e[tag=maze-buildtool-timer-init] positioned ~${x[0]} ~${x[1]} ~${x[2]} if block ~ ~ ~ barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`,
+            `execute store success score #success maze-placed unless entity @e[tag=maze-buildtool-timer-init] positioned ~${x[0]} ~${x[1]} ~${x[2]} if block ~ ~ ~ barrier run summon marker ~ ~ ~ {Tags:["maze-buildtool-timer","maze-buildtool-timer-init"]}`,
             `execute if score #success maze-placed matches 0 positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/detector/increment-${i+1}`
           ])
         })
