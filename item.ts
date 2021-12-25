@@ -711,10 +711,12 @@ export const item = {
           },
           HideFlags:127,
           CustomPotionEffects:`[${toSnbt(
+            {Id:'1b',Amplifier:'2b',Duration:100})}, ${toSnbt(
             {Id:'3b',Amplifier:'1b',Duration:600})}, ${toSnbt(
             {Id:'9b',Amplifier:'0b',Duration:200})}, ${toSnbt(
             {Id:'15b',Amplifier:'0b',Duration:20})}, ${toSnbt(
-            {Id:'16b',Amplifier:'0b',Duration:400})}]`,
+            {Id:'16b',Amplifier:'0b',Duration:400})}, ${toSnbt(
+            {Id:'17b',Amplifier:'100b',Duration:80})}]`,
           Potion:`"minecraft:thick"`,
           CustomPotionColor:846663
         }
@@ -733,7 +735,9 @@ export const item = {
             {Id:'2b',Amplifier:'0b',Duration:200})}, ${toSnbt(
             {Id:'4b',Amplifier:'1b',Duration:400})}, ${toSnbt(
             {Id:'15b',Amplifier:'0b',Duration:20})}, ${toSnbt(
-            {Id:'18b',Amplifier:'9b',Duration:1200})}]`,
+            {Id:'17b',Amplifier:'100b',Duration:80})}, ${toSnbt(
+            {Id:'18b',Amplifier:'9b',Duration:1200})}, ${toSnbt(
+            {Id:'28b',Amplifier:'0b',Duration:100})}]`,
           Potion:`"minecraft:awkward"`,
           CustomPotionColor:2799851
         }
