@@ -12,4 +12,4 @@ function hitchhike:safeway/reset
 
 function hitchhike:thrownitem/reset
 
-scoreboard players set @a foodGoal -1
+scoreboard players set @a foodGoal 41
