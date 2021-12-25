@@ -243,6 +243,13 @@ npc:
             global: true
           cond: 8
           end: -1
+        - messages:
+          - message: Alright, that should be good. I'm fixing up the remaining parts of the SD card now...
+            global: true
+          - message: Let me take you back out and I'll analyze the data next.
+            global: true
+          cond: 9
+          end: -1
     simon:
       name: Simon Ursus Stephens
       colour: 0x85deb1
