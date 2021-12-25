@@ -6,3 +6,5 @@ function hitchhike:safeway/tick
 function hitchhike:car/tick
 
 function hitchhike:story/tick
+
+function hitchhike:food/tick
