@@ -249,9 +249,16 @@ npc:
             wait: 100
           - message: Let me take you back out and I'll analyze the data next.
             global: true
+          - message: Welcome back to reality! I hope you enjoyed your stay.
             command:
               - 'function hitchhike:story/maze/disable'
               - 'tp @a 952 70 -1'
+              - 'spawnpoint @a 1007 59 59'
+          - message: Give me a minute and I'll get you that SD card.
+            wait: 100
+          - message: Alright, there you go. No need to thank me, you did most of the work, after all.
+            command:
+              - "give ${select.player} ${toGive(item.sdcardfixed)}"
           cond: 9
           end: -1
     simon:

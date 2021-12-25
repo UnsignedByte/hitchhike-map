@@ -101,6 +101,23 @@ export const item = {
       Enchantments:`[{}]`
     }
   },
+  sdcardfixed: {
+    id: '"minecraft:daylight_detector"',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "SD Card (Fixed)",
+          color: "#d6679f",
+          bold: true
+        }),
+        Lore: `[${rawJson({
+          text: "An SD Card.",
+          color: "blue"
+        })}]`
+      },
+      Enchantments:`[{}]`
+    }
+  },
   money:{
     1: {
       id: '"minecraft:nether_brick"',
