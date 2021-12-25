@@ -106,7 +106,8 @@ npc:
       dialogue:
         - messages:
           - You really just broke right in, didn't you?
-          - Anyways, what's up?
+          - message: Anyways, what's up?
+            wait: 60
           - Hmm, the internet is down...
           - That might have something to do with the sudden loss of electricity in my house...
           - ...or the massive thunderstorm that's been passing by.
@@ -559,7 +560,7 @@ quest:
         value: ${npc.simon} dialogue-status 3
   diet:
     name: Full Stomach
-    description: Fill your stomach! Remember to keep a balanced diet. How will Simon know if you followed this? A mystery.
+    description: Fill your stomach! Remember to keep a balanced diet. How will Simon know if you finished this? A mystery.
     condition:
       type: nest # listed values are also condition objects
       value:
