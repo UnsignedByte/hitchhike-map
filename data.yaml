@@ -246,8 +246,12 @@ npc:
         - messages:
           - message: Alright, that should be good. I'm fixing up the remaining parts of the SD card now...
             global: true
+            wait: 100
           - message: Let me take you back out and I'll analyze the data next.
             global: true
+            command:
+              - 'function hitchhike:story/maze/disable'
+              - 'tp @a 952 70 -1'
           cond: 9
           end: -1
     simon:
