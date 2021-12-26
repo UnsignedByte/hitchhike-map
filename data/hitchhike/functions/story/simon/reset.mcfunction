@@ -4,7 +4,7 @@ clone 935 60 188 936 62 190 936 64 188
 clone 907 54 184 918 55 192 907 64 184
 
 # Close trail entrance
-clone 926 59 197 928 61 198 926 63 197
+clone 926 60 197 928 61 198 926 64 197
 
 scoreboard players set -door story-simon 0
 scoreboard players set -held story-simon 0

@@ -5,5 +5,6 @@ execute at @e[tag=npc-simon, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",
 execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 summon item 964.5 75.5 197.5 {Item:{Count: 1b, id: "minecraft:filled_map", tag: {display: {Name: '{"text":"Mountain Trail Map","color":"#25cc8c","bold":true}', Lore: ['{"text":"A Map.","color":"gray"}']}, Enchantments: [{}]}}}
 playsound minecraft:block.piston.contract neutral @a 964.5 75.5 197.5
+tag @e[tag=npc-simon, limit=1] remove npc-unface
 schedule function generated:npc/simon/7-09 282t
 tag @a remove npc-eavesdropper

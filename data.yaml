@@ -520,6 +520,7 @@ npc:
               command:
                 - 'summon item 964.5 75.5 197.5 {Item:${toSnbt(Object.assign({Count:"1b"}, item.map))}}'
                 - 'playsound minecraft:block.piston.contract neutral @a 964.5 75.5 197.5'
+                - "tag ${select.self} remove npc-unface"
             - You're welcome, by the way.
             - Anyways, I don't want you staying around any longer than necessary.
             - message: Follow me and I'll get you on your way up that mountain.
@@ -531,7 +532,7 @@ npc:
                 - 'setblock 963 44 201 minecraft:powered_rail[powered=false,shape=ascending_east,waterlogged=false]'
                 - 'summon minecart 963.5 44 201.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
-                - 'scoreboard players set -held story-simon -1'
+                - 'scoreboard players set -held story-simon 1'
                 - '# ${tp(929.5, 64, 197.5, 135, 0)}'
               wait: 400
             - Alright, the trail starts right through this gate. Good luck!
