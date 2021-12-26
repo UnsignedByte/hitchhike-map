@@ -9,6 +9,7 @@ setblock 942 39 189 minecraft:rail[shape=south_west,waterlogged=false]
 setblock 911 34 193 minecraft:stone
 setblock 912 34 193 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]
 setblock 937 34 190 minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=none]
+setblock 929 34 193 minecraft:rail[shape=east_west,waterlogged=false]
 summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}
 tag @e[tag=npc-simon, limit=1] add npc-unface
 scoreboard players set -held story-simon 1

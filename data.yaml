@@ -282,6 +282,7 @@ npc:
                 - "setblock 911 34 193 minecraft:stone"
                 - 'setblock 912 34 193 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
                 - 'setblock 937 34 190 minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=none]'
+                - 'setblock 929 34 193 minecraft:rail[shape=east_west,waterlogged=false]'
                 - 'summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
@@ -357,6 +358,7 @@ npc:
                 - 'setblock 912 34 193 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]'
                 - 'setblock 956 44 203 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
                 - 'setblock 960 44 202 minecraft:rail[shape=north_south,waterlogged=false]'
+                - 'setblock 929 34 193 minecraft:rail[shape=east_west,waterlogged=false]'
                 - '# Open gate'
                 - 'clone 907 59 184 918 60 192 907 64 184'
                 - 'playsound minecraft:block.iron_door.open block @a 913 64 192.5 10 0.8'
@@ -496,11 +498,13 @@ npc:
                 - 'setblock 942 39 189 minecraft:rail[shape=north_south,waterlogged=false]'
                 - 'setblock 945 39 194 minecraft:rail[shape=north_west,waterlogged=false]'
                 - 'setblock 960 44 202 minecraft:rail[shape=north_east,waterlogged=false]'
+                - 'setblock 964 44 201 minecraft:stone'
+                - 'setblock 963 44 201 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
                 - 'summon minecart 942.5 39 183.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
               wait: 200
-            - message: Oh wow, it actually works! What a surprise.
+            - message: Hmm...
               command:
                 - "scoreboard players set -held story-simon 0"
                 - "kill @e[tag=simon-holder]"
@@ -508,12 +512,29 @@ npc:
                 - 'playsound minecraft:entity.item_frame.remove_item neutral @a ~ ~ ~ 1'
                 - 'summon glow_item_frame 963 74 201 {Silent:1b,Facing:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["inserted_sdcard"],Item:{id:"minecraft:daylight_detector",Count:1b,tag:{Enchantments:[{}]}}}'
                 - 'data modify entity ${select.self} HandItems[0] set value {}'
+              wait: 40
+            - Oh wow, it actually works! What a surprise.
             - Let me look at the files and get you that map.
             - Feel free to relax, but don't touch anything, please. I don't want your grubby hands on my expensive furniture.
             - message: Here you go, I've even printed out the map for you. Pick it up on the left and make sure you take a good look at it before you go up.
               command:
                 - 'summon item 964.5 75.5 197.5 {Item:${toSnbt(Object.assign({Count:"1b"}, item.map))}}'
+                - 'playsound minecraft:block.piston.contract neutral @a 964.5 75.5 197.5'
             - You're welcome, by the way.
+            - Anyways, I don't want you staying around any longer than necessary.
+            - message: Follow me and I'll get you on your way up that mountain.
+              command:
+                - 'setblock 929 34 193 minecraft:rail[shape=south_east,waterlogged=false]'
+                - 'setblock 945 39 194 minecraft:rail[shape=north_east,waterlogged=false]'
+                - 'setblock 960 44 202 minecraft:rail[shape=north_east,waterlogged=false]'
+                - 'setblock 964 44 201 redstone_block'
+                - 'setblock 963 44 201 minecraft:powered_rail[powered=false,shape=ascending_east,waterlogged=false]'
+                - 'summon minecart 963.5 44 201.5 {Silent:1,Tags:["simon-holder"]}'
+                - "tag ${select.self} add npc-unface"
+                - 'scoreboard players set -held story-simon -1'
+                - '# ${tp(929.5, 64, 197.5, 135, 0)}'
+              wait: 400
+            - Alright, the trail starts right through this gate. Good luck!
           cond: 8
           end: -1
     cashier:
