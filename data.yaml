@@ -356,6 +356,7 @@ npc:
                 - "setblock 911 34 193 minecraft:redstone_block"
                 - 'setblock 912 34 193 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]'
                 - 'setblock 956 44 203 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
+                - 'setblock 960 44 202 minecraft:rail[shape=north_south,waterlogged=false]'
                 - '# Open gate'
                 - 'clone 907 59 184 918 60 192 907 64 184'
                 - 'playsound minecraft:block.iron_door.open block @a 913 64 192.5 10 0.8'
@@ -422,6 +423,9 @@ npc:
                 - 'setblock 945 39 194 minecraft:rail[shape=north_west,waterlogged=false]'
                 - 'setblock 942 39 189 minecraft:rail[shape=north_south,waterlogged=false]'
                 - 'setblock 943 39 185 minecraft:redstone_wire[east=side,north=none,power=0,south=none,west=side]'
+                - 'setblock 960 44 202 minecraft:rail[shape=north_south,waterlogged=false]'
+                - 'setblock 942 39 182 stone'
+                - 'setblock 942 39 183 minecraft:powered_rail[powered=false,shape=north_south,waterlogged=false]'
                 - 'summon minecart 956.5 44 203.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon -1'
@@ -476,7 +480,32 @@ npc:
           cond: 7
           end: -1
         - messages:
-            - Nice, I see you've fixed my SD card.
+            - I see you've fixed my SD card.
+            - message:
+              - text: Took you long enough...
+                italic: true
+            - message: Anyways, let me take that away from you before you break it.
+              command:
+                - 'clear @a ${toGive(item.sdcardfixed, 2147483647)}'
+                - 'data modify entity ${select.self} HandItems[0] set value ${toSnbt(Object.assign({Count:"1b"}, item.sdcardfixed))}'
+                - 'execute at ${select.self} run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1'
+            - message: Follow me, I'll get this plugged in.
+              command:
+                - 'setblock 942 39 183 minecraft:powered_rail[powered=true,shape=ascending_north,waterlogged=false]'
+                - 'setblock 942 39 182 redstone_block'
+                - 'setblock 942 39 189 minecraft:rail[shape=north_south,waterlogged=false]'
+                - 'setblock 945 39 194 minecraft:rail[shape=north_west,waterlogged=false]'
+                - 'setblock 960 44 202 minecraft:rail[shape=north_east,waterlogged=false]'
+                - 'summon minecart 942.5 39 183.5 {Silent:1,Tags:["simon-holder"]}'
+                - "tag ${select.self} add npc-unface"
+                - 'scoreboard players set -held story-simon -1'
+              wait: 80
+            - message: HI
+              command:
+                - "scoreboard players set -held story-simon 0"
+                - "kill @e[tag=simon-holder]"
+                - "${tp(963.5, 44, 201.5, 270, 60)}"
+                # '/summon glow_item_frame 963 74 201 {Silent:1b,Facing:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["inserted_sdcard"],Item:{id:"minecraft:daylight_detector",Count:1b,tag:{Enchantments:[{}]}}}'
           cond: 8
           end: -1
     cashier:

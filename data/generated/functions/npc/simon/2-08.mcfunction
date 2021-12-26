@@ -7,6 +7,7 @@ setblock 945 39 194 minecraft:rail[shape=north_east,waterlogged=false]
 setblock 911 34 193 minecraft:redstone_block
 setblock 912 34 193 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]
 setblock 956 44 203 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]
+setblock 960 44 202 minecraft:rail[shape=north_south,waterlogged=false]
 # Open gate
 clone 907 59 184 918 60 192 907 64 184
 playsound minecraft:block.iron_door.open block @a 913 64 192.5 10 0.8
