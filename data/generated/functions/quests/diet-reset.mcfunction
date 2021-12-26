@@ -7,6 +7,8 @@ scoreboard objectives remove s-3-0-1-1
 scoreboard objectives remove s-3-0-1-2
 scoreboard objectives remove s-3-0-1-3
 scoreboard objectives remove s-3-0-1-4
+scoreboard objectives remove s-3-0-1-5
+scoreboard objectives remove s-3-0-1-6
 scoreboard objectives remove s-3-0-2-0
 scoreboard objectives remove s-3-0-2-1
 scoreboard objectives remove s-3-0-2-2

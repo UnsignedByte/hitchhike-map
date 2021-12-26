@@ -260,6 +260,7 @@ npc:
           - message: Alright, there you go. No need to thank me, you did most of the work, after all.
             command:
               - "give ${select.player} ${toGive(item.sdcardfixed)}"
+              - "scoreboard players set -sdcard story-simon 1"
           cond: 9
           end: -1
     simon:
@@ -454,7 +455,7 @@ npc:
             - message:
               - text: Ahh
                 italic: true
-              - text: ", That was pretty good. You don't need to give me back the change, don't worry."
+              - text: ", That was pretty good. You can keep the change, don't worry."
             - Consider it a gift; I'm just generous like that.
             - Anyways, see you later!
           cond: 5
@@ -468,9 +469,15 @@ npc:
             - Feel free to observe as long as you want.
           cond: 6
           end: 6
+            # - 'execute if score sdcard quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 7'
+        - messages:
+            - Where's my LaCroix?? I told you I wouldn't talk to you unless you got it.
+            - Get out of my house!
+          cond: 7
+          end: -1
         - messages:
             - Nice, I see you've fixed my SD card.
-          cond: 7
+          cond: 8
           end: -1
     cashier:
       name: Henry
@@ -561,7 +568,7 @@ quest:
         value: ${npc.simon} dialogue-status 3
   diet:
     name: Full Stomach
-    description: Fill your stomach! Remember to keep a balanced diet. How will Simon know if you finished this? A mystery.
+    description: Fill your stomach! Remember to keep a balanced diet (Fruit, vegetables, meat). How will Simon know if you finished this? A mystery.
     condition:
       type: nest # listed values are also condition objects
       value:
@@ -579,7 +586,7 @@ quest:
               stat: minecraft.used:minecraft.beetroot #q-1-0-2
               count: 1
               overflow: true
-          count: 3 # sum of child completeions must total 500% (5 pieces of food)
+          count: 2 # sum of child completeions must total 500% (5 pieces of food)
         - type: nest #q-1-1
           value:
             - type: player
@@ -602,7 +609,15 @@ quest:
               stat: minecraft.used:minecraft.cooked_mutton
               count: 1
               overflow: true
-          count: 3
+            - type: player
+              stat: minecraft.used:minecraft.cooked_cod
+              count: 1
+              overflow: true
+            - type: player
+              stat: minecraft.used:minecraft.cooked_salmon
+              count: 1
+              overflow: true
+          count: 1
         - type: nest # q-1-2
           value:
             - type: player
@@ -621,7 +636,7 @@ quest:
               stat: minecraft.used:minecraft.melon_slice #q-1-0-2
               count: 1
               overflow: true
-          count: 3
+          count: 2
         - type: player
           all: true
           condition:
@@ -705,7 +720,8 @@ quest:
             -  "if entity @a[x=939,y=69,z=181,dx=6,dy=2,dz=5]"
           weight: 1
     end:
-      - execute as @e[tag=npc-simon,limit=1] if score @s dialogue-status matches 6 run scoreboard players set @s dialogue-status 7
+      - execute as @e[tag=npc-simon,limit=1] if score @s dialogue-status matches 6 run scoreboard players set @s dialogue-status 8
+      - execute as @e[tag=npc-simon,limit=1] unless score @s dialogue-status matches 5..6 run scoreboard players set @s dialogue-status 7
 
 itemphysics:
   # - duration: 20 # physics simulation duration in seconds

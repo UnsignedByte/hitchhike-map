@@ -9,8 +9,10 @@ function generated:quests/tick/q-3-0-1-1
 function generated:quests/tick/q-3-0-1-2
 function generated:quests/tick/q-3-0-1-3
 function generated:quests/tick/q-3-0-1-4
+function generated:quests/tick/q-3-0-1-5
+function generated:quests/tick/q-3-0-1-6
 scoreboard players set - q-3 0
-execute if score q-3-0-1-0 q-3 = oq-3-0-1-0 q-3 if score q-3-0-1-1 q-3 = oq-3-0-1-1 q-3 if score q-3-0-1-2 q-3 = oq-3-0-1-2 q-3 if score q-3-0-1-3 q-3 = oq-3-0-1-3 q-3 if score q-3-0-1-4 q-3 = oq-3-0-1-4 q-3 run scoreboard players set - q-3 1
+execute if score q-3-0-1-0 q-3 = oq-3-0-1-0 q-3 if score q-3-0-1-1 q-3 = oq-3-0-1-1 q-3 if score q-3-0-1-2 q-3 = oq-3-0-1-2 q-3 if score q-3-0-1-3 q-3 = oq-3-0-1-3 q-3 if score q-3-0-1-4 q-3 = oq-3-0-1-4 q-3 if score q-3-0-1-5 q-3 = oq-3-0-1-5 q-3 if score q-3-0-1-6 q-3 = oq-3-0-1-6 q-3 run scoreboard players set - q-3 1
 execute if score - q-3 matches 0 run function generated:quests/tick/q-3-0-1
 function generated:quests/tick/q-3-0-2-0
 function generated:quests/tick/q-3-0-2-1
