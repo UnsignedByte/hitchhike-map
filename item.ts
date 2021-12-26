@@ -118,6 +118,23 @@ export const item = {
       Enchantments:`[{}]`
     }
   },
+  map: {
+    id: '"minecraft:filled_map"',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "Mountain Trail Map",
+          color: "#25cc8c",
+          bold: true
+        }),
+        Lore: `[${rawJson({
+          text: "A Map.",
+          color: "gray"
+        })}]`
+      },
+      Enchantments:`[{}]`
+    }
+  },
   money:{
     1: {
       id: '"minecraft:nether_brick"',

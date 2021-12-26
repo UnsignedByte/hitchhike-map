@@ -510,6 +510,10 @@ npc:
                 - 'data modify entity ${select.self} HandItems[0] set value {}'
             - Let me look at the files and get you that map.
             - Feel free to relax, but don't touch anything, please. I don't want your grubby hands on my expensive furniture.
+            - message: Here you go, I've even printed out the map for you. Pick it up on the left and make sure you take a good look at it before you go up.
+              command:
+                - 'summon item 964.5 75.5 197.5 {Item:${toSnbt(Object.assign({Count:"1b"}, item.map))}}'
+            - You're welcome, by the way.
           cond: 8
           end: -1
     cashier:
