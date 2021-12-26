@@ -1,1 +1,1 @@
-execute as @e[type=item,x=893,y=54,z=-93,dx=4,dz=12,dy=4] at @s if block ~ ~ ~ minecraft:iron_trapdoor run tp @s 895.5 60.5 -83.5
+execute as @e[type=item,x=893,y=54,z=-93,dx=4,dz=12,dy=4] at @s if block ~ ~ ~ unless block ~ ~-0.1876 ~ iron_trapdoor minecraft:iron_trapdoor run tp @s 895.5 60.5 -83.5
