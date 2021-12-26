@@ -7,6 +7,8 @@ schedule clear generated:scheduled/s-32766
 function generated:scheduled/s-32766
 schedule clear generated:scheduled/s-5999
 function generated:scheduled/s-5999
+schedule clear generated:scheduled/s-99
+function generated:scheduled/s-99
 schedule clear generated:scheduled/s-2147483646
 function generated:scheduled/s-2147483646
 schedule clear generated:scheduled/s-10

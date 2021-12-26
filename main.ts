@@ -144,6 +144,11 @@ export async function init (
     `execute as @e[type=item,nbt={Item:{id:"minecraft:written_book",tag:{title: "Quest Book"}}},nbt=!{Age:-32768}] run data modify entity @s Age set value -32768`
   ], 5999, functions);
 
+  schedule([
+    '# Keep permanent falling blocks',
+    'execute as @e[tag=falling-block-display,type=falling_block] run data modify entity @s Time set value 1'
+  ], 99, functions)
+
   schedule('execute as @e[type=area_effect_cloud,tag=aec] run data modify entity @s Duration set value 2147483647', 2147483646, functions);
 
   let CONSTANTS = {
