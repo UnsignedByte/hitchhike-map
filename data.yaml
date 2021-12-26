@@ -672,6 +672,7 @@ quest:
       type: nest
       value:
         - type: player
+          all: true
           condition: # each condition in the list, when satisfied, will increment the score by 1. think of each condition as in `execute as @a at @s <conditions> run`
             - if entity @s[nbt={Inventory:[{id:"minecraft:milk_bucket"}]}]
             - if entity @s[nbt={Inventory:[{id:"minecraft:bread"}]}]
@@ -681,7 +682,7 @@ quest:
             - if entity @s[nbt={Inventory:[{id:"minecraft:glow_berries"}]}]
             - if entity @s[nbt={Inventory:[{id:"minecraft:cookie"}]}]
             - if entity @s[nbt={Inventory:[{id:"minecraft:dried_kelp"}]}]
-          count: 5
+          count: 2
         - type: player
           all: true
           condition:
