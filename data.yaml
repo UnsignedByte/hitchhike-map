@@ -499,7 +499,7 @@ npc:
                 - 'summon minecart 942.5 39 183.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
-              wait: 300
+              wait: 220
             - message: HI
               command:
                 - "scoreboard players set -held story-simon 0"
