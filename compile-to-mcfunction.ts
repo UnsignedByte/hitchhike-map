@@ -2349,4 +2349,33 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute if score #tmp maze matches 0 run schedule function generated:story/sawyer/maze/awaitpathend 5t`
     ])
   })();
+
+  // Fountain
+
+  (() => {
+    // summon of coin items for display
+    addfunc('fountain/spawn/random', [
+      `scoreboard players set _rngm vars ${Object.keys(item.money).length}`,
+      'function generated:rng/rng',
+      Object.values(item.money).map((v, i)=>`execute if score rng vars matches ${i} run summon item ~ ~ ~ {Item:${toSnbt(Object.assign({Count:'1b'}, v))}}`)
+    ])
+
+    schedule([
+      'execute positioned 898.5 61 -61.5 if entity @a[tag=fountainous] if predicate hitchhike:onethird run function generated:story/fountain/spawn/random',
+      'execute positioned 892.5 61 -61.5 if entity @a[tag=fountainous] if predicate hitchhike:onethird run function generated:story/fountain/spawn/random'
+    ], 10, functions)
+
+    // schedule([
+    //   'scoreboard players set _rngm vars 4',
+    //   'setblock 895 40 -73 water[level=1]',
+    //   'setblock 896 40 -74 water[level=1]',
+    //   'setblock 895 40 -75 water[level=1]',
+    //   'setblock 894 40 -74 water[level=1]',
+    //   'function generated:rng/rng',
+    //   'execute if score _rngm vars matches 0 run setblock 895 40 -73 water',
+    //   'execute if score _rngm vars matches 1 run setblock 896 40 -74 water',
+    //   'execute if score _rngm vars matches 2 run setblock 895 40 -75 water',
+    //   'execute if score _rngm vars matches 3 run setblock 894 40 -74 water',
+    // ])
+  })();
 }
