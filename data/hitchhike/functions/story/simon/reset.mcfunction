@@ -11,3 +11,5 @@ kill @e[tag=simon-holder]
 
 scoreboard players set start story-simon 0
 function hitchhike:story/simon/await_start
+
+kill @e[tag=inserted_sdcard,type=minecraft:glow_item_frame]
