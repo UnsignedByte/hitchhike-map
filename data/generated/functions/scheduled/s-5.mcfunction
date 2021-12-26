@@ -1,3 +1,5 @@
+execute positioned 898.5 61 -61.5 if entity @a[distance=..30] if predicate hitchhike:onethird run function generated:misc/fountain
+execute positioned 892.5 61 -61.5 if entity @a[distance=..30] if predicate hitchhike:onethird run function generated:misc/fountain
 execute at @e[tag=maze-pearl] run particle minecraft:firework ~ ~ ~ 0 0 0 1 0
 execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield
 execute as @e[tag=maze-freezefield] at @s run function generated:story/maze/mobs/boss/explorer/tick_freezefield
