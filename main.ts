@@ -443,7 +443,7 @@ export async function init (
   schedule([
     'execute positioned 898.5 61 -61.5 if entity @a[distance=..30] if predicate hitchhike:onethird run function generated:misc/fountain',
     'execute positioned 892.5 61 -61.5 if entity @a[distance=..30] if predicate hitchhike:onethird run function generated:misc/fountain'
-  ], 5, functions)
+  ], 10, functions)
 
   // schedule([
   //   'scoreboard players set _rngm vars 4',
