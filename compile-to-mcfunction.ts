@@ -221,7 +221,7 @@ export function createNpc (
           }),
           `execute if score dialogue-begun dialogue-status matches 1 run tag ${select.newPlayer} add spoken-to`,
           `tag ${select.newPlayer} remove ${playerTag}`, //if dialogue failed, remove the playertag
-          `execute if score dialogue-begun dialogue-status matches 0 if entity ${select.newPlayer} run tag @s remove speaking`, // no dialogue to start, don't speak
+          `execute unless score dialogue-begun dialogue-status matches 1 run tag @s remove speaking`, // no dialogue to start, don't speak
         ];
 
         return `execute as @s[tag=${npcTag}] at @s run function generated:npc/${id}/tick`;
