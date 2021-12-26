@@ -466,7 +466,7 @@ npc:
             - Anyways, see you later!
           cond: 5
           end:
-            - scoreboard players set ${select.self} dialogue-status 6
+            - execute unless score sdcard quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 6
             - execute if score sdcard quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 8
         - messages:
             - Hi again! I see you're as interested in Morton as I am!
@@ -534,7 +534,7 @@ npc:
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
                 - '# ${tp(929.5, 64, 197.5, 135, 0)}'
-              wait: 380
+              wait: 300
             - Alright, the trail starts right through this gate. Good luck!
           cond: 8
           end: -1
@@ -788,8 +788,8 @@ quest:
             -  "if entity @a[x=939,y=69,z=181,dx=6,dy=2,dz=5]"
           weight: 1
     end:
-      - execute as @e[tag=npc-simon,limit=1] if score lacroix quest-status matches -1 run scoreboard players set @s dialogue-status 8
-      - execute as @e[tag=npc-simon,limit=1] unless score lacroix quest-status matches -1 run scoreboard players set @s dialogue-status 7
+      - execute if score lacroix quest-status matches -1 run scoreboard players set @e[tag=npc-simon,limit=1] dialogue-status 8
+      - execute unless score lacroix quest-status matches -1 run scoreboard players set @e[tag=npc-simon,limit=1] dialogue-status 7
 
 itemphysics:
   # - duration: 20 # physics simulation duration in seconds
