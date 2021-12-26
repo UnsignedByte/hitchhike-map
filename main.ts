@@ -433,6 +433,18 @@ export async function init (
     ])
   ]
 
+  // summon of coin items for display
+  functions['misc/fountain'] = [
+    `scoreboard players set _rngm vars ${Object.keys(item.money).length}`,
+    'function generated:rng/rng',
+    Object.values(item.money).map((v, i)=>`execute if score rng vars matches ${i} run summon item ~ ~ ~ {Item:${toSnbt(Object.assign({Count:'1b'}, v))}}`)
+  ]
+
+  schedule([
+    'execute positioned 898.5 61 -61.5 if predicate hitchhike:onethird run function generated:summon_coin_random',
+    'execute positioned 892.5 61 -61.5 if predicate hitchhike:onethird run function generated:summon_coin_random',
+  ], 3, functions)
+
   functions['test/givebook'] = `give @a ${toGive(item.quest_book)}`;
 
   Object.entries(item.books).map(([k, v]: [string, any])=>{
