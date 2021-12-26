@@ -555,7 +555,7 @@ quest:
         value: ${npc.wheatish} dialogue-status 2
   preparedness:
     name: Preparing & Planning
-    description: Remember to be prepared for your hike! Simon demands it.
+    description: Remember to be prepared for your hike! Simon demands it. Make sure you are (1.) not hiking on an empty stomach, (2.) properly dressed, and (3.) have a mid-hike snack planned!
     condition:
       type: cond
       value:
