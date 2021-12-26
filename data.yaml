@@ -498,14 +498,16 @@ npc:
                 - 'setblock 960 44 202 minecraft:rail[shape=north_east,waterlogged=false]'
                 - 'summon minecart 942.5 39 183.5 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
-                - 'scoreboard players set -held story-simon -1'
-              wait: 80
+                - 'scoreboard players set -held story-simon 1'
+              wait: 160
             - message: HI
               command:
                 - "scoreboard players set -held story-simon 0"
                 - "kill @e[tag=simon-holder]"
-                - "${tp(963.5, 44, 201.5, 270, 60)}"
-                # '/summon glow_item_frame 963 74 201 {Silent:1b,Facing:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["inserted_sdcard"],Item:{id:"minecraft:daylight_detector",Count:1b,tag:{Enchantments:[{}]}}}'
+                - "${tp(963.5, 74, 201.5, 270, 60)}"
+                - 'playsound minecraft:entity.item_frame.remove_item neutral @a ~ ~ ~ 1'
+                - 'summon glow_item_frame 963 74 201 {Silent:1b,Facing:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["inserted_sdcard"],Item:{id:"minecraft:daylight_detector",Count:1b,tag:{Enchantments:[{}]}}}'
+                - 'data modify entity ${select.self} HandItems[0] set value {}'
           cond: 8
           end: -1
     cashier:
