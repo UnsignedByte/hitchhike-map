@@ -534,7 +534,7 @@ npc:
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
                 - '# ${tp(929.5, 64, 197.5, 135, 0)}'
-              wait: 400
+              wait: 380
             - Alright, the trail starts right through this gate. Good luck!
           cond: 8
           end: -1

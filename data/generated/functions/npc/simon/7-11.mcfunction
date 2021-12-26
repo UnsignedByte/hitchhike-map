@@ -12,5 +12,5 @@ summon minecart 963.5 44 201.5 {Silent:1,Tags:["simon-holder"]}
 tag @e[tag=npc-simon, limit=1] add npc-unface
 scoreboard players set -held story-simon 1
 # tp @e[tag=npc-simon, limit=1] 929.50 64 197.50 135 0
-schedule function generated:npc/simon/7-12 400t
+schedule function generated:npc/simon/7-12 380t
 tag @a remove npc-eavesdropper
