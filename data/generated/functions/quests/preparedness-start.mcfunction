@@ -4,3 +4,6 @@ scoreboard players set preparedness quest-status 0
 scoreboard objectives add q-2 dummy
 scoreboard players set q-2 q-2 0
 scoreboard players set q-2-0 q-2 0
+scoreboard players set q-2-0-0 q-2 0
+scoreboard players set q-2-0-1 q-2 0
+scoreboard objectives add q-2-0-1 dummy

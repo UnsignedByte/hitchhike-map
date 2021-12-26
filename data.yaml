@@ -557,12 +557,20 @@ quest:
     name: Preparing & Planning
     description: Remember to be prepared for your hike! Simon demands it. Make sure you are (1.) not hiking on an empty stomach, (2.) properly dressed, and (3.) have a mid-hike snack planned!
     condition:
-      type: cond
+      type: nest
       value:
-        - if score diet quest-status matches -1
-        - if score leather quest-status matches -1
-        - if score picnic quest-status matches -1
-      count: 3
+        - type: cond
+          value:
+            - if score diet quest-status matches -1
+            - if score leather quest-status matches -1
+            - if score picnic quest-status matches -1
+          count: 3
+        - type: player
+          all: true
+          condition:
+            -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
+          count: 1
+          weight: 1
     end:
       - type: score
         value: ${npc.simon} dialogue-status 3
@@ -637,12 +645,12 @@ quest:
               count: 1
               overflow: true
           count: 2
-        - type: player
-          all: true
-          condition:
-            -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
-          count: 1
-          weight: 1
+        # - type: player
+        #   all: true
+        #   condition:
+        #     -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
+        #   count: 1
+        #   weight: 1
   leather:
     name: Dressing Warm
     description: Wear 3 pieces of leather armor and show your new drip to Simon.
@@ -658,12 +666,12 @@ quest:
             - if entity @s[nbt={Inventory:[{Slot:102b, id:"minecraft:leather_chestplate"}]}]
             - if entity @s[nbt={Inventory:[{Slot:103b, id:"minecraft:leather_helmet"}]}]
           count: 3
-        - type: player
-          all: true
-          condition:
-            -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
-          count: 1
-          weight: 1
+        # - type: player
+        #   all: true
+        #   condition:
+        #     -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
+        #   count: 1
+        #   weight: 1
   picnic:
     name: Picnic Packing
     description: Bring a picnic of healthy foods with you. Remember, you still have to bring the food back to Simon.
@@ -683,12 +691,12 @@ quest:
             - if entity @s[nbt={Inventory:[{id:"minecraft:cookie"}]}]
             - if entity @s[nbt={Inventory:[{id:"minecraft:dried_kelp"}]}]
           count: 2
-        - type: player
-          all: true
-          condition:
-            -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
-          count: 1
-          weight: 1
+        # - type: player
+        #   all: true
+        #   condition:
+        #     -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
+        #   count: 1
+        #   weight: 1
   lacroix:
     name: LaCroix Delivery
     description: Get Simon some LaCroix sparkling water.

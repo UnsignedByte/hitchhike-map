@@ -35,5 +35,3 @@ scoreboard players set q-3-0-2-2 q-3 0
 scoreboard objectives add s-3-0-2-2 minecraft.used:minecraft.glow_berries
 scoreboard players set q-3-0-2-3 q-3 0
 scoreboard objectives add s-3-0-2-3 minecraft.used:minecraft.melon_slice
-scoreboard players set q-3-0-3 q-3 0
-scoreboard objectives add q-3-0-3 dummy

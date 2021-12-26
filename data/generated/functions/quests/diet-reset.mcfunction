@@ -13,4 +13,3 @@ scoreboard objectives remove s-3-0-2-0
 scoreboard objectives remove s-3-0-2-1
 scoreboard objectives remove s-3-0-2-2
 scoreboard objectives remove s-3-0-2-3
-scoreboard objectives remove q-3-0-3

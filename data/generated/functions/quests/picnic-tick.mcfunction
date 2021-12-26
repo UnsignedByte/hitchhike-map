@@ -1,7 +1,6 @@
 function generated:quests/tick/q-5-0-0
-function generated:quests/tick/q-5-0-1
 scoreboard players set - q-5 0
-execute if score q-5-0-0 q-5 = oq-5-0-0 q-5 if score q-5-0-1 q-5 = oq-5-0-1 q-5 run scoreboard players set - q-5 1
+execute if score q-5-0-0 q-5 = oq-5-0-0 q-5 run scoreboard players set - q-5 1
 execute if score - q-5 matches 0 run function generated:quests/tick/q-5-0
 scoreboard players set - q-5 0
 execute if score q-5-0 q-5 = oq-5-0 q-5 run scoreboard players set - q-5 1
