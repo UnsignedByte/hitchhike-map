@@ -624,6 +624,12 @@ npc:
           - If you wish to play another time, simply talk to me again.
           cond: 4
           end: 2
+        - messages:
+          - Welp, unfortunately, that's it folks!
+          - A valiant attempt, but unfortunately your guess was not quite right.
+          - Feel free to try again, though! Just speak to me when you want to.
+          cond: 5
+          end: 2
 
 quest:
   visitfriend: # visit friend's house
