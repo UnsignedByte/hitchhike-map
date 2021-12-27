@@ -47,7 +47,7 @@ export function rawJson (json: unknown): string {
 }
 
 export function noteToPitch(note: number): number {
-  return 2**((note-12)/12);
+  return (2**((note-12)/12))%2;
 }
 
 export function createNpc (
