@@ -607,7 +607,7 @@ npc:
           - To get tokens, simply place your cash in the chest right here!
           - Only 10b (0.10 Bov) a token!
           - Use your tokens to guess the amount of money in the jar; 1 BovToken coin (BTC) represents 1 Bov.
-          - If you are within 1B of the real total, you get everything in the jar!
+          - If you are within 2.50 Bov of the real total, you get everything in the jar!
           - Place your bets to the right side.
           - When you're ready to play, come talk to me and I'll fill that jar up for you.
           end: 2
