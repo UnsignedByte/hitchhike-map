@@ -2519,10 +2519,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `scoreboard players set chimeIndex fishjar 0`,
       `setblock 914 56 -85 minecraft:barrier`,
       'schedule function generated:story/fountain/jar/incrementcount 5t',
-      'schedule function generated:story/fountain/jar/speedaxolotls 100t'
+      'schedule function generated:story/fountain/jar/speedaxolotls 160t'
     ])
 
-    addfunc('fountain/jar/speedaxolotls', ['effect give @e[type=axolotl,tag=jar-coin] speed 1000000 1 true'])
+    addfunc('fountain/jar/speedaxolotls', [
+      'effect give @e[type=axolotl,tag=jar-coin] speed 1000000 0 true',
+      'execute as @e[tag=jar-coin,type=minecraft:axolotl] run data modify entity @s Air set value -20'
+    ])
 
     addfunc('fountain/jar/incrementcount', [
       `kill @e[tag=jar-coin,type=axolotl,x=923,y=44,z=-80,dx=2,dz=2,dy=3]`,

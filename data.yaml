@@ -615,7 +615,8 @@ npc:
             - message: Alright, here come the coins!
               command:
                 - 'schedule function generated:story/fountain/jar/fill 20t'
-            - Best of luck! Come back again when you are ready to find out the real total.
+            - Come back again when you are ready to find out the real total.
+            - Make sure to choose carefully, and best of luck!
           cond: 2
           end: 3
         - messages:
