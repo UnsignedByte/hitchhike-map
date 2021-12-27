@@ -2462,7 +2462,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const jarradii = [1,2,2,2,2,1,1]
     const fillspd = 1; // ticks to wait between fills
     const fillsper = 16; // number of levels per block to go through
-    const chimenotes = [12, 13, 14, 15];
+    const chimenotes = [6, 8, 10, 12];
 
     addfunc('fountain/jar/fill', [
       'fill 923 48 -80 925 48 -78 minecraft:spruce_planks',
