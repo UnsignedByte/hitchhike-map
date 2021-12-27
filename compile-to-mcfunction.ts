@@ -2559,5 +2559,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute unless score #tmp fishjar matches -250..250 run function hitchhike:story/fountain/jar/fail`
     ])
 
+    schedule([
+      'particle minecraft:current_down 896.5 63.9 -60.0 0.25 0 0.5 0 15',
+      'particle minecraft:splash 896.5 63.9 -60.0 0.25 0 0.5 0 6',
+      'particle minecraft:bubble_column_up 894.5 63.9 -60.0 0.25 0 0.5 0 15',
+      'particle minecraft:splash 894.5 63.9 -60.0 0.25 0 0.5 0 6'
+    ], 3, functions)
+
   })();
 }

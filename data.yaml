@@ -608,13 +608,13 @@ npc:
           - Only 10b (0.10 Bov) a token!
           - Use your tokens to guess the amount of money in the jar; 1 BovToken coin (BTC) represents 1 Bov.
           - If you are within 2.50 Bov of the real total, you get everything in the jar!
-          - Place your bets to the right side.
           - When you're ready to play, come talk to me and I'll fill that jar up for you.
           end: 2
         - messages:
             - message: Alright, here come the coins!
               command:
                 - 'schedule function generated:story/fountain/jar/fill 20t'
+            - Guess the total value in the jar, and place your bets to the right side.
             - Come back again when you are ready to find out the real total.
             - Make sure to choose carefully, and best of luck!
           cond: 2
