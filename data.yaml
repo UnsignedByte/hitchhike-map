@@ -314,6 +314,11 @@ npc:
                   value: diet
                 - type: quest
                   value: preparedness
+            - message:
+              - text: "What, you don't have money to buy clothes? Just go scrounging for coins at the fountain or "
+              - text: whatever
+                italic: true
+              - text: " you people do."
             - message: "Remember, you better not come back until you're actually ready to go up."
           cond: 1
           end: 2
@@ -638,6 +643,51 @@ npc:
           - Feel free to try again, though! Just speak to me when you want to.
           cond: 5
           end: 2
+    fountainman:
+      name: Sylvian Bismarck
+      position: 899.5 64 -53.3
+      rotation: 0 0
+      colour: 0x9c389c
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzE5ODRkOGE2ODRkM2JiZjZhZTk1MzExMDY0Mzk3NDE3OTM2NDZkMzg0YmZjYjFlNGFkOTQ5ZDU3YzI1In19fQ==
+      villager:
+        type: swamp
+        profession: cleric
+      dialogue:
+        - messages:
+          - Why hello there...
+          - Feeling short on... money?
+          - Want a little extra... cash?
+          - message:
+            - text: "Fret not, for "
+            - text: I've
+              italic: true
+            - text: " got the perfect opportunity for you."
+          - See any of those coins kids have been throwing into the fountain for years, representing all their hopes and dreams?
+          - message:
+            - text: "No?"
+              italic: true
+            - text: " Well that's exactly it, isn't it? Where have they been going?"
+          - message:
+            - text: "You see... hopes and dreams are "
+            - text: "expensive"
+              bold: true
+            - text: "."
+          - Shouldn't someone much more eloquent-- such as yourself-- be more deserving of such wealth?
+          - message:
+            - text: Try taking a look beneath the fountain...
+              italic: true
+          - message:
+            - text: Get some hopes and dreams for yourself, too.
+              italic: true
+          end: 1
+        - messages:
+          - Hmm? Something under the fountain? What are you talking about?
+          cond: 1
+          end: 2
+        - messages:
+          - Hello there, hope you are having a great day!
+          cond: 2
+          end: 1
 
 quest:
   visitfriend: # visit friend's house
