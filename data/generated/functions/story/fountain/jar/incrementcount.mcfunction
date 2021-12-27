@@ -6,6 +6,6 @@ scoreboard players operation c_B fishjar = #cashcount fishjar
 scoreboard players operation c_B fishjar /= 100 const
 scoreboard players operation c_b fishjar = #cashcount fishjar
 scoreboard players operation c_b fishjar %= 100 const
-data modify block 914 56 -86 Text3 set value '[{"color":"gold","score":{"name":"c_B","objective":"fishjar"}},{"text":"."},{""score":{"name":"c_b","objective":"fishjar"}},{"text":" Bov"}]'
+data modify block 914 56 -86 Text3 set value '[{"color":"gold","score":{"name":"c_B","objective":"fishjar"}},{"text":"."},{"score":{"name":"c_b","objective":"fishjar"}},{"text":" Bov"}]'
 execute if entity @e[tag=jar-coin,type=item] run schedule function generated:story/fountain/jar/incrementcount 5t
 execute unless entity @e[tag=jar-coin,type=item] run schedule function generated:story/fountain/jar/endcount 20t
