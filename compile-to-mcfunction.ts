@@ -2455,8 +2455,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     schedule('function generated:story/fountain/jar/updateguess', 20, functions)
 
     const jarradii = [1,2,2,2,2,1,1]
-    const fillspd = 20; // ticks to wait between fills
-    const fillsper = 1 // number of levels per block to go through
+    const fillspd = 1; // ticks to wait between fills
+    const fillsper = 32; // number of levels per block to go through
 
     addfunc('fountain/jar/fill', [
       'fill 923 48 -80 925 48 -78 minecraft:spruce_planks',
