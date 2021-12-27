@@ -2445,15 +2445,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('fountain/jar/updateguess', [
       'execute if entity @e[type=item,distance=..1,nbt={Item:${toSnbt(item.btc)}}] run playsound minecraft:entity.experience_orb.pickup neutral @a 914 55 -73',
       `execute positioned 914.5 49 -72.5 as @e[type=item,distance=..1,nbt={Item:${toSnbt(item.btc)}}] run function generated:story/fountain/jar/_updateguess`,
-      `data modify block 914 56 -72 Text3 set value '[{"color":"gold","score":{"name":"guesscount","objective":"fishjar"}},{"text":" Bov"}]'`,
+      `data modify block 914 56 -72 Text3 set value '[{"color":"gold","score":{"name":"#guesscount","objective":"fishjar"}},{"text":" Bov"}]'`,
       'execute positioned 914.5 49 -72.5 run tp @e[type=item,distance=..1] 914.5 55 -74.5'
     ])
 
-    //data modify storage hitchhike:story/fountain jar_guess_name set value '[{"text":"Current Guess: ","color":"gold","bold":true,"extra":[{"score":{"name":"guesscount","objective":"fishjar"}},{"text":" Bov"}]}]'
-
     addfunc('fountain/jar/_updateguess', [
       'execute store result score #tmp fishjar run data get entity @s Item.Count',
-      'scoreboard players operation guesscount fishjar += #tmp fishjar',
+      'scoreboard players operation #guesscount fishjar += #tmp fishjar',
       'kill @s'
     ])
 
@@ -2467,11 +2465,15 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('fountain/jar/fill', [
       'fill 923 48 -80 925 48 -78 minecraft:spruce_planks',
       'setblock 924 60 -79 water',
-      'schedule function generated:story/fountain/jar/fill/0 65t',
-      `kill @e[tag=jar-coin]`,
+      'schedule function generated:story/fountain/jar/fill/start 65t',
+      `kill @e[tag=jar-coin]`
+    ])
+
+    addfunc('fountain/jar/fill/start', [
       'scoreboard players set coincount fishjar 0',
-      'scoreboard players set cashcount fishjar 0',
-      'function generated:story/fountain/jar/spawn'
+      'scoreboard players set #cashcount fishjar 0',
+      'function generated:story/fountain/jar/spawn',
+      'function generated:story/fountain/jar/fill/0'
     ])
 
     let _ind = 0;
@@ -2497,7 +2499,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `scoreboard players set _rngm vars ${coincount}`,
       `function generated:rng/rng`,
       Object.entries(item.money).map(([k, v], i)=>[
-        `execute if score rng vars matches ${i} run scoreboard players add cashcount fishjar ${k}`,
+        `execute if score rng vars matches ${i} run scoreboard players add #cashcount fishjar ${k}`,
         `execute if score rng vars matches ${i} run summon axolotl 924 59 -79 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,CanPickUpLoot:0b,Tags:["invisible","jar-coin"],Passengers:[{id:"minecraft:item",Age:-32768,PickupDelay:32767,Tags:["jar-coin"],Item:${toSnbt(Object.assign({Count:'1b'}, v))}}],ActiveEffects:[{Id:14b,Amplifier:2147483647b,Duration:0}]}`
       ]),
       `execute unless score coincount fishjar matches 50.. run function generated:story/fountain/jar/spawn`
