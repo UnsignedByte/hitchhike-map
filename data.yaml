@@ -654,9 +654,12 @@ npc:
         profession: cleric
       dialogue:
         - messages:
-          - Why hello there...
-          - Feeling short on... money?
-          - Want a little extra... cash?
+          - message: Why hello there...
+            wait: 100
+          - message: Feeling short on... money?
+            wait: 100
+          - message: Want a little extra... cash?
+            wait: 100
           - message:
             - text: "Fret not, for "
             - text: I've
@@ -672,7 +675,7 @@ npc:
             - text: "expensive"
               bold: true
             - text: "."
-          - Shouldn't someone much more eloquent-- such as yourself-- be more deserving of such wealth?
+          - Shouldn't someone much more eloquent (such as yourself) be more deserving of such wealth?
           - message:
             - text: Try taking a look beneath the fountain...
               italic: true
