@@ -2460,7 +2460,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const jarradii = [1,2,2,2,2,1,1]
     const fillspd = 1; // ticks to wait between fills
     const fillsper = 16; // number of levels per block to go through
-    const chimenotes = [6, 8, 10, 12];
+    let chimenotes = [6, 8, 10, 12];
 
     addfunc('fountain/jar/fill', [
       'execute if block 914 55 -73 minecraft:blue_stained_glass run function generated:story/fountain/jar/_fill'
@@ -2532,10 +2532,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation c_b fishjar = #cashcount fishjar',
       'scoreboard players operation c_b fishjar %= 100 const',
       `data modify block 914 56 -86 Text3 set value '[{"color":"gold","score":{"name":"c_B","objective":"fishjar"}},{"text":"."},{"score":{"name":"c_b","objective":"fishjar"}},{"text":" Bov"}]'`,
-      `execute if entity @e[tag=jar-coin,type=item,x=921,y=44,z=-82,dx=6,dz=6,dy=12] run schedule function generated:story/fountain/jar/incrementcount 5t`,
-      `execute unless entity @e[tag=jar-coin,type=item,x=921,y=44,z=-82,dx=6,dz=6,dy=12] run schedule function generated:story/fountain/jar/endcount 20t`
+      'execute as @e[tag=jar-coin,type=item] unless entity @s[x=914,y=55,z-85,dx=0,dy=0,dz=0] run tag @s add jar-coin-unfinished',
+      `execute if entity @e[tag=jar-coin-unfinished,type=item] run schedule function generated:story/fountain/jar/incrementcount 5t`,
+      `execute unless entity @e[tag=jar-coin-unfinished,type=item] run schedule function generated:story/fountain/jar/endcount 20t`,
+      'tag @e remove jar-coin-unfinished'
     ])
 
+    chimenotes = [10, 11, 12, 13];
     addfunc('fountain/jar/drain/chime', [
       [...Array(50)].map((x,i)=>`execute if score chimeIndex fishjar matches ${i} run playsound minecraft:block.note_block.bit neutral @a 914 56 -85 1 ${noteToPitch(Math.floor(i/chimenotes.length)*(chimenotes[1]-chimenotes[0]) + chimenotes[i++%chimenotes.length])}`),
       `scoreboard players add chimeIndex fishjar 1`
