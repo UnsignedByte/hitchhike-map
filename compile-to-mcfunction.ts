@@ -2532,7 +2532,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation c_b fishjar = #cashcount fishjar',
       'scoreboard players operation c_b fishjar %= 100 const',
       `data modify block 914 56 -86 Text3 set value '[{"color":"gold","score":{"name":"c_B","objective":"fishjar"}},{"text":"."},{"score":{"name":"c_b","objective":"fishjar"}},{"text":" Bov"}]'`,
-      'execute as @e[tag=jar-coin,type=item] unless entity @s[x=914,y=55,z-85,dx=0,dy=0,dz=0] run tag @s add jar-coin-unfinished',
+      'execute as @e[tag=jar-coin,type=item] unless entity @s[x=914,y=55,z=-85,dx=0,dy=0,dz=0] run tag @s add jar-coin-unfinished',
       `execute if entity @e[tag=jar-coin-unfinished,type=item] run schedule function generated:story/fountain/jar/incrementcount 5t`,
       `execute unless entity @e[tag=jar-coin-unfinished,type=item] run schedule function generated:story/fountain/jar/endcount 20t`,
       'tag @e remove jar-coin-unfinished'
