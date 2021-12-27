@@ -1,4 +1,4 @@
-execute positioned 914.5 49 -72.5 as @e[type=item,distance=..1,nbt={Item:{id: "minecraft:sunflower", tag: {display: {Name: '{"text":"1 BTC","color":"gold"}', Lore: ['{"text":"Valued at 1.00 BOV"}']}, Enchangments: [{}]}}}] run function generated:story/fountain/jar/_updateguess
+execute positioned 914.5 49 -72.5 as @e[type=item,distance=..1,nbt={Item:{id: "minecraft:sunflower", tag: {display: {Name: '{"text":"1 BTC","color":"gold"}', Lore: ['{"text":"Valued at 1.00 BOV"}']}}}}] run function generated:story/fountain/jar/_updateguess
 scoreboard players operation g_B fishjar = guesscount fishjar
 scoreboard players operation g_B fishjar /= 100 const
 scoreboard players operation g_b fishjar = guesscount fishjar

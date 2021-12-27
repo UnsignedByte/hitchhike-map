@@ -146,8 +146,7 @@ export const item = {
         Lore:`[${rawJson({
           text:"Valued at 1.00 BOV"
         })}]`
-      },
-      Enchangments:`[{}]`
+      }
     }
   },
   money:{
