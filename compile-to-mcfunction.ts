@@ -2475,10 +2475,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         const r = jarradii[i];
         addfunc(`fountain/jar/fill/${_ind++}`, [
           `execute positioned 924 ${49+i} -79 run fill ~${-r} ~ ~${-r} ~${r} ~ ~${r} water[level=${level}] replace ${j == 0 ? "air" : "water"}`,
-          `schedule function generated:story/fountain/jar/fill/${_ind} ${fillspd}t`
+          `schedule function generated:story/fountain/jar/fill/${_ind} ${fillspd}t`//
         ])
       }
     }
+
+    addfunc(`fountain/jar/fill/${_ind}`, [
+      'setblock 924 60 -79 air'
+    ])
 
     addfunc('fountain/jar/spawn', [
       `scoreboard players add coincount fishjar 1`,
