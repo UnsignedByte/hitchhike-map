@@ -2387,7 +2387,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute positioned 899.5 54.5 -90.5 if entity @a[tag=fountainous] if predicate hitchhike:onethird run function generated:story/fountain/spawn/random',
       'execute positioned 891.5 54.5 -90.5 if entity @a[tag=fountainous] if predicate hitchhike:onethird run function generated:story/fountain/spawn/random',
 
-    ], 20, functions)
+    ], 12, functions)
 
     // schedule([
     //   'scoreboard players set _rngm vars 4',
