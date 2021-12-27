@@ -2522,7 +2522,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'schedule function generated:story/fountain/jar/speedaxolotls 100t'
     ])
 
-    addfunc('fountain/jar/speedaxolotls', ['effect give @e[type=axolotl,tag=jar-coin] speed 1000000 3 true'])
+    addfunc('fountain/jar/speedaxolotls', ['effect give @e[type=axolotl,tag=jar-coin] speed 1000000 1 true'])
 
     addfunc('fountain/jar/incrementcount', [
       `kill @e[tag=jar-coin,type=axolotl,x=923,y=44,z=-80,dx=2,dz=2,dy=3]`,
