@@ -2392,24 +2392,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute positioned 891.5 54.5 -90.5 if predicate hitchhike:onethird run function generated:story/fountain/spawn/random',
     ])
 
-    addfunc('fountain/jar/fill', [
-      `kill @e[tag=jar-coin]`,
-      'scoreboard players set coincount fishjar 0',
-      'scoreboard players set cashcount fishjar 0',
-      'function generated:story/fountain/jar/spawn'
-    ])
-
-    addfunc('fountain/jar/spawn', [
-      `scoreboard players add coincount fishjar 1`,
-      `scoreboard players set _rngm vars ${coincount}`,
-      `function generated:rng/rng`,
-      Object.entries(item.money).map(([k, v], i)=>[
-        `execute if score rng vars matches ${i} run scoreboard players add cashcount fishjar ${k}`,
-        `execute if score rng vars matches ${i} run summon axolotl 924 59 -79 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,CanPickUpLoot:0b,Tags:["invisible","jar-coin"],Passengers:[{id:"minecraft:item",Age:-32768,PickupDelay:32767,Tags:["jar-coin"],Item:${toSnbt(Object.assign({Count:'1b'}, v))}}],ActiveEffects:[{Id:14b,Amplifier:2147483647b,Duration:0}]}`
-      ]),
-      `execute unless score coincount fishjar matches 50.. run function generated:story/fountain/jar/spawn`
-    ])
-
     addfunc('fountain/jar/gettokens', [
       'setblock 915 59 -83 stone',
       'clone 914 55 -79 914 55 -79 914 49 -79',
@@ -2456,9 +2438,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     // ])
 
     addfunc('fountain/jar/updateguess', [
+      'execute if entity @e[type=item,distance=..1,nbt={Item:${toSnbt(item.btc)}}] run playsound minecraft:entity.experience_orb.pickup neutral @a 914 55 -73',
       `execute positioned 914.5 49 -72.5 as @e[type=item,distance=..1,nbt={Item:${toSnbt(item.btc)}}] run function generated:story/fountain/jar/_updateguess`,
-      `data modify block 914 56 -74 Text3 set value '[{"color":"gold","score":{"name":"guesscount","objective":"fishjar"}},{"text":" Bov"}]'`,
-      'execute positioned 914.5 49 -72.5 run tp @e[type=item,distance=..1] 914.5 55 -73.5'
+      `data modify block 914 56 -72 Text3 set value '[{"color":"gold","score":{"name":"guesscount","objective":"fishjar"}},{"text":" Bov"}]'`,
+      'execute positioned 914.5 49 -72.5 run tp @e[type=item,distance=..1] 914.5 55 -74.5'
     ])
 
     //data modify storage hitchhike:story/fountain jar_guess_name set value '[{"text":"Current Guess: ","color":"gold","bold":true,"extra":[{"score":{"name":"guesscount","objective":"fishjar"}},{"text":" Bov"}]}]'
@@ -2470,6 +2453,49 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     schedule('function generated:story/fountain/jar/updateguess', 20, functions)
+
+    const jarradii = [1,2,2,2,2,1,1]
+    const fillspd = 5; // ticks to wait between fills
+    const fillsper = 4 // number of levels per block to go through
+
+    addfunc('fountain/jar/fill', [
+      'fill 923 48 -80 925 48 -78 minecraft:spruce_planks',
+      'setblock 924 60 -79 water',
+      'schedule function generated:story/fountain/jar/fill/0 65t',
+      `kill @e[tag=jar-coin]`,
+      'scoreboard players set coincount fishjar 0',
+      'scoreboard players set cashcount fishjar 0',
+      'function generated:story/fountain/jar/spawn'
+    ])
+
+    let _ind = 0;
+    for(let i = 0; i < jarradii.length; i++) {
+      for (let j = 0; j < fillsper; j++) {
+        const level = Math.floor(16-16/fillsper*(j+1));
+        const r = jarradii[i];
+        addfunc(`fountain/jar/fill/${_ind++}`, [
+          `execute positioned 924 ${49+i} -79 run fill ~${-r} ~ ~${-r} ~${r} ~ ~${r} water[level=${level}] replace ${j == 0 ? "air" : "water"}`,
+          `schedule function generated:story/fountain/jar/fill/${_ind} ${fillspd}t`
+        ])
+      }
+    }
+
+    addfunc('fountain/jar/spawn', [
+      `scoreboard players add coincount fishjar 1`,
+      `scoreboard players set _rngm vars ${coincount}`,
+      `function generated:rng/rng`,
+      Object.entries(item.money).map(([k, v], i)=>[
+        `execute if score rng vars matches ${i} run scoreboard players add cashcount fishjar ${k}`,
+        `execute if score rng vars matches ${i} run summon axolotl 924 59 -79 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,CanPickUpLoot:0b,Tags:["invisible","jar-coin"],Passengers:[{id:"minecraft:item",Age:-32768,PickupDelay:32767,Tags:["jar-coin"],Item:${toSnbt(Object.assign({Count:'1b'}, v))}}],ActiveEffects:[{Id:14b,Amplifier:2147483647b,Duration:0}]}`
+      ]),
+      `execute unless score coincount fishjar matches 50.. run function generated:story/fountain/jar/spawn`
+    ])
+
+    addfunc('fountain/jar/drain', [
+      'fill 921 49 -76 927 55 -82 water[level=1] replace water',
+      'clone 925 42 -78 923 42 -80 923 48 -80',
+      'fill 925 48 -80 923 48 -78 water[level=1] replace water'
+    ])
 
   })();
 }
