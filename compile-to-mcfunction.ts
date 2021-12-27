@@ -46,6 +46,10 @@ export function rawJson (json: unknown): string {
   )}'`
 }
 
+export function noteToPitch(note: number): number {
+  return 2**((note-12)/12);
+}
+
 export function createNpc (
   namespace: string,
   id: string,
@@ -2457,6 +2461,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const jarradii = [1,2,2,2,2,1,1]
     const fillspd = 1; // ticks to wait between fills
     const fillsper = 16; // number of levels per block to go through
+    const chimenotes = [12, 13, 14, 15];
 
     addfunc('fountain/jar/fill', [
       'fill 923 48 -80 925 48 -78 minecraft:spruce_planks',
@@ -2469,11 +2474,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     let _ind = 0;
+    let chimeI = 0;
     for(let i = 0; i < jarradii.length; i++) {
       for (let j = 0; j < fillsper; j++) {
         const level = Math.floor(8-8/fillsper*(j+1));
         const r = jarradii[i];
         addfunc(`fountain/jar/fill/${_ind++}`, [
+          (Math.floor(j/fillsper)-1 == Math.floor((j-1)/fillsper) ? `playsound minecraft:block.note_block.iron_xylophone neutral @a ~ ~ ~ 1 ${Math.floor(chimeI/chimenotes.length)*(chimenotes[1]-chimenotes[0]) + chimenotes[chimeI++%chimenotes.length]}` : ``),
           `execute positioned 924 ${49+i} -79 run fill ~${-r} ~ ~${-r} ~${r} ~ ~${r} water[level=${level}] replace ${j == 0 ? "air" : "water"}`,
           `schedule function generated:story/fountain/jar/fill/${_ind} ${fillspd}t`//
         ])
