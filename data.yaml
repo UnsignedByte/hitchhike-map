@@ -113,7 +113,7 @@ npc:
           - ...or the massive thunderstorm that's been passing by.
           - Who knows? I would recommend you turn it off and on again... your internet, I mean. Not my electricity.
           - Let me know how that goes!
-          cond: 3
+          cond: 10
           end: 1
         - messages:
           - How'd the internet fixing go? Not great, it seems.
@@ -158,16 +158,33 @@ npc:
               - 'summon minecart 957 35 0 {Silent:1,Tags:["sawyer-holder"]}'
               - 'scoreboard players set -held story-sawyer 1'
             wait: 90
-          - message: Let me boot up my computer and I'll see what I can do.
+          - message: I'm booting up my computer and I'll take a look at it after, but this will probably take a while.
             command:
               - '${tp(950.5, 70.0, -0.25, 0, 0)}'
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298'
               - 'scoreboard players set -held story-sawyer 0'
-            wait: 120
-          - message: Let's take a quick look at the card... I'll let you know what I think is going on.
+          - Maybe you can come back later instead?
+          - Come to think of it, since you have so much time anyways, could you help me get my computer mouse?
+          - I think I left it in the bio lab at school with my backpack.
+          - message: I'll try to work on it in the meantime, but vim keybindings can only get you so far... (and by far I mean everywhere, but still.)
             command:
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 275'
               - 'data modify entity ${select.self} HandItems[0] set value {}'
+          cond: 4
+          end: 9
+        - messages:
+          - Sorry, give me some time, I'm still working on it.
+          - I should be finished by the time you get me my mouse.
+          cond: 9
+          end:
+            - 'execute if score biolab quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 3'
+            - 'execute unless score biolab quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 9'
+        - messages:
+          - message: Alright, thanks for the mouse.
+            command:
+              - 'setblock 949 71 0 stone_button'
+              - 'playsound minecraft:block.stone.place neutral @a 949 71 0 1 2'
+              - 'clear @a ${toGive(item.mouse, 2147483647)}'
             wait: 120
           - message: Interesting...
             wait: 120
@@ -175,7 +192,9 @@ npc:
             command:
               - 'tag @e[tag=npc-sawyer] remove npc-unface'
           - Did I mention you'll be the one doing most of it?
-          - Well, anyways, here we go...
+          - message: Well, anyways, here we go...
+            command:
+              - 'playsound minecraft:block.stone_button.click_on neutral @a 949 71 0 1'
           - message:
             - text: "Welcome to the "
             - text: waiting room
@@ -191,7 +210,7 @@ npc:
             global: true
           - message: I'll be helping you out along the way.
             global: true
-          cond: 4
+          cond: 3
           end: -1
         - messages:
           - message: The SD card is finally done loading! Sorry it took a while, I hope you weren't too bored.
@@ -679,7 +698,7 @@ npc:
           - message:
             - text: Maybe try taking a look beneath the fountain...
               italic: true
-          - Pay no mind, these are just the ramblings of an old man.
+          - Anyways, pay no mind, these are just the ramblings of an old man.
           - Have a pleasant day.
           end: 1
         - messages:
@@ -687,7 +706,7 @@ npc:
           cond: 1
           end: 2
         - messages:
-          - Hello there, hope you are having a great day!
+          - Hello there, hope your day is going well...
           cond: 2
           end: 1
 
@@ -704,7 +723,7 @@ quest:
       count: 1
     end:
       - type: score
-        value: ${npc.sawyer} dialogue-status 3
+        value: ${npc.sawyer} dialogue-status 10
   bread:
     name: Whole Wheat
     hint: Maintain a wheat-based diet (whole). # description to show before the quest is done (optional)

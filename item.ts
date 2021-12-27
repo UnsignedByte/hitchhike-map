@@ -149,6 +149,21 @@ export const item = {
       }
     }
   },
+  mouse: {
+    id: '"minecraft:stone_button"',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "Logitech® M585 Multi-Device Wireless Mouse with Flow Tech",
+          color: "light_gray"
+        }),
+        Lore:`[${rawJson({
+          text:"Compact mouse with extra controls",
+          color: "gray"
+        })}]`
+      }
+    }
+  },
   money:{
     1: {
       id: '"minecraft:nether_brick"',

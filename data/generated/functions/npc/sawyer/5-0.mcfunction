@@ -1,8 +1,10 @@
 tag @a[tag=victim-of-dialogue-by-sawyer, limit=1] add npc-eavesdropper
-execute at @e[tag=npc-sawyer, limit=1] run tag @a add npc-eavesdropper
+execute at @e[tag=npc-sawyer, limit=1] run tag @a[distance=..50] add npc-eavesdropper
 # Dialogue line #5-1: speak and make noise.
-execute at @e[tag=npc-sawyer, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Chris Sawyer","color":"#4fa1a7","bold":true},"> ",{"text":"Here we are, the inside of the SD Card."}]
+execute at @e[tag=npc-sawyer, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Chris Sawyer","color":"#4fa1a7","bold":true},"> ",{"text":"Alright, thanks for the mouse."}]
 execute at @e[tag=npc-sawyer, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-scoreboard players set maze-started story-sawyer 1
-schedule function generated:npc/sawyer/5-1 72t
+setblock 949 71 0 stone_button
+playsound minecraft:block.stone.place neutral @a 949 71 0 1 2
+clear @a minecraft:stone_button{display: {Name: '{"text":"Logitech® M585 Multi-Device Wireless Mouse with Flow Tech","color":"light_gray"}', Lore: ['{"text":"Compact mouse with extra controls","color":"gray"}']}} 2147483647
+schedule function generated:npc/sawyer/5-1 120t
 tag @a remove npc-eavesdropper
