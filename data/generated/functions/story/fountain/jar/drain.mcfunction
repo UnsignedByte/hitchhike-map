@@ -5,3 +5,4 @@ setblock 914 55 -73 minecraft:blue_stained_glass
 scoreboard players set chimeIndex fishjar 0
 setblock 914 56 -85 minecraft:barrier
 schedule function generated:story/fountain/jar/incrementcount 5t
+schedule function generated:story/fountain/jar/speedaxolotls 100t
