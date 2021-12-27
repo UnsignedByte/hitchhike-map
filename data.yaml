@@ -619,6 +619,13 @@ npc:
           cond: 2
           end: 3
         - messages:
+          - message: Alright, I'm counting them up now!
+            command:
+              - 'function generated:story/fountain/jar/drain'
+          - Good luck...
+          cond: 3
+          end: -1
+        - messages:
           - Congratulations on guessing the total!
           - Feel free to pick up your reward, it's all yours!
           - If you wish to play another time, simply talk to me again.
