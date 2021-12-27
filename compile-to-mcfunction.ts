@@ -2480,7 +2480,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         const level = Math.floor(8-8/fillsper*(j+1));
         const r = jarradii[i];
         addfunc(`fountain/jar/fill/${_ind++}`, [
-          (Math.floor(j/fillsper*4)-1 === Math.floor((j-1)/fillsper*4) ? `playsound minecraft:block.note_block.iron_xylophone neutral @a ~ ~ ~ 1 ${Math.floor(chimeI/chimenotes.length)*(chimenotes[1]-chimenotes[0]) + chimenotes[chimeI++%chimenotes.length]}` : ``),
+          (Math.floor(j/fillsper*4)-1 === Math.floor((j-1)/fillsper*4) ? `playsound minecraft:block.note_block.iron_xylophone neutral @a 921 54 -79 1 ${Math.floor(chimeI/chimenotes.length)*(chimenotes[1]-chimenotes[0]) + chimenotes[chimeI++%chimenotes.length]}` : ``),
           `execute positioned 924 ${49+i} -79 run fill ~${-r} ~ ~${-r} ~${r} ~ ~${r} water[level=${level}] replace ${j == 0 ? "air" : "water"}`,
           `schedule function generated:story/fountain/jar/fill/${_ind} ${fillspd}t`//
         ])
