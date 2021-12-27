@@ -1,3 +1,5 @@
+scoreboard players set _rngm vars 6
+scoreboard players set _rngmin vars 0
 execute positioned 898.5 61 -61.5 if entity @a[tag=fountainous] if predicate hitchhike:onethird run function generated:story/fountain/spawn/random
 execute positioned 892.5 61 -61.5 if entity @a[tag=fountainous] if predicate hitchhike:onethird run function generated:story/fountain/spawn/random
 execute as @e[tag=maze-path-display,type=marker] at @s run function hitchhike:story/maze/pathfind/displaytick
