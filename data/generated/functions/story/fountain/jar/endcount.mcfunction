@@ -1,3 +1,4 @@
+setblock 914 56 -85 minecraft:air
 scoreboard players operation #tmp fishjar = #guesscount fishjar
 scoreboard players operation #tmp fishjar *= 100 const
 scoreboard players operation #tmp fishjar -= #cashcount fishjar

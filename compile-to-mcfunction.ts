@@ -2517,6 +2517,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'fill 925 48 -80 923 48 -78 water[level=1] replace water',
       'setblock 914 55 -73 minecraft:blue_stained_glass',
       `scoreboard players set chimeIndex fishjar 0`,
+      `setblock 914 56 -85 minecraft:barrier`,
       'schedule function generated:story/fountain/jar/incrementcount 5t'
     ])
 
@@ -2541,6 +2542,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('fountain/jar/endcount', [
+      `setblock 914 56 -85 minecraft:air`,
       `scoreboard players operation #tmp fishjar = #guesscount fishjar`,
       `scoreboard players operation #tmp fishjar *= 100 const`,
       `scoreboard players operation #tmp fishjar -= #cashcount fishjar`,
