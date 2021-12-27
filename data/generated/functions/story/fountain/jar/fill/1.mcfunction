@@ -1,2 +1,2 @@
-execute positioned 924 49 -79 run fill ~-1 ~ ~-1 ~1 ~ ~1 water[level=2] replace water
+execute positioned 924 49 -79 run fill ~-1 ~ ~-1 ~1 ~ ~1 water[level=6] replace water
 schedule function generated:story/fountain/jar/fill/2 2t
