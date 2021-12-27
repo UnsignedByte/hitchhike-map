@@ -1,6 +1,7 @@
 kill @e[tag=jar-coin,type=axolotl,x=923,y=44,z=-80,dx=2,dz=2,dy=3]
 tp @e[tag=jar-coin,type=item,x=923,y=44,z=-80,dx=2,dz=2,dy=0,sort=random,limit=1] 914 49 -85
-execute positioned 914 56 -85 run function generated:change/count
+execute positioned 914 55 -85 run function generated:change/count
+execute unless core count change = #cashcount fishjar run function generated:story/fountain/jar/drain/chime
 scoreboard players operation #cashcount fishjar = count change
 scoreboard players operation c_B fishjar = #cashcount fishjar
 scoreboard players operation c_B fishjar /= 100 const

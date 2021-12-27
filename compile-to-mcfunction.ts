@@ -2516,13 +2516,15 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'clone 925 42 -78 923 42 -80 923 48 -80',
       'fill 925 48 -80 923 48 -78 water[level=1] replace water',
       'setblock 914 55 -73 minecraft:blue_stained_glass',
+      `scoreboard players set chimeIndex fishjar 0`,
       'schedule function generated:story/fountain/jar/incrementcount 5t'
     ])
 
     addfunc('fountain/jar/incrementcount', [
       `kill @e[tag=jar-coin,type=axolotl,x=923,y=44,z=-80,dx=2,dz=2,dy=3]`,
       `tp @e[tag=jar-coin,type=item,x=923,y=44,z=-80,dx=2,dz=2,dy=0,sort=random,limit=1] 914 49 -85`,
-      `execute positioned 914 56 -85 run function generated:change/count`,
+      `execute positioned 914 55 -85 run function generated:change/count`,
+      `execute unless core count change = #cashcount fishjar run function generated:story/fountain/jar/drain/chime`,
       `scoreboard players operation #cashcount fishjar = count change`,
       'scoreboard players operation c_B fishjar = #cashcount fishjar',
       'scoreboard players operation c_B fishjar /= 100 const',
@@ -2531,6 +2533,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `data modify block 914 56 -86 Text3 set value '[{"color":"gold","score":{"name":"c_B","objective":"fishjar"}},{"text":"."},{"score":{"name":"c_b","objective":"fishjar"}},{"text":" Bov"}]'`,
       `execute if entity @e[tag=jar-coin,type=item,x=921,y=44,z=-82,dx=6,dz=6,dy=12] run schedule function generated:story/fountain/jar/incrementcount 5t`,
       `execute unless entity @e[tag=jar-coin,type=item,x=921,y=44,z=-82,dx=6,dz=6,dy=12] run schedule function generated:story/fountain/jar/endcount 20t`
+    ])
+
+    addfunc('fountain/jar/drain/chime', [
+      [...Array(50)].map((x,i)=>`execute if score chimeIndex fishjar matches ${i} run playsound minecraft:block.note_block.hat neutral @a 914 56 -85 1 ${noteToPitch(Math.floor(i/chimenotes.length)*(chimenotes[1]-chimenotes[0]) + chimenotes[i++%chimenotes.length])}`),
+      `scoreboard players add chimeIndex fishjar 1`
     ])
 
     addfunc('fountain/jar/endcount', [
