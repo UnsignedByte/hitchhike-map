@@ -2471,7 +2471,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     let _ind = 0;
     for(let i = 0; i < jarradii.length; i++) {
       for (let j = 0; j < fillsper; j++) {
-        const level = Math.floor(8-8/fillsper*(j+1));
+        const level = Math.floor(8/fillsper*(j+1)+1)%8;
         const r = jarradii[i];
         addfunc(`fountain/jar/fill/${_ind++}`, [
           `execute positioned 924 ${49+i} -79 run fill ~${-r} ~ ~${-r} ~${r} ~ ~${r} water[level=${level}] replace ${j == 0 ? "air" : "water"}`,
