@@ -2445,7 +2445,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('fountain/jar/updateguess', [
       `execute if entity @e[type=item,distance=..1,nbt={Item:${toSnbt(item.btc)}}] run playsound minecraft:entity.experience_orb.pickup neutral @a 914 55 -73`,
       `execute positioned 914.5 49 -72.5 as @e[type=item,distance=..1,nbt={Item:${toSnbt(item.btc)}}] run function generated:story/fountain/jar/_updateguess`,
-      `data modify block 914 56 -72 Text3 set value '[{"color":"gold","score":{"name":"#guesscount","objective":"fishjar"}},{"text":" Bov"}]'`,
+      `data modify block 914 56 -72 Text3 set value '[{"color":"gold","score":{"name":"#guesscount","objective":"fishjar"}},{"text":".00 Bov"}]'`,
       'execute positioned 914.5 49 -72.5 run tp @e[type=item,distance=..1] 914.5 55 -74.5'
     ])
 
@@ -2463,6 +2463,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const chimenotes = [6, 8, 10, 12];
 
     addfunc('fountain/jar/fill', [
+      'execute if block 914 55 -73 minecraft:blue_stained_glass run function generated:story/fountain/jar/_fill'
+    ])
+
+    addfunc('fountain/jar/_fill', [
       'fill 923 48 -80 925 48 -78 minecraft:spruce_planks',
       'setblock 924 60 -79 water',
       'schedule function generated:story/fountain/jar/fill/start 65t',
@@ -2491,7 +2495,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     }
 
     addfunc(`fountain/jar/fill/${_ind}`, [
-      'setblock 924 60 -79 air'
+      'setblock 924 60 -79 air',
+      'setblock 914 55 -73 minecraft:blue_stained_glass_pane'
     ])
 
     addfunc('fountain/jar/spawn', [
@@ -2508,7 +2513,31 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('fountain/jar/drain', [
       'fill 921 49 -76 927 55 -82 water[level=1] replace water',
       'clone 925 42 -78 923 42 -80 923 48 -80',
-      'fill 925 48 -80 923 48 -78 water[level=1] replace water'
+      'fill 925 48 -80 923 48 -78 water[level=1] replace water',
+      'setblock 914 55 -73 minecraft:blue_stained_glass',
+      'schedule function generated:story/fountain/jar/incrementcount 5t'
+    ])
+
+    addfunc('fountain/jar/incrementcount', [
+      `kill @e[tag=jar-coin,type=axolotl,x=923,y=44,z=-80,dx=2,dz=2,dy=3]`,
+      `tp @e[tag=jar-coin,type=item,x=923,y=44,z=-80,dx=2,dz=2,dy=0,sort=random,limit=1] 914 49 -85`,
+      `execute positioned 914 56 -85 run function generated:change/count`,
+      `scoreboard players set #cashcount fishjar = count change`,
+      'scoreboard players set c_B fishjar = #cashcount fishjar',
+      'scoreboard players set c_B fishjar /= 100 const',
+      'scoreboard players set c_b fishjar = #cashcount fishjar',
+      'scoreboard players set c_b fishjar %= 100 const',
+      `data modify block 914 56 -86 Text3 set value '[{"color":"gold","score":{"name":"c_B","objective":"fishjar"}},{"text":"."}.{""score":{"name":"c_b","objective":"fishjar"}},{"text":" Bov"}]'`,
+      `execute if entity @e[tag=jar-coin,type=item] run schedule function generated:story/fountain/jar/incrementcount 5t`,
+      `execute unless entity @e[tag=jar-coin,type=item] run schedule function generated:story/fountain/jar/endcount 205`
+    ])
+
+    addfunc('fountain/jar/endcount', [
+      `scoreboard players operation #tmp fishjar = #guesscount fishjar`,
+      `scoreboard players operation #tmp fishjar *= 100 const`,
+      `scoreboard players operation #tmp fishjar -= #cashcount fishjar`,
+      `execute if score #tmp fishjar matches -100..100 run function hitchhike:story/fountain/jar/success`,
+      `execute unless score #tmp fishjar matches -100..100 run function hitchhike:story/fountain/jar/fail`
     ])
 
   })();

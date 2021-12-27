@@ -618,6 +618,12 @@ npc:
             - Best of luck! Come back again when you are ready to find out the real total.
           cond: 2
           end: 3
+        - messages:
+          - Congratulations on guessing the total!
+          - Feel free to pick up your reward, it's all yours!
+          - If you wish to play again, simply talk to me again.
+          cond: 4
+          end: 2
 
 quest:
   visitfriend: # visit friend's house
