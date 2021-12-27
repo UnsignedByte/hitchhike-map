@@ -456,7 +456,6 @@ export async function init (
     )
   }
 
-
   // item modifiers
   await ensureDir(join(basePath, `./data/${namespace}/item_modifiers`))
 
