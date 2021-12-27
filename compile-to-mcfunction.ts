@@ -2404,7 +2404,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `scoreboard players set _rngm vars ${coincount}`,
       `function generated:rng/rng`,
       Object.entries(item.money).map(([k, v], i)=>[
-        `execute if score rng vars matches ${i} run scoreboard players add cashcount ${k}`,
+        `execute if score rng vars matches ${i} run scoreboard players add cashcount fishjar ${k}`,
         `execute if score rng vars matches ${i} run summon axolotl 924 59 -79 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,CanPickUpLoot:0b,Tags:["invisible","jar-coin"],Passengers:[{id:"minecraft:item",Age:-32768,PickupDelay:32767,Tags:["jar-coin"],Item:${toSnbt(Object.assign({Count:'1b'}, v))}}],ActiveEffects:[{Id:14b,Amplifier:2147483647b,Duration:0}]}`
       ]),
       `execute if score coincount fishjar matches ..20 run function generated:story/fountain/jar/spawn`
