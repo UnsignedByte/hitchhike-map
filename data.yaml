@@ -677,11 +677,10 @@ npc:
             - text: "."
           - Shouldn't someone much more eloquent (such as yourself) be more deserving of such wealth?
           - message:
-            - text: Try taking a look beneath the fountain...
+            - text: Maybe try taking a look beneath the fountain...
               italic: true
-          - message:
-            - text: Get some hopes and dreams for yourself, too.
-              italic: true
+          - Pay no mind, these are just the ramblings of an old man.
+          - Have a pleasant day.
           end: 1
         - messages:
           - Hmm? Something under the fountain? What are you talking about?
