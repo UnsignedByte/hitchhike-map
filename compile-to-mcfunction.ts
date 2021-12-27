@@ -2410,6 +2410,22 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute unless score coincount fishjar matches 50.. run function generated:story/fountain/jar/spawn`
     ])
 
+    addfunc('fountain/jar/gettokens', [
+      'setblock 915 59 -83 stone',
+      'clone 914 55 -79 914 55 -79 914 49 -79',
+      'setblock 914 49 -79 air destroy',
+      'execute positioned 914 49 -79 run function generated:change/count',
+      'execute positioned 914 49 -79 run kill @e[type=item,distance=..1,nbt={Item:{tag:{ismoney:1b}}}]',
+      'execute positioned 914 49 -79 run tp @e[type=item] 914 56 -79',
+      'data modify block 914 55 -79 Items set value []',
+      'schedule function generated:story/fountain/jar/finishgettokens 50t'
+    ])
+
+    addfunc('fountain/jar/finishgettokens', [
+      `setblock 914 53 -79 redstone_wire`,
+      ``
+    ])
+
     // schedule([
     //   'scoreboard players set _rngm vars 4',
     //   'setblock 895 40 -73 water[level=1]',

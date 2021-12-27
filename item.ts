@@ -139,6 +139,7 @@ export const item = {
     1: {
       id: '"minecraft:nether_brick"',
       tag: {
+        ismoney: true,
         display: {
           Name: rawJson({
             text: "1b",
@@ -153,6 +154,7 @@ export const item = {
     5: {
       id: '"minecraft:brick"',
       tag: {
+        ismoney: true,
         display: {
           Name: rawJson({
             text: "5b",
@@ -167,6 +169,7 @@ export const item = {
     10: {
       id: '"minecraft:copper_ingot"',
       tag: {
+        ismoney: true,
         display: {
           Name: rawJson({
             text: "10b",
@@ -181,6 +184,7 @@ export const item = {
     25: {
       id: '"minecraft:gold_ingot"',
       tag: {
+        ismoney: true,
         display: {
           Name: rawJson({
             text: "25b",
@@ -195,6 +199,7 @@ export const item = {
     100: {
       id: '"minecraft:iron_ingot"',
       tag: {
+        ismoney: true,
         display: {
           Name: rawJson({
             text: "1B",
@@ -209,6 +214,7 @@ export const item = {
     500: {
       id: '"minecraft:netherite_ingot"',
       tag: {
+        ismoney: true,
         display: {
           Name: rawJson({
             text: "5B",

@@ -600,6 +600,10 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 944.30 96.8 17.30 {Rotation: [140f, 35f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-cameron"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWI4NDE4YzQ2MWY2M2Q2YWFkMzkzMmE2MzlmY2UzZmVjMjI3YTM3NzRhNTliODUxZmZiZTY1NTg3NGViNzkxIn19fQ==" }]}}}}], VillagerData: {type: "minecraft:swamp", profession: "minecraft:nitwit", level: 99}, Offers: {}, CustomName: '{"text":"Cameron \\"Cam\\" Au-Flauge","color":"#197037","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for fishjar.
+summon minecraft:villager 914.50 55 -78.50 {Rotation: [90f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-fishjar"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThkZDdkNDM0MWExODhkZTBiOWJmMjNlZmU0MTljNjRhMzQ1ODNjNjExYzFlYzllMWJjNzVmNGJhOWJlYzY1YyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:nitwit", level: 99}, Offers: {}, CustomName: '{"text":"Cullus Major","color":"#bdaa77","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 # Summon the villager for __apple.
 summon minecraft:villager 905.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__apple", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fuji Apple","color":"#FF0000"},{"text":" (1.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
