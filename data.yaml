@@ -621,7 +621,7 @@ npc:
         - messages:
           - Congratulations on guessing the total!
           - Feel free to pick up your reward, it's all yours!
-          - If you wish to play again, simply talk to me again.
+          - If you wish to play another time, simply talk to me again.
           cond: 4
           end: 2
 
