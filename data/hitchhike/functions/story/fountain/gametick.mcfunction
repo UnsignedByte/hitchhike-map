@@ -2,6 +2,6 @@ execute as @e[type=item,x=893,y=54,z=-93,dx=4,dz=12,dy=4] at @s if block ~ ~ ~ i
 execute as @e[type=item,x=893,y=54,z=-93,dx=4,dz=12,dy=4] at @s entity @e[type=fishing_bobber,distance=..0.25] run tag @s add fountain-fished
 
 execute at @e[tag=fountain-fished] run kill @e[type=fishing_bobber,sort=nearest,limit=1,distance=..0.25]
-tp @e[tag=fountain-fished] 895.5 60.5 -83.5
+tp @e[type=item,tag=fountain-fished] 895.5 60.5 -83.5
 
 tag @e remove fountain-fished
