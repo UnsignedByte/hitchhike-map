@@ -135,6 +135,21 @@ export const item = {
       Enchantments:`[{}]`
     }
   },
+  btc: {
+    id: '"minecraft:sunflower"',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "1 BTC",
+          color: "gold"
+        }),
+        Lore:`[${rawJson({
+          text:"Valued at 1.00 BOV"
+        })}]`
+      },
+      Enchangments:`[{}]`
+    }
+  },
   money:{
     1: {
       id: '"minecraft:nether_brick"',

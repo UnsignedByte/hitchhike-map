@@ -2414,16 +2414,31 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'setblock 915 59 -83 stone',
       'clone 914 55 -79 914 55 -79 914 49 -79',
       'setblock 914 49 -79 air destroy',
-      'execute positioned 914 49 -79 run function generated:change/count',
-      'execute positioned 914 49 -79 run kill @e[type=item,distance=..1,nbt={Item:{tag:{ismoney:1b}}}]',
-      'execute positioned 914 49 -79 run tp @e[type=item] 914 56 -79',
+      'schedule function generated:story/fountain/jar/spawntokens 2t',
       'data modify block 914 55 -79 Items set value []',
       'schedule function generated:story/fountain/jar/finishgettokens 50t'
     ])
 
+    addfunc('fountain/jar/spawntokens', [
+      'execute positioned 914 49 -79 run function generated:change/count',
+      'scoreboard players operation dec change = count change',
+      'scoreboard players operation dec change /= 10 const',
+      'scoreboard players operation #tmp fishjar = dec change',
+      'execute if score #tmp fishjar matches 1.. run function generated:story/fountain/jar/_spawntoken',
+      'scoreboard players operation dec change *= 10 const',
+      'execute positioned 914 49 -79 run function generated:change/decrement',
+      'execute positioned 914 49 -79 run tp @e[type=item] 914 56 -79',
+    ])
+
+    addfunc('fountain/jar/_spawntoken', [
+      'scoreboard players remove #tmp fishjar 1',
+      `summon item 912.5 59 -78.5 {Item:${toSnbt(Object.assign({Count:'1b'}, item.btc))}}`,
+      'execute if score #tmp fishjar matches 1.. run function generated:story/fountain/jar/_spawntoken'
+    ])
+
     addfunc('fountain/jar/finishgettokens', [
       `setblock 914 53 -79 redstone_wire`,
-      ``
+      `setblock 915 59 -83 air`
     ])
 
     // schedule([
