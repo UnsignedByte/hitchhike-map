@@ -2370,24 +2370,45 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
 
     schedule([
+      'execute if entity @a[tag=fountainous] run function generated:story/fountain/scheduled/12t'
+    ], 12, functions)
+
+    addfunc('fountain/scheduled/12t', [
       `scoreboard players set _rngm vars 2`,
       `scoreboard players set _rngmin vars 0`,
-      'execute positioned 899.5 54.5 -82.5 if entity @a[tag=fountainous] if predicate generated:coinflip run function generated:story/fountain/spawn/random',
-      'execute positioned 899.5 54.5 -82.5 if entity @a[tag=fountainous] if predicate generated:coinflip run function generated:story/fountain/spawn/random',
+      'execute positioned 899.5 54.5 -82.5 if predicate generated:coinflip run function generated:story/fountain/spawn/random',
+      'execute positioned 899.5 54.5 -82.5 if predicate generated:coinflip run function generated:story/fountain/spawn/random',
       `scoreboard players set _rngmin vars ${coincount-2}`,
-      'execute positioned 899.5 54.5 -92.2 if entity @a[tag=fountainous] run function generated:story/fountain/spawn/random',
-      'execute positioned 891.5 56.5 -92.2 if entity @a[tag=fountainous] run function generated:story/fountain/spawn/random',
+      'execute positioned 899.5 54.5 -92.2 run function generated:story/fountain/spawn/random',
+      'execute positioned 891.5 56.5 -92.2 run function generated:story/fountain/spawn/random',
       `scoreboard players set _rngmin vars 2`,
       `scoreboard players set _rngm vars ${coincount-4}`,
-      'execute positioned 893.5 60.5 -85.5 if entity @a[tag=fountainous] if predicate hitchhike:onetwelth run function generated:story/fountain/spawn/random',
-      'execute positioned 894.5 60.5 -84.5 if entity @a[tag=fountainous] if predicate hitchhike:onetwelth run function generated:story/fountain/spawn/random',
-      'execute positioned 895.5 60.5 -85.5 if entity @a[tag=fountainous] if predicate hitchhike:onetwelth run function generated:story/fountain/spawn/random',
-      'execute positioned 896.5 60.5 -84.5 if entity @a[tag=fountainous] if predicate hitchhike:onetwelth run function generated:story/fountain/spawn/random',
-      'execute positioned 897.5 60.5 -85.5 if entity @a[tag=fountainous] if predicate hitchhike:onetwelth run function generated:story/fountain/spawn/random',
-      'execute positioned 899.5 54.5 -90.5 if entity @a[tag=fountainous] if predicate hitchhike:onethird run function generated:story/fountain/spawn/random',
-      'execute positioned 891.5 54.5 -90.5 if entity @a[tag=fountainous] if predicate hitchhike:onethird run function generated:story/fountain/spawn/random',
+      'execute positioned 893.5 60.5 -85.5 if predicate hitchhike:onetwelth run function generated:story/fountain/spawn/random',
+      'execute positioned 894.5 60.5 -84.5 if predicate hitchhike:onetwelth run function generated:story/fountain/spawn/random',
+      'execute positioned 895.5 60.5 -85.5 if predicate hitchhike:onetwelth run function generated:story/fountain/spawn/random',
+      'execute positioned 896.5 60.5 -84.5 if predicate hitchhike:onetwelth run function generated:story/fountain/spawn/random',
+      'execute positioned 897.5 60.5 -85.5 if predicate hitchhike:onetwelth run function generated:story/fountain/spawn/random',
+      'execute positioned 899.5 54.5 -90.5 if predicate hitchhike:onethird run function generated:story/fountain/spawn/random',
+      'execute positioned 891.5 54.5 -90.5 if predicate hitchhike:onethird run function generated:story/fountain/spawn/random',
+    ])
 
-    ], 12, functions)
+    addfunc('fountain/jar/fill', [
+      `kill @e[tag=jar-coin]`,
+      'scoreboard players set coincount fishjar 0',
+      'scoreboard players set cashcount fishjar 0',
+      'function generated:story/fountain/jar/spawn'
+    ])
+
+    addfunc('fountain/jar/spawn', [
+      `scoreboard players add coincount fishjar 1`,
+      `scoreboard players set _rngm vars ${coincount}`,
+      `function generated:rng/rng`,
+      Object.entries(item.money).map(([k, v], i)=>[
+        `execute if score rng vars matches ${i} run scoreboard players add cashcount ${k}`,
+        `execute if score rng vars matches ${i} run summon cod ~ ~ ~ {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,CanPickUpLoot:0b,Tags:["invisible","jar-coin"],Passengers:[{id:"minecraft:item",Age:-32768,PickupDelay:32767,Tags:["jar-coin"],Item:${toSnbt(Object.assign({Count:'1b'}, v))}}],ActiveEffects:[{Id:14b,Amplifier:2147483647b,Duration:0}]}`
+      ]),
+      `execute if score coincount fishjar matches ..20 run function generated:story/fountain/jar/spawn`
+    ])
 
     // schedule([
     //   'scoreboard players set _rngm vars 4',
@@ -2401,5 +2422,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     //   'execute if score _rngm vars matches 2 run setblock 895 40 -75 water',
     //   'execute if score _rngm vars matches 3 run setblock 894 40 -74 water',
     // ])
+
+
   })();
 }
