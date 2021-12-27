@@ -2433,7 +2433,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('fountain/jar/_spawntoken', [
       'scoreboard players remove #tmp fishjar 1',
-      `summon item 912.5 59.5 -78.5 {Motion:[0.5f,0.0f,0.0f],Item:${toSnbt(Object.assign({Count:'1b'}, item.btc))}}`,
+      `summon item 914 59 -79 {Motion:[0.5f,0.0f,0.0f],Item:${toSnbt(Object.assign({Count:'1b'}, item.btc))}}`,
       'execute if score #tmp fishjar matches 1.. run function generated:story/fountain/jar/_spawntoken'
     ])
 
