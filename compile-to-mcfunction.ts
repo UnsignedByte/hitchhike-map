@@ -2537,7 +2537,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('fountain/jar/drain/chime', [
-      [...Array(50)].map((x,i)=>`execute if score chimeIndex fishjar matches ${i} run playsound minecraft:block.note_block.hat neutral @a 914 56 -85 1 ${noteToPitch(Math.floor(i/chimenotes.length)*(chimenotes[1]-chimenotes[0]) + chimenotes[i++%chimenotes.length])}`),
+      [...Array(50)].map((x,i)=>`execute if score chimeIndex fishjar matches ${i} run playsound minecraft:block.note_block.bit neutral @a 914 56 -85 1 ${noteToPitch(Math.floor(i/chimenotes.length)*(chimenotes[1]-chimenotes[0]) + chimenotes[i++%chimenotes.length])}`),
       `scoreboard players add chimeIndex fishjar 1`
     ])
 
