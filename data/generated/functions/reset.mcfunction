@@ -603,7 +603,7 @@ summon minecraft:villager 944.30 96.8 17.30 {Rotation: [140f, 35f], Silent: 1b, 
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for muller.
-summon minecraft:villager 895.50 77 -156.70 {Rotation: [180f, 20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-muller"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhlOWNiMzE3ZmY1NzJmY2EwNjI4MDhmNGJiYmVmNzJiZTc1NTIxZjM2OWJiNDcxZmY4YTczNjE5YzE5NCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:nitwit", level: 1}, Offers: {}, CustomName: '{"text":"Egress Muller","color":"#608082","bold":true}'}
+summon minecraft:villager 895.50 77 -156.70 {Rotation: [180f, 20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-muller"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhlOWNiMzE3ZmY1NzJmY2EwNjI4MDhmNGJiYmVmNzJiZTc1NTIxZjM2OWJiNDcxZmY4YTczNjE5YzE5NCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:mason", level: 1}, Offers: {}, CustomName: '{"text":"Egress Muller","color":"#608082","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for fishjar.
