@@ -1,4 +1,4 @@
-execute rotated ~ 0 positioned ^ ^ ^3 run tp @e[tag=maze-weapon-init] ~ ~0,5 ~ ~ ~
+execute at @s rotated ~ 0 positioned ^ ^ ^4 run tp @e[tag=maze-weapon-init] ~ ~0.5 ~ ~ ~
 
 # execute as @e[tag=maze-weapon-init] at @s run function generated:story/maze/weapons/firewall/summonwall
 
