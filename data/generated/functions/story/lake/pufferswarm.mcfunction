@@ -1,0 +1,13 @@
+summon drowned ~ ~ ~ {Invulnerable:1b,IsBaby:1b,Tags:["lake-puffer","lake-puffer-init","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647}],Attributes:[{Name:generic.movement_speed,Base:1}]}
+summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}
+summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}
+summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}
+summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}
+summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}
+summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}
+summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}
+summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}
+summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}
+summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}
+execute as @e[tag=lake-puffer-init,type=pufferfish] run data modify entity @s Leash.UUID set from entity @e[tag=lake-puffer-init,type=drowned,limit=1] UUID
+tag @e remove lake-puffer-init

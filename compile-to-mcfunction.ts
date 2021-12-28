@@ -2662,5 +2662,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'data modify entity @s Motion[0] set value 0',
       'execute as @s run data modify entity @s Rotation set value [180.0f,-20.0f]'
     ])
+
+    addfunc('lake/pufferswarm', [
+      'summon drowned ~ ~ ~ {Invulnerable:1b,IsBaby:1b,Tags:["lake-puffer","lake-puffer-init","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647}],Attributes:[{Name:generic.movement_speed,Base:1}]}',
+      [...Array(10)].map(x=>`summon pufferfish ~ ~ ~ {Invulnerable:1b,Leashed:1b,PersistenceRequired:1b,Tags:["lake-puffer","lake-puffer-init"],Attributes:[{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:4}],Leash:{UUID:[I;0,0,0,0]}}`),
+      'execute as @e[tag=lake-puffer-init,type=pufferfish] run data modify entity @s Leash.UUID set from entity @e[tag=lake-puffer-init,type=drowned,limit=1] UUID',
+      'tag @e remove lake-puffer-init'
+    ])
   })();
 }
