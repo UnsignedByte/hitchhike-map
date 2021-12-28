@@ -2567,6 +2567,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ], 3, functions)
 
     schedule([
+      'execute unless entity @a[x=900,y=55,z=-80,dx=15,dy=2,dz=2] run scoreboard players set door fishjar 0',
+      'execute if entity @a[x=906,y=55,z=-80,dx=6,dy=2,dz=2] run scoreboard players set door fishjar 1',
       'execute if score _doorenabled fishjar matches 1 unless score _door fishjar = door fishjar run function generated:story/fountain/jar/doortoggle'
     ], 5, functions)
 
