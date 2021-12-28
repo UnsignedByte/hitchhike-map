@@ -2656,6 +2656,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     schedule([
       'execute as @e[tag=lake-vortex] at @s run function generated:story/lake/vortex/tick'
-    ], 3, functions)
+    ], 1, functions)
   })();
 }
