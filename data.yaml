@@ -563,10 +563,14 @@ npc:
           cond: 8
           end: -1
     cashier:
-      name: Henry
+      name: Paoule Enrique
       position: 891.5 64 -152.5
       rotation: 180 0
       colour: 0xeb7060
+      villager:
+        type: savanna
+        profession: shepherd
+        level: 3
       dialogue:
         - messages:
           - "Hi, welcome to Safeway!"

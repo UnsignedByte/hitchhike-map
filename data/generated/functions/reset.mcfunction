@@ -595,7 +595,7 @@ summon minecraft:villager 939.25 68 195.00 {Rotation: [90f, 15f], Silent: 1b, In
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for cashier.
-summon minecraft:villager 891.50 64 -152.50 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-cashier"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Henry","color":"#eb7060","bold":true}'}
+summon minecraft:villager 891.50 64 -152.50 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-cashier"], VillagerData: {type: "minecraft:savanna", profession: "minecraft:shepherd", level: 3}, Offers: {}, CustomName: '{"text":"Paoule Enrique","color":"#eb7060","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for cameron.
