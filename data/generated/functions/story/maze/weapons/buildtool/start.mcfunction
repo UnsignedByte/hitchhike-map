@@ -1,4 +1,2 @@
-summon minecraft:marker ~ ~ ~ {Tags:["maze-weapon-init","maze-weapon","maze-weapon-buildtool"]}
-data modify entity @e[tag=maze-weapon-init,limit=1] data.PlayerUUID set from entity @s UUID
-execute as @s at @s run function hitchhike:story/maze/weapons/buildtool/start
-tag @e remove maze-weapon-init
+execute if entity @s[tag=maze-mob] as @s at @s run function generated:story/maze/weapons/buildtool/_start
+execute unless entity @s[tag=maze-mob] as @s run function generated:story/maze/weapons/buildtool/give
