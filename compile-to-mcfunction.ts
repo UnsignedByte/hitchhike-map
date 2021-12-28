@@ -1817,7 +1817,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `execute as @s at @s run function hitchhike:story/maze/weapons/${k}/start`,
           `tag @e remove maze-weapon-init`
         ])
-        return `execute if entity @s[type=item,nbt={Item:{tag:{weapon:"${k}"}}}] as @a[tag=match-uuid-select] at @s run function generated:story/maze/weapons/${k}/start`
+        return `execute if entity @s[type=item,nbt={Item:{tag:{weapon:"${k}"}}}] as @a[tag=match-uuid-select,tag=maze-mob] at @s run function generated:story/maze/weapons/${k}/start`
       })
     ])
 
