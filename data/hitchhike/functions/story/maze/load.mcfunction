@@ -12,6 +12,7 @@ scoreboard objectives add boss-stage dummy
 scoreboard objectives add maze-placed minecraft.used:minecraft.barrier
 
 scoreboard objectives add maze-weapon-age dummy
+scoreboard objectives add maze-weapon-selected dummy
 
 scoreboard objectives add maze-connections dummy
 scoreboard objectives add maze-tile-type dummy
