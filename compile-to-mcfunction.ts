@@ -1637,7 +1637,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           HideFlags:7,
           Unbreakable:true,
           Enchantments:`[{id:"minecraft:knockback",lvl:3s}]`,
-          AttributeModifiers:`[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:0.2,Operation:1,UUID:[I;172020825,1243695863,-1688953862,1194535858],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:8,Operation:0,UUID:[I;-1466535011,1435910226,-1878562663,-1132015729],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-0.8,Operation:1,UUID:[I;-922863640,36653646,-1341164666,1599461106],Slot:"mainhand"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.1,Operation:1,UUID:[I;-139520492,-1183036538,-1607351058,1989334895],Slot:"mainhand"}]`
+          AttributeModifiers:`[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:0.2,Operation:1,UUID:[I;172020825,1243695863,-1688953862,1194535858],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:16,Operation:0,UUID:[I;-1466535011,1435910226,-1878562663,-1132015729],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-0.8,Operation:1,UUID:[I;-922863640,36653646,-1341164666,1599461106],Slot:"mainhand"}]`
         }
       },
       frenchflag: {
@@ -1661,12 +1661,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           },
           HideFlags:7,
           Enchantments:`[{id:"minecraft:knockback",lvl:10s}]`,
-          AttributeModifiers:`[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.2,Operation:2,UUID:[I;1383535789,-2064168012,-1710632262,864343479],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1000,Operation:2,UUID:[I;1404153545,785992977,-1535149632,1770570515],Slot:"mainhand"}]`
+          AttributeModifiers:`[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1000,Operation:2,UUID:[I;1404153545,785992977,-1535149632,1770570515],Slot:"mainhand"}]`
         }
       },
       commandblock: {
-        posX: -1408,
-        posZ: -153,
+        posX: -1403,
+        posZ: -158,
         id: `'minecraft:command_block'`,
         tag: {
           display:{
@@ -1688,6 +1688,27 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           AttributeModifiers:`[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1000,Operation:2,UUID:[I;-236452543,409881411,-1774864685,1481938920],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:1,Operation:1,UUID:[I;-1658005475,239224106,-1186363263,-590591408],Slot:"mainhand"},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,Operation:0,UUID:[I;1355955642,-1776204605,-1097579002,-1040650905],Slot:"mainhand"}]`
         }
       },
+      firewall: {
+        posX: -1408,
+        posZ: -153,
+        id: `'minecraft:blaze_powder'`,
+        tag: {
+          display:{
+            Name: rawJson({
+              text:"Firewall",
+              color:"aqua",
+              bold:true
+            }),
+            Lore:`[${rawJson({
+                      text:"The Great...",
+                      color:"#D65831"
+                    })}]`
+          },
+          HideFlags:7,
+          Enchantments:`[{id:"minecraft:fire_aspect",lvl:10s}]`,
+          AttributeModifiers:`[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:6,Operation:0,UUID:[I;243472706,-1489090135,-1530016463,-1848963892],Slot:"mainhand"},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,Operation:0,UUID:[I;245692403,1821067351,-1410396933,1710264550],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-0.5,Operation:1,UUID:[I;-130300453,1611024656,-1322539582,-1366430667]}]`
+        }
+      },
       buildtool: {
         posX: -1427,
         posZ: -177,
@@ -1695,7 +1716,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         tag: {
           display:{
             Name: rawJson({
-              text:"Build Tool",
+              text:"Building Block",
               color:"light_purple",
               bold:true
             }),
@@ -1813,7 +1834,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       addfunc(`maze/weapons/${k}/give`, [`give @s ${toGive(v, 1)}`]);
     });
 
-    const weaponSpawnList = ["spoon", "commandblock", "frenchflag"];
+    const weaponSpawnList = ["spoon", "firewall", "commandblock", "frenchflag"];
     weaponSpawnList.forEach((k, i) => {
       addfunc(`maze/weapons/spawnseq/${i}`, [
         `summon firework_rocket ${weapons[k].posX} 12.5 ${weapons[k].posZ} {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;16777215]}]}}}}`,
@@ -1829,10 +1850,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc(`maze/weapons/weapon_pickup_handle`, [
       `scoreboard players set @a maze-weapon-seld -1`,
       weaponSpawnList.map((k, i) => `execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"${k}"}}}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players set @a[dx=2,dy=2,dz=2] maze-weapon-seld ${i}`),
-      weaponSpawnList.map((k, i) => [
-        `execute as @a[scores={maze-weapon-seld=0..}] unless entity @s[scores={maze-weapon-seld=${i}}] run clear @s ${weapons[k].id.slice(1, weapons[k].id.length-1)}{weapon:"${k}",isweapon:1b}`,
-        `execute as @a[scores={maze-weapon-seld=0..}] if entity @s[scores={maze-weapon-seld=${i}}] unless entity @s[nbt={Inventory:[{tag:{weapon:"${k}"}}]}] run function generated:story/maze/weapons/${k}/give`
-      ]),
+      weaponSpawnList.map((k, i) => `execute as @a[scores={maze-weapon-seld=0..}] unless entity @s[scores={maze-weapon-seld=${i}}] run clear @s ${weapons[k].id.slice(1, weapons[k].id.length-1)}{weapon:"${k}",isweapon:1b}`),
+      weaponSpawnList.map((k, i) => `execute as @a[scores={maze-weapon-seld=0..}] if entity @s[scores={maze-weapon-seld=${i}}] unless entity @s[nbt={Inventory:[{tag:{weapon:"${k}"}}]}] run function generated:story/maze/weapons/${k}/give`),
       'execute if score enabled maze matches 1 run schedule function generated:story/maze/weapons/weapon_pickup_handle 5t'
     ])
 
@@ -1881,6 +1900,15 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     const dims = [4, 2]
+
+    schedule(`effect give @a[nbt={SelectedItem:{tag:{weapon:"firewall"}}}] fire_resistance 10 0 true`, 100, functions);
+
+    addfunc('maze/weapons/firewall/summonwall', [
+      [...Array(7)].map((x, i) => i-4).map(i=>`summon marker ^${i} ^ ^ {Tags:["maze-firewall-marker","maze-firewall-marker-init"]}`),
+      'scoreboard players operation @e[tag=maze-firewall-marker-init] maze-weapon-age = @s maze-weapon-age',
+      'tag @e remove maze-firewall-marker-init',
+      `tp @s ~ ~1 ~`
+    ])
 
     addfunc('maze/weapons/frenchflag/inittickers', [
       [...new Array(dims[0]*2+1)].map((x, i) => i-dims[0]-1).map(i=>([...new Array(dims[1]*2+1)].map((x, j)=> j-dims[1]-1).map(j=>[
@@ -2118,7 +2146,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
       // 'tag @e[type=marker,tag=maze-node] remove maze-visited',
       'bossbar set minecraft:maze visible false',
-      `scoreboard players set enabled maze 1`,
       'function hitchhike:story/sawyer/maze/ready'
     ])
 

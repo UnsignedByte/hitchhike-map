@@ -1,0 +1,1 @@
+execute as @e[tag=maze-firewall-marker] at @s run function hitchhike:story/maze/weapons/firewall/markertick

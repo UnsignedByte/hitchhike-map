@@ -7,5 +7,6 @@ function hitchhike:uuid/match
 execute if entity @s[tag=maze-weapon-spoon] as @a[tag=match-uuid-select] run function generated:story/maze/weapons/spoon/give
 execute if entity @s[tag=maze-weapon-frenchflag] as @a[tag=match-uuid-select] run function generated:story/maze/weapons/frenchflag/give
 execute if entity @s[tag=maze-weapon-commandblock] as @a[tag=match-uuid-select] run function generated:story/maze/weapons/commandblock/give
+execute if entity @s[tag=maze-weapon-firewall] as @a[tag=match-uuid-select] run function generated:story/maze/weapons/firewall/give
 execute if entity @s[tag=maze-weapon-buildtool] as @a[tag=match-uuid-select] run function generated:story/maze/weapons/buildtool/give
 kill @s
