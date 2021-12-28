@@ -215,8 +215,10 @@ npc:
         - messages:
           - message: The SD card is finally done loading! Sorry it took a while, I hope you weren't too bored.
             global: true
-          - message: Anyways, I've also loaded in some old models into the waiting room that you can take before you get into the card.
+          - message: I'll also load in some random old models into the waiting room that you can take before you get into the card.
             global: true
+            command:
+              - 'function generated:story/maze/weapons/spawnseq/0'
           - message: It seems a big portion of the card is corrupted, which might make it dangerous, so I would recommend you take some tools with you!
             global: true
           - message: Anyways, when you're ready, enter the teleporter and I'll send you into a (hopefully uncorrupted) section of the SD card. No promises, though!

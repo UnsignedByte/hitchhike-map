@@ -1818,6 +1818,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       addfunc(`maze/weapons/spawnseq/${i}`, [
         `summon firework_rocket ${weapons[k].posX} 12.5 ${weapons[k].posZ} {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;16777215]}]}}}}`,
         `summon item ${weapons[k].posX} 12.5 ${weapons[k].posZ} {PickupDelay:32767,Age:-32768,Tags:["maze-weapon-displaystand"],Item:${toSnbt(Object.assign({Count:'1b'}, weapons[k]))}}`,
+        `playsound minecraft:entity.experience_orb.pickup neutral @a ${weapons[k].posX} 12.5 ${weapons[k].posZ} 1 0.6`,
         `schedule function generated:story/maze/weapons/spawnseq/${i+1} 40t`
       ])
     })
