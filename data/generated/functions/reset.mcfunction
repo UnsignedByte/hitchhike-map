@@ -21,8 +21,6 @@ schedule clear generated:scheduled/s-12
 function generated:scheduled/s-12
 schedule clear generated:scheduled/s-3
 function generated:scheduled/s-3
-schedule clear generated:scheduled/s-1
-function generated:scheduled/s-1
 # Kill all existing NPCs.
 kill @e[tag=npc]
 

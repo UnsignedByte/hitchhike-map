@@ -2650,13 +2650,17 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   })();
 
   (()=>{
-    addfunc('lake/vortex/tick', [
-      'fill ~-5 ~ ~-5 ~5 ~20 ~5 air replace water[level=7]',
-      [...Array(7)].map((x, i) => `fill ~-5 ~ ~-5 ~5 ~20 ~5 water[level=${7-i}] replace water[level=${6-i}]`),
+    const trainlocs = [
+      [1001,105,444]
+    ]
+
+    addfunc('lake/dolphintrain/summon', [
+      [...Array(5)].map((x,i)=>i-3).map(i=>`execute positioned ~${i} if predicate hitchhike:onetwelth run summon dolphin ~ ~ ~ {ActiveEffects:[{Id:30b,Amplifier:10b,Duration:2147483647}],Rotation:[180.0f,0.0f],Tags:["dolphin-train"]}`)
     ])
 
-    schedule([
-      'execute as @e[tag=lake-vortex] at @s run function generated:story/lake/vortex/tick'
-    ], 1, functions)
+    addfunc('lake/dolphintrain/tick', [
+      'data modify entity @s Motion[0] set value 0',
+      'execute as @s run data modify entity @s Rotation set value [180.0f,-20.0f]'
+    ])
   })();
 }
