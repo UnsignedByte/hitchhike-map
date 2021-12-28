@@ -1,7 +1,7 @@
 scoreboard players set @a maze-weapon-seld -1
-execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"spoon"}}}] at @s run function generated:story/maze/weapons/weapon_pickup_handle/spoon
-execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"commandblock"}}}] at @s run function generated:story/maze/weapons/weapon_pickup_handle/commandblock
-execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"frenchflag"}}}] at @s run function generated:story/maze/weapons/weapon_pickup_handle/frenchflag
+execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"spoon"}}}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players set @a[dx=2,dy=2,dz=2] maze-weapon-seld 0
+execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"commandblock"}}}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players set @a[dx=2,dy=2,dz=2] maze-weapon-seld 1
+execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"frenchflag"}}}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players set @a[dx=2,dy=2,dz=2] maze-weapon-seld 2
 execute as @a[scores={maze-weapon-seld=0..}] unless entity @s[scores={maze-weapon-seld=0}] run clear @s minecraft:iron_shovel{weapon:"spoon",isweapon:1b}
 execute as @a[scores={maze-weapon-seld=0..}] if entity @s[scores={maze-weapon-seld=0}] unless entity @s[nbt={Inventory:[{tag:{weapon:"spoon"}}]}] run function generated:story/maze/weapons/spoon/give
 execute as @a[scores={maze-weapon-seld=0..}] unless entity @s[scores={maze-weapon-seld=1}] run clear @s minecraft:command_block{weapon:"commandblock",isweapon:1b}
