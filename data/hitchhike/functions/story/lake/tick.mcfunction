@@ -6,3 +6,4 @@ execute at @e[tag=lake-vortex] run particle minecraft:splash ~ 114.0 ~ 1.2 0 1.2
 
 execute as @e[tag=lake-boat] at @s if block ~ ~ ~ bubble_column run say @s
 execute as @e[tag=lake-boat] at @s if block ~ ~ ~ bubble_column run tp @s ~ ~-0.03 ~
+execute as @e[tag=lake-boat] at @s if block ~ ~ ~ bubble_column run data modify entity @s Motion set value [0.0f,-0.1f,0.0f]
