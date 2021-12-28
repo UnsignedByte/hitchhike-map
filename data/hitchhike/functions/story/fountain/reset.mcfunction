@@ -7,6 +7,6 @@ setblock 914 55 -73 minecraft:blue_stained_glass
 scoreboard players set #guesscount fishjar 0
 
 #> close door
-setblock 908 53 -79 stone
+scoreboard players set door fishjar 0
 # kill @e[tag=fishjar-guess-display]
 # summon armor_stand 914 55 -73 {Tags:["fishjar-guess-display"],CustomNameVisible:1b,NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,CustomName:'[{"text":"Guess: ","color":"gold","bold":true},{"text":"00"},{"text":"."},{"text":"00"},{"text":" Bov"}]'}
