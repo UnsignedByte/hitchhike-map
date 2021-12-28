@@ -1,4 +1,4 @@
-particle minecraft:small_flame ~ ~ ~ 0.25 0.25 0.25 0 3
+particle minecraft:small_flame ~ ~ ~ 0.25 0.25 0.25 0 2
 playsound minecraft:block.fire.ambient neutral @a ~ ~ ~ 0.05 0.6
 
 execute as @e[tag=maze-mob,distance=..1] run data modify entity @s Fire set value 20
