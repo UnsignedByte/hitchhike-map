@@ -28,4 +28,6 @@ execute if score picnic quest-status matches 0.. run function generated:quests/p
 
 execute if score lacroix quest-status matches 0.. run function generated:quests/lacroix-tick
 
+execute if score biolab quest-status matches 0.. run function generated:quests/biolab-tick
+
 execute if score sdcard quest-status matches 0.. run function generated:quests/sdcard-tick

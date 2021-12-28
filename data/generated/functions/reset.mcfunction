@@ -25,8 +25,8 @@ function generated:scheduled/s-3
 kill @e[tag=npc]
 
 # Clear quest book from all players.
-data modify storage generated:quest_book current set value ["","","","","","","",""]
-data modify storage generated:quest_book completed set value ["","","","","","","",""]
+data modify storage generated:quest_book current set value ["","","","","","","","",""]
+data modify storage generated:quest_book completed set value ["","","","","","","","",""]
 clear @a minecraft:written_book{title:"Quest Book"}
 scoreboard objectives remove quest-book-upd
 scoreboard objectives add quest-book-upd dummy
@@ -315,16 +315,6 @@ summon armor_stand 916.15670918 65.46638556 -156.88696301 {Pose: {Head: [-0.7548
 summon armor_stand 916.21941343 65.46560765 -156.91824452 {Pose: {Head: [-0.7118235367011054f, 86.47480911322869f, 0.00861903329585542f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
 summon armor_stand 916.24144786 65.46294384 -155.76420895 {Pose: {Head: [-0.0193307206241108f, 102.96126691649725f, -0.001250196096530894f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
 summon armor_stand 915.94094610 65.46440114 -155.93230622 {Pose: {Head: [-0.4170350239097304f, 94.09384488926946f, -0.0027041997643150076f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
-summon armor_stand 916.05013355 65.46533821 -155.93060394 {Pose: {Head: [-0.687688879758951f, 98.30425474785467f, -0.0006459938981469151f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
-summon armor_stand 916.15590832 65.46573571 -157.10342698 {Pose: {Head: [-0.7674184365342549f, 99.41022647333413f, 0.0030375635432896503f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
-summon armor_stand 916.00065506 65.46425987 -156.01488200 {Pose: {Head: [-0.3770834488123277f, 97.22398659622661f, -0.0025499514731882876f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
-summon armor_stand 916.19412733 65.46512845 -156.12273340 {Pose: {Head: [-0.6516307872852166f, 96.80281448299819f, 0.06550296040954026f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
-summon armor_stand 916.13384254 65.46128177 -157.17939958 {Pose: {Head: [0.48481297477391444f, 104.43930909893707f, 0.05664422005724725f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
-summon armor_stand 916.00635390 65.46315889 -156.93992989 {Pose: {Head: [-0.20931191603616345f, 79.68194834799631f, 0.07568531682118279f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
-summon armor_stand 916.15297747 65.46464834 -156.61575201 {Pose: {Head: [-0.5008605057486886f, 105.05636997983834f, -0.005915279171698354f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
-summon armor_stand 916.14830896 65.46502371 -155.97080204 {Pose: {Head: [-0.6687807376385259f, 96.96709574914486f, 0.0002963728709889389f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
-summon armor_stand 916.06868541 65.46523065 -155.80496274 {Pose: {Head: [-0.6354044489415022f, 96.83412787835057f, 0.003550118197399497f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
-summon armor_stand 916.26326432 65.46324065 -156.09825585 {Pose: {Head: [-0.021207320680343016f, 95.72314280981703f, 0.05214840898693291f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
 summon armor_stand 916.00273087 65.46449588 -156.26130131 {Pose: {Head: [-0.41906766007580654f, 96.41025500348276f, -0.18991994923613725f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
 summon armor_stand 916.23228957 65.46190437 -156.04277306 {Pose: {Head: [-0.03084577573984146f, 95.67838138618274f, -0.17333398292185898f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id:"beetroot", Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
 # ITEM PHYSICS
@@ -730,6 +720,9 @@ function generated:quests/picnic-reset
 
 scoreboard players reset lacroix quest-status
 function generated:quests/lacroix-reset
+
+scoreboard players reset biolab quest-status
+function generated:quests/biolab-reset
 
 scoreboard players reset sdcard quest-status
 function generated:quests/sdcard-reset

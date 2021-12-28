@@ -897,6 +897,24 @@ quest:
     end:
       - type: score
         value: "@e[tag=npc-simon,limit=1] dialogue-status 5"
+  biolab:
+    name: Missing Mouseketeer
+    description: Retrieve Chris's mouse from the bio lab.
+    condition:
+      type: nest
+      value:
+        - type: cond
+          value:
+            - "if score cleaned biolab matches 1"
+            - "if entity @a[nbt={Inventory:[${toSnbt(item.mouse)}]}]"
+          count: 2
+        - type: cond
+          value:
+            - "if entity @a[nbt={Inventory:[${toSnbt(item.mouse)}]},x=947,y=70,z=-3,dz=4,dx=6,dy=3]"
+          weight: 1
+    end:
+      - type: score
+        value: "@e[tag=npc-simon,limit=1] dialogue-status 5"
   sdcard:
     name: Decorruption
     description: Decorrupt the SD Card given by Simon. Don't know how? Maybe someone familiar with programming would know better...
