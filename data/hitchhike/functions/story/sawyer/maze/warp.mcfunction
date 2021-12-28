@@ -7,6 +7,8 @@ execute unless entity @e[tag=maze-boss] unless entity @a[tag=maze-mob] unless en
 execute unless entity @e[tag=maze-boss] unless entity @a[tag=maze-mob] run tp @a[tag=maze-warping] @e[tag=path-start,limit=1]
 execute if entity @e[tag=maze-boss] unless entity @a[tag=maze-mob] run tp @a[tag=maze-warping] @e[tag=path-goal,limit=1]
 tp @a[tag=maze-warping] @r[tag=maze-mob]
+
+execute at @a[tag=maze-warping] run playsound minecraft:entity.enderman.teleport player @a ~ ~ ~ 1 1.3
 tag @a[tag=maze-warping] add maze-mob
 tag @a remove maze-warping
 

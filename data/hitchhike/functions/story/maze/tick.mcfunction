@@ -1,5 +1,11 @@
 function hitchhike:story/maze/mobs/tick
 
+execute if score enabled maze matches 1 run particle minecraft:end_rod -1400.0 16 -174.0 1.5 3 0.4 0 10
+
+execute if score enabled maze matches 1 run playsound minecraft:entity.guardian.attack neutral @a -1400.0 16 -174.0 1 2
+
+execute if score enabled maze matches 1 as @a[x=-1403,y=11,z=-175,dx=5,dy=12,dz=1] run function hitchhike:story/sawyer/maze/warp
+
 execute if score enabled maze matches 1 run function hitchhike:story/maze/weapons/tick
 
 execute if score enabled maze matches 1 as @a[tag=maze-mob,tag=hitdetect-hitter] at @s run function generated:story/maze/weapons/detecthit
