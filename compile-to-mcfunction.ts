@@ -1907,7 +1907,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [...Array(7)].map((x, i) => i-4).map(i=>`summon marker ^${i} ^ ^ {Tags:["maze-firewall-marker","maze-firewall-marker-init"]}`),
       'scoreboard players operation @e[tag=maze-firewall-marker-init] maze-weapon-age = @s maze-weapon-age',
       'tag @e remove maze-firewall-marker-init',
-      `tp @s ~ ~1 ~`
+      `tp @s ~ ~0.5 ~`
     ])
 
     addfunc('maze/weapons/frenchflag/inittickers', [
