@@ -1820,7 +1820,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         return `execute if entity @s[type=item,nbt={Item:{tag:{weapon:"${k}"}}}] as @a[tag=match-uuid-select,tag=maze-mob] at @s run function generated:story/maze/weapons/${k}/start`
       }),
       'tag @s add weapon-disabled',
-      'execute unless entity @a[tag=match-uuid-select,tag=maze-mob] run kill @s'
+      'execute if entity @a[tag=match-uuid-select,tag=maze-mob] run kill @s'
     ])
 
     addfunc('maze/weapons/tick', [
