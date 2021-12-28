@@ -609,6 +609,23 @@ npc:
           - I wonder if you'll accidentally stumble across anyone else.
           - Remember, there was nobody here.
           end: -1
+    muller:
+      name: Egress Muller
+      position: 895.5 77 -156.7
+      rotation: 180 20
+      colour: 0x608082
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhlOWNiMzE3ZmY1NzJmY2EwNjI4MDhmNGJiYmVmNzJiZTc1NTIxZjM2OWJiNDcxZmY4YTczNjE5YzE5NCJ9fX0=
+      villager:
+        type: plains
+        profession: nitwit
+        level: 1
+      dialogue:
+        - messages:
+          - Woah, hey there. What're you doing all the way up here? You don't look like a security guard.
+          - Regardless, I'm part of the big game of hide and seek I'm sure you know is going on.
+          - Please don't let anyone know I'm here.
+          - Do try to leave this area soon before someone takes notice, though. Have a nice one!
+          end: -1
     fishjar:
       name: Cullus Major
       position: 915.5 55 -78.5

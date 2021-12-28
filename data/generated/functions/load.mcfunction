@@ -4070,6 +4070,8 @@ tag @a remove victim-of-dialogue-by-cashier
 
 tag @a remove victim-of-dialogue-by-cameron
 
+tag @a remove victim-of-dialogue-by-muller
+
 tag @a remove victim-of-dialogue-by-fishjar
 
 tag @a remove victim-of-dialogue-by-fountainman
