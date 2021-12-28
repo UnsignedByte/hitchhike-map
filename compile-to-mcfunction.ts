@@ -2648,4 +2648,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
   })();
+
+  (()=>{
+    addfunc('lake/vortex/tick', [
+      [...Array(7)].map((x, i) => `fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=${7-i}] replace water[level=${6-i}]`)
+    ])
+
+    schedule([
+      'execute as @e[tag=lake-vortex] at @s run function generated:story/lake/vortex/tick'
+    ], 5, functions)
+  })();
 }

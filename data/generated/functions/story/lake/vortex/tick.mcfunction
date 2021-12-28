@@ -1,0 +1,7 @@
+fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=7] replace water[level=6]
+fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=6] replace water[level=5]
+fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=5] replace water[level=4]
+fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=4] replace water[level=3]
+fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=3] replace water[level=2]
+fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=2] replace water[level=1]
+fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=1] replace water[level=0]
