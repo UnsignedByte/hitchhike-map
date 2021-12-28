@@ -1832,7 +1832,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `execute positioned ~-1 ~-1 ~-1 run scoreboard players set @a[dx=2,dy=2,dz=2] maze-weapon-selected ${i}`
         ])
 
-        return `execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"${k}"}}] at @s run function generated:story/maze/weapons/weapon_pickup_handle/${k}`
+        return `execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"${k}"}}}] at @s run function generated:story/maze/weapons/weapon_pickup_handle/${k}`
       }),
       weaponSpawnList.map((k, i) => [
         `execute as @a[scores={maze-weapon-selected=0..}] unless entity @s[scores={maze-weapon-selected=${i}}] run clear @s ${weapons[k].id.slice(1, weapons[k].id.length-1)}{weapon:"${k}",isweapon:1b}`,
