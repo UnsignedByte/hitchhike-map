@@ -2651,8 +2651,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
   (()=>{
     addfunc('lake/vortex/tick', [
-      'fill ~-2 ~ ~-2 ~2 ~20 ~2 air replace water[level=7]',
-      [...Array(7)].map((x, i) => `fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=${7-i}] replace water[level=${6-i}]`),
+      'fill ~-5 ~ ~-5 ~5 ~20 ~5 air replace water[level=7]',
+      [...Array(7)].map((x, i) => `fill ~-5 ~ ~-5 ~5 ~20 ~5 water[level=${7-i}] replace water[level=${6-i}]`),
     ])
 
     schedule([
