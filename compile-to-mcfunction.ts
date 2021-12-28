@@ -1816,8 +1816,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const weaponSpawnList = ["spoon", "commandblock", "frenchflag"];
     weaponSpawnList.forEach((k, i) => {
       addfunc(`maze/weapons/spawnseq/${i}`, [
-        `summon firework_rocket ${weapons[k].posX} 12.5 ${weapons[k].posY} {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;16777215]}]}}}}`,
-        `summon item ${weapons[k].posX} 12.5 ${weapons[k].posY} {PickupDelay:32767,Age:-32768,Tags:["maze-weapon-displaystand"],Item:${toSnbt(Object.assign({Count:'1b'}, weapons[k]))}}`,
+        `summon firework_rocket ${weapons[k].posX} 12.5 ${weapons[k].posZ} {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;16777215]}]}}}}`,
+        `summon item ${weapons[k].posX} 12.5 ${weapons[k].posZ} {PickupDelay:32767,Age:-32768,Tags:["maze-weapon-displaystand"],Item:${toSnbt(Object.assign({Count:'1b'}, weapons[k]))}}`,
         `schedule function generated:story/maze/weapons/spawnseq/${i+1} 40t`
       ])
     })
