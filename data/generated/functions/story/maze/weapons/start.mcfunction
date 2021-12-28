@@ -8,3 +8,5 @@ execute if entity @s[type=item,nbt={Item:{tag:{weapon:"spoon"}}}] as @a[tag=matc
 execute if entity @s[type=item,nbt={Item:{tag:{weapon:"frenchflag"}}}] as @a[tag=match-uuid-select,tag=maze-mob] at @s run function generated:story/maze/weapons/frenchflag/start
 execute if entity @s[type=item,nbt={Item:{tag:{weapon:"commandblock"}}}] as @a[tag=match-uuid-select,tag=maze-mob] at @s run function generated:story/maze/weapons/commandblock/start
 execute if entity @s[type=item,nbt={Item:{tag:{weapon:"buildtool"}}}] as @a[tag=match-uuid-select,tag=maze-mob] at @s run function generated:story/maze/weapons/buildtool/start
+tag @s add weapon-disabled
+execute unless entity @a[tag=match-uuid-select,tag=maze-mob] run kill @s

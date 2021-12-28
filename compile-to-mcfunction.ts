@@ -1818,12 +1818,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `tag @e remove maze-weapon-init`
         ])
         return `execute if entity @s[type=item,nbt={Item:{tag:{weapon:"${k}"}}}] as @a[tag=match-uuid-select,tag=maze-mob] at @s run function generated:story/maze/weapons/${k}/start`
-      })
+      }),
+      'tag @s add weapon-disabled',
+      'execute unless entity @a[tag=match-uuid-select,tag=maze-mob] run kill @s'
     ])
 
     addfunc('maze/weapons/tick', [
-      'execute as @e[type=item,nbt={Item:{tag:{isweapon:1b}}}] run function generated:story/maze/weapons/start',
-      'kill @e[type=item,nbt={Item:{tag:{isweapon:1b}}}]',
+      'execute as @e[type=item,nbt={Item:{tag:{isweapon:1b}}},tag=!weapon-disabled] run function generated:story/maze/weapons/start',
       Object.keys(weapons).map(x=>`execute as @e[tag=maze-weapon-${x}] at @s run function hitchhike:story/maze/weapons/${x}/tick`)
     ])
 
