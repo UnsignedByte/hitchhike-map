@@ -1605,9 +1605,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ]
     })
 
+    //summon firework_rocket -1408 12.5 -148 {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Flicker:1b,Colors:[I;16777215]}]}}}}
+
     // main weapons
     let weapons: Record<string, any> = {
       spoon: {
+        posX: -1408,
+        posZ: -148,
         id: `'minecraft:iron_shovel'`,
         tag: {
           display:{
@@ -1637,6 +1641,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         }
       },
       frenchflag: {
+        posX: -1393,
+        posZ: -153,
         id: `'minecraft:white_banner'`,
         tag: {
           display:{
@@ -1659,6 +1665,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         }
       },
       commandblock: {
+        posX: -1408,
+        posZ: -153,
         id: `'minecraft:command_block'`,
         tag: {
           display:{
@@ -1681,6 +1689,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         }
       },
       buildtool: {
+        posX: -1427,
+        posZ: -177,
         id: `'minecraft:barrier'`,
         tag: {
           display:{
@@ -1802,6 +1812,29 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     Object.entries(weapons).forEach(([k, v]) => {
       addfunc(`maze/weapons/${k}/give`, [`give @s ${toGive(v, 1)}`]);
     });
+
+    const weaponSpawnList = ["spoon", "commandblock", "frenchflag"];
+    weaponSpawnList.forEach((k, i) => {
+      addfunc(`maze/weapons/spawnseq/${i}`, [
+        `summon firework_rocket ${weapons[k].posX} 12.5 ${weapons[k].posY} {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;16777215]}]}}}}`,
+        `summon item ${weapons[k].posX} 12.5 ${weapons[k].posY} {PickupDelay:32767,Age:-32768,Tags:["maze-weapon-displaystand"],Item:${toSnbt(Object.assign({Count:'1b'}, weapons[k]))}}`,
+        `schedule function generated:story/maze/weapons/spawnseq/${i+1} 40t`
+      ])
+    })
+
+    addfunc(`maze/weapons/spawnseq/${weaponSpawnList.length}`, [
+      'schedule function generated:story/maze/weapons/weapon_pickup_handle 5t'
+    ])
+    addfunc(`maze/weapons/weapon_pickup_handle`, [
+      weaponSpawnList.map((k, i) => {
+        addfunc(`maze/weapons/weapon_pickup_handle/${k}`, [
+          // `scoreboard players set `
+        ])
+
+        return `execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"${k}"}}] at @s run function generated:story/maze/weapons/weapon_pickup_handle/${k}`
+      }),
+      'execute if score enabled maze matches 1 run schedule function generated:story/maze/weapons/weapon_pickup_handle 5t'
+    ])
 
     addfunc('maze/weapons/start', [
       'execute store result score #CMP UUID0 run data get entity @s Thrower[0]',
