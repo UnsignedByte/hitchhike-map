@@ -2353,6 +2353,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute store success score #tmp maze at @e[tag=path-goal,tag=maze-node] positioned ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} if entity @a[dx=${cellsize},dz=${cellsize},dy=${cellsize}] run function hitchhike:story/sawyer/maze/goalreached`,
       `execute if score #tmp maze matches 0 run schedule function generated:story/sawyer/maze/awaitpathend 5t`
     ])
+
+    schedule([
+      `execute if score enabled maze matches 1 run playsound minecraft:entity.guardian.attack neutral @a -1400.0 16 -174.0 0.4 2`,
+      `execute if score enabled maze matches 1 as @a[x=-1403,y=11,z=-175,dx=5,dy=12,dz=1] run function hitchhike:story/sawyer/maze/warp`
+    ], 2, functions)
   })();
 
   // Fountain
