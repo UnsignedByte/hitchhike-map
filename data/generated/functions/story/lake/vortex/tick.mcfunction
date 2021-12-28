@@ -1,3 +1,4 @@
+fill ~-2 ~ ~-2 ~2 ~20 ~2 air replace water[level=7]
 fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=7] replace water[level=6]
 fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=6] replace water[level=5]
 fill ~-2 ~ ~-2 ~2 ~20 ~2 water[level=5] replace water[level=4]
