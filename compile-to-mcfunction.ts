@@ -1891,7 +1891,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
     addfunc(`maze/weapons/weapon_pickup_handle`, [
       `scoreboard players set @a maze-weapon-seld -1`,
-      weaponSpawnList.map((k, i) => `execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"${k}"}}}] at @s positioned ~-0.1 ~-1 ~-0.1 run scoreboard players set @a[dx=1.2,dy=2,dz=1.2] maze-weapon-seld ${i}`),
+      weaponSpawnList.map((k, i) => `execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"${k}"}}}] at @s positioned ~-0.3 ~-1 ~-0.3 run scoreboard players set @a[dx=1.6,dy=2,dz=1.6] maze-weapon-seld ${i}`),
       weaponSpawnList.map((k, i) => `execute as @a[scores={maze-weapon-seld=0..}] unless entity @s[scores={maze-weapon-seld=${i}}] run clear @s ${weapons[k].id.slice(1, weapons[k].id.length-1)}{weapon:"${k}",isweapon:1b}`),
       weaponSpawnList.map((k, i) => `execute as @a[scores={maze-weapon-seld=0..}] if entity @s[scores={maze-weapon-seld=${i}}] unless entity @s[nbt={Inventory:[{tag:{weapon:"${k}"}}]}] run function generated:story/maze/weapons/${k}/give`),
       'execute if score enabled maze matches 1 run schedule function generated:story/maze/weapons/weapon_pickup_handle 5t'

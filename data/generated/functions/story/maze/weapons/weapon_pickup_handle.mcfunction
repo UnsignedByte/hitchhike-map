@@ -1,10 +1,10 @@
 scoreboard players set @a maze-weapon-seld -1
-execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"pointer"}}}] at @s positioned ~-0.1 ~-1 ~-0.1 run scoreboard players set @a[dx=1.2,dy=2,dz=1.2] maze-weapon-seld 0
-execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"commandblock"}}}] at @s positioned ~-0.1 ~-1 ~-0.1 run scoreboard players set @a[dx=1.2,dy=2,dz=1.2] maze-weapon-seld 1
-execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"firewall"}}}] at @s positioned ~-0.1 ~-1 ~-0.1 run scoreboard players set @a[dx=1.2,dy=2,dz=1.2] maze-weapon-seld 2
-execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"spoon"}}}] at @s positioned ~-0.1 ~-1 ~-0.1 run scoreboard players set @a[dx=1.2,dy=2,dz=1.2] maze-weapon-seld 3
-execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"frenchflag"}}}] at @s positioned ~-0.1 ~-1 ~-0.1 run scoreboard players set @a[dx=1.2,dy=2,dz=1.2] maze-weapon-seld 4
-execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"medicine"}}}] at @s positioned ~-0.1 ~-1 ~-0.1 run scoreboard players set @a[dx=1.2,dy=2,dz=1.2] maze-weapon-seld 5
+execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"pointer"}}}] at @s positioned ~-0.3 ~-1 ~-0.3 run scoreboard players set @a[dx=1.6,dy=2,dz=1.6] maze-weapon-seld 0
+execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"commandblock"}}}] at @s positioned ~-0.3 ~-1 ~-0.3 run scoreboard players set @a[dx=1.6,dy=2,dz=1.6] maze-weapon-seld 1
+execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"firewall"}}}] at @s positioned ~-0.3 ~-1 ~-0.3 run scoreboard players set @a[dx=1.6,dy=2,dz=1.6] maze-weapon-seld 2
+execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"spoon"}}}] at @s positioned ~-0.3 ~-1 ~-0.3 run scoreboard players set @a[dx=1.6,dy=2,dz=1.6] maze-weapon-seld 3
+execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"frenchflag"}}}] at @s positioned ~-0.3 ~-1 ~-0.3 run scoreboard players set @a[dx=1.6,dy=2,dz=1.6] maze-weapon-seld 4
+execute as @e[tag=maze-weapon-displaystand,nbt={Item:{tag:{weapon:"medicine"}}}] at @s positioned ~-0.3 ~-1 ~-0.3 run scoreboard players set @a[dx=1.6,dy=2,dz=1.6] maze-weapon-seld 5
 execute as @a[scores={maze-weapon-seld=0..}] unless entity @s[scores={maze-weapon-seld=0}] run clear @s minecraft:redstone_torch{weapon:"pointer",isweapon:1b}
 execute as @a[scores={maze-weapon-seld=0..}] unless entity @s[scores={maze-weapon-seld=1}] run clear @s minecraft:command_block{weapon:"commandblock",isweapon:1b}
 execute as @a[scores={maze-weapon-seld=0..}] unless entity @s[scores={maze-weapon-seld=2}] run clear @s minecraft:blaze_powder{weapon:"firewall",isweapon:1b}
