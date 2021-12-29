@@ -614,6 +614,12 @@ npc:
           - Hey! Who goes there?! Someone trying to break in?
           - What are you doing barging into my home?
           - I have a fishing rod and I ain't afraid to use it.
+          - Wait, you want to get up the mountain?
+          - message:
+            - text: "At "
+            - text: "this"
+              italic: true
+            - text: " time of day?"
           cond: 1
           end: 2
     cashier:
@@ -683,6 +689,12 @@ npc:
           - Regardless, I'm part of the big game of hide and seek I'm sure you know is going on.
           - Please don't let anyone know I'm here.
           - Do try to leave this area soon before someone takes notice, though. Have a nice one!
+          end: 2
+        - messages:
+          - message:
+            - text: Shh! Stop bothering me before I get caught!
+              italic: true
+          cond: 2
           end: -1
     fishjar:
       name: Cullus Major

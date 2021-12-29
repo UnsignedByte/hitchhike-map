@@ -3,6 +3,7 @@ time set 23000
 # weather clear 1000000
 # time set noon
 gamerule doDaylightCycle false
+gamerule playersSleepingPercentage 200
 stopsound @a
 
 function generated:reset
