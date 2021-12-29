@@ -2738,7 +2738,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     schedule([
       'execute at @a[tag=lake-player-wet] positioned ~ 105 ~ run function generated:story/lake/piranha/summon',
-      'effect give @a[tag=lake-player-wet] minecraft:blindness 3 0 true',
-    ], 20, functions);
+      'effect give @a[tag=lake-player-wet] minecraft:blindness 1 0 true',
+    ], 10, functions);
   })();
 }
