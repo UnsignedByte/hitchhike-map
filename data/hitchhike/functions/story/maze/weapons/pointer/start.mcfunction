@@ -1,1 +1,1 @@
-execute at @e[tag=maze-pointer-marked] run summon creeper ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,ExplosionRadius:1b,Fuse:0,CustomName:'{"text":"std::unique_ptr::reset","color":"aqua","bold":true}'}
+execute at @e[tag=maze-mob,tag=maze-pointer-marked] run summon creeper ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,ExplosionRadius:1b,Fuse:0,CustomName:'{"text":"std::unique_ptr::reset","color":"aqua","bold":true}'}
