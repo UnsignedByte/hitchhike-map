@@ -10,5 +10,3 @@ setblock 1078 125 359 minecraft:dark_oak_door[facing=south,half=lower,hinge=righ
 
 scoreboard players set start story-hurm 0
 function hitchhike:story/hurm/await_start
-
-tag @a remove hurm-selected
