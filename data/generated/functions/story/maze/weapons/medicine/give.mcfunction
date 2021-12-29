@@ -1,0 +1,1 @@
+give @s minecraft:dragon_breath{weapon: 'medicine', isweapon: 1b, display: {Name: '{"text":"Mystery Medicine","color":"aqua","bold":true}', Lore: ['{"text":"(Probably) not addictive.","color":"blue"}']}, HideFlags: 7, Enchantments: [{}], AttributeModifiers: } 1

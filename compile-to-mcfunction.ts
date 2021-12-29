@@ -1709,6 +1709,27 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           AttributeModifiers:`[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:6,Operation:0,UUID:[I;243472706,-1489090135,-1530016463,-1848963892],Slot:"mainhand"},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,Operation:0,UUID:[I;245692403,1821067351,-1410396933,1710264550],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-0.5,Operation:1,UUID:[I;-130300453,1611024656,-1322539582,-1366430667]}]`
         }
       },
+      medicine: {
+        posX: -1393,
+        posZ: -148,
+        id: `'minecraft:dragon_breath'`,
+        tag: {
+          display:{
+            Name: rawJson({
+              text:"Mystery Medicine",
+              color:"aqua",
+              bold:true
+            }),
+            Lore:`[${rawJson({
+                      text:"(Probably) not addictive.",
+                      color:"blue"
+                    })}]`
+          },
+          HideFlags:7,
+          Enchantments:`[{}]`,
+          AttributeModifiers:``
+        }
+      },
       buildtool: {
         posX: -1427,
         posZ: -177,

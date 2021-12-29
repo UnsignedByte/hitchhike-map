@@ -8,5 +8,6 @@ execute if entity @s[type=item,nbt={Item:{tag:{weapon:"spoon"}}}] as @a[tag=matc
 execute if entity @s[type=item,nbt={Item:{tag:{weapon:"frenchflag"}}}] as @a[tag=match-uuid-select] at @s run function generated:story/maze/weapons/frenchflag/start
 execute if entity @s[type=item,nbt={Item:{tag:{weapon:"commandblock"}}}] as @a[tag=match-uuid-select] at @s run function generated:story/maze/weapons/commandblock/start
 execute if entity @s[type=item,nbt={Item:{tag:{weapon:"firewall"}}}] as @a[tag=match-uuid-select] at @s run function generated:story/maze/weapons/firewall/start
+execute if entity @s[type=item,nbt={Item:{tag:{weapon:"medicine"}}}] as @a[tag=match-uuid-select] at @s run function generated:story/maze/weapons/medicine/start
 execute if entity @s[type=item,nbt={Item:{tag:{weapon:"buildtool"}}}] as @a[tag=match-uuid-select] at @s run function generated:story/maze/weapons/buildtool/start
 kill @s
