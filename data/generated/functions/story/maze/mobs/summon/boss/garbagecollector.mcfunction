@@ -2,7 +2,7 @@ summon ravager ~ ~ ~ {CustomNameVisible:1b,Health:2048f,Tags:["maze-mob","maze-b
 scoreboard players set @e[tag=maze-boss,sort=nearest,limit=1,distance=..0.1] boss-stage -1
 bossbar set maze:boss players @a
 bossbar set maze:boss color purple
-bossbar set maze:boss max 20000
+bossbar set maze:boss max 40000
 bossbar set maze:boss visible true
 bossbar set maze:boss style notched_6
 schedule function hitchhike:story/sawyer/maze/bossbar 1t

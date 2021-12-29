@@ -1225,7 +1225,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       },
       garbagecollector: {
         summon: `summon ravager ~ ~ ~ {CustomNameVisible:1b,Health:2048f,Tags:["maze-mob","maze-boss","maze-boss-garbagecollector"],CustomName:'{"text":"Garbage Collector","color":"dark_green","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.05},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:0}]}`,
-        health: 200,
+        health: 400,
         stages: [
           {
             moves: [
@@ -1610,8 +1610,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     // main weapons
     let weapons: Record<string, any> = {
       spoon: {
-        posX: -1408,
-        posZ: -148,
+        posX: -1398,
+        posZ: -158,
         id: `'minecraft:iron_shovel'`,
         tag: {
           display:{
@@ -1665,8 +1665,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         }
       },
       commandblock: {
-        posX: -1403,
-        posZ: -158,
+        posX: -1408,
+        posZ: -153,
         id: `'minecraft:command_block'`,
         tag: {
           display:{
@@ -1689,8 +1689,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         }
       },
       firewall: {
-        posX: -1408,
-        posZ: -153,
+        posX: -1403,
+        posZ: -158,
         id: `'minecraft:blaze_powder'`,
         tag: {
           display:{
@@ -1728,6 +1728,27 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           HideFlags:7,
           Enchantments:`[{}]`,
           AttributeModifiers:`[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1000,Operation:0,UUID:[I;-725838255,688932778,-1893475044,-1816246026]}]`
+        }
+      },
+      pointer: {
+        posX: -1408,
+        posZ: -148,
+        id: `'minecraft:redstone_torch'`,
+        tag: {
+          display:{
+            Name: rawJson({
+              text:"std::unique_ptr",
+              color:"aqua",
+              bold:true
+            }),
+            Lore:`[${rawJson({
+                    text:"Simple and useful.",
+                    color:"blue"
+                  })}]`
+          },
+          HideFlags:7,
+          Enchantments:`[{}]`,
+          AttributeModifiers:`[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1000,Operation:0,UUID:[I;-1052058797,34293322,-1115478998,-133467550]}]`
         }
       },
       buildtool: {
@@ -1855,7 +1876,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       addfunc(`maze/weapons/${k}/give`, [`give @s ${toGive(v, 1)}`]);
     });
 
-    const weaponSpawnList = ["spoon", "firewall", "commandblock", "frenchflag", "medicine"];
+    const weaponSpawnList = ["pointer", "commandblock", "firewall", "spoon", "frenchflag", "medicine"];
     weaponSpawnList.forEach((k, i) => {
       addfunc(`maze/weapons/spawnseq/${i}`, [
         `summon firework_rocket ${weapons[k].posX} 12.5 ${weapons[k].posZ} {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;16777215]}]}}}}`,
@@ -1922,6 +1943,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     const dims = [4, 2]
+
+    schedule('execute if score enabled maze matches 1 as @e[tag=maze-mob,tag=maze-pointer-marked] run function hitchhike:story/maze/weapons/pointer/handlemarked', 5, functions);
 
     schedule(`execute if score enabled maze matches 1 run effect give @a[tag=maze-mob,nbt={SelectedItem:{tag:{weapon:"firewall"}}}] fire_resistance 10 0 true`, 100, functions);
 
