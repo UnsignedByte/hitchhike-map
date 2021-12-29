@@ -1883,6 +1883,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute store result score #CMP UUID3 run data get entity @s Thrower[3]',
       'tag @a add match-selectable',
       'function hitchhike:uuid/match',
+      'tag @s add selected-weapon-item',
       Object.entries(weapons).map(([k, v])=>{
         addfunc(`maze/weapons/${k}/start`, [
           `execute if entity @s[tag=maze-mob] as @s at @s run function generated:story/maze/weapons/${k}/_start`,
