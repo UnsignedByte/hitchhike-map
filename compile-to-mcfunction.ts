@@ -1923,7 +1923,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     const dims = [4, 2]
 
-    schedule(`effect give @a[tag=maze-mob,nbt={SelectedItem:{tag:{weapon:"firewall"}}}] fire_resistance 10 0 true`, 100, functions);
+    schedule(`execute if score enabled maze matches 1 run effect give @a[tag=maze-mob,nbt={SelectedItem:{tag:{weapon:"firewall"}}}] fire_resistance 10 0 true`, 100, functions);
 
     addfunc('maze/weapons/firewall/summonwall', [
       [...Array(7)].map((x, i) => i-4).map(i=>`summon marker ^${i} ^ ^ {Tags:["maze-firewall-marker","maze-firewall-marker-init"]}`),
