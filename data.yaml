@@ -631,8 +631,10 @@ npc:
           - I was in the mood for a late-night snack anyways.
           - "How about this: To prove you're not all talk, why don't you catch and cook me some fish to eat?"
           - That seems like a pretty cheap price given all that I'm helping you with.
-          - You can find an old firepit I've used just outside to the south.
-          - If you 
+          - You can find an old firepit I've used just outside to the east.
+          - If you need wood there's a grove I use for firewood back northeast.
+          - I'm sure you can at least start a fire and grill some food if you're set on climbing an entire mountain.
+          - I'll be expecting you back soon, good luck.
           cond: 1
           end: 2
     cashier:

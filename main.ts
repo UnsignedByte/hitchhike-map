@@ -482,7 +482,7 @@ export async function init (
   )
 
   await Deno.writeTextFile(
-    join(basePath, `./data/${namespace}/item_modifiers/disallow_buildtool.json`),
+    join(basePath, `./data/${namespace}/item_modifiers/disallow_build.json`),
     JSON.stringify(
       {
         function: "set_nbt",
