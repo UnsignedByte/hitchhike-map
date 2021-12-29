@@ -171,14 +171,14 @@ npc:
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 275'
               - 'data modify entity ${select.self} HandItems[0] set value {}'
           cond: 4
-          end: 9
+          end: 11
         - messages:
           - Sorry, give me some time, I'm still working on it.
           - I should be finished by the time you get me my mouse.
-          cond: 9
+          cond: 11
           end:
             - 'execute if score biolab quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 3'
-            - 'execute unless score biolab quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 9'
+            - 'execute unless score biolab quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 11'
         - messages:
           - message: Alright, thanks for the mouse.
             command:
