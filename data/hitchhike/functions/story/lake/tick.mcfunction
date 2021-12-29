@@ -11,4 +11,4 @@ execute as @e[tag=lake-piranha,type=drowned] at @s run function generated:story/
 execute as @e[tag=lake-piranha] at @s unless entity @p[distance=..15] run kill @s
 
 tag @a remove lake-player-wet
-execute as @a[nbt=!{RootVehicle:{Entity:{id:"minecraft:boat"}}},x=924,z=327,dx=272,dz=159,y=105,dy=8] if block ~ ~ ~ water run tag @s add lake-player-wet
+execute as @a[nbt=!{RootVehicle:{Entity:{id:"minecraft:boat"}}},x=924,z=327,dx=272,dz=159,y=105,dy=8] at @s if block ~ ~ ~ water run tag @s add lake-player-wet
