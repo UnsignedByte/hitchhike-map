@@ -1886,8 +1886,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'tag @s add selected-weapon-item',
       Object.entries(weapons).map(([k, v])=>{
         addfunc(`maze/weapons/${k}/start`, [
-          `execute if entity @s[tag=maze-mob] as @s at @s run function generated:story/maze/weapons/${k}/_start`,
-          `execute unless entity @s[tag=maze-mob] as @s run function generated:story/maze/weapons/${k}/give`
+          `execute if entity @s[x=-1500,y=0,z=0,dx=135,dy=135,dz=135,tag=maze-mob] as @s at @s run function generated:story/maze/weapons/${k}/_start`,
+          `execute unless entity @s[x=-1500,y=0,z=0,dx=135,dy=135,dz=135,tag=maze-mob] as @s run function generated:story/maze/weapons/${k}/give`
         ])
         addfunc(`maze/weapons/${k}/_start`, [
           `summon minecraft:marker ~ ~ ~ {Tags:["maze-weapon-init","maze-weapon","maze-weapon-${k}"]}`,
