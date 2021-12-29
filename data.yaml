@@ -600,6 +600,20 @@ npc:
             - Alright, the trail starts right through this gate. Good luck!
           cond: 8
           end: -1
+    hurm:
+      name: Hurm Etkcraub
+      position: 1075.7 125 355.5
+      rotation: -90 30
+      colour: 0x183aab
+      villager:
+        type: snow
+        profession: fisherman
+        level: 4
+      dialogue:
+        - messages:
+          - Hey, what was that? Someone trying to break in?
+          cond: 1
+          end: 2
     cashier:
       name: Paoule Enrique
       position: 891.5 64 -152.5
