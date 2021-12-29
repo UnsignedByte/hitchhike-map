@@ -14,4 +14,6 @@ tag @a remove lake-player-wet
 execute as @a[nbt=!{RootVehicle:{Entity:{id:"minecraft:boat"}}},x=924,z=327,dx=272,dz=159,y=105,dy=8] run tag @s add lake-player-wet
 execute as @a[tag=lake-player-wet] at @s unless block ~ ~ ~ water unless block ~ ~ ~ bubble_column unless block ~ ~ ~ jungle_fence[waterlogged=true] run tag @s remove lake-player-wet
 
+execute at @a[tag=lake-player-wet,y=113,dy=1] run fill ~ ~ ~ ~ ~ ~ bubble_column[drag=true] replace water
+
 scoreboard players set @a[tag=lake-player-wet] foodGoal 16
