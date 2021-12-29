@@ -1855,7 +1855,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       addfunc(`maze/weapons/${k}/give`, [`give @s ${toGive(v, 1)}`]);
     });
 
-    const weaponSpawnList = ["spoon", "firewall", "commandblock", "frenchflag"];
+    const weaponSpawnList = ["spoon", "firewall", "commandblock", "frenchflag", "medicine"];
     weaponSpawnList.forEach((k, i) => {
       addfunc(`maze/weapons/spawnseq/${i}`, [
         `summon firework_rocket ${weapons[k].posX} 12.5 ${weapons[k].posZ} {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;16777215]}]}}}}`,
@@ -2440,7 +2440,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     schedule([
-      `execute if score enabled maze matches 1 run playsound minecraft:entity.guardian.attack neutral @a -1400.0 16 -174.0 0.4 2`,
+      `execute if score enabled maze matches 1 unless entity @e[tag=npc-sawyer,scores={dialogue-status=5}] run playsound minecraft:entity.guardian.attack neutral @a -1400.0 16 -174.0 0.4 2`,
       `execute if score enabled maze matches 1 unless entity @e[tag=npc-sawyer,scores={dialogue-status=5}] as @a[x=-1403,y=11,z=-175,dx=5,dy=12,dz=1] run function hitchhike:story/sawyer/maze/warp`
     ], 2, functions)
   })();
