@@ -2441,7 +2441,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     schedule([
       `execute if score enabled maze matches 1 run playsound minecraft:entity.guardian.attack neutral @a -1400.0 16 -174.0 0.4 2`,
-      `execute if score enabled maze matches 1 as @a[x=-1403,y=11,z=-175,dx=5,dy=12,dz=1] run function hitchhike:story/sawyer/maze/warp`
+      `execute if score enabled maze matches 1 unless entity @e[tag=npc-sawyer,scores={dialogue-status=5}] as @a[x=-1403,y=11,z=-175,dx=5,dy=12,dz=1] run function hitchhike:story/sawyer/maze/warp`
     ], 2, functions)
   })();
 

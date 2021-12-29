@@ -1,6 +1,6 @@
 function hitchhike:story/maze/mobs/tick
 
-execute if score enabled maze matches 1 run particle minecraft:end_rod -1400.0 16 -174.0 1.5 3 0.4 0 10
+execute if score enabled maze matches 1 unless entity @e[tag=npc-sawyer,scores={dialogue-status=5}] run particle minecraft:end_rod -1400.0 16 -174.0 1.5 3 0.4 0 10
 
 execute if score enabled maze matches 1 run function hitchhike:story/maze/weapons/tick
 
