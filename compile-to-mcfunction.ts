@@ -2727,7 +2727,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'summon tropical_fish ~ ~ ~ {Invulnerable:1b,Tags:["lake-piranha","lake-piranha-init"],Variant:118358272}',
       'scoreboard players operation @e[tag=lake-piranha-init] piranha-id = max piranha-id',
       'scoreboard players add max piranha-id 1',
+      'execute unless block ~ ~ ~ water unless block ~ ~ ~ air positioned ~ ~1 ~ run function generated:story/lake/piranha/summon/findwater',
       'tag @e remove lake-piranha-init'
+    ])
+
+    addfunc('lake/piranha/summon/findwater', [
+      'tp @e[tag=lake-piranha-init] ~ ~ ~',
+      'execute unless block ~ ~ ~ water unless block ~ ~ ~ air positioned ~ ~1 ~ run function generated:story/lake/piranha/summon/findwater'
     ])
 
     schedule('execute at @a[tag=lake-player-wet] positioned ~ 105 ~ run function generated:story/lake/piranha/summon', 20, functions);

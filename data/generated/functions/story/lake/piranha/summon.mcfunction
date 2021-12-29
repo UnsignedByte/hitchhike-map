@@ -2,4 +2,5 @@ summon drowned ~ ~ ~ {Silent:1b,Invulnerable:1b,CustomNameVisible:0b,IsBaby:1b,T
 summon tropical_fish ~ ~ ~ {Invulnerable:1b,Tags:["lake-piranha","lake-piranha-init"],Variant:118358272}
 scoreboard players operation @e[tag=lake-piranha-init] piranha-id = max piranha-id
 scoreboard players add max piranha-id 1
+execute unless block ~ ~ ~ water unless block ~ ~ ~ air positioned ~ ~1 ~ run function generated:story/lake/piranha/summon/findwater
 tag @e remove lake-piranha-init
