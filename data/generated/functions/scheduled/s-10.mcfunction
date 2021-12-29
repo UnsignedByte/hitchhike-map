@@ -1,5 +1,6 @@
 execute at @a[tag=lake-player-wet] positioned ~ 105 ~ run function generated:story/lake/piranha/summon
-effect give @a[tag=lake-player-wet] minecraft:blindness 1 0 true
+execute at @a[tag=lake-player-wet] positioned ~ 105 ~ run function generated:story/lake/piranha/summon
+effect give @a[tag=lake-player-wet] minecraft:blindness 4 0 true
 scoreboard players set _rngm vars 6
 scoreboard players set _rngmin vars 0
 execute positioned 898.5 61 -61.5 if entity @a[tag=fountainous] if predicate hitchhike:onethird run function generated:story/fountain/spawn/random
