@@ -1,2 +1,2 @@
-tp @e[tag=external_lock] 0 -1000 0
+execute as @e[tag=external_lock] run function hitchhike:kill
 schedule clear hitchhike:story/intro/keep_external_lock

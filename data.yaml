@@ -614,12 +614,17 @@ npc:
           - Hey! Who goes there?! Someone trying to break in?
           - What are you doing barging into my home?
           - I have a fishing rod and I ain't afraid to use it.
-          - Wait, you want to get up the mountain?
+          - You're telling me ou want to get up the mountain?
           - message:
             - text: "At "
             - text: "this"
               italic: true
-            - text: " time of day?"
+            - text: " ungodly hour?"
+          - ...Nevermind, I won't ask.
+          - Unfortunately, the only way to the trails is through the huge lake right here.
+          - And I can't exactly go letting random people who have no idea what they're doing through my prized fishing ground.
+          - These waters are dangerous; fall out of your boat and those piranhas will make quick work of you.
+          - I was in the mood for a late-night snack anyways.
           cond: 1
           end: 2
     cashier:
