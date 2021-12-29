@@ -2717,7 +2717,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('lake/piranha/tick', [
       'scoreboard players operation #tmp piranha-id = @s piranha-id',
-      'execute as @e[type=tropical_fish,tag=lake-piranha] if score @s piranha-id = #tmp piranha-id run tp @s ~ ~ ~',
+      'execute as @e[type=tropical_fish,tag=lake-piranha] if score @s piranha-id = #tmp piranha-id facing entity @p eyes run tp @s ~ ~ ~ ~ ~',
       // 'tp @e[tag=piranha-selected] @s',
       // 'tag @e remove piranha-selected'
     ])
@@ -2736,6 +2736,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute unless block ~ ~ ~ water unless block ~ ~ ~ air positioned ~ ~1 ~ run function generated:story/lake/piranha/summon/findwater'
     ])
 
-    schedule('execute at @a[tag=lake-player-wet] positioned ~ 105 ~ run function generated:story/lake/piranha/summon', 20, functions);
+    schedule([
+      'execute at @a[tag=lake-player-wet] positioned ~ 105 ~ run function generated:story/lake/piranha/summon',
+      'effect give @a[tag=lake-player-wet] minecraft:blindness 1 0 true',
+      'effect give @a[tag=lake-player-wet] minecraft:blindness 1 0 true',
+    ], 20, functions);
   })();
 }
