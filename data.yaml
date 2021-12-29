@@ -611,7 +611,9 @@ npc:
         level: 4
       dialogue:
         - messages:
-          - Hey, what was that? Someone trying to break in?
+          - Hey! Who goes there?! Someone trying to break in?
+          - What are you doing barging into my home?
+          - I have a fishing rod and I ain't afraid to use it.
           cond: 1
           end: 2
     cashier:

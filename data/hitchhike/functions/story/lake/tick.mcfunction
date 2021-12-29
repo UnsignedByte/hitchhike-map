@@ -6,3 +6,5 @@ execute at @e[tag=lake-vortex] run particle minecraft:splash ~ 114.0 ~ 1.5 0 1.5
 
 execute as @e[tag=lake-boat] at @s if block ~ ~ ~ bubble_column run tp @s ~ ~-0.1 ~
 execute as @e[tag=lake-boat] at @s if block ~ ~ ~ bubble_column run data merge entity @s {Motion:[0.0d,-0.3d,0.0d]}
+
+execute as @e[tag=lake-piranha,type=drowned] at @s run function generated:story/lake/piranha/tick
