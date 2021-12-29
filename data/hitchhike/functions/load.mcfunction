@@ -2,6 +2,7 @@ gamerule maxCommandChainLength 1000000
 gamerule doMobSpawning false
 gamerule mobGriefing false
 gamerule doMobLoot false
+gamerule doTileDrops false
 gamerule randomTickSpeed 0
 gamerule doWeatherCycle false
 gamerule announceAdvancements false

@@ -4,7 +4,9 @@ time set 23000
 # time set noon
 gamerule doDaylightCycle false
 gamerule playersSleepingPercentage 200
+gamerule doLimitedCrafting true
 stopsound @a
+recipe take @a *
 
 function generated:reset
 
