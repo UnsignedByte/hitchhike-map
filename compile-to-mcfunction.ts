@@ -1721,13 +1721,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               bold:true
             }),
             Lore:`[${rawJson({
-                      text:"(Probably) not addictive.",
-                      color:"blue"
-                    })}]`
+                    text:"(Probably) not addictive.",
+                    color:"blue"
+                  })}]`
           },
           HideFlags:7,
           Enchantments:`[{}]`,
-          AttributeModifiers:``
+          AttributeModifiers:`[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1000,Operation:0,UUID:[I;-725838255,688932778,-1893475044,-1816246026]}]`
         }
       },
       buildtool: {
