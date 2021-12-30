@@ -2,5 +2,6 @@
 tag @a[tag=victim-of-dialogue-by-hurm] remove spoken-to
 tag @a[tag=victim-of-dialogue-by-hurm] remove victim-of-dialogue-by-hurm
 execute as @e[tag=npc-hurm, limit=1] at @s run tp @s ~ ~ ~ -90 30
-scoreboard players set @e[tag=npc-hurm, limit=1] dialogue-status -1
+execute unless score grillfish quest-status matches -1 run scoreboard players set @e[tag=npc-hurm, limit=1] dialogue-status -1
+execute if score grillfish quest-status matches -1 run scoreboard players set @e[tag=npc-hurm, limit=1] dialogue-status 3
 tag @e[tag=npc-hurm, limit=1] remove speaking

@@ -637,8 +637,8 @@ npc:
         - messages:
           - Hey! Who goes there?! Someone trying to break in?
           - What are you doing barging into my home?
-          - message: I have a fishing rod and I ain't afraid to use it.
-            wait: 80
+          - message: I have a fishing rod and I'm not afraid to use it.
+            wait: 120
           - You're telling me you want to get up the mountain?
           - message:
             - text: "At "
@@ -670,12 +670,16 @@ npc:
           - I'm sure you can at least start a fire and grill some food if you're set on climbing an entire mountain.
           - I'll be expecting you back soon, good luck.
           cond: 1
-          end: 2
+          end:
+            - execute unless score grillfish quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 2
+            - execute if score grillfish quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 3
         - messages:
           - Shush! I'm considering crustaceans.
           - Don't bother me until you have my fish.
           cond: 2
-          end: -1
+          end:
+            - execute unless score grillfish quest-status matches -1 run scoreboard players set ${select.self} dialogue-status -1
+            - execute if score grillfish quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 3
         - messages:
           - message: Nice, you're back! Thanks for the fish!
             command:
