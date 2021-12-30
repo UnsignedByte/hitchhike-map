@@ -13,6 +13,8 @@ function hitchhike:story/hurm/await_start
 
 kill @e[tag=hurm-item]
 
+scoreboard players set -caught hurm-fish-caught 0
+
 #> Reset Tree Area
 scoreboard players set @a hurm-chopped 0
 scoreboard players set -chopped hurm-chopped 0

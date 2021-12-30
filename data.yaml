@@ -631,6 +631,7 @@ npc:
           - I was in the mood for a late-night snack anyways.
           - message: "How about this: To prove you're not all talk, why don't you catch and cook me some fish to eat?"
             command:
+              - scoreboard players set -caught hurm-fish-caught 0
               - type: quest
                 value: campfire
               - type: quest
@@ -643,6 +644,18 @@ npc:
           - I'll be expecting you back soon, good luck.
           cond: 1
           end: 2
+        - messages:
+          - Shush! I'm pondering crustaceans.
+          - Don't bother me until you have my fish.
+          cond: 2
+          end: -1
+        - messages:
+          - message: Nice, you're back! I'll take those fish...
+            command:
+              - execute as @p[nbt=!{Inventory:[{id:"minecraft:cooked_cod"}]},nbt=!{Inventory:[{id:"minecraft:cooked_salmon"}]}] run function hitchhike:story/hurm/clear_one_fish
+              - execute as @p[nbt=!{Inventory:[{id:"minecraft:cooked_cod"}]},nbt=!{Inventory:[{id:"minecraft:cooked_salmon"}]}] run function hitchhike:story/hurm/clear_one_fish
+              - execute as @p[nbt=!{Inventory:[{id:"minecraft:cooked_cod"}]},nbt=!{Inventory:[{id:"minecraft:cooked_salmon"}]}] run function hitchhike:story/hurm/clear_one_fish
+              - execute as @p[nbt=!{Inventory:[{id:"minecraft:cooked_cod"}]},nbt=!{Inventory:[{id:"minecraft:cooked_salmon"}]}] run function hitchhike:story/hurm/clear_one_fish
     cashier:
       name: Paoule Enrique
       position: 891.5 64 -152.5
@@ -1078,6 +1091,9 @@ quest:
           value:
             -  "if entity @a[x=1072,y=125,z=352,dx=6,dz=7,dy=2]"
           weight: 1
+    end:
+      - execute if score -caught hurm-fish-caught matches 4.. run scoreboard players set @e[tag=npc-hurm] dialogue-status 3
+      - execute unless score -caught hurm-fish-caught matches 4.. run scoreboard players set @e[tag=npc-hurm] dialogue-status 4
 
 itemphysics:
   # - duration: 20 # physics simulation duration in seconds

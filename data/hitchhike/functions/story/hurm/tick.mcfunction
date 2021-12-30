@@ -21,3 +21,9 @@ execute as @a run scoreboard players operation @s hurm-fish += @s hurm-fish-tmp
 scoreboard players operation -cooked hurm-fish += @a hurm-fish
 
 execute if score campfire quest-status matches 50.. run recipe give @a minecraft:campfire
+
+execute if entity @a[scores={hurm-fish-caught=1..}] as @e[type=item,nbt={PickupDelay:0s,Age:0s,Item:{Count:1b,id:"minecraft:cod"}}] unless data entity @s Thrower run tag @s add hurm-caught-fish
+execute if entity @a[scores={hurm-fish-caught=1..}] as @e[type=item,nbt={PickupDelay:0s,Age:0s,Item:{Count:1b,id:"minecraft:salmon"}}] unless data entity @s Thrower run tag @s add hurm-caught-fish
+execute as @e[tag=hurm-caught-fish] run scoreboard players add -caught hurm-fish-caught 1
+tag @e remove hurm-caught-fish
+scoreboard players set @a hurm-fish-caught 0
