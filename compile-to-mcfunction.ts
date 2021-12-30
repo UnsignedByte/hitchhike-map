@@ -2804,91 +2804,104 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           wait: 5,
           seq: {
             cmds: [
-              `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`
+              `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`,
+              `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
             ],
             next: [
               {
                 wait: 3,
                 seq: {
                   cmds: [
-                    `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`
+                    `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`,
+                    `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                   ],
                   next: [
                     {
                       wait: 4,
                       seq: {
                         cmds: [
-                          `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`
+                          `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`,
+                          `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                         ],
                         next: [
                           {
                             wait: 4,
                             seq: {
                               cmds: [
-                                `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.025`
+                                `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.025`,
+                                `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                               ],
                               next: [
                                 {
                                   wait: 3,
                                   seq: {
                                     cmds: [
-                                      `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`
+                                      `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`,
+                                      `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                                     ],
                                     next: [
                                       {
                                         wait: 3,
                                         seq: {
                                           cmds: [
-                                            `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`
+                                            `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`,
+                                            `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                                           ],
                                           next: [
                                             {
                                               wait: 4,
                                               seq: {
                                                 cmds: [
-                                                  `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`
+                                                  `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`,
+                                                  `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                                                 ],
                                                 next: [
                                                   {
                                                     wait: 3,
                                                     seq: {
                                                       cmds: [
-                                                        `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`
+                                                        `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`,
+                                                        `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                                                       ],
                                                       next: [
                                                         {
                                                           wait: 5,
                                                           seq: {
                                                             cmds: [
-                                                              `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.01`
+                                                              `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.01`,
+                                                              `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                                                             ],
                                                             next: [
                                                               {
                                                                 wait: 3,
                                                                 seq: {
                                                                   cmds: [
-                                                                    `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`
+                                                                    `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`,
+                                                                    `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                                                                   ],
                                                                   next: [
                                                                     {
                                                                       wait: 4,
                                                                       seq: {
                                                                         cmds: [
-                                                                          `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.07`
+                                                                          `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.07`,
+                                                                          `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                                                                         ],
                                                                         next: [
                                                                           {
                                                                             wait: 4,
                                                                             seq: {
                                                                               cmds: [
-                                                                                `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`
+                                                                                `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`,
+                                                                                `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                                                                               ],
                                                                               next: [
                                                                                 {
                                                                                   wait: 5,
                                                                                   seq: {
                                                                                     cmds: [
-                                                                                      `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`
+                                                                                      `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`,
+                                                                                      `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                                                                                     ],
                                                                                     next: [
                                                                                       {
@@ -2896,7 +2909,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                                         seq: {
                                                                                           cmds: [
                                                                                             `data modify entity @e[tag=npc-hurm,limit=1] HandItems[0] set value {}`,
-                                                                                            `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`
+                                                                                            `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`,
+                                                                                            `execute as @e[tag=npc-hurm,limit=1] anchored eyes run particle item cooked_salmon ^ ^ ^0.2 0 0 0 0.05 5`
                                                                                           ],
                                                                                           next: [
                                                                                             {
