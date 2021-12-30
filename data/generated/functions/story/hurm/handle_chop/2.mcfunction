@@ -1,0 +1,3 @@
+fill 1172 100 291 1179 106 299 air destroy
+clone 1172 35 291 1179 46 299 1172 95 291
+particle minecraft:large_smoke 1175.5 100.5 295 -1.75 -2.75 -2 0 2000

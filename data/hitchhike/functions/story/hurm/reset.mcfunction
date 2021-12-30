@@ -13,12 +13,7 @@ function hitchhike:story/hurm/await_start
 
 #> Reset Tree Area
 
-# Tree 1
-clone 1181 93 276 1188 105 284 1181 123 276
-# Tree 2
-clone 1168 92 276 1177 105 285 1168 122 276
-# Tree 3
-clone 1172 95 291 1179 106 299 1172 125 291
+function generated:story/hurm/reset_trees
 # Reset chest
 data modify block 1184 124 286 Items set from block 1184 121 286 Items
 

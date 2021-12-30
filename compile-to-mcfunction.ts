@@ -2762,5 +2762,33 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         '1240 120 320'
       ].map(x=>`summon marker ${x} {Tags:["hurm-mine-coal"]}`)
     ])
+
+    const tree_ranges = [
+      [1181, 123, 276, 1188, 135, 284],
+      [1168, 92, 276, 1177, 105, 285],
+      [1172, 95, 291, 1179, 106, 299]
+    ]
+
+    addfunc('hurm/reset_trees', [
+      tree_ranges.map((x, i)=>[
+        `clone ${x[0]} ${x[1]-30} ${x[2]} ${x[3]} ${x[4]-30} ${x[5]} ${x[0]} ${x[1]} ${x[2]}`,
+        `scoreboard players set -tree${i} hurm-chopped 0`
+      ]),
+    ])
+
+    addfunc('hurm/handle_chop', [
+      'scoreboard players set @a hurm-chopped 0',
+      'scoreboard players add -chopped hurm-chopped 1',
+      tree_ranges.map((x, i) => {
+        addfunc(`hurm/handle_chop/${i}`, [
+          `fill ${x[0]} ${x[1]+5} ${x[2]} ${x[3]} ${x[4]} ${x[5]} air destroy`,
+          `clone ${x[0]} ${x[1]-60} ${x[2]} ${x[3]} ${x[4]-60} ${x[5]} ${x[0]} ${x[1]} ${x[2]}`,
+          `particle minecraft:large_smoke ${(x[0]+x[3])/2} ${(x[1]+x[4])/2} ${(x[2]+x[5])/2} ${(x[0]-x[3])/4} ${(x[1]-x[4])/4} ${(x[2]-x[5])/4} 0 2000`
+        ])
+        return [
+          `execute unless blocks ${x[0]} ${x[1]-30} ${x[2]} ${x[3]} ${x[4]-30} ${x[5]} ${x[0]} ${x[1]} ${x[2]} run function generated:story/hurm/handle_chop/${i}`
+        ]
+      })
+    ])
   })();
 }
