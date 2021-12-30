@@ -12,8 +12,9 @@ scoreboard players set start story-hurm 0
 function hitchhike:story/hurm/await_start
 
 #> Reset Tree Area
-
+scoreboard players set -chopped hurm-chopped 0
 function generated:story/hurm/reset_trees
+
 # Reset chest
 data modify block 1184 124 286 Items set from block 1184 121 286 Items
 
