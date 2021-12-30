@@ -635,7 +635,7 @@ summon minecraft:villager 949.50 64.8 76.30 {Rotation: [-180f, 30f], Silent: 1b,
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for poolgoer.
-summon minecraft:villager 880.50 76 30.70 {Rotation: [-180f, 20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-poolgoer"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGEzNTczYmI1NGZlNTc4MTQzZTI4NjQ3ZDNiZDZiOWU2MmQ2MTBmZDE4MzQ0ZGM3ZjUxN2E3OWZiNjMzOSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:weaponsmith", level: 2}, Offers: {}, CustomName: '{"text":"Buck Crady","color":"#9c231a","bold":true}'}
+summon minecraft:villager 880.50 76 30.70 {Rotation: [-180f, -20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-poolgoer"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTIyNWNjNDBmNWRjZTlkNjdkMTIxNzUxYmMyOTIxNWRjODljZDRjMjJlNjEyMjk3MWVmNzg0NTFmODQyMjQyZSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:weaponsmith", level: 2}, Offers: {}, CustomName: '{"text":"Buck Crady","color":"#9c231a","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __apple.
