@@ -2796,8 +2796,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     genseq('hurm/eat_fish', {
       cmds: [
-        `tag @e[tag=npc-hurm,limit=1] add npc-unface`,
-        `execute as @e[tag=npc-hurm,limit=1] at @s run tp @s ~ ~ ~ 75 20`
+        `tag @e[tag=npc-hurm,limit=1] add npc-unface`
       ],
       next: [
         {
