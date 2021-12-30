@@ -637,7 +637,8 @@ npc:
         - messages:
           - Hey! Who goes there?! Someone trying to break in?
           - What are you doing barging into my home?
-          - I have a fishing rod and I ain't afraid to use it.
+          - message: I have a fishing rod and I ain't afraid to use it.
+            wait: 80
           - You're telling me you want to get up the mountain?
           - message:
             - text: "At "
@@ -652,7 +653,6 @@ npc:
             - text: " precious boat."
           - And I can't exactly go letting random people who have no idea what they're doing through my prized fishing ground.
           - These waters are dangerous; fall out of your boat and those piranhas will make quick work of you.
-          - I was in the mood for a late-night snack anyways.
           - message: "How about this: To prove you're not all talk, why don't you catch and cook me some fish to eat?"
             command:
               - scoreboard players set -caught hurm-fish-caught 0
@@ -660,6 +660,9 @@ npc:
                 value: campfire
               - type: quest
                 value: grillfish
+          - message: 
+            - text: I was in the mood for a late-night snack anyways.
+              italic: true
           - That seems like a pretty fair ask given all that I'm helping you with.
           - You can find an old firepit I've used just outside to the east.
           - I'll even let you use my fishing rods; they're in the garage.
@@ -676,10 +679,10 @@ npc:
         - messages:
           - message: Nice, you're back! Thanks for the fish!
             command:
-              - execute as @p[nbt=!{Inventory:[{id:"minecraft:cooked_cod"}]},nbt=!{Inventory:[{id:"minecraft:cooked_salmon"}]}] run function hitchhike:story/hurm/clear_one_fish
-              - execute as @p[nbt=!{Inventory:[{id:"minecraft:cooked_cod"}]},nbt=!{Inventory:[{id:"minecraft:cooked_salmon"}]}] run function hitchhike:story/hurm/clear_one_fish
-              - execute as @p[nbt=!{Inventory:[{id:"minecraft:cooked_cod"}]},nbt=!{Inventory:[{id:"minecraft:cooked_salmon"}]}] run function hitchhike:story/hurm/clear_one_fish
-              - execute as @p[nbt=!{Inventory:[{id:"minecraft:cooked_cod"}]},nbt=!{Inventory:[{id:"minecraft:cooked_salmon"}]}] run function hitchhike:story/hurm/clear_one_fish
+              - execute at ${select.self} run function hitchhike:story/hurm/clear_one_fish
+              - execute at ${select.self} run function hitchhike:story/hurm/clear_one_fish
+              - execute at ${select.self} run function hitchhike:story/hurm/clear_one_fish
+              - execute at ${select.self} run function hitchhike:story/hurm/clear_one_fish
               - execute if score -cleared hurm-fish matches 1 run data modify entity ${select.self} HandItems[0] set value {id:"minecraft:cooked_salmon",Count:1b}
               - execute if score -cleared hurm-fish matches 0 run data modify entity ${select.self} HandItems[0] set value {id:"minecraft:cooked_cod",Count:1b}
               - 'execute at ${select.self} run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1'
@@ -1135,8 +1138,8 @@ quest:
             -  "if entity @a[x=1072,y=125,z=352,dx=6,dz=7,dy=2]"
           weight: 1
     end:
-      - execute if score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value {"text":"Nice job on the fish, though. Maybe a little charred but otherwise quite well done."}
-      - execute unless score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value {"text":"What an amazingly cooked fish though; if I didn't know better I would think you got it straight from a restaurant. It's amazing what you managed to make with no spices or anything."}
+      - execute if score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value "Nice job on the fish, though. Maybe a little charred but otherwise quite well done."
+      - execute unless score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value "What an amazingly cooked fish though; if I didn't know better I would think you got it straight from a restaurant. It's amazing what you managed to make with no spices or anything."
       - scoreboard players set @e[tag=npc-hurm] dialogue-status 3
 
 itemphysics:
