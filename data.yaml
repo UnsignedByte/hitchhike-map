@@ -697,8 +697,7 @@ npc:
               - 'schedule function generated:story/hurm/eat_fish 20t'
           - ...Sorry for talking while eating, I'm not used to having company.
           - message:
-            - interpret: true
-              nbt: fish_message
+            - nbt: fish_message
               storage: hitchhike:story/hurm
             wait: 80
           - Well done..? Feel free to take the boat out on the dock for a spin, but please try not to sink it.
