@@ -2743,4 +2743,24 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'effect give @a[tag=lake-player-wet] minecraft:slowness 1 9 true'
     ], 10, functions);
   })();
+
+  (() => {
+    addfunc('hurm/reset_coal', [
+      'kill @e[tag=hurm-mine-coal]',
+      [
+        '1244 115 311',
+        '1243 117 311',
+        '1242 116 311',
+        '1248 116 317',
+        '1249 115 318',
+        '1244 111 321',
+        '1243 111 322',
+        '1244 111 324',
+        '1247 111 323',
+        '1240 117 322',
+        '1241 119 322',
+        '1240 120 320'
+      ].map(x=>`summon marker ${x} {Tags:["hurm-mine-coal"]}`)
+    ])
+  })();
 }

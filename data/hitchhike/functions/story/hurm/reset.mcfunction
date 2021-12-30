@@ -20,3 +20,12 @@ clone 1168 92 276 1177 105 285 1168 122 276
 # Tree 3
 clone 1172 95 291 1179 106 299 1172 125 291
 
+#> Reset miner
+kill @e[tag=hurm-mine-stand]
+summon armor_stand 1239 115 314 {Invulnerable:1b,ShowArms:1b,Tags:["hurm-mine-stand"],DisabledSlots:4144703,HandItems:[{id:"minecraft:iron_pickaxe",Count:1b,tag:{display:{Name:'{"text":"Rusty Pickaxe","color":"#7d5441"}',Lore:['{"text":"Looks like its","color":"gray"}','{"text":"about to fall apart."}']},HideFlags:11,Damage:249,Enchantments:[{id:"minecraft:efficiency",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:-1,Operation:1,UUID:[I;465908983,607470382,-1783809294,1783577342],Slot:"mainhand"}]}},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:5060903}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:3159657}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:4668985}}},{id:"minecraft:iron_helmet",Count:1b,tag:{Enchantments:[{}]}}]}
+
+function generated:story/hurm/reset_coal
+
+execute at @e[tag=hurm-mine-coal] run setblock ~ ~ ~ coal_ore
+
+scoreboard players set -mined hurm-mined 0
