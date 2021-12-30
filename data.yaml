@@ -106,23 +106,28 @@ npc:
       dialogue:
         - messages:
           - You really just broke right in, didn't you?
-          - message: Anyways, what's up?
+          - No decency huh... what if I was unpresentable?
+          - message: ...Anyways, what's up?
             wait: 60
-          - Hmm, the internet is down...
-          - That might have something to do with the sudden loss of electricity in my house...
-          - ...or the massive thunderstorm that's been passing by.
-          - Who knows? I would recommend you turn it off and on again... your internet, I mean. Not my electricity.
-          - Let me know how that goes!
+          - Hmm, your internet is down... so you're here for my help again, huh.
+          - message:
+            - text: Well, what did I expect from you anyways...
+              italic: true
+          - Well, I have no idea. Maybe turn it off or on again, or something like that.
           cond: 10
           end: 1
         - messages:
-          - How'd the internet fixing go? Not great, it seems.
-          - Unfortunately I am unable to fix the power grid through my computer.
-          - message:
-            - text: "If you "
-            - text: require
+          - Persistent, aren't you?
+          - Why are you so desperate for internet? Do you have to talk to someone or something?
+          - message: 
+            - text: "...Oh. I was actually right. "
+            - text: "Well..."
               italic: true
-            - text: " internet so desperately, maybe you could find somewhere unaffected by the power outage?"
+            - text: " If you "
+            - text: really
+              italic: true
+            - text: " need internet that much, maybe you could find somewhere with power."
+          - Or you could just visit them, but I guess they must not live around here, huh.
           - message: 
             - text: "I "
             - text: have
@@ -131,23 +136,37 @@ npc:
           cond: 1
           end: 2
         - messages:
-          - Hmm, I'm not sure what else I could do to help.
-          - The mountain is the unmistakeable mass toward the south, if you can't find it.
-          - Sorry, I'm a bit busy learning x86_64, so I'm afraid I can't go there with you.
-          - I wouldn't mind if you topped something other than the mountain though...
-          - Anyways, see you later!
+          - Still need my help?
+          - message:
+            - text: "This person must be "
+            - text: suuper
+              italic: true
+            - text: " important to you huh."
+          - message:
+            - text: "You never seem this eager to contact me..."
+              italic: true
+          - Well, the mountain is the unmistakeable mass toward the south, if you can't find it.
+          - I can't exactly follow you there, you know I don't leave the house.
+          - Stay safe or something, I guess.
           cond: 2
           end: -1
         - messages:
-          - Oh, hey again. Internet fixed?
-          - No? You have something for me to look at?
-          - Hmm, an SD card... It's corrupted, you say?
-          - message: Let me take a look at it...
+          - Oh, hi again... Did you contact her?
+          - message: 
+            - text: "How'd I know it was a she? "
+            - text: "Just my luck, I guess."
+              italic: true
+          - Anyways, you have something for me to look at?
+          - Hmm, A corrupted SD card...
+          - message:
+            - text: Figures. You're only ever here for my help.
+              italic: true
+          - message: I'll take a look at it.
             command:
               - 'clear @a ${toGive(item.sdcardcorrupted, 2147483647)}'
               - 'data modify entity ${select.self} HandItems[0] set value ${toSnbt(Object.assign({Count:"1b"}, item.sdcardcorrupted))}'
               - 'execute at ${select.self} run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1'
-          - message: Follow me; I'll take this to my PC upstairs.
+          - message: Follow me upstairs, I'll take this to my PC.
             command:
               - "setblock 958 35 0 minecraft:redstone_block"
               - 'setblock 957 35 0 minecraft:powered_rail[powered=true,shape=ascending_east,waterlogged=false]'
@@ -158,18 +177,19 @@ npc:
               - 'summon minecart 957 35 0 {Silent:1,Tags:["sawyer-holder"]}'
               - 'scoreboard players set -held story-sawyer 1'
             wait: 90
-          - message: I'm booting up my computer and I'll take a look at it after, but this will probably take a while.
+          - message: Hmm, this will probably take a while.
             command:
               - '${tp(950.5, 70.0, -0.25, 0, 0)}'
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298'
               - 'scoreboard players set -held story-sawyer 0'
-          - Maybe you can come back later instead?
+          - Maybe you can come back later instead? I can't focus on work with you in the room.
           - Come to think of it, since you have so much time anyways, could you help me get my computer mouse?
           - I think I left it in the bio lab at school with my backpack.
-          - message: I'll try to work on it in the meantime, but vim keybindings can only get you so far... (and by far I mean everywhere, but still.)
+          - message: "I'll try to work on it in the meantime. Maybe if you come back early we could talk some more."
             command:
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 275'
               - 'data modify entity ${select.self} HandItems[0] set value {}'
+          - See you (hopefully soon)!
           cond: 4
           end: 11
         - messages:
@@ -180,7 +200,8 @@ npc:
             - 'execute if score biolab quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 3'
             - 'execute unless score biolab quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 11'
         - messages:
-          - message: Alright, thanks for the mouse.
+          - message: You sure took your time, huh... Not that I was checking the clock or anything, I just noticed.
+          - message: Anyways, thanks for the mouse.
             command:
               - 'setblock 949 71 0 stone_button'
               - 'playsound minecraft:block.stone.place neutral @a 949 71 0 1 2'
@@ -199,16 +220,14 @@ npc:
             - text: "Welcome to the "
             - text: waiting room
               italic: true
-            - text: ". Please be patient while I load the SD card data into memory..."
+            - text: ". Please be patient while I load the SD card data into memory... My computer is slow so watch out for lag (sorry)."
             global: true
             command:
               - 'tp @a -1400.0 11 -150.0'
               - 'schedule function generated:story/maze/create 1t'
-          - message: Oh, sorry. A little confused?
+          - message: Oh, are you confused?
             global: true
-          - message: I mentioned you would be doing most of the work with fixing it, but don't worry!
-            global: true
-          - message: I'll be helping you out along the way.
+          - message: I mentioned you would be doing most of the work with fixing it, but don't worry, I'll be keeping you safe.
             global: true
           cond: 3
           end: -1
@@ -220,7 +239,7 @@ npc:
             command:
               - 'kill @e[tag=maze-weapon-displaystand]'
               - 'function generated:story/maze/weapons/spawnseq/0'
-          - message: It seems a big portion of the card is corrupted, which might make it dangerous, so I would recommend you take some tools with you!
+          - message: It seems a big portion of the card is corrupted, which might make it dangerous, so I would recommend you take some tools with you.
             global: true
           - message: While you're at it, let me get you some blocks to build with too.
             global: true
@@ -257,7 +276,7 @@ npc:
               - 'execute as @a run function generated:story/maze/weapons/buildtool/give'
               - 'execute as @a run function generated:story/maze/weapons/buildtool/give'
               - 'execute as @a run function generated:story/maze/weapons/buildtool/give'
-          - message: Anyways, when you're ready, enter the teleporter and I'll send you into a (hopefully uncorrupted) section of the SD card. No promises, though!
+          - message: Anyways, when you're ready, enter the teleporter and I'll send you into a (hopefully uncorrupted) section of the SD card. No promises, though.
           cond: 5
           end:
             - 'scoreboard players set maze-started story-sawyer 0'
@@ -267,42 +286,44 @@ npc:
             global: true
             command: 
               - 'scoreboard players set maze-started story-sawyer 1'
-          - message: Be careful, corrupted areas can be a little dangerous. Hopefully my tools can help you out, though.
+          - message: Corrupted areas can be a little dangerous, so be careful, I guess. I'm sure you'll be okay, though.
             global: true
           - message: Try throwing them out with "Q"... throwing things at enemies often works, after all.
             global: true
-          - message: Of course, you could also just slap your enemies like a barbarian, that's always an option.
+          - message:
+              - text: "Of course, you could also just go at your enemies (and friends) like a bonobo, that's always an option, both here "
+              - text: and
+                italic: true
+              - text: " in real life."
             global: true
           - message: Anyways, can you see the floating green path I've lit up?
             global: true
           - message: That should lead you toward a corrupted section of the SD card.
             global: true
-          - message: If you could follow it there and take care of the source of the corruption there, I can fix up more of the SD card for you!
+          - message: If you could follow it there and take care of the source of the corruption there, I can fix up more of the SD card for you, or something.
             global: true
-          - message: Best of luck!
+          - message: Try not to die.
             global: true
           cond: 6
           end: -1
         - messages:
-          - message: Great job! I see you've taken care of the first source.
+          - message: I see you've taken care of the first source, so I guess I should congratulate you.
             global: true
           - message: You should see portions of the card being fixed up soon.
             gloabl: true
-          - message: I've looked at the rest of the SD card, and there should only be two more.
-            global: true
-          - message: Onward, Dorothy! Follow the green dust road.
+          - message: I've looked at the rest of the SD card, and there should only be two more, just follow the green dust road...
             global: true
           cond: 7
           end: -1
         - messages:
-          - message: Nice, we should be almost done now.
+          - message: Alright, that's 2/3 done. Good job.
             global: true
           - message: Most of the card is fixed up, just one sector left to finish off.
             global: true
           cond: 8
           end: -1
         - messages:
-          - message: Alright, that should be good. I'm fixing up the remaining parts of the SD card now...
+          - message: Alright, that should be it. I'm fixing up the remaining parts of the SD card now.
             global: true
             wait: 100
           - message: Let me take you back out and I'll analyze the data next.
@@ -318,6 +339,9 @@ npc:
             command:
               - "give ${select.player} ${toGive(item.sdcardfixed)}"
               - "scoreboard players set -sdcard story-simon 1"
+          - message:
+            - text: Also, I had fun too...
+              italic: true
           cond: 9
           end: -1
     simon:
@@ -622,10 +646,10 @@ npc:
             - text: " ungodly hour?"
           - ...Nevermind, I won't ask.
           - message:
-            - text: "Unfortunately, the only way to the trails is through the huge lake right here, and the only way through the lake is on one of "
+            - text: "Unfortunately, the only way to the trails is through the huge lake right here, and the only way through the lake is on "
             - text: my
               italic: true
-            - text: " precious boats."
+            - text: " precious boat."
           - And I can't exactly go letting random people who have no idea what they're doing through my prized fishing ground.
           - These waters are dangerous; fall out of your boat and those piranhas will make quick work of you.
           - I was in the mood for a late-night snack anyways.
@@ -664,7 +688,17 @@ npc:
             wait: 100
             command:
               - 'schedule function generated:story/hurm/eat_fish 20t'
-          - Anyways, nice job on the fish! Maybe a little charred but otherwise quite well done.
+          - ...Sorry for talking while eating, I'm not used to having company.
+          - message:
+            - interpret: true
+              nbt: fish_message
+              storage: hitchhike:story/hurm
+            wait: 80
+          - Well done..? Feel free to take the boat out on the dock for a spin, but please try not to sink it.
+          - (Also please bring it back afterwards, that would be great.)
+          - Good luck with that hike, I've heard its difficult.
+          cond: 3
+          end: -1
     cashier:
       name: Paoule Enrique
       position: 891.5 64 -152.5
@@ -1026,7 +1060,7 @@ quest:
           weight: 1
     end:
       - type: score
-        value: "@e[tag=npc-simon,limit=1] dialogue-status 5"
+        value: "${npc.simon} dialogue-status 5"
   biolab:
     name: Missing Mouseketeer
     description: Retrieve Chris's mouse from the bio lab.
@@ -1044,7 +1078,7 @@ quest:
           weight: 1
     end:
       - type: score
-        value: "@e[tag=npc-simon,limit=1] dialogue-status 5"
+        value: "${npc.simon} dialogue-status 5"
   sdcard:
     name: Decorruption
     description: Decorrupt the SD Card given by Simon. Don't know how? Maybe someone familiar with programming would know better...
@@ -1101,8 +1135,9 @@ quest:
             -  "if entity @a[x=1072,y=125,z=352,dx=6,dz=7,dy=2]"
           weight: 1
     end:
-      - execute if score -caught hurm-fish-caught matches 4.. run scoreboard players set @e[tag=npc-hurm] dialogue-status 3
-      - execute unless score -caught hurm-fish-caught matches 4.. run scoreboard players set @e[tag=npc-hurm] dialogue-status 4
+      - execute if score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value {"text":"Nice job on the fish, though. Maybe a little charred but otherwise quite well done."}
+      - execute unless score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value {"text":"What an amazingly cooked fish though; if I didn't know better I would think you got it straight from a restaurant. It's amazing what you managed to make with no spices or anything."}
+      - scoreboard players set @e[tag=npc-hurm] dialogue-status 3
 
 itemphysics:
   # - duration: 20 # physics simulation duration in seconds
