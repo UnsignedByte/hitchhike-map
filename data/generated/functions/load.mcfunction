@@ -4086,6 +4086,8 @@ tag @a remove victim-of-dialogue-by-plenton
 
 tag @a remove victim-of-dialogue-by-birthdayboy
 
+tag @a remove victim-of-dialogue-by-poolgoer
+
 tag @a remove victim-of-dialogue-by-__apple
 
 tag @a remove victim-of-dialogue-by-__melon_slice

@@ -631,7 +631,11 @@ summon minecraft:villager 1098.50 66 -45.50 {Rotation: [0f, 40f], Silent: 1b, In
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for birthdayboy.
-summon minecraft:villager 949.50 64.8 76.30 {Rotation: [-180f, 30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-birthdayboy"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTk5NDc1ZGQyOTQ3Njg2Y2JkN2Y3MmM4OGNhZDM3MjA1ZGM1OWNiZDhlZDE3YTAzZTAyYzIxODVhODZiM2MwYyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:nitwit", level: 1}, Offers: {}, CustomName: '{"text":"Mat Norma","bold":true}'}
+summon minecraft:villager 949.50 64.8 76.30 {Rotation: [-180f, 30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-birthdayboy"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTk5NDc1ZGQyOTQ3Njg2Y2JkN2Y3MmM4OGNhZDM3MjA1ZGM1OWNiZDhlZDE3YTAzZTAyYzIxODVhODZiM2MwYyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:nitwit", level: 1}, Offers: {}, CustomName: '{"text":"Matt Norma","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for poolgoer.
+summon minecraft:villager 880.50 76 30.70 {Rotation: [-180f, 20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-poolgoer"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGEzNTczYmI1NGZlNTc4MTQzZTI4NjQ3ZDNiZDZiOWU2MmQ2MTBmZDE4MzQ0ZGM3ZjUxN2E3OWZiNjMzOSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:weaponsmith", level: 2}, Offers: {}, CustomName: '{"text":"Buck Crady","color":"#9c231a","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __apple.
