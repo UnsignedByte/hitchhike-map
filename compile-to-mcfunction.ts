@@ -2789,7 +2789,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `summon item ${(x[0]+x[3])/2} ${x[4]} ${(x[2]+x[5])/2} {Item:{id:"stick",Count:1b}}`
         ])
         return [
-          `execute if -tree${i} hurm-chopped matches 0 unless blocks ${x[0]} ${x[1]-30} ${x[2]} ${x[3]} ${x[4]-30} ${x[5]} ${x[0]} ${x[1]} ${x[2]} all run function generated:story/hurm/handle_chop/${i}`
+          `execute if score -tree${i} hurm-chopped matches 0 unless blocks ${x[0]} ${x[1]-30} ${x[2]} ${x[3]} ${x[4]-30} ${x[5]} ${x[0]} ${x[1]} ${x[2]} all run function generated:story/hurm/handle_chop/${i}`
         ]
       })
     ])

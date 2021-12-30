@@ -12,6 +12,7 @@ scoreboard players set start story-hurm 0
 function hitchhike:story/hurm/await_start
 
 #> Reset Tree Area
+scoreboard players set @A hurm-chopped 0
 scoreboard players set -chopped hurm-chopped 0
 function generated:story/hurm/reset_trees
 
