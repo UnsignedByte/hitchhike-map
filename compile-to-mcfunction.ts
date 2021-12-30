@@ -2699,14 +2699,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [1001,105,444]
     ]
 
-    addfunc('lake/dolphintrain/summon', [
-      [...Array(5)].map((x,i)=>i-3).map(i=>`execute positioned ~${i} if predicate hitchhike:onetwelth run summon dolphin ~ ~ ~ {ActiveEffects:[{Id:30b,Amplifier:10b,Duration:2147483647}],Rotation:[180.0f,0.0f],Tags:["dolphin-train"]}`)
-    ])
+    // addfunc('lake/dolphintrain/summon', [
+    //   [...Array(5)].map((x,i)=>i-3).map(i=>`execute positioned ~${i} if predicate hitchhike:onetwelth run summon dolphin ~ ~ ~ {ActiveEffects:[{Id:30b,Amplifier:10b,Duration:2147483647}],Rotation:[180.0f,0.0f],Tags:["dolphin-train"]}`)
+    // ])
 
-    addfunc('lake/dolphintrain/tick', [
-      'data modify entity @s Motion[0] set value 0',
-      'execute as @s run data modify entity @s Rotation set value [180.0f,-20.0f]'
-    ])
+    // addfunc('lake/dolphintrain/tick', [
+    //   'data modify entity @s Motion[0] set value 0',
+    //   'execute as @s run data modify entity @s Rotation set value [180.0f,-20.0f]'
+    // ])
 
     // addfunc('lake/pufferswarm', [
     //   'summon drowned ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1b,Tags:["lake-puffer","lake-puffer-init","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647}],Attributes:[{Name:generic.movement_speed,Base:0.7}]}',
