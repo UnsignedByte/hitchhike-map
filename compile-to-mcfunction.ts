@@ -2800,7 +2800,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ],
       next: [
         {
-          wait: 5,
+          wait: 7,
           seq: {
             cmds: [
               `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`,
@@ -2808,7 +2808,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             ],
             next: [
               {
-                wait: 3,
+                wait: 6,
                 seq: {
                   cmds: [
                     `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`,
@@ -2816,7 +2816,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   ],
                   next: [
                     {
-                      wait: 4,
+                      wait: 7,
                       seq: {
                         cmds: [
                           `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`,
@@ -2824,7 +2824,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                         ],
                         next: [
                           {
-                            wait: 4,
+                            wait: 7,
                             seq: {
                               cmds: [
                                 `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.025`,
@@ -2832,7 +2832,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                               ],
                               next: [
                                 {
-                                  wait: 3,
+                                  wait: 6,
                                   seq: {
                                     cmds: [
                                       `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`,
@@ -2840,7 +2840,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                     ],
                                     next: [
                                       {
-                                        wait: 3,
+                                        wait: 6,
                                         seq: {
                                           cmds: [
                                             `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`,
@@ -2848,7 +2848,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                           ],
                                           next: [
                                             {
-                                              wait: 4,
+                                              wait: 7,
                                               seq: {
                                                 cmds: [
                                                   `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`,
@@ -2856,7 +2856,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                 ],
                                                 next: [
                                                   {
-                                                    wait: 3,
+                                                    wait: 6,
                                                     seq: {
                                                       cmds: [
                                                         `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`,
@@ -2872,7 +2872,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                             ],
                                                             next: [
                                                               {
-                                                                wait: 3,
+                                                                wait: 6,
                                                                 seq: {
                                                                   cmds: [
                                                                     `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`,
@@ -2880,7 +2880,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                   ],
                                                                   next: [
                                                                     {
-                                                                      wait: 4,
+                                                                      wait: 7,
                                                                       seq: {
                                                                         cmds: [
                                                                           `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.07`,
@@ -2888,7 +2888,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                                                         ],
                                                                         next: [
                                                                           {
-                                                                            wait: 4,
+                                                                            wait: 7,
                                                                             seq: {
                                                                               cmds: [
                                                                                 `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`,
