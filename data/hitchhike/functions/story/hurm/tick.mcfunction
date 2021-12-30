@@ -19,3 +19,5 @@ execute as @a store result score @s hurm-fish run clear @s cooked_cod 0
 execute as @a store result score @s hurm-fish-tmp run clear @s cooked_salmon 0
 execute as @a run scoreboard players operation @s hurm-fish += @s hurm-fish-tmp
 scoreboard players operation -cooked hurm-fish += @a hurm-fish
+
+execute if score campfire quest-status matches 50.. run recipe give @a minecraft:campfire
