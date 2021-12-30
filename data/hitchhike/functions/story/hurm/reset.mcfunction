@@ -15,6 +15,9 @@ kill @e[tag=hurm-item]
 
 scoreboard players set -caught hurm-fish-caught 0
 
+# Reset fishing rods
+data modify block 1071 128 348 Items set from block 1071 122 348 Items
+
 #> Reset Tree Area
 scoreboard players set @a hurm-chopped 0
 scoreboard players set -chopped hurm-chopped 0

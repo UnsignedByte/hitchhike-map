@@ -1141,7 +1141,7 @@ quest:
             -  "if entity @a[x=1072,y=125,z=352,dx=6,dz=7,dy=2]"
           weight: 1
     end:
-      - execute if score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value "Nice job on the fish, though. Maybe a little charred but otherwise quite well done."
+      - execute if score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value "Nice job on the fish, though. Maybe a little charred but otherwise quite delectable."
       - execute unless score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value "What an amazingly cooked fish though; if I didn't know better I would think you got it straight from a restaurant. It's amazing what you managed to make with no spices or anything."
       - scoreboard players set @e[tag=npc-hurm] dialogue-status 3
 
