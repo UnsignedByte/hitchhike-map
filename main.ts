@@ -493,6 +493,18 @@ export async function init (
     )
   )
 
+  await Deno.writeTextFile(
+    join(basePath, `./data/${namespace}/item_modifiers/disallow_mine.json`),
+    JSON.stringify(
+      {
+        function: "set_nbt",
+        tag: toSnbt({
+          CanDestroy:`[]`
+        })
+      }
+    )
+  )
+
   // predicates
   await ensureDir(join(basePath, `./data/${namespace}/predicates`))
 
