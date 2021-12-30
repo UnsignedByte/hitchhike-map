@@ -2793,5 +2793,164 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ]
       })
     ])
+
+    genseq('hurm/eat_fish', {
+      cmds: [
+        `tag @e[tag=npc-hurm,limit=1] add npc-unface`,
+        `execute as @e[tag=npc-hurm,limit=1] at @s run tp @s ~ ~ ~ 75 20`
+      ],
+      next: [
+        {
+          wait: 5,
+          seq: {
+            cmds: [
+              `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`
+            ],
+            next: [
+              {
+                wait: 3,
+                seq: {
+                  cmds: [
+                    `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`
+                  ],
+                  next: [
+                    {
+                      wait: 4,
+                      seq: {
+                        cmds: [
+                          `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`
+                        ],
+                        next: [
+                          {
+                            wait: 4,
+                            seq: {
+                              cmds: [
+                                `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.025`
+                              ],
+                              next: [
+                                {
+                                  wait: 3,
+                                  seq: {
+                                    cmds: [
+                                      `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`
+                                    ],
+                                    next: [
+                                      {
+                                        wait: 3,
+                                        seq: {
+                                          cmds: [
+                                            `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`
+                                          ],
+                                          next: [
+                                            {
+                                              wait: 4,
+                                              seq: {
+                                                cmds: [
+                                                  `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`
+                                                ],
+                                                next: [
+                                                  {
+                                                    wait: 3,
+                                                    seq: {
+                                                      cmds: [
+                                                        `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`
+                                                      ],
+                                                      next: [
+                                                        {
+                                                          wait: 5,
+                                                          seq: {
+                                                            cmds: [
+                                                              `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.01`
+                                                            ],
+                                                            next: [
+                                                              {
+                                                                wait: 3,
+                                                                seq: {
+                                                                  cmds: [
+                                                                    `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`
+                                                                  ],
+                                                                  next: [
+                                                                    {
+                                                                      wait: 4,
+                                                                      seq: {
+                                                                        cmds: [
+                                                                          `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.07`
+                                                                        ],
+                                                                        next: [
+                                                                          {
+                                                                            wait: 4,
+                                                                            seq: {
+                                                                              cmds: [
+                                                                                `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1`
+                                                                              ],
+                                                                              next: [
+                                                                                {
+                                                                                  wait: 5,
+                                                                                  seq: {
+                                                                                    cmds: [
+                                                                                      `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 1.05`
+                                                                                    ],
+                                                                                    next: [
+                                                                                      {
+                                                                                        wait: 5,
+                                                                                        seq: {
+                                                                                          cmds: [
+                                                                                            `data modify entity @e[tag=npc-hurm,limit=1] HandItems[0] set value {}`,
+                                                                                            `execute at @e[tag=npc-hurm,limit=1] run playsound minecraft:entity.generic.eat neutral @a ~ ~ ~ 1 0.95`
+                                                                                          ],
+                                                                                          next: [
+                                                                                            {
+                                                                                              wait: 15,
+                                                                                              seq: {
+                                                                                                cmds: [
+                                                                                                  `execute at @e[tag=npc-hurm,limit=1] run playsound entity.player.burp neutral @a ~ ~ ~ 10 1`,
+                                                                                                  `tag @e[tag=npc-hurm,limit=1] remove npc-unface`
+                                                                                                ]
+                                                                                              }
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      }
+                                                                                    ]
+                                                                                  }
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    })
   })();
 }
