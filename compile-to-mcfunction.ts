@@ -2783,10 +2783,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         addfunc(`hurm/handle_chop/${i}`, [
           `fill ${x[0]} ${x[1]+5} ${x[2]} ${x[3]} ${x[4]} ${x[5]} air destroy`,
           `clone ${x[0]} ${x[1]-60} ${x[2]} ${x[3]} ${x[4]-60} ${x[5]} ${x[0]} ${x[1]} ${x[2]}`,
-          `particle minecraft:large_smoke ${(x[0]+x[3])/2} ${(x[1]+x[4])/2} ${(x[2]+x[5])/2} ${(x[0]-x[3])/4} ${(x[1]-x[4])/4} ${(x[2]-x[5])/4} 0 2000`
+          `particle minecraft:large_smoke ${(x[0]+x[3])/2} ${(x[1]+x[4])/2} ${(x[2]+x[5])/2} ${(x[0]-x[3])/4} ${(x[1]-x[4])/4} ${(x[2]-x[5])/4} 0 2000`,
+          `scoreboard players set -tree${i} hurm-chopped 1`,
+          `summon item ${(x[0]+x[3])/2} ${x[4]} ${(x[2]+x[5])/2} {Item:{id:"spruce_log",Count:1b}}`,
+          `summon item ${(x[0]+x[3])/2} ${x[4]} ${(x[2]+x[5])/2} {Item:{id:"stick",Count:1b}}`
         ])
         return [
-          `execute unless blocks ${x[0]} ${x[1]-30} ${x[2]} ${x[3]} ${x[4]-30} ${x[5]} ${x[0]} ${x[1]} ${x[2]} all run function generated:story/hurm/handle_chop/${i}`
+          `execute if -tree${i} hurm-chopped matches 0 unless blocks ${x[0]} ${x[1]-30} ${x[2]} ${x[3]} ${x[4]-30} ${x[5]} ${x[0]} ${x[1]} ${x[2]} all run function generated:story/hurm/handle_chop/${i}`
         ]
       })
     ])

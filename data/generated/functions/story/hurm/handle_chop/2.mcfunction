@@ -1,3 +1,6 @@
 fill 1172 100 291 1179 106 299 air destroy
 clone 1172 35 291 1179 46 299 1172 95 291
 particle minecraft:large_smoke 1175.5 100.5 295 -1.75 -2.75 -2 0 2000
+scoreboard players set -tree2 hurm-chopped 1
+summon item 1175.5 106 295 {Item:{id:"spruce_log",Count:1b}}
+summon item 1175.5 106 295 {Item:{id:"stick",Count:1b}}
