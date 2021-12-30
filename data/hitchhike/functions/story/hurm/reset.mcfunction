@@ -11,6 +11,8 @@ setblock 1078 125 359 minecraft:dark_oak_door[facing=south,half=lower,hinge=righ
 scoreboard players set start story-hurm 0
 function hitchhike:story/hurm/await_start
 
+kill @e[tag=hurm-item]
+
 #> Reset Tree Area
 scoreboard players set @a hurm-chopped 0
 scoreboard players set -chopped hurm-chopped 0

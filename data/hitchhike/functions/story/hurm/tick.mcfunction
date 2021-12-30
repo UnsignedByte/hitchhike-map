@@ -6,3 +6,9 @@ execute as @a[nbt={SelectedItem:{tag:{hurmaxe:1b}}}] unless entity @s[x=1167,y=1
 
 execute if entity @a[scores={hurm-mined=1..}] as @e[tag=hurm-mine-coal] at @s if block ~ ~ ~ air run function hitchhike:story/hurm/handle_coal
 execute unless score -chopped hurm-chopped matches 3.. if entity @a[scores={hurm-chopped=1..}] run function generated:story/hurm/handle_chop
+
+execute as @a[x=1097,y=124,z=361,dx=10,dz=10,dy=2,nbt={SelectedItem:{id:"minecraft:campfire"}}] run item modify entity @s weapon.mainhand hitchhike:hurmcampfire_enable
+execute as @a[x=1097,y=124,z=361,dx=10,dz=10,dy=2,nbt={Inventory:[{id:"minecraft:campfire",Slot:-106b}]}] run item modify entity @s weapon.offhand hitchhike:hurmcampfire_enable
+
+execute as @a[nbt={SelectedItem:{id:"minecraft:campfire"}}] unless entity @s[x=1097,y=124,z=361,dx=10,dz=10,dy=2] run item modify entity @s weapon.mainhand generated:disallow_build
+execute as @a[nbt={Inventory:[{id:"minecraft:campfire",Slot:-106b}]}] unless entity @s[x=1097,y=124,z=361,dx=10,dz=10,dy=2] run item modify entity @s weapon.offhand generated:disallow_build
