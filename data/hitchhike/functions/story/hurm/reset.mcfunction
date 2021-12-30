@@ -30,3 +30,7 @@ function generated:story/hurm/reset_coal
 execute at @e[tag=hurm-mine-coal] run setblock ~ ~ ~ coal_ore
 
 scoreboard players set -mined hurm-mined 0
+
+#> Reset campfire
+
+setblock 1102 125 366 air
