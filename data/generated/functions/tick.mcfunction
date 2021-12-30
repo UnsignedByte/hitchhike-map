@@ -31,3 +31,7 @@ execute if score lacroix quest-status matches 0.. run function generated:quests/
 execute if score biolab quest-status matches 0.. run function generated:quests/biolab-tick
 
 execute if score sdcard quest-status matches 0.. run function generated:quests/sdcard-tick
+
+execute if score campfire quest-status matches 0.. run function generated:quests/campfire-tick
+
+execute if score grillfish quest-status matches 0.. run function generated:quests/grillfish-tick

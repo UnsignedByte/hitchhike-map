@@ -12,3 +12,10 @@ execute as @a[x=1097,y=124,z=361,dx=10,dz=10,dy=2,nbt={Inventory:[{id:"minecraft
 
 execute as @a[nbt={SelectedItem:{id:"minecraft:campfire"}}] unless entity @s[x=1097,y=124,z=361,dx=10,dz=10,dy=2] run item modify entity @s weapon.mainhand generated:disallow_build
 execute as @a[nbt={Inventory:[{id:"minecraft:campfire",Slot:-106b}]}] unless entity @s[x=1097,y=124,z=361,dx=10,dz=10,dy=2] run item modify entity @s weapon.offhand generated:disallow_build
+
+scoreboard players set -cooked hurm-fish 0
+scoreboard players set @a hurm-fish 0
+execute as @a store result score @s hurm-fish run clear @s cooked_cod 0
+execute as @a store result score @s hurm-fish-tmp run clear @s cooked_salmon 0
+execute as @a run scoreboard players operation @s hurm-fish += @s hurm-fish-tmp
+scoreboard players operation -cooked hurm-fish += @a hurm-fish

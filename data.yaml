@@ -630,8 +630,9 @@ npc:
           - These waters are dangerous; fall out of your boat and those piranhas will make quick work of you.
           - I was in the mood for a late-night snack anyways.
           - "How about this: To prove you're not all talk, why don't you catch and cook me some fish to eat?"
-          - That seems like a pretty cheap price given all that I'm helping you with.
+          - That seems like a pretty fair ask given all that I'm helping you with.
           - You can find an old firepit I've used just outside to the east.
+          - I'll even let you use my fishing rods; they're in the garage.
           - If you need wood there's a grove I use for firewood back northeast.
           - I'm sure you can at least start a fire and grill some food if you're set on climbing an entire mountain.
           - I'll be expecting you back soon, good luck.
@@ -1033,6 +1034,45 @@ quest:
     end:
       - execute if score lacroix quest-status matches -1 run scoreboard players set @e[tag=npc-simon,limit=1] dialogue-status 8
       - execute unless score lacroix quest-status matches -1 run scoreboard players set @e[tag=npc-simon,limit=1] dialogue-status 7
+  campfire:
+    name: Fire-lighting
+    description: Craft and light a campfire at Hurm's firepit.
+    condition:
+      type: nest
+      value:
+        - type: cond
+          value:
+            - "if score -tree0 hurm-chopped matches 1"
+            - "if score -tree0 hurm-chopped matches 1"
+            - "if score -tree0 hurm-chopped matches 1"
+          count: 3
+        - type: cond
+          value:
+            - "if score -mined hurm-chopped matches 1"
+          count: 1
+        - type: player
+          stat: minecraft.crafted:minecraft.campfire
+          count: 1
+        - type: player
+          stat: minecraft.used:minecraft.campfire
+          count: 1
+  grillfish:
+    name: Fish-n-chips
+    description: Grill some fish for Hurm's late-night snack!
+    condition:
+      type: nest
+      value:
+        - type: cond
+          value:
+            - "if score -cooked hurm-fish matches 1.."
+            - "if score -cooked hurm-fish matches 2.."
+            - "if score -cooked hurm-fish matches 3.."
+            - "if score -cooked hurm-fish matches 4.."
+          count: 4
+        - type: cond
+          value:
+            -  "if entity @a[x=1072,y=125,z=352,dx=6,dz=7,dy=2]"
+          weight: 1
 
 itemphysics:
   # - duration: 20 # physics simulation duration in seconds
