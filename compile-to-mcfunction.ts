@@ -2765,8 +2765,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     const tree_ranges = [
       [1181, 123, 276, 1188, 135, 284],
-      [1168, 92, 276, 1177, 105, 285],
-      [1172, 95, 291, 1179, 106, 299]
+      [1168, 122, 276, 1177, 135, 285],
+      [1172, 125, 291, 1179, 136, 299]
     ]
 
     addfunc('hurm/reset_trees', [
