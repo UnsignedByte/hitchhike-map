@@ -618,6 +618,22 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 899.50 64 -53.30 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-fountainman"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzE5ODRkOGE2ODRkM2JiZjZhZTk1MzExMDY0Mzk3NDE3OTM2NDZkMzg0YmZjYjFlNGFkOTQ5ZDU3YzI1In19fQ==" }]}}}}], VillagerData: {type: "minecraft:swamp", profession: "minecraft:cleric", level: 99}, Offers: {}, CustomName: '{"text":"Sylvian Bismarck","color":"#9c389c","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for bosnum.
+summon minecraft:villager 1093.70 67 -71.50 {Rotation: [-90f, 20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-bosnum"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDA5ZWJiY2QyMTU0MzdkYWRjNDc1NDNkM2JjZGVmMTY0MmFmMjI0YzVhNGE2MTQzZDk2NzczZGFkZjg5ZGM3ZCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:leatherworker", level: 1}, Offers: {}, CustomName: '{"text":"Bosnum Bert","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for walter.
+summon minecraft:villager 1090.50 66 -55.00 {Rotation: [90f, 10f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-walter"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODgzZjQ3NTc3YTBiYmNhYjgyZDgxZmE4MzdlMGFmZmM2NzY0MjU0NzBmYTViOWEyNWJjYWQ1MmJkNjhjMTAzNiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:butcher", level: 2}, Offers: {}, CustomName: '{"text":"Walter Wheat","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for plenton.
+summon minecraft:villager 1098.50 66 -45.50 {Rotation: [0f, 40f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-plenton"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2JmZmVjZWY3MmJiYzdjNTA4ZTk5YTg4NzFiMjAyMDZmMzBiODdhZDQ0OTg2YmNhZTBkNWJiNTk5ZmI3MGIzIn19fQ==" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 1}, Offers: {}, CustomName: '{"text":"Mrs. Plenton","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for birthdayboy.
+summon minecraft:villager 949.50 64.8 76.30 {Rotation: [-180f, 30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-birthdayboy"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTk5NDc1ZGQyOTQ3Njg2Y2JkN2Y3MmM4OGNhZDM3MjA1ZGM1OWNiZDhlZDE3YTAzZTAyYzIxODVhODZiM2MwYyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:nitwit", level: 1}, Offers: {}, CustomName: '{"text":"Mat Norma","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 # Summon the villager for __apple.
 summon minecraft:villager 905.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__apple", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fuji Apple","color":"#FF0000"},{"text":" (1.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0

@@ -4078,6 +4078,14 @@ tag @a remove victim-of-dialogue-by-fishjar
 
 tag @a remove victim-of-dialogue-by-fountainman
 
+tag @a remove victim-of-dialogue-by-bosnum
+
+tag @a remove victim-of-dialogue-by-walter
+
+tag @a remove victim-of-dialogue-by-plenton
+
+tag @a remove victim-of-dialogue-by-birthdayboy
+
 tag @a remove victim-of-dialogue-by-__apple
 
 tag @a remove victim-of-dialogue-by-__melon_slice

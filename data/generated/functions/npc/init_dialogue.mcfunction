@@ -23,6 +23,14 @@ execute as @s[tag=npc-fishjar] at @s run function generated:npc/fishjar/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-fountainman] at @s run function generated:npc/fountainman/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-bosnum] at @s run function generated:npc/bosnum/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-walter] at @s run function generated:npc/walter/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-plenton] at @s run function generated:npc/plenton/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-birthdayboy] at @s run function generated:npc/birthdayboy/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-__apple] at @s run function generated:npc/__apple/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-__melon_slice] at @s run function generated:npc/__melon_slice/tick
