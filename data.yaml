@@ -939,15 +939,11 @@ npc:
       dialogue:
         - messages:
           - Oh hi! Are you here for my birthday party?
-          - You must have been late, I'm sure everyone else should come soon too!
+          - You must have been late, I'm sure everyone else is coming soon too!
           - Don't worry, its only been an hour, it's not that bad.
-          - message:
-            - text: ...Oh, you aren't here for my birthday?
-              italic: true
+          - ...Oh, you aren't here for my birthday?
           - Well, you could stay and have some cake if you want, I guess.
-          - message:
-            - text: ...You're busy?
-              italic: true
+          - ...You're busy?
           - Sorry to bother you then... Have a nice day!
           end: -1
 
