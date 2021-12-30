@@ -614,7 +614,7 @@ npc:
           - Hey! Who goes there?! Someone trying to break in?
           - What are you doing barging into my home?
           - I have a fishing rod and I ain't afraid to use it.
-          - You're telling me ou want to get up the mountain?
+          - You're telling me you want to get up the mountain?
           - message:
             - text: "At "
             - text: "this"
@@ -1053,7 +1053,7 @@ quest:
           count: 3
         - type: cond
           value:
-            - "if score -mined hurm-chopped matches 1"
+            - "if score -mined hurm-mined matches 1"
           count: 1
         - type: player
           stat: minecraft.crafted:minecraft.campfire
