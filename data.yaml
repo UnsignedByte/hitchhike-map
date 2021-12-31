@@ -943,7 +943,8 @@ npc:
           - Don't worry, its only been an hour, it's not that bad.
           - ...Oh, you aren't here for my birthday?
           - Well, you could stay and have some cake if you want, I guess.
-          - ...You're busy?
+          - message: ...You're busy?
+            wait: 100
           - Sorry to bother you then... Have a nice day!
           end: 2
         - messages:
@@ -1041,6 +1042,21 @@ npc:
           - message: Hehehehe
             wait: 80
           - No breaks for Degol!
+          end: -1
+    eichhornchen:
+      name: Eich Hornchen
+      position: 665.7 57 -29.7
+      rotation: 50 25
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzI0ZTRiMmNlZTJhNmIzNmU5YmFjZDRiZWRkMGQ0ZGJjMTdkYTMxMTg2NjI3NGFmYzRiOWVkNTBlYTc3MTdlMiJ9fX0=
+      villager:
+        type: desert
+        profession: none
+        level: 1
+      colour: 0xebe34b
+      dialogue:
+        - messages:
+          - Nice hiding spot, isn't it?
+          - I dug it myself.
           end: -1
 
 quest:
