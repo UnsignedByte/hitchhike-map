@@ -2699,12 +2699,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [1001,105,444]
     ]
 
-    addfunc('lake/reset', [
-      '#> Resets lake decorations (mainly lilypads)',
-      [
-        [1141,40,370,1165,68,402]
-      ].map(x=>`clone ${x[0]} ${x[1]} ${x[2]} ${x[3]} ${x[4]} ${x[5]} ${x[0]} ${x[1]+60} ${x[2]}`)
-    ])
+    // addfunc('lake/reset', [
+    //   '#> Resets lake decorations (mainly lilypads)',
+    //   [
+    //     [1141,40,370,1165,68,402]
+    //   ].map(x=>`clone ${x[0]} ${x[1]} ${x[2]} ${x[3]} ${x[4]} ${x[5]} ${x[0]} ${x[1]+60} ${x[2]}`)
+    // ])
 
     // addfunc('lake/dolphintrain/summon', [
     //   [...Array(5)].map((x,i)=>i-3).map(i=>`execute positioned ~${i} if predicate hitchhike:onetwelth run summon dolphin ~ ~ ~ {ActiveEffects:[{Id:30b,Amplifier:10b,Duration:2147483647}],Rotation:[180.0f,0.0f],Tags:["dolphin-train"]}`)
