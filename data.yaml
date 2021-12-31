@@ -1028,7 +1028,7 @@ npc:
       name: Degol Dobby
       position: 789.3 63.6 95.5
       rotation: 90 10
-      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTlkNGNmYmUxZWRlMTM5MDJmMGVlMWExZWUyNWQwYTQwOGFiNTgzYWY0MTZjNTAxODkxZjkyN2RjYWU4N2I0ZiJ9fX0=
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTkyZjIxN2RhMDNjZjgzMWRhNjBjM2IzMzI4N2QzMzQ2MWQ4NzE1MzIxZjEzYjdjMzFjZmFmNjY0OGZmMyJ9fX0=
       villager:
         type: taiga
         profession: none
