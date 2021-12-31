@@ -643,7 +643,11 @@ summon minecraft:villager 864.50 70 3.50 {Rotation: [27f, 5f], Silent: 1b, Invul
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for samsung.
-summon minecraft:villager 1059.30 65 0.50 {Rotation: [90f, -15f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-samsung"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTdjYzY2MTViYjRjODMxMWZjZDU3Mzk0NWZiNTQwNWI5YWZjYjBlYjU3YTgxY2ZhZTMxOGZlMjQwYWY2ZTVlOCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:cleric", level: 1}, Offers: {}, CustomName: '{"text":"Samantha Sung","bold":true}'}
+summon minecraft:villager 1059.30 65 0.50 {Rotation: [90f, -15f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-samsung"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTdjYzY2MTViYjRjODMxMWZjZDU3Mzk0NWZiNTQwNWI5YWZjYjBlYjU3YTgxY2ZhZTMxOGZlMjQwYWY2ZTVlOCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:cleric", level: 1}, Offers: {}, CustomName: '{"text":"Samantha Sung","color":"#945da1","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for lucky.
+summon minecraft:villager 1042.90 66.1875 -3.30 {Rotation: [-135f, 45f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-lucky"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjIyOTZlYTE2MGYxYjY2ZGYzMjk1MzdkNmQxNmFhZDE3OWZmZDk3MzdhOTJkMjk0YWVlNzU2NjJjMGQ2ZDQzMSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:nitwit", level: 99}, Offers: {}, CustomName: '{"text":"Lucky Goldstar","color":"#3db330","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __apple.

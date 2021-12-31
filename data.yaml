@@ -989,13 +989,14 @@ npc:
       position: 1059.3 65 0.5
       rotation: 90 -15
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTdjYzY2MTViYjRjODMxMWZjZDU3Mzk0NWZiNTQwNWI5YWZjYjBlYjU3YTgxY2ZhZTMxOGZlMjQwYWY2ZTVlOCJ9fX0=
+      colour: 0x945da1
       villager:
         type: taiga
         profession: cleric
         level: 1
       dialogue:
         - messages:
-          - Ah, I thought I heard someone come in.
+          - Ah, I thought I heard someone rummaging about.
           - message: 
             - text: "Don't mind me, I was just admiring the "
             - text: "Deep Blacks™"
@@ -1003,6 +1004,25 @@ npc:
               italic: true
             - text: ' feature of my 230" Class 8k QLED Samsung Smart TV.'
           - It's so dark I couldn't even distinguish it from reality.
+          end: -1
+    lucky:
+      name: Lucky Goldstar
+      position: 1042.9 66.1875 -3.3
+      rotation: -135 45
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjIyOTZlYTE2MGYxYjY2ZGYzMjk1MzdkNmQxNmFhZDE3OWZmZDk3MzdhOTJkMjk0YWVlNzU2NjJjMGQ2ZDQzMSJ9fX0=
+      colour: 0x3db330
+      villager:
+        type: jungle
+        profession: nitwit
+      dialogue:
+        - messages:
+          - message:
+            - text: SHH!
+              italic: true
+            - text: " Don't let Sam hear me! She'll definitely kick me out."
+          - This is the perfect hiding spot! I can't lose it!
+          - Nobody will think to look into someone else's house, I'm genius!
+          - I am sure to win, so please dont let Sam know...
           end: -1
 
 quest:
