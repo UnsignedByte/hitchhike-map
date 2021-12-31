@@ -15,6 +15,8 @@ execute as @s[tag=npc-hurm] at @s run function generated:npc/hurm/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-cashier] at @s run function generated:npc/cashier/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-clothescashier] at @s run function generated:npc/clothescashier/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-cameron] at @s run function generated:npc/cameron/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-muller] at @s run function generated:npc/muller/tick

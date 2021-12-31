@@ -729,6 +729,18 @@ npc:
               storage: hitchhike:safeway
               interpret: true
           cond: 5
+    clothescashier:
+      name: Jean Skinne
+      position: 984.5 64 -168.5
+      rotation: 0 0
+      colour: 0x2387d9
+      villager:
+        type: swamp
+        profession: librarian
+      dialogue:
+        - messages:
+          - Welcome! Looking for fashionable outfits?
+          - Feel free to try on clothes in the changing rooms to your right!
     cameron:
       name: Cameron "Cam" Au-Flauge
       position: 944.3 96.8 17.3

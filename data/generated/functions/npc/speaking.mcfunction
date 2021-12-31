@@ -15,6 +15,8 @@ tp @s[tag=npc-hurm] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-hurm, limit
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-cashier] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cashier, limit=1]
 # While in a conversation, make eye contact with the player.
+tp @s[tag=npc-clothescashier] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-clothescashier, limit=1]
+# While in a conversation, make eye contact with the player.
 tp @s[tag=npc-cameron] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cameron, limit=1]
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-muller] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-muller, limit=1]

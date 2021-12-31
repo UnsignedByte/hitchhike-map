@@ -2975,4 +2975,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   })();
 
   schedule('effect give @e[tag=npc-samsung] minecraft:blindness 10 0 false', 100, functions)
+
+  schedule([
+    '#> Teleport out softlocked items',
+    'tp @e[type=item,x=891,y=64,z=-153,dx=0,dy=1,dz=0] 891 65 -154'
+  ], 20, functions)
 }
