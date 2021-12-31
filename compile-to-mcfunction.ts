@@ -2974,5 +2974,5 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     })
   })();
 
-  schedule('effect give @e[tag=npc-samsung] minecraft:blindness 1000000 0 false', 20, functions)
+  schedule('effect give @e[tag=npc-samsung] minecraft:blindness 10 0 false', 100, functions)
 }
