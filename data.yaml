@@ -967,7 +967,43 @@ npc:
           - And nobody's really found me much yet, so I'd say I chose pretty well.
           - You better not go peeping about this to anybody else though.
           end: -1
-
+    giffy:
+      name: Giffy Hapsteen
+      position: 864.5 70 3.5
+      rotation: 27 5
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2RlZGQ2ZTQ2ZTlhOGY1NDViNmZhZjFhZGQxYjE2YjJjNjNhNTgwNDMyYmM2ZDZlNmMwZDJiM2M2ZjI5NGE1In19fQ==
+      colour: 0x86943a
+      villager:
+        type: jungle
+        profession: mason
+        level: 2
+      dialogue:
+        - messages:
+          - Heheh... Don't mind me, I'm just busy admiring my own genius.
+          - No one will ever expect that I, a fully-grown adult man, is hiding in the high-school student restroom!
+          - What an ingenious plan...
+          - Anybody who searches in here must be real sicko to go into a children's bathroom.
+          end: -1
+    samsung:
+      name: Samantha Sung
+      position: 1059.3 65 0.5
+      rotation: 90 -15
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTdjYzY2MTViYjRjODMxMWZjZDU3Mzk0NWZiNTQwNWI5YWZjYjBlYjU3YTgxY2ZhZTMxOGZlMjQwYWY2ZTVlOCJ9fX0=
+      villager:
+        type: taiga
+        profession: cleric
+        level: 1
+      dialogue:
+        - messages:
+          - Ah, I thought I heard someone come in.
+          - message: 
+            - text: "Don't mind me, I was just admiring the "
+            - text: "Deep Blacks™"
+              bold: true
+              italic: true
+            - text: ' feature of my 230" Class 8k QLED Samsung Smart TV.'
+          - It's so dark I couldn't even distinguish it from reality.
+          end: -1
 
 quest:
   visitfriend: # visit friend's house

@@ -4088,6 +4088,10 @@ tag @a remove victim-of-dialogue-by-birthdayboy
 
 tag @a remove victim-of-dialogue-by-poolgoer
 
+tag @a remove victim-of-dialogue-by-giffy
+
+tag @a remove victim-of-dialogue-by-samsung
+
 tag @a remove victim-of-dialogue-by-__apple
 
 tag @a remove victim-of-dialogue-by-__melon_slice

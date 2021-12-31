@@ -33,6 +33,10 @@ execute as @s[tag=npc-birthdayboy] at @s run function generated:npc/birthdayboy/
 # Start a conversation if it was selected
 execute as @s[tag=npc-poolgoer] at @s run function generated:npc/poolgoer/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-giffy] at @s run function generated:npc/giffy/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-samsung] at @s run function generated:npc/samsung/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-__apple] at @s run function generated:npc/__apple/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-__melon_slice] at @s run function generated:npc/__melon_slice/tick

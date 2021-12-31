@@ -21,6 +21,8 @@ schedule clear generated:scheduled/s-12
 function generated:scheduled/s-12
 schedule clear generated:scheduled/s-3
 function generated:scheduled/s-3
+schedule clear generated:scheduled/s-19999999
+function generated:scheduled/s-19999999
 # Kill all existing NPCs.
 kill @e[tag=npc]
 
@@ -636,6 +638,14 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for poolgoer.
 summon minecraft:villager 880.50 76 30.70 {Rotation: [-180f, -20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-poolgoer"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTIyNWNjNDBmNWRjZTlkNjdkMTIxNzUxYmMyOTIxNWRjODljZDRjMjJlNjEyMjk3MWVmNzg0NTFmODQyMjQyZSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:weaponsmith", level: 2}, Offers: {}, CustomName: '{"text":"Buck Crady","color":"#9c231a","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for giffy.
+summon minecraft:villager 864.50 70 3.50 {Rotation: [27f, 5f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-giffy"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2RlZGQ2ZTQ2ZTlhOGY1NDViNmZhZjFhZGQxYjE2YjJjNjNhNTgwNDMyYmM2ZDZlNmMwZDJiM2M2ZjI5NGE1In19fQ==" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:mason", level: 2}, Offers: {}, CustomName: '{"text":"Giffy Hapsteen","color":"#86943a","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for samsung.
+summon minecraft:villager 1059.30 65 0.50 {Rotation: [90f, -15f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-samsung"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTdjYzY2MTViYjRjODMxMWZjZDU3Mzk0NWZiNTQwNWI5YWZjYjBlYjU3YTgxY2ZhZTMxOGZlMjQwYWY2ZTVlOCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:cleric", level: 1}, Offers: {}, CustomName: '{"text":"Samantha Sung","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __apple.
