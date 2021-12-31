@@ -4094,6 +4094,8 @@ tag @a remove victim-of-dialogue-by-samsung
 
 tag @a remove victim-of-dialogue-by-lucky
 
+tag @a remove victim-of-dialogue-by-deagol
+
 tag @a remove victim-of-dialogue-by-__apple
 
 tag @a remove victim-of-dialogue-by-__melon_slice

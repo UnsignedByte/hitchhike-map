@@ -650,6 +650,10 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 1042.60 66.1875 -3.30 {Rotation: [-135f, 45f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-lucky"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjIyOTZlYTE2MGYxYjY2ZGYzMjk1MzdkNmQxNmFhZDE3OWZmZDk3MzdhOTJkMjk0YWVlNzU2NjJjMGQ2ZDQzMSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:nitwit", level: 99}, Offers: {}, CustomName: '{"text":"Lucky Goldstar","color":"#3db330","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for deagol.
+summon minecraft:villager 789.30 63.6 95.50 {Rotation: [90f, 10f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-deagol"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTlkNGNmYmUxZWRlMTM5MDJmMGVlMWExZWUyNWQwYTQwOGFiNTgzYWY0MTZjNTAxODkxZjkyN2RjYWU4N2I0ZiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Degol Dobby","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 # Summon the villager for __apple.
 summon minecraft:villager 905.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__apple", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fuji Apple","color":"#FF0000"},{"text":" (1.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0

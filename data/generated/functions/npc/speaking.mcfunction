@@ -39,6 +39,8 @@ tp @s[tag=npc-samsung] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-samsung,
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-lucky] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-lucky, limit=1]
 # While in a conversation, make eye contact with the player.
+tp @s[tag=npc-deagol] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-deagol, limit=1]
+# While in a conversation, make eye contact with the player.
 tp @s[tag=npc-__apple] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__apple, limit=1]
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-__melon_slice] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__melon_slice, limit=1]
