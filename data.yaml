@@ -632,7 +632,6 @@ npc:
       villager:
         type: snow
         profession: fisherman
-        level: 4
       dialogue:
         - messages:
           - Hey! Who goes there?! Someone trying to break in?
@@ -713,7 +712,6 @@ npc:
       villager:
         type: savanna
         profession: shepherd
-        level: 3
       dialogue:
         - messages:
           - "Hi, welcome to Safeway!"
@@ -765,7 +763,6 @@ npc:
       villager:
         type: plains
         profession: mason
-        level: 1
       dialogue:
         - messages:
           - Woah, hey there. What're you doing all the way up here? You don't look like a security guard.
@@ -887,7 +884,6 @@ npc:
       villager:
         type: desert
         profession: leatherworker
-        level: 1
       dialogue:
         - messages:
           - Oh, hi. Did I leave the door unlocked?
@@ -903,7 +899,6 @@ npc:
       villager:
         type: desert
         profession: butcher
-        level: 2
       dialogue:
         - messages:
           - What are you doing in my trailer.
@@ -918,7 +913,6 @@ npc:
       villager:
         type: plains
         profession: none
-        level: 1
       dialogue:
         - messages:
           - Oh my!
@@ -935,7 +929,6 @@ npc:
       villager:
         type: plains
         profession: nitwit
-        level: 1
       dialogue:
         - messages:
           - Oh hi! Are you here for my birthday party?
@@ -960,7 +953,6 @@ npc:
       villager:
         type: jungle
         profession: weaponsmith
-        level: 2
       dialogue:
         - messages: 
           - ...Yeah, so I'm also part of that whole "Hide and Seek" thing, y'know?
@@ -977,7 +969,6 @@ npc:
       villager:
         type: jungle
         profession: mason
-        level: 2
       dialogue:
         - messages:
           - Heheh... Don't mind me, I'm just busy admiring my own genius.
@@ -994,7 +985,6 @@ npc:
       villager:
         type: taiga
         profession: cleric
-        level: 1
       dialogue:
         - messages:
           - Ah, I thought I heard someone rummaging about.
@@ -1051,7 +1041,6 @@ npc:
       villager:
         type: desert
         profession: none
-        level: 1
       colour: 0xebe34b
       dialogue:
         - messages:
