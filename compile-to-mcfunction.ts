@@ -3066,7 +3066,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           ]
         ],
         unsoldrange: [977, 65, -169, 986, 65, -168],
-        paypos: [986, 65, -168],
+        paypos: [986.5, 65.0, -168.5],
         shoprange:[973, -172, 992, -153],
         lock: ["<",{"text":"Jean Skinne","color":"#2387d9","bold":true},"> You aren't leaving without paying. Don't make me tell you again."]
       }
@@ -3141,7 +3141,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           ),
           `tag ${unsolditems} add just-paid`,
           `tag ${unsolditems} remove paying`,
-          `tp @e[type=item,tag=just-paid] ${v.paypos[0]} ${v.paypos[1]} ${v.paypos[2]}`,
+          `tp @e[type=item,tag=just-paid] ${v.paypos[0].toFixed(4)} ${v.paypos[1].toFixed(4)} ${v.paypos[2].toFixed(4)}`,
           `execute as @e[type=item,tag=just-paid] run data modify entity @s Age set value 0`,
           `tag @e remove just-paid`
         ])
