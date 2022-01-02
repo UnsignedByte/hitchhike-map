@@ -724,7 +724,7 @@ npc:
               interpret: true
             command:
               - type: function
-                value: "generated:stores/safeway/pay"
+                value: "generated:story/stores/safeway/pay"
           - message:
             - nbt: success.safeway
               storage: hitchhike:stores
@@ -750,7 +750,7 @@ npc:
               interpret: true
             command:
               - type: function
-                value: "generated:stores/clothes/pay"
+                value: "generated:story/stores/clothes/pay"
           - message:
             - nbt: success.clothes
               storage: hitchhike:stores
