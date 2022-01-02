@@ -813,7 +813,29 @@ export const item = {
                 italic: true,
                 color: "dark_gray"
               })}]`,
-              color: 2378639
+              color: 0x244B8F
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        pbbrown: {
+          id: '"minecraft:leather_boots"',
+          tag: {
+            cost: 2999,
+            pos: `'978.75 64.5 -164.0'`,
+            rot: `'-90F,0F'`,
+            display: {
+              Name: `${rawJson({
+                text: "Plain Boots (Brown)",
+                color: "gray"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Affordable and Fashionable.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`,
+              color: 0x614515
             },
             Unbreakable:true,
             HideFlags:127
@@ -861,26 +883,31 @@ export const item = {
 
         if (sto === "clothes") {
           let armor = `[{},{},{},{}]`
+          let disabledslots = 4144959;
           switch (eval(v.id)) {
             case 'leather_boots': 
             case 'minecraft:leather_boots': 
               armor = `[${toSnbt(Object.assign({Count:'1b'}, store.unsold[sto][k]))},{},{},{}]`;
+              disabledslots = 4013373;
               break;
             case "leather_leggings":
             case "minecraft:leather_leggings":
               armor = `[{},${toSnbt(Object.assign({Count:'1b'}, store.unsold[sto][k]))},{},{}]`;
+              disabledslots = 3881787;
               break;
             case "leather_chestplate":
             case "minecraft:leather_chestplate":
               armor = `[{},{},${toSnbt(Object.assign({Count:'1b'}, store.unsold[sto][k]))},{}]`;
+              disabledslots = 3618615;
               break;
             case "leather_helmet": 
             case "minecraft:leather_helmet": 
               armor = `[{},{},{},${toSnbt(Object.assign({Count:'1b'}, store.unsold[sto][k]))}]`;
+              disabledslots = 3092271;
               break;
           }
 
-          store.commands.push(`summon armor_stand ${eval(v.tag.pos)} {NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${eval(v.tag.rot)}],ArmorItems:${armor}}`)
+          store.commands.push(`summon armor_stand ${eval(v.tag.pos)} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${eval(v.tag.rot)}],ArmorItems:${armor}}`)
         } else {
           store.npc[`__${sto}_${k}`] = npcSchema.parse({
             name: rawJson([
