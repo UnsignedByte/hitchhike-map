@@ -823,7 +823,7 @@ export const item = {
           id: '"minecraft:leather_boots"',
           tag: {
             cost: 2999,
-            pos: `'978.75 64.5 -164.0'`,
+            pos: `'978.75 65.5 -163.0'`,
             rot: `'-90F,0F'`,
             display: {
               Name: `${rawJson({
@@ -835,7 +835,29 @@ export const item = {
                 italic: true,
                 color: "dark_gray"
               })}]`,
-              color: 0x614515
+              color: 0x70511b
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        pbgray: {
+          id: '"minecraft:leather_boots"',
+          tag: {
+            cost: 2999,
+            pos: `'977.25 64.5 -163.0'`,
+            rot: `'90F,0F'`,
+            display: {
+              Name: `${rawJson({
+                text: "Plain Boots (Gray)",
+                color: "gray"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Affordable and Fashionable.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`,
+              color: 0x212121
             },
             Unbreakable:true,
             HideFlags:127
