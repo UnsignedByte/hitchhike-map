@@ -862,6 +862,29 @@ export const item = {
             Unbreakable:true,
             HideFlags:127
           }
+        },
+        hikingboots: {
+          id: '"minecraft:leather_boots"',
+          tag: {
+            cost: 10999,
+            pos: ['977.25 65.5 -163.0', '977.25 65.5 -163.8333', '977.25 65.5 -164.6666', '977.25 65.5 -165.5'],
+            rot: `'90F,0F'`,
+            display: {
+              Name: `${rawJson({
+                text: "Leather Hiking Boots",
+                color: "#9c6b14"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Built to last.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`,
+              color: 0xc2a36b
+            },
+            Enchantments:`[{id:"minecraft:feather_falling",lvl:2s},{id:"minecraft:depth_strider",lvl:2s}]`,
+            Unbreakable:true,
+            HideFlags:127
+          }
         }
       }
     }
