@@ -1,2 +1,4 @@
-scoreboard players set paymentcount stores 0
-execute as @e[tag=paying] run function generated:stores/_countpaysingle
+execute store result score _count stores run data get entity @s Item.Count
+execute store result score _cost stores run data get entity @s Item.tag.cost
+scoreboard players operation _count stores *= _cost stores
+scoreboard players operation paymentcount stores += _count stores

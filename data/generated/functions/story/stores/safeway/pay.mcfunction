@@ -1,6 +1,7 @@
 #prevent player pickup for the next second
 execute as @e[tag=paying,type=item,x=891,y=65,z=-154,dx=0,dy=0,dz=0] run data modify entity @s PickupDelay set value 20
 # count payment and attempt to pay
+scoreboard players set paymentcount stores 0
 execute as @e[tag=paying,type=item,x=891,y=65,z=-154,dx=0,dy=0,dz=0] run function generated:story/stores/countpay
 scoreboard players operation dec change = paymentcount stores
 execute positioned 893 64.5 -153.5 run function generated:change/decrement

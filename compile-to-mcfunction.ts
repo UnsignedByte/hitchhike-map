@@ -2983,11 +2983,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
   (()=>{
     addfunc(`stores/countpay`, [
-      `scoreboard players set paymentcount stores 0`,
-      `execute as @e[tag=paying] run function generated:stores/_countpaysingle`
-    ])
-
-    addfunc(`stores/_countpaysingle`, [
       `execute store result score _count stores run data get entity @s Item.Count`,
       `execute store result score _cost stores run data get entity @s Item.tag.cost`,
       `scoreboard players operation _count stores *= _cost stores`,
@@ -3063,6 +3058,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `#prevent player pickup for the next second`,
           `execute as ${unsolditems} run data modify entity @s PickupDelay set value 20`,
           `# count payment and attempt to pay`,
+          `scoreboard players set paymentcount stores 0`,
           `execute as ${unsolditems} run function generated:story/stores/countpay`,
           `scoreboard players operation dec change = paymentcount stores`,
           `execute positioned ${v.paypos[0]} ${v.paypos[1]} ${v.paypos[2]} run function generated:change/decrement`,
