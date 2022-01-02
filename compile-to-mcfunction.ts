@@ -3110,8 +3110,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
         addfunc(`stores/${k}/lock`, [
           `execute as @s[x=${v.shoprange[0]-1},dx=-1000000] at @s run tp @s ${(v.shoprange[0]+1.3).toFixed(4)} ~ ~`,
-          `execute as @s[x=${v.shoprange[1]+1},dx=1000000] at @s run tp @s ${(v.shoprange[1]-0.3).toFixed(4)} ~ ~`,
-          `execute as @s[z=${v.shoprange[2]-1},dz=-1000000] at @s run tp @s ~ ~ ${(v.shoprange[2]+1.3).toFixed(4)}`,
+          `execute as @s[x=${v.shoprange[2]+1},dx=1000000] at @s run tp @s ${(v.shoprange[2]-0.3).toFixed(4)} ~ ~`,
+          `execute as @s[z=${v.shoprange[1]-1},dz=-1000000] at @s run tp @s ~ ~ ${(v.shoprange[1]+1.3).toFixed(4)}`,
           `execute as @s[z=${v.shoprange[3]+1},dz=1000000] at @s run tp @s ~ ~ ${(v.shoprange[3]-0.3).toFixed(4)}`,
           `scoreboard players operation @s store_lockT -= @s playtime`,
           `execute unless score @s store_lockT matches 1.. run tellraw @s ${JSON.stringify(v.lock)}`,
