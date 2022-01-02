@@ -801,7 +801,7 @@ export const item = {
           id: '"minecraft:leather_boots"',
           tag: {
             cost: 2999,
-            pos: `'978.75 64.5 -163.0'`,
+            pos: ['978.75 64.5 -163.0', '978.75 64.5 -163.8333', '978.75 64.5 -164.6666', '978.75 64.5 -165.5'],
             rot: `'-90F,0F'`,
             display: {
               Name: `${rawJson({
@@ -823,7 +823,7 @@ export const item = {
           id: '"minecraft:leather_boots"',
           tag: {
             cost: 2999,
-            pos: `'978.75 65.5 -163.0'`,
+            pos: ['978.75 65.5 -163.0', '978.75 65.5 -163.8333', '978.75 65.5 -164.6666', '978.75 65.5 -165.5'],
             rot: `'-90F,0F'`,
             display: {
               Name: `${rawJson({
@@ -835,7 +835,7 @@ export const item = {
                 italic: true,
                 color: "dark_gray"
               })}]`,
-              color: 0x70511b
+              color: 0x755317
             },
             Unbreakable:true,
             HideFlags:127
@@ -845,7 +845,7 @@ export const item = {
           id: '"minecraft:leather_boots"',
           tag: {
             cost: 2999,
-            pos: `'977.25 64.5 -163.0'`,
+            pos: ['977.25 64.5 -163.0', '977.25 64.5 -163.8333', '977.25 64.5 -164.6666', '977.25 64.5 -165.5'],
             rot: `'90F,0F'`,
             display: {
               Name: `${rawJson({
@@ -890,6 +890,7 @@ export const item = {
           color: "dark_gray"
         })}]`))
         store.unsold[sto][k].tag.sold = false;
+        delete store.unsold[sto][k].tag.pos;
 
         if (sto !== "clothes") {
           store.unsold[sto][k].id = '"minecraft:paper"';
@@ -902,6 +903,7 @@ export const item = {
           color: "dark_purple"
         })}]`))
         store.sold[sto][k].tag.sold = true;
+        delete store.sold[sto][k].tag.pos;
 
         if (sto === "clothes") {
           let armor = `[{},{},{},{}]`
@@ -929,7 +931,9 @@ export const item = {
               break;
           }
 
-          store.commands.push(`summon armor_stand ${eval(v.tag.pos)} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${eval(v.tag.rot)}],ArmorItems:${armor}}`)
+          store.commands.push(v.tag.pos.map((x: any)=>
+            `summon armor_stand ${x} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${eval(v.tag.rot)}],ArmorItems:${armor}}`
+          ))
         } else {
           store.npc[`__${sto}_${k}`] = npcSchema.parse({
             name: rawJson([
