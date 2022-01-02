@@ -3139,7 +3139,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `# reset status if no items to buy`,
           `scoreboard players set @e[tag=npc-${k}] dialogue-status 0`,
           `# set status of ${k} to paying`,
-          `execute if entity @e[tag=paying] run scoreboard players set @e[tag=npc-${k}] dialogue-status 5`,
+          `execute if entity ${unsolditems} run scoreboard players set @e[tag=npc-${k}] dialogue-status 5`,
         ]
       })
     )

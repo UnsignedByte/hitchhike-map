@@ -10,4 +10,4 @@ execute as @e[tag=paying,type=item,x=891,y=65,z=891,dx=0,dy=0,dz=0] run data mod
 # reset status if no items to buy
 scoreboard players set @e[tag=npc-safeway] dialogue-status 0
 # set status of safeway to paying
-execute if entity @e[tag=paying] run scoreboard players set @e[tag=npc-safeway] dialogue-status 5
+execute if entity @e[tag=paying,type=item,x=891,y=65,z=891,dx=0,dy=0,dz=0] run scoreboard players set @e[tag=npc-safeway] dialogue-status 5
