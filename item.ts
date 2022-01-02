@@ -889,9 +889,9 @@ export const item = {
         baseballcap: {
           id: '"minecraft:leather_helmet"',
           tag: {
-            cost: 10999,
+            cost: 1199,
             pos: ['978.76 62.9 -155.5', '978.76 62.9 -156.5', '978.76 62.9 -157.5'],
-            rot: [-90,15],
+            rot: [-90,18],
             display: {
               Name: `${rawJson({
                 text: "Baseball Cap",
@@ -911,7 +911,7 @@ export const item = {
         hardhat: {
           id: '"minecraft:leather_helmet"',
           tag: {
-            cost: 10999,
+            cost: 2799,
             pos: ['978.75 63.9 -155.5', '978.75 63.9 -156.5', '978.75 63.9 -157.5'],
             rot: [-90,15],
             display: {
