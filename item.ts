@@ -943,16 +943,16 @@ export const item = {
                 color: "#f06f0c"
               })}`,
               Lore:`[${rawJson({
-                text: `For the `,
+                text: `For the`,
                 italic: true,
                 color: "#51534A"
               })},${rawJson({
-                text: `LEGO Prisoner 50380 in Medium Orange Uniform Minifigure`,
+                text: `LEGO Prisoner 50380 in Medium Orange Uniform`,
                 italic: true,
                 bold: true,
-                color: "51534A"
+                color: "#51534A"
               })},${rawJson({
-                text: ` in you.`,
+                text: `in you.`,
                 italic: true,
                 color: "#51534A"
               })},]`,
