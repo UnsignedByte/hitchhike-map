@@ -837,6 +837,8 @@ export const item = {
         if (!('display' in v.tag)) {
           Object.assign(v.tag, {display:{Lore:`[]`}});
         }
+        v.tag.store = `"${sto}"`
+
         store.unsold[sto][k] = JSON.parse(JSON.stringify(v));
         store.unsold[sto][k].tag.display.Lore = JSON.stringify(eval(`[...${store.unsold[sto][k].tag.display.Lore}, ${rawJson({text: ""})}, ${rawJson({
           text: `Unsold (${toCost(v.tag.cost)})`,
