@@ -381,44 +381,6 @@ export async function init (
     `scoreboard players operation count change += @s change-count-tmp`
   ]
 
-  functions[`safeway/countpay`] = [
-    `scoreboard players set paymentcount safeway 0`,
-    `execute as @e[tag=paying] run function generated:safeway/_countpaysingle`
-  ]
-
-  functions[`safeway/_countpaysingle`] = [
-    `execute store result score _count safeway run data get entity @s Item.Count`,
-    `execute store result score _cost safeway run data get entity @s Item.tag.cost`,
-    `scoreboard players operation _count safeway *= _cost safeway`,
-    `scoreboard players operation paymentcount safeway += _count safeway`
-  ]
-
-  functions[`safeway/sell`] = [
-    Object.keys(item.store.unsold).map(k=>
-      `execute as @e[tag=paying,nbt={Item:${toSnbt(item.store.unsold[k])}}] run data merge entity @s {Item:${toSnbt(item.store.sold[k])}}`
-    ),
-    `tp @e[tag=paying] 893.0 64.5 -153.5`,
-    `execute as @e[tag=paying] run data modify entity @s Age set value 0`,
-    `tag @e remove paying`
-  ]
-
-  functions['safeway/randreturnmessage'] = [
-    ((msgs)=>[
-      `scoreboard players set _rngm vars ${msgs.length}`,
-      `function generated:rng/rng`,
-      msgs.map((x, i)=>`execute if score rng vars matches ${i} run data modify storage hitchhike:safeway welcome_message set value ${rawJson(x)}`)
-    ])([
-      "Let me count up your items real quick...",
-      "Hope you're having a great day!",
-      "Thanks for shopping at safeway!",
-      "Hope you found what you wanted!",
-      "Hi, how's your day going?",
-      "<Insert phatic phrase>",
-      "Enjoyed your time shopping here?",
-      "Nice weather today, huh?"
-    ])
-  ]
-
   // bitwise operators
   functions[`bitwise/and`] = [
     'scoreboard players operation _l bitwise = l bitwise',

@@ -4068,9 +4068,9 @@ tag @a remove victim-of-dialogue-by-simon
 
 tag @a remove victim-of-dialogue-by-hurm
 
-tag @a remove victim-of-dialogue-by-cashier
+tag @a remove victim-of-dialogue-by-safeway
 
-tag @a remove victim-of-dialogue-by-clothescashier
+tag @a remove victim-of-dialogue-by-clothes
 
 tag @a remove victim-of-dialogue-by-cameron
 
@@ -4100,55 +4100,55 @@ tag @a remove victim-of-dialogue-by-deagol
 
 tag @a remove victim-of-dialogue-by-eichhornchen
 
-tag @a remove victim-of-dialogue-by-__apple
+tag @a remove victim-of-dialogue-by-__safeway_apple
 
-tag @a remove victim-of-dialogue-by-__melon_slice
+tag @a remove victim-of-dialogue-by-__safeway_melon_slice
 
-tag @a remove victim-of-dialogue-by-__glow_berries
+tag @a remove victim-of-dialogue-by-__safeway_glow_berries
 
-tag @a remove victim-of-dialogue-by-__milk
+tag @a remove victim-of-dialogue-by-__safeway_milk
 
-tag @a remove victim-of-dialogue-by-__egg
+tag @a remove victim-of-dialogue-by-__safeway_egg
 
-tag @a remove victim-of-dialogue-by-__pickle
+tag @a remove victim-of-dialogue-by-__safeway_pickle
 
-tag @a remove victim-of-dialogue-by-__bamboo
+tag @a remove victim-of-dialogue-by-__safeway_bamboo
 
-tag @a remove victim-of-dialogue-by-__kelp
+tag @a remove victim-of-dialogue-by-__safeway_kelp
 
-tag @a remove victim-of-dialogue-by-__cane
+tag @a remove victim-of-dialogue-by-__safeway_cane
 
-tag @a remove victim-of-dialogue-by-__mysteryshrooms
+tag @a remove victim-of-dialogue-by-__safeway_mysteryshrooms
 
-tag @a remove victim-of-dialogue-by-__shiitake
+tag @a remove victim-of-dialogue-by-__safeway_shiitake
 
-tag @a remove victim-of-dialogue-by-__beet
+tag @a remove victim-of-dialogue-by-__safeway_beet
 
-tag @a remove victim-of-dialogue-by-__potato
+tag @a remove victim-of-dialogue-by-__safeway_potato
 
-tag @a remove victim-of-dialogue-by-__carrot
+tag @a remove victim-of-dialogue-by-__safeway_carrot
 
-tag @a remove victim-of-dialogue-by-__berries
+tag @a remove victim-of-dialogue-by-__safeway_berries
 
-tag @a remove victim-of-dialogue-by-__rawbeef
+tag @a remove victim-of-dialogue-by-__safeway_rawbeef
 
-tag @a remove victim-of-dialogue-by-__rawmutton
+tag @a remove victim-of-dialogue-by-__safeway_rawmutton
 
-tag @a remove victim-of-dialogue-by-__porkchop
+tag @a remove victim-of-dialogue-by-__safeway_porkchop
 
-tag @a remove victim-of-dialogue-by-__rabbit
+tag @a remove victim-of-dialogue-by-__safeway_rabbit
 
-tag @a remove victim-of-dialogue-by-__chicken
+tag @a remove victim-of-dialogue-by-__safeway_chicken
 
-tag @a remove victim-of-dialogue-by-__pufferfish
+tag @a remove victim-of-dialogue-by-__safeway_pufferfish
 
-tag @a remove victim-of-dialogue-by-__clownfish
+tag @a remove victim-of-dialogue-by-__safeway_clownfish
 
-tag @a remove victim-of-dialogue-by-__salmon
+tag @a remove victim-of-dialogue-by-__safeway_salmon
 
-tag @a remove victim-of-dialogue-by-__monster
+tag @a remove victim-of-dialogue-by-__safeway_monster
 
-tag @a remove victim-of-dialogue-by-__lacroix
+tag @a remove victim-of-dialogue-by-__safeway_lacroix
 
 
 

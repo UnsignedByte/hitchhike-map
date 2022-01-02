@@ -10,9 +10,6 @@ gamerule announceAdvancements false
 # Forceload 0 0 chunks bc useful
 forceload add -1 -1 1 1
 
-#> SAFEWAY STUFF
-function hitchhike:safeway/load
-
 #> STORY STUFF
 function hitchhike:story/load
 

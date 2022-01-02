@@ -854,8 +854,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     genseq('simon/drink', {
       cmds: [
-        `data modify entity @e[tag=npc-simon,limit=1] HandItems[0] set value ${toSnbt(Object.assign({Count:'1b'}, item.store.sold.lacroix))}`,
-        `execute at @e[tag=npc-simon,limit=1] run clear @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},sort=nearest,limit=1] ${toGive(item.store.sold.lacroix)}`,
+        `data modify entity @e[tag=npc-simon,limit=1] HandItems[0] set value ${toSnbt(Object.assign({Count:'1b'}, item.store.sold.safeway.lacroix))}`,
+        `execute at @e[tag=npc-simon,limit=1] run clear @a[nbt={Inventory:[${toSnbt(item.store.sold.safeway.lacroix)}]},sort=nearest,limit=1] ${toGive(item.store.sold.safeway.lacroix)}`,
         `execute at @e[tag=npc-simon,limit=1] run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1`,
         `tag @e[tag=npc-simon,limit=1] add npc-unface`,
         `execute as @e[tag=npc-simon,limit=1] at @s run tp @s ~ ~ ~ 75 20`
@@ -2979,5 +2979,169 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   schedule([
     '#> Teleport out softlocked items',
     'tp @e[type=item,x=891,y=64,z=-153,dx=0,dy=1,dz=0] 891 65 -154'
-  ], 20, functions)
+  ], 20, functions);
+
+  (()=>{
+    addfunc(`stores/countpay`, [
+      `scoreboard players set paymentcount stores 0`,
+      `execute as @e[tag=paying] run function generated:stores/_countpaysingle`
+    ])
+
+    addfunc(`stores/_countpaysingle`, [
+      `execute store result score _count stores run data get entity @s Item.Count`,
+      `execute store result score _cost stores run data get entity @s Item.tag.cost`,
+      `scoreboard players operation _count stores *= _cost stores`,
+      `scoreboard players operation paymentcount stores += _count stores`
+    ])
+
+    const stores = {
+      safeway: {
+        welcome: "Hey, I hope you had a great time shopping!",
+        return: [
+          "Let me count up your items real quick...",
+          "Hope you're having a great day!",
+          "Thanks for shopping at safeway!",
+          "Hope you found what you wanted!",
+          "Hi, how's your day going?",
+          "Enjoyed your time shopping here?",
+          "Nice weather today, huh?"
+        ],
+        success: [
+          "Thank you for shopping at safeway! Your change is ",
+          {"score":{"name":"_B"}},
+          ".",
+          {"score":{"name":"_b"}},
+          " Bov."
+        ],
+        failmessages: [
+          [
+            "Your charge is ",
+            {"score":{"name":"_B"}},
+            ".",
+            {"score":{"name":"_b"}},
+            "Bov. Please place your payment in the space to your left!"
+          ],
+          [
+            "It seems you\'re ",
+            {"score":{"name":"_B"}},
+            ".",
+            {"score":{"name":"_b"}},
+            "Bov short. Don\'t worry, addition is hard. Just place the rest of your money on the counter and I can do the math for you!"
+          ]
+        ],
+        unsoldrange: [891, 65, -154, 891, 65, -154],
+        paypos: [893.0, 64.5, -153.5],
+        shoprange:[881, -169, 917, -151],
+        lock: ["<",{"text":"Paoule Enrique","color":"#eb7060","bold":true},"> Hey! You shouldn't leave without paying."]
+      }
+    }
+
+    addfunc(`stores/reset`, [
+      `kill @e[type=armor_stand,tag=armorstand-clothes-display]`,
+      item.store.commands
+    ])
+
+    addfunc(`stores/tick`, 
+      Object.entries(stores).map(([k, v], i) => {
+        const parseScores = (obj: Array<any>): any => {
+          return obj.map((x: any)=> {
+            if (typeof x !== 'string' && x.score) {
+              return {"score":{
+                "name":`${i}${x.score.name}`,
+                "objective":"stores"
+              }}
+            }
+
+            return x
+          })
+        }
+
+        const payrangesel = `x=${v.unsoldrange[0]},y=${v.unsoldrange[1]},z=${v.unsoldrange[0]},dx=${v.unsoldrange[3]-v.unsoldrange[0]},dy=${v.unsoldrange[4]-v.unsoldrange[1]},dz=${v.unsoldrange[5]-v.unsoldrange[2]}`;
+        const unsolditems = `@e[tag=paying,type=item,${payrangesel}]`;
+
+        addfunc(`stores/${k}/pay`, [
+          `#prevent player pickup for the next second`,
+          `execute as ${unsolditems} run data modify entity @s PickupDelay set value 20`,
+          `# count payment and attempt to pay`,
+          `execute as ${unsolditems} run function generated:stores/countpay`,
+          `scoreboard players operation dec change = paymentcount stores`,
+          `execute positioned ${v.paypos[0]} ${v.paypos[1]} ${v.paypos[2]} run function generated:change/decrement`,
+          `# handle fail and success of payment`,
+          `execute if score dec-success change matches 0 run function generated:story/stores/${k}/_payfail`,
+          `execute if score dec-success change matches 1 run function generated:story/stores/${k}/_paysuccess`,
+          `# make bov counts readable for later serialization`,
+          `scoreboard players operation ${i}_B stores = ${i}_b stores`,
+          `scoreboard players operation ${i}_B stores /= 100 const`,
+          `scoreboard players operation ${i}_b stores %= 100 const`
+        ])
+
+        addfunc(`stores/${k}/_payfail`, [
+          `scoreboard players operation ${i}_b stores = paymentcount stores`,
+          `execute if score count change matches 0 run data modify storage hitchhike:stores success.${k} set value ${rawJson(v.failmessages[0])}`,
+          `execute if score count change matches 1.. run data modify storage hitchhike:stores success.${k} set value ${rawJson(v.failmessages[1])}`,
+          `function generated:story/stores/${k}/randreturnmessage`
+        ])
+
+        addfunc(`stores/${k}/_paysuccess`, [
+          `scoreboard players operation ${i}_b stores = count change`,
+          `data modify storage hitchhike:stores success.${k} set value ${rawJson(v.success)}`,
+          `# sell items.`,
+          `function generated:story/stores/${k}/sell`,
+          `# Reset welcome message`,
+          `data modify storage hitchhike:stores welcome.${k} set value ${rawJson(v.welcome)}`
+        ])
+
+        addfunc(`stores/${k}/randreturnmessage`, [
+          `scoreboard players set _rngm vars ${v.return.length}`,
+          `function generated:rng/rng`,
+          v.return.map((x, id)=>`execute if score rng vars matches ${id} run data modify storage hitchhike:stores welcome.${k} set value ${rawJson(x)}`)
+        ])
+
+        addfunc(`stores/${k}/sell`, [
+          Object.keys(item.store.unsold[k]).map(it=>
+            `execute as @e[tag=paying,nbt={Item:${toSnbt(item.store.unsold[k][it])}}] run data merge entity @s {Item:${toSnbt(item.store.sold[k][it])}}`
+          ),
+          `tag ${unsolditems} add just-paid`,
+          `tag ${unsolditems} remove paying`,
+          `tp @e[type=item,tag=just-paid] ${v.paypos[0]} ${v.paypos[1]} ${v.paypos[2]}`,
+          `execute as @e[type=item,tag=just-paid] run data modify entity @s Age set value 0`,
+          `tag @e remove just-paid`
+        ])
+
+        addfunc(`stores/${k}/lock`, [
+          `execute as @a[nbt={Inventory:[{tag:{store:"${k}",sold:0b}}]}] unless entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run tag @s add shop-escapee`,
+          `execute as @a[tag=shop-escapee] at @s run function generated:story/stores/${k}/_lock`,
+          `tag @a remove shop-escapee`
+        ])
+
+        addfunc(`stores/${k}/_lock`, [
+          `execute as @s[x=${v.shoprange[0]-1},dx=-1000000] at @s run tp @s ${(v.shoprange[0]+1.3).toFixed(4)} ~ ~`,
+          `execute as @s[x=${v.shoprange[1]+1},dx=1000000] at @s run tp @s ${(v.shoprange[1]-0.3).toFixed(4)} ~ ~`,
+          `execute as @s[z=${v.shoprange[2]-1},dz=-1000000] at @s run tp @s ~ ~ ${(v.shoprange[2]+1.3).toFixed(4)}`,
+          `execute as @s[z=${v.shoprange[3]+1},dz=1000000] at @s run tp @s ~ ~ ${(v.shoprange[3]-0.3).toFixed(4)}`,
+          `scoreboard players operation @s store_lockT -= @s playtime`,
+          `execute unless score @s store_lockT matches 1.. run tellraw @s ${JSON.stringify(v.lock)}`,
+          `# set cooldown to some number of ticks`,
+          `execute unless score @s store_lockT matches 1.. run scoreboard players set @s store_lockT 20`,
+          `scoreboard players operation @s store_lockT += @s playtime`
+        ])
+
+        return [
+          ``,
+          `#> store ${k}`,
+          `function generated:stores/${k}/lock`,
+          `# Kill Thrown Items`,
+          `execute as @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}}] unless entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run kill @s`,
+          `execute as @e[type=item,tag=!paying,nbt={Item:{store:"${k}",tag:{sold:0b}},Age:0s},x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run data modify entity @s Age set value 5800`,
+          `tag @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}}] remove paying`,
+          `tag @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}},${payrangesel}] add paying`,
+          `execute as ${unsolditems} run data modify entity @s Age set value -32768`,
+          `# reset status if no items to buy`,
+          `scoreboard players set @e[tag=npc-${k}] dialogue-status 0`,
+          `# set status of ${k} to paying`,
+          `execute if entity @e[tag=paying] run scoreboard players set @e[tag=npc-${k}] dialogue-status 5`,
+        ]
+      })
+    )
+  })();
 }

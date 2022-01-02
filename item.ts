@@ -60,7 +60,7 @@ export const item = {
     tag: {
       display: {
         Name: rawJson({
-          text: "Cam's Spyglass",
+          text: "Spyglass",
           color: "gold",
           bold: true
         }),
@@ -257,598 +257,652 @@ export const item = {
     }
   },
   store: (() => {
-    const items = {
-      apple: {
-        id: '"minecraft:apple"',
-        tag: {
-          cost: 199,
-          pos: `'905.5 64 -152.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Fuji Apple",
-              color: "#FF0000"
-            })}`,
-            Lore:`[${rawJson({
-              text: `A Juicy Fuji Apple`,
-              italic: true,
-              color: "red"
-            })}]`
+    const items: Record<string, Record<string, any>> = {
+      safeway: {
+        apple: {
+          id: '"minecraft:apple"',
+          tag: {
+            cost: 199,
+            pos: `'905.5 64 -152.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Fuji Apple",
+                color: "#FF0000"
+              })}`,
+              Lore:`[${rawJson({
+                text: `A Juicy Fuji Apple`,
+                italic: true,
+                color: "red"
+              })}]`
+            }
+          }
+        },
+        melon_slice: {
+          id: '"minecraft:melon_slice"',
+          tag:{
+            cost: 249,
+            pos: `'909.5 64 -152.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Watermelon",
+                color: "#cc3968"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Ingredients:`,
+                bold: true,
+                underlined: true,
+                italic: false,
+                color: "gray"
+              })},${rawJson({
+                text: `Powdered Melon`,
+                color: "dark_gray"
+              })},${rawJson({
+                text: `Water`,
+                color: "dark_gray"
+              })}]`
+            }
+          }
+        },
+        glow_berries: {
+          id: '"minecraft:glow_berries"',
+          tag:{
+            cost: 149,
+            pos: `'901.5 64 -152.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Rainier Cherry",
+                color: "#f2b91d"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Fresh from ?????`,
+                italic: true,
+                color: "gold"
+              })}]`
+            }
+          }
+        },
+        milk: {
+          id: '"minecraft:milk_bucket"',
+          tag:{
+            cost: 599,
+            pos: `'914 62.75 -152.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Whole Milk",
+                bold: false,
+                color: "#f5f3e6"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Got Milk?`,
+                italic: true,
+                color: "aqua"
+              })}, ${rawJson({
+                text: `Homogenized.`,
+                italic: true,
+                color: "gray"
+              })}]`
+            }
+          }
+        },
+        egg: {
+          id: '"minecraft:egg"',
+          tag:{
+            cost: 9,
+            pos: `'914 63.625 -152.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Egg",
+                bold: false,
+                color: "#f2e1aa"
+              })}`,
+              Lore:`[${rawJson({
+                text: `A Dollar a Dozen`,
+                italic: true,
+                color: "#d9ac59"
+              })}]`
+            }
+          }
+        },
+        pickle: {
+          id: '"minecraft:sea_pickle"',
+          tag:{
+            cost: 99,
+            pos: `'914 64.5 -152.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Dill Pickle",
+                bold: false,
+                color: "#538c19"
+              })}`,
+              Lore:`[${rawJson({
+                text: `pickle.dumps(obj)`,
+                italic: true,
+                color: "dark_green"
+              })}]`
+            }
+          }
+        },
+        bamboo: {
+          id: '"minecraft:bamboo"',
+          tag:{
+            cost: 119,
+            pos: `'915.5 62.75 -153.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Bamboo Shoots",
+                bold: false,
+                color: "#16ba2c"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Rich in fiber.`,
+                italic: true,
+                color: "#0d8c1e"
+              })}]`
+            }
+          }
+        },
+        kelp: {
+          id: '"minecraft:kelp"',
+          tag:{
+            cost: 119,
+            pos: `'915.5 63.625 -153.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Seaweed",
+                bold: false,
+                color: "#3bbd17"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Fresh and Undried`,
+                italic: true,
+                color: "#2fa315"
+              })}]`
+            }
+          }
+        },
+        cane: {
+          id: '"minecraft:sugar_cane"',
+          tag:{
+            cost: 89,
+            pos: `'915.5 64.5 -153.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Sugarcane",
+                bold: false,
+                color: "#009903"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Not candy,`,
+                italic: true,
+                color: "#d1261d"
+              })}, ${rawJson({
+                text: `sadly.`,
+                italic: true,
+                color: "#d1261d"
+              })}]`
+            }
+          }
+        },
+        mysteryshrooms: {
+          id: '"minecraft:red_mushroom"',
+          tag:{
+            cost: 349,
+            pos: `'915.5 62.75 -156.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Mystery Shrooms",
+                bold: false,
+                color: "#e64037"
+              })}`,
+              Lore:`[${rawJson({
+                text: `No Toads were harmed`,
+                italic: true,
+                color: "#f25e70"
+              })},${rawJson({
+                text: `in the making of`,
+                italic: true,
+                color: "#f25e70"
+              })},${rawJson({
+                text: `this shroom (probably).`,
+                italic: true,
+                color: "#f25e70"
+              })}]`
+            }
+          }
+        },
+        shiitake: {
+          id: '"minecraft:brown_mushroom"',
+          tag:{
+            cost: 174,
+            pos: `'915.5 63.625 -156.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Shiitake Mushrooms",
+                bold: false,
+                color: "#917250"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Tasty`,
+                italic: true,
+                color: "#826246"
+              })}]`
+            }
+          }
+        },
+        beet: {
+          id: '"minecraft:beetroot"',
+          tag:{
+            cost: 149,
+            pos: `'915.5 64.5 -156.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Beet",
+                bold: false,
+                color: "#7a1f3d"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Beet red`,
+                italic: true,
+                color: "#6c1b36"
+              })}, ${rawJson({
+                text: `:flushed:`,
+                italic: true,
+                color: "#6c1b36"
+              })}]`
+            }
+          }
+        },
+        potato: {
+          id: '"minecraft:potato"',
+          tag:{
+            cost: 124,
+            pos: `'915.5 63.625 -159.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Potato",
+                bold: false,
+                color: "#dbbb70"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Unbaked and Unabashed`,
+                italic: true,
+                color: "#a67429"
+              })}]`
+            }
+          }
+        },
+        carrot: {
+          id: '"minecraft:carrot"',
+          tag:{
+            cost: 124,
+            pos: `'915.5 63.625 -162'`,
+            display: {
+              Name: `${rawJson({
+                text: "Carrot",
+                bold: false,
+                color: "#e6671e"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Recommended by`,
+                italic: true,
+                color: "#e36f17"
+              })}, ${rawJson({
+                text: `Pastor Ssempa`,
+                italic: true,
+                color: "#e36f17"
+              })}]`
+            }
+          }
+        },
+        berries: {
+          id: '"minecraft:sweet_berries"',
+          tag:{
+            cost: 249,
+            pos: `'915.5 64.5 -160.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Strawberry",
+                bold: false,
+                color: "#db324f"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Berry Delicious™`,
+                italic: true,
+                color: "#d43d7c"
+              })}]`
+            }
+          }
+        },
+        rawbeef: {
+          id: '"minecraft:beef"',
+          tag:{
+            cost: 899,
+            pos: `'915.5 63.25 -165.25'`,
+            display: {
+              Name: `${rawJson({
+                text: "Raw Beef",
+                bold: false,
+                color: "#a8180d"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Basically Rare`,
+                italic: true,
+                color: "blue"
+              })}, ${rawJson({
+                text: `Steak...`,
+                italic: true,
+                color: "blue"
+              })}]`
+            }
+          }
+        },
+        rawmutton: {
+          id: '"minecraft:mutton"',
+          tag:{
+            cost: 699,
+            pos: `'915.5 64.5 -165.25'`,
+            display: {
+              Name: `${rawJson({
+                text: "Mutton",
+                bold: false,
+                color: "#a30b2c"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Wool not included.`,
+                italic: true,
+                color: "blue"
+              })}]`
+            }
+          }
+        },
+        porkchop: {
+          id: '"minecraft:porkchop"',
+          tag:{
+            cost: 799,
+            pos: `'914.25 63.25 -166.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Porkchops",
+                bold: false,
+                color: "#e36d6d"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Only 1 Peppa Pig was`,
+                italic: true,
+                color: "blue"
+              })}, ${rawJson({
+                text: `harmed in its creation.`,
+                italic: true,
+                color: "blue"
+              })}]`
+            }
+          }
+        },
+        rabbit: {
+          id: '"minecraft:rabbit"',
+          tag:{
+            cost: 749,
+            pos: `'914.25 64.5 -166.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Rabbit Meat",
+                bold: false,
+                color: "#d1816b"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Where's`,
+                italic: true,
+                color: "blue"
+              })}, ${rawJson({
+                text: `Big Chungus??`,
+                italic: true,
+                color: "blue"
+              })}]`
+            }
+          }
+        },
+        chicken: {
+          id: '"minecraft:chicken"',
+          tag:{
+            cost: 599,
+            pos: `'911.5 64.5 -166.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Chicken",
+                bold: false,
+                color: "#e3aa81"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Kentucky Unfried`,
+                italic: true,
+                color: "blue"
+              })}]`
+            }
+          }
+        },
+        pufferfish: {
+          id: '"minecraft:pufferfish"',
+          tag:{
+            cost: 999,
+            pos: `'907.0 64 -166.3'`,
+            display: {
+              Name: `${rawJson({
+                text: "Pufferfish",
+                bold: false,
+                color: "#f0e143"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Food for`,
+                italic: false,
+                color: "#e4ed2d"
+              })}, ${rawJson({
+                text: `Masochists`,
+                italic: false,
+                color: "#e4ed2d"
+              })}]`
+            }
+          }
+        },
+        clownfish: {
+          id: '"minecraft:tropical_fish"',
+          tag:{
+            cost: 1299,
+            pos: `'902.5 64 -166.3'`,
+            display: {
+              Name: `${rawJson({
+                text: "Clownfish",
+                bold: false,
+                color: "#ed8c37"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Here Lies`,
+                italic: false,
+                color: "#ffc59e"
+              })}, ${rawJson({
+                text: `Nemo (2003-2003)`,
+                italic: false,
+                color: "#ffc59e"
+              })}, ${rawJson({
+                text: `Rest in Peace.`,
+                italic: false,
+                color: "#ffc59e"
+              })}]`
+            }
+          }
+        },
+        salmon: {
+          id: '"minecraft:salmon"',
+          tag:{
+            cost: 1499,
+            pos: `'898.0 64 -166.3'`,
+            display: {
+              Name: `${rawJson({
+                text: "Fresh Salmon",
+                bold: false,
+                color: "#FFC3B5"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Watch out for`,
+                italic: false,
+                color: "#FA8072"
+              })}, ${rawJson({
+                text: `samonella...`,
+                italic: false,
+                color: "#FA8072"
+              })}]`
+            }
+          }
+        },
+        monster: {
+          id:'"minecraft:potion"',
+          tag:{
+            cost: 799,
+            pos: `'899.7 63.25 -160.75'`,
+            display:{
+              Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
+              Lore:`['{"text":"The energy drink for","color":"dark_green","bold":false}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
+            },
+            HideFlags:127,
+            CustomPotionEffects:`[${toSnbt(
+              {Id:'1b',Amplifier:'2b',Duration:100})}, ${toSnbt(
+              {Id:'3b',Amplifier:'1b',Duration:600})}, ${toSnbt(
+              {Id:'9b',Amplifier:'0b',Duration:200})}, ${toSnbt(
+              {Id:'15b',Amplifier:'0b',Duration:20})}, ${toSnbt(
+              {Id:'16b',Amplifier:'0b',Duration:400})}, ${toSnbt(
+              {Id:'17b',Amplifier:'100b',Duration:80})}]`,
+            Potion:`"minecraft:thick"`,
+            CustomPotionColor:846663
+          }
+        },
+        lacroix: {
+          id:'"minecraft:potion"',
+          tag:{
+            cost: 999,
+            pos: `'899.7 64.75 -160.75'`,
+            display:{
+              Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true}'`,
+              Lore:`['{"text":"Water for people","color":"aqua","italic":false}','{"text":"who hate money","color":"aqua"}','{"text":"(and water).","color":"aqua"}']`
+            },
+            HideFlags:127,
+            CustomPotionEffects:`[${toSnbt(
+              {Id:'2b',Amplifier:'0b',Duration:200})}, ${toSnbt(
+              {Id:'4b',Amplifier:'1b',Duration:400})}, ${toSnbt(
+              {Id:'15b',Amplifier:'0b',Duration:20})}, ${toSnbt(
+              {Id:'17b',Amplifier:'100b',Duration:80})}, ${toSnbt(
+              {Id:'18b',Amplifier:'9b',Duration:1200})}, ${toSnbt(
+              {Id:'28b',Amplifier:'0b',Duration:100})}]`,
+            Potion:`"minecraft:awkward"`,
+            CustomPotionColor:2799851
           }
         }
       },
-      melon_slice: {
-        id: '"minecraft:melon_slice"',
-        tag:{
-          cost: 249,
-          pos: `'909.5 64 -152.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Watermelon",
-              color: "#cc3968"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Ingredients:`,
-              bold: true,
-              underlined: true,
-              italic: false,
-              color: "gray"
-            })},${rawJson({
-              text: `Powdered Melon`,
-              color: "dark_gray"
-            })},${rawJson({
-              text: `Water`,
-              color: "dark_gray"
-            })}]`
+      clothes: {
+        pbblue: {
+          id: '"minecraft:leather_boots"',
+          tag: {
+            cost: 2999,
+            pos: `'978.75 64.5 -163.0'`,
+            rot: `'-90F,0F'`,
+            display: {
+              Name: `${rawJson({
+                text: "Plain Boots (Blue)",
+                color: "gray"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Affordable and Fashionable.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`,
+              color: 2378639
+            },
+            Unbreakable:true,
+            HideFlags:127
           }
-        }
-      },
-      glow_berries: {
-        id: '"minecraft:glow_berries"',
-        tag:{
-          cost: 149,
-          pos: `'901.5 64 -152.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Rainier Cherry",
-              color: "#f2b91d"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Fresh from ?????`,
-              italic: true,
-              color: "gold"
-            })}]`
-          }
-        }
-      },
-      milk: {
-        id: '"minecraft:milk_bucket"',
-        tag:{
-          cost: 599,
-          pos: `'914 62.75 -152.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Whole Milk",
-              bold: false,
-              color: "#f5f3e6"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Got Milk?`,
-              italic: true,
-              color: "aqua"
-            })}, ${rawJson({
-              text: `Homogenized.`,
-              italic: true,
-              color: "gray"
-            })}]`
-          }
-        }
-      },
-      egg: {
-        id: '"minecraft:egg"',
-        tag:{
-          cost: 9,
-          pos: `'914 63.625 -152.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Egg",
-              bold: false,
-              color: "#f2e1aa"
-            })}`,
-            Lore:`[${rawJson({
-              text: `A Dollar a Dozen`,
-              italic: true,
-              color: "#d9ac59"
-            })}]`
-          }
-        }
-      },
-      pickle: {
-        id: '"minecraft:sea_pickle"',
-        tag:{
-          cost: 99,
-          pos: `'914 64.5 -152.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Dill Pickle",
-              bold: false,
-              color: "#538c19"
-            })}`,
-            Lore:`[${rawJson({
-              text: `pickle.dumps(obj)`,
-              italic: true,
-              color: "dark_green"
-            })}]`
-          }
-        }
-      },
-      bamboo: {
-        id: '"minecraft:bamboo"',
-        tag:{
-          cost: 119,
-          pos: `'915.5 62.75 -153.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Bamboo Shoots",
-              bold: false,
-              color: "#16ba2c"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Rich in fiber.`,
-              italic: true,
-              color: "#0d8c1e"
-            })}]`
-          }
-        }
-      },
-      kelp: {
-        id: '"minecraft:kelp"',
-        tag:{
-          cost: 119,
-          pos: `'915.5 63.625 -153.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Seaweed",
-              bold: false,
-              color: "#3bbd17"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Fresh and Undried`,
-              italic: true,
-              color: "#2fa315"
-            })}]`
-          }
-        }
-      },
-      cane: {
-        id: '"minecraft:sugar_cane"',
-        tag:{
-          cost: 89,
-          pos: `'915.5 64.5 -153.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Sugarcane",
-              bold: false,
-              color: "#009903"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Not candy,`,
-              italic: true,
-              color: "#d1261d"
-            })}, ${rawJson({
-              text: `sadly.`,
-              italic: true,
-              color: "#d1261d"
-            })}]`
-          }
-        }
-      },
-      mysteryshrooms: {
-        id: '"minecraft:red_mushroom"',
-        tag:{
-          cost: 349,
-          pos: `'915.5 62.75 -156.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Mystery Shrooms",
-              bold: false,
-              color: "#e64037"
-            })}`,
-            Lore:`[${rawJson({
-              text: `No Toads were harmed`,
-              italic: true,
-              color: "#f25e70"
-            })},${rawJson({
-              text: `in the making of`,
-              italic: true,
-              color: "#f25e70"
-            })},${rawJson({
-              text: `this shroom (probably).`,
-              italic: true,
-              color: "#f25e70"
-            })}]`
-          }
-        }
-      },
-      shiitake: {
-        id: '"minecraft:brown_mushroom"',
-        tag:{
-          cost: 174,
-          pos: `'915.5 63.625 -156.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Shiitake Mushrooms",
-              bold: false,
-              color: "#917250"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Tasty`,
-              italic: true,
-              color: "#826246"
-            })}]`
-          }
-        }
-      },
-      beet: {
-        id: '"minecraft:beetroot"',
-        tag:{
-          cost: 149,
-          pos: `'915.5 64.5 -156.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Beet",
-              bold: false,
-              color: "#7a1f3d"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Beet red`,
-              italic: true,
-              color: "#6c1b36"
-            })}, ${rawJson({
-              text: `:flushed:`,
-              italic: true,
-              color: "#6c1b36"
-            })}]`
-          }
-        }
-      },
-      potato: {
-        id: '"minecraft:potato"',
-        tag:{
-          cost: 124,
-          pos: `'915.5 63.625 -159.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Potato",
-              bold: false,
-              color: "#dbbb70"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Unbaked and Unabashed`,
-              italic: true,
-              color: "#a67429"
-            })}]`
-          }
-        }
-      },
-      carrot: {
-        id: '"minecraft:carrot"',
-        tag:{
-          cost: 124,
-          pos: `'915.5 63.625 -162'`,
-          display: {
-            Name: `${rawJson({
-              text: "Carrot",
-              bold: false,
-              color: "#e6671e"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Recommended by`,
-              italic: true,
-              color: "#e36f17"
-            })}, ${rawJson({
-              text: `Pastor Ssempa`,
-              italic: true,
-              color: "#e36f17"
-            })}]`
-          }
-        }
-      },
-      berries: {
-        id: '"minecraft:sweet_berries"',
-        tag:{
-          cost: 249,
-          pos: `'915.5 64.5 -160.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Strawberry",
-              bold: false,
-              color: "#db324f"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Berry Delicious™`,
-              italic: true,
-              color: "#d43d7c"
-            })}]`
-          }
-        }
-      },
-      rawbeef: {
-        id: '"minecraft:beef"',
-        tag:{
-          cost: 899,
-          pos: `'915.5 63.25 -165.25'`,
-          display: {
-            Name: `${rawJson({
-              text: "Raw Beef",
-              bold: false,
-              color: "#a8180d"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Basically Rare`,
-              italic: true,
-              color: "blue"
-            })}, ${rawJson({
-              text: `Steak...`,
-              italic: true,
-              color: "blue"
-            })}]`
-          }
-        }
-      },
-      rawmutton: {
-        id: '"minecraft:mutton"',
-        tag:{
-          cost: 699,
-          pos: `'915.5 64.5 -165.25'`,
-          display: {
-            Name: `${rawJson({
-              text: "Mutton",
-              bold: false,
-              color: "#a30b2c"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Wool not included.`,
-              italic: true,
-              color: "blue"
-            })}]`
-          }
-        }
-      },
-      porkchop: {
-        id: '"minecraft:porkchop"',
-        tag:{
-          cost: 799,
-          pos: `'914.25 63.25 -166.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Porkchops",
-              bold: false,
-              color: "#e36d6d"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Only 1 Peppa Pig was`,
-              italic: true,
-              color: "blue"
-            })}, ${rawJson({
-              text: `harmed in its creation.`,
-              italic: true,
-              color: "blue"
-            })}]`
-          }
-        }
-      },
-      rabbit: {
-        id: '"minecraft:rabbit"',
-        tag:{
-          cost: 749,
-          pos: `'914.25 64.5 -166.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Rabbit Meat",
-              bold: false,
-              color: "#d1816b"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Where's`,
-              italic: true,
-              color: "blue"
-            })}, ${rawJson({
-              text: `Big Chungus??`,
-              italic: true,
-              color: "blue"
-            })}]`
-          }
-        }
-      },
-      chicken: {
-        id: '"minecraft:chicken"',
-        tag:{
-          cost: 599,
-          pos: `'911.5 64.5 -166.5'`,
-          display: {
-            Name: `${rawJson({
-              text: "Chicken",
-              bold: false,
-              color: "#e3aa81"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Kentucky Unfried`,
-              italic: true,
-              color: "blue"
-            })}]`
-          }
-        }
-      },
-      pufferfish: {
-        id: '"minecraft:pufferfish"',
-        tag:{
-          cost: 999,
-          pos: `'907.0 64 -166.3'`,
-          display: {
-            Name: `${rawJson({
-              text: "Pufferfish",
-              bold: false,
-              color: "#f0e143"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Food for`,
-              italic: false,
-              color: "#e4ed2d"
-            })}, ${rawJson({
-              text: `Masochists`,
-              italic: false,
-              color: "#e4ed2d"
-            })}]`
-          }
-        }
-      },
-      clownfish: {
-        id: '"minecraft:tropical_fish"',
-        tag:{
-          cost: 1299,
-          pos: `'902.5 64 -166.3'`,
-          display: {
-            Name: `${rawJson({
-              text: "Clownfish",
-              bold: false,
-              color: "#ed8c37"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Here Lies`,
-              italic: false,
-              color: "#ffc59e"
-            })}, ${rawJson({
-              text: `Nemo (2003-2003)`,
-              italic: false,
-              color: "#ffc59e"
-            })}, ${rawJson({
-              text: `Rest in Peace.`,
-              italic: false,
-              color: "#ffc59e"
-            })}]`
-          }
-        }
-      },
-      salmon: {
-        id: '"minecraft:salmon"',
-        tag:{
-          cost: 1499,
-          pos: `'898.0 64 -166.3'`,
-          display: {
-            Name: `${rawJson({
-              text: "Fresh Salmon",
-              bold: false,
-              color: "#FFC3B5"
-            })}`,
-            Lore:`[${rawJson({
-              text: `Watch out for`,
-              italic: false,
-              color: "#FA8072"
-            })}, ${rawJson({
-              text: `samonella...`,
-              italic: false,
-              color: "#FA8072"
-            })}]`
-          }
-        }
-      },
-      monster: {
-        id:'"minecraft:potion"',
-        tag:{
-          cost: 799,
-          pos: `'899.7 63.25 -160.75'`,
-          display:{
-            Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
-            Lore:`['{"text":"The energy drink for","color":"dark_green","bold":false}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
-          },
-          HideFlags:127,
-          CustomPotionEffects:`[${toSnbt(
-            {Id:'1b',Amplifier:'2b',Duration:100})}, ${toSnbt(
-            {Id:'3b',Amplifier:'1b',Duration:600})}, ${toSnbt(
-            {Id:'9b',Amplifier:'0b',Duration:200})}, ${toSnbt(
-            {Id:'15b',Amplifier:'0b',Duration:20})}, ${toSnbt(
-            {Id:'16b',Amplifier:'0b',Duration:400})}, ${toSnbt(
-            {Id:'17b',Amplifier:'100b',Duration:80})}]`,
-          Potion:`"minecraft:thick"`,
-          CustomPotionColor:846663
-        }
-      },
-      lacroix: {
-        id:'"minecraft:potion"',
-        tag:{
-          cost: 999,
-          pos: `'899.7 64.75 -160.75'`,
-          display:{
-            Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true}'`,
-            Lore:`['{"text":"Water for people","color":"aqua","italic":false}','{"text":"who hate money","color":"aqua"}','{"text":"(and water).","color":"aqua"}']`
-          },
-          HideFlags:127,
-          CustomPotionEffects:`[${toSnbt(
-            {Id:'2b',Amplifier:'0b',Duration:200})}, ${toSnbt(
-            {Id:'4b',Amplifier:'1b',Duration:400})}, ${toSnbt(
-            {Id:'15b',Amplifier:'0b',Duration:20})}, ${toSnbt(
-            {Id:'17b',Amplifier:'100b',Duration:80})}, ${toSnbt(
-            {Id:'18b',Amplifier:'9b',Duration:1200})}, ${toSnbt(
-            {Id:'28b',Amplifier:'0b',Duration:100})}]`,
-          Potion:`"minecraft:awkward"`,
-          CustomPotionColor:2799851
         }
       }
     }
 
-    let store: Record<string, Record<string, any>> = {
+    let store: Record<string, any> = {
       unsold: {},
       sold: {},
-      npc: {}
+      npc: {},
+      commands: []
     }
 
-    for (let [k, v] of Object.entries(items)) {
-      v = <any> v;
-      if (!('display' in v.tag)) {
-        Object.assign(v.tag, {display:{Lore:`[]`}});
-      }
-      store.unsold[k] = JSON.parse(JSON.stringify(v));
-      store.unsold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.unsold[k].tag.display.Lore}, ${rawJson({text: ""})}, ${rawJson({
-        text: `Unsold (${toCost(v.tag.cost)})`,
-        italic: true,
-        color: "dark_gray"
-      })}]`))
-      store.unsold[k].tag.sold = false;
-      store.unsold[k].id = '"minecraft:paper"';
+    for (let sto of Object.keys(items)) {
+      store.unsold[sto] = {};
+      store.sold[sto] = {};
+      for (let [k, v] of Object.entries(items[sto])) {
+        v = <any> v;
+        if (!('display' in v.tag)) {
+          Object.assign(v.tag, {display:{Lore:`[]`}});
+        }
+        store.unsold[sto][k] = JSON.parse(JSON.stringify(v));
+        store.unsold[sto][k].tag.display.Lore = JSON.stringify(eval(`[...${store.unsold[sto][k].tag.display.Lore}, ${rawJson({text: ""})}, ${rawJson({
+          text: `Unsold (${toCost(v.tag.cost)})`,
+          italic: true,
+          color: "dark_gray"
+        })}]`))
+        store.unsold[sto][k].tag.sold = false;
 
-      store.sold[k] = JSON.parse(JSON.stringify(v));
-      store.sold[k].tag.display.Lore = JSON.stringify(eval(`[...${store.sold[k].tag.display.Lore}, ${rawJson({text: ""})}, ${rawJson({
-        text: `Sold (${toCost(v.tag.cost)})`,
-        italic: true,
-        color: "dark_purple"
-      })}]`))
-      store.sold[k].tag.sold = true;
+        if (sto !== "clothes") {
+          store.unsold[sto][k].id = '"minecraft:paper"';
+        }
 
-      store.npc[`__${k}`] = npcSchema.parse({
-        name: rawJson([
-          JSON.parse(eval((Object.assign({Name: `'"${k}"'`}, v.tag.display)).Name)),
-          {
-            text: ` (\${toCost(item.store.unsold.${k}.tag.cost)})`,
-            bold: false,
-            italic: false,
-            strikethrough: false,
-            obfuscated: false,
-            underlined: false
+        store.sold[sto][k] = JSON.parse(JSON.stringify(v));
+        store.sold[sto][k].tag.display.Lore = JSON.stringify(eval(`[...${store.sold[sto][k].tag.display.Lore}, ${rawJson({text: ""})}, ${rawJson({
+          text: `Sold (${toCost(v.tag.cost)})`,
+          italic: true,
+          color: "dark_purple"
+        })}]`))
+        store.sold[sto][k].tag.sold = true;
+
+        if (sto === "clothes") {
+          let armor = `[{},{},{},{}]`
+          switch (eval(v.id)) {
+            case "leather_boots": 
+              armor = `[${toSnbt(Object.assign({Count:'1b'}, v))},{},{},{}]`;
+              break;
+            case "leather_leggings": 
+              armor = `[{},${toSnbt(Object.assign({Count:'1b'}, v))},{},{}]`;
+              break;
+            case "leather_chestplate":
+              armor = `[{},{},${toSnbt(Object.assign({Count:'1b'}, v))},{}]`;
+              break;
+            case "leather_helmet": 
+              armor = `[{},{},{},${toSnbt(Object.assign({Count:'1b'}, v))}]`;
+              break;
           }
-        ]),
-        invisible: true,
-        colour: "null",
-        position: eval(v.tag.pos),
-        dialogue: [{
-          messages: [{
-            message: "taken",
-            silent: true,
-            command: [
-              `give \${select.player} \${toGive(item.store.unsold.${k})}`
-            ]
-          }]
-        }]
-      })
+
+          store.commands.push(`summon armor_stand ${eval(v.tag.pos)} {NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${eval(v.tag.rot)}],ArmorItems:${armor}}`)
+        } else {
+          store.npc[`__${sto}_${k}`] = npcSchema.parse({
+            name: rawJson([
+              JSON.parse(eval((Object.assign({Name: `'"${k}"'`}, v.tag.display)).Name)),
+              {
+                text: ` (\${toCost(item.store.unsold.${sto}.${k}.tag.cost)})`,
+                bold: false,
+                italic: false,
+                strikethrough: false,
+                obfuscated: false,
+                underlined: false
+              }
+            ]),
+            invisible: true,
+            colour: "null",
+            position: eval(v.tag.pos),
+            dialogue: [{
+              messages: [{
+                message: "taken",
+                silent: true,
+                command: [
+                  `give \${select.player} \${toGive(item.store.unsold.${sto}.${k})}`
+                ]
+              }]
+            }]
+          })
+        }
+      }
     }
 
     return store;

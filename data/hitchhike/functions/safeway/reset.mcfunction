@@ -1,1 +1,0 @@
-data modify storage hitchhike:safeway welcome_message set value '"Hey, I hope you had a great time shopping!"'

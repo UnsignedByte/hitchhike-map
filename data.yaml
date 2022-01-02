@@ -704,11 +704,12 @@ npc:
           - Good luck with that hike, I've heard its difficult.
           cond: 3
           end: -1
-    cashier:
+    safeway:
       name: Paoule Enrique
       position: 891.5 64 -152.5
       rotation: 180 0
       colour: 0xeb7060
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjMxYTAzZjY3Y2M4YThkZTIxY2I5NjFiMDZjNzQ1M2I1NjQ2YWYzNDViZmIxZGMwMjJiNWY5MTY5Y2JmODA3OCJ9fX0=
       villager:
         type: savanna
         profession: shepherd
@@ -718,29 +719,43 @@ npc:
           - "If you want to buy anything, just drop it off here on the conveyor."
         - messages:
           - message:
-            - nbt: welcome_message
-              storage: hitchhike:safeway
+            - nbt: welcome.safeway
+              storage: hitchhike:stores
               interpret: true
             command:
               - type: function
-                value: "hitchhike:safeway/pay"
+                value: "generated:stores/safeway/pay"
           - message:
-            - nbt: success_msg
-              storage: hitchhike:safeway
+            - nbt: success.safeway
+              storage: hitchhike:stores
               interpret: true
           cond: 5
-    clothescashier:
+    clothes:
       name: Jean Skinne
       position: 984.5 64 -168.5
       rotation: 0 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk2YWE3MjIyOGZhOGNkNjMyMjk2ZTg1MjU0N2EwMmIzYjI1MWRiYTk1ZDJlOWZjZDA4OTg0NzNmOTg4MzYifX19
       colour: 0x2387d9
       villager:
         type: swamp
         profession: librarian
       dialogue:
         - messages:
-          - Welcome! Looking for fashionable outfits?
+          - Welcome to Suburban Outfitters! Looking for fashionable outfits?
           - Feel free to try on clothes in the changing rooms to your right!
+        - messages:
+          - message:
+            - nbt: welcome.clothes
+              storage: hitchhike:stores
+              interpret: true
+            command:
+              - type: function
+                value: "generated:stores/clothes/pay"
+          - message:
+            - nbt: success.clothes
+              storage: hitchhike:stores
+              interpret: true
+          cond: 5
     cameron:
       name: Cameron "Cam" Au-Flauge
       position: 944.3 96.8 17.3
@@ -1237,10 +1252,10 @@ quest:
       value:
         - type: cond
           value:
-            - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]}]"
+            - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.safeway.lacroix)}]}]"
         - type: cond
           value:
-            - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.lacroix)}]},x=939,y=69,z=181,dx=6,dy=2,dz=5]"
+            - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.safeway.lacroix)}]},x=939,y=69,z=181,dx=6,dy=2,dz=5]"
             - "if score -lacroix story-simon matches 1"
           count: 2
           weight: 1

@@ -13,9 +13,9 @@ tp @s[tag=npc-simon] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-simon, lim
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-hurm] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-hurm, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-cashier] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cashier, limit=1]
+tp @s[tag=npc-safeway] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-safeway, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-clothescashier] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-clothescashier, limit=1]
+tp @s[tag=npc-clothes] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-clothes, limit=1]
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-cameron] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cameron, limit=1]
 # While in a conversation, make eye contact with the player.
@@ -45,52 +45,52 @@ tp @s[tag=npc-deagol] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-deagol, l
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-eichhornchen] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-eichhornchen, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__apple] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__apple, limit=1]
+tp @s[tag=npc-__safeway_apple] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_apple, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__melon_slice] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__melon_slice, limit=1]
+tp @s[tag=npc-__safeway_melon_slice] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_melon_slice, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__glow_berries] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__glow_berries, limit=1]
+tp @s[tag=npc-__safeway_glow_berries] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_glow_berries, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__milk] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__milk, limit=1]
+tp @s[tag=npc-__safeway_milk] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_milk, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__egg] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__egg, limit=1]
+tp @s[tag=npc-__safeway_egg] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_egg, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__pickle] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__pickle, limit=1]
+tp @s[tag=npc-__safeway_pickle] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_pickle, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__bamboo] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__bamboo, limit=1]
+tp @s[tag=npc-__safeway_bamboo] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_bamboo, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__kelp] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__kelp, limit=1]
+tp @s[tag=npc-__safeway_kelp] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_kelp, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__cane] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__cane, limit=1]
+tp @s[tag=npc-__safeway_cane] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_cane, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__mysteryshrooms] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__mysteryshrooms, limit=1]
+tp @s[tag=npc-__safeway_mysteryshrooms] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_mysteryshrooms, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__shiitake] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__shiitake, limit=1]
+tp @s[tag=npc-__safeway_shiitake] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_shiitake, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__beet] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__beet, limit=1]
+tp @s[tag=npc-__safeway_beet] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_beet, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__potato] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__potato, limit=1]
+tp @s[tag=npc-__safeway_potato] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_potato, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__carrot] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__carrot, limit=1]
+tp @s[tag=npc-__safeway_carrot] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_carrot, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__berries] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__berries, limit=1]
+tp @s[tag=npc-__safeway_berries] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_berries, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__rawbeef] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__rawbeef, limit=1]
+tp @s[tag=npc-__safeway_rawbeef] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_rawbeef, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__rawmutton] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__rawmutton, limit=1]
+tp @s[tag=npc-__safeway_rawmutton] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_rawmutton, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__porkchop] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__porkchop, limit=1]
+tp @s[tag=npc-__safeway_porkchop] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_porkchop, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__rabbit] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__rabbit, limit=1]
+tp @s[tag=npc-__safeway_rabbit] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_rabbit, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__chicken] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__chicken, limit=1]
+tp @s[tag=npc-__safeway_chicken] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_chicken, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__pufferfish] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__pufferfish, limit=1]
+tp @s[tag=npc-__safeway_pufferfish] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_pufferfish, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__clownfish] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__clownfish, limit=1]
+tp @s[tag=npc-__safeway_clownfish] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_clownfish, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__salmon] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__salmon, limit=1]
+tp @s[tag=npc-__safeway_salmon] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_salmon, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__monster] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__monster, limit=1]
+tp @s[tag=npc-__safeway_monster] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_monster, limit=1]
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-__lacroix] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__lacroix, limit=1]
+tp @s[tag=npc-__safeway_lacroix] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_lacroix, limit=1]
