@@ -4,4 +4,4 @@ function hitchhike:story/maze/tick
 function hitchhike:story/fountain/tick
 function hitchhike:story/lake/tick
 function hitchhike:story/hurm/tick
-funciton hitchhike:story/stores/tick
+function hitchhike:story/stores/tick
