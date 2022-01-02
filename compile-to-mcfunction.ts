@@ -3068,7 +3068,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         unsoldrange: [977, 65, -169, 986, 65, -168],
         paypos: [986.5, 65.0, -167.5],
         shoprange:[973, -172, 992, -153],
-        lock: ["<",{"text":"Jean Skinne","color":"#2387d9","bold":true},"> You aren't leaving without paying. Don't make me tell you again."]
+        lock: ["<",{"text":"Jean Skinne","color":"#2387d9","bold":true},"> You can't leaving without paying."]
       }
     }
 
