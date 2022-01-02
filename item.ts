@@ -891,7 +891,7 @@ export const item = {
           tag: {
             cost: 1199,
             pos: ['978.76 62.9 -155.5', '978.76 62.9 -156.5', '978.76 62.9 -157.5'],
-            rot: [-90,18],
+            rot: [-90,22],
             display: {
               Name: `${rawJson({
                 text: "Baseball Cap",
@@ -913,7 +913,7 @@ export const item = {
           tag: {
             cost: 2799,
             pos: ['978.75 63.9 -155.5', '978.75 63.9 -156.5', '978.75 63.9 -157.5'],
-            rot: [-90,18],
+            rot: [-90,22],
             display: {
               Name: `${rawJson({
                 text: "Hardhat",
