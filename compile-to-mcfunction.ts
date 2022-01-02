@@ -3056,7 +3056,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           })
         }
 
-        const payrangesel = `x=${v.unsoldrange[0]},y=${v.unsoldrange[1]},z=${v.unsoldrange[0]},dx=${v.unsoldrange[3]-v.unsoldrange[0]},dy=${v.unsoldrange[4]-v.unsoldrange[1]},dz=${v.unsoldrange[5]-v.unsoldrange[2]}`;
+        const payrangesel = `x=${v.unsoldrange[0]},y=${v.unsoldrange[1]},z=${v.unsoldrange[2]},dx=${v.unsoldrange[3]-v.unsoldrange[0]},dy=${v.unsoldrange[4]-v.unsoldrange[1]},dz=${v.unsoldrange[5]-v.unsoldrange[2]}`;
         const unsolditems = `@e[tag=paying,type=item,${payrangesel}]`;
 
         addfunc(`stores/${k}/pay`, [
