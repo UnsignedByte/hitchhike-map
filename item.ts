@@ -943,10 +943,19 @@ export const item = {
                 color: "#f06f0c"
               })}`,
               Lore:`[${rawJson({
-                text: `For the LEGO Prisoner 50380 in Medium Orange Uniform Minifigure in you.`,
+                text: `For the `,
                 italic: true,
                 color: "#51534A"
-              })}]`,
+              })},${rawJson({
+                text: `LEGO Prisoner 50380 in Medium Orange Uniform Minifigure`,
+                italic: true,
+                bold: true,
+                color: "51534A"
+              })},${rawJson({
+                text: ` in you.`,
+                italic: true,
+                color: "#51534A"
+              })},]`,
               color: 0x51534A
             },
             Unbreakable:true,
