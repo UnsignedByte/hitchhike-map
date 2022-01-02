@@ -1,5 +1,5 @@
 scoreboard players operation 0_b stores = count change
-data modify storage hitchhike:stores success.safeway set value '["Thank you for shopping at safeway! Your change is ",{"score":{"name":"_B"}},".",{"score":{"name":"_b"}}," Bov."]'
+data modify storage hitchhike:stores success.safeway set value '["Thank you for shopping at safeway! Your change is ",{"score":{"name":"0_B","objective":"stores"}},".",{"score":{"name":"0_b","objective":"stores"}}," Bov."]'
 # sell items.
 function generated:story/stores/safeway/sell
 # Reset welcome message
