@@ -3073,8 +3073,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     }
 
     addfunc(`stores/reset`, [
-      `kill @e[type=armor_stand,tag=armorstand-clothes-display]`,
       Object.entries(stores).map(([k, v]) => `data modify storage hitchhike:stores welcome.${k} set value ${rawJson(v.welcome)}`),
+      `kill @e[type=armor_stand,tag=armorstand-clothes-display]`,
       item.store.commands
     ])
 

@@ -862,16 +862,20 @@ export const item = {
         if (sto === "clothes") {
           let armor = `[{},{},{},{}]`
           switch (eval(v.id)) {
-            case "leather_boots": 
+            case 'leather_boots': 
+            case 'minecraft:leather_boots': 
               armor = `[${toSnbt(Object.assign({Count:'1b'}, v))},{},{},{}]`;
               break;
-            case "leather_leggings": 
+            case "leather_leggings":
+            case "minecraft:leather_leggings":
               armor = `[{},${toSnbt(Object.assign({Count:'1b'}, v))},{},{}]`;
               break;
             case "leather_chestplate":
+            case "minecraft:leather_chestplate":
               armor = `[{},{},${toSnbt(Object.assign({Count:'1b'}, v))},{}]`;
               break;
             case "leather_helmet": 
+            case "minecraft:leather_helmet": 
               armor = `[{},{},{},${toSnbt(Object.assign({Count:'1b'}, v))}]`;
               break;
           }
