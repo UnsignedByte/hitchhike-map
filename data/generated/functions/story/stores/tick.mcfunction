@@ -1,9 +1,9 @@
 
 #> store safeway
-execute as @a[nbt={Inventory:[{tag:{store:"safeway",sold:0b}}]}] unless entity @s[x=881,z=-169,dx=36,dz=18] at @s run function generated:story/stores/safeway/lock
+execute as @a[nbt={Inventory:[{tag:{store:"safeway",sold:0b}}]}] at @s unless entity @s[x=881,z=-169,dx=36,dz=18] run function generated:story/stores/safeway/lock
 # Kill Thrown Items
-execute as @e[type=item,nbt={Item:{tag:{store:"safeway",sold:0b}}}] unless entity @s[x=881,z=-169,dx=36,dz=18] run kill @s
-execute as @e[type=item,tag=!paying,nbt={Item:{store:"safeway",tag:{sold:0b}},Age:0s},x=881,z=-169,dx=36,dz=18] run data modify entity @s Age set value 5800
+execute as @e[type=item,nbt={Item:{tag:{store:"safeway",sold:0b}}}] at @s unless entity @s[x=881,z=-169,dx=36,dz=18] run kill @s
+execute as @e[type=item,tag=!paying,nbt={Item:{store:"safeway",tag:{sold:0b}},Age:0s},x=881,z=-169,dx=36,dz=18,y=0,dy=255] run data modify entity @s Age set value 5800
 tag @e[type=item,nbt={Item:{tag:{store:"safeway",sold:0b}}}] remove paying
 tag @e[type=item,nbt={Item:{tag:{store:"safeway",sold:0b}}},x=891,y=65,z=891,dx=0,dy=0,dz=0] add paying
 execute as @e[tag=paying,type=item,x=891,y=65,z=891,dx=0,dy=0,dz=0] run data modify entity @s Age set value -32768
