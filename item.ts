@@ -885,6 +885,28 @@ export const item = {
             Unbreakable:true,
             HideFlags:127
           }
+        },
+        baseballcap: {
+          id: '"minecraft:leather_helmet"',
+          tag: {
+            cost: 10999,
+            pos: ['978.75 63 -155.5'],
+            rot: `'-90F,15F'`,
+            display: {
+              Name: `${rawJson({
+                text: "Baseball Cap",
+                color: "#c22b3c"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Cap.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`,
+              color: 0x1139d9
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
         }
       }
     }
