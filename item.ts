@@ -926,6 +926,7 @@ export const item = {
               })}]`,
               color: 0xfff30f
             },
+            Enchantments:`[{id:"minecraft:protection",lvl:1s}]`,
             Unbreakable:true,
             HideFlags:127
           }
