@@ -4,7 +4,7 @@ execute as @e[tag=paying,type=item,x=977,y=65,z=-169,dx=9,dy=0,dz=1] run data mo
 scoreboard players set paymentcount stores 0
 execute as @e[tag=paying,type=item,x=977,y=65,z=-169,dx=9,dy=0,dz=1] run function generated:story/stores/countpay
 scoreboard players operation dec change = paymentcount stores
-execute positioned 986.5000 65.0000 -168.5000 run function generated:change/decrement
+execute positioned 986.5000 65.0000 -167.5000 run function generated:change/decrement
 # handle fail and success of payment
 execute if score dec-success change matches 0 run function generated:story/stores/clothes/_payfail
 execute if score dec-success change matches 1 run function generated:story/stores/clothes/_paysuccess
