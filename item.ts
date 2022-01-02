@@ -891,7 +891,7 @@ export const item = {
           tag: {
             cost: 1199,
             pos: ['978.76 62.9 -155.5', '978.76 62.9 -156.5', '978.76 62.9 -157.5'],
-            rot: [-90,22],
+            rot: [-90,23],
             display: {
               Name: `${rawJson({
                 text: "Baseball Cap",
@@ -913,7 +913,7 @@ export const item = {
           tag: {
             cost: 2799,
             pos: ['978.75 63.9 -155.5', '978.75 63.9 -156.5', '978.75 63.9 -157.5'],
-            rot: [-90,22],
+            rot: [-90,23],
             display: {
               Name: `${rawJson({
                 text: "Hardhat",
@@ -927,6 +927,28 @@ export const item = {
               color: 0xfff30f
             },
             Enchantments:`[{id:"minecraft:protection",lvl:1s}]`,
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        bowlerhat: {
+          id: '"minecraft:leather_helmet"',
+          tag: {
+            cost: 1199,
+            pos: ['980.24 62.9 -155.5', '980.24 62.9 -156.5', '980.24 62.9 -157.5'],
+            rot: [90,23],
+            display: {
+              Name: `${rawJson({
+                text: "LEGO Dark Gray Knitted Cap (41334)",
+                color: "#f06f0c"
+              })}`,
+              Lore:`[${rawJson({
+                text: `For the LEGO Prisoner 50380 in Medium Orange Uniform Minifigure in you.`,
+                italic: true,
+                color: "#51534A"
+              })}]`,
+              color: 0x51534A
+            },
             Unbreakable:true,
             HideFlags:127
           }
