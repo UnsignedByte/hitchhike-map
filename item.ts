@@ -931,7 +931,7 @@ export const item = {
               break;
           }
 
-          store.commands.push(v.tag.pos.map((x: any)=>
+          store.commands.push(v.tag.pos.map((x: string)=>
             `summon armor_stand ${x} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${eval(v.tag.rot)}],ArmorItems:${armor}}`
           ))
         } else {
