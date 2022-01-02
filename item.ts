@@ -802,7 +802,7 @@ export const item = {
           tag: {
             cost: 2999,
             pos: ['986.74 64.5 -155.5', '986.74 64.5 -156.4', '986.74 64.5 -157.3', '986.74 64.5 -158.2'],
-            rot: `'-90F,0F'`,
+            rot: [-90,0],
             display: {
               Name: `${rawJson({
                 text: "Plain Boots (Blue)",
@@ -824,7 +824,7 @@ export const item = {
           tag: {
             cost: 2999,
             pos: ['986.75 65.5 -155.5', '986.75 65.5 -156.4', '986.75 65.5 -157.3', '986.75 65.5 -158.2'],
-            rot: `'-90F,0F'`,
+            rot: [-90,0],
             display: {
               Name: `${rawJson({
                 text: "Plain Boots (Brown)",
@@ -846,7 +846,7 @@ export const item = {
           tag: {
             cost: 2999,
             pos: ['987.0 64.5 -159.26', '988.0 64.5 -159.26', '987.0 65.5 -159.25', '988.0 65.5 -159.25'],
-            rot: `'0F,0F'`,
+            rot: [0,0],
             display: {
               Name: `${rawJson({
                 text: "Plain Boots (Gray)",
@@ -868,7 +868,7 @@ export const item = {
           tag: {
             cost: 10999,
             pos: ['991.25 64.5 -156.5', '991.25 64.5 -157.5', '991.25 64.5 -158.5'],
-            rot: `'90F,0F'`,
+            rot: [90,0],
             display: {
               Name: `${rawJson({
                 text: "Leather Hiking Boots",
@@ -891,7 +891,7 @@ export const item = {
           tag: {
             cost: 10999,
             pos: ['978.75 63 -155.5'],
-            rot: `'-90F,15F'`,
+            rot: [-90,15],
             display: {
               Name: `${rawJson({
                 text: "Baseball Cap",
@@ -977,7 +977,7 @@ export const item = {
           }
 
           store.commands.push(v.tag.pos.map((x: string)=>
-            `summon armor_stand ${x} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${eval(v.tag.rot)}],ArmorItems:${armor}}`
+            `summon armor_stand ${x} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{Head:[${v.tag.rot[1]}F,0F,0F],LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${v.tag.rot[0]}F,0F],ArmorItems:${armor}}`
           ))
         } else {
           store.npc[`__${sto}_${k}`] = npcSchema.parse({
