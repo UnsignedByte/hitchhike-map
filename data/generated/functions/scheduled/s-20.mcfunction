@@ -1,5 +1,6 @@
 #> Teleport out softlocked items
 tp @e[type=item,x=891,y=64,z=-153,dx=0,dy=1,dz=0] 891 65 -154
+tp @e[type=item,x=984,y=64,z=-169,dx=0,dy=1,dz=0] 984 65 -168
 function generated:story/fountain/jar/updateguess
 execute as @e[tag=maze-mob,type=bee] at @s run data modify entity @s AngryAt set from entity @p UUID
 execute as @e[tag=maze-shulker-bullet] at @s run data modify entity @s Target set from entity @e[tag=maze-mob,distance=..10,sort=nearest,limit=1] UUID

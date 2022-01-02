@@ -890,7 +890,7 @@ export const item = {
           id: '"minecraft:leather_helmet"',
           tag: {
             cost: 10999,
-            pos: ['978.75 62.9 -155.5'],
+            pos: ['978.75 62.9 -155.5', '978.75 62.9 -156.5', '978.75 62.9 -157.5'],
             rot: [-90,15],
             display: {
               Name: `${rawJson({

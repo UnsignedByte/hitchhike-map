@@ -2978,7 +2978,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
   schedule([
     '#> Teleport out softlocked items',
-    'tp @e[type=item,x=891,y=64,z=-153,dx=0,dy=1,dz=0] 891 65 -154'
+    'tp @e[type=item,x=891,y=64,z=-153,dx=0,dy=1,dz=0] 891 65 -154',
+    'tp @e[type=item,x=984,y=64,z=-169,dx=0,dy=1,dz=0] 984 65 -168'
   ], 20, functions);
 
   (()=>{
