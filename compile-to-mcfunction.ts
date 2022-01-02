@@ -3028,11 +3028,53 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         paypos: [893.0, 64.5, -153.5],
         shoprange:[881, -169, 917, -151],
         lock: ["<",{"text":"Paoule Enrique","color":"#eb7060","bold":true},"> Hey! You shouldn't leave without paying."]
+      },
+      clothes: {
+        welcome: "Set on your new outfits? I'll ring them up for you right here!",
+        return: [
+          [
+            "I can tell these clothes will fit you ",
+            {
+              "italic": true,
+              "text":"perfectly"
+            },
+            "!"
+          ],
+          "I hope you enjoyed our fashionable selection!"
+        ],
+        success: [
+          "Have fun with your new clothes! ",
+          {"score":{"name":"_B"}},
+          ".",
+          {"score":{"name":"_b"}},
+          " Bov is your change."
+        ],
+        failmessages: [
+          [
+            "That's a total of ",
+            {"score":{"name":"_B"}},
+            ".",
+            {"score":{"name":"_b"}},
+            "Bov. Just place your payment on the counter here!"
+          ],
+          [
+            "It seems you\'re ",
+            {"score":{"name":"_B"}},
+            ".",
+            {"score":{"name":"_b"}},
+            "Bov short. Don\'t worry, addition is hard. Just place the rest of your money on the counter and I can do the math for you!"
+          ]
+        ],
+        unsoldrange: [977, 65, -169, 986, 65, -168],
+        paypos: [986, 65, -168],
+        shoprange:[973, -172, 992, -153],
+        lock: ["<",{"text":"Jean Skinne","color":"#2387d9","bold":true},"> You aren't leaving without paying. Don't make me tell you again."]
       }
     }
 
     addfunc(`stores/reset`, [
       `kill @e[type=armor_stand,tag=armorstand-clothes-display]`,
+      Object.entries(stores).map(([k, v]) => `data modify storage hitchhike:stores welcome.${k} set value ${rawJson(v.welcome)}`),
       item.store.commands
     ])
 
