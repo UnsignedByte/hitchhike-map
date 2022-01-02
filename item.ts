@@ -890,7 +890,7 @@ export const item = {
           id: '"minecraft:leather_helmet"',
           tag: {
             cost: 10999,
-            pos: ['978.75 62.9 -155.5', '978.75 62.9 -156.5', '978.75 62.9 -157.5'],
+            pos: ['978.76 62.9 -155.5', '978.76 62.9 -156.5', '978.76 62.9 -157.5'],
             rot: [-90,15],
             display: {
               Name: `${rawJson({
@@ -903,6 +903,28 @@ export const item = {
                 color: "dark_gray"
               })}]`,
               color: 0x1139d9
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        hardhat: {
+          id: '"minecraft:leather_helmet"',
+          tag: {
+            cost: 10999,
+            pos: ['978.75 63.9 -155.5', '978.75 63.9 -156.5', '978.75 63.9 -157.5'],
+            rot: [-90,15],
+            display: {
+              Name: `${rawJson({
+                text: "Hardhat",
+                color: "#f0c60c"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Protects against impacts.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`,
+              color: 0xfff30f
             },
             Unbreakable:true,
             HideFlags:127
