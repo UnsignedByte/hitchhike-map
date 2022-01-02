@@ -3109,12 +3109,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ])
 
         addfunc(`stores/${k}/lock`, [
-          `execute as @a[nbt={Inventory:[{tag:{store:"${k}",sold:0b}}]}] unless entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run tag @s add shop-escapee`,
-          `execute as @a[tag=shop-escapee] at @s run function generated:story/stores/${k}/_lock`,
-          `tag @a remove shop-escapee`
-        ])
-
-        addfunc(`stores/${k}/_lock`, [
           `execute as @s[x=${v.shoprange[0]-1},dx=-1000000] at @s run tp @s ${(v.shoprange[0]+1.3).toFixed(4)} ~ ~`,
           `execute as @s[x=${v.shoprange[1]+1},dx=1000000] at @s run tp @s ${(v.shoprange[1]-0.3).toFixed(4)} ~ ~`,
           `execute as @s[z=${v.shoprange[2]-1},dz=-1000000] at @s run tp @s ~ ~ ${(v.shoprange[2]+1.3).toFixed(4)}`,
@@ -3129,7 +3123,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         return [
           ``,
           `#> store ${k}`,
-          `function generated:stores/${k}/lock`,
+          `execute as @a[nbt={Inventory:[{tag:{store:"${k}",sold:0b}}]}] unless entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] at @s run function generated:story/stores/${k}/lock`,
           `# Kill Thrown Items`,
           `execute as @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}}] unless entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run kill @s`,
           `execute as @e[type=item,tag=!paying,nbt={Item:{store:"${k}",tag:{sold:0b}},Age:0s},x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run data modify entity @s Age set value 5800`,

@@ -1,6 +1,6 @@
 
 #> store safeway
-function generated:stores/safeway/lock
+execute as @a[nbt={Inventory:[{tag:{store:"safeway",sold:0b}}]}] unless entity @s[x=881,z=-169,dx=36,dz=18] at @s run function generated:story/stores/safeway/lock
 # Kill Thrown Items
 execute as @e[type=item,nbt={Item:{tag:{store:"safeway",sold:0b}}}] unless entity @s[x=881,z=-169,dx=36,dz=18] run kill @s
 execute as @e[type=item,tag=!paying,nbt={Item:{store:"safeway",tag:{sold:0b}},Age:0s},x=881,z=-169,dx=36,dz=18] run data modify entity @s Age set value 5800
