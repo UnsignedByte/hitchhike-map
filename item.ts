@@ -1276,7 +1276,7 @@ export const item = {
         } else if (["subway"].includes(sto)) {
           store.commands.push([
             `setblock ${v.tag.pos} air`,
-            `setblock ${v.tag.pos} ${eval(v.tag.sign)}{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"bruh${idx}"}}',Text2:${v.tag.display.Name},Text3:'{"text":"${toCost(v.tag.cost)}","bold":true,"color":"white"}',Text4:''}`
+            `setblock ${v.tag.pos} ${eval(v.tag.sign)}{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"bruh${idx}"}}',Text2:${v.tag.display.Name},Text3:'{"text":"${toCost(v.tag.cost)}","bold":true,"color":"white"}',Text4:''}`
           ])
         } else {
           store.npc[`__${sto}_${k}`] = npcSchema.parse({
