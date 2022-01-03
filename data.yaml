@@ -756,6 +756,46 @@ npc:
               storage: hitchhike:stores
               interpret: true
           cond: 5
+    subway:
+      name: Sili Connesse
+      position: 952.5 64 -146.5
+      rotation: 45 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNTM1MjU3YWQ1ZjdhNTEzNjhiMTQ1ZGZmNDFjN2U2Y2I0OWRiZTY4ZDEzNWI0MTg1YTVmMmFmNmUzNTEifX19
+      colour: 0xf0d792
+      villager:
+        type: savanna
+        villager: none
+      dialogue:
+        - messages:
+          - Hi, welcome to Subway, how can I help you?
+        - messages:
+          - message:
+            - nbt: welcome.subway
+              storage: hitchhike:stores
+              interpret: true
+            command:
+              - type: function
+                value: "generated:story/stores/subway/pay"
+          - message:
+            - nbt: success.subway
+              storage: hitchhike:stores
+              interpret: true
+          cond: 5
+    icecream:
+      name: Laak Towse
+      position: 966.5 64 -150.5
+      rotation: 0 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI5OWEyNThmZDMxNzA5MzUwM2FhYzY0ZTJhMGRiMjM3ZWJhYzM3ZDEzYjFmNzQ4NGFkNjUyNmNiY2IzYmVlNSJ9fX0=
+      colour: 0xa2f092
+      villager:
+        type: snow
+        profession: butcher
+      dialogue:
+        - messages:
+          - Welcome to the Cream Bucket!
+          - Unfortunately, we are all out of milk today...
+          - We hope to see you another day!
+          end: -1
     cameron:
       name: Cameron "Cam" Au-Flauge
       position: 944.3 96.8 17.3

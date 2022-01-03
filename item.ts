@@ -1179,6 +1179,29 @@ export const item = {
             HideFlags:127
           }
         },
+      },
+      subway: {
+        vegan: {
+          id: '"minecraft:leather_boots"',
+          tag: {
+            cost: 1499,
+            pos: '949 64 -152',
+            sign: '"minecraft:jungle_wall_sign[facing=west]"',
+            display: {
+              Name: `${rawJson({
+                text: "Gluten-Free Vegan Berry Sandwich",
+                color: "#a11538"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Healthy and still delicious.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        }
       }
     }
 
@@ -1192,7 +1215,7 @@ export const item = {
     for (let sto of Object.keys(items)) {
       store.unsold[sto] = {};
       store.sold[sto] = {};
-      for (let [k, v] of Object.entries(items[sto])) {
+      Object.entries(items[sto]).forEach(([k, v], idx) => {
         v = <any> v;
         if (!('display' in v.tag)) {
           Object.assign(v.tag, {display:{Lore:`[]`}});
@@ -1221,7 +1244,7 @@ export const item = {
         store.sold[sto][k].tag.sold = true;
         delete store.sold[sto][k].tag.pos;
 
-        if (sto === "clothes") {
+        if (["clothes"].includes(sto)) {
           let armor = `[{},{},{},{}]`
           let disabledslots = 4144959;
           switch (eval(v.id)) {
@@ -1250,6 +1273,8 @@ export const item = {
           store.commands.push(v.tag.pos.map((x: string)=>
             `summon armor_stand ${x} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{Head:[${v.tag.rot[1]}F,0F,0F],LeftArm:[0F,0F,0F],RightArm:[0F,0F,0F],LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${v.tag.rot[0]}F,0F],ArmorItems:${armor}}`
           ))
+        } else if (["subway"].includes(sto)) {
+          store.commands.push(`setblock ${v.tag.pos} ${eval(v.tag.sign)}{Color:"black",GlowingText:0b,Text1:'',Text2:${v.tag.display.Name},Text3:'{"text":"${toCost(v.tag.cost)}","bold":true,"color":"white","clickEvent":{"action":"run_command","value":"bruh${idx}"}}',Text4:''}`)
         } else {
           store.npc[`__${sto}_${k}`] = npcSchema.parse({
             name: rawJson([
@@ -1277,7 +1302,7 @@ export const item = {
             }]
           })
         }
-      }
+      })
     }
 
     return store;
