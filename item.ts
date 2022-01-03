@@ -1170,7 +1170,6 @@ export const item = {
                 {
                   text: `for advanced tracking features!`,
                   italic: true,
-                  bold: true,
                   color: "dark_gray"
                 }
               ])}]`,
