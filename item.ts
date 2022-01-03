@@ -995,6 +995,29 @@ export const item = {
             Unbreakable:true,
             HideFlags:127
           }
+        },
+        tshirt: {
+          id: '"minecraft:leather_chestplate"',
+          tag: {
+            cost: 1499,
+            pos: ['978.4 63 -159.5', '977.8 63 -159.5', '977.2 63 -159.5', '976.6 63 -159.5'],
+            rot: [-180,0],
+            display: {
+              Name: `${rawJson({
+                text: "Plain White T-Shirt",
+                color: "gray"
+              })}`,
+              Lore:`[${rawJson({
+                  text: `Not really moist.`,
+                  italic: true,
+                  color: "dark_gray"
+                })}]`,
+              color: 0xFFFFFF
+            },
+            AttributeModifiers:`[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.1,Operation:1,UUID:[I;630021950,-922727500,-2135475505,1782472473],Slot:"head"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:8,Operation:0,UUID:[I;297611015,2008302109,-1966589247,1234231658],Slot:"head"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:-0.5,Operation:1,UUID:[I;-273434090,384581840,-1583253411,1779552702],Slot:"head"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;-1729656826,-1288877937,-1530664844,1597331081],Slot:"head"},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,Operation:1,UUID:[I;1590296044,1048791058,-2051703317,1770680387],Slot:"head"}]`,
+            Unbreakable:true,
+            HideFlags:127
+          }
         }
       }
     }
