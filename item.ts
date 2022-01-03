@@ -1106,6 +1106,43 @@ export const item = {
             HideFlags:127
           }
         },
+        socks: {
+          id: '"minecraft:leather_leggings"',
+          tag: {
+            cost: 44.99,
+            pos: ['974.5 64.5 -163.375', '974.5 64.5 -164.125', '974.5 64.5 -164.875', '974.5 64.5 -165.625'],
+            rot: [-180,0],
+            display: {
+              Name: `${rawJson({
+                text: "Programming Socks",
+                color: "#f772ea"
+              })}`,
+              Lore:`[${rawJson([
+                {
+                  text: `Frequently bought with `,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `C Programming Language,`,
+                  // italic: true,
+                  bold: true,
+                  color: '#6c92eb'
+                }
+              ])},${rawJson([
+                {
+                  text: `2nd Edition by Brian W. Kernighan.`,
+                  italic: true,
+                  bold: true,
+                  color: "#6c92eb"
+                }
+              ])}]`,
+              color: 0xe887ed
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
       }
     }
 
