@@ -1028,7 +1028,7 @@ export const item = {
             display: {
               Name: `${rawJson({
                 text: "Superior® Branded Tagless Tee",
-                color: "gray"
+                color: "#FF0000"
               })}`,
               Lore:`[${rawJson({
                   text: `Squint and you'll see the logo.`,
