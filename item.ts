@@ -931,7 +931,7 @@ export const item = {
             HideFlags:127
           }
         },
-        bowlerhat: {
+        knittedcap: {
           id: '"minecraft:leather_helmet"',
           tag: {
             cost: 1199,
@@ -966,9 +966,32 @@ export const item = {
                   bold: false,
                   color: "#51534A"
                 },
-              ])},]`,
+              ])}]`,
               color: 0x51534A
             },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        fedora: {
+          id: '"minecraft:leather_helmet"',
+          tag: {
+            cost: 1199,
+            pos: ['977.24 62.9 -155.5', '977.24 62.9 -156.5', '977.24 62.9 -157.5'],
+            rot: [90,23],
+            display: {
+              Name: `${rawJson({
+                text: "Fedora",
+                color: "dark_gray"
+              })}`,
+              Lore:`[${rawJson({
+                  text: `You feel a transformation take place.`,
+                  italic: true,
+                  color: "dark_gray"
+                })}]`,
+              color: 0x16181a
+            },
+            AttributeModifiers:`[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.1,Operation:1,UUID:[I;630021950,-922727500,-2135475505,1782472473],Slot:"head"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:8,Operation:0,UUID:[I;297611015,2008302109,-1966589247,1234231658],Slot:"head"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:-0.5,Operation:1,UUID:[I;-273434090,384581840,-1583253411,1779552702],Slot:"head"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;-1729656826,-1288877937,-1530664844,1597331081],Slot:"head"},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,Operation:1,UUID:[I;1590296044,1048791058,-2051703317,1770680387],Slot:"head"}]}}]`,
             Unbreakable:true,
             HideFlags:127
           }
