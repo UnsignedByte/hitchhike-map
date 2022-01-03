@@ -1274,7 +1274,10 @@ export const item = {
             `summon armor_stand ${x} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{Head:[${v.tag.rot[1]}F,0F,0F],LeftArm:[0F,0F,0F],RightArm:[0F,0F,0F],LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${v.tag.rot[0]}F,0F],ArmorItems:${armor}}`
           ))
         } else if (["subway"].includes(sto)) {
-          store.commands.push(`setblock ${v.tag.pos} ${eval(v.tag.sign)}{Color:"black",GlowingText:0b,Text1:'',Text2:${v.tag.display.Name},Text3:'{"text":"${toCost(v.tag.cost)}","bold":true,"color":"white","clickEvent":{"action":"run_command","value":"bruh${idx}"}}',Text4:''}`)
+          store.commands.push([
+            `setblock ${v.tag.pos} air`,
+            `setblock ${v.tag.pos} ${eval(v.tag.sign)}{Color:"black",GlowingText:0b,Text1:'',Text2:${v.tag.display.Name},Text3:'{"text":"${toCost(v.tag.cost)}","bold":true,"color":"white","clickEvent":{"action":"run_command","value":"bruh${idx}"}}',Text4:''}`
+          ])
         } else {
           store.npc[`__${sto}_${k}`] = npcSchema.parse({
             name: rawJson([
