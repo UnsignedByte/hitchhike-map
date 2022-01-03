@@ -1065,7 +1065,7 @@ export const item = {
         denimshirt: {
           id: '"minecraft:leather_chestplate"',
           tag: {
-            cost: 3999,
+            cost: 3499,
             pos: ['982.5 64 -159.375', '982.5 64 -160.125', '982.5 64 -160.875', '982.5 64 -161.625'],
             rot: [180,0],
             display: {
