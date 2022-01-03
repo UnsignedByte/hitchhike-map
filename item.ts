@@ -1083,7 +1083,29 @@ export const item = {
             Unbreakable:true,
             HideFlags:127
           }
-        }
+        },
+        jeans: {
+          id: '"minecraft:leather_leggings"',
+          tag: {
+            cost: 44.99,
+            pos: ['974.5 64 -159.375', '974.5 64 -160.125', '974.5 64 -160.875', '974.5 64 -161.625'],
+            rot: [-180,0],
+            display: {
+              Name: `${rawJson({
+                text: "Jeans",
+                color: "#1860db"
+              })}`,
+              Lore:`[${rawJson({
+                  text: `Simple and useful.`,
+                  italic: true,
+                  color: "dark_gray"
+                })}]`,
+              color: 0x1f4d9c
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
       }
     }
 
