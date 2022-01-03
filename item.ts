@@ -949,19 +949,22 @@ export const item = {
                   color: "#51534A"
                 },
                 {
-                  text: `LEGO Prisoner 50380`,
+                  text: `LEGO Prisoner 50380 in`,
                   // italic: true,
                   bold: true,
                   // color: '#51534A'
                 }
               ])},${rawJson([
                 {
-                  text: `LEGO Prisoner 50380 in Medium Orange Uniform`,
+                  text: `Medium Orange Uniform`,
                   italic: true,
                   bold: true,
                   color: "#51534A"
                 },
-                ` in you.`
+                {
+                  text: ` in you.`,
+                  bold: false
+                },
               ])},]`,
               color: 0x51534A
             },
