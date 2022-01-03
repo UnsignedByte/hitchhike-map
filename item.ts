@@ -1087,7 +1087,7 @@ export const item = {
         jeans: {
           id: '"minecraft:leather_leggings"',
           tag: {
-            cost: 44.99,
+            cost: 4499,
             pos: ['974.5 64.5 -159.375', '974.5 64.5 -160.125', '974.5 64.5 -160.875', '974.5 64.5 -161.625'],
             rot: [-180,0],
             display: {
@@ -1109,7 +1109,7 @@ export const item = {
         socks: {
           id: '"minecraft:leather_leggings"',
           tag: {
-            cost: 44.99,
+            cost: 2199,
             pos: ['974.5 64.5 -163.375', '974.5 64.5 -164.125', '974.5 64.5 -164.875', '974.5 64.5 -165.625'],
             rot: [-180,0],
             display: {
@@ -1137,7 +1137,44 @@ export const item = {
                   color: "#6c92eb"
                 }
               ])}]`,
-              color: 0xe887ed
+              color: 0xeaa6ed
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        pants: {
+          id: '"minecraft:leather_leggings"',
+          tag: {
+            cost: 15499,
+            pos: ['974.5 64.5 -155.375', '974.5 64.5 -156.125', '974.5 64.5 -156.875', '974.5 64.5 -157.625'],
+            rot: [-180,0],
+            display: {
+              Name: `${rawJson({
+                text: "Smart Pants",
+                color: "#95d9ed"
+              })}`,
+              Lore:`[${rawJson([
+                {
+                  text: `Pair with your `,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `Smart Watch`,
+                  // italic: true,
+                  bold: true,
+                  color: '#d1dbde'
+                }
+              ])},${rawJson([
+                {
+                  text: `for advanced tracking features!`,
+                  italic: true,
+                  bold: true,
+                  color: "dark_gray"
+                }
+              ])}]`,
+              color: 0xd1dbde
             },
             Unbreakable:true,
             HideFlags:127
