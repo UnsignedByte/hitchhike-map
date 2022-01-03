@@ -1023,7 +1023,7 @@ export const item = {
           tag: {
             cost: 55000,
             pos: ['977.5 64 -159.375', '977.5 64 -160.125', '977.5 64 -160.875', '977.5 64 -161.625'],
-            rot: [-180,0],
+            rot: [180,0],
             display: {
               Name: `${rawJson({
                 text: "Canada Mousse Jacket",
@@ -1034,7 +1034,7 @@ export const item = {
                   italic: true,
                   color: "dark_gray"
                 })}]`,
-              color: 0xb3ac91
+              color: 0xb8ad82
             },
             Unbreakable:true,
             HideFlags:127
@@ -1057,6 +1057,28 @@ export const item = {
                   color: "dark_gray"
                 })}]`,
               color: 0xFFFFFF
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        denimshirt: {
+          id: '"minecraft:leather_chestplate"',
+          tag: {
+            cost: 3999,
+            pos: ['982.5 64 -159.375', '982.5 64 -160.125', '982.5 64 -160.875', '982.5 64 -161.625'],
+            rot: [180,0],
+            display: {
+              Name: `${rawJson({
+                text: "Denim Shirt",
+                color: "#2c72d4"
+              })}`,
+              Lore:`[${rawJson({
+                  text: `Like pants but for the upper body.`,
+                  italic: true,
+                  color: "dark_gray"
+                })}]`,
+              color: 0x346aa3
             },
             Unbreakable:true,
             HideFlags:127
