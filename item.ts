@@ -1018,6 +1018,29 @@ export const item = {
             Unbreakable:true,
             HideFlags:127
           }
+        },
+        brandedtshirt: {
+          id: '"minecraft:leather_chestplate"',
+          tag: {
+            cost: 4999,
+            pos: ['981.5 64 -159.375', '981.5 64 -160.125', '981.5 64 -160.875', '981.5 64 -161.625'],
+            rot: [-180,0],
+            display: {
+              Name: `${rawJson({
+                text: "Superior® Branded Tagless Tee",
+                color: "gray"
+              })}`,
+              Lore:`[${rawJson({
+                  text: `Squint and you'll see the logo.`,
+                  italic: true,
+                  color: "dark_gray"
+                })}]`,
+              color: 0xFFFFFF
+            },
+            AttributeModifiers:`[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.1,Operation:1,UUID:[I;630021950,-922727500,-2135475505,1782472473],Slot:"head"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:8,Operation:0,UUID:[I;297611015,2008302109,-1966589247,1234231658],Slot:"head"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:-0.5,Operation:1,UUID:[I;-273434090,384581840,-1583253411,1779552702],Slot:"head"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;-1729656826,-1288877937,-1530664844,1597331081],Slot:"head"},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,Operation:1,UUID:[I;1590296044,1048791058,-2051703317,1770680387],Slot:"head"}]`,
+            Unbreakable:true,
+            HideFlags:127
+          }
         }
       }
     }
@@ -1088,7 +1111,7 @@ export const item = {
           }
 
           store.commands.push(v.tag.pos.map((x: string)=>
-            `summon armor_stand ${x} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{Head:[${v.tag.rot[1]}F,0F,0F],LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${v.tag.rot[0]}F,0F],ArmorItems:${armor}}`
+            `summon armor_stand ${x} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{Head:[${v.tag.rot[1]}F,0F,0F],LeftArm:[0F,0F,0F],RightArm:[0F,0F,0F],LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${v.tag.rot[0]}F,0F],ArmorItems:${armor}}`
           ))
         } else {
           store.npc[`__${sto}_${k}`] = npcSchema.parse({
