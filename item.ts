@@ -976,7 +976,7 @@ export const item = {
         fedora: {
           id: '"minecraft:leather_helmet"',
           tag: {
-            cost: 1199,
+            cost: 4499,
             pos: ['977.24 62.9 -155.5', '977.24 62.9 -156.5', '977.24 62.9 -157.5'],
             rot: [90,23],
             display: {
