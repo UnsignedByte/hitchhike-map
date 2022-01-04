@@ -9,7 +9,7 @@ tag @e[type=item,nbt={Item:{tag:{store:"safeway",sold:0b}}}] remove paying
 tag @e[type=item,nbt={Item:{tag:{store:"safeway",sold:0b}}},x=891,y=65,z=-154,dx=0,dy=0,dz=0] add paying
 execute as @e[tag=paying,type=item,x=891,y=65,z=-154,dx=0,dy=0,dz=0] run data modify entity @s Age set value -32768
 # Deal with triggers
-execute as @a[scores={storetrigger=-2147483648..2147483647}] at @s if entity @s[x=881,z=-169,dx=36,dz=18] run function generated:story/stores/safeway/handletrigger
+execute as @a[scores={storetrigger=-2147483648..2147483647}] at @s unless entity @s[scores={storetrigger=0}] if entity @s[x=881,z=-169,dx=36,dz=18] run function generated:story/stores/safeway/handletrigger
 # reset status if no items to buy
 scoreboard players set @e[tag=npc-safeway] dialogue-status 0
 # set status of safeway to paying
@@ -25,7 +25,7 @@ tag @e[type=item,nbt={Item:{tag:{store:"clothes",sold:0b}}}] remove paying
 tag @e[type=item,nbt={Item:{tag:{store:"clothes",sold:0b}}},x=950,y=64,z=-147,dx=2,dy=1,dz=2] add paying
 execute as @e[tag=paying,type=item,x=950,y=64,z=-147,dx=2,dy=1,dz=2] run data modify entity @s Age set value -32768
 # Deal with triggers
-execute as @a[scores={storetrigger=-2147483648..2147483647}] at @s if entity @s[x=973,z=-172,dx=19,dz=19] run function generated:story/stores/clothes/handletrigger
+execute as @a[scores={storetrigger=-2147483648..2147483647}] at @s unless entity @s[scores={storetrigger=0}] if entity @s[x=973,z=-172,dx=19,dz=19] run function generated:story/stores/clothes/handletrigger
 # reset status if no items to buy
 scoreboard players set @e[tag=npc-clothes] dialogue-status 0
 # set status of clothes to paying
@@ -41,10 +41,10 @@ tag @e[type=item,nbt={Item:{tag:{store:"subway",sold:0b}}}] remove paying
 tag @e[type=item,nbt={Item:{tag:{store:"subway",sold:0b}}},x=977,y=65,z=-169,dx=9,dy=0,dz=1] add paying
 execute as @e[tag=paying,type=item,x=977,y=65,z=-169,dx=9,dy=0,dz=1] run data modify entity @s Age set value -32768
 # Deal with triggers
-execute as @a[scores={storetrigger=-2147483648..2147483647}] at @s if entity @s[x=941,z=-161,dx=14,dz=20] run function generated:story/stores/subway/handletrigger
+execute as @a[scores={storetrigger=-2147483648..2147483647}] at @s unless entity @s[scores={storetrigger=0}] if entity @s[x=941,z=-161,dx=14,dz=20] run function generated:story/stores/subway/handletrigger
 # reset status if no items to buy
 scoreboard players set @e[tag=npc-subway] dialogue-status 0
 # set status of subway to paying
 execute if entity @e[tag=paying,type=item,x=977,y=65,z=-169,dx=9,dy=0,dz=1] run scoreboard players set @e[tag=npc-subway] dialogue-status 5
 
-scoreboard players reset @a storetrigger
+scoreboard players set @a storetrigger 0
