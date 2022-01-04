@@ -1185,7 +1185,7 @@ export const item = {
         vegan: {
           id: '"minecraft:sweet_berries"',
           tag: {
-            cost: 1599,
+            cost: 999,
             pos: '949 64 -152',
             sign: '"minecraft:jungle_wall_sign[facing=west]"',
             display: {
@@ -1206,7 +1206,7 @@ export const item = {
         gluten: {
           id: '"minecraft:bread"',
           tag: {
-            cost: 1299,
+            cost: 899,
             pos: '949 64 -151',
             sign: '"minecraft:jungle_wall_sign[facing=west]"',
             display: {
@@ -1227,7 +1227,7 @@ export const item = {
         meat: {
           id: '"minecraft:cooked_chickens"',
           tag: {
-            cost: 1799,
+            cost: 1199,
             pos: '949 64 -150',
             sign: '"minecraft:jungle_wall_sign[facing=west]"',
             display: {
@@ -1254,7 +1254,7 @@ export const item = {
             display: {
               Name: `${rawJson({
                 text: "Soda",
-                color: "#755137"
+                color: "#916443"
               })}`,
               Lore:`[${rawJson({
                 text: `Fizzy Goodness.`,
