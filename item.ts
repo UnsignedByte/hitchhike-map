@@ -1279,7 +1279,7 @@ export const item = {
         milktea: {
           id: '"minecraft:potion"',
           tag: {
-            cost: 549,
+            cost: 559,
             pos: '998 64 -161',
             sign: '"minecraft:spruce_wall_sign[facing=south]"',
             display: {
@@ -1302,7 +1302,7 @@ export const item = {
         almondtea: {
           id: '"minecraft:potion"',
           tag: {
-            cost: 549,
+            cost: 589,
             pos: '1000 64 -161',
             sign: '"minecraft:spruce_wall_sign[facing=south]"',
             display: {
