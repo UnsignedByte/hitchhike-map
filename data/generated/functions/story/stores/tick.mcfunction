@@ -60,14 +60,14 @@ execute as @a[nbt={Inventory:[{tag:{store:"ramen",sold:0b}}]}] at @s unless enti
 execute as @e[type=item,nbt={Item:{tag:{store:"ramen",sold:0b}}}] at @s unless entity @s[x=1029,z=-161,dx=14,dz=20] run kill @s
 execute as @e[type=item,tag=!paying,nbt={Item:{store:"ramen",tag:{sold:0b}},Age:0s},x=1029,z=-161,dx=14,dz=20,y=0,dy=255] run data modify entity @s Age set value 5800
 tag @e[type=item,nbt={Item:{tag:{store:"ramen",sold:0b}}}] remove paying
-tag @e[type=item,nbt={Item:{tag:{store:"ramen",sold:0b}}},x=996,y=65,z=-168,dx=0,dy=0,dz=2] add paying
-execute as @e[tag=paying,type=item,x=996,y=65,z=-168,dx=0,dy=0,dz=2] run data modify entity @s Age set value -32768
+tag @e[type=item,nbt={Item:{tag:{store:"ramen",sold:0b}}},x=1039,y=65,z=-153,dx=0,dy=0,dz=2] add paying
+execute as @e[tag=paying,type=item,x=1039,y=65,z=-153,dx=0,dy=0,dz=2] run data modify entity @s Age set value -32768
 # Deal with triggers
 execute as @a unless score @s storetrigger matches 0 at @s if entity @s[x=1029,z=-161,dx=14,dz=20] run function generated:story/stores/ramen/handletrigger
 # reset status if no items to buy
 scoreboard players set @e[tag=npc-ramen] dialogue-status 0
 # set status of ramen to paying
-execute if entity @e[tag=paying,type=item,x=996,y=65,z=-168,dx=0,dy=0,dz=2] run scoreboard players set @e[tag=npc-ramen] dialogue-status 5
+execute if entity @e[tag=paying,type=item,x=1039,y=65,z=-153,dx=0,dy=0,dz=2] run scoreboard players set @e[tag=npc-ramen] dialogue-status 5
 
 scoreboard players reset @a storetrigger
 execute as @a at @s if entity @s[x=881,z=-169,dx=36,dz=18] run scoreboard players add @s storetrigger 0

@@ -3167,10 +3167,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             "Bov short."
           ]
         ],
-        unsoldrange: [996, 65, -168, 996, 65, -166],
-        paypos: [996.5, 65, -166.5],
+        unsoldrange: [1039, 65, -153, 1039, 65, -151],
+        paypos: [1039.5, 65, -151.5],
         shoprange:[1029, -161, 1043, -141],
-        lock: ["<",{"text":"Blets Chun","color":"#d65454","bold":true},"> Don't you want anything?"]
+        lock: ["<",{"text":"Otori","color":"#8723a6","bold":true},"> Don't you want anything?"]
       }
     }
 
