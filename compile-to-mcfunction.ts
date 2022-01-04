@@ -3093,7 +3093,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             "Bov."
           ],
           [
-            "You\'re still missing' ",
+            "You\'re still missing ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
@@ -3103,6 +3103,40 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         unsoldrange: [950, 64, -147, 952, 65, -145],
         paypos: [950.5, 64.5, -144.5],
         shoprange:[941, -161, 955, -141],
+        lock: ["<",{"text":"Sili Connesse","color":"#f0d792","bold":true},"> Hey, aren't you going to finish your order?"]
+      },
+      boba: {
+        welcome: "Welcome to SiTea, the best Boba shop in town!",
+        return: [
+          "Alright, have you made your choices?",
+          "I hope you enjoy your drinks!"
+        ],
+        success: [
+          "Alright, ",
+          {"score":{"name":"_B"}},
+          ".",
+          {"score":{"name":"_b"}},
+          " Bov is your change. Have a nice day!"
+        ],
+        failmessages: [
+          [
+            "Your total is ",
+            {"score":{"name":"_B"}},
+            ".",
+            {"score":{"name":"_b"}},
+            "Bov."
+          ],
+          [
+            "You\'re only missing ",
+            {"score":{"name":"_B"}},
+            ".",
+            {"score":{"name":"_b"}},
+            "Bov."
+          ]
+        ],
+        unsoldrange: [996, 65, -168, 996, 65, -166],
+        paypos: [996.5, 65, -166.5],
+        shoprange:[993, -173, 1007, -153],
         lock: ["<",{"text":"Sili Connesse","color":"#f0d792","bold":true},"> Hey, aren't you going to finish your order?"]
       }
     }

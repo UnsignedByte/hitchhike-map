@@ -1275,8 +1275,8 @@ export const item = {
           }
         }
       },
-      boba: {    
-        drink: {
+      boba: {
+        milktea: {
           id: '"minecraft:potion"',
           tag: {
             cost: 549,
@@ -1285,7 +1285,7 @@ export const item = {
             display: {
               Name: `${rawJson({
                 text: "Milk Tea",
-                color: "#b59369"
+                color: "#9c7f5c"
               })}`,
               Lore:`[${rawJson({
                 text: `The classic.`,
@@ -1295,14 +1295,31 @@ export const item = {
             },
             Unbreakable:true,
             HideFlags:127,
-            // CustomPotionEffects:`[${toSnbt(
-            //   {Id:'18b',Amplifier:'0b',Duration:300})}, ${toSnbt(
-            //   {Id:'19b',Amplifier:'9b',Duration:200})}, ${toSnbt(
-            //   {Id:'21b',Amplifier:'3b',Duration:400})}, ${toSnbt(
-            //   {Id:'22b',Amplifier:'1b',Duration:200})}, ${toSnbt(
-            //   {Id:'23b',Amplifier:'0b',Duration:5})}]`,
             Potion:`"minecraft:awkward"`,
             CustomPotionColor:0xb59369
+          }
+        },
+        almondtea: {
+          id: '"minecraft:potion"',
+          tag: {
+            cost: 549,
+            pos: '1000 64 -161',
+            sign: '"minecraft:birch_wall_sign[facing=south]"',
+            display: {
+              Name: `${rawJson({
+                text: "Almond Milk Tea",
+                color: "#9c8857"
+              })}`,
+              Lore:`[${rawJson({
+                text: `A Delicious Drupe.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127,
+            Potion:`"minecraft:awkward"`,
+            CustomPotionColor:0xb89a5a
           }
         }
       }

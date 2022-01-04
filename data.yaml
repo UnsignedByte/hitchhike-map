@@ -781,6 +781,31 @@ npc:
               storage: hitchhike:stores
               interpret: true
           cond: 5
+    boba:
+      name: Blets Chun
+      position: 997.5 64 -166.5
+      rotation: 90 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzdhMTg5NDFkZGMzZDg2YTM5YTMzODcyMDI0MmE3OWQ3YTg0ZmYxZGQxZTQ4ZTY3MjRhZDkxNjNlNTZjIn19fQ==
+      colour: 0xd65454
+      villager:
+        type: taiga
+        villager: shepherd
+      dialogue:
+        - messages:
+          - Welcome to SiTea, the best boba shop in town!
+        - messages:
+          - message:
+            - nbt: welcome.subway
+              storage: hitchhike:stores
+              interpret: true
+            command:
+              - type: function
+                value: "generated:story/stores/subway/pay"
+          - message:
+            - nbt: success.subway
+              storage: hitchhike:stores
+              interpret: true
+          cond: 5
     icecream:
       name: Laak Towse
       position: 966.5 64 -150.5

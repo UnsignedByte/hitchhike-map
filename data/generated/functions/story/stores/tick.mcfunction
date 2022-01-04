@@ -47,4 +47,20 @@ scoreboard players set @e[tag=npc-subway] dialogue-status 0
 # set status of subway to paying
 execute if entity @e[tag=paying,type=item,x=950,y=64,z=-147,dx=2,dy=1,dz=2] run scoreboard players set @e[tag=npc-subway] dialogue-status 5
 
+#> store boba
+execute as @a at @s if entity @s[x=993,z=-173,dx=14,dz=20] run scoreboard players enable @s storetrigger
+execute as @a[nbt={Inventory:[{tag:{store:"boba",sold:0b}}]}] at @s unless entity @s[x=993,z=-173,dx=14,dz=20] run function generated:story/stores/boba/lock
+# Kill Thrown Items
+execute as @e[type=item,nbt={Item:{tag:{store:"boba",sold:0b}}}] at @s unless entity @s[x=993,z=-173,dx=14,dz=20] run kill @s
+execute as @e[type=item,tag=!paying,nbt={Item:{store:"boba",tag:{sold:0b}},Age:0s},x=993,z=-173,dx=14,dz=20,y=0,dy=255] run data modify entity @s Age set value 5800
+tag @e[type=item,nbt={Item:{tag:{store:"boba",sold:0b}}}] remove paying
+tag @e[type=item,nbt={Item:{tag:{store:"boba",sold:0b}}},x=996,y=65,z=-168,dx=0,dy=0,dz=2] add paying
+execute as @e[tag=paying,type=item,x=996,y=65,z=-168,dx=0,dy=0,dz=2] run data modify entity @s Age set value -32768
+# Deal with triggers
+execute as @a[scores={storetrigger=-2147483648..2147483647}] at @s unless entity @s[scores={storetrigger=0}] if entity @s[x=993,z=-173,dx=14,dz=20] run function generated:story/stores/boba/handletrigger
+# reset status if no items to buy
+scoreboard players set @e[tag=npc-boba] dialogue-status 0
+# set status of boba to paying
+execute if entity @e[tag=paying,type=item,x=996,y=65,z=-168,dx=0,dy=0,dz=2] run scoreboard players set @e[tag=npc-boba] dialogue-status 5
+
 scoreboard players set @a storetrigger 0

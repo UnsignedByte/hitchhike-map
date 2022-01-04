@@ -4074,6 +4074,8 @@ tag @a remove victim-of-dialogue-by-clothes
 
 tag @a remove victim-of-dialogue-by-subway
 
+tag @a remove victim-of-dialogue-by-boba
+
 tag @a remove victim-of-dialogue-by-icecream
 
 tag @a remove victim-of-dialogue-by-cameron
