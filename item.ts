@@ -1321,6 +1321,52 @@ export const item = {
             Potion:`"minecraft:awkward"`,
             CustomPotionColor:0xb89a5a
           }
+        },
+        oolong: {
+          id: '"minecraft:potion"',
+          tag: {
+            cost: 619,
+            pos: '1002 64 -161',
+            sign: '"minecraft:spruce_wall_sign[facing=south]"',
+            display: {
+              Name: `${rawJson({
+                text: "Oolong Tea",
+                color: "#e6b925"
+              })}`,
+              Lore:`[${rawJson({
+                text: `烏龍茶`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127,
+            Potion:`"minecraft:awkward"`,
+            CustomPotionColor:0xdbad14
+          }
+        },
+        water: {
+          id: '"minecraft:potion"',
+          tag: {
+            cost: 619,
+            pos: '1004 64 -161',
+            sign: '"minecraft:spruce_wall_sign[facing=south]"',
+            display: {
+              Name: `${rawJson({
+                text: "Unsweetened 0-Calorie Tea",
+                color: "#cca860"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Healthy Goodness.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127,
+            Potion:`"minecraft:awkward"`,
+            // CustomPotionColor:0xdbad14
+          }
         }
       }
     }

@@ -70,3 +70,7 @@ setblock 998 64 -161 air
 setblock 998 64 -161 minecraft:spruce_wall_sign[facing=south]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 1062756885"}}',Text2:'{"text":"Milk Tea","color":"#9c7f5c"}',Text3:'{"text":"5.59B","bold":true,"color":"white"}',Text4:''}
 setblock 1000 64 -161 air
 setblock 1000 64 -161 minecraft:spruce_wall_sign[facing=south]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 1251701677"}}',Text2:'{"text":"Almond Milk Tea","color":"#9c8857"}',Text3:'{"text":"5.89B","bold":true,"color":"white"}',Text4:''}
+setblock 1002 64 -161 air
+setblock 1002 64 -161 minecraft:spruce_wall_sign[facing=south]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set -1011293092"}}',Text2:'{"text":"Oolong Tea","color":"#e6b925"}',Text3:'{"text":"6.19B","bold":true,"color":"white"}',Text4:''}
+setblock 1004 64 -161 air
+setblock 1004 64 -161 minecraft:spruce_wall_sign[facing=south]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 112903447"}}',Text2:'{"text":"Unsweetened 0-Calorie Tea","color":"#cca860"}',Text3:'{"text":"6.19B","bold":true,"color":"white"}',Text4:''}
