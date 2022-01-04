@@ -3184,6 +3184,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           text: "[Tonkotsu]",
           color: "#bfa569",
           bold: true,
+          italic: true,
           clickEvent: {
             action: "run_command",
             value: `/trigger storetrigger set ${hash("tonkotsu")}`
@@ -3201,6 +3202,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           text: "[Shoyu]",
           color: "#bd7d5c",
           bold: true,
+          italic: true,
           clickEvent: {
             action: "run_command",
             value: `/trigger storetrigger set ${hash("shoyu")}`
@@ -3218,6 +3220,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           text: "[Miso]",
           color: "#b87f39",
           bold: true,
+          italic: true,
           clickEvent: {
             action: "run_command",
             value: `/trigger storetrigger set ${hash("miso")}`

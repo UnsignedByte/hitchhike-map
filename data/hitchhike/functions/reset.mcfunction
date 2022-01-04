@@ -5,6 +5,7 @@ time set 23000
 gamerule doDaylightCycle false
 gamerule playersSleepingPercentage 200
 gamerule doLimitedCrafting true
+# gamerule sendCommandFeedback false
 stopsound @a
 recipe take @a *
 
