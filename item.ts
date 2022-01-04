@@ -765,7 +765,7 @@ export const item = {
             },
             HideFlags:127,
             CustomPotionEffects:`[${toSnbt(
-              {Id:'1b',Amplifier:'2b',Duration:100})}, ${toSnbt(
+              // {Id:'1b',Amplifier:'2b',Duration:100})}, ${toSnbt(
               {Id:'3b',Amplifier:'1b',Duration:600})}, ${toSnbt(
               {Id:'9b',Amplifier:'0b',Duration:200})}, ${toSnbt(
               {Id:'15b',Amplifier:'0b',Duration:20})}, ${toSnbt(
@@ -790,8 +790,8 @@ export const item = {
               {Id:'4b',Amplifier:'1b',Duration:400})}, ${toSnbt(
               {Id:'15b',Amplifier:'0b',Duration:20})}, ${toSnbt(
               {Id:'17b',Amplifier:'100b',Duration:80})}, ${toSnbt(
-              {Id:'18b',Amplifier:'9b',Duration:1200})}, ${toSnbt(
-              {Id:'28b',Amplifier:'0b',Duration:100})}]`,
+              // {Id:'28b',Amplifier:'9b',Duration:100})}, ${toSnbt(
+              {Id:'18b',Amplifier:'9b',Duration:1200})}]`,
             Potion:`"minecraft:awkward"`,
             CustomPotionColor:2799851
           }
@@ -1185,7 +1185,7 @@ export const item = {
         vegan: {
           id: '"minecraft:sweet_berries"',
           tag: {
-            cost: 1499,
+            cost: 1599,
             pos: '949 64 -152',
             sign: '"minecraft:jungle_wall_sign[facing=west]"',
             display: {
@@ -1206,7 +1206,7 @@ export const item = {
         gluten: {
           id: '"minecraft:bread"',
           tag: {
-            cost: 1499,
+            cost: 1299,
             pos: '949 64 -151',
             sign: '"minecraft:jungle_wall_sign[facing=west]"',
             display: {
@@ -1227,7 +1227,7 @@ export const item = {
         meat: {
           id: '"minecraft:cooked_chickens"',
           tag: {
-            cost: 1499,
+            cost: 1799,
             pos: '949 64 -150',
             sign: '"minecraft:jungle_wall_sign[facing=west]"',
             display: {
@@ -1243,6 +1243,35 @@ export const item = {
             },
             Unbreakable:true,
             HideFlags:127
+          }
+        },
+        drink: {
+          id: '"minecraft:potion"',
+          tag: {
+            cost: 99,
+            pos: '949 64 -1489',
+            sign: '"minecraft:jungle_wall_sign[facing=west]"',
+            display: {
+              Name: `${rawJson({
+                text: "Soda",
+                color: "#755137"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Fizzy Goodness.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127,
+            CustomPotionEffects:`[${toSnbt(
+              {Id:'18b',Amplifier:'0b',Duration:300})}, ${toSnbt(
+              {Id:'19b',Amplifier:'9b',Duration:200})}, ${toSnbt(
+              {Id:'21b',Amplifier:'3b',Duration:400})}, ${toSnbt(
+              {Id:'22b',Amplifier:'1b',Duration:200})}, ${toSnbt(
+              {Id:'23b',Amplifier:'0b',Duration:5})}]`,
+            Potion:`"minecraft:awkward"`,
+            CustomPotionColor:0x382a20
           }
         }
       }
