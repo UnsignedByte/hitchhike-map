@@ -1271,7 +1271,7 @@ export const item = {
               {Id:'22b',Amplifier:'1b',Duration:200})}, ${toSnbt(
               {Id:'23b',Amplifier:'0b',Duration:5})}]`,
             Potion:`"minecraft:awkward"`,
-            CustomPotionColor:0x263827
+            CustomPotionColor:0x382a20
           }
         }
       }
