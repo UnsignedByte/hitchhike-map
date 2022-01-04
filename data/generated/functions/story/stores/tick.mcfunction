@@ -1,5 +1,6 @@
 
 #> store safeway
+scoreboard players enable @a[x=881,z=-169,dx=36,dz=18] storetrigger
 execute as @a[nbt={Inventory:[{tag:{store:"safeway",sold:0b}}]}] at @s unless entity @s[x=881,z=-169,dx=36,dz=18] run function generated:story/stores/safeway/lock
 # Kill Thrown Items
 execute as @e[type=item,nbt={Item:{tag:{store:"safeway",sold:0b}}}] at @s unless entity @s[x=881,z=-169,dx=36,dz=18] run kill @s
@@ -15,6 +16,7 @@ scoreboard players set @e[tag=npc-safeway] dialogue-status 0
 execute if entity @e[tag=paying,type=item,x=891,y=65,z=-154,dx=0,dy=0,dz=0] run scoreboard players set @e[tag=npc-safeway] dialogue-status 5
 
 #> store clothes
+scoreboard players enable @a[x=973,z=-172,dx=19,dz=19] storetrigger
 execute as @a[nbt={Inventory:[{tag:{store:"clothes",sold:0b}}]}] at @s unless entity @s[x=973,z=-172,dx=19,dz=19] run function generated:story/stores/clothes/lock
 # Kill Thrown Items
 execute as @e[type=item,nbt={Item:{tag:{store:"clothes",sold:0b}}}] at @s unless entity @s[x=973,z=-172,dx=19,dz=19] run kill @s
@@ -30,6 +32,7 @@ scoreboard players set @e[tag=npc-clothes] dialogue-status 0
 execute if entity @e[tag=paying,type=item,x=950,y=64,z=-147,dx=2,dy=1,dz=2] run scoreboard players set @e[tag=npc-clothes] dialogue-status 5
 
 #> store subway
+scoreboard players enable @a[x=941,z=-161,dx=14,dz=20] storetrigger
 execute as @a[nbt={Inventory:[{tag:{store:"subway",sold:0b}}]}] at @s unless entity @s[x=941,z=-161,dx=14,dz=20] run function generated:story/stores/subway/lock
 # Kill Thrown Items
 execute as @e[type=item,nbt={Item:{tag:{store:"subway",sold:0b}}}] at @s unless entity @s[x=941,z=-161,dx=14,dz=20] run kill @s
