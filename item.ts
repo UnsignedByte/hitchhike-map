@@ -1348,7 +1348,7 @@ export const item = {
         water: {
           id: '"minecraft:potion"',
           tag: {
-            cost: 619,
+            cost: 449,
             pos: '1004 64 -161',
             sign: '"minecraft:spruce_wall_sign[facing=south]"',
             display: {
@@ -1387,6 +1387,7 @@ export const item = {
           Object.assign(v.tag, {display:{Lore:`[]`}});
         }
         v.tag.store = `"${sto}"`
+        v.tag.item = `"${k}"`
 
         store.unsold[sto][k] = JSON.parse(JSON.stringify(v));
         store.unsold[sto][k].tag.display.Lore = JSON.stringify(eval(`[...${store.unsold[sto][k].tag.display.Lore}, ${rawJson({text: ""})}, ${rawJson({

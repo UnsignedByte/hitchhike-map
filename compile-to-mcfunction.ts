@@ -3106,7 +3106,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         lock: ["<",{"text":"Sili Connesse","color":"#f0d792","bold":true},"> Hey, aren't you going to finish your order?"]
       },
       boba: {
-        welcome: "Welcome to SiTea, the best Boba shop in town!",
+        welcome: "Welcome to SiTea, the best boba shop in town!",
         return: [
           "Alright, have you made your choices?",
           "I hope you enjoy your drinks!"
@@ -3206,7 +3206,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
         addfunc(`stores/${k}/sell`, [
           Object.keys(item.store.unsold[k]).map(it=>
-            `execute as @e[tag=paying,nbt={Item:${toSnbt(item.store.unsold[k][it])}}] run data merge entity @s {Item:${toSnbt(item.store.sold[k][it])}}`
+            `execute as @e[tag=paying,nbt={Item:{tag:{sold:0b,store:"${k}",item:"${it}"}}}] run data merge entity @s {Item:${toSnbt(item.store.sold[k][it])}}`
           ),
           `tag ${unsolditems} add just-paid`,
           `tag ${unsolditems} remove paying`,

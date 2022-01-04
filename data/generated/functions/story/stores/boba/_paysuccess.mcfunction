@@ -3,4 +3,4 @@ data modify storage hitchhike:stores success.boba set value '["Alright, ",{"scor
 # sell items.
 function generated:story/stores/boba/sell
 # Reset welcome message
-data modify storage hitchhike:stores welcome.boba set value '"Welcome to SiTea, the best Boba shop in town!"'
+data modify storage hitchhike:stores welcome.boba set value '"Welcome to SiTea, the best boba shop in town!"'
