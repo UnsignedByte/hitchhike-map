@@ -3141,7 +3141,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       },
       ramen: {
         welcome: [
-          "Welcome! We have ",
+          "Welcome! Would you like ",
           {
             text: "[Tonkotsu]",
             color: "#bfa569",
@@ -3175,7 +3175,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               }
             }
           },
-          ", and ",
+          ", or ",
           {
             text: "[Miso]",
             color: "#b87f39",
@@ -3192,7 +3192,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               }
             }
           },
-          " ramen."
+          " ramen?"
         ],
         return: [
           "Ready to order?"

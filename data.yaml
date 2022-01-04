@@ -819,6 +819,68 @@ npc:
         - messages:
           - いらっしゃいませ！
           - Welcome to YumeMasuku Ramen.
+          - message:
+            - text: "Would you like "
+            - text: "[Tonkotsu]"
+              color: 0xbfa569
+              bold: true
+              clickEvent:
+                action: "run_command"
+                value: "trigger storetrigger set ${hash(\"tonkotsu\")}"
+              hoverEvent:
+                action: "show_item"
+                contents:
+                  id: "${eval(item.store.sold.ramen.tonkotsu.id)}"
+                  tag: "${toSnbt(item.store.sold.ramen.tonkotsu.tag)}"
+          # {
+          #   text: "[Tonkotsu]",
+          #   color: "#bfa569",
+          #   italic: true,
+          #   clickEvent: {
+          #     action: "run_command",
+          #     value: `trigger storetrigger set ${hash("tonkotsu")}`
+          #   },
+          #   hoverEvent: {
+          #     action: "show_item",
+          #     contents: {
+          #       id: eval(item.store.sold.ramen.tonkotsu.id),
+          #       tag: toSnbt(item.store.sold.ramen.tonkotsu.tag)
+          #     }
+          #   }
+          # },
+          # ", ",
+          # {
+          #   text: "[Shoyu]",
+          #   color: "#bd7d5c",
+          #   italic: true,
+          #   clickEvent: {
+          #     action: "run_command",
+          #     value: `trigger storetrigger set ${hash("shoyu")}`
+          #   },
+          #   hoverEvent: {
+          #     action: "show_item",
+          #     contents:  {
+          #       id: eval(item.store.sold.ramen.shoyu.id),
+          #       tag: toSnbt(item.store.sold.ramen.shoyu.tag)
+          #     }
+          #   }
+          # },
+          # ", or ",
+          # {
+          #   text: "[Miso]",
+          #   color: "#b87f39",
+          #   italic: true,
+          #   clickEvent: {
+          #     action: "run_command",
+          #     value: `trigger storetrigger set ${hash("miso")}`
+          #   },
+          #   hoverEvent: {
+          #     action: "show_item",
+          #     contents: {
+          #       id: eval(item.store.sold.ramen.miso.id),
+          #       tag: toSnbt(item.store.sold.ramen.miso.tag)
+          #     }
+          #   }
         - messages:
           - message:
             - nbt: welcome.ramen
