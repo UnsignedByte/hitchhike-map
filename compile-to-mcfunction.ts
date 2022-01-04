@@ -3140,62 +3140,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         lock: ["<",{"text":"Blets Chun","color":"#d65454","bold":true},"> Don't you want anything?"]
       },
       ramen: {
-        welcome: [
-          "Welcome! Would you like ",
-          {
-            text: "[Tonkotsu]",
-            color: "#bfa569",
-            italic: true,
-            clickEvent: {
-              action: "run_command",
-              value: `trigger storetrigger set ${hash("tonkotsu")}`
-            },
-            hoverEvent: {
-              action: "show_item",
-              contents: {
-                id: eval(item.store.sold.ramen.tonkotsu.id),
-                tag: toSnbt(item.store.sold.ramen.tonkotsu.tag)
-              }
-            }
-          },
-          ", ",
-          {
-            text: "[Shoyu]",
-            color: "#bd7d5c",
-            italic: true,
-            clickEvent: {
-              action: "run_command",
-              value: `trigger storetrigger set ${hash("shoyu")}`
-            },
-            hoverEvent: {
-              action: "show_item",
-              contents:  {
-                id: eval(item.store.sold.ramen.shoyu.id),
-                tag: toSnbt(item.store.sold.ramen.shoyu.tag)
-              }
-            }
-          },
-          ", or ",
-          {
-            text: "[Miso]",
-            color: "#b87f39",
-            italic: true,
-            clickEvent: {
-              action: "run_command",
-              value: `trigger storetrigger set ${hash("miso")}`
-            },
-            hoverEvent: {
-              action: "show_item",
-              contents: {
-                id: eval(item.store.sold.ramen.miso.id),
-                tag: toSnbt(item.store.sold.ramen.miso.tag)
-              }
-            }
-          },
-          " ramen?"
-        ],
+        welcome: "Ready to order?",
         return: [
-          "Ready to order?"
+          "Thank you for your order!",
+          "Hey, I can take your order right now."
         ],
         success: [
           {"score":{"name":"_B"}},
@@ -3229,7 +3177,61 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc(`stores/reset`, [
       Object.entries(stores).map(([k, v]) => `data modify storage hitchhike:stores welcome.${k} set value ${rawJson(v.welcome)}`),
       `kill @e[type=armor_stand,tag=armorstand-clothes-display]`,
-      item.store.commands
+      item.store.commands,
+      `data modify storage hitchhike:stores ramenmenu set value ${rawJson([
+        "Would you like ",
+        {
+          text: "[Tonkotsu]",
+          color: "#bfa569",
+          bold: true,
+          clickEvent: {
+            action: "run_command",
+            value: `trigger storetrigger set ${hash("tonkotsu")}`
+          },
+          hoverEvent: {
+            action: "show_item",
+            contents: {
+              id: eval(item.store.sold.ramen.tonkotsu.id),
+              tag: toSnbt(item.store.sold.ramen.tonkotsu.tag)
+            }
+          }
+        },
+        ", ",
+        {
+          text: "[Shoyu]",
+          color: "#bd7d5c",
+          bold: true,
+          clickEvent: {
+            action: "run_command",
+            value: `trigger storetrigger set ${hash("shoyu")}`
+          },
+          hoverEvent: {
+            action: "show_item",
+            contents:  {
+              id: eval(item.store.sold.ramen.shoyu.id),
+              tag: toSnbt(item.store.sold.ramen.shoyu.tag)
+            }
+          }
+        },
+        ", or ",
+        {
+          text: "[Miso]",
+          color: "#b87f39",
+          bold: true,
+          clickEvent: {
+            action: "run_command",
+            value: `trigger storetrigger set ${hash("miso")}`
+          },
+          hoverEvent: {
+            action: "show_item",
+            contents: {
+              id: eval(item.store.sold.ramen.miso.id),
+              tag: toSnbt(item.store.sold.ramen.miso.tag)
+            }
+          }
+        },
+        " ramen?"
+      ])}`
     ])
 
     addfunc(`stores/tick`, [
