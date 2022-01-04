@@ -1249,7 +1249,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 99,
-            pos: '949 64 -1489',
+            pos: '949 64 -149',
             sign: '"minecraft:jungle_wall_sign[facing=west]"',
             display: {
               Name: `${rawJson({
