@@ -1368,6 +1368,65 @@ export const item = {
             // CustomPotionColor:0xdbad14
           }
         }
+      },
+      ramen: {
+        tonkotsu: {
+          id: '"minecraft:mushroom_soup"',
+          tag: {
+            cost: 1499,
+            display: {
+              Name: `${rawJson({
+                text: "Tonkotsu Ramen",
+                color: "#bfa569"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Using Rich Pork Broth.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        shoyu: {
+          id: '"minecraft:beetroot_soup"',
+          tag: {
+            cost: 1299,
+            display: {
+              Name: `${rawJson({
+                text: "Shoyu Ramen",
+                color: "#bd7d5c"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Clear broth with soy sauce.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        miso: {
+          id: '"minecraft:rabbit_stew"',
+          tag: {
+            cost: 1399,
+            display: {
+              Name: `${rawJson({
+                text: "Miso Ramen",
+                color: "#b87f39"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Sweet, Tangy Miso paste.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        }
       }
     }
 
@@ -1445,7 +1504,7 @@ export const item = {
             `setblock ${v.tag.pos} air`,
             `setblock ${v.tag.pos} ${eval(v.tag.sign)}{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set ${hash(k)}"}}',Text2:${v.tag.display.Name},Text3:'{"text":"${toCost(v.tag.cost)}","bold":true,"color":"white"}',Text4:''}`
           ])
-        } else {
+        } else if (["safeway"].includes(sto)) {
           store.npc[`__${sto}_${k}`] = npcSchema.parse({
             name: rawJson([
               JSON.parse(eval((Object.assign({Name: `'"${k}"'`}, v.tag.display)).Name)),

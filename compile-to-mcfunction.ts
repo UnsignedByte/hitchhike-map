@@ -2979,7 +2979,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   schedule([
     '#> Teleport out softlocked items',
     'tp @e[type=item,x=891,y=64,z=-153,dx=0,dy=1,dz=0] 891 65 -154',
-    'tp @e[type=item,x=984,y=64,z=-169,dx=0,dy=1,dz=0] 984 65 -168'
+    // 'tp @e[type=item,x=984,y=64,z=-169,dx=0,dy=1,dz=0] 984 65 -168'
   ], 20, functions);
 
   (()=>{
@@ -3066,7 +3066,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             "Bov short. Don\'t worry, addition is hard. Just place the rest of your money on the counter and I can do the math for you!"
           ]
         ],
-        unsoldrange: [977, 65, -169, 986, 65, -168],
+        unsoldrange: [983, 65, -168, 985, 65, -168],
         paypos: [986.5, 65.0, -167.5],
         shoprange:[973, -172, 992, -153],
         lock: ["<",{"text":"Jean Skinne","color":"#2387d9","bold":true},"> You can't leaving without paying."]
@@ -3137,7 +3137,92 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         unsoldrange: [996, 65, -168, 996, 65, -166],
         paypos: [996.5, 65, -166.5],
         shoprange:[993, -173, 1007, -153],
-        lock: ["<",{"text":"Sili Connesse","color":"#f0d792","bold":true},"> Hey, aren't you going to finish your order?"]
+        lock: ["<",{"text":"Blets Chun","color":"#d65454","bold":true},"> Don't you want anything?"]
+      },
+      ramen: {
+        welcome: [
+          "Welcome! We have ",
+          {
+            text: "[Tonkotsu]",
+            color: "#bfa569",
+            italic: true,
+            clickEvent: {
+              action: "run_command",
+              value: `trigger storetrigger set ${hash("tonkotsu")}`
+            },
+            hoverEvent: {
+              action: "show_item",
+              contents: {
+                id: eval(item.store.sold.ramen.tonkotsu.id),
+                tag: toSnbt(item.store.sold.ramen.tonkotsu.tag)
+              }
+            }
+          },
+          ", ",
+          {
+            text: "[Shoyu]",
+            color: "#bd7d5c",
+            italic: true,
+            clickEvent: {
+              action: "run_command",
+              value: `trigger storetrigger set ${hash("shoyu")}`
+            },
+            hoverEvent: {
+              action: "show_item",
+              contents:  {
+                id: eval(item.store.sold.ramen.shoyu.id),
+                tag: toSnbt(item.store.sold.ramen.shoyu.tag)
+              }
+            }
+          },
+          ", and ",
+          {
+            text: "[Miso]",
+            color: "#b87f39",
+            italic: true,
+            clickEvent: {
+              action: "run_command",
+              value: `trigger storetrigger set ${hash("miso")}`
+            },
+            hoverEvent: {
+              action: "show_item",
+              contents: {
+                id: eval(item.store.sold.ramen.miso.id),
+                tag: toSnbt(item.store.sold.ramen.miso.tag)
+              }
+            }
+          },
+          " ramen."
+        ],
+        return: [
+          "Ready to order?"
+        ],
+        success: [
+          {"score":{"name":"_B"}},
+          ".",
+          {"score":{"name":"_b"}},
+          " Bov is your change. ありがとございました！"
+        ],
+        failmessages: [
+          [
+            "That'll be ",
+            {"score":{"name":"_B"}},
+            ".",
+            {"score":{"name":"_b"}},
+            "Bov."
+          ],
+          [
+            "You\'re just ",
+            {"score":{"name":"_B"}},
+            ".",
+            {"score":{"name":"_b"}},
+            "Bov short."
+          ]
+        ],
+        unsoldrange: [996, 65, -168, 996, 65, -166],
+        paypos: [996.5, 65, -166.5],
+        shoprange:[1029, -161, 1043, -141],
+        lock: ["<",{"text":"Blets Chun","color":"#d65454","bold":true},"> Don't you want anything?"]
       }
     }
 

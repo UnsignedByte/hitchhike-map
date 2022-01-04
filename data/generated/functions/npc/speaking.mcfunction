@@ -21,6 +21,8 @@ tp @s[tag=npc-subway] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-subway, l
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-boba] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-boba, limit=1]
 # While in a conversation, make eye contact with the player.
+tp @s[tag=npc-ramen] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-ramen, limit=1]
+# While in a conversation, make eye contact with the player.
 tp @s[tag=npc-icecream] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-icecream, limit=1]
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-cameron] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-cameron, limit=1]

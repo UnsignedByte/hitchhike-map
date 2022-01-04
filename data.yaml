@@ -806,6 +806,32 @@ npc:
               storage: hitchhike:stores
               interpret: true
           cond: 5
+    ramen:
+      name: Otori Sama
+      position: 1040.5 64 -151.5
+      rotation: 90 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODA2Nzc3MTNkNTgzYTJhMjk3ODc4ZTg4YzIxODQ4YWI2YTJkNWQxNjFkZjQ1NDRlYWQ4OTkwY2RjOTQ0MSJ9fX0=
+      colour: 0xd65454
+      villager:
+        type: taiga
+        villager: shepherd
+      dialogue:
+        - messages:
+          - いらっしゃいませ！
+          - Welcome to YumeMasuku Ramen.
+        - messages:
+          - message:
+            - nbt: welcome.ramen
+              storage: hitchhike:stores
+              interpret: true
+            command:
+              - type: function
+                value: "generated:story/stores/ramen/pay"
+          - message:
+            - nbt: success.ramen
+              storage: hitchhike:stores
+              interpret: true
+          cond: 5
     icecream:
       name: Laak Towse
       position: 966.5 64 -150.5
@@ -1195,6 +1221,18 @@ quest:
         - type: nest # q-1-0
           value:
             - type: player
+              stat: minecraft.used:minecraft.rabbit_stew
+              count: 1
+              overflow: true
+            - type: player
+              stat: minecraft.used:minecraft.mushroom_soup
+              count: 1
+              overflow: true
+            - type: player
+              stat: minecraft.used:minecraft.beetroot_soup
+              count: 1
+              overflow: true
+            - type: player
               stat: minecraft.used:minecraft.carrot #q-1-0-0
               count: 1
               overflow: true # this quest can be completed to over 100% completion
@@ -1209,6 +1247,18 @@ quest:
           count: 2 # sum of child completeions must total 500% (5 pieces of food)
         - type: nest #q-1-1
           value:
+            - type: player
+              stat: minecraft.used:minecraft.rabbit_stew
+              count: 1
+              overflow: true
+            - type: player
+              stat: minecraft.used:minecraft.mushroom_soup
+              count: 1
+              overflow: true
+            - type: player
+              stat: minecraft.used:minecraft.beetroot_soup
+              count: 1
+              overflow: true
             - type: player
               stat: minecraft.used:minecraft.cooked_beef
               count: 1

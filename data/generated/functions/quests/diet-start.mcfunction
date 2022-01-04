@@ -6,26 +6,38 @@ scoreboard players set q-3 q-3 0
 scoreboard players set q-3-0 q-3 0
 scoreboard players set q-3-0-0 q-3 0
 scoreboard players set q-3-0-0-0 q-3 0
-scoreboard objectives add s-3-0-0-0 minecraft.used:minecraft.carrot
+scoreboard objectives add s-3-0-0-0 minecraft.used:minecraft.rabbit_stew
 scoreboard players set q-3-0-0-1 q-3 0
-scoreboard objectives add s-3-0-0-1 minecraft.used:minecraft.baked_potato
+scoreboard objectives add s-3-0-0-1 minecraft.used:minecraft.mushroom_soup
 scoreboard players set q-3-0-0-2 q-3 0
-scoreboard objectives add s-3-0-0-2 minecraft.used:minecraft.beetroot
+scoreboard objectives add s-3-0-0-2 minecraft.used:minecraft.beetroot_soup
+scoreboard players set q-3-0-0-3 q-3 0
+scoreboard objectives add s-3-0-0-3 minecraft.used:minecraft.carrot
+scoreboard players set q-3-0-0-4 q-3 0
+scoreboard objectives add s-3-0-0-4 minecraft.used:minecraft.baked_potato
+scoreboard players set q-3-0-0-5 q-3 0
+scoreboard objectives add s-3-0-0-5 minecraft.used:minecraft.beetroot
 scoreboard players set q-3-0-1 q-3 0
 scoreboard players set q-3-0-1-0 q-3 0
-scoreboard objectives add s-3-0-1-0 minecraft.used:minecraft.cooked_beef
+scoreboard objectives add s-3-0-1-0 minecraft.used:minecraft.rabbit_stew
 scoreboard players set q-3-0-1-1 q-3 0
-scoreboard objectives add s-3-0-1-1 minecraft.used:minecraft.cooked_porkchop
+scoreboard objectives add s-3-0-1-1 minecraft.used:minecraft.mushroom_soup
 scoreboard players set q-3-0-1-2 q-3 0
-scoreboard objectives add s-3-0-1-2 minecraft.used:minecraft.cooked_chicken
+scoreboard objectives add s-3-0-1-2 minecraft.used:minecraft.beetroot_soup
 scoreboard players set q-3-0-1-3 q-3 0
-scoreboard objectives add s-3-0-1-3 minecraft.used:minecraft.cooked_rabbit
+scoreboard objectives add s-3-0-1-3 minecraft.used:minecraft.cooked_beef
 scoreboard players set q-3-0-1-4 q-3 0
-scoreboard objectives add s-3-0-1-4 minecraft.used:minecraft.cooked_mutton
+scoreboard objectives add s-3-0-1-4 minecraft.used:minecraft.cooked_porkchop
 scoreboard players set q-3-0-1-5 q-3 0
-scoreboard objectives add s-3-0-1-5 minecraft.used:minecraft.cooked_cod
+scoreboard objectives add s-3-0-1-5 minecraft.used:minecraft.cooked_chicken
 scoreboard players set q-3-0-1-6 q-3 0
-scoreboard objectives add s-3-0-1-6 minecraft.used:minecraft.cooked_salmon
+scoreboard objectives add s-3-0-1-6 minecraft.used:minecraft.cooked_rabbit
+scoreboard players set q-3-0-1-7 q-3 0
+scoreboard objectives add s-3-0-1-7 minecraft.used:minecraft.cooked_mutton
+scoreboard players set q-3-0-1-8 q-3 0
+scoreboard objectives add s-3-0-1-8 minecraft.used:minecraft.cooked_cod
+scoreboard players set q-3-0-1-9 q-3 0
+scoreboard objectives add s-3-0-1-9 minecraft.used:minecraft.cooked_salmon
 scoreboard players set q-3-0-2 q-3 0
 scoreboard players set q-3-0-2-0 q-3 0
 scoreboard objectives add s-3-0-2-0 minecraft.used:minecraft.sweet_berries
