@@ -65,3 +65,5 @@ setblock 949 64 -150 air
 setblock 949 64 -150 minecraft:jungle_wall_sign[facing=west]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 3347403"}}',Text2:'{"text":"Meat Lovers\' Sub","color":"#a11538"}',Text3:'{"text":"11.99B","bold":true,"color":"white"}',Text4:''}
 setblock 949 64 -149 air
 setblock 949 64 -149 minecraft:jungle_wall_sign[facing=west]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 95852696"}}',Text2:'{"text":"Soda","color":"#916443"}',Text3:'{"text":"0.99B","bold":true,"color":"white"}',Text4:''}
+setblock 998 64 -161 air
+setblock 998 64 -161 minecraft:birch_wall_sign[facing=south]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 95852696"}}',Text2:'{"text":"Milk Tea","color":"#b59369"}',Text3:'{"text":"5.49B","bold":true,"color":"white"}',Text4:''}

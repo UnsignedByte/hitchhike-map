@@ -1274,6 +1274,37 @@ export const item = {
             CustomPotionColor:0x382a20
           }
         }
+      },
+      boba: {    
+        drink: {
+          id: '"minecraft:potion"',
+          tag: {
+            cost: 549,
+            pos: '998 64 -161',
+            sign: '"minecraft:birch_wall_sign[facing=south]"',
+            display: {
+              Name: `${rawJson({
+                text: "Milk Tea",
+                color: "#b59369"
+              })}`,
+              Lore:`[${rawJson({
+                text: `The classic.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127,
+            // CustomPotionEffects:`[${toSnbt(
+            //   {Id:'18b',Amplifier:'0b',Duration:300})}, ${toSnbt(
+            //   {Id:'19b',Amplifier:'9b',Duration:200})}, ${toSnbt(
+            //   {Id:'21b',Amplifier:'3b',Duration:400})}, ${toSnbt(
+            //   {Id:'22b',Amplifier:'1b',Duration:200})}, ${toSnbt(
+            //   {Id:'23b',Amplifier:'0b',Duration:5})}]`,
+            Potion:`"minecraft:awkward"`,
+            CustomPotionColor:0xb59369
+          }
+        }
       }
     }
 
@@ -1345,7 +1376,7 @@ export const item = {
           store.commands.push(v.tag.pos.map((x: string)=>
             `summon armor_stand ${x} {DisabledSlots:${disabledslots},NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{Head:[${v.tag.rot[1]}F,0F,0F],LeftArm:[0F,0F,0F],RightArm:[0F,0F,0F],LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[${v.tag.rot[0]}F,0F],ArmorItems:${armor}}`
           ))
-        } else if (["subway"].includes(sto)) {
+        } else if (["subway", "boba"].includes(sto)) {
           store.commands.push([
             `setblock ${v.tag.pos} air`,
             `setblock ${v.tag.pos} ${eval(v.tag.sign)}{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set ${hash(k)}"}}',Text2:${v.tag.display.Name},Text3:'{"text":"${toCost(v.tag.cost)}","bold":true,"color":"white"}',Text4:''}`
