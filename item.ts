@@ -1371,7 +1371,7 @@ export const item = {
       },
       ramen: {
         tonkotsu: {
-          id: '"minecraft:mushroom_soup"',
+          id: '"minecraft:mushroom_stew"',
           tag: {
             cost: 1499,
             display: {
