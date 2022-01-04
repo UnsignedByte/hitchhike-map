@@ -795,14 +795,14 @@ npc:
           - Welcome to SiTea, the best boba shop in town!
         - messages:
           - message:
-            - nbt: welcome.subway
+            - nbt: welcome.boba
               storage: hitchhike:stores
               interpret: true
             command:
               - type: function
-                value: "generated:story/stores/subway/pay"
+                value: "generated:story/stores/boba/pay"
           - message:
-            - nbt: success.subway
+            - nbt: success.boba
               storage: hitchhike:stores
               interpret: true
           cond: 5
