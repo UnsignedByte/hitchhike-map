@@ -3243,7 +3243,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `tag @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}},${payrangesel}] add paying`,
           `execute as ${unsolditems} run data modify entity @s Age set value -32768`,
           `# Deal with triggers`,
-          `execute as @a unless entity @s storetrigger matches 0 at @s if entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run function generated:story/stores/${k}/handletrigger`,
+          `execute as @a unless score @s storetrigger matches 0 at @s if entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run function generated:story/stores/${k}/handletrigger`,
           `# reset status if no items to buy`,
           `scoreboard players set @e[tag=npc-${k}] dialogue-status 0`,
           `# set status of ${k} to paying`,
