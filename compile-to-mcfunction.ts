@@ -3186,7 +3186,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           bold: true,
           clickEvent: {
             action: "run_command",
-            value: `trigger storetrigger set ${hash("tonkotsu")}`
+            value: `/trigger storetrigger set ${hash("tonkotsu")}`
           },
           hoverEvent: {
             action: "show_item",
@@ -3203,7 +3203,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           bold: true,
           clickEvent: {
             action: "run_command",
-            value: `trigger storetrigger set ${hash("shoyu")}`
+            value: `/trigger storetrigger set ${hash("shoyu")}`
           },
           hoverEvent: {
             action: "show_item",
@@ -3220,7 +3220,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           bold: true,
           clickEvent: {
             action: "run_command",
-            value: `trigger storetrigger set ${hash("miso")}`
+            value: `/trigger storetrigger set ${hash("miso")}`
           },
           hoverEvent: {
             action: "show_item",
