@@ -607,7 +607,7 @@ summon minecraft:villager 984.50 64 -168.50 {Rotation: [0f, 0f], Silent: 1b, Inv
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for subway.
-summon minecraft:villager 952.50 64 -146.50 {Rotation: [45f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-subway"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNTM1MjU3YWQ1ZjdhNTEzNjhiMTQ1ZGZmNDFjN2U2Y2I0OWRiZTY4ZDEzNWI0MTg1YTVmMmFmNmUzNTEifX19" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Sili Connesse","color":"#f0d792","bold":true}'}
+summon minecraft:villager 951.50 64 -145.50 {Rotation: [45f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-subway"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNTM1MjU3YWQ1ZjdhNTEzNjhiMTQ1ZGZmNDFjN2U2Y2I0OWRiZTY4ZDEzNWI0MTg1YTVmMmFmNmUzNTEifX19" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Sili Connesse","color":"#f0d792","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for icecream.

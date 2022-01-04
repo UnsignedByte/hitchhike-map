@@ -758,7 +758,7 @@ npc:
           cond: 5
     subway:
       name: Sili Connesse
-      position: 952.5 64 -146.5
+      position: 951.5 64 -145.5
       rotation: 45 0
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNTM1MjU3YWQ1ZjdhNTEzNjhiMTQ1ZGZmNDFjN2U2Y2I0OWRiZTY4ZDEzNWI0MTg1YTVmMmFmNmUzNTEifX19
       colour: 0xf0d792
