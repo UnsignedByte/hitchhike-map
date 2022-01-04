@@ -67,6 +67,6 @@ setblock 949 64 -150 minecraft:jungle_wall_sign[facing=west]{Color:"black",Glowi
 setblock 949 64 -149 air
 setblock 949 64 -149 minecraft:jungle_wall_sign[facing=west]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 95852696"}}',Text2:'{"text":"Soda","color":"#916443"}',Text3:'{"text":"0.99B","bold":true,"color":"white"}',Text4:''}
 setblock 998 64 -161 air
-setblock 998 64 -161 minecraft:birch_wall_sign[facing=south]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 1062756885"}}',Text2:'{"text":"Milk Tea","color":"#9c7f5c"}',Text3:'{"text":"5.49B","bold":true,"color":"white"}',Text4:''}
+setblock 998 64 -161 minecraft:spruce_wall_sign[facing=south]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 1062756885"}}',Text2:'{"text":"Milk Tea","color":"#9c7f5c"}',Text3:'{"text":"5.49B","bold":true,"color":"white"}',Text4:''}
 setblock 1000 64 -161 air
-setblock 1000 64 -161 minecraft:birch_wall_sign[facing=south]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 1251701677"}}',Text2:'{"text":"Almond Milk Tea","color":"#9c8857"}',Text3:'{"text":"5.49B","bold":true,"color":"white"}',Text4:''}
+setblock 1000 64 -161 minecraft:spruce_wall_sign[facing=south]{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set 1251701677"}}',Text2:'{"text":"Almond Milk Tea","color":"#9c8857"}',Text3:'{"text":"5.49B","bold":true,"color":"white"}',Text4:''}

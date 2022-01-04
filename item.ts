@@ -1281,7 +1281,7 @@ export const item = {
           tag: {
             cost: 549,
             pos: '998 64 -161',
-            sign: '"minecraft:birch_wall_sign[facing=south]"',
+            sign: '"minecraft:spruce_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
                 text: "Milk Tea",
@@ -1304,7 +1304,7 @@ export const item = {
           tag: {
             cost: 549,
             pos: '1000 64 -161',
-            sign: '"minecraft:birch_wall_sign[facing=south]"',
+            sign: '"minecraft:spruce_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
                 text: "Almond Milk Tea",
