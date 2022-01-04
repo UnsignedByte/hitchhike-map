@@ -1191,7 +1191,7 @@ export const item = {
             display: {
               Name: `${rawJson({
                 text: "Gluten-Free Vegan Berry Sub",
-                color: "#a11538"
+                color: "#53cf11"
               })}`,
               Lore:`[${rawJson({
                 text: `Healthy and still delicious.`,
@@ -1233,7 +1233,7 @@ export const item = {
             display: {
               Name: `${rawJson({
                 text: "Meat Lovers\' Sub",
-                color: "#d6bc89"
+                color: "#a11538"
               })}`,
               Lore:`[${rawJson({
                 text: `Made with fresh chicken.`,
