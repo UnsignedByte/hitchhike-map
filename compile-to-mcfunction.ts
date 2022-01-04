@@ -3200,7 +3200,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         return [
           ``,
           `#> store ${k}`,
-          `scoreboard players enable @a[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] storetrigger`,
+          `execute as @a at @s if entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run scoreboard players enable @s storetrigger`,
           `execute as @a[nbt={Inventory:[{tag:{store:"${k}",sold:0b}}]}] at @s unless entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run function generated:story/stores/${k}/lock`,
           `# Kill Thrown Items`,
           `execute as @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}}] at @s unless entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run kill @s`,
@@ -3209,7 +3209,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `tag @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}},${payrangesel}] add paying`,
           `execute as ${unsolditems} run data modify entity @s Age set value -32768`,
           `# Deal with triggers`,
-          `execute as @a[scores={storetrigger=-2147483648..2147483647},x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run function generated:story/stores/${k}/handletrigger`,
+          `execute as @a[scores={storetrigger=-2147483648..2147483647}] at @s if entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run function generated:story/stores/${k}/handletrigger`,
           `# reset status if no items to buy`,
           `scoreboard players set @e[tag=npc-${k}] dialogue-status 0`,
           `# set status of ${k} to paying`,
