@@ -3086,18 +3086,18 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ],
         failmessages: [
           [
-            "That\'ll be",
+            "That\'ll be ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
             "Bov."
           ],
           [
-            "I still need ",
+            "You\'re still missing' ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov more. Don\'t worry about the math though, I can calculate the change for you."
+            "Bov. Don\'t worry about the math though, I can calculate the change for you."
           ]
         ],
         unsoldrange: [950, 64, -147, 952, 65, -145],

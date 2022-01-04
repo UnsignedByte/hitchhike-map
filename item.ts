@@ -1190,11 +1190,53 @@ export const item = {
             sign: '"minecraft:jungle_wall_sign[facing=west]"',
             display: {
               Name: `${rawJson({
-                text: "Gluten-Free Vegan Berry Sandwich",
+                text: "Gluten-Free Vegan Berry Sub",
                 color: "#a11538"
               })}`,
               Lore:`[${rawJson({
                 text: `Healthy and still delicious.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        gluten: {
+          id: '"minecraft:bread"',
+          tag: {
+            cost: 1499,
+            pos: '949 64 -151',
+            sign: '"minecraft:jungle_wall_sign[facing=west]"',
+            display: {
+              Name: `${rawJson({
+                text: "Whole Wheat Sub",
+                color: "#d6bc89"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Perfectly toasted buns.`,
+                italic: true,
+                color: "dark_gray"
+              })}]`
+            },
+            Unbreakable:true,
+            HideFlags:127
+          }
+        },
+        meat: {
+          id: '"minecraft:cooked_chickens"',
+          tag: {
+            cost: 1499,
+            pos: '949 64 -150',
+            sign: '"minecraft:jungle_wall_sign[facing=west]"',
+            display: {
+              Name: `${rawJson({
+                text: "Meat Lovers\' Sub",
+                color: "#d6bc89"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Made with fresh chicken.`,
                 italic: true,
                 color: "dark_gray"
               })}]`
