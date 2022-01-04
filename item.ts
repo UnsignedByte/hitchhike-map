@@ -1225,7 +1225,7 @@ export const item = {
           }
         },
         meat: {
-          id: '"minecraft:cooked_chickens"',
+          id: '"minecraft:cooked_chicken"',
           tag: {
             cost: 1199,
             pos: '949 64 -150',
