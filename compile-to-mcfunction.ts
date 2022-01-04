@@ -3079,7 +3079,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       item.store.commands
     ])
 
-    addfunc(`stores/tick`, 
+    addfunc(`stores/tick`, [
       Object.entries(stores).map(([k, v], i) => {
         const parseScores = (obj: Array<any>): any => {
           return obj.map((x: any)=> {
@@ -3159,6 +3159,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `scoreboard players operation @s store_lockT += @s playtime`
         ])
 
+        console.log(item.store.unsold[k])
+
+        // addfunc(`stores/${k}/handletrigger`, [
+        //   Object.entries(item.store.unsold[k]).map(([kk, vv]) => `execute if entity @s[scores={storetrigger=${hash(kk)}}] run give @s ${toGive(vv, 1)}`)
+        // ])
+
         return [
           ``,
           `#> store ${k}`,
@@ -3169,12 +3175,16 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `tag @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}}] remove paying`,
           `tag @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}},${payrangesel}] add paying`,
           `execute as ${unsolditems} run data modify entity @s Age set value -32768`,
+          `# Deal with triggers`,
+          `execute as @a[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run function generated:story/stores/${k}/handletrigger`,
           `# reset status if no items to buy`,
           `scoreboard players set @e[tag=npc-${k}] dialogue-status 0`,
           `# set status of ${k} to paying`,
-          `execute if entity ${unsolditems} run scoreboard players set @e[tag=npc-${k}] dialogue-status 5`,
+          `execute if entity ${unsolditems} run scoreboard players set @e[tag=npc-${k}] dialogue-status 5`
         ]
-      })
-    )
+      }),
+      ``,
+      `scoreboard players reset @a storetrigger`
+    ])
   })();
 }

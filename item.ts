@@ -1,3 +1,4 @@
+import { hash } from './main.ts'
 import { toSnbt, rawJson, toCost } from './compile-to-mcfunction.ts'
 import { npcSchema } from './parse-yaml.ts'
 import { ensureDir, emptyDir } from 'https://deno.land/std@0.102.0/fs/mod.ts'
@@ -1182,7 +1183,7 @@ export const item = {
       },
       subway: {
         vegan: {
-          id: '"minecraft:leather_boots"',
+          id: '"minecraft:sweet_berries"',
           tag: {
             cost: 1499,
             pos: '949 64 -152',
@@ -1276,7 +1277,7 @@ export const item = {
         } else if (["subway"].includes(sto)) {
           store.commands.push([
             `setblock ${v.tag.pos} air`,
-            `setblock ${v.tag.pos} ${eval(v.tag.sign)}{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"bruh${idx}"}}',Text2:${v.tag.display.Name},Text3:'{"text":"${toCost(v.tag.cost)}","bold":true,"color":"white"}',Text4:''}`
+            `setblock ${v.tag.pos} ${eval(v.tag.sign)}{Color:"black",GlowingText:0b,Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger storetrigger set ${hash(k)}"}}',Text2:${v.tag.display.Name},Text3:'{"text":"${toCost(v.tag.cost)}","bold":true,"color":"white"}',Text4:''}`
           ])
         } else {
           store.npc[`__${sto}_${k}`] = npcSchema.parse({
