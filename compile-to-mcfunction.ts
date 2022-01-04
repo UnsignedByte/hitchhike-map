@@ -3159,11 +3159,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           `scoreboard players operation @s store_lockT += @s playtime`
         ])
 
-        console.log(item.store.unsold[k])
-
-        // addfunc(`stores/${k}/handletrigger`, [
-        //   Object.entries(item.store.unsold[k]).map(([kk, vv]) => `execute if entity @s[scores={storetrigger=${hash(kk)}}] run give @s ${toGive(vv, 1)}`)
-        // ])
+        addfunc(`stores/${k}/handletrigger`, [
+          Object.entries(item.store.unsold[k]).map(([kk, vv]) => `execute if entity @s[scores={storetrigger=${hash(kk)}}] run give @s ${toGive(<NbtData>vv, 1)}`)
+        ])
 
         return [
           ``,
