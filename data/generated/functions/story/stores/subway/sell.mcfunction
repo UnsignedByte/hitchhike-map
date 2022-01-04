@@ -1,6 +1,6 @@
 execute as @e[tag=paying,nbt={Item:{id: "minecraft:paper", tag: {cost: 1499, sign: "minecraft:jungle_wall_sign[facing=west]", display: {Name: '{"text":"Gluten-Free Vegan Berry Sandwich","color":"#a11538"}', Lore: ["{\"text\":\"Healthy and still delicious.\",\"italic\":true,\"color\":\"dark_gray\"}","{\"text\":\"\"}","{\"text\":\"Unsold (14.99B)\",\"italic\":true,\"color\":\"dark_gray\"}"]}, Unbreakable: 1b, HideFlags: 127, store: "subway", sold: 0b}}}] run data merge entity @s {Item:{id: "minecraft:sweet_berries", tag: {cost: 1499, sign: "minecraft:jungle_wall_sign[facing=west]", display: {Name: '{"text":"Gluten-Free Vegan Berry Sandwich","color":"#a11538"}', Lore: ["{\"text\":\"Healthy and still delicious.\",\"italic\":true,\"color\":\"dark_gray\"}","{\"text\":\"\"}","{\"text\":\"Sold (14.99B)\",\"italic\":true,\"color\":\"dark_purple\"}"]}, Unbreakable: 1b, HideFlags: 127, store: "subway", sold: 1b}}}
-tag @e[tag=paying,type=item,x=977,y=65,z=-169,dx=9,dy=0,dz=1] add just-paid
-tag @e[tag=paying,type=item,x=977,y=65,z=-169,dx=9,dy=0,dz=1] remove paying
+tag @e[tag=paying,type=item,x=950,y=64,z=-147,dx=2,dy=1,dz=2] add just-paid
+tag @e[tag=paying,type=item,x=950,y=64,z=-147,dx=2,dy=1,dz=2] remove paying
 tp @e[type=item,tag=just-paid] 950.5000 64.5000 -144.5000
 execute as @e[type=item,tag=just-paid] run data modify entity @s Age set value 0
 tag @e remove just-paid

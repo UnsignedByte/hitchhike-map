@@ -3066,7 +3066,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             "Bov short. Don\'t worry, addition is hard. Just place the rest of your money on the counter and I can do the math for you!"
           ]
         ],
-        unsoldrange: [950, 64, -147, 952, 65, -145],
+        unsoldrange: [977, 65, -169, 986, 65, -168],
         paypos: [986.5, 65.0, -167.5],
         shoprange:[973, -172, 992, -153],
         lock: ["<",{"text":"Jean Skinne","color":"#2387d9","bold":true},"> You can't leaving without paying."]
@@ -3100,7 +3100,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             "Bov more. Don\'t worry about the math though, I can calculate the change for you."
           ]
         ],
-        unsoldrange: [977, 65, -169, 986, 65, -168],
+        unsoldrange: [950, 64, -147, 952, 65, -145],
         paypos: [950.5, 64.5, -144.5],
         shoprange:[941, -161, 955, -141],
         lock: ["<",{"text":"Sili Connesse","color":"#f0d792","bold":true},"> Hey, aren't you going to finish your order?"]
