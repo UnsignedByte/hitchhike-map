@@ -10,6 +10,8 @@ stopsound @a
 recipe take @a *
 
 forceload remove all
+# spawn
+forceload add -26 -11 -123 86
 # most of map
 forceload add 1103 -256 745 -91
 forceload add 1103 -75 747 93
@@ -25,6 +27,11 @@ forceload add 1236 317 1251 321
 forceload add 1082 343 1068 359
 # lake
 forceload add 1196 361 763 483
+
+# Maze
+forceload add -1504 -2 -1371 129
+# lobby
+forceload add -1378 -104 -1420 -196
 
 function generated:reset
 
