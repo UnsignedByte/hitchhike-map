@@ -1229,7 +1229,7 @@ quest:
               count: 1
               overflow: true
             - type: player
-              stat: minecraft.used:minecraft.mushroom_soup
+              stat: minecraft.used:minecraft.mushroom_stew
               count: 1
               overflow: true
             - type: player
@@ -1256,7 +1256,7 @@ quest:
               count: 1
               overflow: true
             - type: player
-              stat: minecraft.used:minecraft.mushroom_soup
+              stat: minecraft.used:minecraft.mushroom_stew
               count: 1
               overflow: true
             - type: player

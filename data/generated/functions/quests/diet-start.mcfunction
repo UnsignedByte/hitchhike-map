@@ -8,7 +8,7 @@ scoreboard players set q-3-0-0 q-3 0
 scoreboard players set q-3-0-0-0 q-3 0
 scoreboard objectives add s-3-0-0-0 minecraft.used:minecraft.rabbit_stew
 scoreboard players set q-3-0-0-1 q-3 0
-scoreboard objectives add s-3-0-0-1 minecraft.used:minecraft.mushroom_soup
+scoreboard objectives add s-3-0-0-1 minecraft.used:minecraft.mushroom_stew
 scoreboard players set q-3-0-0-2 q-3 0
 scoreboard objectives add s-3-0-0-2 minecraft.used:minecraft.beetroot_soup
 scoreboard players set q-3-0-0-3 q-3 0
@@ -21,7 +21,7 @@ scoreboard players set q-3-0-1 q-3 0
 scoreboard players set q-3-0-1-0 q-3 0
 scoreboard objectives add s-3-0-1-0 minecraft.used:minecraft.rabbit_stew
 scoreboard players set q-3-0-1-1 q-3 0
-scoreboard objectives add s-3-0-1-1 minecraft.used:minecraft.mushroom_soup
+scoreboard objectives add s-3-0-1-1 minecraft.used:minecraft.mushroom_stew
 scoreboard players set q-3-0-1-2 q-3 0
 scoreboard objectives add s-3-0-1-2 minecraft.used:minecraft.beetroot_soup
 scoreboard players set q-3-0-1-3 q-3 0
