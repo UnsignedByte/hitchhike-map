@@ -847,8 +847,8 @@ npc:
         villager: nitwit
       dialogue:
         - messages:
-          - Hi, welcome to starbucks!
-          - What would you like to drink?
+          - Hi, welcome to Starbucks!
+          - What drink would you like?
         - messages:
           - message:
             - nbt: welcome.starbucks

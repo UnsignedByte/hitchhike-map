@@ -1446,61 +1446,73 @@ export const item = {
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `Quad Long Shot Grande in a`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `Venti Cup Half Calf Double`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `Cupped No Sleeve Salted Caramel`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `Mocha Latte With 2 Pumps of`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `White Chocolate Mocha for Mocha`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `and Substitute 2 Pumps of Hazelnut`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `for Toffee Nut Half Whole Milk`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `Half Breve With No Whipped Cream`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `Extra Hot Extra Foam Extra`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `Caramel Drizzle Extra Salt Add a`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `Scoop of Vanilla Bean Powder`,
                   italic: true,
                   color: "dark_gray"
                 },
+              ])},${rawJson([
                 {
                   text: `With Light Ice Well Stirred.`,
                   italic: true,
