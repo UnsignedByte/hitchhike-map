@@ -13,10 +13,17 @@ forceload remove all
 # spawn
 forceload add -26 -11 -123 86
 # most of map
-forceload add 1103 -256 745 -91
-forceload add 1103 -75 747 93
+# forceload add 1103 -256 745 -91
+# forceload add 1103 -75 747 93
 # wendys
-forceload add 790 94 813 120
+# forceload add 790 94 813 120
+# Spawn house
+forceload add 1000 55 1025 71
+# Fountain
+forceload add 885 -49 900 -93
+forceload add 913 -90 932 -70
+# sawyer house
+forceload add 930 -16 958 9
 # Simons house
 forceload add 961 162 891 215
 # Hurm trees

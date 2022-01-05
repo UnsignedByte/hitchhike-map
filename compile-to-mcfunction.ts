@@ -116,6 +116,7 @@ export function createNpc (
     reset: [
       `# Summon the villager for ${id}.`,
       // Summon new villager
+      `forceload add ${x-1} ${z-1} ${x+1} ${z+1}`,
       `summon minecraft:villager ${nts(x)} ${y} ${nts(z)} ${toSnbt(Object.assign({
         Rotation: `[${rx}f, ${ry}f]`,
         Silent: true,
@@ -1779,7 +1780,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       weapons[k].tag = Object.assign({weapon:`'${k}'`, isweapon: true}, v.tag);
     })
 
-    schedule('function generated:story/maze/mobs/move', 10, functions);
+    schedule('execute if score enabled maze matches 1 run function generated:story/maze/mobs/move', 10, functions);
     schedule([
       `scoreboard players set mobcount maze 0`,
       `execute as @e[tag=maze-mob,type=!arrow,type=!player,tag=!maze-mob-spawn-attempt] run scoreboard players add mobcount maze 1`,
@@ -3209,7 +3210,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     }
 
     addfunc(`stores/reset`, [
-      Object.entries(stores).map(([k, v]) => `data modify storage hitchhike:stores welcome.${k} set value ${rawJson(v.welcome)}`),
+      Object.entries(stores).map(([k, v]) => [
+        `data modify storage hitchhike:stores welcome.${k} set value ${rawJson(v.welcome)}`,
+        `forceload add ${v.shoprange.join(' ')}`
+      ]),
       `kill @e[type=armor_stand,tag=armorstand-clothes-display]`,
       item.store.commands,
       `data modify storage hitchhike:stores ramenmenu set value ${rawJson([
