@@ -1433,7 +1433,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 3251,
-            pos: '1047 68 -149',
+            pos: '1047 67 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
@@ -1518,7 +1518,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 525,
-            pos: '1048 68 -149',
+            pos: '1048 67 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
@@ -1543,7 +1543,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 475,
-            pos: '1049 68 -149',
+            pos: '1049 67 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
@@ -1568,7 +1568,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 465,
-            pos: '1050 68 -149',
+            pos: '1050 67 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
@@ -1593,7 +1593,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 465,
-            pos: '1051 68 -149',
+            pos: '1051 67 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({

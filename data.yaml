@@ -813,8 +813,8 @@ npc:
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODA2Nzc3MTNkNTgzYTJhMjk3ODc4ZTg4YzIxODQ4YWI2YTJkNWQxNjFkZjQ1NDRlYWQ4OTkwY2RjOTQ0MSJ9fX0=
       colour: 0x8723a6
       villager:
-        type: taiga
-        villager: shepherd
+        type: savanna
+        villager: mason
       dialogue:
         - messages:
           - いらっしゃいませ！
@@ -833,6 +833,32 @@ npc:
                 value: "generated:story/stores/ramen/pay"
           - message:
             - nbt: success.ramen
+              storage: hitchhike:stores
+              interpret: true
+          cond: 5
+    starbucks:
+      name: Bethany Norma
+      position: 1047.5 64 -150.5
+      rotation: 0 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTIyNzhhZGMyNmUzNzZhNDZmZmVhZWM1YTE1MmZhZDRiZGY3ZWFlYTcyZTY3N2NjNjQ1MTZjZGM1Y2JjNSJ9fX0=
+      colour: 0x00704A
+      villager:
+        type: swamp
+        villager: nitwit
+      dialogue:
+        - messages:
+          - Hi, welcome to starbucks!
+          - What would you like to drink?
+        - messages:
+          - message:
+            - nbt: welcome.starbucks
+              storage: hitchhike:stores
+              interpret: true
+            command:
+              - type: function
+                value: "generated:story/stores/starbucks/pay"
+          - message:
+            - nbt: success.starbucks
               storage: hitchhike:stores
               interpret: true
           cond: 5

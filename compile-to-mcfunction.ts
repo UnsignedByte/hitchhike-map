@@ -3015,14 +3015,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov. Please place your payment in the space to your left!"
+            " Bov. Please place your payment in the space to your left!"
           ],
           [
             "It seems you\'re ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov short. Don\'t worry, addition is hard. Just place the rest of your money on the counter and I can do the math for you!"
+            " Bov short. Don\'t worry, addition is hard. Just place the rest of your money on the counter and I can do the math for you!"
           ]
         ],
         unsoldrange: [891, 65, -154, 891, 65, -154],
@@ -3056,14 +3056,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov. Just place your payment on the counter here!"
+            " Bov. Just place your payment on the counter here!"
           ],
           [
             "It seems you\'re ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov short. Don\'t worry, addition is hard. Just place the rest of your money on the counter and I can do the math for you!"
+            " Bov short. Don\'t worry, addition is hard. Just place the rest of your money on the counter and I can do the math for you!"
           ]
         ],
         unsoldrange: [983, 65, -168, 985, 65, -168],
@@ -3090,14 +3090,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov."
+            " Bov."
           ],
           [
             "You\'re still missing ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov. Don\'t worry about the math though, I can calculate the change for you."
+            " Bov. Don\'t worry about the math though, I can calculate the change for you."
           ]
         ],
         unsoldrange: [950, 64, -147, 952, 65, -145],
@@ -3124,14 +3124,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov."
+            " Bov."
           ],
           [
             "You\'re only missing ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov."
+            " Bov."
           ]
         ],
         unsoldrange: [996, 65, -168, 996, 65, -166],
@@ -3157,7 +3157,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov."
+            " Bov."
           ],
           [
             "You\'re just ",
@@ -3170,7 +3170,41 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         unsoldrange: [1039, 65, -153, 1039, 65, -151],
         paypos: [1039.5, 65, -151.5],
         shoprange:[1029, -161, 1043, -141],
-        lock: ["<",{"text":"Otori","color":"#8723a6","bold":true},"> Don't you want anything?"]
+        lock: ["<",{"text":"Otori","color":"#8723a6","bold":true},"> Did you forget to finish your order?"]
+      },
+      starbucks: {
+        welcome: "Alright, what can I get you? The menu is on the billboard right above me.",
+        return: [
+          "Hi, what can I get for you?",
+          "Hey, what do you want today?"
+        ],
+        success: [
+          "Great! Here's ",
+          {"score":{"name":"_B"}},
+          ".",
+          {"score":{"name":"_b"}},
+          " Bov for change. Enjoy your day!"
+        ],
+        failmessages: [
+          [
+            "Alright, that\'ll be ",
+            {"score":{"name":"_B"}},
+            ".",
+            {"score":{"name":"_b"}},
+            " Bov."
+          ],
+          [
+            "Sorry, I\'m still missing' ",
+            {"score":{"name":"_B"}},
+            ".",
+            {"score":{"name":"_b"}},
+            " Bov. Don't worry, I can calculate the change for you."
+          ]
+        ],
+        unsoldrange: [1046, 65, -150, 1047, 65, -150],
+        paypos: [1047.5, 65, -149.5],
+        shoprange:[1044, -161, 1060, -141],
+        lock: ["<",{"text":"Bethany Norma","color":"#00704A","bold":true},"> Hey, leaving without a drink?"]
       }
     }
 

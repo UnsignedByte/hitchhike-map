@@ -615,7 +615,11 @@ summon minecraft:villager 997.50 64 -166.50 {Rotation: [90f, 0f], Silent: 1b, In
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for ramen.
-summon minecraft:villager 1040.50 64 -151.50 {Rotation: [90f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-ramen"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODA2Nzc3MTNkNTgzYTJhMjk3ODc4ZTg4YzIxODQ4YWI2YTJkNWQxNjFkZjQ1NDRlYWQ4OTkwY2RjOTQ0MSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Otori","color":"#8723a6","bold":true}'}
+summon minecraft:villager 1040.50 64 -151.50 {Rotation: [90f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-ramen"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODA2Nzc3MTNkNTgzYTJhMjk3ODc4ZTg4YzIxODQ4YWI2YTJkNWQxNjFkZjQ1NDRlYWQ4OTkwY2RjOTQ0MSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Otori","color":"#8723a6","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for starbucks.
+summon minecraft:villager 1047.50 64 -150.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-starbucks"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTIyNzhhZGMyNmUzNzZhNDZmZmVhZWM1YTE1MmZhZDRiZGY3ZWFlYTcyZTY3N2NjNjQ1MTZjZGM1Y2JjNSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:swamp", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Bethany Norma","color":"#00704a","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for icecream.

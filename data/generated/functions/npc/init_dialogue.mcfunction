@@ -23,6 +23,8 @@ execute as @s[tag=npc-boba] at @s run function generated:npc/boba/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-ramen] at @s run function generated:npc/ramen/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-starbucks] at @s run function generated:npc/starbucks/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-icecream] at @s run function generated:npc/icecream/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-cameron] at @s run function generated:npc/cameron/tick

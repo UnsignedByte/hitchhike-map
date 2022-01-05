@@ -69,6 +69,20 @@ scoreboard players set @e[tag=npc-ramen] dialogue-status 0
 # set status of ramen to paying
 execute if entity @e[tag=paying,type=item,x=1039,y=65,z=-153,dx=0,dy=0,dz=2] run scoreboard players set @e[tag=npc-ramen] dialogue-status 5
 
+execute as @a[nbt={Inventory:[{tag:{store:"starbucks",sold:0b}}]}] at @s unless entity @s[x=1044,z=-161,dx=16,dz=20] run function generated:story/stores/starbucks/lock
+# Kill Thrown Items
+execute as @e[type=item,nbt={Item:{tag:{store:"starbucks",sold:0b}}}] at @s unless entity @s[x=1044,z=-161,dx=16,dz=20] run kill @s
+execute as @e[type=item,tag=!paying,nbt={Item:{store:"starbucks",tag:{sold:0b}},Age:0s},x=1044,z=-161,dx=16,dz=20,y=0,dy=255] run data modify entity @s Age set value 5800
+tag @e[type=item,nbt={Item:{tag:{store:"starbucks",sold:0b}}}] remove paying
+tag @e[type=item,nbt={Item:{tag:{store:"starbucks",sold:0b}}},x=1046,y=65,z=-150,dx=1,dy=0,dz=0] add paying
+execute as @e[tag=paying,type=item,x=1046,y=65,z=-150,dx=1,dy=0,dz=0] run data modify entity @s Age set value -32768
+# Deal with triggers
+execute as @a unless score @s storetrigger matches 0 at @s if entity @s[x=1044,z=-161,dx=16,dz=20] run function generated:story/stores/starbucks/handletrigger
+# reset status if no items to buy
+scoreboard players set @e[tag=npc-starbucks] dialogue-status 0
+# set status of starbucks to paying
+execute if entity @e[tag=paying,type=item,x=1046,y=65,z=-150,dx=1,dy=0,dz=0] run scoreboard players set @e[tag=npc-starbucks] dialogue-status 5
+
 scoreboard players reset @a storetrigger
 execute as @a at @s if entity @s[x=881,z=-169,dx=36,dz=18] run scoreboard players add @s storetrigger 0
 execute as @a at @s if entity @s[x=881,z=-169,dx=36,dz=18] run scoreboard players enable @s storetrigger
@@ -80,3 +94,5 @@ execute as @a at @s if entity @s[x=993,z=-173,dx=14,dz=20] run scoreboard player
 execute as @a at @s if entity @s[x=993,z=-173,dx=14,dz=20] run scoreboard players enable @s storetrigger
 execute as @a at @s if entity @s[x=1029,z=-161,dx=14,dz=20] run scoreboard players add @s storetrigger 0
 execute as @a at @s if entity @s[x=1029,z=-161,dx=14,dz=20] run scoreboard players enable @s storetrigger
+execute as @a at @s if entity @s[x=1044,z=-161,dx=16,dz=20] run scoreboard players add @s storetrigger 0
+execute as @a at @s if entity @s[x=1044,z=-161,dx=16,dz=20] run scoreboard players enable @s storetrigger
