@@ -9,6 +9,23 @@ gamerule doLimitedCrafting true
 stopsound @a
 recipe take @a *
 
+forceload remove all
+# most of map
+forceload add 1103 -256 745 -91
+forceload add 1103 -75 747 93
+# wendys
+forceload add 790 94 813 120
+# Simons house
+forceload add 961 162 891 215
+# Hurm trees
+forceload add 1166 273 1192 302
+# hurm mine
+forceload add 1236 317 1251 321
+# hurm house
+forceload add 1082 343 1068 359
+# lake
+forceload add 1196 361 763 483
+
 function generated:reset
 
 function hitchhike:story/reset
