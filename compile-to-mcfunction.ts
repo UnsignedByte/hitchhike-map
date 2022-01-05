@@ -116,7 +116,7 @@ export function createNpc (
     reset: [
       `# Summon the villager for ${id}.`,
       // Summon new villager
-      `forceload add ${x-1} ${z-1} ${x+1} ${z+1}`,
+      `forceload add ${Math.floor(x)} ${Math.floor(z)} ${Math.ceil(x)} ${Math.ceil(z)}`,
       `summon minecraft:villager ${nts(x)} ${y} ${nts(z)} ${toSnbt(Object.assign({
         Rotation: `[${rx}f, ${ry}f]`,
         Silent: true,
