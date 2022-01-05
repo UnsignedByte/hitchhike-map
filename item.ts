@@ -1433,7 +1433,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 3251,
-            pos: '1048 64 -149',
+            pos: '1047 68 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
@@ -1518,7 +1518,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 525,
-            pos: '1049 64 -149',
+            pos: '1048 68 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
@@ -1543,7 +1543,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 475,
-            pos: '1050 64 -149',
+            pos: '1049 68 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
@@ -1568,7 +1568,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 465,
-            pos: '1051 64 -149',
+            pos: '1050 68 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
@@ -1587,6 +1587,31 @@ export const item = {
             HideFlags:127,
             Potion:`"minecraft:awkward"`,
             CustomPotionColor:0xc79758
+          }
+        },
+        frappuccino:{
+          id: '"minecraft:potion"',
+          tag: {
+            cost: 465,
+            pos: '1051 68 -149',
+            sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
+            display: {
+              Name: `${rawJson({
+                text: "Mocha Frappuccino",
+                color: "#bd7f5b"
+              })}`,
+              Lore:`[${rawJson([
+                {
+                  text: `Venti`,
+                  italic: true,
+                  color: "dark_gray"
+                }
+              ])}]`
+            },
+            Unbreakable:true,
+            HideFlags:127,
+            Potion:`"minecraft:awkward"`,
+            CustomPotionColor:0xbd7f5b
           }
         }
       }
