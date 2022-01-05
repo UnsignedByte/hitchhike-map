@@ -29,7 +29,7 @@ forceload add 1082 343 1068 359
 forceload add 1196 361 763 483
 
 # Maze
-forceload add -1504 -2 -1371 129
+# forceload add -1504 -2 -1371 129
 # lobby
 forceload add -1378 -104 -1420 -196
 
