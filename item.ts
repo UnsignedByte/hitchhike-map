@@ -1442,7 +1442,7 @@ export const item = {
               })}`,
               Lore:`[${rawJson([
                 {
-                  text: `To be more specific:`,
+                  text: `Specifically: `,
                   italic: true,
                   color: "dark_gray"
                 },
@@ -1512,6 +1512,81 @@ export const item = {
             HideFlags:127,
             Potion:`"minecraft:awkward"`,
             CustomPotionColor:0x804d37
+          }
+        },
+        pumpkinspice:{
+          id: '"minecraft:potion"',
+          tag: {
+            cost: 525,
+            pos: '1049 64 -149',
+            sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
+            display: {
+              Name: `${rawJson({
+                text: "Pumpkin Spice Latte",
+                color: "#d4843d"
+              })}`,
+              Lore:`[${rawJson([
+                {
+                  text: `Venti`,
+                  italic: true,
+                  color: "dark_gray"
+                }
+              ])}]`
+            },
+            Unbreakable:true,
+            HideFlags:127,
+            Potion:`"minecraft:awkward"`,
+            CustomPotionColor:0xd4843d
+          }
+        },
+        whitechoco:{
+          id: '"minecraft:potion"',
+          tag: {
+            cost: 475,
+            pos: '1050 64 -149',
+            sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
+            display: {
+              Name: `${rawJson({
+                text: "White Chocolate Mocha",
+                color: "#d4b892"
+              })}`,
+              Lore:`[${rawJson([
+                {
+                  text: `Venti`,
+                  italic: true,
+                  color: "dark_gray"
+                }
+              ])}]`
+            },
+            Unbreakable:true,
+            HideFlags:127,
+            Potion:`"minecraft:awkward"`,
+            CustomPotionColor:0xd4b892
+          }
+        },
+        vanilla:{
+          id: '"minecraft:potion"',
+          tag: {
+            cost: 465,
+            pos: '1051 64 -149',
+            sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
+            display: {
+              Name: `${rawJson({
+                text: "Skinny Vanilla Latte",
+                color: "#c79758"
+              })}`,
+              Lore:`[${rawJson([
+                {
+                  text: `Venti`,
+                  italic: true,
+                  color: "dark_gray"
+                }
+              ])}]`
+            },
+            Unbreakable:true,
+            HideFlags:127,
+            Potion:`"minecraft:awkward"`,
+            CustomPotionColor:0xc79758
           }
         }
       }
