@@ -1432,13 +1432,13 @@ export const item = {
         water: {
           id: '"minecraft:potion"',
           tag: {
-            cost: 449,
+            cost: 3251,
             pos: '1048 64 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
                 text: "Salted Caramel Mocha",
-                color: "#cca860"
+                color: "#995d43"
               })}`,
               Lore:`[${rawJson([
                 {
@@ -1477,7 +1477,32 @@ export const item = {
                   color: "dark_gray"
                 },
                 {
-                  text: `for Toffee Nut Half Whole Milk.`,
+                  text: `for Toffee Nut Half Whole Milk`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `Half Breve With No Whipped Cream`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `Extra Hot Extra Foam Extra`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `Caramel Drizzle Extra Salt Add a`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `Scoop of Vanilla Bean Powder`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `With Light Ice Well Stirred.`,
                   italic: true,
                   color: "dark_gray"
                 }
@@ -1486,7 +1511,7 @@ export const item = {
             Unbreakable:true,
             HideFlags:127,
             Potion:`"minecraft:awkward"`,
-            // CustomPotionColor:0xdbad14
+            CustomPotionColor:0x804d37
           }
         }
       }
