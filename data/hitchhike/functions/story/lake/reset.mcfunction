@@ -16,6 +16,10 @@ summon dolphin 976 95 408 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Tags
 summon dolphin 976 95 408 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["lake-vortex","lake-vortex-small"]}
 summon dolphin 976 95 408 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["lake-vortex","lake-vortex-small"]}
 summon dolphin 976 95 408 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["lake-vortex","lake-vortex-small"]}
+summon dolphin 976 95 408 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["lake-vortex","lake-vortex-small"]}
+summon dolphin 976 95 408 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["lake-vortex","lake-vortex-small"]}
+summon turtle 976 95 408 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["lake-vortex","lake-vortex-large"]}
+summon turtle 976 95 408 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["lake-vortex","lake-vortex-large"]}
 summon turtle 976 95 408 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["lake-vortex","lake-vortex-large"]}
 summon turtle 976 95 408 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["lake-vortex","lake-vortex-large"]}
 
