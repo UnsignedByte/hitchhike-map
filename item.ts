@@ -1433,7 +1433,7 @@ export const item = {
           id: '"minecraft:potion"',
           tag: {
             cost: 449,
-            pos: '1004 64 -161',
+            pos: '1048 64 -149',
             sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
             display: {
               Name: `${rawJson({
