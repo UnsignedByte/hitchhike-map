@@ -1429,7 +1429,66 @@ export const item = {
         }
       },
       starbucks: {
-        
+        water: {
+          id: '"minecraft:potion"',
+          tag: {
+            cost: 449,
+            pos: '1004 64 -161',
+            sign: '"minecraft:dark_oak_wall_sign[facing=south]"',
+            display: {
+              Name: `${rawJson({
+                text: "Salted Caramel Mocha",
+                color: "#cca860"
+              })}`,
+              Lore:`[${rawJson([
+                {
+                  text: `To be more specific:`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `Quad Long Shot Grande in a`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `Venti Cup Half Calf Double`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `Cupped No Sleeve Salted Caramel`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `Mocha Latte With 2 Pumps of`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `White Chocolate Mocha for Mocha`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `and Substitute 2 Pumps of Hazelnut`,
+                  italic: true,
+                  color: "dark_gray"
+                },
+                {
+                  text: `for Toffee Nut Half Whole Milk.`,
+                  italic: true,
+                  color: "dark_gray"
+                }
+              ])}]`
+            },
+            Unbreakable:true,
+            HideFlags:127,
+            Potion:`"minecraft:awkward"`,
+            // CustomPotionColor:0xdbad14
+          }
+        }
       }
     }
 
