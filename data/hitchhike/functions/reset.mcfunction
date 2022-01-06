@@ -9,7 +9,6 @@ gamerule doLimitedCrafting true
 stopsound @a
 recipe take @a *
 
-forceload remove all
 # NPCS
 function generated:npc/loadchunks
 # spawn
