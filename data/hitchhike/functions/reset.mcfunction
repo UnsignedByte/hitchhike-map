@@ -40,13 +40,13 @@ forceload add 1196 361 763 483
 # lobby
 forceload add -1378 -104 -1420 -196
 
-function generated:reset
-
 function hitchhike:story/reset
 
 function hitchhike:car/reset
 
 function hitchhike:thrownitem/reset
+
+function generated:reset
 
 scoreboard players set @a foodGoal 41
 
