@@ -2064,7 +2064,6 @@ shelves:
     count: 15
     item: pink_tulip
     small: true
-    forcebuild: true
   orangetulip:
     pos: 905 65 -162
     dir: south
@@ -2072,7 +2071,6 @@ shelves:
     count: 15
     item: orange_tulip
     small: true
-    forcebuild: true
   redtulip:
     pos: 905 66 -162
     dir: south
@@ -2088,7 +2086,6 @@ shelves:
     count: 15
     item: lily_of_the_valley
     small: true
-    forcebuild: true
   orchid:
     pos: 901 65 -158
     dir: north
@@ -2096,7 +2093,6 @@ shelves:
     count: 15
     item: blue_orchid
     small: true
-    forcebuild: true
   cornflower:
     pos: 901 66 -158
     dir: north
@@ -2104,4 +2100,3 @@ shelves:
     count: 15
     item: cornflower
     small: true
-    forcebuild: true
