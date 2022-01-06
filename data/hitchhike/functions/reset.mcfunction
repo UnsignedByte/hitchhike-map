@@ -34,19 +34,21 @@ forceload add 1236 317 1251 321
 forceload add 1082 343 1068 359
 # lake
 forceload add 1196 361 763 483
+# safeway
+forceload add 884 -166 916 -152
 
 # Maze
 # forceload add -1504 -2 -1371 129
 # lobby
 forceload add -1378 -104 -1420 -196
 
+function generated:reset
+
 function hitchhike:story/reset
 
 function hitchhike:car/reset
 
 function hitchhike:thrownitem/reset
-
-function generated:reset
 
 scoreboard players set @a foodGoal 41
 
@@ -76,3 +78,5 @@ execute as @e[tag=npc] at @s run forceload add ~-1 ~-1 ~1 ~1
 forceload add 930 -16 958 9
 # Simons house
 forceload add 961 162 891 215
+# safeway
+forceload add 884 -166 916 -152

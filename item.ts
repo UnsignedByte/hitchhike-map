@@ -754,6 +754,25 @@ export const item = {
             }
           }
         },
+        cookie: {
+          id: '"minecraft:cookie"',
+          tag:{
+            cost: 1499,
+            pos: `'909.7 64 -160.75'`,
+            display: {
+              Name: `${rawJson({
+                text: "Chocolate-Chip Cookie",
+                bold: false,
+                color: "#916e3c"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Sugary goodness.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            }
+          }
+        },
         monster: {
           id:'"minecraft:potion"',
           tag:{

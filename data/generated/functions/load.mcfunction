@@ -4156,6 +4156,8 @@ tag @a remove victim-of-dialogue-by-__safeway_clownfish
 
 tag @a remove victim-of-dialogue-by-__safeway_salmon
 
+tag @a remove victim-of-dialogue-by-__safeway_cookie
+
 tag @a remove victim-of-dialogue-by-__safeway_monster
 
 tag @a remove victim-of-dialogue-by-__safeway_lacroix

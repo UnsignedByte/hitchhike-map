@@ -2036,3 +2036,24 @@ shelves:
     count: 6
     item: cookie
     small: true
+  honeycomb:
+    pos: 910 64 -159.5
+    dir: south
+    length: 2.5
+    count: 6
+    item: honeycomb
+    small: true
+  honeymid:
+    pos: 910 65 -159.5
+    dir: south
+    length: 2.5
+    count: 6
+    item: honey_bottle
+    small: true
+  honeytop:
+    pos: 910 66 -159.5
+    dir: south
+    length: 2.5
+    count: 6
+    item: honey_bottle
+    small: true
