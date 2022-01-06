@@ -2078,7 +2078,6 @@ shelves:
     count: 15
     item: red_tulip
     small: true
-    forcebuild: true
   lily:
     pos: 901 64 -158
     dir: north

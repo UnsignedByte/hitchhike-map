@@ -4166,11 +4166,17 @@ tag @a remove victim-of-dialogue-by-__safeway_honeycomb
 
 tag @a remove victim-of-dialogue-by-__safeway_seaweed
 
-tag @a remove victim-of-dialogue-by-__safeway_bread
+tag @a remove victim-of-dialogue-by-__safeway_pinktulip
+
+tag @a remove victim-of-dialogue-by-__safeway_orangetulip
+
+tag @a remove victim-of-dialogue-by-__safeway_redtulip
 
 tag @a remove victim-of-dialogue-by-__safeway_monster
 
 tag @a remove victim-of-dialogue-by-__safeway_lacroix
+
+tag @a remove victim-of-dialogue-by-__safeway_bread
 
 
 

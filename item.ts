@@ -701,7 +701,8 @@ export const item = {
                 italic: false,
                 color: "#e4ed2d"
               })}]`
-            }
+            },
+            HideFlags:127
           }
         },
         clownfish: {
@@ -728,7 +729,8 @@ export const item = {
                 italic: false,
                 color: "#ffc59e"
               })}]`
-            }
+            },
+            HideFlags:127
           }
         },
         salmon: {
@@ -751,7 +753,8 @@ export const item = {
                 italic: false,
                 color: "#FA8072"
               })}]`
-            }
+            },
+            HideFlags:127
           }
         },
         ramen: {
@@ -770,7 +773,8 @@ export const item = {
                 italic: false,
                 color: "dark_gray"
               })}]`
-            }
+            },
+            HideFlags:127
           }
         },
         cookie: {
@@ -789,7 +793,8 @@ export const item = {
                 italic: false,
                 color: "dark_gray"
               })}]`
-            }
+            },
+            HideFlags:127
           }
         },
         honey: {
@@ -812,7 +817,8 @@ export const item = {
                 italic: false,
                 color: "#ebd93f"
               })}]`
-            }
+            },
+            HideFlags:127
           }
         },
         honeycomb: {
@@ -831,7 +837,8 @@ export const item = {
                 italic: false,
                 color: "dark_gray"
               })}]`
-            }
+            },
+            HideFlags:127
           }
         },
         seaweed: {
@@ -850,26 +857,68 @@ export const item = {
                 italic: false,
                 color: "dark_gray"
               })}]`
-            }
+            },
+            HideFlags:127
           }
         },
-        bread: {
-          id: '"minecraft:bread"',
+        pinktulip: {
+          id:'"minecraft:pink_tulip"',
           tag:{
-            cost: 399,
-            pos: `'904.7 63.5 -159.5'`,
+            cost: 349,
+            pos: `'904.7 62.25 -159.5'`,
             display: {
               Name: `${rawJson({
-                text: "Whole Wheat Bread",
+                text: "Pink Tulip",
                 bold: false,
-                color: "#d1a96b"
+                color: "#edadde"
               })}`,
               Lore:`[${rawJson({
-                text: `Crunchy.`,
+                text: `Fresh Flowers.`,
                 italic: false,
-                color: "#9c7d4c"
+                color: "dark_gray"
               })}]`
-            }
+            },
+            HideFlags:127
+          }
+        },
+        orangetulip: {
+          id:'"minecraft:orange_tulip"',
+          tag:{
+            cost: 349,
+            pos: `'904.75 63.25 -159.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Pink Tulip",
+                bold: false,
+                color: "#e8ac7b"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Fresh Flowers.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            },
+            HideFlags:127
+          }
+        },
+        redtulip: {
+          id:'"minecraft:red_tulip"',
+          tag:{
+            cost: 349,
+            pos: `'904.8 64.25 -159.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Red Tulip",
+                bold: false,
+                color: "#e65a5a"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Fresh Flowers.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            },
+            HideFlags:127
           }
         },
         monster: {
@@ -913,7 +962,26 @@ export const item = {
             Potion:`"minecraft:awkward"`,
             CustomPotionColor:2799851
           }
-        }
+        },
+        bread: {
+          id: '"minecraft:bread"',
+          tag:{
+            cost: 399,
+            pos: `'883.3 63.5 -159.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Whole Wheat Bread",
+                bold: false,
+                color: "#d1a96b"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Crunchy.`,
+                italic: false,
+                color: "#9c7d4c"
+              })}]`
+            }
+          }
+        },
       },
       clothes: {
         pbblue: {

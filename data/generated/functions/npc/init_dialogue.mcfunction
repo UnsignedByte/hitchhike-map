@@ -111,9 +111,15 @@ execute as @s[tag=npc-__safeway_honeycomb] at @s run function generated:npc/__sa
 # Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_seaweed] at @s run function generated:npc/__safeway_seaweed/tick
 # Start a conversation if it was selected
-execute as @s[tag=npc-__safeway_bread] at @s run function generated:npc/__safeway_bread/tick
+execute as @s[tag=npc-__safeway_pinktulip] at @s run function generated:npc/__safeway_pinktulip/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-__safeway_orangetulip] at @s run function generated:npc/__safeway_orangetulip/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-__safeway_redtulip] at @s run function generated:npc/__safeway_redtulip/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_monster] at @s run function generated:npc/__safeway_monster/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_lacroix] at @s run function generated:npc/__safeway_lacroix/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-__safeway_bread] at @s run function generated:npc/__safeway_bread/tick
 tag @s remove selected_npc
