@@ -2078,3 +2078,24 @@ shelves:
     count: 18
     item: red_tulip
     small: true
+  lily:
+    pos: 901 64 -158
+    dir: north
+    length: 5
+    count: 18
+    item: lily_of_the_valley
+    small: true
+  orchid:
+    pos: 901 65 -158
+    dir: north
+    length: 5
+    count: 18
+    item: blue_orchid
+    small: true
+  cornflower:
+    pos: 901 65 -158
+    dir: north
+    length: 5
+    count: 18
+    item: cornflower
+    small: true
