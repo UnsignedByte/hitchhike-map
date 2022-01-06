@@ -757,8 +757,8 @@ export const item = {
         cookie: {
           id: '"minecraft:cookie"',
           tag:{
-            cost: 1499,
-            pos: `'909.7 64 -160.75'`,
+            cost: 149,
+            pos: `'909.7 63.5 -160.75'`,
             display: {
               Name: `${rawJson({
                 text: "Chocolate-Chip Cookie",
@@ -767,6 +767,48 @@ export const item = {
               })}`,
               Lore:`[${rawJson({
                 text: `Sugary goodness.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            }
+          }
+        },
+        honey: {
+          id: '"minecraft:honey_bottle"',
+          tag:{
+            cost: 899,
+            pos: `'909.8 64.3 -158.25'`,
+            display: {
+              Name: `${rawJson({
+                text: "Honey",
+                bold: false,
+                color: "#e8c733"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Winnie the Pooh's`,
+                italic: false,
+                color: "#ebd93f"
+              })}, ${rawJson({
+                text: `favorite snack.`,
+                italic: false,
+                color: "#ebd93f"
+              })}]`
+            }
+          }
+        },
+        honeycomb: {
+          id: '"minecraft:honeycomb"',
+          tag:{
+            cost: 749,
+            pos: `'909.7 62.5 -158.25'`,
+            display: {
+              Name: `${rawJson({
+                text: "Honeycomb",
+                bold: false,
+                color: "#ebce3f"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Hexagonal lattice.`,
                 italic: false,
                 color: "dark_gray"
               })}]`
