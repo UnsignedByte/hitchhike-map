@@ -71,3 +71,8 @@ summon area_effect_cloud 802.7 63.625 95.3 {Duration:2147483647,Tags:["aec","dea
 
 forceload remove all
 execute as @e[tag=npc] at @s run forceload add ~-1 ~-1 ~1 ~1
+
+# sawyer house
+forceload add 930 -16 958 9
+# Simons house
+forceload add 961 162 891 215
