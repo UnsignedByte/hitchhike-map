@@ -846,9 +846,28 @@ export const item = {
                 color: "#19691c"
               })}`,
               Lore:`[${rawJson({
-                text: `Just add hot water.`,
+                text: `Crunchy.`,
                 italic: false,
                 color: "dark_gray"
+              })}]`
+            }
+          }
+        },
+        bread: {
+          id: '"minecraft:bread"',
+          tag:{
+            cost: 399,
+            pos: `'904.7 63.5 -159.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Whole Wheat Bread",
+                bold: false,
+                color: "#d1a96b"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Crunchy.`,
+                italic: false,
+                color: "#9c7d4c"
               })}]`
             }
           }

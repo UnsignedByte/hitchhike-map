@@ -84,7 +84,7 @@ export function createNpc (
 
   const START_DIST = 4
   const LEAVE_DIST = 10
-  const HEAR_DIST = 50
+  const HEAR_DIST = 25
 
   const select = {
     self: `@e[tag=${npcTag}, limit=1]`,

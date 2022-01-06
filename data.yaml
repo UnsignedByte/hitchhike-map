@@ -2057,3 +2057,24 @@ shelves:
     count: 6
     item: honey_bottle
     small: true
+  pinktulip:
+    pos: 905 64 -162
+    dir: south
+    length: 5
+    count: 12
+    item: pink_tulip
+    small: true
+  orangetulip:
+    pos: 905 65 -162
+    dir: south
+    length: 5
+    count: 12
+    item: orange_tulip
+    small: true
+  redtulip:
+    pos: 905 66 -162
+    dir: south
+    length: 5
+    count: 12
+    item: red_tulip
+    small: true
