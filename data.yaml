@@ -2061,20 +2061,20 @@ shelves:
     pos: 905 64 -162
     dir: south
     length: 5
-    count: 12
+    count: 18
     item: pink_tulip
     small: true
   orangetulip:
     pos: 905 65 -162
     dir: south
     length: 5
-    count: 12
+    count: 18
     item: orange_tulip
     small: true
   redtulip:
     pos: 905 66 -162
     dir: south
     length: 5
-    count: 12
+    count: 18
     item: red_tulip
     small: true
