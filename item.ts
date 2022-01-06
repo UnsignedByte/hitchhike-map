@@ -754,6 +754,25 @@ export const item = {
             }
           }
         },
+        noodles: {
+          id: '"minecraft:mushroom_stew"',
+          tag:{
+            cost: 149,
+            pos: `'912.3 63.5 -159.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Instant Ramen",
+                bold: false,
+                color: "#b35425"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Just add hot water.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            }
+          }
+        },
         cookie: {
           id: '"minecraft:cookie"',
           tag:{

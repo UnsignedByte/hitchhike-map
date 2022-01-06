@@ -101,6 +101,8 @@ execute as @s[tag=npc-__safeway_clownfish] at @s run function generated:npc/__sa
 # Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_salmon] at @s run function generated:npc/__safeway_salmon/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-__safeway_noodles] at @s run function generated:npc/__safeway_noodles/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_cookie] at @s run function generated:npc/__safeway_cookie/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_honey] at @s run function generated:npc/__safeway_honey/tick
