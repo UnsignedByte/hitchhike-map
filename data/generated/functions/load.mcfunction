@@ -4156,13 +4156,15 @@ tag @a remove victim-of-dialogue-by-__safeway_clownfish
 
 tag @a remove victim-of-dialogue-by-__safeway_salmon
 
-tag @a remove victim-of-dialogue-by-__safeway_noodles
+tag @a remove victim-of-dialogue-by-__safeway_ramen
 
 tag @a remove victim-of-dialogue-by-__safeway_cookie
 
 tag @a remove victim-of-dialogue-by-__safeway_honey
 
 tag @a remove victim-of-dialogue-by-__safeway_honeycomb
+
+tag @a remove victim-of-dialogue-by-__safeway_seaweed
 
 tag @a remove victim-of-dialogue-by-__safeway_monster
 

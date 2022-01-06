@@ -409,7 +409,7 @@ export const item = {
             pos: `'915.5 63.625 -153.5'`,
             display: {
               Name: `${rawJson({
-                text: "Seaweed",
+                text: "Fresh Seaweed",
                 bold: false,
                 color: "#3bbd17"
               })}`,
@@ -754,10 +754,10 @@ export const item = {
             }
           }
         },
-        noodles: {
+        ramen: {
           id: '"minecraft:mushroom_stew"',
           tag:{
-            cost: 149,
+            cost: 249,
             pos: `'912.3 63.5 -159.5'`,
             display: {
               Name: `${rawJson({
@@ -828,6 +828,25 @@ export const item = {
               })}`,
               Lore:`[${rawJson({
                 text: `Hexagonal lattice.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            }
+          }
+        },
+        seaweed: {
+          id: '"minecraft:dried_kelp"',
+          tag:{
+            cost: 199,
+            pos: `'907.3 63.5 -159.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Dried Seaweed",
+                bold: false,
+                color: "#19691c"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Just add hot water.`,
                 italic: false,
                 color: "dark_gray"
               })}]`
