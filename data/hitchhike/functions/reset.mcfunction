@@ -43,4 +43,4 @@ forceload add 884 -166 916 -152
 forceload add -1378 -104 -1420 -196
 
 # Waits for the chunks to actually load
-schedule function hitchhike:truereset 1t
+schedule function hitchhike:truereset 20t
