@@ -10,6 +10,8 @@ stopsound @a
 recipe take @a *
 
 forceload remove all
+# NPCS
+function generated:npc/loadchunks
 # spawn
 forceload add -26 -11 -123 86
 # most of map

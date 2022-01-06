@@ -67,6 +67,7 @@ export async function init (
 
   functions['npc/init_dialogue'] = [];
   functions['npc/speaking'] = [];
+  functions['npc/loadchunks'] = [];
 
   for (const [id, dat] of Object.entries(data.npc.npcs)) {
     const result = createNpc(namespace, id, dat)
@@ -75,6 +76,7 @@ export async function init (
     onLoad.push('', result.onLoad)
     functions['npc/init_dialogue'].push(result.initDialogue);
     functions['npc/speaking'].push(result.speaking);
+    functions['npc/loadchunks'].push(`forceload add ${result.loadpos[0]} ${result.loadpos[1]}`);
     Object.assign(functions, result.functions)
   }
   onTick.push([

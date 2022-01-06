@@ -754,312 +754,250 @@ summon armor_stand 901.31250011 65.46289060 -161.83333333 {Pose: {Head: [0.00000
 summon armor_stand 901.93698231 65.42976502 -161.83333333 {Pose: {Head: [45.880449422692955f, 90.00000000000001f, 0f]}, Tags: ["item_holder"], ArmorItems: [{},{},{},{id: "cornflower", Count: 1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 1b}
 
 # Summon the villager for billy.
-forceload add -3 18 -3 18
 summon minecraft:villager -3.00 64 18.00 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-billy"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDE1NWQyMWM3NzNjNzY1MmJlOTg0YmQ3NTNkZDhiM2QyMjVkOWE5NTBkMWQyM2ViZjBmYzVjOWVkYzM4NDBjYiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:fletcher", level: 99}, Offers: {}, CustomName: '{"text":"Billy","color":"#ff00ff","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for sam.
-forceload add 3 18 3 18
 summon minecraft:villager 3.00 64 18.00 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-sam"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODBiYzk0YTIzOThlOTliNDRkMjUyMDg4Y2EyMzU2M2Y3OTlhZTUzZDdlZWVlOTRmNzFlM2NiODVkMjViOTc4MiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:swamp", profession: "minecraft:shepherd", level: 99}, Offers: {}, CustomName: '{"text":"Sam","color":"#ffff00","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for marc.
-forceload add 0 18 0 18
 summon minecraft:villager 0.00 64 18.00 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-marc"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmExYjA2Njk3NDIwMmViMGY2ZTM0MmFhYmI3ZTBkNzM0ZGNhMDlhOWY2ZjJiMzhmMjIyNmE3OTEwZmIzNzZlOSJ9fX0" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:mason", level: 99}, Offers: {}, CustomName: '{"text":"Marc","color":"#00ff00","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for wheatish.
-forceload add 6 18 6 18
 summon minecraft:villager 6.00 64 18.00 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-wheatish"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzBkNDE1ZDJlYjlkNjhlNTZkYjUwYWZmNDk0YWJkZWRiODViOTExOTE4OWNmMDFkZDRmOTFjNmRhYjJjNmJhIn19fQ==" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Mr. Wheat","color":"#c7a946","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for sawyer.
-forceload add 950 -1 951 0
 summon minecraft:villager 950.50 70 -0.25 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-sawyer"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWFkMTNmN2Q4ZTVhMTBmNGZiYThiODk3NTVlZGVkNzBmYzk2MTE5YTRlOThkZjc3M2M4NmQzMmNmN2E3ZjNlZiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:cleric", level: 99}, Offers: {}, CustomName: '{"text":"Chris Sawyer","color":"#4fa1a7","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for simon.
-forceload add 939 195 940 195
 summon minecraft:villager 939.25 68 195.00 {Rotation: [90f, 15f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-simon"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Q0ZjNhMDk3YjgyZGVjODBhMzZkYzRhODkxNmI4MWVmZWZhZGFlM2ExNDU1NTMxODI5NjliNDA5OTYwMGIxZSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:librarian", level: 99}, Offers: {}, CustomName: '{"text":"Simon Ursus Stephens","color":"#85deb1","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for hurm.
-forceload add 1075 355 1076 356
 summon minecraft:villager 1075.70 125 355.50 {Rotation: [-90f, 30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-hurm"], VillagerData: {type: "minecraft:snow", profession: "minecraft:fisherman", level: 99}, Offers: {}, CustomName: '{"text":"Hurm Etkcraub","color":"#183aab","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for safeway.
-forceload add 891 -153 892 -152
 summon minecraft:villager 891.50 64 -152.50 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-safeway"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjMxYTAzZjY3Y2M4YThkZTIxY2I5NjFiMDZjNzQ1M2I1NjQ2YWYzNDViZmIxZGMwMjJiNWY5MTY5Y2JmODA3OCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:shepherd", level: 99}, Offers: {}, CustomName: '{"text":"Paoule Enrique","color":"#eb7060","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for clothes.
-forceload add 984 -169 985 -168
 summon minecraft:villager 984.50 64 -168.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-clothes"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk2YWE3MjIyOGZhOGNkNjMyMjk2ZTg1MjU0N2EwMmIzYjI1MWRiYTk1ZDJlOWZjZDA4OTg0NzNmOTg4MzYifX19" }]}}}}], VillagerData: {type: "minecraft:swamp", profession: "minecraft:librarian", level: 99}, Offers: {}, CustomName: '{"text":"Jean Skinne","color":"#2387d9","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for subway.
-forceload add 951 -146 952 -145
 summon minecraft:villager 951.50 64 -145.50 {Rotation: [45f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-subway"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNTM1MjU3YWQ1ZjdhNTEzNjhiMTQ1ZGZmNDFjN2U2Y2I0OWRiZTY4ZDEzNWI0MTg1YTVmMmFmNmUzNTEifX19" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Sili Connesse","color":"#f0d792","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for boba.
-forceload add 997 -167 998 -166
 summon minecraft:villager 997.50 64 -166.50 {Rotation: [90f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-boba"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzdhMTg5NDFkZGMzZDg2YTM5YTMzODcyMDI0MmE3OWQ3YTg0ZmYxZGQxZTQ4ZTY3MjRhZDkxNjNlNTZjIn19fQ==" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Blets Chun","color":"#d65454","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for ramen.
-forceload add 1040 -152 1041 -151
 summon minecraft:villager 1040.50 64 -151.50 {Rotation: [90f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-ramen"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODA2Nzc3MTNkNTgzYTJhMjk3ODc4ZTg4YzIxODQ4YWI2YTJkNWQxNjFkZjQ1NDRlYWQ4OTkwY2RjOTQ0MSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Otori","color":"#8723a6","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for starbucks.
-forceload add 1047 -151 1048 -150
 summon minecraft:villager 1047.50 64 -150.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-starbucks"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTIyNzhhZGMyNmUzNzZhNDZmZmVhZWM1YTE1MmZhZDRiZGY3ZWFlYTcyZTY3N2NjNjQ1MTZjZGM1Y2JjNSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:swamp", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Bethany Norma","color":"#00704a","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for icecream.
-forceload add 966 -151 967 -150
 summon minecraft:villager 966.50 64 -150.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-icecream"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI5OWEyNThmZDMxNzA5MzUwM2FhYzY0ZTJhMGRiMjM3ZWJhYzM3ZDEzYjFmNzQ4NGFkNjUyNmNiY2IzYmVlNSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:butcher", level: 99}, Offers: {}, CustomName: '{"text":"Laak Towse","color":"#a2f092","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for cameron.
-forceload add 944 17 945 18
 summon minecraft:villager 944.30 96.8 17.30 {Rotation: [140f, 35f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-cameron"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWI4NDE4YzQ2MWY2M2Q2YWFkMzkzMmE2MzlmY2UzZmVjMjI3YTM3NzRhNTliODUxZmZiZTY1NTg3NGViNzkxIn19fQ==" }]}}}}], VillagerData: {type: "minecraft:swamp", profession: "minecraft:nitwit", level: 99}, Offers: {}, CustomName: '{"text":"Cameron \\"Cam\\" Au-Flauge","color":"#197037","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for muller.
-forceload add 895 -157 896 -156
 summon minecraft:villager 895.50 77 -156.70 {Rotation: [180f, 20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-muller"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhlOWNiMzE3ZmY1NzJmY2EwNjI4MDhmNGJiYmVmNzJiZTc1NTIxZjM2OWJiNDcxZmY4YTczNjE5YzE5NCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:mason", level: 99}, Offers: {}, CustomName: '{"text":"Egress Muller","color":"#608082","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for fishjar.
-forceload add 915 -79 916 -78
 summon minecraft:villager 915.50 55 -78.50 {Rotation: [90f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-fishjar"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThkZDdkNDM0MWExODhkZTBiOWJmMjNlZmU0MTljNjRhMzQ1ODNjNjExYzFlYzllMWJjNzVmNGJhOWJlYzY1YyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:nitwit", level: 99}, Offers: {}, CustomName: '{"text":"Cullus Major","color":"#bdaa77","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for fountainman.
-forceload add 899 -54 900 -53
 summon minecraft:villager 899.50 64 -53.30 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-fountainman"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzE5ODRkOGE2ODRkM2JiZjZhZTk1MzExMDY0Mzk3NDE3OTM2NDZkMzg0YmZjYjFlNGFkOTQ5ZDU3YzI1In19fQ==" }]}}}}], VillagerData: {type: "minecraft:swamp", profession: "minecraft:cleric", level: 99}, Offers: {}, CustomName: '{"text":"Sylvian Bismarck","color":"#9c389c","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for bosnum.
-forceload add 1093 -72 1094 -71
 summon minecraft:villager 1093.70 67 -71.50 {Rotation: [-90f, 20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-bosnum"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDA5ZWJiY2QyMTU0MzdkYWRjNDc1NDNkM2JjZGVmMTY0MmFmMjI0YzVhNGE2MTQzZDk2NzczZGFkZjg5ZGM3ZCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:leatherworker", level: 99}, Offers: {}, CustomName: '{"text":"Bosnum Bert","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for walter.
-forceload add 1090 -55 1091 -55
 summon minecraft:villager 1090.50 66 -55.00 {Rotation: [90f, 10f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-walter"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODgzZjQ3NTc3YTBiYmNhYjgyZDgxZmE4MzdlMGFmZmM2NzY0MjU0NzBmYTViOWEyNWJjYWQ1MmJkNjhjMTAzNiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:butcher", level: 99}, Offers: {}, CustomName: '{"text":"Walter Wheat","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for plenton.
-forceload add 1098 -46 1099 -45
 summon minecraft:villager 1098.50 66 -45.50 {Rotation: [0f, 40f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-plenton"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2JmZmVjZWY3MmJiYzdjNTA4ZTk5YTg4NzFiMjAyMDZmMzBiODdhZDQ0OTg2YmNhZTBkNWJiNTk5ZmI3MGIzIn19fQ==" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Mrs. Plenton","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for birthdayboy.
-forceload add 949 76 950 77
 summon minecraft:villager 949.50 64.8 76.30 {Rotation: [-180f, 30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-birthdayboy"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTk5NDc1ZGQyOTQ3Njg2Y2JkN2Y3MmM4OGNhZDM3MjA1ZGM1OWNiZDhlZDE3YTAzZTAyYzIxODVhODZiM2MwYyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:nitwit", level: 99}, Offers: {}, CustomName: '{"text":"Matt Norma","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for poolgoer.
-forceload add 880 30 881 31
 summon minecraft:villager 880.50 76 30.70 {Rotation: [-180f, -20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-poolgoer"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTIyNWNjNDBmNWRjZTlkNjdkMTIxNzUxYmMyOTIxNWRjODljZDRjMjJlNjEyMjk3MWVmNzg0NTFmODQyMjQyZSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:weaponsmith", level: 99}, Offers: {}, CustomName: '{"text":"Buck Crady","color":"#9c231a","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for giffy.
-forceload add 864 3 865 4
 summon minecraft:villager 864.50 70 3.50 {Rotation: [27f, 5f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-giffy"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2RlZGQ2ZTQ2ZTlhOGY1NDViNmZhZjFhZGQxYjE2YjJjNjNhNTgwNDMyYmM2ZDZlNmMwZDJiM2M2ZjI5NGE1In19fQ==" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:mason", level: 99}, Offers: {}, CustomName: '{"text":"Giffy Hapsteen","color":"#86943a","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for samsung.
-forceload add 1059 0 1060 1
 summon minecraft:villager 1059.30 65 0.50 {Rotation: [90f, -15f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-samsung"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTdjYzY2MTViYjRjODMxMWZjZDU3Mzk0NWZiNTQwNWI5YWZjYjBlYjU3YTgxY2ZhZTMxOGZlMjQwYWY2ZTVlOCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:cleric", level: 99}, Offers: {}, CustomName: '{"text":"Samantha Sung","color":"#945da1","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for lucky.
-forceload add 1042 -4 1043 -3
 summon minecraft:villager 1042.60 66.1875 -3.30 {Rotation: [-135f, 45f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-lucky"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjIyOTZlYTE2MGYxYjY2ZGYzMjk1MzdkNmQxNmFhZDE3OWZmZDk3MzdhOTJkMjk0YWVlNzU2NjJjMGQ2ZDQzMSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:nitwit", level: 99}, Offers: {}, CustomName: '{"text":"Lucky Goldstar","color":"#3db330","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for deagol.
-forceload add 789 95 790 96
 summon minecraft:villager 789.30 63.6 95.50 {Rotation: [90f, 10f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-deagol"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTkyZjIxN2RhMDNjZjgzMWRhNjBjM2IzMzI4N2QzMzQ2MWQ4NzE1MzIxZjEzYjdjMzFjZmFmNjY0OGZmMyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Degol Dobby","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for eichhornchen.
-forceload add 665 -30 666 -29
 summon minecraft:villager 665.70 57 -29.70 {Rotation: [50f, 25f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-eichhornchen"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzI0ZTRiMmNlZTJhNmIzNmU5YmFjZDRiZWRkMGQ0ZGJjMTdkYTMxMTg2NjI3NGFmYzRiOWVkNTBlYTc3MTdlMiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Eich Hornchen","color":"#ebe34b","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_apple.
-forceload add 905 -153 906 -152
 summon minecraft:villager 905.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_apple", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fuji Apple","color":"#FF0000"},{"text":" (1.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_melon_slice.
-forceload add 909 -153 910 -152
 summon minecraft:villager 909.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_melon_slice", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Watermelon","color":"#cc3968"},{"text":" (2.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_glow_berries.
-forceload add 901 -153 902 -152
 summon minecraft:villager 901.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_glow_berries", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Rainier Cherry","color":"#f2b91d"},{"text":" (1.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_milk.
-forceload add 914 -153 914 -152
 summon minecraft:villager 914.00 62.75 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_milk", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Whole Milk","bold":false,"color":"#f5f3e6"},{"text":" (5.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_egg.
-forceload add 914 -153 914 -152
 summon minecraft:villager 914.00 63.625 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_egg", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Egg","bold":false,"color":"#f2e1aa"},{"text":" (0.09B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_pickle.
-forceload add 914 -153 914 -152
 summon minecraft:villager 914.00 64.5 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_pickle", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Dill Pickle","bold":false,"color":"#538c19"},{"text":" (0.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_bamboo.
-forceload add 915 -154 916 -153
 summon minecraft:villager 915.50 62.75 -153.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_bamboo", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Bamboo Shoots","bold":false,"color":"#16ba2c"},{"text":" (1.19B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_kelp.
-forceload add 915 -154 916 -153
 summon minecraft:villager 915.50 63.625 -153.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_kelp", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fresh Seaweed","bold":false,"color":"#3bbd17"},{"text":" (1.19B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_cane.
-forceload add 915 -154 916 -153
 summon minecraft:villager 915.50 64.5 -153.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_cane", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Sugarcane","bold":false,"color":"#009903"},{"text":" (0.89B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_mysteryshrooms.
-forceload add 915 -157 916 -156
 summon minecraft:villager 915.50 62.75 -156.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_mysteryshrooms", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Mystery Shrooms","bold":false,"color":"#e64037"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_shiitake.
-forceload add 915 -157 916 -156
 summon minecraft:villager 915.50 63.625 -156.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_shiitake", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Shiitake Mushrooms","bold":false,"color":"#917250"},{"text":" (1.74B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_beet.
-forceload add 915 -157 916 -156
 summon minecraft:villager 915.50 64.5 -156.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_beet", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Beet","bold":false,"color":"#7a1f3d"},{"text":" (1.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_potato.
-forceload add 915 -160 916 -159
 summon minecraft:villager 915.50 63.625 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_potato", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Potato","bold":false,"color":"#dbbb70"},{"text":" (1.24B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_carrot.
-forceload add 915 -162 916 -162
 summon minecraft:villager 915.50 63.625 -162.00 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_carrot", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Carrot","bold":false,"color":"#e6671e"},{"text":" (1.24B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_berries.
-forceload add 915 -161 916 -160
 summon minecraft:villager 915.50 64.5 -160.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_berries", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Strawberry","bold":false,"color":"#db324f"},{"text":" (2.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_rawbeef.
-forceload add 915 -166 916 -165
 summon minecraft:villager 915.50 63.25 -165.25 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_rawbeef", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Raw Beef","bold":false,"color":"#a8180d"},{"text":" (8.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_rawmutton.
-forceload add 915 -166 916 -165
 summon minecraft:villager 915.50 64.5 -165.25 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_rawmutton", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Mutton","bold":false,"color":"#a30b2c"},{"text":" (6.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_porkchop.
-forceload add 914 -167 915 -166
 summon minecraft:villager 914.25 63.25 -166.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_porkchop", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Porkchops","bold":false,"color":"#e36d6d"},{"text":" (7.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_rabbit.
-forceload add 914 -167 915 -166
 summon minecraft:villager 914.25 64.5 -166.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_rabbit", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Rabbit Meat","bold":false,"color":"#d1816b"},{"text":" (7.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_chicken.
-forceload add 911 -167 912 -166
 summon minecraft:villager 911.50 64.5 -166.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_chicken", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Chicken","bold":false,"color":"#e3aa81"},{"text":" (5.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_pufferfish.
-forceload add 907 -167 907 -166
 summon minecraft:villager 907.00 64 -166.30 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_pufferfish", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Pufferfish","bold":false,"color":"#f0e143"},{"text":" (9.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_clownfish.
-forceload add 902 -167 903 -166
 summon minecraft:villager 902.50 64 -166.30 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_clownfish", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Clownfish","bold":false,"color":"#ed8c37"},{"text":" (12.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_salmon.
-forceload add 898 -167 898 -166
 summon minecraft:villager 898.00 64 -166.30 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_salmon", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fresh Salmon","bold":false,"color":"#FFC3B5"},{"text":" (14.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_ramen.
-forceload add 912 -160 913 -159
 summon minecraft:villager 912.30 63.5 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_ramen", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Instant Ramen","bold":false,"color":"#b35425"},{"text":" (2.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_cookie.
-forceload add 909 -161 910 -160
 summon minecraft:villager 909.70 63.5 -160.75 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_cookie", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Chocolate-Chip Cookie","bold":false,"color":"#916e3c"},{"text":" (1.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_honey.
-forceload add 909 -159 910 -158
 summon minecraft:villager 909.80 64.3 -158.25 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_honey", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Honey","bold":false,"color":"#e8c733"},{"text":" (8.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_honeycomb.
-forceload add 909 -159 910 -158
 summon minecraft:villager 909.70 62.5 -158.25 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_honeycomb", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Honeycomb","bold":false,"color":"#ebce3f"},{"text":" (7.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_seaweed.
-forceload add 907 -160 908 -159
 summon minecraft:villager 907.30 63.5 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_seaweed", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Dried Seaweed","bold":false,"color":"#19691c"},{"text":" (1.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_pinktulip.
-forceload add 904 -160 905 -159
 summon minecraft:villager 904.70 62.25 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_pinktulip", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Pink Tulip","bold":false,"color":"#edadde"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_orangetulip.
-forceload add 904 -160 905 -159
 summon minecraft:villager 904.75 63.25 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_orangetulip", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Pink Tulip","bold":false,"color":"#e8ac7b"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_redtulip.
-forceload add 904 -160 905 -159
 summon minecraft:villager 904.80 64.25 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_redtulip", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Red Tulip","bold":false,"color":"#e65a5a"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_monster.
-forceload add 899 -161 900 -160
 summon minecraft:villager 899.70 63.25 -160.75 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_monster", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Monster Energy","color":"green","bold":true},{"text":" (7.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_lacroix.
-forceload add 899 -161 900 -160
 summon minecraft:villager 899.70 64.75 -160.75 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_lacroix", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true},{"text":" (9.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_bread.
-forceload add 883 -160 884 -159
 summon minecraft:villager 883.30 63.5 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_bread", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Whole Wheat Bread","bold":false,"color":"#d1a96b"},{"text":" (3.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 

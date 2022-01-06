@@ -75,7 +75,8 @@ export function createNpc (
   onLoad: Lines
   initDialogue: Lines,
   speaking: Lines,
-  functions: Record<string, Lines>
+  functions: Record<string, Lines>,
+  loadpos: [number, number]
 } {
   name = eval(`\`${name}\``);
   const npcTag = `npc-${id}`
@@ -116,7 +117,6 @@ export function createNpc (
     reset: [
       `# Summon the villager for ${id}.`,
       // Summon new villager
-      `forceload add ${Math.floor(x)} ${Math.floor(z)} ${Math.ceil(x)} ${Math.ceil(z)}`,
       `summon minecraft:villager ${nts(x)} ${y} ${nts(z)} ${toSnbt(Object.assign({
         Rotation: `[${rx}f, ${ry}f]`,
         Silent: true,
@@ -237,7 +237,8 @@ export function createNpc (
       '# While in a conversation, make eye contact with the player.',
       `tp @s[tag=${npcTag}] ~ ~ ~ facing entity ${select.player}`
     ],
-    functions
+    functions,
+    loadpos: [Math.floor(x), Math.floor(z)]
   }
 }
 

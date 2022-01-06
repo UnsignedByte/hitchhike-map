@@ -31,7 +31,7 @@ kill @e[tag=dead-skeleton]
 summon area_effect_cloud 802.7 63.625 95.3 {Duration:2147483647,Tags:["aec","dead-skeleton"],Passengers:[{id:"minecraft:skeleton",Silent:1b,Invulnerable:1b,NoAI:1b,Rotation:[40F,-30F],Tags:["dead-skeleton"]}]}
 
 forceload remove all
-execute as @e[tag=npc] at @s run forceload add ~-1 ~-1 ~1 ~1
+function generated:npc/loadchunks
 
 # sawyer house
 forceload add 930 -16 958 9
