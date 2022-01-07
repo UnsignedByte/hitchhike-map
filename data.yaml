@@ -1271,8 +1271,6 @@ npc:
       dialogue:
         - messages:
           - message: Alright, alright, the food is almost done, be patient!
-            command:
-              - 'tag ${select.self} add npc-unface'
           - If you're so bored why don't you go find Jasmine instead? I've been calling for him to get down here all day and he's nowhere to be seen.
           end: -1
     jasminerocque:
