@@ -5,3 +5,4 @@ function hitchhike:story/fountain/tick
 function hitchhike:story/lake/tick
 function hitchhike:story/hurm/tick
 function hitchhike:story/stores/tick
+function hitchhike:story/misc/tick
