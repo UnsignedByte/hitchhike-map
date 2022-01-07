@@ -1297,9 +1297,9 @@ npc:
       dialogue:
         - messages:
           - message: Hey! I know you're playing that stupid hide and seek thing, but you can't just go around breaking into people's homes!
-            wait: 20
+            wait: 50
           - message: Tresspassing is a crime, and I could easily call the police on you!
-            wait: 20
+            wait: 50
           - message:
             - text: GET OUT!
               bold: true
@@ -1309,7 +1309,7 @@ npc:
           end: 1
         - messages:
           - message: I already told you this! "Playing hide and seek" is NOT an excuse for trespassing.
-            wait: 40
+            wait: 50
           - message:
             - text: Get OUT!
               bold: true
