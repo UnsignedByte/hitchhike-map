@@ -6,3 +6,4 @@ function hitchhike:story/fountain/reset
 function hitchhike:story/lake/reset
 function hitchhike:story/hurm/reset
 function hitchhike:story/stores/reset
+function hitchhike:story/biolab/reset

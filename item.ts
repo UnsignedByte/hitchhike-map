@@ -179,7 +179,8 @@ export const item = {
         })}]`
       },
       Unbreakable: true,
-      HideFlags:127
+      HideFlags:127,
+      CanDestroy:`["minecraft:snow","minecraft:snow_block","minecraft:powder_snow"]`
     }
   },
   money:{
