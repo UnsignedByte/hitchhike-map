@@ -1327,7 +1327,13 @@ npc:
         type: taiga
         profession: mason
       dialogue:
-        - test
+        - messages: 
+          - How did you get in here??
+          - I told my dad not to let anyone in!
+          - Just when I thought I had an easy win to that dumb game of hide an seek too.
+          - Well, congratulations on finding me, yada yada...
+          - Just leave me a-lone.
+          end: -1
 quest:
   visitfriend: # visit friend's house
     name: Phone-A-Friend
