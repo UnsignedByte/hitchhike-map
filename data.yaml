@@ -1260,7 +1260,34 @@ npc:
           - message: I must have dozed off...
             wait: 160
           end: -1
-
+    duanerocque:
+      name: Duane Rocque
+      position: 966.5 65 76.5
+      rotation: 90 50
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjU1N2YzNmE3MjY0NWExZDEzZWNhMWEzYTczZjhkZDY1MzIyY2UxZjZhOWE1MjIzNjY2MmYxY2RmNWNkZGQ0In19fQ==
+      villager:
+        type: snow
+        profession: butcher
+      dialogue:
+        - messages:
+          - message: Alright, alright, the food is almost done, be patient!
+            command:
+              - 'tag ${select.self} add npc-unface'
+          - If you're so bored why don't you go find Jasmine instead? I've been calling for him to get down here all day and he's nowhere to be seen.
+          end: -1
+    jasminerocque:
+      name: Jasmine Rocque
+      position: 987.7 70 69.7
+      rotation: 135 50
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2Q3MDE1MDUwNjUxYWIwNGQxYWY2Zjc3YzAwZmZlNzJkNTQ5YzQ4MjkzOTc3ZTc4OGUyZTRmM2UzMzY5MmNhZCJ9fX0=
+      villager:
+        type: jungle
+        profession: armorer
+      dialogue:
+        - messages:
+          - Ugh, how did you get in here without Duane kicking you out?
+          - I thought this was the perfect hiding spot!
+          end: -1
 quest:
   visitfriend: # visit friend's house
     name: Phone-A-Friend
