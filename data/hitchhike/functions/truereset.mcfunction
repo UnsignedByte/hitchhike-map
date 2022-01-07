@@ -1,6 +1,3 @@
-
-say @e[tag=lake-vortex]
-
 function generated:reset
 
 function hitchhike:story/reset

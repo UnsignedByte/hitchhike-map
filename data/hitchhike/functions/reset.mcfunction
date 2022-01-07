@@ -14,8 +14,8 @@ function generated:npc/loadchunks
 # spawn
 forceload add -26 -11 -123 86
 # most of map
-# forceload add 1103 -256 745 -91
-# forceload add 1103 -75 747 93
+forceload add 1103 -256 745 -91
+forceload add 1103 -75 747 93
 # wendys
 # forceload add 790 94 813 120
 # Spawn house
