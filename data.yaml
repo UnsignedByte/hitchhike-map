@@ -718,14 +718,14 @@ npc:
           - What am I doing? You brats made a huge mess all over the bio lab, and I'm the one who has to waste my time cleaning it up, that's what.
           end:
             - scoreboard players set ${select.self} dialogue-status 1
-            - execute if score mouse dialogue-status matches -1.. run scoreboard players set ${select.self} dialogue-status 2
+            - execute if score mouse quest-status matches -1.. run scoreboard players set ${select.self} dialogue-status 2
         - messages:
-          - Why do you keep bothering me?
+          - Why do you keep bothering me? The bio lab is currently off limits, can't you read?
           - Let me do my job (or at least sulk about it) alone, please!
           cond: 1
           end:
             - scoreboard players set ${select.self} dialogue-status 1
-            - execute if score mouse dialogue-status matches -1.. run scoreboard players set ${select.self} dialogue-status 2
+            - execute if score mouse quest-status matches -1.. run scoreboard players set ${select.self} dialogue-status 2
         - messages:
           - message: What do you want now...
             wait: 100
