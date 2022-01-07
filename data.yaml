@@ -1480,9 +1480,8 @@ quest:
       value:
         - type: cond
           value:
-            - "if score cleaned biolab matches 1"
             - "if entity @a[nbt={Inventory:[${toSnbt(item.mouse)}]}]"
-          count: 2
+          count: 1
         - type: cond
           value:
             - "if entity @a[nbt={Inventory:[${toSnbt(item.mouse)}]},x=947,y=70,z=-3,dz=4,dx=6,dy=3]"
