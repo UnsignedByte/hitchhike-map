@@ -165,6 +165,23 @@ export const item = {
       }
     }
   },
+  snowshovel: {
+    id: '"minecraft:iron_shovel"',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "Shovel",
+          color: "gray"
+        }),
+        Lore:`[${rawJson({
+          text:"Literally just a shovel.",
+          color: "dark_gray"
+        })}]`
+      },
+      Unbreakable: true,
+      HideFlags:127
+    }
+  },
   money:{
     1: {
       id: '"minecraft:nether_brick"',

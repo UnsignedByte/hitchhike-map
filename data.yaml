@@ -150,7 +150,7 @@ npc:
           end: -1
         - messages:
           - Oh, hi again... Did you contact her?
-          - How'd I know it was a she? ...Just luck?
+          - How'd I know it was a her? ...Just my luck, I guess?
           - Anyways, you have something for me to look at?
           - Hmm, A corrupted SD card...
           - message:
@@ -715,8 +715,43 @@ npc:
         - messages:
           - Hey, isn't school out? What are you doing back here?
           - I'm trying to do my job here, please stop bothering me.
+          - What am I doing? You brats made a huge mess all over the bio lab, and I'm the one who has to waste my time cleaning it up, that's what.
           end:
-            - execute at ${select.self}
+            - scoreboard players set ${select.self} quest-status 1
+            - execute if score mouse quest-status matches -1.. run scoreboard players set ${select.self} quest-status 2
+        - messages:
+          - Why do you keep bothering me?
+          - Let me do my job (or at least sulk about it) alone, please!
+          cond: 1
+          end:
+            - scoreboard players set ${select.self} quest-status 1
+            - execute if score mouse quest-status matches -1.. run scoreboard players set ${select.self} quest-status 2
+        - messages:
+          - message: What do you want now...
+            wait: 100
+          - So, your friend's backpack was left in there, huh.
+          - Well then, that sure sounds unfortunate.
+          - Luckily, however, I think we can come to an agreement.
+          - message:
+            - text: "A "
+            - text: "win-win"
+              italic: true
+            - text: " situation, might it be called."
+          - You see, you have a need to get into this room and get your friend's things.
+          - Which requires this room to be cleaned.
+          - I, on the other hand, need this room cleaned, but do not want to clean it.
+          - So, why don't I just give you my tools, and you can clean this room yourself to look for that backpack!
+          - message:
+            - text: "It'll take care of some of my work, and you also get my "
+            - text: professional
+              italic: true
+            - text: " tools to do the job."
+          - Sounds like a great deal, doesn't it?
+          - message: Well, don't dawdle any longer! Stop wasting my time and get on with it!
+            command:
+              - "give ${select.player} ${toGive(item.snowshovel, 1)}"
+          - Don't worry, I'll continue standing right outside to make sure any passersby think I'm still working hard.
+          cond: 2
     safeway:
       name: Paoule Enrique
       position: 891.5 64 -152.5
