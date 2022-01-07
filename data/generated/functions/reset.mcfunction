@@ -978,23 +978,35 @@ summon minecraft:villager 907.30 63.5 -159.50 {Rotation: [0f, 0f], Silent: 1b, I
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_pinktulip.
-summon minecraft:villager 904.70 62.25 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_pinktulip", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Pink Tulip","bold":false,"color":"#edadde"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+summon minecraft:villager 904.70 62.5 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_pinktulip", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Pink Tulip","bold":false,"color":"#edadde"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_orangetulip.
-summon minecraft:villager 904.75 63.25 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_orangetulip", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Pink Tulip","bold":false,"color":"#e8ac7b"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+summon minecraft:villager 904.75 63.5 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_orangetulip", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Orange Tulip","bold":false,"color":"#e8ac7b"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_redtulip.
-summon minecraft:villager 904.80 64.25 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_redtulip", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Red Tulip","bold":false,"color":"#e65a5a"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+summon minecraft:villager 904.80 64.5 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_redtulip", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Red Tulip","bold":false,"color":"#e65a5a"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for __safeway_lily.
+summon minecraft:villager 902.30 62.5 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_lily", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Lily","bold":false,"color":"#edadde"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for __safeway_orchid.
+summon minecraft:villager 902.25 63.5 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_orchid", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Blue Orchid","bold":false,"color":"#e8ac7b"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for __safeway_cornflower.
+summon minecraft:villager 902.20 64.5 -159.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_cornflower", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Cornflower","bold":false,"color":"#e65a5a"},{"text":" (3.49B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_monster.
-summon minecraft:villager 899.70 63.25 -160.75 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_monster", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Monster Energy","color":"green","bold":true},{"text":" (7.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+summon minecraft:villager 899.70 63.25 -160.75 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_monster", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Monster Energy","color":"green"},{"text":" (7.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_lacroix.
-summon minecraft:villager 899.70 64.75 -160.75 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_lacroix", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true},{"text":" (9.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
+summon minecraft:villager 899.70 64.75 -160.75 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_lacroix", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"La Croix Sparkling Water","color":"dark_aqua","italic":true},{"text":" (9.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_friedchicken.

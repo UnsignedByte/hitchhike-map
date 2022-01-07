@@ -865,7 +865,7 @@ export const item = {
           id:'"minecraft:pink_tulip"',
           tag:{
             cost: 349,
-            pos: `'904.7 62.25 -159.5'`,
+            pos: `'904.7 62.5 -159.5'`,
             display: {
               Name: `${rawJson({
                 text: "Pink Tulip",
@@ -885,10 +885,10 @@ export const item = {
           id:'"minecraft:orange_tulip"',
           tag:{
             cost: 349,
-            pos: `'904.75 63.25 -159.5'`,
+            pos: `'904.75 63.5 -159.5'`,
             display: {
               Name: `${rawJson({
-                text: "Pink Tulip",
+                text: "Orange Tulip",
                 bold: false,
                 color: "#e8ac7b"
               })}`,
@@ -905,10 +905,70 @@ export const item = {
           id:'"minecraft:red_tulip"',
           tag:{
             cost: 349,
-            pos: `'904.8 64.25 -159.5'`,
+            pos: `'904.8 64.5 -159.5'`,
             display: {
               Name: `${rawJson({
                 text: "Red Tulip",
+                bold: false,
+                color: "#e65a5a"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Fresh Flowers.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            },
+            HideFlags:127
+          }
+        },
+        lily: {
+          id:'"minecraft:lily_of_the_valley"',
+          tag:{
+            cost: 349,
+            pos: `'902.3 62.5 -159.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Lily",
+                bold: false,
+                color: "#edadde"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Fresh Flowers.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            },
+            HideFlags:127
+          }
+        },
+        orchid: {
+          id:'"minecraft:blue_orchid"',
+          tag:{
+            cost: 349,
+            pos: `'902.25 63.5 -159.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Blue Orchid",
+                bold: false,
+                color: "#e8ac7b"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Fresh Flowers.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            },
+            HideFlags:127
+          }
+        },
+        cornflower: {
+          id:'"minecraft:cornflower"',
+          tag:{
+            cost: 349,
+            pos: `'902.2 64.5 -159.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Cornflower",
                 bold: false,
                 color: "#e65a5a"
               })}`,
@@ -927,7 +987,7 @@ export const item = {
             cost: 799,
             pos: `'899.7 63.25 -160.75'`,
             display:{
-              Name:`'{"text":"Monster Energy","color":"green","bold":true}'`,
+              Name:`'{"text":"Monster Energy","color":"green"}'`,
               Lore:`['{"text":"The energy drink for","color":"dark_green","bold":false}','{"text":"the perfect League","color":"dark_green"}','{"text":"of Legends player.","color":"dark_green"}']`
             },
             HideFlags:127,
@@ -948,7 +1008,7 @@ export const item = {
             cost: 999,
             pos: `'899.7 64.75 -160.75'`,
             display:{
-              Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","bold":true,"italic":true}'`,
+              Name:`'{"text":"La Croix Sparkling Water","color":"dark_aqua","italic":true}'`,
               Lore:`['{"text":"Water for people","color":"aqua","italic":false}','{"text":"who hate money","color":"aqua"}','{"text":"(and water).","color":"aqua"}']`
             },
             HideFlags:127,

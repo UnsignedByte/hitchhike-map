@@ -117,6 +117,12 @@ tp @s[tag=npc-__safeway_orangetulip] ~ ~ ~ facing entity @a[tag=victim-of-dialog
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-__safeway_redtulip] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_redtulip, limit=1]
 # While in a conversation, make eye contact with the player.
+tp @s[tag=npc-__safeway_lily] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_lily, limit=1]
+# While in a conversation, make eye contact with the player.
+tp @s[tag=npc-__safeway_orchid] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_orchid, limit=1]
+# While in a conversation, make eye contact with the player.
+tp @s[tag=npc-__safeway_cornflower] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_cornflower, limit=1]
+# While in a conversation, make eye contact with the player.
 tp @s[tag=npc-__safeway_monster] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_monster, limit=1]
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-__safeway_lacroix] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_lacroix, limit=1]

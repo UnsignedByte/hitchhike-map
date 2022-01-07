@@ -4172,6 +4172,12 @@ tag @a remove victim-of-dialogue-by-__safeway_orangetulip
 
 tag @a remove victim-of-dialogue-by-__safeway_redtulip
 
+tag @a remove victim-of-dialogue-by-__safeway_lily
+
+tag @a remove victim-of-dialogue-by-__safeway_orchid
+
+tag @a remove victim-of-dialogue-by-__safeway_cornflower
+
 tag @a remove victim-of-dialogue-by-__safeway_monster
 
 tag @a remove victim-of-dialogue-by-__safeway_lacroix
