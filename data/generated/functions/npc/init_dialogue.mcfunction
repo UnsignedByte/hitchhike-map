@@ -63,6 +63,8 @@ execute as @s[tag=npc-duanerocque] at @s run function generated:npc/duanerocque/
 # Start a conversation if it was selected
 execute as @s[tag=npc-jasminerocque] at @s run function generated:npc/jasminerocque/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-epthonbovat] at @s run function generated:npc/epthonbovat/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_apple] at @s run function generated:npc/__safeway_apple/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_melon_slice] at @s run function generated:npc/__safeway_melon_slice/tick

@@ -1286,6 +1286,35 @@ npc:
           - Ugh, how did you get in here without Duane kicking you out?
           - I thought this was the perfect hiding spot!
           end: -1
+    epthonbovat:
+      name: Epthon Bovat
+      position: 976.7 64 -0.5
+      rotation: 160 10
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU4MDk3YjkzMWNlZWE5OGNlMWI1YmFkNDg1ZDc1Njk1OWIzNzRhNWVmNjc0MjM2ZDE0ZWM0MzE4NjEyNWQifX19
+      villager:
+        type: taiga
+        profession: mason
+      dialogue:
+        - messages:
+          - Hey! I know you're playing that stupid hide and seek thing, but you can't just go around breaking into people's homes!
+          - Tresspassing is a crime, and I could easily call the police on you!
+          - message:
+            - text: GET OUT!
+              bold: true
+            command:
+              - tag ${select.player} add epthon-trespasser
+              - 'execute as ${select.self} at @s run function hitchhike:story/misc/epthon/eject'
+          end: 1
+        - messages:
+          - I already told you this! "Playing hide and seek" is NOT an excuse for trespassing.
+          - message:
+            - text: Get OUT!
+              bold: true
+            command:
+              - tag ${select.player} add epthon-trespasser
+              - 'execute as ${select.self} at @s run function hitchhike:story/misc/epthon/eject'
+          cond: 1
+          end: 1
 quest:
   visitfriend: # visit friend's house
     name: Phone-A-Friend
