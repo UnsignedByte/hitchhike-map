@@ -142,9 +142,7 @@ npc:
             - text: suuper
               italic: true
             - text: " important to you huh."
-          - message:
-            - text: "You never seem this eager to contact me..."
-              italic: true
+          - "You're never this eager to contact me..."
           - Well, the mountain is the unmistakeable mass toward the south, if you can't find it.
           - I can't exactly follow you there, you know I don't leave the house.
           - Stay safe or something, I guess.
@@ -152,10 +150,7 @@ npc:
           end: -1
         - messages:
           - Oh, hi again... Did you contact her?
-          - message: 
-            - text: "How'd I know it was a she? "
-            - text: "Just my luck, I guess."
-              italic: true
+          - How'd I know it was a she? ...Just luck?
           - Anyways, you have something for me to look at?
           - Hmm, A corrupted SD card...
           - message:
@@ -183,7 +178,10 @@ npc:
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298'
               - 'scoreboard players set -held story-sawyer 0'
           - Maybe you can come back later instead? I can't focus on work with you in the room.
-          - Come to think of it, since you have so much time anyways, could you help me get my computer mouse?
+          - message: Come to think of it, since you have so much time anyways, could you help me get my computer mouse?
+            command:
+              - type: quest
+                value: mouse
           - I think I left it in the bio lab at school with my backpack.
           - message: "I'll try to work on it in the meantime. Maybe if you come back early we could talk some more."
             command:
@@ -717,7 +715,8 @@ npc:
         - messages:
           - Hey, isn't school out? What are you doing back here?
           - I'm trying to do my job here, please stop bothering me.
-          end: 1
+          end:
+            - execute at ${select.self}
     safeway:
       name: Paoule Enrique
       position: 891.5 64 -152.5
