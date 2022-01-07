@@ -121,4 +121,12 @@ tp @s[tag=npc-__safeway_monster] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-b
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-__safeway_lacroix] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_lacroix, limit=1]
 # While in a conversation, make eye contact with the player.
+tp @s[tag=npc-__safeway_friedchicken] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_friedchicken, limit=1]
+# While in a conversation, make eye contact with the player.
+tp @s[tag=npc-__safeway_ham] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_ham, limit=1]
+# While in a conversation, make eye contact with the player.
+tp @s[tag=npc-__safeway_pie] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_pie, limit=1]
+# While in a conversation, make eye contact with the player.
 tp @s[tag=npc-__safeway_bread] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_bread, limit=1]
+# While in a conversation, make eye contact with the player.
+tp @s[tag=npc-__safeway_hashbrown] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-__safeway_hashbrown, limit=1]

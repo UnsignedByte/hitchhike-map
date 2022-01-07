@@ -121,5 +121,13 @@ execute as @s[tag=npc-__safeway_monster] at @s run function generated:npc/__safe
 # Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_lacroix] at @s run function generated:npc/__safeway_lacroix/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-__safeway_friedchicken] at @s run function generated:npc/__safeway_friedchicken/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-__safeway_ham] at @s run function generated:npc/__safeway_ham/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-__safeway_pie] at @s run function generated:npc/__safeway_pie/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_bread] at @s run function generated:npc/__safeway_bread/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-__safeway_hashbrown] at @s run function generated:npc/__safeway_hashbrown/tick
 tag @s remove selected_npc

@@ -4176,7 +4176,15 @@ tag @a remove victim-of-dialogue-by-__safeway_monster
 
 tag @a remove victim-of-dialogue-by-__safeway_lacroix
 
+tag @a remove victim-of-dialogue-by-__safeway_friedchicken
+
+tag @a remove victim-of-dialogue-by-__safeway_ham
+
+tag @a remove victim-of-dialogue-by-__safeway_pie
+
 tag @a remove victim-of-dialogue-by-__safeway_bread
+
+tag @a remove victim-of-dialogue-by-__safeway_hashbrown
 
 
 

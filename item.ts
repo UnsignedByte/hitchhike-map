@@ -963,6 +963,63 @@ export const item = {
             CustomPotionColor:2799851
           }
         },
+        friedchicken: {
+          id: '"minecraft:cooked_chicken"',
+          tag: {
+            cost: 749,
+            pos: `'891.5 63 -158.7'`,
+            display: {
+              Name: `${rawJson({
+                text: "Fried Chicken",
+                bold: false,
+                color: "#b55b00"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Straight from Kentucky.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            }
+          }
+        },
+        ham: {
+          id: '"minecraft:cooked_porkchop"',
+          tag: {
+            cost: 949,
+            pos: `'898.5 63.5 -151.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Ham",
+                bold: false,
+                color: "#b33d15"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Just steamed.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            }
+          }
+        },
+        pie: {
+          id: '"minecraft:pumpkin_pie"',
+          tag: {
+            cost: 899,
+            pos: `'891 63.5 -165.7'`,
+            display: {
+              Name: `${rawJson({
+                text: "Pumpkin Pie",
+                bold: false,
+                color: "#d66c0f"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Straight from the best winter squash.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            }
+          }
+        },
         bread: {
           id: '"minecraft:bread"',
           tag:{
@@ -982,6 +1039,25 @@ export const item = {
             }
           }
         },
+        hashbrown: {
+          id: '"minecraft:baked_potato"',
+          tag: {
+            cost: 499,
+            pos: `'898.5 63.5 -151.5'`,
+            display: {
+              Name: `${rawJson({
+                text: "Hash Brown",
+                bold: false,
+                color: "#bd7d2a"
+              })}`,
+              Lore:`[${rawJson({
+                text: `Freshly Fried Potatoes.`,
+                italic: false,
+                color: "dark_gray"
+              })}]`
+            }
+          }
+        }
       },
       clothes: {
         pbblue: {
