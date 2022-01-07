@@ -6,4 +6,3 @@ function hitchhike:story/fountain/load
 function hitchhike:story/lake/load
 function hitchhike:story/hurm/load
 function hitchhike:story/stores/load
-function hitchhike:story/biolab/load

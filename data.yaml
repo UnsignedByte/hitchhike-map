@@ -1488,7 +1488,7 @@ quest:
           weight: 1
     end:
       - type: score
-        value: "${npc.simon} dialogue-status 5"
+        value: "${npc.sawyer} dialogue-status 3"
   sdcard:
     name: Decorruption
     description: Decorrupt the SD Card given by Simon. Don't know how? Maybe someone familiar with programming would know better...
