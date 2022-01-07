@@ -6,9 +6,9 @@ execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.am
 setblock 949 40 -1 minecraft:redstone_block
 setblock 949 41 -1 minecraft:powered_rail[powered=true,shape=east_west,waterlogged=false]
 setblock 950 40 -1 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]
-setblock 957 35 0 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]
-setblock 958 35 0 minecraft:stone
-setblock 955 35 1 minecraft:redstone_wire[east=side,north=none,power=0,south=none,west=side]
+setblock 955 35 0 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]
+setblock 956 35 0 stone
+setblock 952 35 -1 minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=none]
 tag @e[tag=npc-sawyer] add npc-unface
 summon minecart 950 40 -1 {Silent:1,Tags:["sawyer-holder"]}
 scoreboard players set @e[tag=npc-sawyer] dialogue-status -1
