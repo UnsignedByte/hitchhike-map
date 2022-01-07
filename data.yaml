@@ -197,8 +197,8 @@ npc:
           - I should be finished by the time you get me my mouse.
           cond: 11
           end:
-            - 'execute if score biolab quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 3'
-            - 'execute unless score biolab quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 11'
+            - 'execute if score mouse quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 3'
+            - 'execute unless score mouse quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 11'
         - messages:
           - message: You sure took your time, huh... Not that I was checking the clock or anything, I just noticed.
           - message: Anyways, thanks for the mouse.
@@ -704,12 +704,26 @@ npc:
           - Good luck with that hike, I've heard its difficult.
           cond: 3
           end: -1
+    janitor:
+      name: Ivon Cummings
+      position: 887.5 70 11.5
+      rotation: -35 20
+      colour: 0xf2d811
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjMxYTAzZjY3Y2M4YThkZTIxY2I5NjFiMDZjNzQ1M2I1NjQ2YWYzNDViZmIxZGMwMjJiNWY5MTY5Y2JmODA3OCJ9fX0=
+      villager:
+        type: taiga
+        profession: toolsmith
+      dialogue:
+        - messages:
+          - Hey, isn't school out? What are you doing back here?
+          - I'm trying to do my job here, please stop bothering me.
+          end: 1
     safeway:
       name: Paoule Enrique
       position: 891.5 64 -152.5
       rotation: 180 0
       colour: 0xeb7060
-      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjMxYTAzZjY3Y2M4YThkZTIxY2I5NjFiMDZjNzQ1M2I1NjQ2YWYzNDViZmIxZGMwMjJiNWY5MTY5Y2JmODA3OCJ9fX0=
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjVmYWViMTFiMzc2NTYzNGY1MWFkYjBmMWFjNmRkM2I0OWIzMDE0ZjJiZjM5NWFlZDI2OWUzMzliYjMyYjc3OSJ9fX0=
       villager:
         type: savanna
         profession: shepherd
@@ -1206,8 +1220,10 @@ npc:
       dialogue:
         - messages:
           - Oh... uhh, hello there.
-          - Do I know you?
-          - I must have dozed off...
+          - message: Do I know you?
+            wait: 80
+          - message: I must have dozed off...
+            wait: 160
           end: -1
 
 quest:
@@ -1421,7 +1437,7 @@ quest:
     end:
       - type: score
         value: "${npc.simon} dialogue-status 5"
-  biolab:
+  mouse:
     name: Missing Mouseketeer
     description: Retrieve Chris's mouse from the bio lab.
     condition:

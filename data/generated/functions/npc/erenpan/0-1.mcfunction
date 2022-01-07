@@ -3,5 +3,5 @@ execute at @e[tag=npc-erenpan, limit=1] run tag @a[distance=..25] add npc-eavesd
 # Dialogue line #0-2: speak and make noise.
 execute at @e[tag=npc-erenpan, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Eren Pan","bold":true},"> ",{"text":"Do I know you?"}]
 execute at @e[tag=npc-erenpan, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/erenpan/0-2 30t
+schedule function generated:npc/erenpan/0-2 80t
 tag @a remove npc-eavesdropper

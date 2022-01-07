@@ -13,6 +13,8 @@ execute as @s[tag=npc-simon] at @s run function generated:npc/simon/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-hurm] at @s run function generated:npc/hurm/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-janitor] at @s run function generated:npc/janitor/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-safeway] at @s run function generated:npc/safeway/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-clothes] at @s run function generated:npc/clothes/tick

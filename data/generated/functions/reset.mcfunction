@@ -781,8 +781,12 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 1075.70 125 355.50 {Rotation: [-90f, 30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-hurm"], VillagerData: {type: "minecraft:snow", profession: "minecraft:fisherman", level: 99}, Offers: {}, CustomName: '{"text":"Hurm Etkcraub","color":"#183aab","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for janitor.
+summon minecraft:villager 887.50 70 11.50 {Rotation: [-35f, 20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-janitor"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjMxYTAzZjY3Y2M4YThkZTIxY2I5NjFiMDZjNzQ1M2I1NjQ2YWYzNDViZmIxZGMwMjJiNWY5MTY5Y2JmODA3OCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:toolsmith", level: 99}, Offers: {}, CustomName: '{"text":"Ivon Cummings","color":"#f2d811","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 # Summon the villager for safeway.
-summon minecraft:villager 891.50 64 -152.50 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-safeway"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjMxYTAzZjY3Y2M4YThkZTIxY2I5NjFiMDZjNzQ1M2I1NjQ2YWYzNDViZmIxZGMwMjJiNWY5MTY5Y2JmODA3OCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:shepherd", level: 99}, Offers: {}, CustomName: '{"text":"Paoule Enrique","color":"#eb7060","bold":true}'}
+summon minecraft:villager 891.50 64 -152.50 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-safeway"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjVmYWViMTFiMzc2NTYzNGY1MWFkYjBmMWFjNmRkM2I0OWIzMDE0ZjJiZjM5NWFlZDI2OWUzMzliYjMyYjc3OSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:shepherd", level: 99}, Offers: {}, CustomName: '{"text":"Paoule Enrique","color":"#eb7060","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for clothes.
@@ -1054,8 +1058,8 @@ function generated:quests/picnic-reset
 scoreboard players reset lacroix quest-status
 function generated:quests/lacroix-reset
 
-scoreboard players reset biolab quest-status
-function generated:quests/biolab-reset
+scoreboard players reset mouse quest-status
+function generated:quests/mouse-reset
 
 scoreboard players reset sdcard quest-status
 function generated:quests/sdcard-reset
