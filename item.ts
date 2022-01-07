@@ -967,7 +967,7 @@ export const item = {
           id: '"minecraft:cooked_chicken"',
           tag: {
             cost: 749,
-            pos: `'891.5 63 -158.7'`,
+            pos: `'891.5 63.5 -158.7'`,
             display: {
               Name: `${rawJson({
                 text: "Fried Chicken",
@@ -986,7 +986,7 @@ export const item = {
           id: '"minecraft:cooked_porkchop"',
           tag: {
             cost: 949,
-            pos: `'891.5 63 -162.3'`,
+            pos: `'891.5 63.5 -162.3'`,
             display: {
               Name: `${rawJson({
                 text: "Ham",
