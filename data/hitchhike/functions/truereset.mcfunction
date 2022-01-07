@@ -38,3 +38,5 @@ forceload add 961 162 891 215
 forceload add 884 -166 916 -152
 # # lake
 # forceload add 946 441 1011 375
+# Biolab
+forceload add 900 20 884 11
