@@ -930,7 +930,7 @@ export const item = {
               Name: `${rawJson({
                 text: "Lily",
                 bold: false,
-                color: "#edadde"
+                color: "#d8e6e6"
               })}`,
               Lore:`[${rawJson({
                 text: `Fresh Flowers.`,
@@ -950,7 +950,7 @@ export const item = {
               Name: `${rawJson({
                 text: "Blue Orchid",
                 bold: false,
-                color: "#e8ac7b"
+                color: "#46c3cf"
               })}`,
               Lore:`[${rawJson({
                 text: `Fresh Flowers.`,
@@ -970,7 +970,7 @@ export const item = {
               Name: `${rawJson({
                 text: "Cornflower",
                 bold: false,
-                color: "#e65a5a"
+                color: "#465bcf"
               })}`,
               Lore:`[${rawJson({
                 text: `Fresh Flowers.`,
