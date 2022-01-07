@@ -1296,8 +1296,10 @@ npc:
         profession: mason
       dialogue:
         - messages:
-          - Hey! I know you're playing that stupid hide and seek thing, but you can't just go around breaking into people's homes!
-          - Tresspassing is a crime, and I could easily call the police on you!
+          - message: Hey! I know you're playing that stupid hide and seek thing, but you can't just go around breaking into people's homes!
+            wait: 20
+          - message: Tresspassing is a crime, and I could easily call the police on you!
+            wait: 20
           - message:
             - text: GET OUT!
               bold: true
@@ -1306,7 +1308,8 @@ npc:
               - 'execute as ${select.self} at @s run function hitchhike:story/misc/epthon/eject'
           end: 1
         - messages:
-          - I already told you this! "Playing hide and seek" is NOT an excuse for trespassing.
+          - message: I already told you this! "Playing hide and seek" is NOT an excuse for trespassing.
+            wait: 40
           - message:
             - text: Get OUT!
               bold: true
