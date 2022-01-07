@@ -749,7 +749,7 @@ npc:
           - Sounds like a great deal, doesn't it?
           - message: Well, don't dawdle any longer! Stop wasting my time and get on with it!
             command:
-              - summon item 898.7 70 21.4 {Tags:["biolab-backpack"],Age:-32768,Item:{id:"minecraft:bundle",Count:1b,tag:{display:{Name:'{"text":"Chris\\'s Backpack","color":"aqua"}'},Items:[${toSnbt(item.mouse)}]}}}"
+              - summon item 898.7 70 21.4 {Tags:["biolab-backpack"],Age:-32768,Item:{id:"minecraft:bundle",Count:1b,tag:{display:{Name:'{"text":"Chris\\'s Backpack","color":"aqua"}'},Items:[${toSnbt(item.mouse)}]}}}
               - "give ${select.player} ${toGive(item.snowshovel, 1)}"
           - Don't worry, I'll continue standing right outside to make sure any passersby think I'm still working hard.
           cond: 2
