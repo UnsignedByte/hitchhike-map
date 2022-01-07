@@ -21,7 +21,7 @@ function hitchhike:story/intro/await_start
 # Reset barrel in spawn room
 # setblock 1009 65 57 air
 # setblock 1009 65 57 minecraft:barrel[facing=west,open=false]{Items:[{Count:1b,Slot:24b,id:"minecraft:paper",tag:{display:{Lore:['{"text":"The keys are hidden","color":"gray"}','{"text":"behind the big map.","color":"gray"}','{"text":"Don\'t Forget!","color":"gray"}','{"text":" "}','{"text":"Love,","color":"gray"}','{"text":"Sis","color":"gray"}'],Name:'{"text":"Reminder"}'}}}]}
-data modify block 1009 65 57 Items set from block 1009 65 58 Items
+data modify block 1009 65 57 Items set from block 1009 58 57 Items
 
 schedule clear hitchhike:story/intro/detect_barrel_open
 

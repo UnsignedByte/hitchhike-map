@@ -4110,6 +4110,8 @@ tag @a remove victim-of-dialogue-by-deagol
 
 tag @a remove victim-of-dialogue-by-eichhornchen
 
+tag @a remove victim-of-dialogue-by-erenpan
+
 tag @a remove victim-of-dialogue-by-__safeway_apple
 
 tag @a remove victim-of-dialogue-by-__safeway_melon_slice

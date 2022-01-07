@@ -1195,6 +1195,20 @@ npc:
           - Nice hiding spot, isn't it?
           - I dug it myself.
           end: -1
+    erenpan:
+      name: Eren Pan
+      position: 1024.5 64 32.3
+      rotation: 180 60
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2VmZTNkOGMzODMyNzg2ZGY2OGViODVlNjhhNDEzMzNhZWU3Y2ZjODM2OTdjMjg2Mjk2NzM3YWE4ZjIzNDMifX19
+      villager:
+        type: taiga
+        profession: librarian
+      dialogue:
+        - messages:
+          - Oh... uhh, hello there.
+          - Do I know you?
+          - I must have dozed off...
+          end: -1
 
 quest:
   visitfriend: # visit friend's house
