@@ -9,3 +9,5 @@ particle cloud 975.5 65 -6.5 0.15 0.4 0.15 0.06 50
 tag @a remove epthon-trespasser
 
 schedule function hitchhike:story/misc/epthon/resetdoor 20t
+
+scoreboard players set epthon-talking vars 0

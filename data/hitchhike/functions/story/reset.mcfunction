@@ -1,5 +1,3 @@
-tag @e[tag=npc-duanerocque] add npc-unface
-
 function hitchhike:story/intro/reset
 function hitchhike:story/sawyer/reset
 function hitchhike:story/simon/reset
