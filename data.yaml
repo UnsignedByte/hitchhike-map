@@ -1394,6 +1394,21 @@ npc:
       villager:
         type: plains
         profession: librarian
+    percivalainsworth:
+      name: Percival Ainsworth
+      position: 1026.3 69 -4.5
+      rotation: 90 40
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTFiN2RlNDU1MjhhZDI2MWJkYjAxNDNkNDk0YzQ4ZGJkM2NlN2JjYzNiZjYxZjA1ZGM0MjRiZDViMzk2MzFmMiJ9fX0=
+      villager:
+        type: jungle
+        profession: none
+      dialogue:
+        - messages:
+          - Ugh, what do you want? Can't you see I'm studying here?
+          - You must be one of those people the school sent to be my "friend" huh?
+          - Whatever, just tell them you hung out with me and collect your payment.
+          - What are you waiting for? Stop bothering me and get out!
+          end: -1
 quest:
   visitfriend: # visit friend's house
     name: Phone-A-Friend
