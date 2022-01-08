@@ -894,7 +894,7 @@ summon minecraft:villager 970.50 70 2.50 {Rotation: [90f, 0f], Silent: 1b, Invul
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for emmadrounen.
-summon minecraft:villager 1034.30 60 60.30 {Rotation: [-45f, -45f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-emmadrounen"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDcxMzU1MDM0Y2EzNjUwNDJmNGQ4ZTZhN2ZlYWIyNGY3NjYxMzJhMDQ5OThkN2QwYzRjODAxNTdkZTEyOGRjMiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Emma Drounen","bold":true}'}
+summon minecraft:villager 1034.30 60 60.30 {Rotation: [-45f, -30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-emmadrounen"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDcxMzU1MDM0Y2EzNjUwNDJmNGQ4ZTZhN2ZlYWIyNGY3NjYxMzJhMDQ5OThkN2QwYzRjODAxNTdkZTEyOGRjMiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Emma Drounen","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_apple.

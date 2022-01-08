@@ -1350,7 +1350,7 @@ npc:
     emmadrounen:
       name: Emma Drounen
       position: 1034.3 60 60.3
-      rotation: -45 -45
+      rotation: -45 -30
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDcxMzU1MDM0Y2EzNjUwNDJmNGQ4ZTZhN2ZlYWIyNGY3NjYxMzJhMDQ5OThkN2QwYzRjODAxNTdkZTEyOGRjMiJ9fX0=
       villager:
         type: snow
