@@ -1,5 +1,3 @@
-# weather rain 1000000
-# time set 23000
 time set 18000
 weather clear 1000000
 

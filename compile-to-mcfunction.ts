@@ -556,7 +556,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `setblock 1011 63 52 air`,
         `setblock 1011 63 66 air`,
         `setblock 1005 63 66 air`,
-        `playsound minecraft:entity.guardian.attack block @a 1008.5 64.00 59.5 1.3 2`
+        `playsound minecraft:entity.guardian.attack block @a 1008.5 64.00 59.5 1.3 2`,
+        `weather rain 1000000`,
+        `time set 23000`
       ],
       next: [
       {
