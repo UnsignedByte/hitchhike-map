@@ -935,7 +935,7 @@ npc:
       dialogue:
         - messages:
           - Whoa! How'd you find me here?
-          - Darn, I thought I had the perfect hiding spot...
+          - Did Katherine tell you? Darn, I thought I had the perfect hiding spot...
           - I guess I've lost then. I can't believe I didn't see you coming up here.
           - Wait, are you not part of the game?
           - Sweet! Can you keep quiet about finding me here? I'm sure nobody else will be able to.
@@ -947,6 +947,22 @@ npc:
           - If you were able to sneak up on me while I was using it, it clearly isnt helping much, anyways.
           - I wonder if you'll accidentally stumble across anyone else.
           - Remember, there was nobody here.
+          end: -1
+    katherine:
+      name: Katherine Au-Flauge
+      position: 975.5 66 34.5
+      rotation: 0 10
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjMxZWI4ODNmYzZhNWRmNmM1NGIzNDQzNTVkMDU2NzU1MjdlOTdjYjYxNjE3ODkzZGM5NGI1NjliYTdlMTM5OCJ9fX0=
+      villager:
+        type: swamp
+        profession: cleric
+      dialogue:
+        - messages:
+          - Hey there, are you looking for Cam? That brat ran off to who knows where again.
+          - If you find him, could you tell him to get back down here and feed the cats?
+          - Those darn things just wont stop meowing.
+          - Where's Cam? Probably climbing the neighbor's tree or whatever crazy things he gets up to outside.
+          - I've heard he joined that "Hide and Seek" thing going on, so maybe he's hiding?
           end: -1
     muller:
       name: Egress Muller

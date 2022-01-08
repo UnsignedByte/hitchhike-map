@@ -4086,6 +4086,8 @@ tag @a remove victim-of-dialogue-by-icecream
 
 tag @a remove victim-of-dialogue-by-cameron
 
+tag @a remove victim-of-dialogue-by-katherine
+
 tag @a remove victim-of-dialogue-by-muller
 
 tag @a remove victim-of-dialogue-by-fishjar
