@@ -2,6 +2,8 @@ function hitchhike:story/misc/epthon/resetdoor
 
 scoreboard players set epthon-talking vars 0
 
+tag @e[tag=npc-duarteeisenhower] add npc-unface
+
 tag @e[tag=npc-duanerocque] add npc-unface
 
 fill 973 70 2 973 71 2 air
