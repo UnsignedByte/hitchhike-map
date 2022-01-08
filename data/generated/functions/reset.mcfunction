@@ -913,6 +913,14 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 1020.30 64 9.30 {Rotation: [115f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-marthaaimsworth"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTJkZjQ3NzUzOGFiYzczZDVjMWRjMTdjMWNmMzJmMzZiNThlN2RlMzAxM2U5ZTYzYmQwMTUyMTVmOGFmMSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:librarian", level: 99}, Offers: {}, CustomName: '{"text":"Martha Aimsworth","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for levirosman.
+summon minecraft:villager 1053.50 65 29.00 {Rotation: [90f, 12.5f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-levirosman"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDkxM2E0YWYyZDMwNjQ3MTNmNzA0MTg3ZTU3ZTZiZWMzZGVlYzk0ZjFjMzM3MWIyYjM1YzZjNWU0MjdjYjAifX19" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Levi Rosman","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for ericrosman.
+summon minecraft:villager 1049.50 65 29.00 {Rotation: [-90f, 12.5f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-ericrosman"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODRjMzY0Nzk1YmZhNDRkZmQyYmJmZTZmZmFmYjU3MDFjNjE1NWNmZDY3ZGQ2MTBhOWUzMzgyYTc5N2U2ZTExIn19fQ==" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:mason", level: 99}, Offers: {}, CustomName: '{"text":"Eric Rosman","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 # Summon the villager for __safeway_apple.
 summon minecraft:villager 905.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_apple", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fuji Apple","color":"#FF0000"},{"text":" (1.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
