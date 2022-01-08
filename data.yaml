@@ -1396,7 +1396,7 @@ npc:
         profession: librarian
     percivalainsworth:
       name: Percival Ainsworth
-      position: 1026.3 69 -4.5
+      position: 1026.3 68.8 -4.5
       rotation: 90 40
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTFiN2RlNDU1MjhhZDI2MWJkYjAxNDNkNDk0YzQ4ZGJkM2NlN2JjYzNiZjYxZjA1ZGM0MjRiZDViMzk2MzFmMiJ9fX0=
       villager:
@@ -1408,6 +1408,22 @@ npc:
           - You must be one of those people the school sent to be my "friend" huh?
           - Whatever, just tell them you hung out with me and collect your payment.
           - What are you waiting for? Stop bothering me and get out!
+          end: -1
+    marthaaimsworth:
+      name: Martha Aimsworth
+      position: 1020.3 64 9.3
+      rotation: 115 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTJkZjQ3NzUzOGFiYzczZDVjMWRjMTdjMWNmMzJmMzZiNThlN2RlMzAxM2U5ZTYzYmQwMTUyMTVmOGFmMSJ9fX0=
+      villager:
+        type: plains
+        profession: librarian
+      dialogue:
+        - messages:
+          - Oh, hi! Sorry, I must've spaced out.
+          - Anyways, you must be here to see my son! He's just upstairs.
+          - I'm so glad he seems to have so many friends now! Its almost a different boy every day.
+          - Well, anyways, you guys have fun playing, and don't hesitate to ask me if you need anything.
+          - Thank you for sticking with him, I know he can be a little difficult sometimes.
           end: -1
 quest:
   visitfriend: # visit friend's house
