@@ -959,7 +959,7 @@ npc:
       dialogue:
         - messages:
           - Hey there, are you looking for Cam? That brat ran off to who knows where again.
-          - If you find him, could you tell him to get back down here and feed the cats?
+          - If you find him, could you tell him to get back here and feed the cats?
           - Those darn things just wont stop meowing.
           - Where's Cam? Probably climbing the neighbor's tree or whatever crazy things he gets up to outside.
           - I've heard he joined that "Hide and Seek" thing going on, so maybe he's hiding?
@@ -1346,6 +1346,20 @@ npc:
           - Just when I thought I had an easy win to that dumb game of hide an seek too.
           - Well, congratulations on finding me, yada yada...
           - Just leave me a-lone.
+          end: -1
+    emmadrounen:
+      name: Emma Drounen
+      position: 1034.3 60 60.3
+      rotation: -45 -45
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDcxMzU1MDM0Y2EzNjUwNDJmNGQ4ZTZhN2ZlYWIyNGY3NjYxMzJhMDQ5OThkN2QwYzRjODAxNTdkZTEyOGRjMiJ9fX0=
+      villager:
+        type: snow
+        profession: none
+      dialogue:
+        - messages:
+          - Hey! SHH! Get out of the water!
+          - You keep splashing about and you'll expose my hiding spot!
+          - Keep quiet, will you!
           end: -1
 quest:
   visitfriend: # visit friend's house

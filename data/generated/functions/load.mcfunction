@@ -4124,6 +4124,8 @@ tag @a remove victim-of-dialogue-by-epthonbovat
 
 tag @a remove victim-of-dialogue-by-maisebovat
 
+tag @a remove victim-of-dialogue-by-emmadrounen
+
 tag @a remove victim-of-dialogue-by-__safeway_apple
 
 tag @a remove victim-of-dialogue-by-__safeway_melon_slice

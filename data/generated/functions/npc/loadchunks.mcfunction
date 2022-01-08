@@ -33,6 +33,7 @@ forceload add 966 76
 forceload add 987 69
 forceload add 976 -1
 forceload add 970 2
+forceload add 1034 60
 forceload add 905 -153
 forceload add 909 -153
 forceload add 901 -153
