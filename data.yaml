@@ -1361,6 +1361,39 @@ npc:
           - You keep splashing about and you'll expose my hiding spot!
           - Keep quiet, will you!
           end: -1
+    duarteeisenhower:
+      name: Duarte Eisenhower
+      position: 1053.5 65 -47.3
+      rotation: 0 30
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU1MzFhN2E0NWM5Yjk3MzNiMTUxNzE2OTA2NGVmMDI1MDY3MzZjZTkyZTc2OWE3N2U3N2E1MTQwMTY0OGU1In19fQ==
+      villager:
+        type: taiga
+        profession: leatherworker
+      dialogue:
+        - messages:
+          - message:
+            - text: "You're "
+            - text: still
+              italic: true
+            - text: " awake? Just go to sleep, grandpa!"
+          - I'm trying to get work done right now, please let me study.
+          - Weren't you tired just a couple minutes ago?
+          - Go take a nap or something.
+          end: 1
+        - messages:
+          - Just let me study in peace, please.
+          - I'll be free later, okay?
+          - Just go rest.
+          cond: 1
+          end: -1
+    barteisenhower:
+      name: Bart Eisenhower
+      position: 1048.5 65 -52.5
+      rotation: 0 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjI1MmJmNGQyYWMzMzM4NWU3NjY4ODdhNmJjMTcxYWI0NjU5ZTVhZTg2YTNmZjFmMzNlOTJkNzkzM2MyMSJ9fX0=
+      villager:
+        type: plains
+        profession: shepherd
 quest:
   visitfriend: # visit friend's house
     name: Phone-A-Friend

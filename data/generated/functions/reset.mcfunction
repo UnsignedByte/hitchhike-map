@@ -897,6 +897,14 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 1034.30 60 60.30 {Rotation: [-45f, -30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-emmadrounen"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDcxMzU1MDM0Y2EzNjUwNDJmNGQ4ZTZhN2ZlYWIyNGY3NjYxMzJhMDQ5OThkN2QwYzRjODAxNTdkZTEyOGRjMiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Emma Drounen","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for duarteeisenhower.
+summon minecraft:villager 1053.50 65 -47.30 {Rotation: [0f, 30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-duarteeisenhower"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU1MzFhN2E0NWM5Yjk3MzNiMTUxNzE2OTA2NGVmMDI1MDY3MzZjZTkyZTc2OWE3N2U3N2E1MTQwMTY0OGU1In19fQ==" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:leatherworker", level: 99}, Offers: {}, CustomName: '{"text":"Duarte Eisenhower","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for barteisenhower.
+summon minecraft:villager 1048.50 65 -52.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-barteisenhower"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjI1MmJmNGQyYWMzMzM4NWU3NjY4ODdhNmJjMTcxYWI0NjU5ZTVhZTg2YTNmZjFmMzNlOTJkNzkzM2MyMSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:shepherd", level: 99}, Offers: {}, CustomName: '{"text":"Bart Eisenhower","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 # Summon the villager for __safeway_apple.
 summon minecraft:villager 905.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_apple", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fuji Apple","color":"#FF0000"},{"text":" (1.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
