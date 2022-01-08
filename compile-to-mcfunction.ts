@@ -3030,7 +3030,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         unsoldrange: [891, 65, -154, 891, 65, -154],
         paypos: [893.0, 64.5, -153.5],
         shoprange:[881, -169, 917, -151],
-        lock: ["<",{"text":"Paoule Enrique","color":"#eb7060","bold":true},"> Hey! You shouldn't leave without paying."]
+        lock: ["<",{"text":"Paule Enrique","color":"#eb7060","bold":true},"> Hey! You shouldn't leave without paying."]
       },
       clothes: {
         welcome: "Set on your new outfits? I'll ring them up for you right here!",
@@ -3385,4 +3385,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ])
     ])
   })();
+
+  schedule([
+    `particle minecraft:end_rod -75.0 67 88.5 1 0.8 0.3 0 5`,
+    `execute if entity @a[x=-77,y=65,z=88,dx=3,dy=2,dz=0] run tp @a[x=-127,y=64,z=-14,dx=103,dy=10,dz=103] 1006.5 59.0625 59.5 90 0`
+  ], 5, functions)
 }

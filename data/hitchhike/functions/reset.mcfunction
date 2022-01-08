@@ -1,14 +1,3 @@
-weather rain 1000000
-time set 23000
-# weather clear 1000000
-# time set noon
-gamerule doDaylightCycle false
-gamerule playersSleepingPercentage 200
-gamerule doLimitedCrafting true
-# gamerule sendCommandFeedback false
-stopsound @a
-recipe take @a *
-
 # NPCS
 function generated:npc/loadchunks
 # spawn
@@ -17,7 +6,7 @@ forceload add -26 -11 -123 86
 forceload add 1103 -256 745 -91
 forceload add 1103 -75 747 93
 # wendys
-# forceload add 790 94 813 120
+forceload add 790 94 813 120
 # Spawn house
 forceload add 1000 55 1025 71
 # Fountain

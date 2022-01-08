@@ -110,9 +110,7 @@ npc:
           - message: ...Anyways, what's up?
             wait: 60
           - Hmm, your internet is down... so you're here for my help again, huh.
-          - message:
-            - text: Well, what did I expect from you anyways...
-              italic: true
+          - Not that I expected anything else from you anyways...
           - Well, I have no idea. Maybe turn it off or on again, or something like that.
           cond: 10
           end: 1
@@ -120,7 +118,7 @@ npc:
           - Persistent, aren't you?
           - Why are you so desperate for internet? Do you have to talk to someone or something?
           - message: 
-            - text: "...Oh. I was actually right. "
+            - text: "Oh. I was actually right. "
             - text: "Well..."
               italic: true
             - text: " If you "
@@ -153,9 +151,7 @@ npc:
           - How'd I know it was a her? ...Just my luck, I guess?
           - Anyways, you have something for me to look at?
           - Hmm, A corrupted SD card...
-          - message:
-            - text: Figures. You're only ever here for my help.
-              italic: true
+          - Figures. You're only ever here for my help.
           - message: I'll take a look at it.
             command:
               - 'clear @a ${toGive(item.sdcardcorrupted, 2147483647)}'
@@ -165,13 +161,14 @@ npc:
             command:
               - "setblock 956 35 0 minecraft:redstone_block"
               - 'setblock 955 35 0 minecraft:powered_rail[powered=true,shape=ascending_east,waterlogged=false]'
+              - 'setblock 952 35 -1 air'
               # - 'setblock 958 36 0 minecraft:powered_rail[powered=true,shape=east_west,waterlogged=false]'
               - 'setblock 949 40 -1 stone'
               - 'setblock 950 40 -1 minecraft:powered_rail[powered=false,shape=east_west,waterlogged=false]'
               - 'tag @e[tag=npc-sawyer] add npc-unface'
               - 'summon minecart 955 35 0 {Silent:1,Tags:["sawyer-holder"]}'
               - 'scoreboard players set -held story-sawyer 1'
-            wait: 90
+            wait: 80
           - message: Hmm, this will probably take a while.
             command:
               - '${tp(950.5, 70.0, -0.25, 0, 0)}'
@@ -754,7 +751,7 @@ npc:
           - Don't worry, I'll continue standing right outside to make sure any passersby think I'm still working hard.
           cond: 2
     safeway:
-      name: Paoule Enrique
+      name: Paule Enrique
       position: 891.5 64 -152.5
       rotation: 180 0
       colour: 0xeb7060

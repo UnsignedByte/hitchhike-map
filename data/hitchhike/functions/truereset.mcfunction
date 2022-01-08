@@ -1,3 +1,21 @@
+# weather rain 1000000
+# time set 23000
+time set 18000
+weather clear 1000000
+
+gamerule doDaylightCycle false
+gamerule playersSleepingPercentage 200
+gamerule doLimitedCrafting true
+gamerule doImmediateRespawn true
+# gamerule sendCommandFeedback false
+stopsound @a
+recipe take @a *
+spawnpoint @a -17 64 16
+gamemode adventure @a[tag=!admin]
+clear @a[tag=!admin]
+kill @a[tag=!admin]
+difficulty easy
+
 function generated:reset
 
 function hitchhike:story/reset

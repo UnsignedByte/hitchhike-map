@@ -786,7 +786,7 @@ summon minecraft:villager 887.50 70 11.50 {Rotation: [-35f, 20f], Silent: 1b, In
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for safeway.
-summon minecraft:villager 891.50 64 -152.50 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-safeway"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjVmYWViMTFiMzc2NTYzNGY1MWFkYjBmMWFjNmRkM2I0OWIzMDE0ZjJiZjM5NWFlZDI2OWUzMzliYjMyYjc3OSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:shepherd", level: 99}, Offers: {}, CustomName: '{"text":"Paoule Enrique","color":"#eb7060","bold":true}'}
+summon minecraft:villager 891.50 64 -152.50 {Rotation: [180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-safeway"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjVmYWViMTFiMzc2NTYzNGY1MWFkYjBmMWFjNmRkM2I0OWIzMDE0ZjJiZjM5NWFlZDI2OWUzMzliYjMyYjc3OSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:shepherd", level: 99}, Offers: {}, CustomName: '{"text":"Paule Enrique","color":"#eb7060","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for clothes.
