@@ -3388,6 +3388,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
   schedule([
     `particle minecraft:end_rod -75.0 67 88.5 1 0.8 0.3 0 5`,
-    `execute if entity @a[x=-77,y=65,z=88,dx=3,dy=2,dz=0] run tp @a[x=-127,y=64,z=-14,dx=103,dy=10,dz=103] 1006.5 59.0625 59.5 90 0`
+    `execute if entity @a[x=-77,y=65,z=88,dx=3,dy=2,dz=0] as @a[x=-127,y=64,z=-14,dx=103,dy=10,dz=103] run function hitchhike:story/intro/lobbytp`
   ], 5, functions)
 }
