@@ -902,7 +902,7 @@ summon minecraft:villager 1053.50 65 -47.30 {Rotation: [0f, 30f], Silent: 1b, In
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for barteisenhower.
-summon minecraft:villager 1048.50 65 -52.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-barteisenhower"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjI1MmJmNGQyYWMzMzM4NWU3NjY4ODdhNmJjMTcxYWI0NjU5ZTVhZTg2YTNmZjFmMzNlOTJkNzkzM2MyMSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:shepherd", level: 99}, Offers: {}, CustomName: '{"text":"Bart Eisenhower","bold":true}'}
+summon minecraft:villager 1048.50 65 -52.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-barteisenhower"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjI1MmJmNGQyYWMzMzM4NWU3NjY4ODdhNmJjMTcxYWI0NjU5ZTVhZTg2YTNmZjFmMzNlOTJkNzkzM2MyMSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:librarian", level: 99}, Offers: {}, CustomName: '{"text":"Bart Eisenhower","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_apple.
