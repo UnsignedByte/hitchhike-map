@@ -1453,7 +1453,20 @@ npc:
           - Shush, I'm in the middle of a chess game.
           - Trying to set up O-O-O#.
           end: -1
-
+    megpallen:
+      name: Maggie Pallen
+      position: 1053.5 65 -34.7
+      rotation: -180 16
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODJkOGNiYTk1ZTgzZDcwYzAwMWViNzc0ZjkxYzE2M2FkYTNjZTFjZDU0OTdiY2Q2NzUwOTlmMmNlNWQ4ODU1YSJ9fX0=
+      villager:
+        type: snow
+        profession: butcher
+      dialogue:
+        - messages:
+          - Hi, did you see Maggie outside?
+          - Maggie is trying out a vegan diet.
+          - Bark is very nutritious.
+          end: -1
 quest:
   visitfriend: # visit friend's house
     name: Phone-A-Friend
