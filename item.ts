@@ -2085,14 +2085,14 @@ export const item = {
         author:"GNU",
         title:"The GNU C Reference Manual"
       },
-      scarletletter: {
-        author: "Nathaniel Hawthorne",
-        title:"The Scarlet Letter"
-      },
-      proposal: {
-        author: "Jonathan Swift",
-        title: "A Modest Proposal"
-      },
+      // scarletletter: {
+      //   author: "Nathaniel Hawthorne",
+      //   title:"The Scarlet Letter"
+      // },
+      // proposal: {
+      //   author: "Jonathan Swift",
+      //   title: "A Modest Proposal"
+      // },
       assembly: {
         author: "Wikipedia, the Free Encyclopedia",
         title: "x86 Assembly Language"
@@ -2101,18 +2101,18 @@ export const item = {
         author: "GNU",
         title: "Vim Manual"
       },
-      chess: {
-        author: "José Raúl Capablanca",
-        title: "Chess Fundamentals"
-      },
+      // chess: {
+      //   author: "José Raúl Capablanca",
+      //   title: "Chess Fundamentals"
+      // },
       // bible: {
       //   title: "The King James Bible",
       //   author: "God"
       // },
-      paradiselost: {
-        title: "Paradise Lost",
-        author: "John Milton"
-      },
+      // paradiselost: {
+      //   title: "Paradise Lost",
+      //   author: "John Milton"
+      // },
       tomsawyer: {
         title: "The Adventures of Tom Sawyer",
         author: "Mark Twain"
@@ -2121,10 +2121,14 @@ export const item = {
         title: "Lorem Ipsum...",
         author: "Filler Text"
       },
-      bee: {
-        title: "The Bee Movie",
-        author: "DreamWorks Animation"
-      }
+      mcguide: {
+        title: "The Ultimate Player's Guide to Minecraft",
+        author: "Stephen O'Brien"
+      },
+      // bee: {
+      //   title: "The Bee Movie",
+      //   author: "DreamWorks Animation"
+      // }
     }
 
     ensureDir("./files");
