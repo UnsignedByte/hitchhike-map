@@ -2122,7 +2122,7 @@ export const item = {
         author: "Filler Text"
       },
       mcguide: {
-        title: "The Ultimate Player's Guide to Minecraft",
+        title: "The Player's Guide to Minecraft",
         author: "Stephen O'Brien"
       },
       // bee: {
