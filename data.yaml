@@ -1497,6 +1497,23 @@ npc:
             - text: " look, you don't have to tell me."
           - Anyways, stop bothering me, please; I can't be wasting time not reading, after all.
           end: -1
+    bobknutz:
+      name: Bob Knutz
+      position: 1022.5 65 -71.3
+      rotation: 0 28.5
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTUwOTI0ZTQwZTJhNTNkNzY1NmQwYWVlYzgyYTM4NmQyYjg5YTY4MTE1ZDIxZmQ2YWZmOTljY2JlOWJkZGRjIn19fQ==
+      villager:
+        type: desert
+        profession: mason
+      dialogue:
+        - messages:
+          - Eh? Who's there? Who are you?
+          - Is that Jared? Hey Jared, what are you all the way here?
+          - When did you get so big? Last time I saw you your dad could still pick you up with one arm!
+          - I haven't seen him in so long either, too busy to even visit his own father...
+          - Well, thanks for stopping buy, Jared! I was just thinking about you!
+          - It's so glad to meet you,...
+          end: -1
 
 quest:
   visitfriend: # visit friend's house

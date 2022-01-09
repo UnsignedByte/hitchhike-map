@@ -42,6 +42,7 @@ forceload add 1053 29
 forceload add 1049 29
 forceload add 1053 -35
 forceload add 1021 -43
+forceload add 1022 -72
 forceload add 905 -153
 forceload add 909 -153
 forceload add 901 -153

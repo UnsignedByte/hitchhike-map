@@ -929,6 +929,10 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 1021.50 65 -42.50 {Rotation: [-180f, 30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-fronkobognole"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWQ2ZGNjNDc2ODMyMzZhYjU5ZDk2ZWIwYjI3YzM4ZDIzNDFkNDg1MDViOGVhNGVhNTdhYWYxNzI3Y2QzYzE4NyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:cartographer", level: 99}, Offers: {}, CustomName: '{"text":"Fronk Obognole","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for bobknutz.
+summon minecraft:villager 1022.50 65 -71.30 {Rotation: [0f, 28.5f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-bobknutz"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTUwOTI0ZTQwZTJhNTNkNzY1NmQwYWVlYzgyYTM4NmQyYjg5YTY4MTE1ZDIxZmQ2YWZmOTljY2JlOWJkZGRjIn19fQ==" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:mason", level: 99}, Offers: {}, CustomName: '{"text":"Bob Knutz","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 # Summon the villager for __safeway_apple.
 summon minecraft:villager 905.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_apple", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fuji Apple","color":"#FF0000"},{"text":" (1.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
