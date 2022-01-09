@@ -1526,6 +1526,7 @@ npc:
         - messages:
           - Hey, did you notice I was reading?
           - Don't worry, everyone is free to read gospel!
+          - Feel free to take a look.
           end: -1
 
 quest:
