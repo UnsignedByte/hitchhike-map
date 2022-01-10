@@ -2036,9 +2036,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'bossbar set minecraft:maze value 0',
       'scoreboard players set bossbar maze 0',
       `summon marker -1500 ${cellsize+(cellsize-1)/2} 0 {Tags:["maze-marker","maze-create-root"]}`,
+      `function generated:story/maze/loadchunks`,
       '',
       'scoreboard players operation _x maze = size maze',
-      'function generated:story/maze/create/_x'
+      'schedule function generated:story/maze/create/_x 20t'
     ]);
 
     addfunc('maze/create/_x', [
@@ -2414,8 +2415,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       "LEFT_RIGHT"
     ]
 
+    addfunc('maze/loadchunks', [
+      `forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(mazerows.length-1)+(cellsize+1)/2}`
+    ])
+
     addfunc('maze/create/wave/reset', [
-      `forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(mazerows.length-1)+(cellsize+1)/2}`,
       `kill @e[tag=maze-tile]`,
       [...Array(mazecols)].map((xx, x) => (
         mazerows.map((zz, z) => [

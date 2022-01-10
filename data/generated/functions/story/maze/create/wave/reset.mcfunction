@@ -1,4 +1,3 @@
-forceload add -1005 -5 -650 110
 kill @e[tag=maze-tile]
 summon marker -1000 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0

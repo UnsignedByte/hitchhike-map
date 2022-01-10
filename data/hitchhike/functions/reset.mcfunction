@@ -31,6 +31,7 @@ forceload add 884 -166 916 -152
 # forceload add -1504 -2 -1371 129
 # lobby
 forceload add -1378 -104 -1420 -196
+function generated:story/maze/loadchunks
 
 # Parkour
 function generated:story/parkour/loadchunks
