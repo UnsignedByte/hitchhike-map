@@ -8,3 +8,5 @@ scoreboard players set @a foodGoal -1
 effect clear @a regeneration
 kill @e[tag=maze-weapon-displaystand,type=item]
 # gamerule doImmediateRespawn false
+
+function generated:story/maze/unloadchunks

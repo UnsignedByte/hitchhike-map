@@ -2037,6 +2037,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players set bossbar maze 0',
       `summon marker -1500 ${cellsize+(cellsize-1)/2} 0 {Tags:["maze-marker","maze-create-root"]}`,
       `forceload add -1504 -2 -1371 129`,
+      `function generated:story/maze/loadchunks`,
       '',
       'scoreboard players operation _x maze = size maze',
       'schedule function generated:story/maze/create/_x 20t'
@@ -2414,6 +2415,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       "NONE",
       "LEFT_RIGHT"
     ]
+
+    addfunc('maze/unloadchunks', [
+      `forceload remove ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(mazerows.length-1)+(cellsize+1)/2}`,
+      `forceload remove -1504 -2 -1371 129`,
+    ])
 
     addfunc('maze/loadchunks', [
       `forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(mazerows.length-1)+(cellsize+1)/2}`

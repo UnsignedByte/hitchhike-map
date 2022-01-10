@@ -16,6 +16,7 @@ bossbar set minecraft:maze value 0
 scoreboard players set bossbar maze 0
 summon marker -1500 13 0 {Tags:["maze-marker","maze-create-root"]}
 forceload add -1504 -2 -1371 129
+function generated:story/maze/loadchunks
 
 scoreboard players operation _x maze = size maze
 schedule function generated:story/maze/create/_x 20t
