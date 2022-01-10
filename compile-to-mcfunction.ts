@@ -3432,5 +3432,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('parkour/loadchunks',
       checkpointRaw.map(x=> `forceload add ${Math.floor(x[0])} ${Math.floor(x[2])}`)
     );
+
+    schedule(`execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~${0.1+yoffset} ~ 0.07 0.03 0.07 0 1`, 5, functions)
   })();
 }

@@ -1,3 +1,4 @@
+execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~1.475 ~ 0.07 0.03 0.07 0 1
 particle minecraft:end_rod -75.0 67 88.5 1 0.8 0.3 0 5
 execute if entity @a[x=-77,y=65,z=88,dx=3,dy=2,dz=0] as @a[x=-127,y=64,z=-14,dx=103,dy=10,dz=103] run function hitchhike:story/intro/lobbytp
 execute unless entity @a[x=900,y=55,z=-80,dx=15,dy=2,dz=2] run scoreboard players set door fishjar 0
