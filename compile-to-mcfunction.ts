@@ -3396,6 +3396,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   (() => {
     const checkpoints = [
       // Mine section
+      "948.5 153.5 504.5",
+      "955.5 155.5 504.5",
       "958.5 153.5 508.5",
       "960.5 153.5 518.5",
       "969.5 155 529.5",
@@ -3442,11 +3444,19 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('parkour/updatespawn', [
       `scoreboard players operation #tmp checkpoint-id = @s checkpoint-id`,
-      `execute positioned ~ ~${yoffset} ~ run tag @a[dx=0,dy=0,dz=0] add checkpoint-candidate`,
+      `execute positioned ~ ~${yoffset} ~ align xz run tag @a[dx=0,dy=0,dz=0] add checkpoint-candidate`,
       `execute as @a[tag=checkpoint-candidate] if score @s checkpoint-id = #tmp checkpoint-id run tag @s remove checkpoint-candidate`,
-      `scoreboard players operation @a[tag=checkpoint-candidate] checkpoint-id = @s checkpoint-id`,
+      `scoreboard players operation @a[tag=checkpoint-candidate] checkpoint-id = #tmp checkpoint-id`,
       `playsound minecraft:entity.player.levelup player @a[tag=checkpoint-candidate] ~ ~${yoffset} ~ 0.3`,
       `tag @a remove checkpoint-candidate`
+    ])
+
+    addfunc('parkour/respawn', [
+      'scoreboard players operation #tmp checkpoint-id = @s checkpoint-id',
+      'execute as @e[tag=checkpoint-marker] if score @s checkpoint-id = #tmp checkpoint-id run tag @s add checkpoint-candidate',
+      `execute at @e[tag=checkpoint-candidate,limit=1] run tp @s ~ ~${yoffset} ~`,
+      'tag @e remove checkpoint-candidate',
+      'scoreboard players set @s parkour-deaths 0'
     ])
   })();
 }
