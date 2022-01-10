@@ -1,0 +1,1 @@
+execute as @a[tag=checkpoint-marker] at @s run function generated:story/parkour/updatespawn
