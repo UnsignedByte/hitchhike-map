@@ -1,3 +1,4 @@
+execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~1.675 ~ 0.09 0.03 0.09 0 1
 execute at @a[tag=lake-player-wet] positioned ~ 105 ~ run function generated:story/lake/piranha/summon
 execute at @a[tag=lake-player-wet] positioned ~ 105 ~ run function generated:story/lake/piranha/summon
 effect give @a[tag=lake-player-wet] minecraft:blindness 4 0 true
