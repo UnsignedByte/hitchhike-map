@@ -3433,6 +3433,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       checkpointRaw.map(x=> `forceload add ${Math.floor(x[0])} ${Math.floor(x[2])}`)
     );
 
-    schedule(`execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~${0.2+yoffset} ~ 0.09 0.05 0.09 0 1`, 20, functions)
+    schedule(`execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~${0.15+yoffset} ~ 0.09 0.05 0.09 0 1`, 20, functions)
   })();
 }

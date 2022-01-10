@@ -1,3 +1,4 @@
+execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~1.525 ~ 0.09 0.05 0.09 0 1
 #> Teleport out softlocked items
 tp @e[type=item,x=891,y=64,z=-153,dx=0,dy=1,dz=0] 891 65 -154
 function generated:story/fountain/jar/updateguess
