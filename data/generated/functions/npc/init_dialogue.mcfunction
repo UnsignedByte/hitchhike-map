@@ -57,7 +57,7 @@ execute as @s[tag=npc-lucky] at @s run function generated:npc/lucky/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-deagol] at @s run function generated:npc/deagol/tick
 # Start a conversation if it was selected
-execute as @s[tag=npc-eichhornchen] at @s run function generated:npc/eichhornchen/tick
+execute as @s[tag=npc-dougwhoule] at @s run function generated:npc/dougwhoule/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-erenpan] at @s run function generated:npc/erenpan/tick
 # Start a conversation if it was selected

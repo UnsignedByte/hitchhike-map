@@ -3391,5 +3391,46 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   schedule([
     `particle minecraft:end_rod -75.0 67 88.5 1 0.8 0.3 0 5`,
     `execute if entity @a[x=-77,y=65,z=88,dx=3,dy=2,dz=0] as @a[x=-127,y=64,z=-14,dx=103,dy=10,dz=103] run function hitchhike:story/intro/lobbytp`
-  ], 5, functions)
+  ], 5, functions);
+
+  (() => {
+    const checkpoints = [
+      // Mine section
+      "958.5 153.5 508.5",
+      "960.5 153.5 518.5",
+      "969.5 155 529.5",
+      "960.5 158 539.5",
+      "967.5 161.5 529.5",
+      "970.5 166 540.5",
+      "964.5 171 542.5",
+      "967.5 173.5 542.5",
+      "965.5 176.5 533.5",
+      "973.5 179 539.5",
+      "969.5 186 543.5"
+    ]
+
+    const checkpointRaw = checkpoints.map(x=> x.split(" ").map(Number));
+
+    const yoffset = 0.6875;
+
+    addfunc('parkour/summoncheckpoints',
+      checkpointRaw.map(coords=> 
+        `summon armor_stand ${coords[0].toFixed(8)} ${(coords[1]-yoffset).toFixed(8)} ${coords[2].toFixed(8)} ${toSnbt({
+          Tags: `["checkpoint-marker"]`,
+          ArmorItems: `[{},{},{},{id:"minecraft:light_weighted_pressure_plate",Count:1b}]`,
+          DisabledSlots:4144959,
+          Invulnerable: true,
+          Invisible: true,
+          NoGravity: true,
+          Silent: true,
+          Marker: true,
+          Small: true
+        })}`
+      )
+    );
+
+    addfunc('parkour/loadchunks',
+      checkpointRaw.map(x=> `forceload add ${Math.floor(x[0])} ${Math.floor(x[2])}`)
+    );
+  })();
 }

@@ -138,7 +138,8 @@ export async function init (
   ], 20, functions);
 
   schedule([
-    `execute as @e[tag=item_holder] run data modify entity @s Fire set value 32767s`
+    `execute as @e[tag=item_holder] run data modify entity @s Fire set value 32767s`,
+    `execute as @e[tag=checkpoint-marker] run data modify entity @s Fire set value 32767s`
   ], 32766, functions); // keep all armor stands lit
 
   schedule([

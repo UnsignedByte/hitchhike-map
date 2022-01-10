@@ -32,5 +32,8 @@ forceload add 884 -166 916 -152
 # lobby
 forceload add -1378 -104 -1420 -196
 
+# Parkour
+function generated:story/parkour/loadchunks
+
 # Waits for the chunks to actually load
 schedule function hitchhike:truereset 20t

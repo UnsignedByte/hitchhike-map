@@ -1243,8 +1243,8 @@ npc:
             wait: 80
           - No breaks for Degol!
           end: -1
-    eichhornchen:
-      name: Eich Hornchen
+    dougwhoule:
+      name: Doug Whoule
       position: 665.7 57 -29.7
       rotation: 50 25
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzI0ZTRiMmNlZTJhNmIzNmU5YmFjZDRiZWRkMGQ0ZGJjMTdkYTMxMTg2NjI3NGFmYzRiOWVkNTBlYTc3MTdlMiJ9fX0=
