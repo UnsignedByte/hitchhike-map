@@ -3438,7 +3438,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     schedule(`execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~${0.1+yoffset} ~ 0.09 0.05 0.09 0 1`, 20, functions)
 
     addfunc('parkour/updatespawn', [
-      `execute positioned ~${-s/2} ~${yoffset} ~${-s/2} run say @a[dx=${s},dy=${5/8/16},dz=${s}]`
+      `scoreboard players operation @a[dx=0,dy=0,dz=0] checkpoint-id = @s checkpoint-id`
     ])
   })();
 }
