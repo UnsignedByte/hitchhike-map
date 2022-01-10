@@ -3411,7 +3411,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     const checkpointRaw = checkpoints.map(x=> x.split(" ").map(Number));
 
-    const yoffset = 0.6875;
+    const yoffset = 1.375;
 
     addfunc('parkour/summoncheckpoints',
       checkpointRaw.map(coords=> 
@@ -3424,7 +3424,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           NoGravity: true,
           Silent: true,
           Marker: true,
-          Small: true
+          Small: false
         })}`
       )
     );
