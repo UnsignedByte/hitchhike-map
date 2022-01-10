@@ -3413,6 +3413,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     const yoffset = 1.375;
 
+    const s = 14/16 * 5/8;
+
     addfunc('parkour/summoncheckpoints',
       checkpointRaw.map(coords=> 
         `summon armor_stand ${coords[0].toFixed(8)} ${(coords[1]-yoffset).toFixed(8)} ${coords[2].toFixed(8)} ${toSnbt({
@@ -3433,6 +3435,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       checkpointRaw.map(x=> `forceload add ${Math.floor(x[0])} ${Math.floor(x[2])}`)
     );
 
-    schedule(`execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~${0.15+yoffset} ~ 0.09 0.05 0.09 0 1`, 20, functions)
+    schedule(`execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~${0.1+yoffset} ~ 0.09 0.05 0.09 0 1`, 20, functions)
+
+    addfunc('parkour/updatespawn', [
+      `execute positioned ~${-s/2} ~${yoffset} ~${-s/2} run say @a[dx=${s},dy=${5/8/16},dz=${s}]`
+    ])
   })();
 }
