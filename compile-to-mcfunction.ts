@@ -3416,18 +3416,21 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     const s = 14/16 * 5/8;
 
     addfunc('parkour/summoncheckpoints',
-      checkpointRaw.map(coords=> 
-        `summon armor_stand ${coords[0].toFixed(8)} ${(coords[1]-yoffset).toFixed(8)} ${coords[2].toFixed(8)} ${toSnbt({
-          Tags: `["checkpoint-marker"]`,
-          ArmorItems: `[{},{},{},{id:"minecraft:light_weighted_pressure_plate",Count:1b}]`,
-          DisabledSlots:4144959,
-          Invulnerable: true,
-          Invisible: true,
-          NoGravity: true,
-          Silent: true,
-          Marker: true,
-          Small: false
-        })}`
+      checkpointRaw.map((coords, i)=> [
+          `summon armor_stand ${coords[0].toFixed(8)} ${(coords[1]-yoffset).toFixed(8)} ${coords[2].toFixed(8)} ${toSnbt({
+            Tags: `["checkpoint-marker","checkpoint-marker-init"]`,
+            ArmorItems: `[{},{},{},{id:"minecraft:light_weighted_pressure_plate",Count:1b}]`,
+            DisabledSlots:4144959,
+            Invulnerable: true,
+            Invisible: true,
+            NoGravity: true,
+            Silent: true,
+            Marker: true,
+            Small: false
+          })}`,
+          `scoreboard players set @e[tag=checkpoint-marker-init] checkpoint-id ${hash(checkpoints[i])}`,
+          'tag @e remove checkpoint-marker-init'
+        ]
       )
     );
 
