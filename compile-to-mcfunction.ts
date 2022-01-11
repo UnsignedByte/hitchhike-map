@@ -2400,7 +2400,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     // WAVE FUNCTION STUFF
 
-    const mazerows = [0, 0, 0, 0, 0, 0, 1, 2];
+    const mazerows = [0, 0, 0, 0, 0, 0, 1, 2, 2];
     const mazecols = 24;
     const mazeorigin = [-1000, 10, 0];
 
