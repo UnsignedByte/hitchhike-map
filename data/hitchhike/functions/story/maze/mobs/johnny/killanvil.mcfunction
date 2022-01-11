@@ -4,6 +4,6 @@ execute at @s run fill ~ ~ ~ ~ ~ ~ air replace #anvil
 
 execute at @s run setblock ~ ~ ~ stone
 
-say test
+tp 844 @s
 
 kill @s
