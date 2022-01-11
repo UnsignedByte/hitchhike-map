@@ -3,3 +3,5 @@ execute as @s at @s unless block ~ ~ ~ #anvil run function hitchhike:story/maze/
 execute at @s run fill ~ ~ ~ ~ ~ ~ air replace #anvil
 
 kill @s
+
+execute at @s run setblock ~ ~ ~ stone
