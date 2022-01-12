@@ -1078,7 +1078,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         `summon cave_spider ~ ~ ~ {DeathLootTable:"minecraft:empty",FallFlying:1b,PersistenceRequired:0b,Health:10f,Tags:["maze-common","maze-mob","maze-mob-gridbug"],CustomName:'{"text":"gridbug","color":"red","bold":true}',Attributes:[{Name:generic.max_health,Base:10},{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:3}]}`,
         `summon bee ~ ~ ~ {Silent:1b,Invulnerable:0b,AngerTime:2147483647,Tags:["maze-mob","maze-host","maze-mob-walrus"],Passengers:[{id:"minecraft:area_effect_cloud",CustomNameVisible:1b,Duration:2147483647,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:zombie",Silent:1b,DeathLootTable:"minecraft:empty",CanPickUpLoot:0b,Health:2f,IsBaby:1b,Tags:["maze-mob"],ArmorItems:[{},{},{},{id:'minecraft:player_head',Count:1b,tag:{SkullOwner:{Id:[I;-1585053926,-215070752,-1100916127,789778227],Properties:{textures:[{Value:'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdiYWVkYWY5YWQ5NTQ3NGViMWJlNTg5MjQ0NDVkZmM3N2JiZGMyNTJjYzFjODE2NDRjZjcxNTRjNDQxIn19fQ=='}]}}}}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2},{Name:generic.attack_damage,Base:1}]}],CustomName:'{"text":"Walrus Operator","color":"red"}'}],ArmorItems:[{},{},{},{id:'minecraft:barrier',Count:1b}],ActiveEffects:[{Id:11b,Amplifier:5b,Duration:2147483647},{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.3},{Name:generic.attack_damage,Base:0}]}`,
         `summon skeleton ~ ~ ~ {Health:15f,Tags:["maze-mob","maze-symlink"],CustomName:'{"text":"SymLink","color":"red"}',HandItems:[{id:"minecraft:bow",Count:1b},{}],Attributes:[{Name:generic.movement_speed,Base:0.2}]}`,
-        `summon zombie ~ ~ ~ {Silent:1b,Invulnerable:0b,PersistenceRequired:1b,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:guardian",Health:2f,Tags:["maze-mob","maze-common","maze-mob-dsstore"],CustomName:'{"text":".DS_Store","color":"red"}',Attributes:[{Name:generic.max_health,Base:2}]}],CustomName:'{"text":"SymLink","color":"red"}',ArmorItems:[{id:'minecraft:netherite_boots',Count:1b,tag:{Enchantments:[{}]}},{},{},{}],ActiveEffects:[{Id:11b,Amplifier:5b,Duration:2147483647},{Id:14b,Amplifier:0b,Duration:2147483647}],Attributes:[{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.5}]}`
+        `summon zombie ~ ~ ~ {Silent:1b,Invulnerable:0b,PersistenceRequired:1b,Tags:["maze-mob","maze-host"],Passengers:[{id:"minecraft:guardian",Health:5f,Tags:["maze-mob","maze-common","maze-mob-dsstore"],CustomName:'{"text":".DS_Store","color":"red"}',Attributes:[{Name:generic.max_health,Base:5}]}],CustomName:'{"text":"SymLink","color":"red"}',ArmorItems:[{id:'minecraft:netherite_boots',Count:1b,tag:{Enchantments:[{}]}},{},{},{}],ActiveEffects:[{Id:11b,Amplifier:5b,Duration:2147483647},{Id:14b,Amplifier:0b,Duration:2147483647}],Attributes:[{Name:generic.follow_range,Base:16},{Name:generic.movement_speed,Base:0.5}]}`
       ],
       rare: [
         `summon wither_skeleton ~ ~ ~ {Silent:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Health:60f,Tags:["maze-rare","maze-mob","maze-mob-ip"],CustomName:'{"text":"8.8.8.8","color":"dark_red","bold":true}',HandItems:[{id:'minecraft:cookie',Count:1b,tag:{Enchantments:[{id:'minecraft:sharpness',lvl:5s},{id:'minecraft:knockback',lvl:1s}]}},{id:'minecraft:cookie',Count:1b,tag:{Enchantments:[{id:'minecraft:sharpness',lvl:5s},{id:'minecraft:knockback',lvl:1s}]}}],ArmorItems:[{},{},{},{id:'minecraft:tinted_glass',Count:1b}],Attributes:[{Name:generic.max_health,Base:60},{Name:generic.follow_range,Base:32},{Name:generic.knockback_resistance,Base:0.8},{Name:generic.movement_speed,Base:0.15},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:10},{Name:generic.armor_toughness,Base:20}]}`,
@@ -3459,6 +3459,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute as @a[tag=checkpoint-candidate] if score @s checkpoint-id = #tmp checkpoint-id run tag @s remove checkpoint-candidate`,
       `scoreboard players operation @a[tag=checkpoint-candidate] checkpoint-id = #tmp checkpoint-id`,
       `playsound minecraft:entity.player.levelup player @a[tag=checkpoint-candidate] ~ ~${yoffset} ~ 0.3`,
+      `title @a[tag=checkpoint-candidate] actionbar [{"text":"Checkpoint Reached","color":"green"}]`,
       `tag @a remove checkpoint-candidate`
     ])
 
@@ -3466,7 +3467,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation #tmp checkpoint-id = @s checkpoint-id',
       'execute as @e[tag=checkpoint-marker] if score @s checkpoint-id = #tmp checkpoint-id run tag @s add checkpoint-candidate',
       `execute at @e[tag=checkpoint-candidate,limit=1] run tp @s ~ ~${yoffset} ~`,
-      'tag @e remove checkpoint-candidate'
+      'execute at @s if entity @e[tag=checkpoint-candidate] run playsound minecraft:block.respawn_anchor.deplete block @s ~ ~ ~ 0.5 2',
+      `give @s[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`,
+      'tag @e remove checkpoint-candidate',
     ])
   })();
 }

@@ -183,6 +183,36 @@ export const item = {
       CanDestroy:`["minecraft:snow","minecraft:snow_block","minecraft:powder_snow"]`
     }
   },
+  compass: {
+    id: '"minecraft:compass"',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "Compass",
+          color: "aqua"
+        }),
+        Lore:`[${rawJson([{
+          text:"Points the way to your destination.",
+          color: "dark_gray"
+        }])}, ${rawJson([""])}, ${rawJson([{
+          text:"Throw it on the ground to",
+          color: "dark_gray"
+        }])}, ${rawJson([{
+          text:"restart from checkpoint.",
+          color: "dark_gray"
+        }])}]`
+      },
+      compass: true,
+      HideFlags:127,
+      LodestoneDimension:'"minecraft:overworld"',
+      LodestoneTracked:false,
+      LodestonePos: {
+        X:986,
+        Y:255,
+        Z:563
+      }
+    }
+  },
   money:{
     1: {
       id: '"minecraft:nether_brick"',
