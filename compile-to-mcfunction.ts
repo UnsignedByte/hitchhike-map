@@ -2197,6 +2197,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute as @e[type=marker,tag=maze-node] run function generated:story/maze/create/getpos',
       // 'tag @e[type=marker,tag=maze-node] remove maze-visited',
       'bossbar set minecraft:maze visible false',
+      `function generated:story/maze/unloadchunks`,
       'function hitchhike:story/sawyer/maze/ready'
     ])
 
@@ -2400,7 +2401,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     // WAVE FUNCTION STUFF
 
-    const mazerows = [0, 0, 0, 0, 0, 0, 1, 2, 2, 1];
+    const mazerows = [0, 0, 0, 0, 0, 0, 1, 2, 2, 1, 1];
     const mazecols = 24;
     const mazeorigin = [-1000, 10, 0];
 
@@ -2418,7 +2419,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('maze/unloadchunks', [
       `forceload remove ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(mazerows.length-1)+(cellsize+1)/2}`,
-      `forceload remove -1504 -2 -1371 129`,
+      // `forceload remove -1504 -2 -1371 129`,
     ])
 
     addfunc('maze/loadchunks', [
