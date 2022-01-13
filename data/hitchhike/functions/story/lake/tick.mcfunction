@@ -23,4 +23,4 @@ execute as @a[tag=lake-player-wet] at @s if entity @s[y=114,dy=0] run fill ~-1 ~
 scoreboard players set @a[tag=lake-player-wet] foodGoal 16
 
 # Kill sunken boats
-execute as @e[tag=lake-boat] at @s if block ~ ~-0.1 ~ dirt if block ~ ~-0.1 ~ brown_stained_glass water run kill @s
+# execute as @e[tag=lake-boat] at @s if block ~ ~ ~ water if block ~ ~-0.1 ~ dirt if block ~ ~-0.1 ~ brown_stained_glass water run kill @s
