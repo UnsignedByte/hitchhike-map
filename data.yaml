@@ -696,7 +696,13 @@ npc:
             wait: 80
           - Well done..? Feel free to take the boat out on the dock for a spin, but please try not to sink it.
           - (Also please bring it back afterwards, that would be great.)
-          - Good luck with that hike, I've heard its difficult.
+          - message: Here, these compasses will point you towards the mountaintop. Good luck with that hike, I've heard its difficult.
+            command:
+              - type: score
+                value: hurm-done vars 1
+              - 'execute as @a run function generated:story/parkour/respawn'
+              - team modify player collisionRule pushOtherTeams
+              - team modify player friendlyFire false
           cond: 3
           end: -1
     janitor:

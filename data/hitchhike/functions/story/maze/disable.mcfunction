@@ -9,5 +9,8 @@ effect clear @a regeneration
 kill @e[tag=maze-weapon-displaystand,type=item]
 # gamerule doImmediateRespawn false
 
+team modify player collisionRule always
+team modify player friendlyFire true
+
 function generated:story/maze/unloadchunks
 forceload remove -1504 -2 -1371 129

@@ -8,6 +8,11 @@ gamerule randomTickSpeed 0
 gamerule doWeatherCycle false
 gamerule announceAdvancements false
 
+team add collisionless
+team modify collisionless collisionRule never
+
+team add player
+
 # Forceload 0 0 chunks bc useful
 forceload add -1 -1 1 1
 

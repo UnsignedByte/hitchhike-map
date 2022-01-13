@@ -1,3 +1,4 @@
+execute if score hurm-done vars matches 1 run give @a[nbt=!{Inventory:[{tag:{compass:1b}}]}] minecraft:compass{display: {Name: '{"text":"Compass","color":"aqua"}', Lore: ['[{"text":"Points the way to your destination.","color":"dark_gray"}]', '[""]', '[{"text":"Throw it on the ground to","color":"dark_gray"}]', '[{"text":"restart from checkpoint.","color":"dark_gray"}]']}, compass: 1b, HideFlags: 127, LodestoneDimension: "minecraft:overworld", LodestoneTracked: 0b, LodestonePos: {X: 986, Y: 255, Z: 563}} 1
 execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~1.475 ~ 0.09 0.05 0.09 0 1
 #> Teleport out softlocked items
 tp @e[type=item,x=891,y=64,z=-153,dx=0,dy=1,dz=0] 891 65 -154

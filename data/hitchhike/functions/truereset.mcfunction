@@ -37,6 +37,9 @@ summon area_effect_cloud 896.5 61.625 -60.5 {NoGravity:1b,Duration:2147483647,Ta
 summon area_effect_cloud 894.5 61.625 -59.5 {NoGravity:1b,Duration:2147483647,Tags:["falling-block-display","aec"],Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:white_concrete"},NoGravity:1b,Silent:1b,Time:1,Tags:["falling-block-display"]}]}
 summon area_effect_cloud 894.5 61.625 -60.5 {NoGravity:1b,Duration:2147483647,Tags:["falling-block-display","aec"],Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:white_concrete"},NoGravity:1b,Silent:1b,Time:1,Tags:["falling-block-display"]}]}
 summon area_effect_cloud 914.5 48.625 -72.5 {NoGravity:1b,Duration:2147483647,Tags:["falling-block-display","aec"],Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:smooth_quartz"},NoGravity:1b,Silent:1b,Time:1,Tags:["falling-block-display"]}]}
+team modify player collisionRule always
+team modify player friendlyFire true
+
 summon area_effect_cloud 914.5 48.625 -84.5 {NoGravity:1b,Duration:2147483647,Tags:["falling-block-display","aec"],Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:smooth_quartz"},NoGravity:1b,Silent:1b,Time:1,Tags:["falling-block-display"]}]}
 
 # Dead Skeletons

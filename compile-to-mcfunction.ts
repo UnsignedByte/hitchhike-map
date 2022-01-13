@@ -3459,7 +3459,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute as @a[tag=checkpoint-candidate] if score @s checkpoint-id = #tmp checkpoint-id run tag @s remove checkpoint-candidate`,
       `scoreboard players operation @a[tag=checkpoint-candidate] checkpoint-id = #tmp checkpoint-id`,
       `playsound minecraft:entity.player.levelup player @a[tag=checkpoint-candidate] ~ ~${yoffset} ~ 0.3`,
-      `title @a[tag=checkpoint-candidate] actionbar [{"text":"Checkpoint Reached","color":"green"}]`,
+      `title @a[tag=checkpoint-candidate] actionbar [{"text":"Checkpoint reached!","color":"green"}]`,
       `tag @a remove checkpoint-candidate`
     ])
 
@@ -3467,7 +3467,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation #tmp checkpoint-id = @s checkpoint-id',
       'execute as @e[tag=checkpoint-marker] if score @s checkpoint-id = #tmp checkpoint-id run tag @s add checkpoint-candidate',
       `execute at @e[tag=checkpoint-candidate,limit=1] run tp @s ~ ~${yoffset} ~`,
-      'execute at @s if entity @e[tag=checkpoint-candidate] run playsound minecraft:block.respawn_anchor.deplete block @s ~ ~ ~ 0.5 2',
+      'execute if entity @e[tag=checkpoint-candidate] at @s run playsound minecraft:block.respawn_anchor.deplete block @s ~ ~ ~ 0.5 2',
+      'execute if entity @e[tag=checkpoint-candidate] run title @s actionbar [{"text":"Returned to checkpoint.","color":"dark_purple"}]',
+      'execute unless entity @e[tag=checkpoint-candidate] run title @s actionbar [{"text":"Reach a checkpoint to enable compass.","color":"red"}]',
       `give @s[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`,
       'tag @e remove checkpoint-candidate',
     ])
@@ -3482,5 +3484,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute as @p[tag=match-uuid-select] at @s run function generated:story/parkour/respawn',
       'kill @s'
     ])
+
+    schedule(`execute if score hurm-done vars matches 1 run give @a[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`, 20, functions)
   })();
 }
