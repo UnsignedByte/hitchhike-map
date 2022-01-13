@@ -16,3 +16,6 @@ setblock 973 70 2 minecraft:dark_oak_door[facing=west,half=lower,hinge=right,ope
 data merge entity @e[tag=npc-maisebovat,limit=1] {SleepingX:970,SleepingY:70,SleepingZ:4}
 
 data merge entity @e[tag=npc-barteisenhower,limit=1] {SleepingX:1049,SleepingY:65,SleepingZ:-52}
+
+
+function hitchhike:story/misc/lobby/reset

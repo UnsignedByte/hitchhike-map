@@ -32,6 +32,9 @@ forceload add -1504 -2 -1371 129
 # lobby
 forceload add -1378 -104 -1420 -196
 function generated:story/maze/loadchunks
+# credits
+forceload add -196 88 -216 3
+
 
 # Parkour
 function generated:story/parkour/loadchunks
