@@ -2482,6 +2482,27 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute if score enabled maze matches 1 unless entity @e[tag=npc-sawyer,scores={dialogue-status=5}] run playsound minecraft:entity.guardian.attack neutral @a -1400.0 16 -174.0 0.4 2`,
       `execute if score enabled maze matches 1 unless entity @e[tag=npc-sawyer,scores={dialogue-status=5}] as @a[x=-1403,y=11,z=-175,dx=5,dy=12,dz=1] run function hitchhike:story/sawyer/maze/warp`
     ], 2, functions)
+
+    genseq('sawyer/finish_maze', {
+      cmds: [
+        `function hitchhike:story/maze/disable`,
+        'tp @a 952 70 -1',
+        'spawnpoint @a 1007 59 59',
+        'time set 11500',
+        'gamerule doDaylightCycle true'
+      ],
+      next: [
+        {
+          wait: 1500,
+          seq: {
+            cmds: [
+              `gamerule doDaylightCycle false`,
+              `time set 13000`
+            ]
+          }
+        }
+      ]
+    })
   })();
 
   // Fountain
@@ -2751,12 +2772,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('lake/piranha/summon', [
-      `summon drowned 0 0 0 {Silent:1b,Invulnerable:1b,CustomNameVisible:0b,IsBaby:1b,Tags:["invisible","lake-piranha","lake-piranha-init"],CustomName:'{"text":"piranha","color":"red"}',Attributes:[{Name:generic.follow_range,Base:30},{Name:generic.movement_speed,Base:0.9},{Name:generic.attack_damage,Base:15},{Name:zombie.spawn_reinforcements,Base:0}]}`,
+      `summon drowned ~ ~ ~ {Silent:1b,Invulnerable:1b,CustomNameVisible:0b,IsBaby:1b,Tags:["invisible","lake-piranha","lake-piranha-init"],CustomName:'{"text":"piranha","color":"red"}',Attributes:[{Name:generic.follow_range,Base:30},{Name:generic.movement_speed,Base:0.9},{Name:generic.attack_damage,Base:15},{Name:zombie.spawn_reinforcements,Base:0}]}`,
       'summon tropical_fish ~ ~ ~ {Invulnerable:1b,Tags:["lake-piranha","lake-piranha-init"],Variant:118358272}',
       'scoreboard players operation @e[tag=lake-piranha-init] piranha-id = max piranha-id',
       'scoreboard players add max piranha-id 1',
       'execute unless block ~ ~ ~ water unless block ~ ~ ~ air positioned ~ ~1 ~ run function generated:story/lake/piranha/summon/findwater',
-      'tp @e[tag=lake-piranha-init,type=drowned] ~ ~ ~',
       'tag @e remove lake-piranha-init'
     ])
 
@@ -2822,6 +2842,42 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ]
       })
     ])
+
+    genseq('hurm/daytime_seq', {
+      cmds: [
+        'time set 13000',
+        'gamerule doDaylightCycle true'
+      ],
+      next: [
+        {
+          wait: 2500,
+          seq: {
+            cmds: [
+              `gamerule doDaylightCycle false`,
+              `time set 15500`
+            ]
+          }
+        }
+      ]
+    })
+
+    genseq('hurm/nighttime_seq', {
+      cmds: [
+        'time set 15500',
+        'gamerule doDaylightCycle true'
+      ],
+      next: [
+        {
+          wait: 4500,
+          seq: {
+            cmds: [
+              `gamerule doDaylightCycle false`,
+              `time set 20000`
+            ]
+          }
+        }
+      ]
+    })
 
     genseq('hurm/eat_fish', {
       cmds: [

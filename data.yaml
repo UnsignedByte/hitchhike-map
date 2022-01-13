@@ -325,18 +325,14 @@ npc:
             global: true
           - message: Welcome back to reality! I hope you enjoyed your stay.
             command:
-              - 'function hitchhike:story/maze/disable'
-              - 'tp @a 952 70 -1'
-              - 'spawnpoint @a 1007 59 59'
+              - 'function generated:story/sawyer/finish_maze'
           - message: Give me a minute and I'll get you that SD card.
             wait: 100
           - message: Alright, there you go. No need to thank me, you did most of the work, after all.
             command:
               - "give ${select.player} ${toGive(item.sdcardfixed)}"
               - "scoreboard players set -sdcard story-simon 1"
-          - message:
-            - text: Also, I had fun too...
-              italic: true
+          - message: Also, I had fun too...
           cond: 9
           end: -1
     simon:
@@ -629,7 +625,9 @@ npc:
         profession: fisherman
       dialogue:
         - messages:
-          - Hey! Who goes there?! Someone trying to break in?
+          - message: Hey! Who goes there?! Someone trying to break in?
+            command: 
+              - function generated:story/hurm/daytime_seq
           - What are you doing barging into my home?
           - message: I have a fishing rod and I'm not afraid to use it.
             wait: 120
@@ -704,6 +702,7 @@ npc:
               - team modify player collisionRule pushOtherTeams
               - team modify player friendlyFire false
               - spawnpoint @s 1077 125 353
+              - function generated:story/hurm/nighttime_seq
           cond: 3
           end: -1
     janitor:
