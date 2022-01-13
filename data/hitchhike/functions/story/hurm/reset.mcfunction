@@ -65,9 +65,9 @@ summon slime 1061 109.3 399 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceR
 summon slime 1061 109.3 403 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
 
 # Subdock 1
-summon slime 1065.5 111.34 388.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
-summon slime 1070.0 110.34 388.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
-summon slime 1075.0 110.34 388.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
+summon slime 1065.5 110.34 388.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
+summon slime 1070.0 109.34 388.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
+summon slime 1075.0 109.34 388.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
 
 # Subdock 2
 summon slime 1057.0 111.34 392.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:7,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
@@ -75,10 +75,10 @@ summon slime 1053.5 111.34 392.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,Persist
 summon slime 1050.0 111.34 392.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:7,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
 summon slime 1047.0 111.34 392.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:7,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
 # Subdock 2-1
-summon slime 1047.0 110.34 395.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
-summon slime 1047.0 110.34 398.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
+summon slime 1047.0 109.34 395.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
+summon slime 1047.0 109.34 398.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
 # Subdock 2-2
-summon slime 1050.0 110.34 389.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
-summon slime 1050.0 110.34 386.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
+summon slime 1050.0 109.34 389.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
+summon slime 1050.0 109.34 386.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,Size:9,Team:"collisionless",Tags:["fireplace-blocker","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}]}
 
 team join collisionless @e[tag=fireplace-blocker]
