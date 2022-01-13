@@ -32,6 +32,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -1000 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -1000 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -985 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -64,6 +67,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -985 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -985 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -970 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -98,6 +104,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -970 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -970 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -955 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -130,6 +139,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -955 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -955 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -940 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -164,6 +176,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -940 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -940 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -925 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -196,6 +211,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -925 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -925 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -910 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -230,6 +248,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -910 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -910 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -895 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -262,6 +283,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -895 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -895 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -880 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -296,6 +320,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -880 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -880 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -865 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -328,6 +355,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -865 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -865 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -850 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -362,6 +392,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -850 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -850 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -835 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -394,6 +427,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -835 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -835 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -820 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -428,6 +464,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -820 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -820 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -805 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -460,6 +499,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -805 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -805 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -790 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -494,6 +536,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -790 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -790 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -775 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -526,6 +571,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -775 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -775 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -760 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -560,6 +608,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -760 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -760 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -745 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -592,6 +643,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -745 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -745 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -730 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -626,6 +680,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -730 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -730 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -715 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -658,6 +715,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -715 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -715 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -700 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -692,6 +752,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -700 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -700 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -685 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -724,6 +787,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -685 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -685 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 summon marker -670 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
@@ -758,6 +824,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 summon marker -670 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
 
+summon marker -670 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
+
 summon marker -655 10 0 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
@@ -790,6 +859,9 @@ execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] 
 
 summon marker -655 10 150 {Tags:["maze-tile","maze-tile-init"]}
 execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 1
+
+summon marker -655 10 165 {Tags:["maze-tile","maze-tile-init"]}
+execute as @e[tag=maze-tile-init] unless entity @s[scores={maze-tile-type=0..}] run scoreboard players set @s maze-tile-type 0
 
 execute as @e[tag=maze-tile-init] at @s run function generated:story/maze/create/wave/rotate
 execute as @e[tag=maze-tile] at @s run function generated:story/maze/create/wave/initconnections

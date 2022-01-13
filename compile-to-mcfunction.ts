@@ -2401,7 +2401,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     // WAVE FUNCTION STUFF
 
-    const mazerows = [0, 0, 0, 0, 0, 0, 1, 2, 2, 1, 1];
+    const mazerows = [0, 0, 0, 0, 0, 0, 1, 2, 2, 1, 1, 0];
     const mazecols = 24;
     const mazeorigin = [-1000, 10, 0];
 
@@ -2818,6 +2818,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     genseq('hurm/eat_fish', {
       cmds: [
+        `tp @e[tag=npc-hurm,limit=1]1075.7 125 355.5 -90 30`,
         `tag @e[tag=npc-hurm,limit=1] add npc-unface`
       ],
       next: [
@@ -3469,7 +3470,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute at @e[tag=checkpoint-candidate,limit=1] run tp @s ~ ~${yoffset} ~`,
       'execute if entity @e[tag=checkpoint-candidate] at @s run playsound minecraft:block.respawn_anchor.deplete block @s ~ ~ ~ 0.5 2',
       'execute if entity @e[tag=checkpoint-candidate] run title @s actionbar [{"text":"Returned to checkpoint.","color":"dark_purple"}]',
-      'execute unless entity @e[tag=checkpoint-candidate] run title @s actionbar [{"text":"Reach a checkpoint to enable compass.","color":"red"}]',
+      'execute unless entity @e[tag=checkpoint-candidate] run title @s actionbar [{"text":"Reach a checkpoint to enable the compass.","color":"red"}]',
       `give @s[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`,
       'tag @e remove checkpoint-candidate',
     ])
