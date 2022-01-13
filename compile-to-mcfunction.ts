@@ -3465,7 +3465,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `execute as @a[nbt={RootVehicle:{Entity:{id:"minecraft:boat",Tags:["lake-boat"]}}}] run function hitchhike:story/lake/protectboat`,
       `scoreboard players reset @e[tag=lake-boat-protected] lake-entity-age`,
       `tag @e remove lake-boat-protected`,
-      `execute as @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..}] run data modify entity @s Motion[1] set value -0.5`,
+      `execute as @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..}] run data modify entity @s Motion[1] set value -0.3`,
       `scoreboard players set @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..}] 0`,
     ], 20, functions)
 
