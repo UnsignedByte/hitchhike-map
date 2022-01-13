@@ -2742,7 +2742,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('lake/piranha/tick', [
       'scoreboard players operation #tmp piranha-id = @s piranha-id',
-      'execute as @e[type=tropical_fish,tag=lake-piranha] if score @s piranha-id = #tmp piranha-id facing entity @p eyes run tp @s ~ ~ ~ ~ ~',
+      'execute as @e[type=tropical_fish,tag=lake-piranha] if score @s piranha-id = #tmp piranha-id facing entity @p eyes run tag @s add lake-piranha-selected',
+      'tp @e[tag=lake-piranha-selected] ~ ~ ~ ~ ~',
+      'execute unless entity @e[tag=lake-piranha-selected] as @s run function hitchhike:kill'
       // 'tp @e[tag=piranha-selected] @s',
       // 'tag @e remove piranha-selected'
     ])
