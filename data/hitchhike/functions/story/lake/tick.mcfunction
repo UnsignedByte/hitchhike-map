@@ -12,7 +12,10 @@ execute as @e[tag=lake-boat] at @s if block ~ ~ ~ bubble_column run tp @s ~ ~-0.
 execute as @e[tag=lake-boat] at @s if block ~ ~ ~ bubble_column run data merge entity @s {Motion:[0.0d,-0.3d,0.0d]}
 
 execute as @e[tag=lake-piranha,type=drowned] at @s run function generated:story/lake/piranha/tick
-execute as @e[tag=lake-piranha] at @s unless entity @p[tag=lake-player-wet,distance=..20] run function hitchhike:kill
+# execute as @e[tag=lake-piranha] at @s unless entity @p[tag=lake-player-wet,distance=..20] run function hitchhike:kill
+execute as @a[tag=lake-player-wet] at @s run tag @e[tag=lake-piranha,sort=nearest,limit=10] add lake-piranha-safe
+execute as @e[tag=lake-piranha,tag=!lake-piranha-safe] run function hitchhike:kill
+tag @e remove lake-piranha-safe
 
 tag @a remove lake-player-wet
 execute as @a[gamemode=adventure,nbt=!{RootVehicle:{Entity:{id:"minecraft:boat"}}},x=924,z=327,dx=272,dz=159,y=105,dy=8] run tag @s add lake-player-wet
