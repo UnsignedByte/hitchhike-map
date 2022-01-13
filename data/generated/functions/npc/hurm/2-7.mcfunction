@@ -6,7 +6,7 @@ execute at @e[tag=npc-hurm, limit=1] run playsound minecraft:entity.villager.amb
 scoreboard players set hurm-done vars 1
 execute as @a run function generated:story/parkour/respawn
 team modify player collisionRule pushOtherTeams
-team modify player friendlyFire false,
+team modify player friendlyFire false
 spawnpoint @s 1077 125 353
 schedule function generated:npc/hurm/2-end 210t
 tag @a remove npc-eavesdropper

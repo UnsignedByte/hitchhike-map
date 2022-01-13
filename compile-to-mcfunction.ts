@@ -2821,7 +2821,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     genseq('hurm/eat_fish', {
       cmds: [
-        `tp @e[tag=npc-hurm,limit=1]1075.7 125 355.5 -90 30`,
+        `tp @e[tag=npc-hurm,limit=1] 1075.7 125 355.5 -90 30`,
         `tag @e[tag=npc-hurm,limit=1] add npc-unface`
       ],
       next: [
@@ -3461,12 +3461,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `scoreboard players add @e[tag=lake-boat,type=boat] lake-entity-age 1`,
       `# Protect boats with riders`,
       `tag @e[tag=lake-boat,type=boat,x=1073,y=114,z=390,dx=1,dz=2] add lake-boat-protected`,
-      `tag @e[tag=lake-boat,type=boat] add match-selectable`,
+      `tag @e[tag=lake-boat,type=boat,tag=!lake-boat-protected] add match-selectable`,
       `execute as @a[nbt={RootVehicle:{Entity:{id:"minecraft:boat",Tags:["lake-boat"]}}}] run function hitchhike:story/lake/protectboat`,
       `scoreboard players reset @e[tag=lake-boat-protected] lake-entity-age`,
       `tag @e remove lake-boat-protected`,
-      `execute as @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..} run data modify entity @s Motion[1] set value -0.5`,
-      `scoreboard players set @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..} 0`,
+      `execute as @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..}] run data modify entity @s Motion[1] set value -0.5`,
+      `scoreboard players set @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..}] 0`,
     ], 20, functions)
 
     addfunc('parkour/updatespawn', [

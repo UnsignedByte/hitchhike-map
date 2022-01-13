@@ -702,7 +702,7 @@ npc:
                 value: hurm-done vars 1
               - 'execute as @a run function generated:story/parkour/respawn'
               - team modify player collisionRule pushOtherTeams
-              - team modify player friendlyFire false,
+              - team modify player friendlyFire false
               - spawnpoint @s 1077 125 353
           cond: 3
           end: -1
