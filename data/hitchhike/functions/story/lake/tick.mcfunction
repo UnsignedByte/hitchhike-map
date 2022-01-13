@@ -13,7 +13,7 @@ execute as @e[tag=lake-boat] at @s if block ~ ~ ~ bubble_column run data merge e
 
 execute as @e[tag=lake-piranha,type=drowned] at @s run function generated:story/lake/piranha/tick
 # execute as @e[tag=lake-piranha] at @s unless entity @p[tag=lake-player-wet,distance=..20] run function hitchhike:kill
-execute as @a[tag=lake-player-wet] at @s run tag @e[tag=lake-piranha,type=tropical_fish,sort=nearest,limit=10] add lake-piranha-safe
+execute as @a[tag=lake-player-wet] at @s run tag @e[tag=lake-piranha,type=tropical_fish,sort=nearest,limit=25] add lake-piranha-safe
 execute as @e[tag=lake-piranha,type=tropical_fish,tag=!lake-piranha-safe] run function hitchhike:kill
 tag @e remove lake-piranha-safe
 
