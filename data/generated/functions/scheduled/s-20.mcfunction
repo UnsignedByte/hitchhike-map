@@ -1,4 +1,13 @@
 execute if score hurm-done vars matches 1 run give @a[nbt=!{Inventory:[{tag:{compass:1b}}]}] minecraft:compass{display: {Name: '{"text":"Compass","color":"aqua"}', Lore: ['[{"text":"Points the way to your destination.","color":"dark_gray"}]', '[""]', '[{"text":"Throw it on the ground to","color":"dark_gray"}]', '[{"text":"restart from checkpoint.","color":"dark_gray"}]']}, compass: 1b, HideFlags: 127, LodestoneDimension: "minecraft:overworld", LodestoneTracked: 0b, LodestonePos: {X: 986, Y: 255, Z: 563}} 1
+scoreboard players add @e[tag=lake-boat,type=boat] lake-entity-age 1
+# Protect boats with riders
+tag @e[tag=lake-boat,type=boat,x=1073,y=114,z=390,dx=1,dz=2] add lake-boat-protected
+tag @e[tag=lake-boat,type=boat] add match-selectable
+execute as @a[nbt={RootVehicle:{Entity:{id:"minecraft:boat",Tags:["lake-boat"]}}}] run function hitchhike:story/lake/protectboat
+scoreboard players reset @e[tag=lake-boat-protected] lake-entity-age
+tag @e remove lake-boat-protected
+execute as @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..} run data modify entity @s Motion[1] set value -0.5
+scoreboard players set @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..} 0
 execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~1.475 ~ 0.09 0.05 0.09 0 1
 #> Teleport out softlocked items
 tp @e[type=item,x=891,y=64,z=-153,dx=0,dy=1,dz=0] 891 65 -154

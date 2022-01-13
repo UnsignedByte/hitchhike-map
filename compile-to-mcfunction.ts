@@ -2714,6 +2714,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [1001,105,444]
     ]
 
+    schedule(`execute if score hurm-done vars matches 1 unless entity @e[tag=lake-boat,type=boat,x=1073,y=114,z=390,dx=1,dz=2] run summon boat 1074.0 113.5 391.5 {Invulnerable:1b,Type:"spruce",Tags:["lake-boat"],Passengers:[{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["aec","lake-boat"]}]}`, 100, functions);
+
+
     // addfunc('lake/reset', [
     //   '#> Resets lake decorations (mainly lilypads)',
     //   [
@@ -3453,6 +3456,18 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     );
 
     schedule(`execute at @e[tag=checkpoint-marker] run particle minecraft:happy_villager ~ ~${0.1+yoffset} ~ 0.09 0.05 0.09 0 1`, 20, functions)
+
+    schedule([
+      `scoreboard players add @e[tag=lake-boat,type=boat] lake-entity-age 1`,
+      `# Protect boats with riders`,
+      `tag @e[tag=lake-boat,type=boat,x=1073,y=114,z=390,dx=1,dz=2] add lake-boat-protected`,
+      `tag @e[tag=lake-boat,type=boat] add match-selectable`,
+      `execute as @a[nbt={RootVehicle:{Entity:{id:"minecraft:boat",Tags:["lake-boat"]}}}] run function hitchhike:story/lake/protectboat`,
+      `scoreboard players reset @e[tag=lake-boat-protected] lake-entity-age`,
+      `tag @e remove lake-boat-protected`,
+      `execute as @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..} run data modify entity @s Motion[1] set value -0.5`,
+      `scoreboard players set @e[tag=lake-boat,type=boat,scores={lake-entity-age=5..} 0`,
+    ], 20, functions)
 
     addfunc('parkour/updatespawn', [
       `scoreboard players operation #tmp checkpoint-id = @s checkpoint-id`,

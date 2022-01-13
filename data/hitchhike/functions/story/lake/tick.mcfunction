@@ -21,3 +21,6 @@ execute as @a[tag=lake-player-wet] at @s unless block ~ ~ ~ water unless block ~
 execute as @a[tag=lake-player-wet] at @s if entity @s[y=114,dy=0] run fill ~-1 ~ ~-1 ~1 ~ ~1 bubble_column[drag=true] replace water
 
 scoreboard players set @a[tag=lake-player-wet] foodGoal 16
+
+# Kill sunken boats
+execute as @e[tag=lake-boat] at @s if entity @s[y=104,dy=1] run kill @s
