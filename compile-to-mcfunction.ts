@@ -2475,7 +2475,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('sawyer/maze/awaitpathend', [
       `scoreboard players set #tmp maze 0`,
       `execute store success score #tmp maze at @e[tag=path-goal,tag=maze-node] positioned ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} if entity @a[dx=${cellsize},dz=${cellsize},dy=${cellsize}] run function hitchhike:story/sawyer/maze/goalreached`,
-      `execute if score #tmp maze matches 0 run schedule function generated:story/sawyer/maze/awaitpathend 5t`
+      `execute if score enabled maze matches 1 if score #tmp maze matches 0 run schedule function generated:story/sawyer/maze/awaitpathend 5t`
     ])
 
     schedule([
@@ -2845,6 +2845,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     genseq('hurm/daytime_seq', {
       cmds: [
+        'schedule clear generated:story/sawyer/finish_maze-0',
         'time set 13000',
         'gamerule doDaylightCycle true'
       ],
@@ -2863,6 +2864,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     genseq('hurm/nighttime_seq', {
       cmds: [
+        'schedule clear generated:story/hurm/daytime_seq-0',
         'time set 15500',
         'gamerule doDaylightCycle true'
       ],
@@ -3560,6 +3562,25 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute as @p[tag=match-uuid-select] at @s run function generated:story/parkour/respawn',
       'kill @s'
     ])
+
+    genseq('parkour/start_seq', {
+      cmds: [
+        'schedule clear generated:story/sawyer/nighttime_seq-0',
+        'time set 20000',
+        'gamerule doDaylightCycle true'
+      ],
+      next: [
+        {
+          wait: 2000,
+          seq: {
+            cmds: [
+              `gamerule doDaylightCycle false`,
+              `time set 22000`
+            ]
+          }
+        }
+      ]
+    })
 
     schedule(`execute if score hurm-done vars matches 1 run give @a[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`, 20, functions)
   })();
