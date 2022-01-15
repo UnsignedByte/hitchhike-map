@@ -3475,6 +3475,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       // Glacier shortcut
       "884.5 144 521.5",
       "887.5 149 523.5",
+      "887.5 150.5 526.5",
       "882.5 151.5 527.5",
       "870.5 159 541.5",
       "876.5 161 533.5",

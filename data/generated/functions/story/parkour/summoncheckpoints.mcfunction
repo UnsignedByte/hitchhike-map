@@ -4,6 +4,9 @@ tag @e remove checkpoint-marker-init
 summon armor_stand 887.50000000 147.62500000 523.50000000 {Tags: ["checkpoint-marker","checkpoint-marker-init"], ArmorItems: [{},{},{},{id:"minecraft:light_weighted_pressure_plate",Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
 scoreboard players set @e[tag=checkpoint-marker-init] checkpoint-id -1999398159
 tag @e remove checkpoint-marker-init
+summon armor_stand 887.50000000 149.12500000 526.50000000 {Tags: ["checkpoint-marker","checkpoint-marker-init"], ArmorItems: [{},{},{},{id:"minecraft:light_weighted_pressure_plate",Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
+scoreboard players set @e[tag=checkpoint-marker-init] checkpoint-id -269389871
+tag @e remove checkpoint-marker-init
 summon armor_stand 882.50000000 150.12500000 527.50000000 {Tags: ["checkpoint-marker","checkpoint-marker-init"], ArmorItems: [{},{},{},{id:"minecraft:light_weighted_pressure_plate",Count:1b}], DisabledSlots: 4144959, Invulnerable: 1b, Invisible: 1b, NoGravity: 1b, Silent: 1b, Marker: 1b, Small: 0b}
 scoreboard players set @e[tag=checkpoint-marker-init] checkpoint-id -1024667826
 tag @e remove checkpoint-marker-init
