@@ -3473,6 +3473,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   (() => {
     const checkpoints = [
       // Glacier shortcut
+      "935.5 145.5 498.5",
+      "939.5 145.5 495.5",
+      "942.5 150.5 498.5",
       "884.5 144 521.5",
       "887.5 149 523.5",
       "887.5 150.5 526.5",
