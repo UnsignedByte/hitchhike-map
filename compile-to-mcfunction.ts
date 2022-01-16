@@ -2475,13 +2475,34 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('sawyer/maze/awaitpathend', [
       `scoreboard players set #tmp maze 0`,
       `execute store success score #tmp maze at @e[tag=path-goal,tag=maze-node] positioned ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} if entity @a[dx=${cellsize},dz=${cellsize},dy=${cellsize}] run function hitchhike:story/sawyer/maze/goalreached`,
-      `execute if score #tmp maze matches 0 run schedule function generated:story/sawyer/maze/awaitpathend 5t`
+      `execute if score enabled maze matches 1 if score #tmp maze matches 0 run schedule function generated:story/sawyer/maze/awaitpathend 5t`
     ])
 
     schedule([
       `execute if score enabled maze matches 1 unless entity @e[tag=npc-sawyer,scores={dialogue-status=5}] run playsound minecraft:entity.guardian.attack neutral @a -1400.0 16 -174.0 0.4 2`,
       `execute if score enabled maze matches 1 unless entity @e[tag=npc-sawyer,scores={dialogue-status=5}] as @a[x=-1403,y=11,z=-175,dx=5,dy=12,dz=1] run function hitchhike:story/sawyer/maze/warp`
     ], 2, functions)
+
+    genseq('sawyer/finish_maze', {
+      cmds: [
+        `function hitchhike:story/maze/disable`,
+        'tp @a 952 70 -1',
+        'spawnpoint @a 1007 59 59',
+        'time set 11500',
+        'gamerule doDaylightCycle true'
+      ],
+      next: [
+        {
+          wait: 1500,
+          seq: {
+            cmds: [
+              `gamerule doDaylightCycle false`,
+              `time set 13000`
+            ]
+          }
+        }
+      ]
+    })
   })();
 
   // Fountain
@@ -2742,7 +2763,10 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('lake/piranha/tick', [
       'scoreboard players operation #tmp piranha-id = @s piranha-id',
-      'execute as @e[type=tropical_fish,tag=lake-piranha] if score @s piranha-id = #tmp piranha-id facing entity @p eyes run tp @s ~ ~ ~ ~ ~',
+      'execute as @e[type=tropical_fish,tag=lake-piranha] if score @s piranha-id = #tmp piranha-id facing entity @p eyes run tag @s add lake-piranha-selected',
+      'tp @e[tag=lake-piranha-selected] ~ ~ ~ ~ ~',
+      'execute unless entity @e[tag=lake-piranha-selected] as @s run function hitchhike:kill',
+      'tag @e remove lake-piranha-selected'
       // 'tp @e[tag=piranha-selected] @s',
       // 'tag @e remove piranha-selected'
     ])
@@ -2818,6 +2842,44 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ]
       })
     ])
+
+    genseq('hurm/daytime_seq', {
+      cmds: [
+        'schedule clear generated:story/sawyer/finish_maze-0',
+        'time set 13000',
+        'gamerule doDaylightCycle true'
+      ],
+      next: [
+        {
+          wait: 2500,
+          seq: {
+            cmds: [
+              `gamerule doDaylightCycle false`,
+              `time set 15500`
+            ]
+          }
+        }
+      ]
+    })
+
+    genseq('hurm/nighttime_seq', {
+      cmds: [
+        'schedule clear generated:story/hurm/daytime_seq-0',
+        'time set 15500',
+        'gamerule doDaylightCycle true'
+      ],
+      next: [
+        {
+          wait: 4500,
+          seq: {
+            cmds: [
+              `gamerule doDaylightCycle false`,
+              `time set 20000`
+            ]
+          }
+        }
+      ]
+    })
 
     genseq('hurm/eat_fish', {
       cmds: [
@@ -3410,6 +3472,20 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
   (() => {
     const checkpoints = [
+      // Glacier shortcut
+      "935.5 145.5 498.5",
+      "939.5 145.5 495.5",
+      "942.5 150.5 498.5",
+      "884.5 144 521.5",
+      "887.5 149 523.5",
+      "887.5 150.5 526.5",
+      "882.5 151.5 527.5",
+      "870.5 159 541.5",
+      "876.5 161 533.5",
+      "878.5 164 528.5",
+      "880.5 167 533.5",
+      "873.5 167 534.5",
+      "868.5 165 542.5",
       // Mine section
       "948.5 153.5 504.5",
       "955.5 155.5 504.5",
@@ -3500,6 +3576,25 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'execute as @p[tag=match-uuid-select] at @s run function generated:story/parkour/respawn',
       'kill @s'
     ])
+
+    genseq('parkour/start_seq', {
+      cmds: [
+        'schedule clear generated:story/sawyer/nighttime_seq-0',
+        'time set 20000',
+        'gamerule doDaylightCycle true'
+      ],
+      next: [
+        {
+          wait: 2000,
+          seq: {
+            cmds: [
+              `gamerule doDaylightCycle false`,
+              `time set 22000`
+            ]
+          }
+        }
+      ]
+    })
 
     schedule(`execute if score hurm-done vars matches 1 run give @a[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`, 20, functions)
   })();
