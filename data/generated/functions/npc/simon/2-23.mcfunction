@@ -1,7 +1,7 @@
 tag @a[tag=victim-of-dialogue-by-simon, limit=1] add npc-eavesdropper
 execute at @e[tag=npc-simon, limit=1] run tag @a[distance=..25] add npc-eavesdropper
 # Dialogue line #2-24: speak and make noise.
-execute at @e[tag=npc-simon, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Simon Ursus Stephens","color":"#85deb1","bold":true},"> ",{"text":"What are you loitering around for? Get on it!"}]
+execute at @e[tag=npc-simon, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Simon Ursus Stephens","color":"#85deb1","bold":true},"> ",{"text":"What are you loitering around for, plebeian? Get on it!"}]
 execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 setblock 956 44 204 minecraft:redstone_block
 setblock 956 44 203 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]
@@ -15,5 +15,5 @@ summon minecart 956.5 44 203.5 {Silent:1,Tags:["simon-holder"]}
 tag @e[tag=npc-simon, limit=1] add npc-unface
 scoreboard players set -held story-simon -1
 # set up position for later: tp @e[tag=npc-simon, limit=1] 942.50 69 183.50 135 -10
-schedule function generated:npc/simon/2-end 96t
+schedule function generated:npc/simon/2-end 120t
 tag @a remove npc-eavesdropper
