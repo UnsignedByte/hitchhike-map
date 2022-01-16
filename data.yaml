@@ -107,9 +107,9 @@ npc:
         - messages:
           - You really just broke right in, didn't you?
           - No decency huh... what if I was unpresentable?
-          - message: ...Anyways, what's up?
+          - message: ... Anyways, what's up?
             wait: 60
-          - Hmm, your internet is down... so you're here for my help again, huh.
+          - Storm killed your internet? So you're here for my help again, huh.
           - Not that I expected anything else from you anyways...
           - Well, I have no idea. Maybe turn it off or on again, or something like that.
           cond: 10
@@ -119,9 +119,9 @@ npc:
           - Why are you so desperate for internet? Do you have to talk to someone or something?
           - message: 
             - text: "Oh. I was actually right. "
-            - text: "Well..."
+            - text: "Well"
               italic: true
-            - text: " If you "
+            - text: "... If you "
             - text: really
               italic: true
             - text: " need internet that much, maybe you could find somewhere with power."
@@ -148,7 +148,7 @@ npc:
           end: -1
         - messages:
           - Oh, hi again... Did you contact her?
-          - How'd I know it was a her? ...Just my luck, I guess?
+          - How'd I know it was a her? ... Just my luck, I guess?
           - Anyways, you have something for me to look at?
           - Hmm, A corrupted SD card...
           - Figures. You're only ever here for my help.
@@ -184,7 +184,7 @@ npc:
             command:
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 275'
               - 'data modify entity ${select.self} HandItems[0] set value {}'
-          - See you (hopefully soon)!
+          - See you! Hopefully soon.
           cond: 4
           end: 11
         - messages:
@@ -215,7 +215,7 @@ npc:
             - text: "Welcome to the "
             - text: waiting room
               italic: true
-            - text: ". Please be patient while I load the SD card data into memory... My computer is slow so watch out for lag (sorry)."
+            - text: ". Please be patient while I load the SD card data into memory... My computer is slow so watch out for lag. Sorry."
             global: true
             command:
               - 'tp @a -1400.0 11 -150.0'
@@ -283,10 +283,10 @@ npc:
               - 'scoreboard players set maze-started story-sawyer 1'
           - message: Corrupted areas can be a little dangerous, so be careful, I guess. I'm sure you'll be okay, though.
             global: true
-          - message: Try throwing them out with "Q"... throwing things at enemies often works, after all.
+          - message: Try dropping your tools... Throwing things at enemies often works, after all.
             global: true
           - message:
-              - text: "Of course, you could also just go at your enemies (and friends) like a bonobo, that's always an option, both here "
+              - text: "Of course, you could also just go at your enemies (and friends, if that's you) like a bonobo. That's always an option, both here "
               - text: and
                 italic: true
               - text: " in real life."
@@ -359,22 +359,22 @@ npc:
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon 1'
             - message:
-              - text: "There is no way "
-              - text: you people
+              - text: "I'll have you know that you... "
+              - text: People
                 italic: true
-              - text: " are welcome up here. This is private property, and trespassing is "
+              - text: " are NOT welcome up here. This is private property, and trespassing is "
               - text: ILLEGAL
                 bold: true
               - text: "."
               command:
                 - "tag ${select.self} remove npc-unface"
-            - message: "Get off my land! I'll call the police on you, I WILL."
+            - message: "Get off my land, plebeian! I'll call the police on you if I have to."
               command:
                 - "scoreboard players set -held story-simon 0"
                 - "kill @e[tag=simon-holder]"
                 - "${tp(912.0, 64, 193.5, 43, 4)}"
-            - "What, you want to go up the mountain? You must think that's really easy, huh."
-            - message: "You don't look at all prepared to go up that mountain, and you can bet I won't be letting you through MY property until you are."
+            - "What, you want to go up the mountain? In those cheap, shoddy clothes? Give me a break."
+            - message: "You don't look at all prepared for the elements, and I don't need more of your type showing up when you end up needing help on the mountain."
               global: true
               command:
                 - 'scoreboard players set @a foodGoal 12'
@@ -386,31 +386,29 @@ npc:
                   value: diet
                 - type: quest
                   value: preparedness
+            - "Trust me, I've seen what's up there many times on my... Errands. And it's not pretty."
             - message:
-              - text: "What, you don't have money to buy clothes? Just go scrounging for coins at the fountain or "
-              - text: whatever
+              - text: "What, you don't have money to buy clothes? Just go"
+              - text: scrounging for coins at the fountain
                 italic: true
-              - text: " you people do."
-            - message: "Remember, you better not come back until you're actually ready to go up."
+              - text: " or whatever it is you people do."
+            - message: "Remember, you better not come back until you're actually ready for the hike."
           cond: 1
           end: 2
         - messages:
             - What did I tell you? Don't come back until you're done preparing.
-            - How many times should I say it to get it through your thick skull?
+            - How many times do I need to say it before it gets through your thick skull?
             - Ugh, whatever. I have nothing more to say to you.
           cond: 2
           end: -1
         - messages:
+            - "Oh, it's you, the plebeian. I didn't see you there."
             - message:
-              - text: "Oh hey again, I didn't see you there. "
-              - text: Sorry.
-                italic: true
-            - message:
-              - text: "I was busy admiring my "
+              - text: "I was too busy admiring my "
               - text: "1997 Limited Edition Honda Civic"
                 color: dark_red
                 bold: true
-              - text: ". 17 million Bov by the way. I know, you must be wishing you had a car this nice."
+              - text: ". 17 million Bov by the way, not that you would understand wealth of that size."
             - Don't worry, if you work as hard as I do, one day you might be almost as successful too.
             - message: Anyways, I see you're pretty determined to get up this mountain, huh.
               command:
@@ -424,9 +422,9 @@ npc:
                 - 'summon minecart 950 40 -1 {Silent:1,Tags:["sawyer-holder"]}'
                 - 'scoreboard players set @e[tag=npc-sawyer] dialogue-status -1'
                 - 'scoreboard players set -held story-sawyer -1'
-            - At least I can respect that. Determination (of which I have a lot) is very important if you want to be as successful as I.
-            - It seems you did listen and diligently prepared as I had requested.
-            - Not bad! At least you can listen to directions. Most people don't do that very well.
+            - At least I can respect that. Maybe you might be successful like me if you keep that up.
+            - And it seems like you did listen to my directions and diligently prepared as I had requested.
+            - You've honestly surpassed my expectations. Most people I meet are not as attentive.
             - Before you get on your journey, I'll have you do a couple more things to prepare though.
             - message: Come on in, I have some things to give you.
               command:
@@ -442,23 +440,23 @@ npc:
                 - 'summon minecart 912 34 193 {Silent:1,Tags:["simon-holder"]}'
                 - "tag ${select.self} add npc-unface"
                 - 'scoreboard players set -held story-simon -1'
-            - I have an old SD card from a while ago that contains a nice map of the hiking trail up the mountain.
+            - This is an old SD card that contains a map of the hiking trail up the mountain back from when I first started my errands.
             - message:
-              - text: "Unfortunately, it corrupted when windows formatted it without even asking me!"
+              - text: "Unfortunately, it corrupted when Windows formatted it without even asking me!"
               command:
                 - "scoreboard players set -held story-simon 0"
                 - "kill @e[tag=simon-holder]"
                 - "${tp(956.5, 74, 203.5, 90, 55)}"
             - message: 
-              - text: "Okay, it did ask me "
+              - text: "... Okay, it did ask me "
               - text: once
                 italic: true
-              - text: " but didn't even ask to confirm after I accidentally clicked OK. Who does that?"
-            - message: "... found it."
+              - text: " but it didn't even ask me to confirm after I accidentally clicked OK. Who does that?"
+            - message: "... Found it!"
               command:
                 - "tag ${select.self} remove npc-unface"
-            - message: Anyways, it was right here in this drawer.
-            - message: Take that card and get it fixed up, and once you get the map in your hands you can go right on up the mountain.
+            - message: It was right here in this drawer.
+            - message: Take that card and get it fixed. Once you get the map in your hands you can go right on up the mountain.
               command:
                 - "scoreboard players set -sdcard story-simon 0"
                 - type: quest
@@ -466,7 +464,7 @@ npc:
                 - "give ${select.player} ${toGive(item.sdcardcorrupted)}"
               global: true
             - message:
-              - text: "... And while you're at it, get me some water. Not just any water: I want "
+              - text: "... And while you're at it, could you get me some water? Not just any water: I require "
               - text: La Croix Sparkling Water
                 bold: true
                 italic: true
@@ -483,19 +481,19 @@ npc:
                 italic: true
               - text: " people drink."
             - What, you don't want to?
-            - You think you can just walk through MY property, dirty MY driveway, waste MY time, and give NOTHING in return?
+            - You think you can just walk through MY property, dirty MY driveway, waste MY time, and give me NOTHING in return?
             - Freeloaders, I say, FREELOADERS. That's what you are. I won't stand for it.
             - message:
               - text: "I just want a drink! It's the "
               - text: least
                 bold: true
               - text: " you could do."
-            - message: Here, I'll even give you some money to buy it with. This is probably more than enough.
+            - message: Here, I'll even give you some of my own money to buy it with. This is probably more than enough.
               command:
                 - "give ${select.player} ${toGive(item.money[500], 1)}"
                 - "give ${select.player} ${toGive(item.money[100], 2)}"
             - I better not see you back here without it.
-            - message: What are you loitering around for? Get on it!
+            - message: What are you loitering around for, plebeian? Get on it!
               command:
                 - 'setblock 956 44 204 minecraft:redstone_block'
                 - 'setblock 956 44 203 minecraft:powered_rail[powered=true,shape=ascending_west,waterlogged=false]'
@@ -514,7 +512,7 @@ npc:
         - messages:
             - What are you doing back here? I told you I don't let freeloaders on my land.
             - Don't come back until you have exactly what I want.
-            - Good-Bye.
+            - Good-bye.
           cond: 4
           end: -1
         - messages:
@@ -538,15 +536,15 @@ npc:
             - message:
               - text: Ahh
                 italic: true
-              - text: ", That was pretty good. You can keep the change, don't worry."
-            - Consider it a gift; I'm just generous like that.
+              - text: ", that was pretty good. I really do appreciate it. You can keep the change, don't worry."
+            - Consider it a gift; I'm generous like that.
             - Anyways, see you later!
           cond: 5
           end:
             - execute unless score sdcard quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 6
             - execute if score sdcard quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 8
         - messages:
-            - Hi again! I see you're as interested in Morton as I am!
+            - Hello again, my friend! I see you're as interested in Morton as I am!
             - Oh, Morton is the name of the rock, in case you couldn't tell.
             - Anyways, glad to see another connoisseur of mineral collection; it's hard to find people interested in such a high-class hobby nowadays.
             - Feel free to observe as long as you want.
@@ -590,7 +588,7 @@ npc:
                 - 'summon glow_item_frame 963 74 201 {Silent:1b,Facing:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["inserted_sdcard"],Item:{id:"minecraft:daylight_detector",Count:1b,tag:{Enchantments:[{}]}}}'
                 - 'data modify entity ${select.self} HandItems[0] set value {}'
               wait: 40
-            - Oh wow, it actually works! What a surprise.
+            - Oh wow, it actually works! I never thought I'd get this back.
             - Let me look at the files and get you that map.
             - Feel free to relax, but don't touch anything, please. I don't want your grubby hands on my expensive furniture.
             - message: Here you go, I've even printed out the map for you. Pick it up on the left and make sure you take a good look at it before you go up.
@@ -599,7 +597,7 @@ npc:
                 - 'playsound minecraft:block.piston.contract neutral @a 964.5 75.5 197.5'
                 - "tag ${select.self} remove npc-unface"
             - You're welcome, by the way.
-            - Anyways, I don't want you staying around any longer than necessary.
+            - Anyways, I suppose you'll want to be going now.
             - message: Follow me and I'll get you on your way up that mountain.
               command:
                 - 'setblock 929 34 193 minecraft:rail[shape=south_east,waterlogged=false]'
@@ -612,11 +610,12 @@ npc:
                 - 'scoreboard players set -held story-simon 1'
                 - '# ${tp(929.5, 64, 197.5, 135, 0)}'
               wait: 300
-            - Alright, the trail starts right through this gate. Good luck!
+            - Alright, the trail starts right through this gate.
+            - Last thing... If you come across anyone on the way, try not to bother them, for both of your sakes. Good luck, my friend!
           cond: 8
           end: -1
     hurm:
-      name: Hurm Etkcraub
+      name: Herb Schmitt
       position: 1075.7 125 355.5
       rotation: -90 30
       colour: 0x183aab
@@ -625,27 +624,27 @@ npc:
         profession: fisherman
       dialogue:
         - messages:
-          - message: Hey! Who goes there?! Someone trying to break in?
+          - message: ... Eh? Who goes there?! Solomon, is that you?
             command: 
               - function generated:story/hurm/daytime_seq
-          - What are you doing barging into my home?
+          - Whaddya doing barging into my home?
           - message: I have a fishing rod and I'm not afraid to use it.
             wait: 120
-          - You're telling me you want to get up the mountain?
+          - Yer telling me you want to get up the mountain?
           - message:
             - text: "At "
             - text: "this"
               italic: true
             - text: " ungodly hour?"
-          - ...Nevermind, I won't ask.
+          - ... Young people these days.
           - message:
-            - text: "Unfortunately, the only way to the trails is through the huge lake right here, and the only way through the lake is on "
+            - text: "Well, sport, the only way to the trails is through the huge lake right here, and the only way through the lake is on "
             - text: my
               italic: true
             - text: " precious boat."
-          - And I can't exactly go letting random people who have no idea what they're doing through my prized fishing ground.
-          - These waters are dangerous; fall out of your boat and those piranhas will make quick work of you.
-          - message: "How about this: To prove you're not all talk, why don't you catch and cook me some fish to eat?"
+          - And I won't let random kids who have no idea what they're doing through my fishing ground.
+          - These waters are dangerous, I tell ya! Fall out of yer boat and those piranhas will make quick work of you.
+          - message: "How about this: to prove yer up to snuff, why don't ya catch and cook me some good ol' fish to eat?"
             command:
               - scoreboard players set -caught hurm-fish-caught 0
               - type: quest
@@ -655,25 +654,25 @@ npc:
           - message: 
             - text: I was in the mood for a late-night snack anyways.
               italic: true
-          - That seems like a pretty fair ask given all that I'm helping you with.
+          - That seems like a fair trade given all that yer asking me to help ya with.
           - You can find an old firepit I've used just outside to the east.
-          - I'll even let you use my fishing rods; they're in the garage.
+          - I'll even let you use my fishing rods. They're in the garage, if remember correctly.
           - If you need wood there's a grove I use for firewood back northeast.
-          - I'm sure you can at least start a fire and grill some food if you're set on climbing an entire mountain.
-          - I'll be expecting you back soon, good luck.
+          - I'm sure you can at least start a fire and grill some food if you're set on climbing an entire mountain, heh.
+          - I'll be expecting you back soon, sport.
           cond: 1
           end:
             - execute unless score grillfish quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 2
             - execute if score grillfish quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 3
         - messages:
-          - Shush! I'm considering crustaceans.
+          - Shush! It's my daily thinking time.
           - Don't bother me until you have my fish.
           cond: 2
           end:
             - execute unless score grillfish quest-status matches -1 run scoreboard players set ${select.self} dialogue-status -1
             - execute if score grillfish quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 3
         - messages:
-          - message: Nice, you're back! Thanks for the fish!
+          - message: Yer back, sport! With the fish!
             command:
               - execute at ${select.self} run function hitchhike:story/hurm/clear_one_fish
               - execute at ${select.self} run function hitchhike:story/hurm/clear_one_fish
@@ -682,19 +681,21 @@ npc:
               - execute if score -cleared hurm-fish matches 1 run data modify entity ${select.self} HandItems[0] set value {id:"minecraft:cooked_salmon",Count:1b}
               - execute if score -cleared hurm-fish matches 0 run data modify entity ${select.self} HandItems[0] set value {id:"minecraft:cooked_cod",Count:1b}
               - 'execute at ${select.self} run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1'
-          - So, anyways, I've been thinking a lot about crustaceans recently, specifically crabs.
+          - You know, that other fellow, Solomon, he recently introduced me to the interweb. And it's amazing!
+          - I've been reading a lot about crustaceans recently.
           - message: Did you know that crustaceans (Crustacea /krʌˈsteɪʃə/) form a large, diverse arthropod taxon which includes such animals as crabs, lobsters, crayfish, shrimp, krill, prawns, woodlice, barnacles, copepods, amphipods and mantis shrimp? The crustacean group can be treated as a subphylum under the clade Mandibulata; because of recent molecular studies it is now well accepted that the crustacean group is paraphyletic, and comprises all animals in the clade Pancrustacea other than hexapods. Some crustaceans (Remipedia, Cephalocarida, Malacostraca) are more closely related to insects and the other hexapods than they are to certain other crustaceans. The 67,000 described species range in size from Stygotantulus stocki at 0.1 mm (0.004 in), to the Japanese spider crab with a leg span of up to 3.8 m (12.5 ft) and a mass of 20 kg (44 lb). Like other arthropods, crustaceans have an exoskeleton, which they moult to grow. They are distinguished from other groups of arthropods, such as insects, myriapods and chelicerates, by the possession of biramous (two-parted) limbs, and by their larval forms, such as the nauplius stage of branchiopods and copepods. Most crustaceans are free-living aquatic animals, but some are terrestrial (e.g. woodlice), some are parasitic (e.g. Rhizocephala, fish lice, tongue worms) and some are sessile (e.g. barnacles). The group has an extensive fossil record, reaching back to the Cambrian. More than 7.9 million tons of crustaceans per year are produced by fishery or farming for human consumption, most of it being shrimp and prawns. Krill and copepods are not as widely fished, but may be the animals with the greatest biomass on the planet, and form a vital part of the food chain. The scientific study of crustaceans is known as carcinology (alternatively, malacostracology, crustaceology or crustalogy), and a scientist who works in carcinology is a carcinologist...
             wait: 100
             command:
               - 'schedule function generated:story/hurm/eat_fish 20t'
-          - ...Sorry for talking while eating, I'm not used to having company.
+          - ... Sorry for talking while eating, I don't usually see anyone other than that other youngster, Solomon.
+          - Or was it Sullivan? Salmon? Salmon. That must be it. Speaking of which, this fish is incredible!
           - message:
             - nbt: fish_message
               storage: hitchhike:story/hurm
             wait: 80
-          - Well done..? Feel free to take the boat out on the dock for a spin, but please try not to sink it.
-          - (Also please bring it back afterwards, that would be great.)
-          - message: Here, these compasses will point you towards the mountaintop. Good luck with that hike, I've heard its difficult.
+          - Feel free to take the boat out on the dock for a spin, you've earned it! But please try not to sink it.
+          - Also, please bring it back afterwards.
+          - message: Here, these compasses will point you towards the mountaintop. Good luck with that hike, sport, I've heard it's difficult.
             command:
               - type: score
                 value: hurm-done vars 1
@@ -706,7 +707,7 @@ npc:
           cond: 3
           end: -1
     janitor:
-      name: Ivon Cummings
+      name: Ivan Cummings
       position: 887.5 70 11.5
       rotation: -35 20
       colour: 0xf2d811
@@ -716,15 +717,15 @@ npc:
         profession: toolsmith
       dialogue:
         - messages:
-          - Hey, isn't school out? What are you doing back here?
-          - I'm trying to do my job here, please stop bothering me.
-          - What am I doing? You brats made a huge mess all over the bio lab, and I'm the one who has to waste my time cleaning it up, that's what.
+          - School's out, kid. What are you doing back here?
+          - I'm just trying to do my job. Stop bothering me.
+          - What am I doing? You brats made a huge mess all over the bio lab, and now I have to waste my time cleaning it up.
           end:
             - scoreboard players set ${select.self} dialogue-status 1
             - execute if score mouse quest-status matches -1.. run scoreboard players set ${select.self} dialogue-status 2
         - messages:
-          - Why do you keep bothering me? The bio lab is currently off limits, can't you read?
-          - Let me do my job (or at least sulk about it) alone, please!
+          - What do you want, my lunch money? The bio lab is currently off limits, can't you read?
+          - Let me do my job alone, please!
           cond: 1
           end:
             - scoreboard players set ${select.self} dialogue-status 1
@@ -733,17 +734,17 @@ npc:
           - message: What do you want now...
             wait: 100
           - So, your friend's backpack was left in there, huh.
-          - Well then, that sure sounds unfortunate.
-          - Luckily, however, I think we can come to an agreement.
+          - Tough.
+          - Actually, I think we can come to an agreement.
           - message:
             - text: "A "
             - text: "win-win"
               italic: true
             - text: " situation, it might be called."
-          - You see, you have a need to get into this room and get your friend's things.
+          - You see, you need to get into this room and get your buddy's things.
           - Which requires this room to be cleaned.
-          - I, on the other hand, need this room cleaned, but do not want to clean it.
-          - So, why don't I just give you my tools, and you can clean this room yourself to look for that backpack!
+          - I, on the other hand, need this room cleaned, but frankly, I'm not paid enough for this.
+          - So, why don't I just give you my tools, and you can clean this room yourself to look for that backpack.
           - message:
             - text: "It'll take care of some of my work, and you also get my "
             - text: professional
@@ -754,10 +755,10 @@ npc:
             command:
               - summon item 898.7 70 21.4 {Tags:["biolab-backpack"],Age:-32768,Item:{id:"minecraft:bundle",Count:1b,tag:{display:{Name:'{"text":"Chris\\'s Backpack","color":"aqua"}'},Items:[${toSnbt(Object.assign({Count:'1b'},item.mouse))}]}}}
               - "give ${select.player} ${toGive(item.snowshovel, 1)}"
-          - Don't worry, I'll continue standing right outside to make sure any passersby think I'm still working hard.
+          - Don't worry, I'll continue standing right outside to make sure any passersby will think I'm still working hard.
           cond: 2
     safeway:
-      name: Paule Enrique
+      name: Harold Pell
       position: 891.5 64 -152.5
       rotation: 180 0
       colour: 0xeb7060
@@ -767,8 +768,9 @@ npc:
         profession: librarian
       dialogue:
         - messages:
-          - "Hi, welcome to Safeway!"
+          - "Good morning! I'm Harry from Safeway, welcome!"
           - "If you want to buy anything, just drop it off here on the conveyor."
+          - "Have a great day."
         - messages:
           - message:
             - nbt: welcome.safeway
@@ -783,7 +785,7 @@ npc:
               interpret: true
           cond: 5
     clothes:
-      name: Jean Skinne
+      name: Jean Slimm
       position: 984.5 64 -168.5
       rotation: 0 0
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk2YWE3MjIyOGZhOGNkNjMyMjk2ZTg1MjU0N2EwMmIzYjI1MWRiYTk1ZDJlOWZjZDA4OTg0NzNmOTg4MzYifX19
@@ -793,7 +795,7 @@ npc:
         profession: librarian
       dialogue:
         - messages:
-          - Welcome to Suburban Outfitters! Looking for fashionable outfits?
+          - Welcome to Suburban Outfitters! Looking for the newest, trendy, and fashionable outfits?
           - Feel free to try on clothes in the changing rooms to your right!
         - messages:
           - message:
@@ -809,7 +811,7 @@ npc:
               interpret: true
           cond: 5
     subway:
-      name: Sili Connesse
+      name: Silas Connelly
       position: 951.5 64 -145.5
       rotation: 45 0
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNTM1MjU3YWQ1ZjdhNTEzNjhiMTQ1ZGZmNDFjN2U2Y2I0OWRiZTY4ZDEzNWI0MTg1YTVmMmFmNmUzNTEifX19
@@ -819,7 +821,7 @@ npc:
         villager: none
       dialogue:
         - messages:
-          - Hi, welcome to Subway, how can I help you?
+          - Hey, welcome to Subway. How can I help you?
         - messages:
           - message:
             - nbt: welcome.subway
@@ -834,7 +836,7 @@ npc:
               interpret: true
           cond: 5
     boba:
-      name: Blets Chun
+      name: Brett Chen
       position: 997.5 64 -166.5
       rotation: 90 0
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzdhMTg5NDFkZGMzZDg2YTM5YTMzODcyMDI0MmE3OWQ3YTg0ZmYxZGQxZTQ4ZTY3MjRhZDkxNjNlNTZjIn19fQ==
@@ -859,7 +861,7 @@ npc:
               interpret: true
           cond: 5
     ramen:
-      name: Otori
+      name: Otori Okawa
       position: 1040.5 64 -151.5
       rotation: 90 0
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODA2Nzc3MTNkNTgzYTJhMjk3ODc4ZTg4YzIxODQ4YWI2YTJkNWQxNjFkZjQ1NDRlYWQ4OTkwY2RjOTQ0MSJ9fX0=
@@ -915,7 +917,7 @@ npc:
               interpret: true
           cond: 5
     icecream:
-      name: Laak Towse
+      name: Luke Toser
       position: 966.5 64 -150.5
       rotation: 0 0
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI5OWEyNThmZDMxNzA5MzUwM2FhYzY0ZTJhMGRiMjM3ZWJhYzM3ZDEzYjFmNzQ4NGFkNjUyNmNiY2IzYmVlNSJ9fX0=
@@ -926,11 +928,11 @@ npc:
       dialogue:
         - messages:
           - Welcome to the Cream Bucket!
-          - Unfortunately, we are all out of milk today...
+          - Unfortunately, we just ran out of milk today...
           - We hope to see you another day!
           end: -1
     cameron:
-      name: Cameron "Cam" Au-Flauge
+      name: Cameron Au-Flauge
       position: 944.3 96.8 17.3
       rotation: 140 35
       colour: 0x197037
@@ -941,7 +943,7 @@ npc:
       dialogue:
         - messages:
           - Whoa! How'd you find me here?
-          - Did Katherine tell you? Darn, I thought I had the perfect hiding spot...
+          - Did Katy tell you? Darn, I thought I had the perfect hiding spot...
           - I guess I've lost then. I can't believe I didn't see you coming up here.
           - Wait, are you not part of the game?
           - Sweet! Can you keep quiet about finding me here? I'm sure nobody else will be able to.
@@ -950,7 +952,7 @@ npc:
             - text: Here, take my spyglass.
             command:
               - "give ${select.player} ${toGive(item.spyglass)}"
-          - If you were able to sneak up on me while I was using it, it clearly isnt helping much, anyways.
+          - If you were able to sneak up on me while I was using it, it clearly wasn't helping much, anyways.
           - I wonder if you'll accidentally stumble across anyone else.
           - Remember, there was nobody here.
           end: -1
@@ -958,20 +960,21 @@ npc:
       name: Katherine Au-Flauge
       position: 975.5 66 34.5
       rotation: 0 10
+      colour: 0x3a453a
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjMxZWI4ODNmYzZhNWRmNmM1NGIzNDQzNTVkMDU2NzU1MjdlOTdjYjYxNjE3ODkzZGM5NGI1NjliYTdlMTM5OCJ9fX0=
       villager:
         type: swamp
         profession: cleric
       dialogue:
         - messages:
-          - Hey there, are you looking for Cam? That brat ran off to who knows where again.
+          - Hey there, are you looking for Cam? He ran off to who knows where again.
           - If you find him, could you tell him to get back here and feed the cats?
-          - Those darn things just wont stop meowing.
+          - Those darn things just won't stop meowing.
           - Where's Cam? Probably climbing the neighbor's tree or whatever crazy things he gets up to outside.
           - I've heard he joined that "Hide and Seek" thing going on, so maybe he's hiding?
           end: -1
     muller:
-      name: Egress Muller
+      name: Elbert Muller
       position: 895.5 77 -156.7
       rotation: 180 20
       colour: 0x608082
@@ -982,18 +985,18 @@ npc:
       dialogue:
         - messages:
           - Woah, hey there. What're you doing all the way up here? You don't look like a security guard.
-          - Regardless, I'm part of the big game of hide and seek I'm sure you know is going on.
+          - Haven't you heard? I'm part of the big game of hide and seek going on.
           - Please don't let anyone know I'm here.
-          - Do try to leave this area soon before someone takes notice, though. Have a nice one!
+          - Try to leave this area soon before someone takes notice. Have a nice one!
           end: 2
         - messages:
           - message:
-            - text: Shh! Stop bothering me before I get caught!
+            - text: Shh! Stop talking to me before I get caught!
               italic: true
           cond: 2
           end: -1
     fishjar:
-      name: Cullus Major
+      name: Jared Majors
       position: 915.5 55 -78.5
       rotation: 90 0
       colour: 0xbdaa77
@@ -1005,16 +1008,13 @@ npc:
         - messages:
           - message:
             - text: "Hey there, welcome to "
-            - text: Jar
-              bold: true
+            - text: Jarring Estimations
               italic: true
-            - text: ring Estimations
-              italic: true
-            - text: ", your very own coin-counting game show!"
+            - text: ", your very own coin-counting game show where you win, win, win!"
           - To get tokens, simply place your cash in the chest right here!
           - Only 10b (0.10 Bov) a token!
           - Use your tokens to guess the amount of money in the jar; 1 BovToken coin (BTC) represents 1 Bov.
-          - If you are within 2.50 Bov of the real total, you get everything in the jar!
+          - If you are within 2.50 Bov of the real total, you get everything in the jar! That's right, all of it!
           - When you're ready to play, come talk to me and I'll fill that jar up for you.
           end: 2
         - messages:
@@ -1058,20 +1058,20 @@ npc:
         - messages:
           - message: Why hello there...
             wait: 100
-          - message: Feeling short on... money?
+          - message: Feeling short on... Money?
             wait: 100
-          - message: Want a little extra... cash?
+          - message: Want a little extra... Cash?
             wait: 100
           - message:
-            - text: "Fret not, for "
+            - text: "Don't worry, for "
             - text: I've
               italic: true
             - text: " got the perfect opportunity for you."
           - See any of those coins kids have been throwing into the fountain for years, representing all their hopes and dreams?
           - message:
-            - text: "No?"
+            - text: "No"
               italic: true
-            - text: " Well that's exactly it, isn't it? Where have they been going?"
+            - text: "? Well that's exactly it, isn't it? Where have they been going?"
           - message:
             - text: "You see... hopes and dreams are "
             - text: "expensive"
@@ -1082,20 +1082,21 @@ npc:
             - text: Maybe try taking a look beneath the fountain...
               italic: true
           - Anyways, pay no mind, these are just the ramblings of an old man.
-          - Have a pleasant day.
+          - Have a pleasant day...
           end: 1
         - messages:
           - Hmm? Something under the fountain? What are you talking about?
           cond: 1
           end: 2
         - messages:
-          - Hello there, hope your day is going well...
+          - Hello there, I hope your day is going well...
           cond: 2
           end: 1
     bosnum:
-      name: Bosnum Bert
+      name: Bobby Bert
       position: 1093.7 67 -71.5
       rotation: -90 20
+      colour: 0xdedede
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDA5ZWJiY2QyMTU0MzdkYWRjNDc1NDNkM2JjZGVmMTY0MmFmMjI0YzVhNGE2MTQzZDk2NzczZGFkZjg5ZGM3ZCJ9fX0=
       villager:
         type: desert
@@ -1104,20 +1105,21 @@ npc:
         - messages:
           - Oh, hi. Did I leave the door unlocked?
           - You don't live next door...
-          - Well, whatever. Not like this house can get any more cramped.
+          - Well, whatever. It's not like this house can get any more cramped.
           - Feel free to take a look around.
           end: -1
     walter:
       name: Walter Wheat
       position: 1090.5 66 -55.0
       rotation: 90 10
+      colour: 0xf7e5dc
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODgzZjQ3NTc3YTBiYmNhYjgyZDgxZmE4MzdlMGFmZmM2NzY0MjU0NzBmYTViOWEyNWJjYWQ1MmJkNjhjMTAzNiJ9fX0=
       villager:
         type: desert
         profession: butcher
       dialogue:
         - messages:
-          - What are you doing in my trailer.
+          - What are you doing in my trailer??
           - This is my final warning. Cross me, and there will be consequences.
           - There is absolutely nothing unusual being cooked here.
           end: -1
@@ -1125,6 +1127,7 @@ npc:
       name: Mrs. Plenton
       position: 1098.5 66 -45.5
       rotation: 0 40
+      colour: 0x96a2ab
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2JmZmVjZWY3MmJiYzdjNTA4ZTk5YTg4NzFiMjAyMDZmMzBiODdhZDQ0OTg2YmNhZTBkNWJiNTk5ZmI3MGIzIn19fQ==
       villager:
         type: plains
@@ -1141,18 +1144,19 @@ npc:
       name: Matt Norma
       position: 949.5 64.8 76.3
       rotation: -180 30
+      colour: 0xde4b40
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTk5NDc1ZGQyOTQ3Njg2Y2JkN2Y3MmM4OGNhZDM3MjA1ZGM1OWNiZDhlZDE3YTAzZTAyYzIxODVhODZiM2MwYyJ9fX0=
       villager:
         type: plains
         profession: nitwit
       dialogue:
         - messages:
-          - Oh hi! Are you here for my birthday party?
+          - Oh hi! Are you here for my birthday party? Is my mom with you?
           - You must have been late, I'm sure everyone else is coming soon too!
           - Don't worry, its only been an hour, it's not that bad.
-          - ...Oh, you aren't here for my birthday?
+          - ... Oh, you aren't here for my birthday?
           - Well, you could stay and have some cake if you want, I guess.
-          - message: ...You're busy?
+          - message: ... You're busy?
             wait: 100
           - Sorry to bother you then... Have a nice day!
           end: 2
@@ -1161,7 +1165,7 @@ npc:
           cond: 2
           end: -1
     poolgoer:
-      name: Buck Crady
+      name: Bucky Cradle
       position: 880.5 76 30.7
       rotation: -180 -20
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTIyNWNjNDBmNWRjZTlkNjdkMTIxNzUxYmMyOTIxNWRjODljZDRjMjJlNjEyMjk3MWVmNzg0NTFmODQyMjQyZSJ9fX0=
@@ -1171,13 +1175,14 @@ npc:
         profession: weaponsmith
       dialogue:
         - messages: 
-          - ...Yeah, so I'm also part of that whole "Hide and Seek" thing, y'know?
-          - ...And I thought to myself, "why not hide somewhere that's also fun?"
-          - And nobody's really found me much yet, so I'd say I chose pretty well.
+          - ... Yeah, so I'm also part of that whole "Hide and Seek" thing, y'know?
+          - I was gonna get my friend Lucky up here too but he's too chicken with heights.
+          - So, he went to some blind person's house. But that's not fun like this!
+          - And nobody's really found me much yet, so I think I chose pretty well.
           - You better not go peeping about this to anybody else though.
           end: -1
     giffy:
-      name: Giffy Hapsteen
+      name: Johnny Elton
       position: 864.5 70 3.5
       rotation: 27 5
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2RlZGQ2ZTQ2ZTlhOGY1NDViNmZhZjFhZGQxYjE2YjJjNjNhNTgwNDMyYmM2ZDZlNmMwZDJiM2M2ZjI5NGE1In19fQ==
@@ -1203,17 +1208,17 @@ npc:
         profession: cleric
       dialogue:
         - messages:
-          - Ah, I thought I heard someone rummaging about.
+          - Ah, I thought I heard someone rummaging in my garage.
           - message: 
             - text: "Don't mind me, I was just admiring the "
             - text: "Deep Blacks™"
               bold: true
               italic: true
             - text: ' feature of my 230" Class 8k QLED Smart TV.'
-          - It's so dark I couldn't even distinguish it from reality.
+          - It's so dark I can't even distinguish it from reality.
           end: -1
     lucky:
-      name: Lucky Goldstar
+      name: Lucky Goldstein
       position: 1042.6 66.1875 -3.3
       rotation: -135 45
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjIyOTZlYTE2MGYxYjY2ZGYzMjk1MzdkNmQxNmFhZDE3OWZmZDk3MzdhOTJkMjk0YWVlNzU2NjJjMGQ2ZDQzMSJ9fX0=
@@ -1228,11 +1233,12 @@ npc:
               italic: true
             - text: " Don't let Sam hear me! She'll definitely kick me out."
           - This is the perfect hiding spot! I can't lose it!
-          - Nobody will dare to look into someone else's house, especially Sam's- I'm genius!
-          - I am sure to win, so please dont let Sam know...
+          - Bucky said it would be crazy to hide in someone else's house, especially Sam's- but it's genius!
+          - At least, more genius than a rooftop pool...
+          - I am sure to win, so please don't let Sam know!
           end: -1
     deagol:
-      name: Degol Dobby
+      name: Dobby
       position: 789.3 63.6 95.5
       rotation: 90 10
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTkyZjIxN2RhMDNjZjgzMWRhNjBjM2IzMzI4N2QzMzQ2MWQ4NzE1MzIxZjEzYjdjMzFjZmFmNjY0OGZmMyJ9fX0=
@@ -1247,10 +1253,10 @@ npc:
             wait: 120
           - message: Hehehehe
             wait: 80
-          - No breaks for Degol!
+          - No breaks for Dobby!
           end: -1
     dougwhoule:
-      name: Doug Whoule
+      name: Douglas Hollerman
       position: 665.7 57 -29.7
       rotation: 50 25
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzI0ZTRiMmNlZTJhNmIzNmU5YmFjZDRiZWRkMGQ0ZGJjMTdkYTMxMTg2NjI3NGFmYzRiOWVkNTBlYTc3MTdlMiJ9fX0=
@@ -1264,51 +1270,59 @@ npc:
           - I dug it myself.
           end: -1
     erenpan:
-      name: Eren Pan
+      name: Erin Pan
       position: 1024.5 64 32.3
       rotation: 180 60
+      colour: 0xe0dfde
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2VmZTNkOGMzODMyNzg2ZGY2OGViODVlNjhhNDEzMzNhZWU3Y2ZjODM2OTdjMjg2Mjk2NzM3YWE4ZjIzNDMifX19
       villager:
         type: taiga
         profession: librarian
       dialogue:
         - messages:
-          - Oh... uhh, hello there.
+          - Oh... Uhh, hello there.
           - message: Do I know you?
             wait: 80
           - message: I must have dozed off...
             wait: 160
           end: -1
     duanerocque:
-      name: Duane Rocque
+      name: Dwight Rocque
       position: 966.5 65 76.5
       rotation: 90 50
+      colour: 0xe6e6e6
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjU1N2YzNmE3MjY0NWExZDEzZWNhMWEzYTczZjhkZDY1MzIyY2UxZjZhOWE1MjIzNjY2MmYxY2RmNWNkZGQ0In19fQ==
       villager:
         type: snow
         profession: butcher
       dialogue:
         - messages:
-          - message: Alright, alright, the food is almost done, be patient!
-          - If you're so bored why don't you go find Jasmine instead? I've been calling for him to get down here all day and he's nowhere to be seen.
+          - Another one of you? Alright, alright, the food is almost done, be patient!
+          - message:
+            - text: "If you're so bored why don't you go back to playing... Sorry, "
+            - text: "hanging out"
+              italic: true
+            - text: " with Jasmine instead?"
           end: -1
     jasminerocque:
       name: Jasmine Rocque
       position: 987.7 70 69.7
       rotation: 135 50
+      colour: 0x60437a
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2Q3MDE1MDUwNjUxYWIwNGQxYWY2Zjc3YzAwZmZlNzJkNTQ5YzQ4MjkzOTc3ZTc4OGUyZTRmM2UzMzY5MmNhZCJ9fX0=
       villager:
         type: jungle
         profession: armorer
       dialogue:
         - messages:
-          - Ugh, how did you get in here without Duane kicking you out?
-          - I thought this was the perfect hiding spot!
+          - Hey, I don't know you! What are you doing here?
+          - Don't tell me my dad signed up for the school's companion program like Percy...
           end: -1
     epthonbovat:
-      name: Epthon Bovat
+      name: Ethan Bennett
       position: 976.7 64 -0.5
       rotation: 160 10
+      colour: 0x17130f
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU4MDk3YjkzMWNlZWE5OGNlMWI1YmFkNDg1ZDc1Njk1OWIzNzRhNWVmNjc0MjM2ZDE0ZWM0MzE4NjEyNWQifX19
       villager:
         type: taiga
@@ -1317,7 +1331,7 @@ npc:
         - messages:
           - message: Hey! I know you're playing that stupid hide and seek thing, but you can't just go around breaking into people's homes!
             wait: 50
-          - message: Tresspassing is a crime, and I could easily call the police on you!
+          - message: Breaking and entering is a crime, I hope you realize!
             wait: 50
           - message:
             - text: GET OUT!
@@ -1338,9 +1352,10 @@ npc:
           cond: 1
           end: 1
     maisebovat:
-      name: Maise Bovat
+      name: Mary Bennett
       position: 970.5 70 2.5
       rotation: 90 0
+      colour: 0x6f9ee8
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODFjMTJmMzFhMTM4YTg1ZjZkNTMzYmIyN2MwNDBhZjA1MDQyNDVmMTdlNjc0OTM1ZjNlMTg1NDg1NzllM2YwYiJ9fX0=
       villager:
         type: snow
@@ -1357,20 +1372,22 @@ npc:
       name: Emma Drounen
       position: 1034.3 60 60.3
       rotation: -45 -30
+      colour: 0x0d559e
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDcxMzU1MDM0Y2EzNjUwNDJmNGQ4ZTZhN2ZlYWIyNGY3NjYxMzJhMDQ5OThkN2QwYzRjODAxNTdkZTEyOGRjMiJ9fX0=
       villager:
         type: snow
         profession: none
       dialogue:
         - messages:
-          - Hey! SHH! Get out of the water!
-          - You keep splashing about and you'll expose my hiding spot!
-          - Keep quiet, will you!
+          - Hey! BLBLB- Get -blb- of the water!
+          - You keep splashing -blblb- and you'll expose -blb- hiding spot!
+          - -Blb- quiet, will you!
           end: -1
     duarteeisenhower:
-      name: Duarte Eisenhower
+      name: Art Eisenhower
       position: 1053.5 65 -47.3
       rotation: 0 30
+      colour: 0xedc085
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU1MzFhN2E0NWM5Yjk3MzNiMTUxNzE2OTA2NGVmMDI1MDY3MzZjZTkyZTc2OWE3N2U3N2E1MTQwMTY0OGU1In19fQ==
       villager:
         type: taiga
@@ -1396,6 +1413,7 @@ npc:
       name: Bart Eisenhower
       position: 1048.5 65 -52.5
       rotation: 0 0
+      colour: 0xfffdf5
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjI1MmJmNGQyYWMzMzM4NWU3NjY4ODdhNmJjMTcxYWI0NjU5ZTVhZTg2YTNmZjFmMzNlOTJkNzkzM2MyMSJ9fX0=
       villager:
         type: plains
@@ -1404,6 +1422,7 @@ npc:
       name: Percival Ainsworth
       position: 1026.3 68.8 -4.5
       rotation: 90 40
+      colour: 0xf7cd4f
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTFiN2RlNDU1MjhhZDI2MWJkYjAxNDNkNDk0YzQ4ZGJkM2NlN2JjYzNiZjYxZjA1ZGM0MjRiZDViMzk2MzFmMiJ9fX0=
       villager:
         type: jungle
@@ -1411,14 +1430,15 @@ npc:
       dialogue:
         - messages:
           - Ugh, what do you want? Can't you see I'm studying here?
-          - You must be one of those people the school sent to be my "friend" huh?
+          - What, did Jasmine finally give up? Is the school now sending you to be my "friend"?
           - Whatever, just tell them you hung out with me and collect your payment.
-          - What are you waiting for? Stop bothering me and get out!
+          - What are you waiting for? You know neither of us actually want to do this.
           end: -1
     marthaaimsworth:
       name: Martha Aimsworth
       position: 1020.3 64 9.3
       rotation: 115 0
+      colour: 0x91faf2
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTJkZjQ3NzUzOGFiYzczZDVjMWRjMTdjMWNmMzJmMzZiNThlN2RlMzAxM2U5ZTYzYmQwMTUyMTVmOGFmMSJ9fX0=
       villager:
         type: plains
@@ -1427,14 +1447,15 @@ npc:
         - messages:
           - Oh, hi! Sorry, I must've spaced out.
           - Anyways, you must be here to see my son! He's just upstairs.
-          - I'm so glad he seems to have so many friends now! Its almost a different boy every day.
-          - Well, anyways, you guys have fun playing, and don't hesitate to ask me if you need anything.
+          - I'm so glad he seems to have so many friends now! It's almost a different friend every day.
+          - Well, anyways, you kiddos have fun playing, and don't hesitate to ask me if you need anything.
           - Thank you for sticking with him, I know he can be a little difficult sometimes.
           end: -1
     levirosman:
       name: Levi Rosman
       position: 1053.5 65 29.0
       rotation: 90 12.5
+      colour: 0xf0534d
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDkxM2E0YWYyZDMwNjQ3MTNmNzA0MTg3ZTU3ZTZiZWMzZGVlYzk0ZjFjMzM3MWIyYjM1YzZjNWU0MjdjYjAifX19
       villager:
         type: savanna
@@ -1444,12 +1465,13 @@ npc:
           - Hold it! Stop bothering me.
           - Can't you see I'm engaged in an intense game of boardless chess?
           - You'll make me forget where the pieces are!
-          - ...Ugh, did he just play Ra4???
+          - ... Ugh, did he just play Ra4???
           end: -1
     ericrosman:
-      name: Eric Rosman
+      name: Erick Rosman
       position: 1049.5 65 29.0
       rotation: -90 12.5
+      colour: 0xf5746e
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODRjMzY0Nzk1YmZhNDRkZmQyYmJmZTZmZmFmYjU3MDFjNjE1NWNmZDY3ZGQ2MTBhOWUzMzgyYTc5N2U2ZTExIn19fQ==
       villager:
         type: savanna
@@ -1463,6 +1485,7 @@ npc:
       name: Maggie Pallen
       position: 1053.5 65 -34.7
       rotation: -180 16
+      colour: 0x8ad7eb
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODJkOGNiYTk1ZTgzZDcwYzAwMWViNzc0ZjkxYzE2M2FkYTNjZTFjZDU0OTdiY2Q2NzUwOTlmMmNlNWQ4ODU1YSJ9fX0=
       villager:
         type: snow
@@ -1474,9 +1497,10 @@ npc:
           - Bark is very nutritious.
           end: -1
     fronkobognole:
-      name: Fronk Obognole
+      name: Francis O'Bognole
       position: 1021.5 65 -42.5
       rotation: -180 30
+      colour: 0xf0c84d
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWQ2ZGNjNDc2ODMyMzZhYjU5ZDk2ZWIwYjI3YzM4ZDIzNDFkNDg1MDViOGVhNGVhNTdhYWYxNzI3Y2QzYzE4NyJ9fX0=
       villager:
         type: jungle
@@ -1485,9 +1509,9 @@ npc:
         - messages:
           - message:
             - text: "Oh, "
-            - text: heh heh...
+            - text: heh heh
               italic: true
-            - text: " you must have caught me deep in the middle of reading."
+            - text: "... you must have caught me deep in the middle of reading."
           - message:
             - text: "Sorry, as you can see I'm a bit of an "
             - text: avid reader
@@ -1501,29 +1525,31 @@ npc:
             - text: sophisticated
               italic: true
             - text: " look, you don't have to tell me."
-          - Anyways, stop bothering me, please; I can't be wasting time not reading, after all.
+          - Anyways, take your leave please; I can't be wasting time not reading, after all.
           end: -1
     bobknutz:
-      name: Bob Knutz
+      name: Bob Knots
       position: 1022.5 65 -71.3
       rotation: 0 28.5
+      colour: 0xb1bab7
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTUwOTI0ZTQwZTJhNTNkNzY1NmQwYWVlYzgyYTM4NmQyYjg5YTY4MTE1ZDIxZmQ2YWZmOTljY2JlOWJkZGRjIn19fQ==
       villager:
         type: desert
         profession: mason
       dialogue:
         - messages:
-          - Eh? Who's there? Who are you?
-          - Is that Jared? Hey Jared, what are you all the way here?
+          - Who- Who's there? Who are you?
+          - Is that Jake? Hey Jake, what are you all the way here?
           - When did you get so big? Last time I saw you your dad could still pick you up with one arm!
           - I haven't seen him in so long either, too busy to even visit his own father...
-          - Well, thanks for stopping buy, Jared! I was just thinking about you!
+          - Well, thanks for stopping buy, Jake! I was just thinking about you!
           - It's so glad to meet you, Ja... uhh, Jason.
           end: -1
     pennyisses:
       name: Penny Eises
       position: 1026.5 65 -52.3
       rotation: 0 40
+      colour: 0xd9c9ba
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU3NzgxNjRmMjNjNWJhZWY3ZDA3MmZiZDEyNzg3NjBmN2M1MTc3OWQ1MWM3OTBiMDI5OGFiZWQzYWYyYjdhIn19fQ==
       villager:
         type: savanna
@@ -1538,7 +1564,7 @@ npc:
 quest:
   visitfriend: # visit friend's house
     name: Phone-A-Friend
-    hint: The internet seems to have gone down, but you don't know why. Luckily, you happen to know a programmer friend, maybe pay him a visit?
+    hint: The internet seems to have gone down, but you don't know why. Luckily, you happen to know a programmer friend. Maybe pay him a visit?
     description: Unlawfully break and enter into your friend's house.
     condition:
       type: player
@@ -1748,7 +1774,7 @@ quest:
         value: "${npc.simon} dialogue-status 5"
   mouse:
     name: Missing Mouseketeer
-    description: Retrieve Chris's mouse from the bio lab.
+    description: Retrieve Chris's mouse from the high school bio lab.
     condition:
       type: nest
       value:
@@ -1781,7 +1807,7 @@ quest:
       - execute unless score lacroix quest-status matches -1 run scoreboard players set @e[tag=npc-simon,limit=1] dialogue-status 7
   campfire:
     name: Fire-lighting
-    description: Craft and light a campfire at Hurm's firepit.
+    description: Craft and light a campfire at Herb's firepit.
     condition:
       type: nest
       value:
@@ -1803,7 +1829,7 @@ quest:
           count: 1
   grillfish:
     name: Fish-n-chips
-    description: Grill some fish for Hurm's late-night snack!
+    description: Grill some fish for Herb's late-night snack!
     condition:
       type: nest
       value:
