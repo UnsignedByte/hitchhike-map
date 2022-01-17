@@ -895,6 +895,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('intro/start', [
+      `say @s`,
       `execute positioned ~ ~-0.7 ~ run give @p ${toGive(item.tvremote)}`,
       `kill @s`,
       'function hitchhike:story/intro/start'
