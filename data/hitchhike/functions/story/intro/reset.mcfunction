@@ -31,6 +31,7 @@ data modify block 1024 68 67 Items set from block 1024 63 67 Items
 data modify block 1010 59 54 Items set from block 1010 57 54 Items
 
 schedule clear hitchhike:story/intro/detect_barrel_open
+schedule clear hitchhike:story/intro/await_keybarrel_open
 
 # Close opening behind painting
 fill 1021 67 62 1021 68 63 minecraft:green_terracotta

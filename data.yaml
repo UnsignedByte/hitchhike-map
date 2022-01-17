@@ -1476,8 +1476,8 @@ npc:
 
 quest:
   visitfriend: # visit friend's house
-    name: Phone-A-Friend
-    hint: The internet seems to have gone down, but you don't know why. Luckily, you happen to know a programmer friend. Maybe pay him a visit?
+    name: Talk to Chris
+    hint: The internet seems to have gone down, but you don't know why. Luckily, you happen to know a programmer friend. Maybe pay them a visit?
     description: Unlawfully break and enter into your friend's house.
     condition:
       type: player
@@ -1488,17 +1488,14 @@ quest:
     end:
       - type: score
         value: ${npc.sawyer} dialogue-status 10
-  bread:
-    name: Whole Wheat
-    hint: Maintain a wheat-based diet (whole). # description to show before the quest is done (optional)
-    description: Eat ${condition.count} pieces of bread.
+  birthday:
+    name: Birthday Wishes
+    description: Wish sis a happy birthday!
     condition:
-      type: player # this type stores data for every player
-      stat: minecraft.used:minecraft.bread
-      count: 5
-    end:
-      - type: score
-        value: ${npc.wheatish} dialogue-status 2
+      type: cond
+      value:
+        - if score tower quest-status matches -1
+      count: 1
   preparedness:
     name: Preparing & Planning
     description: Remember to be prepared for your hike! Simon demands it. Make sure you are (1.) not hiking on an empty stomach, (2.) properly dressed, and (3.) have a mid-hike snack planned!

@@ -542,6 +542,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     })])
   }
 
+  // show dialogue particle
+  schedule('execute as @e[tag=npc,scores={dialogue-status=0..},tag=!speaking] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force', 20, functions);
+
   // intro stuff
   (()=> {
 
@@ -832,9 +835,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               underlined: true
             }])}, ${rawJson([{
               text:"> buy groceries",
-              color: "white"
+              color: "white",
+              strikethrough: true
             }])}, ${rawJson([{
               text:"> meet with percy",
+              color: "white"
+            }])}, ${rawJson([{
+              text:"> finish bio lab report",
               color: "white"
             }])}]`
           },

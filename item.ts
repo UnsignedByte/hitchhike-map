@@ -19,10 +19,14 @@ export const item = {
       author: '""',
       pages:`[${rawJson([
         {
-          text: "Current Quests\n\n",
+          text: "Current Quests\n",
           color: "dark_blue",
           underlined: true,
           bold: true
+        },
+        {
+          text: "(Hover for more info)\n",
+          color: "gray"
         },
         {
           nbt:"current[]",

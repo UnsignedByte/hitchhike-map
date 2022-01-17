@@ -1088,8 +1088,8 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 scoreboard players reset visitfriend quest-status
 function generated:quests/visitfriend-reset
 
-scoreboard players reset bread quest-status
-function generated:quests/bread-reset
+scoreboard players reset birthday quest-status
+function generated:quests/birthday-reset
 
 scoreboard players reset preparedness quest-status
 function generated:quests/preparedness-reset
