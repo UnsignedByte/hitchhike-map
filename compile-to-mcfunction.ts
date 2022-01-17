@@ -609,16 +609,76 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                     {
                       seq: {
                         cmds: [
+                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 2'
+                        ],
+                        next: [
+                        ]
+                      },
+                      wait: 18
+                    },
+                    {
+                      seq: {
+                        cmds: [
                           'tellraw @a [{"text":"<"},{"text":"Sefuloo","color":"#708899","bold":true},{"text":"> A... a circle. I still can\'t believe it!"}]'
                         ],
                         next: [
                         ]
                       },
                       wait: 5
+                    },
+                    {
+                      seq: {
+                        cmds: [
+                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 1.2'
+                        ],
+                        next: [
+                          {
+                            seq: {
+                              cmds: [
+                                'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 1.5'
+                              ],
+                              next: [
+                              ]
+                            },
+                            wait: 3
+                          },
+                          {
+                            seq: {
+                              cmds: [
+                                'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 2'
+                              ],
+                              next: [
+                              ]
+                            },
+                            wait: 11
+                          },
+                          {
+                            seq: {
+                              cmds: [
+                                'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 2'
+                              ],
+                              next: [
+                              ]
+                            },
+                            wait: 15
+                          },
+                          {
+                            seq: {
+                              cmds: [
+                                'tellraw @a [{"text":"<"},{"text":"Glidiun","color":"#3ab5b2","bold":true},{"text":"> What\'s a \\"circle\\"?"}]'
+                              ],
+                              next: [
+                              ]
+                            },
+                            wait: 5
+                          }
+                        ]
+                      },
+                      wait: 60
                     }
                   ]
                 },
-                wait: 30
+                wait: 40
               }
             ]
           },
