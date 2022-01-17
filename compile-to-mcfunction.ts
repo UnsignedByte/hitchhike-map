@@ -543,7 +543,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
   }
 
   // show dialogue particle
-  schedule('execute as @e[tag=npc,scores={dialogue-status=0..},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force', 20, functions);
+  schedule('execute as @e[type=villager,tag=npc,scores={dialogue-status=0..},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force', 20, functions);
 
   // intro stuff
   (()=> {

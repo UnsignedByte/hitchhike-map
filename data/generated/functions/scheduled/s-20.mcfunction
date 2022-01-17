@@ -22,7 +22,7 @@ scoreboard players set mobcount maze 0
 execute as @e[tag=maze-mob,type=!arrow,type=!player,tag=!maze-mob-spawn-attempt] run scoreboard players add mobcount maze 1
 execute if score enabled maze matches 1 if score mobcount maze matches ..40 run function hitchhike:story/maze/mobs/attemptsummon
 execute if score enabled maze matches 1 as @e[tag=maze-headswap] run function generated:story/maze/mobs/move/magma/swaphead
-execute as @e[tag=npc,scores={dialogue-status=0..},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
+execute as @e[type=villager,tag=npc,scores={dialogue-status=0..},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 # make names visible only in range
 execute as @e[tag=npc] run data modify entity @s CustomNameVisible set value 0
 execute at @a as @e[tag=npc,distance=..10] run data modify entity @s CustomNameVisible set value 1
