@@ -1,1 +1,1 @@
-tellraw @a [{"text":"<"},{"text":"Glidiun","color":"#3ab5b2","bold":true},{"text":"> You're crazy. You're losing your marbles!"}]
+playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.9
