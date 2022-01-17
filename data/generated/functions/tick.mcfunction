@@ -14,13 +14,11 @@ execute as @a[scores={quest-book-upd=0},nbt={Inventory:[{Slot:-106b,id:"minecraf
 execute as @e[tag=npc, tag=selected_npc, tag=!speaking] run function generated:npc/init_dialogue
 execute as @e[tag=npc, tag=speaking, tag=!npc-unface] at @s run function generated:npc/speaking
 
-execute if score visitfriend quest-status matches 0.. run function generated:quests/visitfriend-tick
-
 execute if score birthday quest-status matches 0.. run function generated:quests/birthday-tick
 
-execute if score percy quest-status matches 0.. run function generated:quests/percy-tick
-
 execute if score mountain quest-status matches 0.. run function generated:quests/mountain-tick
+
+execute if score visitfriend quest-status matches 0.. run function generated:quests/visitfriend-tick
 
 execute if score preparedness quest-status matches 0.. run function generated:quests/preparedness-tick
 
@@ -39,3 +37,5 @@ execute if score sdcard quest-status matches 0.. run function generated:quests/s
 execute if score campfire quest-status matches 0.. run function generated:quests/campfire-tick
 
 execute if score grillfish quest-status matches 0.. run function generated:quests/grillfish-tick
+
+execute if score percy quest-status matches 0.. run function generated:quests/percy-tick

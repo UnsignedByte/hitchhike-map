@@ -1,1 +1,1 @@
-scoreboard objectives remove q-1
+scoreboard objectives remove q-0

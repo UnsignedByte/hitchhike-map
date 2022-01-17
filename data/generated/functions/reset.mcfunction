@@ -1090,17 +1090,14 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 898.00 64 -152.00 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_hashbrown", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Hash Brown","bold":false,"color":"#bd7d2a"},{"text":" (4.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
-scoreboard players reset visitfriend quest-status
-function generated:quests/visitfriend-reset
-
 scoreboard players reset birthday quest-status
 function generated:quests/birthday-reset
 
-scoreboard players reset percy quest-status
-function generated:quests/percy-reset
-
 scoreboard players reset mountain quest-status
 function generated:quests/mountain-reset
+
+scoreboard players reset visitfriend quest-status
+function generated:quests/visitfriend-reset
 
 scoreboard players reset preparedness quest-status
 function generated:quests/preparedness-reset
@@ -1128,3 +1125,6 @@ function generated:quests/campfire-reset
 
 scoreboard players reset grillfish quest-status
 function generated:quests/grillfish-reset
+
+scoreboard players reset percy quest-status
+function generated:quests/percy-reset

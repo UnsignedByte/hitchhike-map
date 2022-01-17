@@ -1,3 +1,3 @@
-scoreboard objectives remove q-11
-scoreboard objectives remove s-11-0-2
-scoreboard objectives remove s-11-0-3
+scoreboard objectives remove q-10
+scoreboard objectives remove s-10-0-2
+scoreboard objectives remove s-10-0-3

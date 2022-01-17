@@ -1,6 +1,6 @@
-function generated:quests/tick/q-2-0
-scoreboard players set - q-2 0
-execute if score q-2-0 q-2 = oq-2-0 q-2 run scoreboard players set - q-2 1
-execute if score - q-2 matches 0 run function generated:quests/tick/q-2
-scoreboard players operation percy quest-status = q-2 q-2
+function generated:quests/tick/q-12-0
+scoreboard players set - q-12 0
+execute if score q-12-0 q-12 = oq-12-0 q-12 run scoreboard players set - q-12 1
+execute if score - q-12 matches 0 run function generated:quests/tick/q-12
+scoreboard players operation percy quest-status = q-12 q-12
 execute if score percy quest-status matches 100 run function generated:quests/percy-end
