@@ -882,7 +882,7 @@ npc:
         - messages:
           - Hey there, are you looking for Cam? He ran off to who knows where again.
           - If you find him, could you tell him to get back here and feed the cats?
-          - Those darn things just won't stop meowing.
+          - Those darn things just won't stop meowing, and it's driving me insane.
           - Where's Cam? Probably climbing the neighbor's tree or whatever crazy things he gets up to outside.
           - I've heard he joined that "Hide and Seek" thing going on, so maybe he's hiding?
           end: -1
@@ -990,7 +990,7 @@ npc:
             - text: "expensive"
               bold: true
             - text: "."
-          - Shouldn't someone much more eloquent (such as yourself) be more deserving of such wealth?
+          - Shouldn't someone much more eloquent (for example, such as yourself...) be more deserving of such wealth?
           - message:
             - text: Maybe try taking a look beneath the fountain...
               italic: true
@@ -1277,7 +1277,7 @@ npc:
         - messages: 
           - How did you get in here??
           - I told my dad not to let anyone in!
-          - Just when I thought I had an easy win to that dumb game of hide an seek too.
+          - Just when I thought I had an easy win to that dumb game of hide-n-seek too.
           - Well, congratulations on finding me, yada yada...
           - Just leave me a-lone.
           end: -1
@@ -1495,6 +1495,14 @@ quest:
       type: cond
       value:
         - if score tower quest-status matches -1
+      count: 1
+  percy:
+    name: Sugar Buddy..?
+    description: Complete your daily chat with Percival.
+    condition:
+      type: cond
+      value:
+        - if score @e[tag=npc-percivalainsworth,limit=1] dialogue-status matches -1
       count: 1
   preparedness:
     name: Preparing & Planning

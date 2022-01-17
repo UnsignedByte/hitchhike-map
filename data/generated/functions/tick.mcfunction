@@ -18,6 +18,8 @@ execute if score visitfriend quest-status matches 0.. run function generated:que
 
 execute if score birthday quest-status matches 0.. run function generated:quests/birthday-tick
 
+execute if score percy quest-status matches 0.. run function generated:quests/percy-tick
+
 execute if score preparedness quest-status matches 0.. run function generated:quests/preparedness-tick
 
 execute if score diet quest-status matches 0.. run function generated:quests/diet-tick
