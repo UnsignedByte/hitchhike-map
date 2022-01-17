@@ -3,4 +3,4 @@ data modify storage hitchhike:stores success.ramen set value '[{"score":{"name":
 # sell items.
 function generated:story/stores/ramen/sell
 # Reset welcome message
-data modify storage hitchhike:stores welcome.ramen set value '"Ready to order?"'
+data modify storage hitchhike:stores welcome.ramen set value '"Ready for your order?"'

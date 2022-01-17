@@ -3,7 +3,7 @@ execute as @s[x=1008,dx=1000000] at @s run tp @s 1006.7000 ~ ~
 execute as @s[z=-174,dz=-1000000] at @s run tp @s ~ ~ -171.7000
 execute as @s[z=-152,dz=1000000] at @s run tp @s ~ ~ -153.3000
 scoreboard players operation @s store_lockT -= @s playtime
-execute unless score @s store_lockT matches 1.. run tellraw @s ["<",{"text":"Blets Chun","color":"#d65454","bold":true},"> Don't you want anything?"]
+execute unless score @s store_lockT matches 1.. run tellraw @s ["<",{"text":"Brett Chen","color":"#d65454","bold":true},"> Don't you want anything?"]
 # set cooldown to some number of ticks
 execute unless score @s store_lockT matches 1.. run scoreboard players set @s store_lockT 20
 scoreboard players operation @s store_lockT += @s playtime

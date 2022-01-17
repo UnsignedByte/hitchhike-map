@@ -1,12 +1,12 @@
-data modify storage hitchhike:stores welcome.safeway set value '"Hey, I hope you had a great time shopping!"'
+data modify storage hitchhike:stores welcome.safeway set value '"Hope you had a great time shopping!"'
 forceload add 881 -169 917 -151
-data modify storage hitchhike:stores welcome.clothes set value '"Set on your new outfits? I\'ll ring them up for you right here!"'
+data modify storage hitchhike:stores welcome.clothes set value '"Set on your new fit? I\'ll ring them up for you right here!"'
 forceload add 973 -172 992 -153
-data modify storage hitchhike:stores welcome.subway set value '"Hey there, ready to order?"'
+data modify storage hitchhike:stores welcome.subway set value '"Are you ready to order yet?"'
 forceload add 941 -161 955 -141
-data modify storage hitchhike:stores welcome.boba set value '"Welcome to SiTea, the best boba shop in town!"'
+data modify storage hitchhike:stores welcome.boba set value '"Welcome to SiTea, voted the best boba shop in town for the past 10 years!"'
 forceload add 993 -173 1007 -153
-data modify storage hitchhike:stores welcome.ramen set value '"Ready to order?"'
+data modify storage hitchhike:stores welcome.ramen set value '"Ready for your order?"'
 forceload add 1029 -161 1043 -141
 data modify storage hitchhike:stores welcome.starbucks set value '"Alright, what can I get you? The menu is on the billboard right above me."'
 forceload add 1044 -161 1060 -141

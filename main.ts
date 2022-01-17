@@ -191,10 +191,16 @@ export async function init (
       `scoreboard objectives add quest-book-upd dummy`,
       ``,
       `# Update lecterns in library`,
-      `data modify block 884 65 16 Page set value 0`,
-      `data modify block 884 65 16 Book set value ${toSnbt(Object.assign({Count:'1b'}, item.books.tomsawyer))}`,
-      `data modify block 876 65 16 Page set value 0`,
-      `data modify block 876 65 16 Book set value ${toSnbt(Object.assign({Count:'1b'}, item.books["1984"]))}`,
+      'setblock 884 65 16 air',
+      `setblock 884 65 16 minecraft:lectern[facing=west,has_book=true]${toSnbt({
+        Page: 0,
+        Book: Object.assign({Count:'1b'}, item.books.tomsawyer)
+      })}`,
+      'setblock 876 65 16 air',
+      `setblock 876 65 16 minecraft:lectern[facing=east,has_book=true]${toSnbt({
+        Page: 0,
+        Book: Object.assign({Count:'1b'}, item.books["1984"])
+      })}`,
       `# KILL EXISTING ITEM HOLDERS`,
       `kill @e[tag=item_holder]`,
       Object.entries(data.itemphysics).map(([k, v])=>{
