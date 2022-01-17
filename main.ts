@@ -193,11 +193,11 @@ export async function init (
       `# Update lecterns in library`,
       `data merge block 884 65 16 ${toSnbt({
         Page: 0,
-        Book: item.books.tomsawyer
+        Book: Object.assign({Count:'1b'}, item.books.tomsawyer)
       })}`,
       `data merge block 876 65 16 ${toSnbt({
         Page: 0,
-        Book: item.books["1984"]
+        Book: Object.assign({Count:'1b'}, item.books["1984"])
       })}`,
       `# KILL EXISTING ITEM HOLDERS`,
       `kill @e[tag=item_holder]`,
