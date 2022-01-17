@@ -2765,7 +2765,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/loadchunks', [
-      `forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(mazerows.length-1)+(cellsize+1)/2}`
+      [...Array(mazerows.length)].map((x, i)=>`forceload add ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]+15*(i-1)-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(i-1)+(cellsize+1)/2}`)
     ])
 
     addfunc('maze/create/wave/reset', [
