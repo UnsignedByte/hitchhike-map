@@ -1522,7 +1522,7 @@ quest:
           count: 1
         - type: cond
           value:
-            - if score mountain dialogue-status matches -1..
+            - if score mountain quest-status matches -1..
             - if score visitfriend-start story-sawyer matches 1
           count: 2
   preparedness:
