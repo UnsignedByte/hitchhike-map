@@ -2743,7 +2743,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     // WAVE FUNCTION STUFF
 
-    const mazerows = [1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 0];
+    const mazerows = [0, 0, 0, 0, 0, 0, 1, 2, 2, 1, 1, 0];
     const mazecols = 24;
     const mazeorigin = [-1000, 10, 0];
 
@@ -2760,8 +2760,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ]
 
     addfunc('maze/unloadchunks', [
-      `forceload remove ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(mazerows.length-1)+(cellsize+1)/2}`,
-      // `forceload remove -1504 -2 -1371 129`,
+      [...Array(mazerows.length)].map((x, i)=>`forceload remove ${mazeorigin[0]-(cellsize+1)/2} ${mazeorigin[2]+15*(i-1)-(cellsize+1)/2} ${mazeorigin[0]+15*(mazecols-1)+(cellsize+1)/2} ${mazeorigin[2]+15*(i-1)+(cellsize+1)/2}`)
     ])
 
     addfunc('maze/loadchunks', [

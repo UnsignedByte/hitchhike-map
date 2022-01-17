@@ -1,1 +1,12 @@
-forceload remove -1005 -5 -650 170
+forceload remove -1005 -20 -650 -10
+forceload remove -1005 -5 -650 5
+forceload remove -1005 10 -650 20
+forceload remove -1005 25 -650 35
+forceload remove -1005 40 -650 50
+forceload remove -1005 55 -650 65
+forceload remove -1005 70 -650 80
+forceload remove -1005 85 -650 95
+forceload remove -1005 100 -650 110
+forceload remove -1005 115 -650 125
+forceload remove -1005 130 -650 140
+forceload remove -1005 145 -650 155
