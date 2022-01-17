@@ -874,13 +874,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('intro/_settv', [
       [...Array(6).keys()].map(x=>
-        `data modify entity @e[x=1005,dx=0,y=${61 - x % 2},dy=0,z=${60 - Math.floor(x / 2)},dz=0,limit=1] Item.tag.map set value ${305+x}`
+        `data modify entity @e[x=1005,dx=0,y=${61 - x % 2},dy=0,z=${60 - Math.floor(x / 2)},dz=0,limit=1] Item.tag.map set value ${1+x}`
       )
     ])
 
     addfunc('intro/_resettv', [
       [...Array(6).keys()].map(x=>
-        `data modify entity @e[x=1005,dx=0,y=${61 - x % 2},dy=0,z=${60 - Math.floor(x / 2)},dz=0,limit=1] Item.tag.map set value ${311+x}`
+        `data modify entity @e[x=1005,dx=0,y=${61 - x % 2},dy=0,z=${60 - Math.floor(x / 2)},dz=0,limit=1] Item.tag.map set value ${7+x}`
       )
     ])
   })();
