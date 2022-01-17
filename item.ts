@@ -19,8 +19,8 @@ export const item = {
       author: '""',
       pages:`[${rawJson([
         {
-          text: "Current Quests\n",
-          color: "black",
+          text: "Current Quests\n\n",
+          color: "dark_blue",
           underlined: true,
           bold: true
         },
@@ -32,8 +32,8 @@ export const item = {
         }
       ])}, ${rawJson([
         {
-          text: "Completed Quests\n",
-          color: "black",
+          text: "Completed Quests\n\n",
+          color: "dark_blue",
           underlined: true,
           bold: true
         },
