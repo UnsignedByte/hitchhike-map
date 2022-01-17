@@ -1519,6 +1519,7 @@ quest:
           all: false
           condition:
             - if entity @s[x=947,y=70,z=-3,dz=4,dx=6,dy=3]
+            - if score visitfriend-start story-sawyer matches 1
           count: 1
         - type: cond
           value:
