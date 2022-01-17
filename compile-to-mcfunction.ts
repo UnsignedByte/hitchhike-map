@@ -3105,18 +3105,17 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     const stores = {
       safeway: {
-        welcome: "Hey, I hope you had a great time shopping!",
+        welcome: "Hope you had a great time shopping!",
         return: [
           "Let me count up your items real quick...",
-          "Hope you're having a great day!",
-          "Thanks for shopping at safeway!",
+          "Great purchase, I have some of these myself.",
           "Hope you found what you wanted!",
-          "Hi, how's your day going?",
+          "Keep in mind that you can always sign up for our rewards system!",
           "Enjoyed your time shopping here?",
-          "Nice weather today, huh?"
+          "Nice weather, huh? If you ignore that whole storm, that is..."
         ],
         success: [
-          "Thank you for shopping at safeway! Your change is ",
+          "Thanks for shopping at Safeway! Your change is ",
           {"score":{"name":"_B"}},
           ".",
           {"score":{"name":"_b"}},
@@ -3124,27 +3123,27 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ],
         failmessages: [
           [
-            "Your charge is ",
+            "The total charge is ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
             " Bov. Please place your payment in the space to your left!"
           ],
           [
-            "It seems you\'re ",
+            "It seems like you\'re ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov short. Don\'t worry, addition is hard. Just place the rest of your money on the counter and I can do the math for you!"
+            " Bov short. Don\'t worry, addition can be hard for all of us. Just place the rest of your money on the counter and I can do the math for you!"
           ]
         ],
         unsoldrange: [891, 65, -154, 891, 65, -154],
         paypos: [893.0, 64.5, -153.5],
         shoprange:[881, -169, 917, -151],
-        lock: ["<",{"text":"Paule Enrique","color":"#eb7060","bold":true},"> Hey! You shouldn't leave without paying."]
+        lock: ["<",{"text":"Harold Pell","color":"#eb7060","bold":true},"> Hey! I think you forgot to pay for your items!"]
       },
       clothes: {
-        welcome: "Set on your new outfits? I'll ring them up for you right here!",
+        welcome: "Set on your new fit? I'll ring them up for you right here!",
         return: [
           [
             "I can tell these clothes will fit you ",
@@ -3152,12 +3151,12 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               "italic": true,
               "text":"perfectly"
             },
-            "!"
+            "."
           ],
           "I hope you enjoyed our fashionable selection!"
         ],
         success: [
-          "Have fun with your new clothes! ",
+          "You're all set with your new clothes! ",
           {"score":{"name":"_B"}},
           ".",
           {"score":{"name":"_b"}},
@@ -3172,30 +3171,30 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             " Bov. Just place your payment on the counter here!"
           ],
           [
-            "It seems you\'re ",
+            "It seems you\'re missing ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov short. Don\'t worry, addition is hard. Just place the rest of your money on the counter and I can do the math for you!"
+            " Bov. Just place the rest of your money on the counter and I'll complete your purchase!"
           ]
         ],
         unsoldrange: [983, 65, -168, 985, 65, -168],
         paypos: [986.5, 65.0, -167.5],
         shoprange:[973, -172, 992, -153],
-        lock: ["<",{"text":"Jean Skinne","color":"#2387d9","bold":true},"> You can't leaving without paying."]
+        lock: ["<",{"text":"Jean Slimm","color":"#2387d9","bold":true},"> You can't leaving without paying."]
       },
       subway: {
-        welcome: "Hey there, ready to order?",
+        welcome: "Are you ready to order yet?",
         return: [
           "Alright, I've got that all down.",
-          "Great choices! I'll get that for you real quick..."
+          "I'll make that for you real quick..."
         ],
         success: [
-          "Have a nice one! Here, ",
+          "Have a great day. Here, have your change, ",
           {"score":{"name":"_B"}},
           ".",
           {"score":{"name":"_b"}},
-          " Bov is your change."
+          " Bov."
         ],
         failmessages: [
           [
@@ -3203,23 +3202,23 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov."
+            " Bov total."
           ],
           [
             "You\'re still missing ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov. Don\'t worry about the math though, I can calculate the change for you."
+            " Bov. Mind getting the rest paid up?"
           ]
         ],
         unsoldrange: [950, 64, -147, 952, 65, -145],
         paypos: [950.5, 64.5, -144.5],
         shoprange:[941, -161, 955, -141],
-        lock: ["<",{"text":"Sili Connesse","color":"#f0d792","bold":true},"> Hey, aren't you going to finish your order?"]
+        lock: ["<",{"text":"Silas Connelly","color":"#f0d792","bold":true},"> You're not gonna finish your order?"]
       },
       boba: {
-        welcome: "Welcome to SiTea, the best boba shop in town!",
+        welcome: "Welcome to SiTea, voted the best boba shop in town for the past 10 years!",
         return: [
           "Alright, have you made your choices?",
           "I hope you enjoy your drinks!"
@@ -3233,30 +3232,30 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ],
         failmessages: [
           [
-            "Your total is ",
+            "Your total today will be ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
             " Bov."
           ],
           [
-            "You\'re only missing ",
+            "It seems like you\'re short ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov."
+            " Bov. Drop the money here once you've got that added up!"
           ]
         ],
         unsoldrange: [996, 65, -168, 996, 65, -166],
         paypos: [996.5, 65, -166.5],
         shoprange:[993, -173, 1007, -153],
-        lock: ["<",{"text":"Blets Chun","color":"#d65454","bold":true},"> Don't you want anything?"]
+        lock: ["<",{"text":"Brett Chen","color":"#d65454","bold":true},"> Don't you want anything?"]
       },
       ramen: {
-        welcome: "Ready to order?",
+        welcome: "Ready for your order?",
         return: [
           "Thank you for your order!",
-          "Hey, I can take your order right now."
+          "Make sure to leave a good review if you enjoy your food!"
         ],
         success: [
           {"score":{"name":"_B"}},
@@ -3270,20 +3269,20 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov."
+            " Bov for your food."
           ],
           [
-            "You\'re just ",
+            "You seem to be short some money. The charge left is ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov short."
+            "Bov."
           ]
         ],
         unsoldrange: [1039, 65, -153, 1039, 65, -151],
         paypos: [1039.5, 65, -151.5],
         shoprange:[1029, -161, 1043, -141],
-        lock: ["<",{"text":"Otori","color":"#8723a6","bold":true},"> Did you forget to finish your order?"]
+        lock: ["<",{"text":"Otori Okawa","color":"#8723a6","bold":true},"> Did you forget to finish your order?"]
       },
       starbucks: {
         welcome: "Alright, what can I get you? The menu is on the billboard right above me.",
@@ -3300,11 +3299,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ],
         failmessages: [
           [
-            "Alright, that\'ll be ",
+            "Alright, that\'ll be a total of ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov."
+            " Bov for your drink."
           ],
           [
             "Sorry, I\'m still missing' ",
