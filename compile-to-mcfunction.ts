@@ -629,13 +629,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                     {
                       seq: {
                         cmds: [
-                          'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.2'
+                          'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.5'
                         ],
                         next: [
                           {
                             seq: {
                               cmds: [
-                                'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.5'
+                                'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.7'
                               ],
                               next: [
                               ]
@@ -645,7 +645,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                           {
                             seq: {
                               cmds: [
-                                'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.8'
+                                'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.2'
                               ],
                               next: [
                               ]
@@ -660,7 +660,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                               next: [
                               ]
                             },
-                            wait: 15
+                            wait: 20
                           },
                           {
                             seq: {
@@ -706,7 +706,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                     next: [
                                     ]
                                   },
-                                  wait: 25
+                                  wait: 35
                                 },
                                 {
                                   seq: {
@@ -716,7 +716,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                     next: [
                                     ]
                                   },
-                                  wait: 28
+                                  wait: 38
                                 },
                                 {
                                   seq: {
@@ -727,6 +727,66 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                     ]
                                   },
                                   wait: 5
+                                },
+                                {
+                                  seq: {
+                                    cmds: [
+                                      'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.3'
+                                    ],
+                                    next: [
+                                      {
+                                        seq: {
+                                          cmds: [
+                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.8'
+                                          ],
+                                          next: [
+                                          ]
+                                        },
+                                        wait: 6
+                                      },
+                                      {
+                                        seq: {
+                                          cmds: [
+                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.1'
+                                          ],
+                                          next: [
+                                          ]
+                                        },
+                                        wait: 12
+                                      },
+                                      {
+                                        seq: {
+                                          cmds: [
+                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.4'
+                                          ],
+                                          next: [
+                                          ]
+                                        },
+                                        wait: 32
+                                      },
+                                      {
+                                        seq: {
+                                          cmds: [
+                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.9'
+                                          ],
+                                          next: [
+                                          ]
+                                        },
+                                        wait: 38
+                                      },
+                                      {
+                                        seq: {
+                                          cmds: [
+                                            'tellraw @a [{"text":"<"},{"text":"Glidiun","color":"#3ab5b2","bold":true},{"text":"> You\'re crazy. You\'re losing your marbles!"}]'
+                                          ],
+                                          next: [
+                                          ]
+                                        },
+                                        wait: 5
+                                      }
+                                    ]
+                                  },
+                                  wait: 80
                                 }
                               ]
                             },
