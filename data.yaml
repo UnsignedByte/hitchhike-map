@@ -106,12 +106,12 @@ npc:
       dialogue:
         - messages:
           - You really just broke right in, didn't you?
-          - No decency huh... what if I was unpresentable?
+          - I guess you couldn't really text with the storm knocking everything out but you could've at least knocked.
           - message: ... Anyways, what's up?
             wait: 60
-          - Storm killed your internet? So you're here for my help again, huh.
+          - So you're here for my help again, huh.
           - Not that I expected anything else from you anyways...
-          - Well, I have no idea. Maybe turn it off or on again, or something like that.
+          - Well, I have no idea. Why don't you wait until the connection is back?
           cond: 10
           end: 1
         - messages:
@@ -140,9 +140,9 @@ npc:
             - text: suuper
               italic: true
             - text: " important to you huh."
-          - "You're never this eager to contact me..."
+          - "You're never this eager to talk to me..."
           - Well, the mountain is the unmistakeable mass toward the south, if you can't find it.
-          - I can't exactly follow you there, you know I don't leave the house.
+          - No, I won't follow you there. You know I don't leave the house.
           - Stay safe or something, I guess.
           cond: 2
           end: -1
@@ -1152,11 +1152,12 @@ npc:
       dialogue:
         - messages:
           - Oh hi! Are you here for my birthday party? Is my mom with you?
-          - You must have been late, I'm sure everyone else is coming soon too!
+          - I know, I know, my birthday was last week, but everyone was busy so I'm having another party today!
+          - You must have been late, I'm sure everyone else is coming soon too.
           - Don't worry, its only been an hour, it's not that bad.
           - ... Oh, you aren't here for my birthday?
           - Well, you could stay and have some cake if you want, I guess.
-          - message: ... You're busy?
+          - message: ... You're busy? It's someone else's birthday?
             wait: 100
           - Sorry to bother you then... Have a nice day!
           end: 2
