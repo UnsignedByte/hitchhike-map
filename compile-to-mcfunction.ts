@@ -826,12 +826,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               color: "aqua",
               bold: true
             }),
-            Lore:`[${rawJson([{
+            Lore:`[${rawJson([""])}, ${rawJson([{
               text:">>> wish sis a happy birthday!!!",
               color: "red",
-              bold: true,
               underlined: true
-            }])}, ${rawJson([""])}, ${rawJson([{
+            }])}, ${rawJson([{
               text:"> buy groceries",
               color: "white"
             }])}, ${rawJson([{
