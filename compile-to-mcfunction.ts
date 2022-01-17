@@ -2743,7 +2743,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     // WAVE FUNCTION STUFF
 
-    const mazerows = [0, 0, 0, 0, 0, 0, 1, 2, 2, 1, 1, 0];
+    const mazerows = [1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 0];
     const mazecols = 24;
     const mazeorigin = [-1000, 10, 0];
 
