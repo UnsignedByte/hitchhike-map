@@ -16,7 +16,7 @@ function hitchhike:story/intro/lock_basement_door
 
 function hitchhike:story/intro/unlock_external_doors
 
-function hitchhike:story/intro/await_start
+function generated:story/intro/await_start
 
 # Reset barrel in spawn room
 # setblock 1009 65 57 air

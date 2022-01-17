@@ -59,7 +59,8 @@ export const item = {
       display:{
         Lore:`['{"text":"Right click to play/pause.","color":"dark_gray"}']`,
         Name:`'{"text":"TV Remote","color":"gray"}'`
-      }
+      },
+      tvremote: true
     }
   },
   housekey: {
