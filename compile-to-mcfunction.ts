@@ -568,7 +568,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   next: [
                   ]
                 },
-                wait: 10
+                wait: 14
               },
               {
                 seq: {
@@ -589,12 +589,22 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                     {
                       seq: {
                         cmds: [
-                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 1.8'
+                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 1.7'
                         ],
                         next: [
                         ]
                       },
-                      wait: 8
+                      wait: 5
+                    },
+                    {
+                      seq: {
+                        cmds: [
+                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 1.3'
+                        ],
+                        next: [
+                        ]
+                      },
+                      wait: 15
                     },
                     {
                       seq: {

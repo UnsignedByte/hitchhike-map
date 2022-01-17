@@ -1,1 +1,1 @@
-tellraw @a [{"text":"<"},{"text":"Sefuloo","color":"#708899","bold":true},{"text":"> A... a circle. I still can't believe it!"}]
+playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 1.3
