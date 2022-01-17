@@ -27,7 +27,6 @@ npc:
           - So you're here for my help again, huh.
           - Not that I expected anything else from you anyways...
           - Well, I have no idea. Why don't you wait until the connection is back?
-          cond: 10
           end: 1
         - messages:
           - Persistent, aren't you?
@@ -1500,7 +1499,7 @@ quest:
       type: nest
       value:
         - type: player
-          all: true
+          all: false
           condition:
             - if entity @s[x=947,y=70,z=-3,dz=4,dx=6,dy=3]
           count: 1
@@ -1509,9 +1508,6 @@ quest:
             - if score mountain dialogue-status matches -1..
             - if score visitfriend-start story-sawyer matches 1
           count: 2
-    end:
-      - type: score
-        value: ${npc.sawyer} dialogue-status 10
   birthday:
     name: Birthday Wishes
     description: Wish sis a happy birthday!
