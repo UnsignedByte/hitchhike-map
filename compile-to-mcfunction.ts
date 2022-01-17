@@ -1089,7 +1089,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               wait: 12
             }]
           },
-          wait: 400
+          wait: 360
         }
       ]
     })
