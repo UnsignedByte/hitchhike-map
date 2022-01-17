@@ -550,270 +550,308 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     genseq('intro/start', {
       cmds: [
-        `gamerule doDaylightCycle true`,
-        `playsound minecraft:entity.lightning_bolt.thunder weather @a 1038.06 123.00 231.74 100 1.0`,
-        `playsound minecraft:entity.lightning_bolt.thunder weather @a 1192.00 178.00 470.72 100 0.3`,
-        `playsound minecraft:entity.lightning_bolt.thunder weather @a 944.78 72.00 -137.30 100 0.5`,
-        `weather rain`,
-        `setblock 1005 63 52 air`,
-        `setblock 1011 63 52 air`,
-        `setblock 1011 63 66 air`,
-        `setblock 1005 63 66 air`,
-        `playsound minecraft:entity.guardian.attack block @a 1008.5 64.00 59.5 1.3 2`,
         `weather rain 1000000`,
         `time set 23000`
       ],
       next: [
-      {
-        seq: {
-          cmds: [
-            `# Stop rain after sunrise`,
-            `weather clear 1000000`
-          ]
+        {
+          seq: {
+            cmds: [
+              'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.5'
+            ],
+            next: [
+              {
+                seq: {
+                  cmds: [
+                    'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.7'
+                  ],
+                  next: [
+                  ]
+                },
+                wait: 3
+              },
+              {
+                seq: {
+                  cmds: [
+                    'tellraw @a [{"text":"<"},{"text":"Glidiun","color":"#3ab5b2","bold":true},{"text":"> What did you see?"}]'
+                  ],
+                  next: [
+                  ]
+                },
+                wait: 5
+              }
+            ]
+          },
+          wait: 10
         },
-        wait: 1500
-      },
-      {
-        seq: {
-          cmds: [
-            `# Stop daylight cycle at noon`,
-            `gamerule doDaylightCycle false`
-          ]
-        },
-        wait: 7000
-      },
-      {
-        seq: {
-          cmds: [
-            `function generated:story/intro/_settv`,
-            `effect give @a blindness 2 0 true`,
-            `playsound minecraft:entity.lightning_bolt.thunder weather @a 1008.46 100.00 59.65 100 0.6`,
-            `playsound minecraft:entity.lightning_bolt.thunder weather @a 1051.32 72.00 46.34 100 1.2`
-          ],
-          next: [
+        {
+          seq: {
+            cmds: [
+              `gamerule doDaylightCycle true`,
+              `playsound minecraft:entity.lightning_bolt.thunder weather @a 1038.06 123.00 231.74 100 1.0`,
+              `playsound minecraft:entity.lightning_bolt.thunder weather @a 1192.00 178.00 470.72 100 0.3`,
+              `playsound minecraft:entity.lightning_bolt.thunder weather @a 944.78 72.00 -137.30 100 0.5`,
+              `setblock 1005 63 52 air`,
+              `setblock 1011 63 52 air`,
+              `setblock 1011 63 66 air`,
+              `setblock 1005 63 66 air`,
+              `playsound minecraft:entity.guardian.attack block @a 1008.5 64.00 59.5 1.3 2`
+            ],
+            next: [
             {
               seq: {
                 cmds: [
-                  `function hitchhike:story/intro/unlock_basement_door`,
-                  `function hitchhike:story/intro/lock_external_doors`,
-                  `function hitchhike:story/intro/detect_barrel_open`,
-                  `scoreboard players set - quest-book-upd 1`,
-                  `schedule function generated:quests/visitfriend-start 1t`
+                  `# Stop rain after sunrise`,
+                  `weather clear 1000000`
                 ]
               },
-              wait: 100
+              wait: 1500
             },
             {
               seq: {
                 cmds: [
-                  `particle minecraft:white_ash 1008.5 63.9 59.5 2 0. 5 0 200`,
-                  `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 0 20`,
-                  `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 20`
-                ],
-                next: [{
-                  seq: {
-                    cmds: [
-                      `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 1 10`,
-                      `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 10`
-                    ],
-                    next: [{
-                      seq: {
-                        cmds: [
-                          `particle minecraft:white_ash 1008.5 63.9 59.5 2 0. 5 0 300`,
-                          `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 1 20`,
-                          `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 15`
-                        ],
-                        next: [{
-                          seq: {
-                            cmds: [
-                              `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 1 10`,
-                              `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 10`
-                            ],
-                            next: [{
-                              seq: {
-                                cmds: [
-                                  `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 1 20`,
-                                  `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 15`
-                                ]
-                              },
-                              wait: 4
-                            }]
-                          },
-                          wait: 9
-                        }]
-                      },
-                      wait: 5
-                    }]
-                  },
-                  wait: 3
-                }]
+                  `# Stop daylight cycle at noon`,
+                  `gamerule doDaylightCycle false`
+                ]
               },
-              wait: 8
+              wait: 7000
             },
             {
               seq: {
                 cmds: [
-                  `setblock 1005 63 52 redstone_block`
+                  `function generated:story/intro/_settv`,
+                  `effect give @a blindness 2 0 true`,
+                  `playsound minecraft:entity.lightning_bolt.thunder weather @a 1008.46 100.00 59.65 100 0.6`,
+                  `playsound minecraft:entity.lightning_bolt.thunder weather @a 1051.32 72.00 46.34 100 1.2`
                 ],
-                next: [{
-                  seq: {
-                    cmds: [
-                      `setblock 1005 63 52 air`
-                    ],
-                    next: [{
-                      seq: {
-                        cmds: [
-                          `setblock 1005 63 52 redstone_block`
-                        ],
-                        next: [{
-                          seq: {
-                            cmds: [
-                              `setblock 1005 63 52 air`
-                            ],
-                            next: [{
-                              seq: {
-                                cmds: [
-                                  `setblock 1005 63 52 redstone_block`
-                                ]
-                              },
-                              wait: 8
-                            }]
-                          },
-                          wait: 5
-                        }]
-                      },
-                      wait: 15
-                    }]
+                next: [
+                  {
+                    seq: {
+                      cmds: [
+                        `function hitchhike:story/intro/unlock_basement_door`,
+                        `function hitchhike:story/intro/lock_external_doors`,
+                        `function hitchhike:story/intro/detect_barrel_open`,
+                        `scoreboard players set - quest-book-upd 1`,
+                        `schedule function generated:quests/visitfriend-start 1t`
+                      ]
+                    },
+                    wait: 100
                   },
-                  wait: 5
-                }]
+                  {
+                    seq: {
+                      cmds: [
+                        `particle minecraft:white_ash 1008.5 63.9 59.5 2 0. 5 0 200`,
+                        `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 0 20`,
+                        `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 20`
+                      ],
+                      next: [{
+                        seq: {
+                          cmds: [
+                            `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 1 10`,
+                            `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 10`
+                          ],
+                          next: [{
+                            seq: {
+                              cmds: [
+                                `particle minecraft:white_ash 1008.5 63.9 59.5 2 0. 5 0 300`,
+                                `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 1 20`,
+                                `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 15`
+                              ],
+                              next: [{
+                                seq: {
+                                  cmds: [
+                                    `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 1 10`,
+                                    `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 10`
+                                  ],
+                                  next: [{
+                                    seq: {
+                                      cmds: [
+                                        `particle minecraft:falling_dust oak_planks 1008.5 63.9 59.5 2 0. 5 1 20`,
+                                        `particle minecraft:dust .53 .45 .32 1.5 1008.5 63.9 59.5 2 0. 5 1 15`
+                                      ]
+                                    },
+                                    wait: 4
+                                  }]
+                                },
+                                wait: 9
+                              }]
+                            },
+                            wait: 5
+                          }]
+                        },
+                        wait: 3
+                      }]
+                    },
+                    wait: 8
+                  },
+                  {
+                    seq: {
+                      cmds: [
+                        `setblock 1005 63 52 redstone_block`
+                      ],
+                      next: [{
+                        seq: {
+                          cmds: [
+                            `setblock 1005 63 52 air`
+                          ],
+                          next: [{
+                            seq: {
+                              cmds: [
+                                `setblock 1005 63 52 redstone_block`
+                              ],
+                              next: [{
+                                seq: {
+                                  cmds: [
+                                    `setblock 1005 63 52 air`
+                                  ],
+                                  next: [{
+                                    seq: {
+                                      cmds: [
+                                        `setblock 1005 63 52 redstone_block`
+                                      ]
+                                    },
+                                    wait: 8
+                                  }]
+                                },
+                                wait: 5
+                              }]
+                            },
+                            wait: 15
+                          }]
+                        },
+                        wait: 5
+                      }]
+                    },
+                    wait: 12
+                  },
+                  {
+                    seq: {
+                      cmds: [
+                        `setblock 1011 63 52 redstone_block`
+                      ],
+                      next: [{
+                        seq: {
+                          cmds: [
+                            `setblock 1011 63 52 air`
+                          ],
+                          next: [{
+                            seq: {
+                              cmds: [
+                                `setblock 1011 63 52 redstone_block`
+                              ],
+                              next: [{
+                                seq: {
+                                  cmds: [
+                                    `setblock 1011 63 52 air`
+                                  ],
+                                  next: [{
+                                    seq: {
+                                      cmds: [
+                                        `setblock 1011 63 52 redstone_block`
+                                      ]
+                                    },
+                                    wait: 12
+                                  }]
+                                },
+                                wait: 5
+                              }]
+                            },
+                            wait: 9
+                          }]
+                        },
+                        wait: 14
+                      }]
+                    },
+                    wait: 16
+                  },
+                  {
+                    seq: {
+                      cmds: [
+                        `setblock 1005 63 66 redstone_block`
+                      ],
+                      next: [{
+                        seq: {
+                          cmds: [
+                            `setblock 1005 63 66 air`
+                          ],
+                          next: [{
+                            seq: {
+                              cmds: [
+                                `setblock 1005 63 66 redstone_block`
+                              ],
+                              next: [{
+                                seq: {
+                                  cmds: [
+                                    `setblock 1005 63 66 air`
+                                  ],
+                                  next: [{
+                                    seq: {
+                                      cmds: [
+                                        `setblock 1005 63 66 redstone_block`
+                                      ]
+                                    },
+                                    wait: 8
+                                  }]
+                                },
+                                wait: 6
+                              }]
+                            },
+                            wait: 11
+                          }]
+                        },
+                        wait: 8
+                      }]
+                    },
+                    wait: 14
+                  },
+                  {
+                    seq: {
+                      cmds: [
+                        `setblock 1011 63 66 redstone_block`
+                      ],
+                      next: [{
+                        seq: {
+                          cmds: [
+                            `setblock 1011 63 66 air`
+                          ],
+                          next: [{
+                            seq: {
+                              cmds: [
+                                `setblock 1011 63 66 redstone_block`
+                              ],
+                              next: [{
+                                seq: {
+                                  cmds: [
+                                    `setblock 1011 63 66 air`
+                                  ],
+                                  next: [{
+                                    seq: {
+                                      cmds: [
+                                        `setblock 1011 63 66 redstone_block`
+                                      ]
+                                    },
+                                    wait: 5
+                                  }]
+                                },
+                                wait: 8
+                              }]
+                            },
+                            wait: 9
+                          }]
+                        },
+                        wait: 12
+                      }]
+                    },
+                    wait: 9
+                  }
+                ]
               },
               wait: 12
-            },
-            {
-              seq: {
-                cmds: [
-                  `setblock 1011 63 52 redstone_block`
-                ],
-                next: [{
-                  seq: {
-                    cmds: [
-                      `setblock 1011 63 52 air`
-                    ],
-                    next: [{
-                      seq: {
-                        cmds: [
-                          `setblock 1011 63 52 redstone_block`
-                        ],
-                        next: [{
-                          seq: {
-                            cmds: [
-                              `setblock 1011 63 52 air`
-                            ],
-                            next: [{
-                              seq: {
-                                cmds: [
-                                  `setblock 1011 63 52 redstone_block`
-                                ]
-                              },
-                              wait: 12
-                            }]
-                          },
-                          wait: 5
-                        }]
-                      },
-                      wait: 9
-                    }]
-                  },
-                  wait: 14
-                }]
-              },
-              wait: 16
-            },
-            {
-              seq: {
-                cmds: [
-                  `setblock 1005 63 66 redstone_block`
-                ],
-                next: [{
-                  seq: {
-                    cmds: [
-                      `setblock 1005 63 66 air`
-                    ],
-                    next: [{
-                      seq: {
-                        cmds: [
-                          `setblock 1005 63 66 redstone_block`
-                        ],
-                        next: [{
-                          seq: {
-                            cmds: [
-                              `setblock 1005 63 66 air`
-                            ],
-                            next: [{
-                              seq: {
-                                cmds: [
-                                  `setblock 1005 63 66 redstone_block`
-                                ]
-                              },
-                              wait: 8
-                            }]
-                          },
-                          wait: 6
-                        }]
-                      },
-                      wait: 11
-                    }]
-                  },
-                  wait: 8
-                }]
-              },
-              wait: 14
-            },
-            {
-              seq: {
-                cmds: [
-                  `setblock 1011 63 66 redstone_block`
-                ],
-                next: [{
-                  seq: {
-                    cmds: [
-                      `setblock 1011 63 66 air`
-                    ],
-                    next: [{
-                      seq: {
-                        cmds: [
-                          `setblock 1011 63 66 redstone_block`
-                        ],
-                        next: [{
-                          seq: {
-                            cmds: [
-                              `setblock 1011 63 66 air`
-                            ],
-                            next: [{
-                              seq: {
-                                cmds: [
-                                  `setblock 1011 63 66 redstone_block`
-                                ]
-                              },
-                              wait: 5
-                            }]
-                          },
-                          wait: 8
-                        }]
-                      },
-                      wait: 9
-                    }]
-                  },
-                  wait: 12
-                }]
-              },
-              wait: 9
-            }
-          ]
-        },
-        wait: 12
-      }]
+            }]
+          },
+          wait: 100
+        }
+      ]
     })
 
     addfunc('intro/_resetstorages', [
@@ -895,7 +933,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('intro/_start', [
-      `say @s`,
       `execute positioned ~ ~-0.7 ~ run give @p ${toGive(item.tvremote)}`,
       `kill @s`,
       'function hitchhike:story/intro/start'
