@@ -1367,7 +1367,7 @@ npc:
         - messages:
           - Oh my, you must be lost, huh?
           - I keep forgetting how confusing this house can be... The stairs up are in the garage. (of all places, I know!)
-          - I don't know what they were thinking when designing this darn place.
+          - I don't know what they were thinking designing this darn place.
           - message: 
             - text: "Well, ta-ta, and have fun with Percy! I sure hope he isn't "
             - text: studying

@@ -190,6 +190,15 @@ export async function init (
       `scoreboard objectives remove quest-book-upd`,
       `scoreboard objectives add quest-book-upd dummy`,
       ``,
+      `# Update lecterns in library`,
+      `data merge block 884 65 16 ${toSnbt({
+        Page: 0,
+        Book: item.books.tomsawyer
+      })}`,
+      `data merge block 876 65 16 ${toSnbt({
+        Page: 0,
+        Book: item.books["1984"]
+      })}`,
       `# KILL EXISTING ITEM HOLDERS`,
       `kill @e[tag=item_holder]`,
       Object.entries(data.itemphysics).map(([k, v])=>{
