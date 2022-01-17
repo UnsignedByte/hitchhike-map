@@ -16,8 +16,6 @@ function hitchhike:story/intro/lock_basement_door
 
 function hitchhike:story/intro/unlock_external_doors
 
-function generated:story/intro/await_start
-
 # Reset barrel in spawn room
 # setblock 1009 65 57 air
 # setblock 1009 65 57 minecraft:barrel[facing=west,open=false]{Items:[{Count:1b,Slot:24b,id:"minecraft:paper",tag:{display:{Lore:['{"text":"The keys are hidden","color":"gray"}','{"text":"behind the big map.","color":"gray"}','{"text":"Don\'t Forget!","color":"gray"}','{"text":" "}','{"text":"Love,","color":"gray"}','{"text":"Sis","color":"gray"}'],Name:'{"text":"Reminder"}'}}}]}
@@ -39,3 +37,5 @@ fill 1021 67 62 1021 68 63 minecraft:green_terracotta
 function generated:story/intro/_resetstorages
 kill @e[tag=remote_rightclick_detect]
 # setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[{Count:1b,Slot:13b,id:"minecraft:tripwire_hook",tag:{Enchantments:[{}],display:{Lore:['{"text":"Unlocks Doors","color":"dark_gray"}'],Name:'{"text":"House Key","color":"dark_aqua","bold":true}'}}}]}
+
+function generated:story/intro/await_start
