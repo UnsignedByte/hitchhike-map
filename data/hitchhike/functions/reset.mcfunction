@@ -43,4 +43,4 @@ function generated:story/parkour/loadchunks
 forceload add 983 569
 
 # Waits for the chunks to actually load
-schedule function hitchhike:truereset 100t
+schedule function hitchhike:truereset 20t

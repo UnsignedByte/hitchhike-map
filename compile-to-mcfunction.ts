@@ -2382,7 +2382,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `function generated:story/maze/loadchunks`,
       '',
       'scoreboard players operation _x maze = size maze',
-      'schedule function generated:story/maze/create/_x 100t'
+      'schedule function generated:story/maze/create/_x 20t'
     ]);
 
     addfunc('maze/create/_x', [
