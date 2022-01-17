@@ -4194,17 +4194,9 @@ tag @a remove victim-of-dialogue-by-__safeway_honeycomb
 
 tag @a remove victim-of-dialogue-by-__safeway_seaweed
 
-tag @a remove victim-of-dialogue-by-__safeway_pinktulip
-
 tag @a remove victim-of-dialogue-by-__safeway_orangetulip
 
-tag @a remove victim-of-dialogue-by-__safeway_redtulip
-
-tag @a remove victim-of-dialogue-by-__safeway_lily
-
 tag @a remove victim-of-dialogue-by-__safeway_orchid
-
-tag @a remove victim-of-dialogue-by-__safeway_cornflower
 
 tag @a remove victim-of-dialogue-by-__safeway_monster
 

@@ -2369,45 +2369,45 @@ shelves:
     count: 6
     item: honey_bottle
     small: true
-  pinktulip:
-    pos: 905 64 -162
-    dir: south
-    length: 5
-    count: 15
-    item: pink_tulip
-    small: true
-  orangetulip:
-    pos: 905 65 -162
-    dir: south
-    length: 5
-    count: 15
-    item: orange_tulip
-    small: true
-  redtulip:
-    pos: 905 66 -162
-    dir: south
-    length: 5
-    count: 15
-    item: red_tulip
-    small: true
-  lily:
-    pos: 901 64 -158
-    dir: north
-    length: 5
-    count: 15
-    item: lily_of_the_valley
-    small: true
-  orchid:
-    pos: 901 65 -158
-    dir: north
-    length: 5
-    count: 15
-    item: blue_orchid
-    small: true
-  cornflower:
-    pos: 901 66 -158
-    dir: north
-    length: 5
-    count: 15
-    item: cornflower
-    small: true
+  # pinktulip:
+  #   pos: 905 64 -162
+  #   dir: south
+  #   length: 5
+  #   count: 15
+  #   item: pink_tulip
+  #   small: true
+  # orangetulip:
+  #   pos: 905 65 -162
+  #   dir: south
+  #   length: 5
+  #   count: 15
+  #   item: orange_tulip
+  #   small: true
+  # redtulip:
+  #   pos: 905 66 -162
+  #   dir: south
+  #   length: 5
+  #   count: 15
+  #   item: red_tulip
+  #   small: true
+  # lily:
+  #   pos: 901 64 -158
+  #   dir: north
+  #   length: 5
+  #   count: 15
+  #   item: lily_of_the_valley
+  #   small: true
+  # orchid:
+  #   pos: 901 65 -158
+  #   dir: north
+  #   length: 5
+  #   count: 15
+  #   item: blue_orchid
+  #   small: true
+  # cornflower:
+  #   pos: 901 66 -158
+  #   dir: north
+  #   length: 5
+  #   count: 15
+  #   item: cornflower
+  #   small: true

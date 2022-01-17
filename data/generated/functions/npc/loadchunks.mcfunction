@@ -69,10 +69,6 @@ forceload add 909 -159
 forceload add 909 -159
 forceload add 907 -160
 forceload add 904 -160
-forceload add 904 -160
-forceload add 904 -160
-forceload add 902 -160
-forceload add 902 -160
 forceload add 902 -160
 forceload add 899 -161
 forceload add 899 -161

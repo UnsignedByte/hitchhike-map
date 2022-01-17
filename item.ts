@@ -926,76 +926,16 @@ export const item = {
             HideFlags:127
           }
         },
-        pinktulip: {
-          id:'"minecraft:pink_tulip"',
-          tag:{
-            cost: 349,
-            pos: `'904.7 62.5 -159.5'`,
-            display: {
-              Name: `${rawJson({
-                text: "Pink Tulip",
-                bold: false,
-                color: "#edadde"
-              })}`,
-              Lore:`[${rawJson({
-                text: `Fresh Flowers.`,
-                italic: false,
-                color: "dark_gray"
-              })}]`
-            },
-            HideFlags:127
-          }
-        },
         orangetulip: {
-          id:'"minecraft:orange_tulip"',
+          id:'"minecraft:oxeye_daisy"',
           tag:{
             cost: 349,
             pos: `'904.75 63.5 -159.5'`,
             display: {
               Name: `${rawJson({
-                text: "Orange Tulip",
+                text: "Oxeye Daisy",
                 bold: false,
-                color: "#e8ac7b"
-              })}`,
-              Lore:`[${rawJson({
-                text: `Fresh Flowers.`,
-                italic: false,
-                color: "dark_gray"
-              })}]`
-            },
-            HideFlags:127
-          }
-        },
-        redtulip: {
-          id:'"minecraft:red_tulip"',
-          tag:{
-            cost: 349,
-            pos: `'904.8 64.5 -159.5'`,
-            display: {
-              Name: `${rawJson({
-                text: "Red Tulip",
-                bold: false,
-                color: "#e65a5a"
-              })}`,
-              Lore:`[${rawJson({
-                text: `Fresh Flowers.`,
-                italic: false,
-                color: "dark_gray"
-              })}]`
-            },
-            HideFlags:127
-          }
-        },
-        lily: {
-          id:'"minecraft:lily_of_the_valley"',
-          tag:{
-            cost: 349,
-            pos: `'902.3 62.5 -159.5'`,
-            display: {
-              Name: `${rawJson({
-                text: "Lily",
-                bold: false,
-                color: "#d8e6e6"
+                color: "#cce6e6"
               })}`,
               Lore:`[${rawJson({
                 text: `Fresh Flowers.`,
@@ -1016,26 +956,6 @@ export const item = {
                 text: "Blue Orchid",
                 bold: false,
                 color: "#46c3cf"
-              })}`,
-              Lore:`[${rawJson({
-                text: `Fresh Flowers.`,
-                italic: false,
-                color: "dark_gray"
-              })}]`
-            },
-            HideFlags:127
-          }
-        },
-        cornflower: {
-          id:'"minecraft:cornflower"',
-          tag:{
-            cost: 349,
-            pos: `'902.2 64.5 -159.5'`,
-            display: {
-              Name: `${rawJson({
-                text: "Cornflower",
-                bold: false,
-                color: "#465bcf"
               })}`,
               Lore:`[${rawJson({
                 text: `Fresh Flowers.`,
