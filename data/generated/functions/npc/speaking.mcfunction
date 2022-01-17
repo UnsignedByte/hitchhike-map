@@ -1,12 +1,4 @@
 # While in a conversation, make eye contact with the player.
-tp @s[tag=npc-billy] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-billy, limit=1]
-# While in a conversation, make eye contact with the player.
-tp @s[tag=npc-sam] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sam, limit=1]
-# While in a conversation, make eye contact with the player.
-tp @s[tag=npc-marc] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-marc, limit=1]
-# While in a conversation, make eye contact with the player.
-tp @s[tag=npc-wheatish] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-wheatish, limit=1]
-# While in a conversation, make eye contact with the player.
 tp @s[tag=npc-sawyer] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-sawyer, limit=1]
 # While in a conversation, make eye contact with the player.
 tp @s[tag=npc-simon] ~ ~ ~ facing entity @a[tag=victim-of-dialogue-by-simon, limit=1]

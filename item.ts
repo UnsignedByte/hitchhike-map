@@ -20,7 +20,7 @@ export const item = {
       pages:`[${rawJson([
         {
           text: "Current Quests\n",
-          color: "light_purple",
+          color: "black",
           underlined: true,
           bold: true
         },
@@ -33,7 +33,7 @@ export const item = {
       ])}, ${rawJson([
         {
           text: "Completed Quests\n",
-          color: "light_purple",
+          color: "black",
           underlined: true,
           bold: true
         },

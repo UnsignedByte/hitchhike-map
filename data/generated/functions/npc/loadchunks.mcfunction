@@ -1,7 +1,3 @@
-forceload add -3 18
-forceload add 3 18
-forceload add 0 18
-forceload add 6 18
 forceload add 950 -1
 forceload add 929 197
 forceload add 1075 355

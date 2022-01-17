@@ -274,7 +274,7 @@ export function createQuest (
     `scoreboard players set @a quest-book-upd -1`,
     `data modify storage generated:quest_book current[${ind}] set value ${rawJson({
       text:``,
-      color:"dark_green",
+      color:"dark_gray",
       bold:false,
       underlined:false,
       hoverEvent:{
@@ -815,7 +815,33 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('intro/_resetkey', [
       `setblock 1024 66 61 air`,
-      `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${toSnbt(Object.assign({Count:'1b',Slot:'13b'}, item.housekey))}]}`
+      `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${toSnbt({
+        Count:'1b',
+        Slot:'13b',
+        id:'"minecraft:paper"',
+        tag: {
+          display: {
+            Name: rawJson({
+              text: "To-Do List",
+              color: "aqua",
+              bold: true
+            }),
+            Lore:`[${rawJson([{
+              text:">>> wish sis a happy birthday!!!",
+              color: "red",
+              bold: true,
+              underlined: true
+            }])}, ${rawJson([""])}, ${rawJson([{
+              text:"> buy groceries",
+              color: "white"
+            }])}, ${rawJson([{
+              text:"> meet with percy",
+              color: "white"
+            }])}]`
+          },
+          HideFlags:127
+        }
+      })},${toSnbt(Object.assign({Count:'1b',Slot:'22b'}, item.housekey))}]}`
     ]);
 
     addfunc('intro/lock_back_door', [

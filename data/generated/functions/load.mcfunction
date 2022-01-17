@@ -4054,14 +4054,6 @@ scoreboard objectives add i1detect dummy
 # SET UP BITWISE OPERATORS
 scoreboard objectives add bitwise dummy
 
-tag @a remove victim-of-dialogue-by-billy
-
-tag @a remove victim-of-dialogue-by-sam
-
-tag @a remove victim-of-dialogue-by-marc
-
-tag @a remove victim-of-dialogue-by-wheatish
-
 tag @a remove victim-of-dialogue-by-sawyer
 
 tag @a remove victim-of-dialogue-by-simon

@@ -1,12 +1,4 @@
 # Start a conversation if it was selected
-execute as @s[tag=npc-billy] at @s run function generated:npc/billy/tick
-# Start a conversation if it was selected
-execute as @s[tag=npc-sam] at @s run function generated:npc/sam/tick
-# Start a conversation if it was selected
-execute as @s[tag=npc-marc] at @s run function generated:npc/marc/tick
-# Start a conversation if it was selected
-execute as @s[tag=npc-wheatish] at @s run function generated:npc/wheatish/tick
-# Start a conversation if it was selected
 execute as @s[tag=npc-sawyer] at @s run function generated:npc/sawyer/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-simon] at @s run function generated:npc/simon/tick
