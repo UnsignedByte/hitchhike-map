@@ -557,18 +557,28 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         {
           seq: {
             cmds: [
-              'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.5'
+              'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.5'
             ],
             next: [
               {
                 seq: {
                   cmds: [
-                    'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.7'
+                    'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.6'
                   ],
                   next: [
                   ]
                 },
-                wait: 14
+                wait: 4
+              },
+              {
+                seq: {
+                  cmds: [
+                    'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.8'
+                  ],
+                  next: [
+                  ]
+                },
+                wait: 24
               },
               {
                 seq: {
@@ -583,13 +593,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               {
                 seq: {
                   cmds: [
-                    'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 57.5 5 2'
+                    'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 58.0 5 2'
                   ],
                   next: [
                     {
                       seq: {
                         cmds: [
-                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 57.5 5 1.7'
+                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 58.0 5 1.7'
                         ],
                         next: [
                         ]
@@ -599,7 +609,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                     {
                       seq: {
                         cmds: [
-                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 57.5 5 1.3'
+                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 58.0 5 1.3'
                         ],
                         next: [
                         ]
@@ -609,7 +619,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                     {
                       seq: {
                         cmds: [
-                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 57.5 5 2'
+                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 58.0 5 2'
                         ],
                         next: [
                         ]
@@ -629,13 +639,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                     {
                       seq: {
                         cmds: [
-                          'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.5'
+                          'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.5'
                         ],
                         next: [
                           {
                             seq: {
                               cmds: [
-                                'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.7'
+                                'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.7'
                               ],
                               next: [
                               ]
@@ -645,7 +655,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                           {
                             seq: {
                               cmds: [
-                                'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.2'
+                                'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.2'
                               ],
                               next: [
                               ]
@@ -655,7 +665,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                           {
                             seq: {
                               cmds: [
-                                'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 2'
+                                'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 2'
                               ],
                               next: [
                               ]
@@ -675,13 +685,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                           {
                             seq: {
                               cmds: [
-                                'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 57.5 5 1.8'
+                                'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 58.0 5 1.8'
                               ],
                               next: [
                                 {
                                   seq: {
                                     cmds: [
-                                      'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 57.5 5 1.2'
+                                      'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 58.0 5 1.2'
                                     ],
                                     next: [
                                     ]
@@ -691,7 +701,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                 {
                                   seq: {
                                     cmds: [
-                                      'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 57.5 5 1.1'
+                                      'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 58.0 5 1.1'
                                     ],
                                     next: [
                                     ]
@@ -701,7 +711,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                 {
                                   seq: {
                                     cmds: [
-                                      'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 57.5 5 1.5'
+                                      'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 58.0 5 1.5'
                                     ],
                                     next: [
                                     ]
@@ -711,7 +721,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                 {
                                   seq: {
                                     cmds: [
-                                      'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 57.5 5 1.3'
+                                      'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 58.0 5 1.3'
                                     ],
                                     next: [
                                     ]
@@ -731,13 +741,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                 {
                                   seq: {
                                     cmds: [
-                                      'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.3'
+                                      'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.3'
                                     ],
                                     next: [
                                       {
                                         seq: {
                                           cmds: [
-                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.8'
+                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.8'
                                           ],
                                           next: [
                                           ]
@@ -747,7 +757,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                       {
                                         seq: {
                                           cmds: [
-                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.1'
+                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.1'
                                           ],
                                           next: [
                                           ]
@@ -757,7 +767,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                       {
                                         seq: {
                                           cmds: [
-                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.4'
+                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.4'
                                           ],
                                           next: [
                                           ]
@@ -767,7 +777,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                       {
                                         seq: {
                                           cmds: [
-                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1'
+                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1'
                                           ],
                                           next: [
                                           ]
@@ -777,7 +787,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                       {
                                         seq: {
                                           cmds: [
-                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.7'
+                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.7'
                                           ],
                                           next: [
                                           ]
@@ -787,7 +797,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                                       {
                                         seq: {
                                           cmds: [
-                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.5 5 1.3'
+                                            'playsound minecraft:entity.glow_squid.ambient block @a 1005.00 61.0 61.0 5 1.3'
                                           ],
                                           next: [
                                           ]

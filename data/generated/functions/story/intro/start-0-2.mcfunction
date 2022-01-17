@@ -1,6 +1,1 @@
-playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 57.5 5 2
-schedule function generated:story/intro/start-0-2-0 5t
-schedule function generated:story/intro/start-0-2-1 15t
-schedule function generated:story/intro/start-0-2-2 18t
-schedule function generated:story/intro/start-0-2-3 5t
-schedule function generated:story/intro/start-0-2-4 60t
+tellraw @a [{"text":"<"},{"text":"Glidiun","color":"#3ab5b2","bold":true},{"text":"> What did you see?"}]
