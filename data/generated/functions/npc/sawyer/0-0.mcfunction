@@ -3,5 +3,6 @@ execute at @e[tag=npc-sawyer, limit=1] run tag @a[distance=..25] add npc-eavesdr
 # Dialogue line #0-1: speak and make noise.
 execute at @e[tag=npc-sawyer, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Chris Sawyer","color":"#4fa1a7","bold":true},"> ",{"text":"You really just broke right in, didn't you?"}]
 execute at @e[tag=npc-sawyer, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
+scoreboard players set visitfriend-start story-sawyer 1
 schedule function generated:npc/sawyer/0-1 72t
 tag @a remove npc-eavesdropper

@@ -18,7 +18,9 @@ npc:
         profession: cleric
       dialogue:
         - messages:
-          - You really just broke right in, didn't you?
+          - message: You really just broke right in, didn't you?
+            command:
+              - scoreboard players set visitfriend-start story-sawyer 1
           - I guess you couldn't really text with the storm knocking everything out but you could've at least knocked.
           - message: ... Anyways, what's up?
             wait: 60
@@ -44,6 +46,9 @@ npc:
             - text: have
               italic: true
             - text: " heard there was a cell tower up on the mountain with its own generator, though that could just be a myth."
+            command:
+              - type: quest
+                value: mountain
           cond: 1
           end: 2
         - messages:
@@ -1492,11 +1497,18 @@ quest:
     hint: The internet seems to have gone down, but you don't know why. Luckily, you happen to know a programmer friend. Maybe pay them a visit?
     description: Unlawfully break and enter into your friend's house.
     condition:
-      type: player
-      all: true
-      condition:
-        - if entity @s[x=947,y=70,z=-3,dz=4,dx=6,dy=3]
-      count: 1
+      type: nest
+      value:
+        - type: player
+          all: true
+          condition:
+            - if entity @s[x=947,y=70,z=-3,dz=4,dx=6,dy=3]
+          count: 1
+        - type: cond
+          value:
+            - if score mountain dialogue-status matches -1..
+            - if score visitfriend-start story-sawyer matches 1
+          count: 2
     end:
       - type: score
         value: ${npc.sawyer} dialogue-status 10
@@ -1516,6 +1528,15 @@ quest:
       value:
         - if score @e[tag=npc-percivalainsworth,limit=1] dialogue-status matches -1
       count: 1
+  mountain:
+    name: Rugged Adventure
+    description: Make your way up the mountain.
+    condition:
+      type: cond
+      value:
+        - if score hurm-done vars matches 1
+        - if score preparedness quest-status matches -1
+      count: 2
   preparedness:
     name: Preparing & Planning
     description: Remember to be prepared for your hike! Simon demands it. Make sure you are (1.) not hiking on an empty stomach, (2.) properly dressed, and (3.) have a mid-hike snack planned!

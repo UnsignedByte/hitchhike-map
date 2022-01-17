@@ -4,4 +4,6 @@ scoreboard players set visitfriend quest-status 0
 scoreboard objectives add q-0 dummy
 scoreboard players set q-0 q-0 0
 scoreboard players set q-0-0 q-0 0
-scoreboard objectives add q-0-0 dummy
+scoreboard players set q-0-0-0 q-0 0
+scoreboard objectives add q-0-0-0 dummy
+scoreboard players set q-0-0-1 q-0 0

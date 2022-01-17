@@ -25,8 +25,8 @@ function generated:scheduled/s-3
 kill @e[tag=npc]
 
 # Clear quest book from all players.
-data modify storage generated:quest_book current set value ["","","","","","","","","","","",""]
-data modify storage generated:quest_book completed set value ["","","","","","","","","","","",""]
+data modify storage generated:quest_book current set value ["","","","","","","","","","","","",""]
+data modify storage generated:quest_book completed set value ["","","","","","","","","","","","",""]
 clear @a minecraft:written_book{title:"Quest Book"}
 scoreboard objectives remove quest-book-upd
 scoreboard objectives add quest-book-upd dummy
@@ -1098,6 +1098,9 @@ function generated:quests/birthday-reset
 
 scoreboard players reset percy quest-status
 function generated:quests/percy-reset
+
+scoreboard players reset mountain quest-status
+function generated:quests/mountain-reset
 
 scoreboard players reset preparedness quest-status
 function generated:quests/preparedness-reset

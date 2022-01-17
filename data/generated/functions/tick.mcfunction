@@ -20,6 +20,8 @@ execute if score birthday quest-status matches 0.. run function generated:quests
 
 execute if score percy quest-status matches 0.. run function generated:quests/percy-tick
 
+execute if score mountain quest-status matches 0.. run function generated:quests/mountain-tick
+
 execute if score preparedness quest-status matches 0.. run function generated:quests/preparedness-tick
 
 execute if score diet quest-status matches 0.. run function generated:quests/diet-tick
