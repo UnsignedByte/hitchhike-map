@@ -3934,7 +3934,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ]
 
     addfunc('parkour/offtrail', [
-      `execute as @a[nbt={OnGround:1b}] at @s ${safeblocks.map(x=>corners.map(c=>`unless block ~${c[0]} -0.1 ~${c[1]} ${x}`).join(' ')).join(' ')} run say @s`
+      `execute as @a[nbt={OnGround:1b}] at @s ${safeblocks.map(x=>corners.map(c=>`unless block ~${c[0]} ~-0.1 ~${c[1]} ${x}`).join(' ')).join(' ')} run say @s`
     ])
 
     genseq('parkour/start_seq', {
