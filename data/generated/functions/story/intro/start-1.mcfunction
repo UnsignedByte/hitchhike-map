@@ -7,6 +7,6 @@ setblock 1011 63 52 air
 setblock 1011 63 66 air
 setblock 1005 63 66 air
 playsound minecraft:entity.guardian.attack block @a 1008.5 64.00 59.5 1.3 2
-schedule function generated:story/intro/start-1-0 1500t
-schedule function generated:story/intro/start-1-1 7000t
+schedule function generated:story/intro/start-1-0 2500t
+schedule function generated:story/intro/start-1-1 8000t
 schedule function generated:story/intro/start-1-2 12t

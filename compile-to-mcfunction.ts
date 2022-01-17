@@ -551,7 +551,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     genseq('intro/start', {
       cmds: [
         `weather rain 1000000`,
-        `time set 23000`
+        `time set 22000`
       ],
       next: [
         {
@@ -855,16 +855,17 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   `weather clear 1000000`
                 ]
               },
-              wait: 1500
+              wait: 2500
             },
             {
               seq: {
                 cmds: [
                   `# Stop daylight cycle at noon`,
-                  `gamerule doDaylightCycle false`
+                  `gamerule doDaylightCycle false`,
+                  'time set 6000'
                 ]
               },
-              wait: 7000
+              wait: 8000
             },
             {
               seq: {
