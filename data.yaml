@@ -1539,7 +1539,7 @@ quest:
             - if score picnic quest-status matches -1
           count: 3
         - type: player
-          all: true
+          all: false
           condition:
             -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
           count: 1
