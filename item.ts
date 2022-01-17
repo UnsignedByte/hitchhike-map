@@ -26,7 +26,9 @@ export const item = {
         },
         {
           text: "(Hover for more info)\n",
-          color: "gray"
+          color: "gray",
+          bold: false,
+          underlined: false
         },
         {
           nbt:"current[]",
