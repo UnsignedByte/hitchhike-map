@@ -568,7 +568,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   next: [
                   ]
                 },
-                wait: 3
+                wait: 10
               },
               {
                 seq: {
@@ -579,6 +579,36 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
                   ]
                 },
                 wait: 5
+              },
+              {
+                seq: {
+                  cmds: [
+                    'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 2'
+                  ],
+                  next: [
+                    {
+                      seq: {
+                        cmds: [
+                          'playsound minecraft:entity.squid.ambient block @a 1005.00 61.0 61.5 5 1.8'
+                        ],
+                        next: [
+                        ]
+                      },
+                      wait: 8
+                    },
+                    {
+                      seq: {
+                        cmds: [
+                          'tellraw @a [{"text":"<"},{"text":"Sefuloo","color":"#708899","bold":true},{"text":"> A... a circle. I still can\'t believe it!"}]'
+                        ],
+                        next: [
+                        ]
+                      },
+                      wait: 5
+                    }
+                  ]
+                },
+                wait: 30
               }
             ]
           },
@@ -849,7 +879,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
               wait: 12
             }]
           },
-          wait: 100
+          wait: 400
         }
       ]
     })
