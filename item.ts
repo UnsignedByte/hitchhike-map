@@ -2028,7 +2028,7 @@ export const item = {
             position: eval(v.tag.pos),
             dialogue: [{
               messages: [{
-                message: "",
+                message: "__NONE__",
                 silent: true,
                 command: [
                   `give \${select.player} \${toGive(item.store.unsold.${sto}.${k})}`

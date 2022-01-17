@@ -196,7 +196,7 @@ export function createNpc (
                 `tag ${select.player} add npc-eavesdropper`,
                 `execute at ${select.self} run tag ${message.global ? '@a' : `@a[distance=..${HEAR_DIST}]`} add npc-eavesdropper`,
                 `# Dialogue line #${idx}-${i + 1}: speak and make noise.`,
-                fulltext === "" ? `` : `execute at ${select.self} run tellraw ${select.eavesdropper} ${JSON.stringify([
+                fulltext === "__NONE__" ? `` : `execute at ${select.self} run tellraw ${select.eavesdropper} ${JSON.stringify([
                   '<',
                   (colour === "null" ? JSON.parse(eval(name || `'"Passerby"'`)) : { text: name || 'Passerby', color: colour, bold: true }),
                   `> `,
