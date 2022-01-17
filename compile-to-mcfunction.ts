@@ -816,7 +816,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       }]
     })
 
-    addfunc('intro/_resetkey', [
+    addfunc('intro/_resetstorages', [
       `setblock 1024 66 61 air`,
       `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${toSnbt({
         Count:'1b',
@@ -847,7 +847,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           },
           HideFlags:127
         }
-      })},${toSnbt(Object.assign({Count:'1b',Slot:'22b'}, item.housekey))}]}`
+      })},${toSnbt(Object.assign({Count:'1b',Slot:'22b'}, item.housekey))}]}`,
+      `setblock 1005 59 62 air`,
+      `setblock 1005 59 62 minecraft:chest[facing=east,type=single,waterlogged=false]{Items:[${toSnbt(Object.assign({Count:'1b',Slot:'13b'}, item.tvremote))}]}`
     ]);
 
     addfunc('intro/lock_back_door', [

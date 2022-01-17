@@ -52,6 +52,16 @@ export const item = {
       ])}]`
     }
   },
+  tvremote: {
+    id:'"minecraft:black_candle"',
+    tag:{
+      Enchantments:`[{}]`,
+      display:{
+        Lore:`['{"text":"Right click to play/pause.","color":"dark_gray"}']`,
+        Name:`'{"text":"TV Remote","color":"gray"}'`
+      }
+    }
+  },
   housekey: {
     id:'"minecraft:tripwire_hook"',
     tag:{
