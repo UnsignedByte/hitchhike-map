@@ -3732,6 +3732,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ])
 
         addfunc(`stores/${k}/_payfail`, [
+          'scoreboar players operation paymentcount stores -= count change',
           `scoreboard players operation ${i}_b stores = paymentcount stores`,
           `execute if score count change matches 0 run data modify storage hitchhike:stores success.${k} set value ${rawJson(parseScores(v.failmessages[0]))}`,
           `execute if score count change matches 1.. run data modify storage hitchhike:stores success.${k} set value ${rawJson(parseScores(v.failmessages[1]))}`,
