@@ -3918,6 +3918,25 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'kill @s'
     ])
 
+    const safeblocks = [
+      "andesite_stairs",
+      "andesite_slab",
+      "light_gray_concrete_powder",
+      "dirt_path",
+      "coarse_dirt"
+    ]
+
+    const corners = [
+      [-0.3, -0.3],
+      [-0.3, 0.3],
+      [0.3, -0.3],
+      [0.3, 0.3]
+    ]
+
+    addfunc('parkour/offtrail', [
+      `execute as @a[nbt={OnGround:1b}] at @s ${safeblocks.map(x=>corners.map(c=>`unless block ~${c[0]} -0.1 ~${c[1]} ${x}`).join(' ')).join(' ')} run say @s`
+    ])
+
     genseq('parkour/start_seq', {
       cmds: [
         'schedule clear generated:story/sawyer/nighttime_seq-0',
