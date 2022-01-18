@@ -38,6 +38,8 @@ forceload add -196 88 -216 3
 
 # Parkour
 function generated:story/parkour/loadchunks
+# parkour bridge
+forceload add 826 484 836 484
 
 # Tower
 forceload add 983 569
