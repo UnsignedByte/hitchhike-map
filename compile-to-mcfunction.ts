@@ -3939,7 +3939,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `tag @a remove parkour-offtrail`,
       `execute as @a[nbt={OnGround:1b}] at @s ${safeblocks.map(x=>corners.map(c=>`unless block ~${c[0]} ~-0.1 ~${c[1]} ${x}`).join(' ')).join(' ')} run tag @s add parkour-offtrail`,
       `execute as @a[tag=parkour-offtrail] at @s ${[0,1].map(x=>corners.map(c=>`unless block ~${c[0]} ~${x} ~${c[1]} void_air`).join(' ')).join(' ')} run tag @s remove parkour-offtrail`,
-      `effect give @a[gamemode=adventure,tag=parkour-offtrail,scores={parkour-offtrail=40..}] slowness 1 255 true`,
+      `effect give @a[gamemode=adventure,tag=parkour-offtrail,scores={parkour-offtrail=100..}] slowness 1 255 true`,
       `effect give @a[gamemode=adventure,tag=parkour-offtrail] jump_boost 1 128 true`,
       `title @a[gamemode=adventure,tag=parkour-offtrail] actionbar {"text":"Please return to the trail!","color":"red"}`,
       `scoreboard players add @a[tag=parkour-offtrail] parkour-offtrail 1`,

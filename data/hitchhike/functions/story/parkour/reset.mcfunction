@@ -26,3 +26,12 @@ setblock 989 231 565 minecraft:iron_trapdoor[facing=north,half=top,open=true,pow
 setblock 989 233 565 minecraft:iron_trapdoor[facing=north,half=bottom,open=true,powered=true,waterlogged=false]
 setblock 988 231 566 minecraft:iron_trapdoor[facing=west,half=top,open=true,powered=true,waterlogged=false]
 setblock 988 233 566 minecraft:iron_trapdoor[facing=west,half=top,open=true,powered=true,waterlogged=false]
+
+kill @e[tag=parkour-leash-knot]
+summon leash_knot 830 124 487 {NoGravity:1b,Silent:1b,Tags:["parkour-leash-knot"]}
+summon leash_knot 829 124 486 {NoGravity:1b,Silent:1b,Tags:["parkour-leash-knot"]}
+summon leash_knot 833 124 484 {NoGravity:1b,Silent:1b,Tags:["parkour-leash-knot"]}
+summon leash_knot 832 124 483 {NoGravity:1b,Silent:1b,Tags:["parkour-leash-knot"]}
+summon slime 830 124 487 {NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"collisionless",Leashed:1b,PersistenceRequired:1b,NoAI:1b,Tags:["parkour-leash-knot","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647}],Leash:{X:833,Y:124,Z:484}}
+summon slime 829 124 486 {NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"collisionless",Leashed:1b,PersistenceRequired:1b,NoAI:1b,Tags:["parkour-leash-knot","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647}],Leash:{X:832,Y:124,Z:483}}
+team join collisionless @e[tag=parkour-leash-knot]
