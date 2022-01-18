@@ -609,7 +609,7 @@ summon minecraft:villager 939.25 68 195.00 {Rotation: [90f, 15f], Silent: 1b, In
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for hurm.
-summon minecraft:villager 1075.70 125 355.50 {Rotation: [-90f, 30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-hurm"], VillagerData: {type: "minecraft:snow", profession: "minecraft:fisherman", level: 99}, Offers: {}, CustomName: '{"text":"Herb Schmitt","color":"#183aab","bold":true}'}
+summon minecraft:villager 1075.70 125 355.50 {Rotation: [-90f, 30f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-hurm"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhmMmZlNTFlODc1ODk4YTFmZTZkMzJiOWQzMWVlMjc3YjllMWZhOGZjYWQ5ODY2ZWNiZWZmY2QyMDQ0YjVhNyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:fisherman", level: 99}, Offers: {}, CustomName: '{"text":"Herb Schmitt","color":"#183aab","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for janitor.
