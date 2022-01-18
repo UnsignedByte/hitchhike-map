@@ -1,5 +1,5 @@
 scoreboard players operation 1_b stores = count change
-data modify storage hitchhike:stores success.clothes set value '["You\'re all set with your new clothes! ",{"score":{"name":"1_B","objective":"stores"}},".",{"score":{"name":"1_b","objective":"stores"}}," Bov is your change."]'
+data modify storage hitchhike:stores success.clothes set value '["You\'re all set with your new clothes! ",{"score":{"name":"1_B","objective":"stores"}},".",{"score":{"name":"1_b","objective":"stores"}}," Bck is your change."]'
 # sell items.
 function generated:story/stores/clothes/sell
 # Reset welcome message

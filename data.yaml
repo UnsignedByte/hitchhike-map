@@ -294,7 +294,7 @@ npc:
               - text: "1997 Limited Edition Honda Civic"
                 color: dark_red
                 bold: true
-              - text: ". 17 million Bov by the way, not that you would understand wealth of that size."
+              - text: ". 17 million Bck by the way, not that you would understand wealth of that size."
             - Don't worry, if you work as hard as I do, one day you might be almost as successful too.
             - message: Anyways, I see you're pretty determined to get up this mountain, huh.
               command:
@@ -898,9 +898,9 @@ npc:
               italic: true
             - text: ", your very own coin-counting game show where you win, win, win!"
           - To get tokens, simply place your cash in the chest right here!
-          - Only 10b (0.10 Bov) a token!
-          - Use your tokens to guess the amount of money in the jar; 1 BovToken coin (BTC) represents 1 Bov.
-          - If you are within 2.50 Bov of the real total, you get everything in the jar! That's right, all of it!
+          - Only 10b (0.10 Bck) a token!
+          - Use your tokens to guess the amount of money in the jar; 1 BuckeT coin (BTC) represents 1 Bck.
+          - If you are within 2.50 Bck of the real total, you get everything in the jar! That's right, all of it!
           - When you're ready to play, come talk to me and I'll fill that jar up for you.
           end: 2
         - messages:

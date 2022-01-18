@@ -1,5 +1,5 @@
 scoreboard players operation 5_b stores = count change
-data modify storage hitchhike:stores success.starbucks set value '["Great! Here\'s ",{"score":{"name":"5_B","objective":"stores"}},".",{"score":{"name":"5_b","objective":"stores"}}," Bov for change. Enjoy your day!"]'
+data modify storage hitchhike:stores success.starbucks set value '["Great! Here\'s ",{"score":{"name":"5_B","objective":"stores"}},".",{"score":{"name":"5_b","objective":"stores"}}," Bck for change. Enjoy your day!"]'
 # sell items.
 function generated:story/stores/starbucks/sell
 # Reset welcome message

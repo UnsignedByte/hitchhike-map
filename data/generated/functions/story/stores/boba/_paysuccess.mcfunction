@@ -1,5 +1,5 @@
 scoreboard players operation 3_b stores = count change
-data modify storage hitchhike:stores success.boba set value '["Alright, ",{"score":{"name":"3_B","objective":"stores"}},".",{"score":{"name":"3_b","objective":"stores"}}," Bov is your change. Have a nice day!"]'
+data modify storage hitchhike:stores success.boba set value '["Alright, ",{"score":{"name":"3_B","objective":"stores"}},".",{"score":{"name":"3_b","objective":"stores"}}," Bck is your change. Have a nice day!"]'
 # sell items.
 function generated:story/stores/boba/sell
 # Reset welcome message

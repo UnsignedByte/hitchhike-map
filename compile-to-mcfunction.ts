@@ -2936,7 +2936,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('fountain/jar/updateguess', [
       `execute positioned 914.5 49 -72.5 if entity @e[type=item,distance=..1,nbt={Item:${toSnbt(item.btc)}}] run playsound minecraft:entity.experience_orb.pickup neutral @a 914 56 -73 1`,
       `execute positioned 914.5 49 -72.5 as @e[type=item,distance=..1,nbt={Item:${toSnbt(item.btc)}}] run function generated:story/fountain/jar/_updateguess`,
-      `data modify block 914 56 -72 Text3 set value '[{"color":"gold","score":{"name":"#guesscount","objective":"fishjar"}},{"text":".00 Bov"}]'`,
+      `data modify block 914 56 -72 Text3 set value '[{"color":"gold","score":{"name":"#guesscount","objective":"fishjar"}},{"text":".00 Bck"}]'`,
       'execute positioned 914.5 49 -72.5 run tp @e[type=item,distance=..1] 914.5 55 -74.5'
     ])
 
@@ -3028,7 +3028,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'scoreboard players operation c_B fishjar /= 100 const',
       'scoreboard players operation c_b fishjar = #cashcount fishjar',
       'scoreboard players operation c_b fishjar %= 100 const',
-      `data modify block 914 56 -86 Text3 set value '[{"color":"gold","score":{"name":"c_B","objective":"fishjar"}},{"text":"."},{"score":{"name":"c_b","objective":"fishjar"}},{"text":" Bov"}]'`,
+      `data modify block 914 56 -86 Text3 set value '[{"color":"gold","score":{"name":"c_B","objective":"fishjar"}},{"text":"."},{"score":{"name":"c_b","objective":"fishjar"}},{"text":" Bck"}]'`,
       'execute as @e[tag=jar-coin,type=item] unless entity @s[x=914,y=55,z=-85,dx=0,dy=0,dz=0] run tag @s add jar-coin-unfinished',
       `execute if entity @e[tag=jar-coin-unfinished,type=item] run schedule function generated:story/fountain/jar/incrementcount 5t`,
       `execute unless entity @e[tag=jar-coin-unfinished,type=item] run schedule function generated:story/fountain/jar/endcount 20t`,
@@ -3428,7 +3428,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           {"score":{"name":"_B"}},
           ".",
           {"score":{"name":"_b"}},
-          " Bov."
+          " Bck."
         ],
         failmessages: [
           [
@@ -3436,14 +3436,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov. Please place your payment in the space to your left!"
+            " Bck. Please place your payment in the space to your left!"
           ],
           [
             "It seems like you\'re ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov short. Don\'t worry, addition can be hard for all of us. Just place the rest of your money on the counter and I can do the math for you!"
+            " Bck short. Don\'t worry, addition can be hard for all of us. Just place the rest of your money on the counter and I can do the math for you!"
           ]
         ],
         unsoldrange: [891, 65, -154, 891, 65, -154],
@@ -3469,7 +3469,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           {"score":{"name":"_B"}},
           ".",
           {"score":{"name":"_b"}},
-          " Bov is your change."
+          " Bck is your change."
         ],
         failmessages: [
           [
@@ -3477,14 +3477,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov. Just place your payment on the counter here!"
+            " Bck. Just place your payment on the counter here!"
           ],
           [
             "It seems you\'re missing ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov. Just place the rest of your money on the counter and I'll complete your purchase!"
+            " Bck. Just place the rest of your money on the counter and I'll complete your purchase!"
           ]
         ],
         unsoldrange: [983, 65, -168, 985, 65, -168],
@@ -3503,7 +3503,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           {"score":{"name":"_B"}},
           ".",
           {"score":{"name":"_b"}},
-          " Bov."
+          " Bck."
         ],
         failmessages: [
           [
@@ -3511,14 +3511,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov total."
+            " Bck total."
           ],
           [
             "You\'re still missing ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov. Mind getting the rest paid up?"
+            " Bck. Mind getting the rest paid up?"
           ]
         ],
         unsoldrange: [950, 64, -147, 952, 65, -145],
@@ -3537,7 +3537,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           {"score":{"name":"_B"}},
           ".",
           {"score":{"name":"_b"}},
-          " Bov is your change. Have a nice day!"
+          " Bck is your change. Have a nice day!"
         ],
         failmessages: [
           [
@@ -3545,14 +3545,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov."
+            " Bck."
           ],
           [
             "It seems like you\'re short ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov. Drop the money here once you've got that added up!"
+            " Bck. Drop the money here once you've got that added up!"
           ]
         ],
         unsoldrange: [996, 65, -168, 996, 65, -166],
@@ -3570,7 +3570,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           {"score":{"name":"_B"}},
           ".",
           {"score":{"name":"_b"}},
-          " Bov is your change. ありがとございました！"
+          " Bck is your change. ありがとございました！"
         ],
         failmessages: [
           [
@@ -3578,14 +3578,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov for your food."
+            " Bck for your food."
           ],
           [
             "You seem to be short some money. The charge left is ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            "Bov."
+            "Bck."
           ]
         ],
         unsoldrange: [1039, 65, -153, 1039, 65, -151],
@@ -3604,7 +3604,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           {"score":{"name":"_B"}},
           ".",
           {"score":{"name":"_b"}},
-          " Bov for change. Enjoy your day!"
+          " Bck for change. Enjoy your day!"
         ],
         failmessages: [
           [
@@ -3612,14 +3612,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov for your drink."
+            " Bck for your drink."
           ],
           [
             "Sorry, I\'m still missing' ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bov. Don't worry, I can calculate the change for you."
+            " Bck. Don't worry, I can calculate the change for you."
           ]
         ],
         unsoldrange: [1046, 65, -150, 1047, 65, -150],

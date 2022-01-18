@@ -162,7 +162,7 @@ export const item = {
           color: "gold"
         }),
         Lore:`[${rawJson({
-          text:"Valued at 1.00 BOV"
+          text:"Valued at 1.00 BCK"
         })}]`
       }
     }
@@ -241,7 +241,7 @@ export const item = {
             color: "#3d1e24"
           }),
           Lore:`[${rawJson({
-            text:"Worth 0.01 BOV"
+            text:"Worth 0.01 BCK"
           })}]`
         }
       }
@@ -256,7 +256,7 @@ export const item = {
             color: "#7d3d2b"
           }),
           Lore:`[${rawJson({
-            text:"Worth 0.05 BOV"
+            text:"Worth 0.05 BCK"
           })}]`
         }
       }
@@ -271,7 +271,7 @@ export const item = {
             color: "#bf5935"
           }),
           Lore:`[${rawJson({
-            text:"Worth 0.10 BOV"
+            text:"Worth 0.10 BCK"
           })}]`
         }
       }
@@ -286,7 +286,7 @@ export const item = {
             color: "#d99413"
           }),
           Lore:`[${rawJson({
-            text:"Worth 0.25 BOV"
+            text:"Worth 0.25 BCK"
           })}]`
         }
       }
@@ -301,7 +301,7 @@ export const item = {
             color: "#717171"
           }),
           Lore:`[${rawJson({
-            text:"Worth 1.00 BOV"
+            text:"Worth 1.00 BCK"
           })}]`
         }
       }
@@ -316,7 +316,7 @@ export const item = {
             color: "#302829"
           }),
           Lore:`[${rawJson({
-            text:"Worth 5.00 BOV"
+            text:"Worth 5.00 BCK"
           })}]`
         }
       }
