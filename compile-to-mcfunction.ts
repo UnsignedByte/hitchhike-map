@@ -3935,8 +3935,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('parkour/offtrail', [
       `tag @a remove parkour-offtrail`,
-      `execute as @a[nbt={OnGround:1b}] at @s ${safeblocks.map(x=>corners.map(c=>`unless block ~${c[0]} ~-0.1 ~${c[1]} ${x}`).join(' ')).join(' ')} run tag @s add parkour-offtrail`,
-      `execute as @a[tag=parkour-offtrail] at @s ${[0,1].map(x=>corners.map(c=>`if block ~${c[0]} ~${x} ~${c[1]} air`).join(' ')).join(' ')} run tag remove @s parkour-offtrail`
+      `execute as @a[gamemode=adventure,nbt={OnGround:1b}] at @s ${safeblocks.map(x=>corners.map(c=>`unless block ~${c[0]} ~-0.1 ~${c[1]} ${x}`).join(' ')).join(' ')} run tag @s add parkour-offtrail`,
+      `execute as @a[tag=parkour-offtrail] at @s ${[0,1].map(x=>corners.map(c=>`if block ~${c[0]} ~${x} ~${c[1]} air`).join(' ')).join(' ')} run tag remove @s parkour-offtrail`,
+      `effect give @a[tag=parkour-offtrail] slowness 1 255 true`,
+      `effect give @a[tag=parkour-offtrail] jump_boost 1 128 true`,
+      `title @p actionbar {"text":"Please return to the trail!","color":"red"}`,
+      `scoreboard players add @a parkour-offtrail 1`,
+      `scoreboard players reset @a[tag=!parkour-offtrail] parkour-offtrail`,
+      `execute as @e[tag=parkour-offtrail,scores={parkour-offtrail=100..} run function generated:story/parkour/respawn`
     ])
 
     genseq('parkour/start_seq', {
