@@ -3942,7 +3942,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `title @p actionbar {"text":"Please return to the trail!","color":"red"}`,
       `scoreboard players add @a parkour-offtrail 1`,
       `scoreboard players reset @a[tag=!parkour-offtrail] parkour-offtrail`,
-      `execute as @e[tag=parkour-offtrail,scores={parkour-offtrail=100..} run function generated:story/parkour/respawn`
+      `execute as @e[tag=parkour-offtrail,scores={parkour-offtrail=100..}] run function generated:story/parkour/respawn`
     ])
 
     genseq('parkour/start_seq', {
