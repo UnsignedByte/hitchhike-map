@@ -7,4 +7,3 @@ title @a[gamemode=adventure,tag=parkour-offtrail] actionbar {"text":"Please retu
 scoreboard players add @a[tag=parkour-offtrail] parkour-offtrail 1
 scoreboard players reset @a[tag=!parkour-offtrail,nbt={OnGround:1b}] parkour-offtrail
 execute as @e[gamemode=adventure,tag=parkour-offtrail,scores={parkour-offtrail=50..}] run function generated:story/parkour/respawn
-say @a[tag=parkour-offtrail]
