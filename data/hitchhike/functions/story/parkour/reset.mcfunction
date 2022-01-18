@@ -32,6 +32,6 @@ summon leash_knot 830 124 487 {NoGravity:1b,Silent:1b,Tags:["parkour-leash-knot"
 summon leash_knot 829 124 486 {NoGravity:1b,Silent:1b,Tags:["parkour-leash-knot"]}
 summon leash_knot 833 124 484 {NoGravity:1b,Silent:1b,Tags:["parkour-leash-knot"]}
 summon leash_knot 832 124 483 {NoGravity:1b,Silent:1b,Tags:["parkour-leash-knot"]}
-summon slime 830 124.3 487 {NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"collisionless",Leashed:1b,PersistenceRequired:1b,NoAI:1b,Tags:["parkour-leash-knot","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Leash:{X:833,Y:124,Z:484}}
-summon slime 829 124.3 486 {NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"collisionless",Leashed:1b,PersistenceRequired:1b,NoAI:1b,Tags:["parkour-leash-knot","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Leash:{X:832,Y:124,Z:483}}
+summon slime 830 124.3 487 {Rotation:[-135.0F,0.0F],NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"collisionless",Leashed:1b,PersistenceRequired:1b,NoAI:1b,Tags:["parkour-leash-knot","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Leash:{X:833,Y:124,Z:484}}
+summon slime 829 124.3 486 {Rotation:[-135.0F,0.0F],NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"collisionless",Leashed:1b,PersistenceRequired:1b,NoAI:1b,Tags:["parkour-leash-knot","invisible"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],Leash:{X:832,Y:124,Z:483}}
 team join collisionless @e[tag=parkour-leash-knot]
