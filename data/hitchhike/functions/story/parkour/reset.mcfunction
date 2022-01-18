@@ -1,3 +1,5 @@
+scoreboard objectives remove parkour-offtrail
+scoreboard objectives add parkour-offtrail dummy
 scoreboard objectives remove checkpoint-id
 scoreboard objectives add checkpoint-id dummy
 kill @e[tag=checkpoint-marker]
