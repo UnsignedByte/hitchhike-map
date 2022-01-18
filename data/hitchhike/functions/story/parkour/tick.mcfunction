@@ -10,4 +10,4 @@ execute as @a[x=941,y=149,z=513,dx=35,dy=0,dz=17,gamemode=adventure] run functio
 
 tag @a remove crouching
 tag @a[scores={crouching=1..}] add crouching
-scoreboard objectives set @a crouching 0
+scoreboard players set @a crouching 0
