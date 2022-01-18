@@ -211,7 +211,7 @@ export async function init (
       'setblock 1021 65 -44 air',
       `setblock 1021 65 -44 minecraft:lectern[facing=south,has_book=true]${toSnbt({
         Page: 0,
-        Book: Object.assign({Count:'1b'}, item.books.lorem)
+        Book: Object.assign({Count:'1b'}, item.books.blank)
       })}`,
       `# KILL EXISTING ITEM HOLDERS`,
       `kill @e[tag=item_holder]`,

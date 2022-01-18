@@ -2092,6 +2092,10 @@ export const item = {
         title: "The Player's Guide to Minecraft",
         author: "Stephen O'Brien"
       },
+      blank: {
+        title: "Empty Notebook",
+        author: "Francis O'Bognole"
+      },
       // bee: {
       //   title: "The Bee Movie",
       //   author: "DreamWorks Animation"
