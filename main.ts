@@ -201,6 +201,18 @@ export async function init (
         Page: 0,
         Book: Object.assign({Count:'1b'}, item.books["1984"])
       })}`,
+      ``,
+      `# Update lecterns elsewhere`,
+      'setblock 1026 65 -52 air',
+      `setblock 1026 65 -52 minecraft:lectern[facing=north,has_book=true]${toSnbt({
+        Page: 0,
+        Book: Object.assign({Count:'1b'}, item.books.mcguide)
+      })}`,
+      'setblock 1021 65 -44 air',
+      `setblock 1021 65 -44 minecraft:lectern[facing=south,has_book=true]${toSnbt({
+        Page: 0,
+        Book: Object.assign({Count:'1b'}, item.books.lorem)
+      })}`,
       `# KILL EXISTING ITEM HOLDERS`,
       `kill @e[tag=item_holder]`,
       Object.entries(data.itemphysics).map(([k, v])=>{
