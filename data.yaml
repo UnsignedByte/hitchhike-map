@@ -507,8 +507,8 @@ npc:
       colour: 0x183aab
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhmMmZlNTFlODc1ODk4YTFmZTZkMzJiOWQzMWVlMjc3YjllMWZhOGZjYWQ5ODY2ZWNiZWZmY2QyMDQ0YjVhNyJ9fX0=
       villager:
-        type: snow
-        profession: fisherman
+        type: taiga
+        profession: none
       dialogue:
         - messages:
           - message: ... Eh? Who goes there?! Solomon, is that you?
