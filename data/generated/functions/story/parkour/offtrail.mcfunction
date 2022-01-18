@@ -3,7 +3,6 @@ execute as @a[nbt={OnGround:1b}] at @s unless block ~-0.3 ~-0.1 ~-0.3 andesite_s
 execute as @a[tag=parkour-offtrail] at @s unless block ~-0.3 ~0 ~-0.3 void_air unless block ~-0.3 ~0 ~0.3 void_air unless block ~0.3 ~0 ~-0.3 void_air unless block ~0.3 ~0 ~0.3 void_air unless block ~-0.3 ~1 ~-0.3 void_air unless block ~-0.3 ~1 ~0.3 void_air unless block ~0.3 ~1 ~-0.3 void_air unless block ~0.3 ~1 ~0.3 void_air run tag @s remove parkour-offtrail
 effect give @a[gamemode=adventure,tag=parkour-offtrail] slowness 1 255 true
 effect give @a[gamemode=adventure,tag=parkour-offtrail] jump_boost 1 128 true
-effect give @a[gamemode=adventure,tag=parkour-offtrail] levitation 1 128 true
 title @a[gamemode=adventure,tag=parkour-offtrail] actionbar {"text":"Please return to the trail!","color":"red"}
 scoreboard players add @a[tag=parkour-offtrail] parkour-offtrail 1
 scoreboard players reset @a[tag=!parkour-offtrail,nbt={OnGround:1b}] parkour-offtrail
