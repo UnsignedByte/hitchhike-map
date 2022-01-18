@@ -3923,7 +3923,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       "andesite_slab",
       "light_gray_concrete_powder",
       "dirt_path",
-      "coarse_dirt"
+      "coarse_dirt",
+      "spruce_stairs",
+      "spruce_slab"
     ]
 
     const corners = [
