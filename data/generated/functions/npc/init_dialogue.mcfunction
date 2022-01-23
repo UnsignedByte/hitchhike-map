@@ -85,6 +85,10 @@ execute as @s[tag=npc-bobknutz] at @s run function generated:npc/bobknutz/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-pennyisses] at @s run function generated:npc/pennyisses/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-stephen] at @s run function generated:npc/stephen/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-matthew] at @s run function generated:npc/matthew/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_apple] at @s run function generated:npc/__safeway_apple/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_melon_slice] at @s run function generated:npc/__safeway_melon_slice/tick

@@ -42,7 +42,7 @@ function generated:story/parkour/loadchunks
 forceload add 826 484 836 484
 
 # Tower
-forceload add 983 569
+forceload add 978 553 1002 590
 
 # Waits for the chunks to actually load
 schedule function hitchhike:truereset 20t
