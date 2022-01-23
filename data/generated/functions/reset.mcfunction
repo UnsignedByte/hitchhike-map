@@ -779,7 +779,7 @@ summon minecraft:villager 1026.50 65 -52.30 {Rotation: [0f, 40f], Silent: 1b, In
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for stephen.
-summon minecraft:villager 794.70 78 -47.00 {Rotation: [-90f, 40f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-stephen"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y1ZjMxMzkzNjgzYThmNDYxNTNkMjBjMmQxNTg5NjM2MTAwOTU4ZDFiOTc0YTVhOGQ4MmU2ZWEwYTQ5MWFhMyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:librarian", level: 99}, Offers: {}, CustomName: '{"text":"Stephen Fallus","bold":true}'}
+summon minecraft:villager 794.70 78 -46.50 {Rotation: [-90f, 40f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-stephen"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y1ZjMxMzkzNjgzYThmNDYxNTNkMjBjMmQxNTg5NjM2MTAwOTU4ZDFiOTc0YTVhOGQ4MmU2ZWEwYTQ5MWFhMyJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:librarian", level: 99}, Offers: {}, CustomName: '{"text":"Stephen Fallus","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for matthew.
