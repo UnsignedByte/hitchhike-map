@@ -1499,7 +1499,7 @@ npc:
           cond: 2
           end: 
           - type: score
-            value: npc-matthew dialogue-status 1
+            value: ${npc.matthew} dialogue-status 1
           - type: score
             value: ${select.self} dialogue-status -1
     matthew:
@@ -1515,7 +1515,7 @@ npc:
           - The adoption of revolutionary new approaches toward marketing and design can definitely lead to an unequivocally positive effect on earnings.
           end:
             - type: score
-              value: npc-stephen dialogue-status 1
+              value: ${npc.stephen} dialogue-status 1
             - type: score
               value: ${select.self} dialogue-status -1
 
