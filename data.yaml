@@ -1490,6 +1490,8 @@ npc:
         - messages:
           - message: Hmm... You make a very intriguing proposition.
             wait: 100
+            command:
+              - '${tp(794.7, 78, -46.5, -90, 0)}'
           - A shift toward such innovative paradigms will surely be a profitable move for this company.
           cond: 1
           end: 2
@@ -1506,6 +1508,7 @@ npc:
       name: Matthew Sciento
       position: 796.5 78 -48.3
       rotation: 0 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWEzZWMwMmViMGFlYjdiZDI3YWM2YzIxM2JhMDAyMGFmYjkxMDk0ZTYyZWQ0OTYyYThhNDRkMjcxNmE2ODY1ZCJ9fX0=
       villager:
         type: plains
         profession: mason

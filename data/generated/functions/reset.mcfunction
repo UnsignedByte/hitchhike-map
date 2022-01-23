@@ -783,7 +783,7 @@ summon minecraft:villager 794.70 78 -46.50 {Rotation: [-90f, 40f], Silent: 1b, I
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for matthew.
-summon minecraft:villager 796.50 78 -48.30 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-matthew"], VillagerData: {type: "minecraft:plains", profession: "minecraft:mason", level: 99}, Offers: {}, CustomName: '{"text":"Matthew Sciento","bold":true}'}
+summon minecraft:villager 796.50 78 -48.30 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-matthew"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWEzZWMwMmViMGFlYjdiZDI3YWM2YzIxM2JhMDAyMGFmYjkxMDk0ZTYyZWQ0OTYyYThhNDRkMjcxNmE2ODY1ZCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:mason", level: 99}, Offers: {}, CustomName: '{"text":"Matthew Sciento","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_apple.
