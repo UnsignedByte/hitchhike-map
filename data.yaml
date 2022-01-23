@@ -1503,11 +1503,11 @@ npc:
             command:
               - ${tp(794.7, 78, -46.5, -14, 0)}
           - Additionally, I would also implore us to consider the large-scale impacts of such changes within the environment of the company.
-          - With the necessary funding, this can definitely set this organization back on the right check.
+          - With the necessary funding, these approaches can definitely set the organization back on the right check.
           cond: 2
           end: 
           - type: score
-            value: ${npc.damien} dialogue-status 1
+            value: '@e[tag=npc-damien] dialogue-status 1'
           - type: score
             value: ${select.self} dialogue-status -1
         - messages:
