@@ -1,4 +1,6 @@
 # Reset schedules
+schedule clear generated:scheduled/s-50
+function generated:scheduled/s-50
 schedule clear generated:scheduled/s-5
 function generated:scheduled/s-5
 schedule clear generated:scheduled/s-20

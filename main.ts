@@ -79,6 +79,10 @@ export async function init (
     functions['npc/loadchunks'].push(`forceload add ${result.loadpos[0]} ${result.loadpos[1]}`);
     Object.assign(functions, result.functions)
   }
+
+  // show dialogue particle
+  schedule(Object.entries(data.npc.npcs).map(([k, v]) => (v.dialogue || []).map(x=>`execute as @e[type=villager,tag=npc-${k},scores={dialogue-status=${x.cond}},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force`)), 50, functions);
+
   onTick.push([
     'execute as @e[tag=npc, tag=selected_npc, tag=!speaking] run function generated:npc/init_dialogue',
     'execute as @e[tag=npc, tag=speaking, tag=!npc-unface] at @s run function generated:npc/speaking'
