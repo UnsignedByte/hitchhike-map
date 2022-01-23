@@ -598,7 +598,7 @@ npc:
       position: 995.5 214 580.3
       rotation: -180 0
       colour: 0x732424
-      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRmNjAzZjRhZDZlZjY5NjdkN2QxYTJlYjUxZWQ4NmE3M2Q1MzRlZDlmZDQyOTZkNTE5ZjM4ZjNiMDM1In19fQ==
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTM2MTBmMTFmMzZkNTJiZjk2NGFkYTA1OTIyM2QyODk5ZWVhYzMwM2ExOTZkOGU4Y2Y3MDAzMGVlNzRjOGYxNSJ9fX0=
       villager:
         type: snow
         profession: armorer
@@ -1491,19 +1491,36 @@ npc:
           - message: Hmm... You make a very intriguing proposition.
             wait: 100
             command:
-              - '${tp(794.7, 78, -46.5, -90, 0)}'
+              - '${tp(794.7, 78, -46.5, -135, 0)}'
           - A shift toward such innovative paradigms will surely be a profitable move for this company.
           cond: 1
-          end: 2
+          end:
+            - type: score
+              value: ${select.self} dialogue-status 2
+            - ${tp(794.7, 78, -46.5, -14, 0)}
         - messages:
-          - Indeed, I definitely agree with these ideas.
+          - message: I definitely agree with Matthew on this.
+            command:
+              - ${tp(794.7, 78, -46.5, -14, 0)}
           - Additionally, I would also implore us to consider the large-scale impacts of such changes within the environment of the company.
+          - With the necessary funding, this can definitely set this organization back on the right check.
           cond: 2
           end: 
           - type: score
-            value: ${npc.matthew} dialogue-status 1
+            value: ${npc.damien} dialogue-status 1
           - type: score
             value: ${select.self} dialogue-status -1
+        - messages:
+          - message: Did he even listen to us?
+            command:
+              - ${tp(794.7, 78, -46.5, -135, 0)}
+          - All we needed is the funding...
+          cond: 3
+          end:
+            - type: score
+              value: ${npc.matthew} dialogue-status 1
+            - type: score
+              value: ${select.self} dialogue-status -1
     matthew:
       name: Matthew Sciento
       position: 796.5 78 -48.3
@@ -1515,12 +1532,46 @@ npc:
       dialogue:
         - messages:
           - As the emerging statistical models are clearly revealing, steps made, provided in the right direction, can significantly improve our quarter performance.
-          - The adoption of revolutionary new approaches toward marketing and design can definitely lead to an unequivocally positive effect on earnings.
+          - The adoption of these new approaches toward marketing and design can definitely lead to an unequivocally positive effect on earnings.
+          - All we need is your "okay" and we can go get the funding to implement some of these ideas.
           end:
             - type: score
               value: ${npc.stephen} dialogue-status 1
             - type: score
               value: ${select.self} dialogue-status -1
+        - messages:
+          - message: Uhh... so what now?
+            command:
+              - ${tp(796.5, 78, -48.3, 45, 0)}
+          cond: 1
+          end: -1
+    damien:
+      name: Damien Herst
+      position: 796.5 78 -41.7
+      rotation: -180 80
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVmMzA0YTMwNTIwMzU1MTZhNjZhYzQ4NWNiN2E3Mzg4MjE5OTYwODY1NWY0ZWQwMmQzZDBhNmQ1ZDRhZDIwZSJ9fX0=
+      villager:
+        type: taiga
+        profession: none
+      dialogue:
+        - messages:
+          - ...
+          end: -1
+        - messages:
+          - message:
+            - text: ...Eh?
+              italic: true
+            command:
+              - ${tp(796.5, 78, -41.7, -180, 0)}
+          - Hmm, that was a great discussion, I'm sure we could look further into some of the ideas proposed.
+          - Why don't both of you do some more research and get back to me with your findings?
+          cond: 1
+          end:
+            - type: score
+              value: ${npc.stephen} dialogue-status 3
+            - type: score
+              value: ${select.self} dialogue-status 0
+            - ${tp(796.5, 78, -41.7, -180, 80)}
 
 quest:
   birthday:

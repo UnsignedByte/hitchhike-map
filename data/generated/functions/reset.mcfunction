@@ -621,7 +621,7 @@ summon minecraft:villager 1075.70 125 355.50 {Rotation: [-90f, 30f], Silent: 1b,
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for solomon.
-summon minecraft:villager 995.50 214 580.30 {Rotation: [-180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-solomon"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRmNjAzZjRhZDZlZjY5NjdkN2QxYTJlYjUxZWQ4NmE3M2Q1MzRlZDlmZDQyOTZkNTE5ZjM4ZjNiMDM1In19fQ==" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:armorer", level: 99}, Offers: {}, CustomName: '{"text":"Solomon Quint","color":"#732424","bold":true}'}
+summon minecraft:villager 995.50 214 580.30 {Rotation: [-180f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-solomon"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTM2MTBmMTFmMzZkNTJiZjk2NGFkYTA1OTIyM2QyODk5ZWVhYzMwM2ExOTZkOGU4Y2Y3MDAzMGVlNzRjOGYxNSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:snow", profession: "minecraft:armorer", level: 99}, Offers: {}, CustomName: '{"text":"Solomon Quint","color":"#732424","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for janitor.
@@ -786,6 +786,10 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for matthew.
 summon minecraft:villager 796.50 78 -48.30 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-matthew"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWEzZWMwMmViMGFlYjdiZDI3YWM2YzIxM2JhMDAyMGFmYjkxMDk0ZTYyZWQ0OTYyYThhNDRkMjcxNmE2ODY1ZCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:mason", level: 99}, Offers: {}, CustomName: '{"text":"Matthew Sciento","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for damien.
+summon minecraft:villager 796.50 78 -41.70 {Rotation: [-180f, 80f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-damien"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVmMzA0YTMwNTIwMzU1MTZhNjZhYzQ4NWNiN2E3Mzg4MjE5OTYwODY1NWY0ZWQwMmQzZDBhNmQ1ZDRhZDIwZSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Damien Herst","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_apple.
