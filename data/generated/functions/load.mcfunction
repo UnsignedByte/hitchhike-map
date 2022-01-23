@@ -4060,6 +4060,8 @@ tag @a remove victim-of-dialogue-by-simon
 
 tag @a remove victim-of-dialogue-by-hurm
 
+tag @a remove victim-of-dialogue-by-solomon
+
 tag @a remove victim-of-dialogue-by-janitor
 
 tag @a remove victim-of-dialogue-by-safeway

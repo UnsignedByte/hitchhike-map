@@ -150,7 +150,8 @@ export const item = {
           color: "gray"
         })}]`
       },
-      Enchantments:`[{}]`
+      Enchantments:`[{}]`,
+      map: 0
     }
   },
   btc: {
@@ -195,9 +196,10 @@ export const item = {
           color: "dark_gray"
         })}]`
       },
+      sawyershovel: true,
       Unbreakable: true,
       HideFlags:127,
-      CanDestroy:`["minecraft:snow","minecraft:snow_block","minecraft:powder_snow"]`
+      // CanDestroy:`["minecraft:snow","minecraft:snow_block","minecraft:powder_snow"]`
     }
   },
   compass: {

@@ -3937,7 +3937,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
     addfunc('parkour/offtrail', [
       `tag @a remove parkour-offtrail`,
-      `execute as @a[nbt={OnGround:1b}] at @s ${safeblocks.map(x=>corners.map(c=>`unless block ~${c[0]} ~-0.1 ~${c[1]} ${x}`).join(' ')).join(' ')} run tag @s add parkour-offtrail`,
+      `execute as @a[nbt={OnGround:1b}] at @s unless entity @s[y=255,dy=100] ${safeblocks.map(x=>corners.map(c=>`unless block ~${c[0]} ~-0.1 ~${c[1]} ${x}`).join(' ')).join(' ')} run tag @s add parkour-offtrail`,
       `execute as @a[tag=parkour-offtrail] at @s ${[0,1].map(x=>corners.map(c=>`unless block ~${c[0]} ~${x} ~${c[1]} void_air`).join(' ')).join(' ')} run tag @s remove parkour-offtrail`,
       `effect give @a[gamemode=adventure,tag=parkour-offtrail] slowness 1 255 true`,
       `effect give @a[gamemode=adventure,tag=parkour-offtrail] jump_boost 1 128 true`,
@@ -3967,5 +3967,58 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     })
 
     schedule(`execute if score hurm-done vars matches 1 run give @a[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`, 20, functions)
+  })();
+
+  (() => {
+    const basementrange = "982 195 568 1003 210 587";
+    const params: Record<string, Record<string, string[]>> = {
+      "chest": {
+        "facing": [
+          "north",
+          "south",
+          "east",
+          "west"
+        ],
+        "type": [
+          "left",
+          "right",
+          "single"
+        ]
+      },
+      "barrel": {
+        "facing": [
+          "down",
+          "east",
+          "north",
+          "south",
+          "up",
+          "west"
+        ]
+      }
+    }
+
+    const tmpblock = `minecraft:smoker{Items:[{Count:1b,Slot:0b,id:"minecraft:stone",tag:{tmpblock:1b}}]}`;
+
+    const iterateblocks = (type: string, i: number, value: string): string[] => {
+      let vals: string[] = [];
+      const entries = [...Object.entries(params[type])];
+      if (i < entries.length) {
+        for (let j of entries[i][1]) {
+          vals = [...vals, ...iterateblocks(type, i+1, `${value},${entries[i][0]}=${j}`)];
+        }
+      } else {
+        return [`minecraft:${type}[${value.slice(1)}]`];
+      }
+
+      return vals;
+    };
+
+    addfunc('tower/resetbasement', [
+      ([] as string[]).concat(...Object.keys(params).map(k => iterateblocks(k, 0, ""))).map(s=>[
+        `fill ${basementrange} ${tmpblock} replace ${s}`,
+        `fill ${basementrange} ${s} replace ${tmpblock}`,
+      ])
+    ])
+
   })();
 }

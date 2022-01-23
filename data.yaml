@@ -89,7 +89,7 @@ npc:
           - message: Hmm, this will probably take a while.
             command:
               - '${tp(950.5, 70.0, -0.25, 0, 0)}'
-              - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 298'
+              - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 348'
               - 'scoreboard players set -held story-sawyer 0'
           - Maybe you can come back later instead? I can't focus on work with you in the room.
           - message: Come to think of it, since you have so much time anyways, could you help me get my computer mouse?
@@ -99,7 +99,7 @@ npc:
           - I think I left it in the bio lab at school with my backpack.
           - message: "I'll try to work on it in the meantime. Maybe if you come back early we could talk some more."
             command:
-              - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 275'
+              - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 347'
               - 'data modify entity ${select.self} HandItems[0] set value {}'
           - See you! Hopefully soon.
           cond: 4
@@ -593,6 +593,25 @@ npc:
               - function generated:story/hurm/nighttime_seq
           cond: 3
           end: -1
+    solomon:
+      name: Solomon Quint
+      position: 995.5 214 580.3
+      rotation: -180 0
+      colour: 0x732424
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRmNjAzZjRhZDZlZjY5NjdkN2QxYTJlYjUxZWQ4NmE3M2Q1MzRlZDlmZDQyOTZkNTE5ZjM4ZjNiMDM1In19fQ==
+      villager:
+        type: snow
+        profession: armorer
+      dialogue:
+        - messages:
+          - message:
+            - text: "...Hah? Who're you? Why'd Herb let you up in the "
+            - text: middle of the night
+              italic: true
+            - text: "??"
+          - You must be tired, come on in and make yourself at home.
+          - What insanity sent you up a mountain, at night, during a huge thunderstorm?
+          - ...Internet, huh. Well, sorry to spoil the mood, but that tower over there isnt really working either.
     janitor:
       name: Ivan Cummings
       position: 887.5 70 11.5
@@ -1442,7 +1461,7 @@ npc:
           - When did you get so big? Last time I saw you your dad could still pick you up with one arm!
           - I haven't seen him in so long either, too busy to even visit his own father...
           - Well, thanks for stopping buy, Jake! I was just thinking about you!
-          - It's so glad to meet you, Ja... uhh, Jason.
+          - It's so glad to meet you, Ja... uhh, James.
           end: -1
     pennyisses:
       name: Penny Eises
