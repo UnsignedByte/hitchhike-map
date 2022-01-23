@@ -1531,7 +1531,7 @@ npc:
         profession: mason
       dialogue:
         - messages:
-          - As the emerging statistical models are clearly revealing, steps made, provided in the right direction, can significantly improve our quarter performance.
+          - As the emerging statistical models are clearly revealing, making these steps (provided, in the right direction) can significantly improve our quarter performance.
           - The adoption of these new approaches toward marketing and design can definitely lead to an unequivocally positive effect on earnings.
           - All we need is your "okay" and we can go get the funding to implement some of these ideas.
           end:
