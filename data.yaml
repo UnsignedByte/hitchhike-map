@@ -1518,7 +1518,7 @@ npc:
           cond: 3
           end:
             - type: score
-              value: ${npc.matthew} dialogue-status 1
+              value: ${npc('matthew')} dialogue-status 1
             - type: score
               value: ${select.self} dialogue-status -1
     matthew:
@@ -1536,7 +1536,7 @@ npc:
           - All we need is your "okay" and we can go get the funding to implement some of these ideas.
           end:
             - type: score
-              value: ${npc.stephen} dialogue-status 1
+              value: ${npc('stephen')} dialogue-status 1
             - type: score
               value: ${select.self} dialogue-status -1
         - messages:
@@ -1563,12 +1563,12 @@ npc:
               italic: true
             command:
               - ${tp(796.5, 78, -41.7, -180, 0)}
-          - Hmm, that was a great discussion, I'm sure we could look further into some of the ideas proposed.
+          - Erm, that was a great discussion, I'm sure we could look further into some of the ideas proposed.
           - Why don't both of you do some more research and get back to me with your findings?
           cond: 1
           end:
             - type: score
-              value: ${npc.stephen} dialogue-status 3
+              value: ${npc('stephen')} dialogue-status 3
             - type: score
               value: ${select.self} dialogue-status 0
             - ${tp(796.5, 78, -41.7, -180, 80)}
@@ -1629,7 +1629,7 @@ quest:
           weight: 1
     end:
       - type: score
-        value: ${npc.simon} dialogue-status 3
+        value: ${npc('simon')} dialogue-status 3
   diet:
     name: Full Stomach
     description: Fill your stomach! Remember to keep a balanced diet (Fruit, vegetables, meat). How will Simon know if you finished this? A mystery.
@@ -1794,7 +1794,7 @@ quest:
           weight: 1
     end:
       - type: score
-        value: "${npc.simon} dialogue-status 5"
+        value: "${npc('simon')} dialogue-status 5"
   mouse:
     name: Missing Mouseketeer
     description: Retrieve Chris's mouse from the high school bio lab.
@@ -1811,7 +1811,7 @@ quest:
           weight: 1
     end:
       - type: score
-        value: "${npc.sawyer} dialogue-status 3"
+        value: "${npc('sawyer')} dialogue-status 3"
   sdcard:
     name: Decorruption
     description: Decorrupt the SD Card given by Simon. Don't know how? Maybe someone familiar with programming would know better...

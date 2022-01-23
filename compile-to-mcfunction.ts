@@ -5,7 +5,7 @@ import { item } from './item.ts'
 
 item; // prevent typescript from eliding this import because i hate typescript and it is cringe
 
-let npc: Record<string, string> = {} // dictionary for npc selectors
+const npc = (val: string): string => `@e[type=villager,tag=npc-${val}, limit=1]`;
 
 type NbtValue = string | number | boolean | undefined | null;
 type NbtData = {
@@ -88,16 +88,14 @@ export function createNpc (
   const HEAR_DIST = 25
 
   const select = {
-    self: `@e[tag=${npcTag}, limit=1]`,
-    selected: `@e[tag=${npcTag}, tag=selected_npc, tag=!speaking, limit=1]`,
-    speaking: `@e[tag=${npcTag}, tag=speaking, limit=1]`,
+    self: `@e[type=villager,tag=${npcTag}, limit=1]`,
+    selected: `@e[type=villager, tag=${npcTag}, tag=selected_npc, tag=!speaking, limit=1]`,
+    speaking: `@e[type=villager, tag=${npcTag}, tag=speaking, limit=1]`,
 
     player: `@a[tag=${playerTag}, limit=1]`,
     newPlayer: `@a[tag=${playerTag}, tag=!spoken-to, limit=1]`,
     eavesdropper: `@a[tag=npc-eavesdropper]`
   }
-
-  npc[id] = select.self;
 
   const functions: Record<string, Lines> = {}
 

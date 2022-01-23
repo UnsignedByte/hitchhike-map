@@ -1,8 +1,8 @@
 tag @a[tag=victim-of-dialogue-by-simon, limit=1] add npc-eavesdropper
-execute at @e[tag=npc-simon, limit=1] run tag @a[distance=..25] add npc-eavesdropper
+execute at @e[type=villager,tag=npc-simon, limit=1] run tag @a[distance=..25] add npc-eavesdropper
 # Dialogue line #0-1: speak and make noise.
-execute at @e[tag=npc-simon, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Simon Ursus Stephens","color":"#85deb1","bold":true},"> ",{"text":"HEY! What are you doing on my driveway? In fact, what are you doing HERE?"}]
-execute at @e[tag=npc-simon, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
+execute at @e[type=villager,tag=npc-simon, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Simon Ursus Stephens","color":"#85deb1","bold":true},"> ",{"text":"HEY! What are you doing on my driveway? In fact, what are you doing HERE?"}]
+execute at @e[type=villager,tag=npc-simon, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 # Set correct rail path
 setblock 945 39 194 minecraft:rail[shape=east_west,waterlogged=false]
 setblock 942 39 189 minecraft:rail[shape=south_west,waterlogged=false]
@@ -11,7 +11,7 @@ setblock 912 34 193 minecraft:powered_rail[powered=false,shape=east_west,waterlo
 setblock 937 34 190 minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=none]
 setblock 929 34 193 minecraft:rail[shape=east_west,waterlogged=false]
 summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}
-tag @e[tag=npc-simon, limit=1] add npc-unface
+tag @e[type=villager,tag=npc-simon, limit=1] add npc-unface
 scoreboard players set -held story-simon 1
 schedule function generated:npc/simon/0-1 138t
 tag @a remove npc-eavesdropper
