@@ -11,6 +11,7 @@ tag @e[tag=npc-ericrosman] add npc-unface
 
 tag @e[tag=npc-stephen] add npc-unface
 tag @e[tag=npc-matthew] add npc-unface
+tag @e[tag=npc-damien] add npc-unface
 
 fill 973 70 2 973 71 2 air
 setblock 973 71 2 minecraft:dark_oak_door[facing=west,half=upper,hinge=right,open=false,powered=false]
