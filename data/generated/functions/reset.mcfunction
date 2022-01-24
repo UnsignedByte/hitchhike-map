@@ -797,7 +797,7 @@ summon minecraft:villager 821.50 78 -44.70 {Rotation: [180f, 10f], Silent: 1b, I
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for avaissmal.
-summon minecraft:villager 821.50 78 -68.30 {Rotation: [0f, -80f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-avaissmal"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjU0NDlmMjQzYjUxZjU2NmQzNjFkMDE5NDYwY2FiOGYxNTUzZTk4ODkwNDNjZTViMGRhODU5NzIwNTdiMjdmNiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:toolsmith", level: 99}, Offers: {}, CustomName: '{"text":"Ava Issmal","bold":true}'}
+summon minecraft:villager 821.50 78 -68.30 {Rotation: [0f, 80f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-avaissmal"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjU0NDlmMjQzYjUxZjU2NmQzNjFkMDE5NDYwY2FiOGYxNTUzZTk4ODkwNDNjZTViMGRhODU5NzIwNTdiMjdmNiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:toolsmith", level: 99}, Offers: {}, CustomName: '{"text":"Ava Issmal","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_apple.
