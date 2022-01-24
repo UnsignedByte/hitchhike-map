@@ -4058,11 +4058,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '/setblock 985 206 585 minecraft:chest[facing=north,type=single,waterlogged=false]{Items:[]}',
       '/setblock 984 205 574 minecraft:chest[facing=south,type=right,waterlogged=false]{Items:[]}',
       '/setblock 993 206 569 minecraft:chest[facing=east,type=single,waterlogged=false]{Items:[]}',
-      '/setblock 1000 204 570 minecraft:chest[facing=west,type=left,waterlogged=false]{Items:[]}'
+      '/setblock 1000 204 570 minecraft:chest[facing=west,type=left,waterlogged=false]{Items:[]}',
+      '/setblock 993 202 572 minecraft:chest[facing=east,type=single,waterlogged=false]{Items:[]}'
     ]
 
     addfunc('tower/placekey', [
-      validspots.map((x: string): string => x.match(/^\/setblock\s(\d+\s\d+\s\d+)\s.+$/)![1]!).map(x=> `data merge block ${x!} {Items:[${toSnbt(Object.assign({Count:'1b', Slot:'13b'}, item.boxkey))}]}`)
+      `scoreboard players set _rngm vars ${validspots.length}`,
+      'function generated:rng/rng',
+      validspots.map((x: string): string => x.match(/^\/setblock\s(\d+\s\d+\s\d+)\s.+$/)![1]!).map((x, i)=> `execute if score rng vars matches ${i} run data merge block ${x!} {Items:[${toSnbt(Object.assign({Count:'1b', Slot:'13b'}, item.boxkey))}]}`)
     ])
 
   })();
