@@ -243,10 +243,10 @@ export const item = {
         }),
         Lore:`[${rawJson([{
           text:"Required for",
-          color: "dark_gray"
+          color: "gray"
         }])}, ${rawJson([{
           text:"mountaintop hikes.",
-          color: "dark_gray"
+          color: "gray"
         }])}]`
       },
       Enchantments:`[{id:"minecraft:binding_curse",lvl:1s}]`,
@@ -265,10 +265,10 @@ export const item = {
         }),
         Lore:`[${rawJson([{
           text:"Key to the",
-          color: "dark_gray"
+          color: "grays"
         }])}, ${rawJson([{
           text:"tower's electrical box.",
-          color: "dark_gray"
+          color: "grays"
         }])}]`
       },
       Enchantments:`[{}]`,
