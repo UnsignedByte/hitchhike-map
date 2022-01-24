@@ -233,7 +233,7 @@ export const item = {
     }
   },
   snowshoes: {
-    id: '"minecraft:iron_boots',
+    id: '"minecraft:iron_boots"',
     tag: {
       display: {
         Name: rawJson({
