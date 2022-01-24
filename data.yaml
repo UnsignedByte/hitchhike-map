@@ -589,7 +589,8 @@ npc:
               - 'execute as @a run function generated:story/parkour/respawn'
               - team modify player collisionRule pushOtherTeams
               - team modify player friendlyFire false
-              - spawnpoint @s 1077 125 353
+              - function hitchhike:story/parkour/await_start
+              - spawnpoint @a 1077 125 353
               - function generated:story/hurm/nighttime_seq
           cond: 3
           end: -1
@@ -622,7 +623,7 @@ npc:
           - message: Imagine if I let you get the key to the electrical box from the chest in the basement and you climbed up that tower and got hurt doing so!
             command:
             - type: quest
-              value: boxkey
+              value: tower
           - That wouldn't do, would it? I guess you'll have to make your way back down the mountain...
           - If you need help, I'll be right here, completely focused on my computer and unable to hear the possible opening of any basement doors.
     janitor:

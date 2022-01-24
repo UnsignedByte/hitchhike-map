@@ -7,7 +7,8 @@ scoreboard players set #hurm-done vars 1
 execute as @a run function generated:story/parkour/respawn
 team modify player collisionRule pushOtherTeams
 team modify player friendlyFire false
-spawnpoint @s 1077 125 353
+function hitchhike:story/parkour/await_start
+spawnpoint @a 1077 125 353
 function generated:story/hurm/nighttime_seq
 schedule function generated:npc/hurm/2-end 216t
 tag @a remove npc-eavesdropper

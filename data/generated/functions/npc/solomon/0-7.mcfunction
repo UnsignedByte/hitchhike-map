@@ -3,6 +3,6 @@ execute at @e[type=villager,tag=npc-solomon, limit=1] run tag @a[distance=..25] 
 # Dialogue line #0-8: speak and make noise.
 execute at @e[type=villager,tag=npc-solomon, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Solomon Quint","color":"#732424","bold":true},"> ",{"text":"Imagine if I let you get the key to the electrical box from the chest in the basement and you climbed up that tower and got hurt doing so!"}]
 execute at @e[type=villager,tag=npc-solomon, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-function generated:quests/boxkey-start
+function generated:quests/tower-start
 schedule function generated:npc/solomon/0-8 252t
 tag @a remove npc-eavesdropper

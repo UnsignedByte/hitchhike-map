@@ -3864,7 +3864,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       "967.5 201.5 551.5",
       "972.5 208 557.5",
       // mountaintop
-      "987.5 213.125 584.5",
+      "987.5 213.25 584.5",
       "986.5 216 569.5"
     ]
 
@@ -3952,6 +3952,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       "coarse_dirt",
       "spruce_stairs",
       "spruce_slab",
+      "white_concrete_powder",
     ]
 
     const corners = [
