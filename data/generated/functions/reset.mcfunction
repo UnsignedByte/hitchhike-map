@@ -792,6 +792,14 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 796.50 78 -41.70 {Rotation: [-180f, 80f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-damien"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVmMzA0YTMwNTIwMzU1MTZhNjZhYzQ4NWNiN2E3Mzg4MjE5OTYwODY1NWY0ZWQwMmQzZDBhNmQ1ZDRhZDIwZSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:taiga", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Damien Herst","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for mikepound.
+summon minecraft:villager 821.50 78 -44.70 {Rotation: [180f, 10f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-mikepound"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzdmNjM4NWNlZjdlOTBkYTE4OGU0OTYxZjU4NGRmZDE0ZTIzM2QxODgxOTBlNTBjZTlmYWQwNGY2MDZkM2QzZSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:swamp", profession: "minecraft:leatherworker", level: 99}, Offers: {}, CustomName: '{"text":"Mike Pound","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for avaissmal.
+summon minecraft:villager 821.50 78 -68.30 {Rotation: [0f, -80f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-avaissmal"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjU0NDlmMjQzYjUxZjU2NmQzNjFkMDE5NDYwY2FiOGYxNTUzZTk4ODkwNDNjZTViMGRhODU5NzIwNTdiMjdmNiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:toolsmith", level: 99}, Offers: {}, CustomName: '{"text":"Ava Issmal","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 # Summon the villager for __safeway_apple.
 summon minecraft:villager 905.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_apple", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fuji Apple","color":"#FF0000"},{"text":" (1.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0

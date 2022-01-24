@@ -4146,6 +4146,10 @@ tag @a remove victim-of-dialogue-by-matthew
 
 tag @a remove victim-of-dialogue-by-damien
 
+tag @a remove victim-of-dialogue-by-mikepound
+
+tag @a remove victim-of-dialogue-by-avaissmal
+
 tag @a remove victim-of-dialogue-by-__safeway_apple
 
 tag @a remove victim-of-dialogue-by-__safeway_melon_slice
