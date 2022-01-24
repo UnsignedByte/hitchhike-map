@@ -1496,6 +1496,7 @@ npc:
       name: Stephen Fallus
       position: 794.7 78 -46.5
       rotation: -90 40
+      colour: 0xf08c71
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y1ZjMxMzkzNjgzYThmNDYxNTNkMjBjMmQxNTg5NjM2MTAwOTU4ZDFiOTc0YTVhOGQ4MmU2ZWEwYTQ5MWFhMyJ9fX0=
       villager:
         type: savanna
@@ -1539,6 +1540,7 @@ npc:
       name: Matthew Sciento
       position: 796.5 78 -48.3
       rotation: 0 0
+      colour: 0x5c3f16
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWEzZWMwMmViMGFlYjdiZDI3YWM2YzIxM2JhMDAyMGFmYjkxMDk0ZTYyZWQ0OTYyYThhNDRkMjcxNmE2ODY1ZCJ9fX0=
       villager:
         type: plains
@@ -1563,6 +1565,7 @@ npc:
       name: Damien Herst
       position: 796.5 78 -41.7
       rotation: -180 80
+      colour: 0xb8a184
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVmMzA0YTMwNTIwMzU1MTZhNjZhYzQ4NWNiN2E3Mzg4MjE5OTYwODY1NWY0ZWQwMmQzZDBhNmQ1ZDRhZDIwZSJ9fX0=
       villager:
         type: taiga
@@ -1590,6 +1593,7 @@ npc:
       name: Mike Pound
       position: 821.5 78 -44.7
       rotation: 180 10
+      colour: 0x527536
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzdmNjM4NWNlZjdlOTBkYTE4OGU0OTYxZjU4NGRmZDE0ZTIzM2QxODgxOTBlNTBjZTlmYWQwNGY2MDZkM2QzZSJ9fX0=
       villager:
         type: swamp
@@ -1603,6 +1607,7 @@ npc:
       name: Ava Issmal
       position: 821.5 78 -68.3
       rotation: 0 80
+      colour: 0x76a2a3
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjU0NDlmMjQzYjUxZjU2NmQzNjFkMDE5NDYwY2FiOGYxNTUzZTk4ODkwNDNjZTViMGRhODU5NzIwNTdiMjdmNiJ9fX0=
       villager:
         type: savanna
@@ -1611,6 +1616,7 @@ npc:
       name: Ekaterina Zubov
       position: 804.5 72 -68.3
       rotation: 0 0
+      colour: 0x9d86a6
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM3Mzg2NGUxZDZiMWM5NGEyODJlZThjZjkwZGI3ZTg0M2IyMjA4ZjM1OTE4ZDllYzIzZWRhZjAxMWQzNWYwNyJ9fX0=
       villager:
         type: swamp
