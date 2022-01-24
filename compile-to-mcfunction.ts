@@ -3918,6 +3918,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `scoreboard players operation @a[tag=checkpoint-candidate] checkpoint-id = #tmp checkpoint-id`,
       `playsound minecraft:entity.player.levelup player @a[tag=checkpoint-candidate] ~ ~${yoffset} ~ 0.3`,
       `title @a[tag=checkpoint-candidate] actionbar [{"text":"Checkpoint reached!","color":"green"}]`,
+      `scoreboard players set @a[tag=checkpoint-candidate] foodGoal 41`,
       `tag @a remove checkpoint-candidate`
     ])
 

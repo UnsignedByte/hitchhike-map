@@ -4,4 +4,5 @@ execute as @a[tag=checkpoint-candidate] if score @s checkpoint-id = #tmp checkpo
 scoreboard players operation @a[tag=checkpoint-candidate] checkpoint-id = #tmp checkpoint-id
 playsound minecraft:entity.player.levelup player @a[tag=checkpoint-candidate] ~ ~1.375 ~ 0.3
 title @a[tag=checkpoint-candidate] actionbar [{"text":"Checkpoint reached!","color":"green"}]
+scoreboard players set @a[tag=checkpoint-candidate] foodGoal 41
 tag @a remove checkpoint-candidate
