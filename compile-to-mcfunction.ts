@@ -4045,5 +4045,25 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ])
     ])
 
+    const validspots = [
+      '/setblock 983 207 584 minecraft:chest[facing=north,type=single,waterlogged=false]{Items:[]}',
+      '/setblock 983 200 585 minecraft:chest[facing=east,type=single,waterlogged=false]{Items:[]}',
+      '/setblock 990 206 575 minecraft:chest[facing=west,type=left,waterlogged=false]{Items:[]}',
+      '/setblock 989 206 576 minecraft:chest[facing=north,type=single,waterlogged=false]{Items:[]}',
+      '/setblock 988 204 572 minecraft:chest[facing=south,type=single,waterlogged=false]{Items:[]}',
+      '/setblock 1000 202 584 minecraft:chest[facing=west,type=left,waterlogged=false]{Items:[]}',
+      '/setblock 991 198 575 minecraft:chest[facing=east,type=single,waterlogged=false]{Items:[]}',
+      '/setblock 994 203 583 minecraft:chest[facing=north,type=single,waterlogged=false]{Items:[]}',
+      '/setblock 989 203 585 minecraft:chest[facing=north,type=single,waterlogged=false]{Items:[]}',
+      '/setblock 985 206 585 minecraft:chest[facing=north,type=single,waterlogged=false]{Items:[]}',
+      '/setblock 984 205 574 minecraft:chest[facing=south,type=right,waterlogged=false]{Items:[]}',
+      '/setblock 993 206 569 minecraft:chest[facing=east,type=single,waterlogged=false]{Items:[]}',
+      '/setblock 1000 204 570 minecraft:chest[facing=west,type=left,waterlogged=false]{Items:[]}'
+    ]
+
+    addfunc('tower/placekey', [
+      validspots.map((x: string): string => x.match(/^\/setblock\s(\d+\s\d+\s\d+)\s.+$/)![1]!).map(x=> `data merge block ${x!} {Items:[${toSnbt(Object.assign({Count:'1b', Slot:'13b'}, item.boxkey))}]}`)
+    ])
+
   })();
 }

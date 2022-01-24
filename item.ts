@@ -232,6 +232,28 @@ export const item = {
       }
     }
   },
+  boxkey: {
+    id: '"minecraft:tripwire_hook"',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "Electrical Box Key",
+          color: "aqua",
+          bold: true
+        }),
+        Lore:`[${rawJson([{
+          text:"Key to the",
+          color: "dark_gray"
+        }])}, ${rawJson([""])}, ${rawJson([{
+          text:"tower's electrical box.",
+          color: "dark_gray"
+        }])}]`
+      },
+      Enchantments:`[{}]`,
+      boxkey: true,
+      HideFlags:127
+    }
+  },
   money:{
     1: {
       id: '"minecraft:nether_brick"',
