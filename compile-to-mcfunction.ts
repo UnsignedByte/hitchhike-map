@@ -4032,7 +4032,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           vals = [...vals, ...iterateblocks(type, i+1, `${value},${entries[i][0]}=${j}`)];
         }
       } else {
-        return [`minecraft:${type}[${value.slice(1)}]{Items:[],Lock:"adminkey"}`];
+        return [`minecraft:${type}[${value.slice(1)}]`];
       }
 
       return vals;
@@ -4041,7 +4041,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('tower/resetbasement', [
       ([] as string[]).concat(...Object.keys(params).map(k => iterateblocks(k, 0, ""))).map(s=>[
         `fill ${basementrange} ${tmpblock} replace ${s}`,
-        `fill ${basementrange} ${s} replace ${tmpblock}`,
+        `fill ${basementrange} ${s}{Items:[],Lock:"adminkey"} replace ${tmpblock}`,
       ])
     ])
 
