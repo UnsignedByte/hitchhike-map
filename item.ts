@@ -232,6 +232,28 @@ export const item = {
       }
     }
   },
+  snowshoes: {
+    id: '"minecraft:iron_boots',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "Snow Boots",
+          color: "aqua",
+          bold: true
+        }),
+        Lore:`[${rawJson([{
+          text:"Required for",
+          color: "dark_gray"
+        }])}, ${rawJson([{
+          text:"mountaintop hikes.",
+          color: "dark_gray"
+        }])}]`
+      },
+      Enchantments:`[{id:"minecraft:binding_curse",lvl:1s}]`,
+      snowshoes: true,
+      HideFlags:127
+    }
+  },
   boxkey: {
     id: '"minecraft:tripwire_hook"',
     tag: {
@@ -244,7 +266,7 @@ export const item = {
         Lore:`[${rawJson([{
           text:"Key to the",
           color: "dark_gray"
-        }])}, ${rawJson([""])}, ${rawJson([{
+        }])}, ${rawJson([{
           text:"tower's electrical box.",
           color: "dark_gray"
         }])}]`

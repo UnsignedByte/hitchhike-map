@@ -27,8 +27,8 @@ function generated:scheduled/s-3
 kill @e[tag=npc]
 
 # Clear quest book from all players.
-data modify storage generated:quest_book current set value ["","","","","","","","","","","","",""]
-data modify storage generated:quest_book completed set value ["","","","","","","","","","","","",""]
+data modify storage generated:quest_book current set value ["","","","","","","","","","","","","",""]
+data modify storage generated:quest_book completed set value ["","","","","","","","","","","","","",""]
 clear @a minecraft:written_book{title:"Quest Book"}
 scoreboard objectives remove quest-book-upd
 scoreboard objectives add quest-book-upd dummy
@@ -983,6 +983,9 @@ function generated:quests/campfire-reset
 
 scoreboard players reset grillfish quest-status
 function generated:quests/grillfish-reset
+
+scoreboard players reset tower quest-status
+function generated:quests/tower-reset
 
 scoreboard players reset percy quest-status
 function generated:quests/percy-reset

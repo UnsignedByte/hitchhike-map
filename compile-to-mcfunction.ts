@@ -3072,7 +3072,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [1001,105,444]
     ]
 
-    schedule(`execute if score hurm-done vars matches 1 unless entity @e[tag=lake-boat,type=boat,x=1073,y=114,z=390,dx=1,dz=2] run summon boat 1074.0 113.5 391.5 {Invulnerable:1b,Type:"spruce",Tags:["lake-boat"],Passengers:[{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["aec","lake-boat"]}]}`, 100, functions);
+    schedule(`execute if score #hurm-done vars matches 1 unless entity @e[tag=lake-boat,type=boat,x=1073,y=114,z=390,dx=1,dz=2] run summon boat 1074.0 113.5 391.5 {Invulnerable:1b,Type:"spruce",Tags:["lake-boat"],Passengers:[{id:"minecraft:area_effect_cloud",Duration:2147483647,Tags:["aec","lake-boat"]}]}`, 100, functions);
 
 
     // addfunc('lake/reset', [
@@ -3822,7 +3822,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       "914.5 187 564.5",
       "933.5 193 585.5",
       "951.5 194 601.5",
-      "991.5 214 582.5",
       // first hill shortcut
       "830.5 127.5 457.5",
       "841.5 132.5 458.5",
@@ -3865,6 +3864,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       "967.5 201.5 551.5",
       "972.5 208 557.5",
       // mountaintop
+      "987.5 213.125 584.5",
       "986.5 216 569.5"
     ]
 
@@ -3991,7 +3991,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ]
     })
 
-    schedule(`execute if score hurm-done vars matches 1 run give @a[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`, 20, functions)
+    addfunc('parkour/fillshoechest', [
+      `data merge block 821 114 408 {Items:[${toSnbt(Object.assign({Count:'1b', Slot:'13b'}, item.snowshoes))}]}`
+    ])
+
+    schedule(`execute if score #hurm-done vars matches 1 run give @a[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`, 20, functions)
   })();
 
   (() => {
@@ -4059,7 +4063,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '/setblock 984 205 574 minecraft:chest[facing=south,type=right,waterlogged=false]{Items:[]}',
       '/setblock 993 206 569 minecraft:chest[facing=east,type=single,waterlogged=false]{Items:[]}',
       '/setblock 1000 204 570 minecraft:chest[facing=west,type=left,waterlogged=false]{Items:[]}',
-      '/setblock 993 202 572 minecraft:chest[facing=east,type=single,waterlogged=false]{Items:[]}'
+      '/setblock 993 202 572 minecraft:chest[facing=east,type=single,waterlogged=false]{Items:[]}',
     ]
 
     addfunc('tower/placekey', [

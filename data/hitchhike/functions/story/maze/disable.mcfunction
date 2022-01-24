@@ -14,3 +14,5 @@ team modify player friendlyFire true
 
 function generated:story/maze/unloadchunks
 forceload remove -1504 -2 -1371 129
+
+clear @a leather_boots{clownshoes:1b}

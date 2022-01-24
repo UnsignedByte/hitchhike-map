@@ -9,3 +9,4 @@ function hitchhike:story/stores/reset
 function hitchhike:story/biolab/reset
 function hitchhike:story/misc/reset
 function hitchhike:story/parkour/reset
+function hitchhike:story/tower/reset

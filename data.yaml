@@ -585,7 +585,7 @@ npc:
           - message: Here, these compasses will point you towards the mountaintop. Good luck with that hike, sport, I've heard it's difficult.
             command:
               - type: score
-                value: hurm-done vars 1
+                value: "#hurm-done vars 1"
               - 'execute as @a run function generated:story/parkour/respawn'
               - team modify player collisionRule pushOtherTeams
               - team modify player friendlyFire false
@@ -612,6 +612,19 @@ npc:
           - You must be tired, come on in and make yourself at home.
           - What insanity sent you up a mountain, at night, during a huge thunderstorm?
           - ...Internet, huh. Well, sorry to spoil the mood, but that tower over there isnt really working either.
+          - A lightning strike must have shorted the electrical components at the top.
+          - You say you can fix it?
+          - message:
+            - text: "Sorry, I can't "
+            - text: let
+              italic: true
+            - text: " you do something that dangerous, or I would get in trouble."
+          - message: Imagine if I let you get the key to the electrical box from the chest in the basement and you climbed up that tower and got hurt doing so!
+            command:
+            - type: quest
+              value: boxkey
+          - That wouldn't do, would it? I guess you'll have to make your way back down the mountain...
+          - If you need help, I'll be right here, completely focused on my computer and unable to hear the possible opening of any basement doors.
     janitor:
       name: Ivan Cummings
       position: 887.5 70 11.5
@@ -1609,7 +1622,8 @@ quest:
     condition:
       type: cond
       value:
-        - if score hurm-done vars matches 1
+        - "if score #hurm-done vars matches 1"
+        - "if score #parkour-started vars matches 1"
         - if score preparedness quest-status matches -1
       count: 2
   visitfriend: # visit friend's house
@@ -1892,6 +1906,14 @@ quest:
       - execute if score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value "Nice job on the fish, though. Maybe a little charred but otherwise quite delectable."
       - execute unless score -caught hurm-fish-caught matches 4.. run data modify storage hitchhike:story/hurm fish_message set value "What an amazingly cooked fish though; if I didn't know better I would think you got it straight from a restaurant. It's amazing what you managed to make with no spices or anything."
       - scoreboard players set @e[tag=npc-hurm] dialogue-status 3
+  tower:
+    name: Electrical Fiddling
+    description: The tower isn't working. Take the electrical box key from the basement, climb up the tower, and get it working again.
+    condition:
+      type: cond
+      value:
+        - "if entity @a[nbt={Inventory:[{tag:{boxkey:1b}}]}]"
+        - "if score #tower-climbed vars matches 1"
   percy:
     name: Sugar Buddy..?
     description: Complete your daily chat with Percival.

@@ -1,0 +1,1 @@
+execute if entity @a[x=978,y=253,z=555,dx=16,dy=12,dz=16] run scoreboard players set #tower-climbed vars 1

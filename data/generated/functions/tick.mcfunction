@@ -38,4 +38,6 @@ execute if score campfire quest-status matches 0.. run function generated:quests
 
 execute if score grillfish quest-status matches 0.. run function generated:quests/grillfish-tick
 
+execute if score tower quest-status matches 0.. run function generated:quests/tower-tick
+
 execute if score percy quest-status matches 0.. run function generated:quests/percy-tick

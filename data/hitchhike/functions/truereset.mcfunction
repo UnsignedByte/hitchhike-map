@@ -5,6 +5,7 @@ gamerule doDaylightCycle false
 gamerule playersSleepingPercentage 200
 gamerule doLimitedCrafting true
 gamerule doImmediateRespawn true
+gamerule keepInventory true
 # gamerule sendCommandFeedback false
 stopsound @a
 recipe take @a *

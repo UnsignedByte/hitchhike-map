@@ -1,4 +1,4 @@
-scoreboard players set hurm-done vars 0
+scoreboard players set #hurm-done vars 0
 
 #> Reset doors
 
