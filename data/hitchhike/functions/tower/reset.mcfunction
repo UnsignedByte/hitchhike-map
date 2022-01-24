@@ -1,0 +1,1 @@
+function generated:story/tower/resetbasement

@@ -4032,7 +4032,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           vals = [...vals, ...iterateblocks(type, i+1, `${value},${entries[i][0]}=${j}`)];
         }
       } else {
-        return [`minecraft:${type}[${value.slice(1)}]`];
+        return [`minecraft:${type}[${value.slice(1)}]{Items:[],Lock:"adminkey"}`];
       }
 
       return vals;
