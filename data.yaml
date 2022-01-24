@@ -1607,6 +1607,20 @@ npc:
       villager:
         type: savanna
         profession: toolsmith
+    ekaterina:
+      name: Ekaterina Zubov
+      position: 804.5 72 -68.3
+      rotation: 0 0
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM3Mzg2NGUxZDZiMWM5NGEyODJlZThjZjkwZGI3ZTg0M2IyMjA4ZjM1OTE4ZDllYzIzZWRhZjAxMWQzNWYwNyJ9fX0=
+      villager:
+        type: swamp
+        profession: fletcher
+      dialogue:
+        - messages:
+          - Do you happen to know what has happened with the internet?
+          - Being offline makes it difficult to work.
+          end: -1
+
 
 quest:
   birthday:
@@ -1626,7 +1640,7 @@ quest:
         - "if score #hurm-done vars matches 1"
         - "if score #parkour-started vars matches 1"
         - if score preparedness quest-status matches -1
-      count: 2
+      count: 3
   visitfriend: # visit friend's house
     name: Talk to Chris
     hint: The internet seems to have gone down, but you don't know why. Luckily, you happen to know a programmer friend. Maybe pay them a visit?
@@ -1915,6 +1929,7 @@ quest:
       value:
         - "if entity @a[nbt={Inventory:[{tag:{boxkey:1b}}]}]"
         - "if score #tower-climbed vars matches 1"
+      count: 2
   percy:
     name: Sugar Buddy..?
     description: Complete your daily chat with Percival.

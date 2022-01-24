@@ -4,5 +4,5 @@ execute if entity @a[nbt={Inventory:[{tag:{boxkey:1b}}]}] run scoreboard players
 execute if score #tower-climbed vars matches 1 run scoreboard players add q-12-0 q-12 1
 scoreboard players operation q-12-0 q-12 *= 100 const
 scoreboard players operation q-12-0 q-12 *= 100 const
-scoreboard players operation q-12-0 q-12 /= 100 const
+scoreboard players operation q-12-0 q-12 /= 200 const
 execute unless score q-12-0 q-12 matches ..100 run scoreboard players set q-12-0 q-12 100
