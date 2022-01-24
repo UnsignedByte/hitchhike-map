@@ -3809,6 +3809,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
 
   (() => {
     const checkpoints = [
+      // first hill shortcut
+      "830.5 123.5 455.5",
+      "830.5 127.5 457.5",
+      "841.5 132.5 458.5",
+      "848.5 141.5 463.5",
+      "861.5 149.5 472.5",
+      "867.5 153.5 480.5",
+      "881.5 139.9375 477.5",
       // Glacier shortcut
       "935.5 145.5 498.5",
       "939.5 145.5 495.5",
@@ -3836,7 +3844,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       "967.5 173.5 542.5",
       "965.5 176.5 533.5",
       "973.5 179 539.5",
-      "969.5 186 543.5"
+      "969.5 186 543.5",
+      // out of mine up snow
+      "970.5 197 546.5",
+      "966.5 197 554.5",
+      "967.5 201.5 551.5",
+      "972.5 208 557.5",
+      // mountaintop
+      "986.5 216 569.5"
     ]
 
     const checkpointRaw = checkpoints.map(x=> x.split(" ").map(Number));
