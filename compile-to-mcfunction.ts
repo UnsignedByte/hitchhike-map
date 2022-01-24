@@ -4010,16 +4010,16 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
           "single"
         ]
       },
-      "barrel": {
-        "facing": [
-          "down",
-          "east",
-          "north",
-          "south",
-          "up",
-          "west"
-        ]
-      }
+      // "barrel": {
+      //   "facing": [
+      //     "down",
+      //     "east",
+      //     "north",
+      //     "south",
+      //     "up",
+      //     "west"
+      //   ]
+      // }
     }
 
     const tmpblock = `minecraft:smoker{Items:[{Count:1b,Slot:0b,id:"minecraft:stone",tag:{tmpblock:1b}}]}`;
@@ -4041,7 +4041,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('tower/resetbasement', [
       ([] as string[]).concat(...Object.keys(params).map(k => iterateblocks(k, 0, ""))).map(s=>[
         `fill ${basementrange} ${tmpblock} replace ${s}`,
-        `fill ${basementrange} ${s}{Items:[],Lock:"adminkey"} replace ${tmpblock}`,
+        `fill ${basementrange} ${s} replace ${tmpblock}`,
       ])
     ])
 
