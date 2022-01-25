@@ -92,7 +92,7 @@ npc:
               - 'data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 348'
               - 'scoreboard players set -held story-sawyer 0'
           - Maybe you can come back later instead? I can't focus on work with you in the room.
-          - message: Come to think of it, since you have so much time anyways, could you help me get my computer mouse?
+          - message: Come to think of it, since you have so much time anyways, could you help me get my computer mouse? Its hard to work without it.
             command:
               - type: quest
                 value: mouse

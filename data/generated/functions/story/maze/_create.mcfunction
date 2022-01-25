@@ -16,4 +16,4 @@ scoreboard players set bossbar maze 0
 summon marker -1500 13 0 {Tags:["maze-marker","maze-create-root"]}
 
 scoreboard players operation _x maze = size maze
-schedule function generated:story/maze/create/_x
+schedule function generated:story/maze/create/_x 1t

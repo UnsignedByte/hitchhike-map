@@ -2382,7 +2382,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `summon marker -1500 ${cellsize+(cellsize-1)/2} 0 {Tags:["maze-marker","maze-create-root"]}`,
       '',
       'scoreboard players operation _x maze = size maze',
-      'schedule function generated:story/maze/create/_x'
+      'schedule function generated:story/maze/create/_x 1t'
     ]);
 
     addfunc('maze/create/_x', [
