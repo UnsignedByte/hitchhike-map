@@ -2357,7 +2357,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create', [
-      `function hitchhike:story/maze/reset`,
       `forceload add -1504 -2 -1371 129`,
       `function generated:story/maze/loadchunks`,
       '',
@@ -2367,6 +2366,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/_create', [
       '# Reset maze',
       'kill @e[tag=maze-marker]',
+      `function hitchhike:story/maze/reset`,
       '# Set Size of maze',
       `scoreboard players set cellsize maze ${cellsize}`,
       'scoreboard players set size maze 15',
@@ -2380,9 +2380,11 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'bossbar set minecraft:maze value 0',
       'scoreboard players set bossbar maze 0',
       `summon marker -1500 ${cellsize+(cellsize-1)/2} 0 {Tags:["maze-marker","maze-create-root"]}`,
+      `forceload add -1504 -2 -1371 129`,
+      `function generated:story/maze/loadchunks`,
       '',
       'scoreboard players operation _x maze = size maze',
-      'schedule function generated:story/maze/create/_x 1t'
+      'schedule function generated:story/maze/create/_x 20t'
     ]);
 
     addfunc('maze/create/_x', [

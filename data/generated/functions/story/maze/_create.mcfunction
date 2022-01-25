@@ -1,5 +1,6 @@
 # Reset maze
 kill @e[tag=maze-marker]
+function hitchhike:story/maze/reset
 # Set Size of maze
 scoreboard players set cellsize maze 9
 scoreboard players set size maze 15
@@ -13,6 +14,8 @@ bossbar set minecraft:maze style progress
 bossbar set minecraft:maze value 0
 scoreboard players set bossbar maze 0
 summon marker -1500 13 0 {Tags:["maze-marker","maze-create-root"]}
+forceload add -1504 -2 -1371 129
+function generated:story/maze/loadchunks
 
 scoreboard players operation _x maze = size maze
-schedule function generated:story/maze/create/_x 1t
+schedule function generated:story/maze/create/_x 20t
