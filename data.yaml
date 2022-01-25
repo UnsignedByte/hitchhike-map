@@ -21,7 +21,7 @@ npc:
           - message: You really just broke right in, didn't you?
             command:
               - scoreboard players set visitfriend-start story-sawyer 1
-          - I guess you couldn't really text with the storm knocking everything out but you could've at least knocked.
+          - I guess you couldn't really text with the storm taking everything out but you could've at least knocked.
           - message: ... Anyways, what's up?
             wait: 60
           - So you're here for my help again, huh.
@@ -654,7 +654,8 @@ npc:
           - message: What do you want now...
             wait: 100
           - So, your friend's backpack was left in there, huh.
-          - Tough.
+          - message: Tough.
+            wait: 80
           - Actually, I think we can come to an agreement.
           - message:
             - text: "A "
@@ -676,7 +677,12 @@ npc:
               - summon item 898.7 70 21.4 {Tags:["biolab-backpack"],Age:-32768,Item:{id:"minecraft:bundle",Count:1b,tag:{display:{Name:'{"text":"Chris\\'s Backpack","color":"aqua"}'},Items:[${toSnbt(Object.assign({Count:'1b'},item.mouse))}]}}}
               - "give ${select.player} ${toGive(item.snowshovel, 1)}"
           - Don't worry, I'll continue standing right outside to make sure any passersby will think I'm still working hard.
+          end: 3
           cond: 2
+        - messages:
+          - Well, what are you sitting around for?
+          - Git to work!
+          end: -1
     safeway:
       name: Harold Pell
       position: 891.5 64 -152.5
@@ -1646,7 +1652,8 @@ quest:
         - "if score #hurm-done vars matches 1"
         - "if score #parkour-started vars matches 1"
         - if score preparedness quest-status matches -1
-      count: 3
+        - if score sdcard quest-status matches -1
+      count: 4
   visitfriend: # visit friend's house
     name: Talk to Chris
     hint: The internet seems to have gone down, but you don't know why. Luckily, you happen to know a programmer friend. Maybe pay them a visit?
@@ -1833,24 +1840,6 @@ quest:
         #     -  if entity @s[x=906,y=64,z=186,dx=13,dz=5,dy=1]
         #   count: 1
         #   weight: 1
-  lacroix:
-    name: LaCroix Delivery
-    description: Get Simon some LaCroix sparkling water.
-    condition:
-      type: nest
-      value:
-        - type: cond
-          value:
-            - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.safeway.lacroix)}]}]"
-        - type: cond
-          value:
-            - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.safeway.lacroix)}]},x=939,y=69,z=181,dx=6,dy=2,dz=5]"
-            - "if score -lacroix story-simon matches 1"
-          count: 2
-          weight: 1
-    end:
-      - type: score
-        value: "${npc('simon')} dialogue-status 5"
   mouse:
     name: Missing Mouseketeer
     description: Retrieve Chris's mouse from the high school bio lab.
@@ -1884,6 +1873,24 @@ quest:
     end:
       - execute if score lacroix quest-status matches -1 run scoreboard players set @e[tag=npc-simon,limit=1] dialogue-status 8
       - execute unless score lacroix quest-status matches -1 run scoreboard players set @e[tag=npc-simon,limit=1] dialogue-status 7
+  lacroix:
+    name: LaCroix Delivery
+    description: Get Simon some LaCroix sparkling water.
+    condition:
+      type: nest
+      value:
+        - type: cond
+          value:
+            - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.safeway.lacroix)}]}]"
+        - type: cond
+          value:
+            - "if entity @a[nbt={Inventory:[${toSnbt(item.store.sold.safeway.lacroix)}]},x=939,y=69,z=181,dx=6,dy=2,dz=5]"
+            - "if score -lacroix story-simon matches 1"
+          count: 2
+          weight: 1
+    end:
+      - type: score
+        value: "${npc('simon')} dialogue-status 5"
   campfire:
     name: Fire-lighting
     description: Craft and light a campfire at Herb's firepit.

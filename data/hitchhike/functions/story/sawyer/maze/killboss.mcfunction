@@ -3,7 +3,7 @@
 scoreboard players set @e[tag=npc-sawyer] dialogue-status 6
 scoreboard players operation @e[tag=npc-sawyer] dialogue-status += maze-stage story-sawyer
 tag @e[tag=npc-sawyer] add selected_npc
-execute at @e[tag=maze-boss,limit=1] run tag @p add npc_selector
+execute at @a[tag=maze-mob,sort=random,limit=1] run tag @p add npc_selector
 
 execute at @e[tag=path-goal] run tag @e[tag=maze-node,scores={maze-tile-type=1..}] add maze-visited
 execute if score maze-stage story-sawyer matches 1 at @e[tag=path-goal] run tag @e[tag=maze-visited,scores={maze-tile-type=1..},sort=furthest,limit=150] remove maze-visited

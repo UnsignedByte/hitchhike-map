@@ -1,4 +1,5 @@
 kill @e[tag=maze-weapon]
+kill @e[tag=maze-marker]
 tag @a remove maze-mob
 tag @e remove maze-pointer-marked
 kill @e[tag=maze-boss]

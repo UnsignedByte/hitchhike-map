@@ -1518,7 +1518,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ]
       },
       explorer: {
-        summon: `summon iron_golem ~ ~ ~ {CustomNameVisible:1b,Health:2048f,AngerTime:2147483647,Tags:["maze-mob","maze-boss","maze-boss-explorer"],CustomName:'{"text":"Internet Explorer","color":"aqua","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.15},{Name:generic.attack_damage,Base:15},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:5}]}`,
+        summon: `summon iron_golem ~ ~ ~ {PersistenceRequired:1b,CustomNameVisible:1b,Health:2048f,AngerTime:2147483647,Tags:["maze-mob","maze-boss","maze-boss-explorer"],CustomName:'{"text":"Internet Explorer","color":"aqua","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.15},{Name:generic.attack_damage,Base:15},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:5}]}`,
         health: 300,
         stages: [
           {
@@ -1566,7 +1566,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
         ]
       },
       garbagecollector: {
-        summon: `summon ravager ~ ~ ~ {CustomNameVisible:1b,Health:2048f,Tags:["maze-mob","maze-boss","maze-boss-garbagecollector"],CustomName:'{"text":"Garbage Collector","color":"dark_green","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.05},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:0}]}`,
+        summon: `summon ravager ~ ~ ~ {PersistenceRequired:1b,CustomNameVisible:1b,Health:2048f,Tags:["maze-mob","maze-boss","maze-boss-garbagecollector"],CustomName:'{"text":"Garbage Collector","color":"dark_green","bold":true}',Attributes:[{Name:generic.max_health,Base:2048},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:1},{Name:generic.movement_speed,Base:0.05},{Name:generic.attack_damage,Base:6},{Name:generic.armor,Base:30},{Name:generic.armor_toughness,Base:4},{Name:generic.attack_knockback,Base:0}]}`,
         health: 400,
         stages: [
           {
@@ -2249,8 +2249,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'tag @s add selected-weapon-item',
       Object.entries(weapons).map(([k, v])=>{
         addfunc(`maze/weapons/${k}/start`, [
-          `execute if entity @s[x=-1500,y=${cellsize},z=0,dx=${cellsize*15},dy=${cellsize*15},dz=${cellsize*15},tag=maze-mob] as @s at @s run function generated:story/maze/weapons/${k}/_start`,
-          `execute unless entity @s[x=-1500,y=${cellsize},z=0,dx=${cellsize*15},dy=${cellsize*15},dz=${cellsize*15},tag=maze-mob] as @s run function generated:story/maze/weapons/${k}/give`
+          `execute if entity @s[x=${-1500-Math.floor(cellsize/2)},y=${cellsize},z=${-Math.floor(cellsize/2)},dx=${cellsize*15-Math.floor(cellsize/2)},dy=${cellsize*15},dz=${cellsize*15-Math.floor(cellsize/2)},tag=maze-mob] as @s at @s run function generated:story/maze/weapons/${k}/_start`,
+          `execute unless entity @s[x=${-1500-Math.floor(cellsize/2)},y=${cellsize},z=${-Math.floor(cellsize/2)},dx=${cellsize*15-Math.floor(cellsize/2)},dy=${cellsize*15},dz=${cellsize*15-Math.floor(cellsize/2)},tag=maze-mob] as @s run function generated:story/maze/weapons/${k}/give`
         ])
         addfunc(`maze/weapons/${k}/_start`, [
           `summon minecraft:marker ~ ~ ~ {Tags:["maze-weapon-init","maze-weapon","maze-weapon-${k}"]}`,
@@ -2357,8 +2357,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create', [
+      `forceload add -1504 -2 -1371 129`,
+      `function generated:story/maze/loadchunks`,
+      '',
+      'schedule function generated:story/maze/_create 20t'
+    ]);
+
+    addfunc('maze/_create', [
       '# Reset maze',
-      `execute as @e[tag=maze-node] at @s run forceload remove ~${-(cellsize-1)/2} ~${-(cellsize-1)/2} ~${(cellsize-1)/2} ~${(cellsize-1)/2}`,
       'kill @e[tag=maze-marker]',
       `function hitchhike:story/maze/reset`,
       '# Set Size of maze',
@@ -2374,11 +2380,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       'bossbar set minecraft:maze value 0',
       'scoreboard players set bossbar maze 0',
       `summon marker -1500 ${cellsize+(cellsize-1)/2} 0 {Tags:["maze-marker","maze-create-root"]}`,
-      `forceload add -1504 -2 -1371 129`,
-      `function generated:story/maze/loadchunks`,
       '',
       'scoreboard players operation _x maze = size maze',
-      'schedule function generated:story/maze/create/_x 20t'
+      'schedule function generated:story/maze/create/_x'
     ]);
 
     addfunc('maze/create/_x', [

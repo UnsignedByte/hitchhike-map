@@ -24,6 +24,7 @@ execute as @e[type=villager,tag=npc-solomon,scores={dialogue-status=0},tag=!spea
 execute as @e[type=villager,tag=npc-janitor,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-janitor,scores={dialogue-status=1},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-janitor,scores={dialogue-status=2},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
+execute as @e[type=villager,tag=npc-janitor,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-safeway,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-safeway,scores={dialogue-status=5},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-clothes,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
