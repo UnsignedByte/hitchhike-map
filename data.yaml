@@ -626,6 +626,12 @@ npc:
               value: tower
           - That wouldn't do, would it? I guess you'll have to make your way back down the mountain...
           - If you need help, I'll be right here, completely focused on my computer and unable to hear the possible opening of any basement doors.
+          end: 1
+        - messages:
+          - Hey, still standing around?
+          - Don't mind me, I'll be totally focused on this computer.
+          cond: 1
+          end: -1
     janitor:
       name: Ivan Cummings
       position: 887.5 70 11.5
