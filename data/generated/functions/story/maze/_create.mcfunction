@@ -1,6 +1,5 @@
 # Reset maze
 kill @e[tag=maze-marker]
-function hitchhike:story/maze/reset
 # Set Size of maze
 scoreboard players set cellsize maze 9
 scoreboard players set size maze 15

@@ -1,3 +1,4 @@
+function hitchhike:story/maze/reset
 forceload add -1504 -2 -1371 129
 function generated:story/maze/loadchunks
 

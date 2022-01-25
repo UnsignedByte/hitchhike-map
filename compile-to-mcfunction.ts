@@ -2357,6 +2357,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     ])
 
     addfunc('maze/create', [
+      `function hitchhike:story/maze/reset`,
       `forceload add -1504 -2 -1371 129`,
       `function generated:story/maze/loadchunks`,
       '',
@@ -2366,7 +2367,6 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     addfunc('maze/_create', [
       '# Reset maze',
       'kill @e[tag=maze-marker]',
-      `function hitchhike:story/maze/reset`,
       '# Set Size of maze',
       `scoreboard players set cellsize maze ${cellsize}`,
       'scoreboard players set size maze 15',
