@@ -620,7 +620,7 @@ npc:
             - text: let
               italic: true
             - text: " you do something that dangerous, or I would get in trouble."
-          - message: Imagine if I let you get the key to the electrical box from the chest in the basement and you climbed up that tower and got hurt doing so!
+          - message: Imagine if I let you get the key to the electrical box from the chest in the basement, climbed up that tower, and got hurt doing so!
             command:
             - type: quest
               value: tower

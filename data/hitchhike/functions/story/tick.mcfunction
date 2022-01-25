@@ -7,3 +7,4 @@ function hitchhike:story/hurm/tick
 function hitchhike:story/stores/tick
 function hitchhike:story/misc/tick
 function hitchhike:story/parkour/tick
+function hitchhike:story/tower/tick
