@@ -452,7 +452,7 @@ export async function init (
   for (const [name, contents] of Object.entries(files)) {
     await ensureDir(join(basePath, `./data/${namespace}/`, dirname(name)))
     await Deno.writeTextFile(
-      join(basePath, `./data/${namespace}/`, `${name}.mcfunction`),
+      join(basePath, `./data/${namespace}/`, `${name}`),
       lines(contents)
     )
   }
