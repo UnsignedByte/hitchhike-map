@@ -44,5 +44,7 @@ forceload add 826 484 836 484
 # Tower
 forceload add 978 553 1002 590
 
+function generated:story/tower/puzzles/loadchunks
+
 # Waits for the chunks to actually load
 schedule function hitchhike:truereset 20t

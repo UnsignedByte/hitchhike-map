@@ -135,7 +135,7 @@ npc:
             - text: ". Please be patient while I load the SD card data into memory... My computer is slow so watch out for lag. Sorry."
             global: true
             command:
-              - 'tp @a -1400.0 11 -150.0'
+              - 'tp @a[tag=!admin] -1400.0 11 -150.0'
               - 'schedule function generated:story/maze/create 1t'
           - message: Oh, are you confused?
             global: true
@@ -574,7 +574,7 @@ npc:
             wait: 100
             command:
               - 'schedule function generated:story/hurm/eat_fish 20t'
-          - ... Sorry for talking while eating, I don't usually see anyone other than that other youngster, Solomon.
+          - ... Sorry for talking while eating, I don't usually see anyone other than Solomon. Sometimes you'd think he's still a youngster with how chipper he is.
           - Or was it Sullivan? Salmon? Salmon. That must be it. Speaking of which, this fish is incredible!
           - message:
             - nbt: fish_message

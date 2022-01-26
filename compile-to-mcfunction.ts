@@ -2829,7 +2829,7 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
     genseq('sawyer/finish_maze', {
       cmds: [
         `function hitchhike:story/maze/disable`,
-        'tp @a 952 70 -1',
+        'tp @a[tag=!admin] 952 70 -1',
         'spawnpoint @a 1007 59 59',
         'time set 11500',
         'gamerule doDaylightCycle true'
@@ -4078,6 +4078,46 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       `scoreboard players set _rngm vars ${validspots.length}`,
       'function generated:rng/rng',
       validspots.map((x: string): string => x.match(/^\/setblock\s(\d+\s\d+\s\d+)\s.+$/)![1]!).map((x, i)=> `execute if score rng vars matches ${i} run data merge block ${x!} {Items:[${toSnbt(Object.assign({Count:'1b', Slot:'13b'}, item.boxkey))}]}`)
+    ])
+
+    const puzzles = {
+      count: 2,
+      colors: [
+        "light_blue",
+        "red",
+        "yellow",
+        "purple",
+        "lime",
+        "orange",
+        "blue",
+        "magenta",
+        "white"
+      ],
+      startpos: [-2000, 50, 100],
+      width: 19,
+      filter: "#minecraft:mineable/pickaxe"
+    }
+
+    addfunc('tower/puzzles/loadchunks', [
+      `forceload add ${puzzles.startpos[0]} ${puzzles.startpos[2]} ${puzzles.startpos[0] + puzzles.width*puzzles.count - 1} ${puzzles.startpos[2] + puzzles.width}`
+    ])
+
+    addfunc('tower/puzzles/init', [
+      [...Array(puzzles.count)].map((x, i) => i).map(i=> [
+        `summon marker ${puzzles.startpos[0] + (puzzles.width+1)*i} ${puzzles.startpos[1]} ${puzzles.startpos[2]} {Tags:["tower-puzzle", "tower-puzzle-init"]}`,
+        `scoreboard players set @e[tag=tower-puzzle-init] tower-puzzle-id ${i}`,
+        `execute as @e[tag=tower-puzzle-init] at @s run function generated:story/tower/puzzles/init_indiv`,
+        `tag @e remove tower-puzzle-init`
+      ])
+    ])
+
+    addfunc('tower/puzzles/init_indiv', [
+      '#> Initiate an individual puzzle',
+      'setblock ~ ~1 ~ air',
+      'setblock ~ ~1 ~ chest',
+      [...Array(puzzles.width)].map((xx, x) => [...Array(puzzles.width)].map((yy, y) => puzzles.colors.map(c=> 
+        `execute if block ~${x} ~ ~${y} ${c}_wool run loot insert ~ ~1 ~ loot blocks/${c}_wool`
+      )))
     ])
 
   })();
