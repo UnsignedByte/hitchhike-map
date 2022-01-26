@@ -1,0 +1,1 @@
+function hitchhike:story/tower/puzzles/load
