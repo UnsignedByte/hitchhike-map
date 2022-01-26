@@ -4095,7 +4095,9 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       ],
       startpos: [-2000, 50, 100],
       width: 19,
-      filter: "#minecraft:mineable/pickaxe"
+      filter: "#minecraft:mineable/pickaxe",
+      roomcorner: "-2009 63 -9",
+      roomchest: "-2000 64 -9"
     }
 
     addfunc('tower/puzzles/loadchunks', [
@@ -4118,6 +4120,13 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       [...Array(puzzles.width)].map((xx, x) => [...Array(puzzles.width)].map((yy, y) => puzzles.colors.map(c=> 
         `execute if block ~${x} ~ ~${y} ${c}_wool run loot insert ~ ~1 ~ loot blocks/${c}_wool`
       )))
+    ])
+
+    addfunc('tower/puzzles/load_puzzle', [
+      '#> load the puzzle with the id "loadid tower-puzzle-id"',
+      `execute positioned ${puzzles.roomcorner} run fill ~ ~ ~ ~${puzzles.width} ~ ~${puzzles.width} air`,
+      `execute as @e[tag=tower-puzzle] if score @s tower-puzzle-id = loadid tower-puzzle-id at @s run clone ~ ~ ~ ~${puzzles.width} ~ ~${puzzles.width} ${puzzles.roomcorner} filtered ${puzzles.filter}`,
+      `data modify block ${puzzles.roomchest} Items set from block ~ ~1 ~ Items`
     ])
 
   })();
