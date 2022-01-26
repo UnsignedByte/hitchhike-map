@@ -4099,7 +4099,17 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       width: 19,
       filter: "#minecraft:mineable/pickaxe",
       roomcorner: "-2009 63 -9",
-      roomchest: "-2000 65 -11"
+      roomchest: "-2000 65 -11",
+      wirenbt: (c: string) => ({
+        display: {
+          Name: rawJson({
+            text: `${c} Wire`,
+            color: "gray"
+          }),
+        },
+        HideFlags: 127,
+        wire: true
+      })
     }
 
     for (const c of puzzles.colors) {
@@ -4115,10 +4125,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                 name: `minecraft:${c}_wool`,
                 functions: [{
                   function: "set_nbt",
-                  tag: toSnbt({
-                    HideFlags: 127,
-                    wire: true
-                  })
+                  tag: toSnbt(puzzles.wirenbt(c))
                 }]
               }
             ]
@@ -4261,7 +4268,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     addfunc('tower/puzzles/updatedroppedwire', [
-      puzzles.colors.map(c=> `execute if entity @s[nbt={Item:{id:"minecraft:${c}_wool"}}] run data merge entity @s {Age:-32768s,Item:{tag:{HideFlags: 127,wire:1b,CanPlaceOn:["light_gray_concrete"]}}}`)
+      puzzles.colors.map(c=> `execute if entity @s[nbt={Item:{id:"minecraft:${c}_wool"}}] run data merge entity @s {Age:-32768s,Item:{tag:${toSnbt(Object.assign({CanPlaceOn:`["light_gray_concrete"]`}, puzzles.wirenbt(c)))}}}`)
     ])
 
   })();

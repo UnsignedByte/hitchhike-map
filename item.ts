@@ -292,7 +292,8 @@ export const item = {
       },
       Enchantments:`[{id:"efficiency",lvl:5s}]`,
       wirecutter: true,
-      HideFlags:127
+      HideFlags:127,
+      Unbreakable: true
     }
   },
   money:{
