@@ -5,6 +5,8 @@ forceload add 866 502
 forceload add 896 482
 forceload add 933 496
 forceload add 900 526
+forceload add 888 532
+forceload add 884 541
 forceload add 874 553
 forceload add 890 562
 forceload add 914 564

@@ -1,28 +1,28 @@
 # Reset schedules
 schedule clear generated:scheduled/s-50
-function generated:scheduled/s-50
+schedule function generated:scheduled/s-50 1t
 schedule clear generated:scheduled/s-5
-function generated:scheduled/s-5
+schedule function generated:scheduled/s-5 1t
 schedule clear generated:scheduled/s-20
-function generated:scheduled/s-20
+schedule function generated:scheduled/s-20 1t
 schedule clear generated:scheduled/s-32766
-function generated:scheduled/s-32766
+schedule function generated:scheduled/s-32766 1t
 schedule clear generated:scheduled/s-5999
-function generated:scheduled/s-5999
+schedule function generated:scheduled/s-5999 1t
 schedule clear generated:scheduled/s-99
-function generated:scheduled/s-99
+schedule function generated:scheduled/s-99 1t
 schedule clear generated:scheduled/s-2147483646
-function generated:scheduled/s-2147483646
+schedule function generated:scheduled/s-2147483646 1t
 schedule clear generated:scheduled/s-10
-function generated:scheduled/s-10
+schedule function generated:scheduled/s-10 1t
 schedule clear generated:scheduled/s-2
-function generated:scheduled/s-2
+schedule function generated:scheduled/s-2 1t
 schedule clear generated:scheduled/s-100
-function generated:scheduled/s-100
+schedule function generated:scheduled/s-100 1t
 schedule clear generated:scheduled/s-12
-function generated:scheduled/s-12
+schedule function generated:scheduled/s-12 1t
 schedule clear generated:scheduled/s-3
-function generated:scheduled/s-3
+schedule function generated:scheduled/s-3 1t
 # Kill all existing NPCs.
 kill @e[tag=npc]
 

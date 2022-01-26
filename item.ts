@@ -265,14 +265,33 @@ export const item = {
         }),
         Lore:`[${rawJson([{
           text:"Key to the",
-          color: "grays"
+          color: "gray"
         }])}, ${rawJson([{
           text:"tower's electrical box.",
-          color: "grays"
+          color: "gray"
         }])}]`
       },
       Enchantments:`[{}]`,
       boxkey: true,
+      HideFlags:127
+    }
+  },
+  wirecutter: {
+    id: '"minecraft:shears"',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "Wirecutters",
+          color: "gray",
+          bold: true
+        }),
+        Lore:`[${rawJson([{
+          text:"Cuts wires.",
+          color: "dark_gray"
+        }])}]`
+      },
+      Enchantments:`[{id:"efficiency",lvl:5s}]`,
+      wirecutter: true,
       HideFlags:127
     }
   },

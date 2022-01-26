@@ -3823,6 +3823,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       "896.5 129.9375 482.5",
       "933.5 140.9375 496.5",
       "900.5 169 526.5",
+      "888.5 169.5 532.5",
+      "884.5 168.9375 541.5",
       "874.5 172.9375 553.5",
       "890.5 182.5 562.5",
       "914.5 187 564.5",
@@ -4097,7 +4099,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       width: 19,
       filter: "#minecraft:mineable/pickaxe",
       roomcorner: "-2009 63 -9",
-      roomchest: "-2000 64 -9"
+      roomchest: "-2000 65 -11"
     }
 
     for (const c of puzzles.colors) {
@@ -4115,7 +4117,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                   function: "set_nbt",
                   tag: toSnbt({
                     HideFlags: 127,
-                    CanPlaceOn: `["light_gray_concrete"]`
+                    wire: true
                   })
                 }]
               }
@@ -4149,13 +4151,113 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
     addfunc('tower/puzzles/loadpuzzle', [
       '#> load the puzzle with the id "loadid tower-puzzle-id"',
-      "execute as @e[tag=tower-puzzle] if score @s tower-puzzle-id = loadid tower-puzzle-id at @s run function generated:story/tower/puzzles/_loadpuzzle"
+      '# Clear items',
+      `clear @a #wool{wire:1b}`,
+      `kill @e[type=item,nbt={Item:{tag:{wire:1b}}}]`,
+      `gamerule doTileDrops true`,
+      "execute as @e[tag=tower-puzzle] if score @s tower-puzzle-id = loadid tower-puzzle-id at @s run function generated:story/tower/puzzles/_loadpuzzle",
+      `scoreboard players set interim tower-puzzle-id 0`
     ])
 
     addfunc('tower/puzzles/_loadpuzzle', [
       `execute positioned ${puzzles.roomcorner} run fill ~ ~ ~ ~${puzzles.width-1} ~ ~${puzzles.width-1} air`,
       `clone ~ ~ ~ ~${puzzles.width-1} ~ ~${puzzles.width-1} ${puzzles.roomcorner} filtered ${puzzles.filter}`,
       `data modify block ${puzzles.roomchest} Items set from block ~ ~1 ~ Items`
+    ])
+
+    genseq('tower/puzzles/nextpuzzle', {
+      cmds: [
+        `gamerule doTileDrops false`,
+        `scoreboard players set interim tower-puzzle-id 1`
+      ],
+      next: [
+        {
+          wait: 20,
+          seq: {
+            cmds: [
+              `playsound block.note_block.snare block @a -2000 67 -11 20 ${noteToPitch(7)}`,
+            ],
+            next: [
+              {
+                wait: 20,
+                seq: {
+                  cmds: [
+                    `playsound block.note_block.snare block @a -2000 67 -11 20 ${noteToPitch(8)}`,
+                  ],
+                  next: [
+                    {
+                      wait: 20,
+                      seq: {
+                        cmds: [
+                          `playsound block.note_block.snare block @a -2000 67 -11 20 ${noteToPitch(9)}`,
+                        ],
+                        next: [
+                          {
+                            wait: 40,
+                            seq: {
+                              cmds: [
+                                "#> Check puzzle and advance if passed",
+                                `execute as @e[tag=tower-puzzle] if score @s tower-puzzle-id = loadid tower-puzzle-id at @s run function generated:story/tower/puzzles/_nextpuzzle`,
+                              ],
+                              next: [
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    })
+
+    addfunc('tower/puzzles/_nextpuzzle', [
+      `execute if blocks ~ ~ ~ ~${puzzles.width-1} ~ ~${puzzles.width-1} ${puzzles.roomcorner} all run function generated:story/tower/puzzles/puzzlesuccess`,
+      `execute unless blocks ~ ~ ~ ~${puzzles.width-1} ~ ~${puzzles.width-1} ${puzzles.roomcorner} all run function generated:story/tower/puzzles/puzzlefail`
+    ])
+
+    genseq('tower/puzzles/puzzlesuccess', {
+      cmds: [
+        `gamerule doTileDrops false`,
+        `playsound entity.player.levelup block @a -2000 67 -11 20`,
+      ],
+      next: [
+        {
+          wait: 40,
+          seq: {
+            cmds: [
+              `execute positioned ${puzzles.roomcorner} run fill ~ ~ ~ ~${puzzles.width-1} ~ ~${puzzles.width-1} barrier destroy`,
+            ],
+            next: [
+              {
+                wait: 40,
+                seq: {
+                  cmds: [
+                    `scoreboard players add loadid tower-puzzle-id 1`,
+                    `execute unless score loadid tower-puzzle-id matches ${puzzles.count}.. run function generated:story/tower/puzzles/loadpuzzle`
+                  ],
+                  next: [
+                    
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    })
+
+    addfunc('tower/puzzles/puzzlesuccess', [
+      `scoreboard players set interim tower-puzzle-id 0`,
+      `playsound minecraft:block.note_block.pling block @a -2000 67 -11 20`
+    ])
+
+    addfunc('tower/puzzles/givecutter', [
+      `give @s ${toGive(item.wirecutter, 1)}`
     ])
 
   })();
