@@ -4103,7 +4103,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       wirenbt: (c: string) => ({
         display: {
           Name: rawJson({
-            text: `${c} Wire`,
+            text: `${c} wire`,
             color: "gray"
           }),
         },
