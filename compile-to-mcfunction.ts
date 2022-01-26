@@ -4261,7 +4261,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     addfunc('tower/puzzles/updatedroppedwire', [
-      puzzles.colors.map(c=> `execute if entity @s[nbt={Item:{id:"minecraft:${c}_wool"}}] run data merge entity @s {Age:-32768s,Item:{tag:{wire:1b,CanPlaceOn:["light_gray_concrete"]}}}`)
+      puzzles.colors.map(c=> `execute if entity @s[nbt={Item:{id:"minecraft:${c}_wool"}}] run data merge entity @s {Age:-32768s,Item:{tag:{HideFlags: 127,wire:1b,CanPlaceOn:["light_gray_concrete"]}}}`)
     ])
 
   })();
