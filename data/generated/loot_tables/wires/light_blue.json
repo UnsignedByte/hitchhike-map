@@ -1,1 +1,1 @@
-{"type":"minecraft:block","pools":[{"rolls":1,"bonus_rolls":0,"entries":[{"type":"minecraft:item","name":"minecraft:light_blue_wool","functions":[{"function":"set_nbt","tag":"{display: {Name: '{\"text\":\"light_blue wire\",\"color\":\"gray\"}'}, HideFlags: 127, wire: 1b}"}]}]}]}
+{"type":"minecraft:block","pools":[{"rolls":1,"bonus_rolls":0,"entries":[{"type":"minecraft:item","name":"minecraft:light_blue_wool","functions":[{"function":"set_nbt","tag":"{display: {Name: '{\"text\":\"Light Blue Wire\",\"color\":\"white\"}'}, HideFlags: 127, wire: 1b}"}]}]}]}

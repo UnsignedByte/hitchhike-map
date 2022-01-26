@@ -4103,8 +4103,10 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       wirenbt: (c: string) => ({
         display: {
           Name: rawJson({
-            text: `${c} wire`,
-            color: "gray"
+            text: `${c.split('_')
+                     .map(w => w[0].toUpperCase() + w.substring(1).toLowerCase())
+                     .join(' ')} Wire`,
+            color: "white"
           }),
         },
         HideFlags: 127,
