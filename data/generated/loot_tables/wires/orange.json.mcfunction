@@ -1,0 +1,1 @@
+{"type":"minecraft:block","pools":[{"rolls":1,"bonus_rolls":0,"entries":[{"type":"minecraft:item","name":"minecraft:orange_wool","functions":[{"function":"set_nbt","tag":"{CanPlaceOn: [\"light_gray_concrete\"]}"}]}]}]}

@@ -62,6 +62,7 @@ export async function init (
   const onLoad: Lines = []
   const onTick: Lines = []
   const functions: Record<string, Lines> = {}
+  const files: Record<string, Lines> = {}
 
   Object.assign(data.npc.npcs, item.store.npc);
 
@@ -174,7 +175,7 @@ export async function init (
 
   CONSTANTS = Object.assign(CONSTANTS, Object.fromEntries([...numericConstants].map(x=>[x,x])))
 
-  story(functions, reset, onLoad, onTick);
+  story(files, functions, reset, onLoad, onTick);
 
   await Deno.writeTextFile(
     join(basePath, `./data/${namespace}/functions/reset.mcfunction`),
@@ -444,6 +445,14 @@ export async function init (
     await ensureDir(join(basePath, `./data/${namespace}/functions/`, dirname(name)))
     await Deno.writeTextFile(
       join(basePath, `./data/${namespace}/functions/`, `${name}.mcfunction`),
+      lines(contents)
+    )
+  }
+
+  for (const [name, contents] of Object.entries(files)) {
+    await ensureDir(join(basePath, `./data/${namespace}/`, dirname(name)))
+    await Deno.writeTextFile(
+      join(basePath, `./data/${namespace}/`, `${name}.mcfunction`),
       lines(contents)
     )
   }

@@ -528,7 +528,7 @@ export function detectItem(functions: Record<string, Lines>, it: NbtData, whitel
 }
 
 // Handle all story related function generation
-export function story(functions: Record<string, Lines>, reset: Lines[], load: Lines[], tick: Lines[]) {
+export function story(files: Record<string, Lines>, functions: Record<string, Lines>, reset: Lines[], load: Lines[], tick: Lines[]) {
   function addfunc(src: string, cmds: Lines[]) {
     functions[`story/${src}`] = cmds;
   }
@@ -4100,6 +4100,30 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       roomchest: "-2000 64 -9"
     }
 
+    for (const c of puzzles.colors) {
+      files[`loot_tables/wires/${c}.json`] = JSON.stringify({
+        type: "minecraft:block",
+        pools: [
+          {
+            rolls: 1.0,
+            bonus_rolls: 0.0,
+            entries: [
+              {
+                type: "minecraft:item",
+                name: `minecraft:${c}_wool`,
+                functions: [{
+                  function: "set_nbt",
+                  tag: toSnbt({
+                    CanPlaceOn: `["light_gray_concrete"]`
+                  })
+                }]
+              }
+            ]
+          }
+        ]
+      })
+    }
+
     addfunc('tower/puzzles/loadchunks', [
       `forceload add ${puzzles.startpos[0]} ${puzzles.startpos[2]} ${puzzles.startpos[0] + puzzles.width*puzzles.count - 1} ${puzzles.startpos[2] + puzzles.width}`
     ])
@@ -4117,8 +4141,8 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       '#> Initiate an individual puzzle',
       'setblock ~ ~1 ~ air',
       'setblock ~ ~1 ~ chest',
-      [...Array(puzzles.width)].map((xx, x) => [...Array(puzzles.width)].map((yy, y) => puzzles.colors.map(c=> 
-        `execute if block ~${x} ~ ~${y} ${c}_wool run loot insert ~ ~1 ~ loot blocks/${c}_wool`
+      puzzles.colors.map(c=> [...Array(puzzles.width)].map((xx, x) => [...Array(puzzles.width)].map((yy, y) => 
+        `execute if block ~${x} ~ ~${y} ${c}_wool run loot insert ~ ~1 ~ loot generated:wires/${c}`
       )))
     ])
 
