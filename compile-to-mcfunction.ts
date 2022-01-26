@@ -4122,10 +4122,14 @@ export function story(functions: Record<string, Lines>, reset: Lines[], load: Li
       )))
     ])
 
-    addfunc('tower/puzzles/load_puzzle', [
+    addfunc('tower/puzzles/loadpuzzle', [
       '#> load the puzzle with the id "loadid tower-puzzle-id"',
+      "execute as @e[tag=tower-puzzle] if score @s tower-puzzle-id = loadid tower-puzzle-id at @s run function generated:story/tower/puzzles/_loadpuzzle"
+    ])
+
+    addfunc('tower/puzzles/_loadpuzzle', [
       `execute positioned ${puzzles.roomcorner} run fill ~ ~ ~ ~${puzzles.width-1} ~ ~${puzzles.width-1} air`,
-      `execute as @e[tag=tower-puzzle] if score @s tower-puzzle-id = loadid tower-puzzle-id at @s run clone ~ ~ ~ ~${puzzles.width-1} ~ ~${puzzles.width-1} ${puzzles.roomcorner} filtered ${puzzles.filter}`,
+      `clone ~ ~ ~ ~${puzzles.width-1} ~ ~${puzzles.width-1} ${puzzles.roomcorner} filtered ${puzzles.filter}`,
       `data modify block ${puzzles.roomchest} Items set from block ~ ~1 ~ Items`
     ])
 
