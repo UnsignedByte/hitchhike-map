@@ -4114,6 +4114,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                 functions: [{
                   function: "set_nbt",
                   tag: toSnbt({
+                    HideFlags: 127,
                     CanPlaceOn: `["light_gray_concrete"]`
                   })
                 }]
