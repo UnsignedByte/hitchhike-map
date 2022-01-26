@@ -1,6 +1,8 @@
 tag @a remove wire-puzzler
 execute if score interim tower-puzzle-id matches 0 run tag @a[x=-2012,y=63,z=-12,dx=24,dy=6,dz=24] add wire-puzzler
 
+execute as @e[type=item,x=-2012,y=63,z=-12,dx=24,dy=6,dz=24,nbt={Age:0s}] run function generated:story/tower/puzzles/updatedroppedwire
+
 kill @e[type=item,nbt={Item:{tag:{wirecutter:1b}}}]
 execute as @a[tag=wire-puzzler,nbt=!{Inventory:[{tag:{wirecutter:1b}}]}] run function generated:story/tower/puzzles/givecutter
 clear @a[tag=!wire-puzzler] shears{wirecutter:1b}
