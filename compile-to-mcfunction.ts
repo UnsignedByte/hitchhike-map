@@ -4182,21 +4182,21 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           wait: 20,
           seq: {
             cmds: [
-              `playsound block.note_block.snare block @a -2000 67 -11 20 ${noteToPitch(7)}`,
+              `playsound block.note_block.hat block @a -2000 67 -11 20 ${noteToPitch(8)}`,
             ],
             next: [
               {
                 wait: 20,
                 seq: {
                   cmds: [
-                    `playsound block.note_block.snare block @a -2000 67 -11 20 ${noteToPitch(8)}`,
+                    `playsound block.note_block.hat block @a -2000 67 -11 20 ${noteToPitch(12)}`,
                   ],
                   next: [
                     {
                       wait: 20,
                       seq: {
                         cmds: [
-                          `playsound block.note_block.snare block @a -2000 67 -11 20 ${noteToPitch(9)}`,
+                          `playsound block.note_block.hat block @a -2000 67 -11 20 ${noteToPitch(16)}`,
                         ],
                         next: [
                           {
