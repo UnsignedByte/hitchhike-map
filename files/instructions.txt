@@ -1,0 +1,16 @@
+Instruction Manual
+==================
+
+GENERAL SAFETY
+
+When using electrical equipment, you should always follow basic safety precautions, including the following:
+
+- The rights to sue, defame, or ridicule the Organization must be waived prior to installation.
+- The installer should follow all necessary procedures such that the installation does not result in the injury or death of any person(s). Should such an event occur, the installer agrees that all actions leaing to the accident were theirs alone, bears full responsibility for the incident.
+
+INSTALLATION
+
+Connect all pairs of same-colored electrical terminals with one continuous length of wire of the same color.
+Wires must lay flat on the circuit board, and must not cross.
+If done correctly, all wiring will be used when the circuit is completed.
+Visible on the next page is a diagram of two circuits: the former connected correctly and the latter incorrectly.

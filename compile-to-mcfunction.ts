@@ -4083,7 +4083,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     const puzzles = {
-      count: 2,
+      count: 4,
       colors: [
         "light_blue",
         "red",
@@ -4135,6 +4135,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     }
 
     addfunc('tower/puzzles/loadchunks', [
+      `forceload add -2012 -12 -1988 12`,
       `forceload add ${puzzles.startpos[0]} ${puzzles.startpos[2]} ${puzzles.startpos[0] + puzzles.width*puzzles.count - 1} ${puzzles.startpos[2] + puzzles.width}`
     ])
 
@@ -4162,6 +4163,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       `clear @a #wool{wire:1b}`,
       `kill @e[type=item,nbt={Item:{tag:{wire:1b}}}]`,
       `gamerule doTileDrops true`,
+      `setblock -1999 67 -10 air`,
+      `setblock -1999 67 -10 stone_button[powered=false,facing=south]`,
       "execute as @e[tag=tower-puzzle] if score @s tower-puzzle-id = loadid tower-puzzle-id at @s run function generated:story/tower/puzzles/_loadpuzzle",
       `scoreboard players set interim tower-puzzle-id 0`
     ])
@@ -4175,6 +4178,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     genseq('tower/puzzles/nextpuzzle', {
       cmds: [
         `gamerule doTileDrops false`,
+        `setblock -1999 67 -10 air`,
+        `setblock -1999 67 -10 stone_button[powered=true,facing=south]`,
         `scoreboard players set interim tower-puzzle-id 1`
       ],
       next: [
@@ -4261,7 +4266,9 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     addfunc('tower/puzzles/puzzlefail', [
       `scoreboard players set interim tower-puzzle-id 0`,
       `gamerule doTileDrops true`,
-      `playsound minecraft:block.note_block.pling block @a -2000 67 -11 20`
+      `playsound minecraft:block.note_block.pling block @a -2000 67 -11 20`,
+      `setblock -1999 67 -10 air`,
+      `setblock -1999 67 -10 stone_button[powered=false,facing=south]`,
     ])
 
     addfunc('tower/puzzles/givecutter', [

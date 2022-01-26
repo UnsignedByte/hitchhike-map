@@ -64,3 +64,6 @@ forceload add 884 -166 916 -152
 # forceload add 946 441 1011 375
 # Biolab
 forceload add 900 20 884 11
+
+# Tower
+function generated:story/tower/puzzles/loadchunks
