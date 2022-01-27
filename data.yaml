@@ -1948,7 +1948,9 @@ quest:
       value:
         - "if entity @a[nbt={Inventory:[{tag:{boxkey:1b}}]}]"
         - "if score #tower-climbed vars matches 1"
-      count: 2
+        - "if score loadid tower-puzzle-id matches 0.."
+        - "if score #electrical-done vars matches 1"
+      count: 4
   percy:
     name: Sugar Buddy..?
     description: Complete your daily chat with Percival.
