@@ -753,7 +753,7 @@ summon minecraft:villager 1026.30 68.8 -4.50 {Rotation: [90f, 40f], Silent: 1b, 
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for douglassainsworth.
-summon minecraft:villager 803.50 78 -58.30 {Rotation: [0f, 10f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-douglassainsworth"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDI2NmZiODU2ODZiMWQ4ZmNhMGE0MmQ1MDU0NmQ5Zjg4NzE0YjdhYTI2ZTUzM2I1NmU5NmY3MDVkZTQ4YWZmNCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:armorer", level: 99}, Offers: {}, CustomName: '{"text":"Douglass Ainsworth","color":"#9817d4","bold":true}'}
+summon minecraft:villager 803.50 78 -58.30 {Rotation: [0f, 10f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-douglassainsworth"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDI2NmZiODU2ODZiMWQ4ZmNhMGE0MmQ1MDU0NmQ5Zjg4NzE0YjdhYTI2ZTUzM2I1NmU5NmY3MDVkZTQ4YWZmNCJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:armorer", level: 99}, Offers: {}, CustomName: '{"text":"Douglass Ainsworth","color":"#780fa8","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for marthaainsworth.
