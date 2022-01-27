@@ -3875,7 +3875,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       "987.5 213.25 584.5",
       "986.5 216 569.5",
       // Puzzle
-      "-2013.5 65 -13.5"
+      "-1999.5 59 -8.5"
     ]
 
     const checkpointRaw = checkpoints.map(x=> x.split(" ").map(Number));

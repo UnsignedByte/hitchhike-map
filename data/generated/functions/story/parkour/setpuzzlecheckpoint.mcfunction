@@ -1,1 +1,1 @@
-scoreboard players set @s checkpoint-id -1346558463
+scoreboard players set @s checkpoint-id -369820150
