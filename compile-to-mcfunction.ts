@@ -3816,7 +3816,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
   (() => {
     const checkpoints = [
       // main path
-      "819.5 113.9375 412.5",
+      "818.5 113.9375 412.5",
       "825.5 122.9375 454.5",
       "834.5 123.9375 482.5",
       "866.5 129.9375 502.5",
