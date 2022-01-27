@@ -290,7 +290,7 @@ export const item = {
           color: "dark_gray"
         }])}]`
       },
-      Enchantments:`[{id:"efficiency",lvl:5s}]`,
+      Enchantments:`[{id:"efficiency",lvl:3s}]`,
       wirecutter: true,
       HideFlags:127,
       Unbreakable: true

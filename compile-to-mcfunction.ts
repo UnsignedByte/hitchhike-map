@@ -3873,7 +3873,9 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       "972.5 208 557.5",
       // mountaintop
       "987.5 213.25 584.5",
-      "986.5 216 569.5"
+      "986.5 216 569.5",
+      // Puzzle
+      "-2013.5 65 -13.5"
     ]
 
     const checkpointRaw = checkpoints.map(x=> x.split(" ").map(Number));
@@ -4006,6 +4008,10 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     schedule(`execute if score #hurm-done vars matches 1 run give @a[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`, 20, functions)
+
+    addfunc('parkour/setpuzzlecheckpoint', [
+      `scoreboard players set @s checkpoint-id ${hash(checkpoints[checkpoints.length-1])}`
+    ])
   })();
 
   (() => {
@@ -4253,7 +4259,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                 seq: {
                   cmds: [
                     `scoreboard players add loadid tower-puzzle-id 1`,
-                    `execute unless score loadid tower-puzzle-id matches ${puzzles.count}.. run function generated:story/tower/puzzles/loadpuzzle`
+                    `execute unless score loadid tower-puzzle-id matches ${puzzles.count}.. run function generated:story/tower/puzzles/loadpuzzle`,
+                    `execute if score loadid tower-puzzle-id matches ${puzzles.count}.. run function hitchhike:story/tower/puzzles/end`
                   ],
                   next: [
                     
