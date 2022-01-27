@@ -1367,6 +1367,22 @@ npc:
           - Whatever, just tell them you hung out with me and collect your payment.
           - What are you waiting for? You know neither of us actually want to do this.
           end: -1
+    douglassainsworth:
+      name: Douglass Ainsworth
+      position: 804.5 78 -58.3
+      rotation: 0 10
+      colour: 0x9817d4
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDI2NmZiODU2ODZiMWQ4ZmNhMGE0MmQ1MDU0NmQ5Zjg4NzE0YjdhYTI2ZTUzM2I1NmU5NmY3MDVkZTQ4YWZmNCJ9fX0=
+      villager:
+        type: jungle
+        profession: armorer
+      dialogue:
+        - messages:
+          - Are you looking for Matthew?
+          - He's busy in a meeting with Damien, and might be busy for a while.
+          - What's a kid like you doing here? You better not be another one of Percy's "friends."
+          - You know I won't give you any money, so scram before I call security.
+          end: -1
     marthaainsworth:
       name: Martha Ainsworth
       position: 1020.3 64 9.3
@@ -1379,7 +1395,7 @@ npc:
       dialogue:
         - messages:
           - Oh, hi! Sorry, I must've spaced out.
-          - Anyways, you must be here to see my son! He's just upstairs.
+          - Anyways, you must be here to see my grandson! He's just upstairs.
           - I'm so glad he seems to have so many friends now! It's almost a different friend every day.
           - Well, anyways, you kiddos have fun playing, and don't hesitate to ask me if you need anything.
           - Thank you for sticking with him, I know he can be a little difficult sometimes.
@@ -1635,10 +1651,10 @@ npc:
         profession: fletcher
       dialogue:
         - messages:
-          - Do you happen to know what has happened with the internet?
+          - Oh, hello!
+          - Perhaps do you know what has happened with the internet?
           - Being offline makes it difficult to work.
           end: -1
-
 
 quest:
   birthday:

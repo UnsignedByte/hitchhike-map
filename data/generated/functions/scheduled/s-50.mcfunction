@@ -72,6 +72,7 @@ execute as @e[type=villager,tag=npc-emmadrounen,scores={dialogue-status=0},tag=!
 execute as @e[type=villager,tag=npc-duarteeisenhower,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-duarteeisenhower,scores={dialogue-status=1},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-percivalainsworth,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
+execute as @e[type=villager,tag=npc-douglassainsworth,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-marthaainsworth,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-marthaainsworth,scores={dialogue-status=1},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-levirosman,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force

@@ -53,14 +53,25 @@ export const item = {
     }
   },
   tvremote: {
+    id:'"minecraft:light_gray_candle"',
+    tag:{
+      Enchantments:`[{}]`,
+      display:{
+        Lore:`['{"text":"Right click to play/pause.","color":"blue"}']`,
+        Name:`'{"text":"TV Remote","color":"gray"}'`
+      },
+      tvremote: true
+    }
+  },
+  ownphone: {
     id:'"minecraft:black_candle"',
     tag:{
       Enchantments:`[{}]`,
       display:{
-        Lore:`['{"text":"Right click to play/pause.","color":"dark_gray"}']`,
-        Name:`'{"text":"TV Remote","color":"gray"}'`
+        Lore:`['{"text":"Phone.","color":"dark_gray"}']`,
+        Name:`'{"text":"Motorola Moto G 2","color":"gray"}'`
       },
-      tvremote: true
+      phone: true
     }
   },
   housekey: {

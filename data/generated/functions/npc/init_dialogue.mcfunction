@@ -71,6 +71,8 @@ execute as @s[tag=npc-barteisenhower] at @s run function generated:npc/barteisen
 # Start a conversation if it was selected
 execute as @s[tag=npc-percivalainsworth] at @s run function generated:npc/percivalainsworth/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-douglassainsworth] at @s run function generated:npc/douglassainsworth/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-marthaainsworth] at @s run function generated:npc/marthaainsworth/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-levirosman] at @s run function generated:npc/levirosman/tick
