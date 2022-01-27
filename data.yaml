@@ -1379,7 +1379,8 @@ npc:
       dialogue:
         - messages:
           - Are you looking for Matthew?
-          - message: He's still in a meeting with Damien, and might be busy for a while.
+          - He's still in a meeting with Damien, and might be busy for a while.
+          - message: It will maybe take another half hour or so.
             command:
               - tag ${select.self} remove npc-unface
           - Wait, What's a kid like you doing here? You better not be another one of Percy's "friends."
