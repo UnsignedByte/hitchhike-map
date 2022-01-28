@@ -32,7 +32,9 @@ scoreboard players operation @s car-velZ += -oZ car
 scoreboard players operation -X car *= 1000 const
 scoreboard players operation -Z car *= 1000 const
 
-execute rotated ~ 0 positioned ^ ^ ^1 positioned ~ ~-1 ~ unless block ~ ~ ~ gray_concrete unless block ~ ~ ~ minecraft:yellow_concrete unless block ~ ~ ~ white_concrete unless block ~ ~ ~ gray_concrete_powder unless block ~ ~ ~ white_concrete_powder unless block ~ ~ ~ deepslate as @s run function hitchhike:car/_offroad
+execute as @s at @s rotated ~ 0 run function generated:story/misc/car/handlecollision
+
+# execute rotated ~ 0 positioned ^ ^ ^1 positioned ~ ~-1 ~ unless block ~ ~ ~ gray_concrete unless block ~ ~ ~ minecraft:yellow_concrete unless block ~ ~ ~ white_concrete unless block ~ ~ ~ gray_concrete_powder unless block ~ ~ ~ white_concrete_powder unless block ~ ~ ~ deepslate as @s run function hitchhike:car/_offroad
 
 scoreboard players operation -X car += @s car-velX
 scoreboard players operation -Z car += @s car-velZ

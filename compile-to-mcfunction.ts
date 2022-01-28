@@ -4304,6 +4304,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       `scoreboard players add -max phone-detect-id 1`,
       `scoreboard players operation @s phone-detect-id = -max phone-detect-id`,
       `scoreboard players operation @e[tag=phone-click-detect-init] phone-detect-id = -max phone-detect-id`,
+      `team join collisionless @e[tag=phone-click-detect-init]`,
       `tag @e remove phone-click-detect-init`
     ])
 
@@ -4323,7 +4324,55 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     addfunc('phone/call', [
+      'execute unless score #phone-enabled vars matches 1 run title'
+    ])
+  })();
 
+  (() => {
+    const validblocks = [
+      "gray_concrete", 
+      "yellow_concrete", 
+      "white_concrete", 
+      "gray_concrete_powder", 
+      "white_concrete_powder", 
+      "deepslate", 
+      "smooth_quartz", 
+      "calcite", 
+      "blue_concrete_powder", 
+      "smooth_stone", 
+      "stone_stairs", 
+      "gravel", 
+      "stone", 
+      "cobblestone", 
+      "andesite", 
+      "cobbled_deepslate", 
+      "stone_bricks", 
+      "white_terracotta"
+    ]
+
+    const neighbors = [
+      [-1, -1],
+      [-1, 0],
+      [-1, 1],
+      [0, -1],
+      [0, 1],
+      [1, -1],
+      [1, 0],
+      [1, 1],
+    ]
+
+    addfunc('misc/car/handlecollision', [
+      'scoreboard players set #tmpoffx car 0',
+      'scoreboard players set #tmpoffz car 0',
+      neighbors.map(n=>[
+        `scoreboard players set #tmp car 0`,
+        `execute positioned ~${n[0]} ~-1 ~${n[1]} ${validblocks.map(b=>`unless block ~ ~ ~ ${b}`).join(' ')} run scoreboard players set #tmp car 1`,
+        `execute positioned ~${n[0]} ~ ~${n[1]} ${["air", "void_air", "cave_air"].map(b=>`unless block ~ ~ ~ ${b}`).join(' ')} run scoreboard players set #tmp car 1`,
+        `${n[0] === 0 ? '# ' : ''}, execute if score #tmp car matches 1 run scoreboard players set #tmpoffx car 1`,
+        `${n[1] === 0 ? '# ' : ''}, execute if score #tmp car matches 1 run scoreboard players set #tmpoffz car 1`
+      ]),
+      `execute if score #tmpoffx car matches 1 run scoreboard players operation @s car-velX /= -2 const`,
+      `execute if score #tmpoffz car matches 1 run scoreboard players operation @s car-velZ /= -2 const`
     ])
   })();
 }

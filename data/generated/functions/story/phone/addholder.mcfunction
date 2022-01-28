@@ -2,4 +2,5 @@ summon armor_stand ~ ~0.7 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,ShowArms:1b,
 scoreboard players add -max phone-detect-id 1
 scoreboard players operation @s phone-detect-id = -max phone-detect-id
 scoreboard players operation @e[tag=phone-click-detect-init] phone-detect-id = -max phone-detect-id
+team join collisionless @e[tag=phone-click-detect-init]
 tag @e remove phone-click-detect-init
