@@ -1699,7 +1699,7 @@ npc:
         - messages:
           - Of course, sire. I will relay the message immediately!
           - I am appalled these "unioners" would ask for even more; our employess already enjoy numerous benefits.
-          - Great decision, Dr. Hill!
+          - Great decision, Dr. Ffosse!
           cond: 1
           end: -1
 
