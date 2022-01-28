@@ -12,7 +12,7 @@ execute as @e[tag=car-root] at @s run function hitchhike:car/move
 # execute as @e[tag=car-root] at @s run function hitchhike:car/render
 
 scoreboard players operation surplus car = playercount vars
-scoreboard players operation surplus car *= 2 const
+scoreboard players operation surplus car += 4 const
 
 execute if score surplus car >= maxcars car run scoreboard players operation maxcars car = surplus car
 scoreboard players operation surplus car = maxcars car
