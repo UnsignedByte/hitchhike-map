@@ -4154,6 +4154,8 @@ tag @a remove victim-of-dialogue-by-avaissmal
 
 tag @a remove victim-of-dialogue-by-ekaterina
 
+tag @a remove victim-of-dialogue-by-jebffosse
+
 tag @a remove victim-of-dialogue-by-__safeway_apple
 
 tag @a remove victim-of-dialogue-by-__safeway_melon_slice
