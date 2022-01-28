@@ -809,7 +809,11 @@ summon minecraft:villager 804.50 72 -68.30 {Rotation: [0f, 0f], Silent: 1b, Invu
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for jebffosse.
-summon minecraft:villager 797.50 84 -78.30 {Rotation: [-25f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-jebffosse"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjNlOGY3NTFkNWJlMmJmNmM0MTkxMTJmYTY2NmZlNzJiMDc3ZTRlZjE2ODI1NmYyNDViN2NmNjc5YmFiNDlhYiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Jeb Ffosse","color":"#cf1613","bold":true}'}
+summon minecraft:villager 797.50 84 -78.30 {Rotation: [-30f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-jebffosse"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjNlOGY3NTFkNWJlMmJmNmM0MTkxMTJmYTY2NmZlNzJiMDc3ZTRlZjE2ODI1NmYyNDViN2NmNjc5YmFiNDlhYiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:jungle", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Jeb Ffosse","color":"#cf1613","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for nortonhill.
+summon minecraft:villager 798.50 84 -76.70 {Rotation: [150f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-nortonhill"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBjZjQ4MjNkZmZkNjg1ODhjZTE5N2E5MWQ3Y2MyNDBlYjVhOTNiMDQ4MjFmZWEwNzg3ZmMzZjJiMzViY2NjNiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Norton Hill","color":"#ddf013","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
 # Summon the villager for __safeway_apple.

@@ -1661,7 +1661,7 @@ npc:
     jebffosse:
       name: Jeb Ffosse
       position: 797.5 84 -78.3
-      rotation: -25 0
+      rotation: -30 0
       colour: 0xcf1613
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjNlOGY3NTFkNWJlMmJmNmM0MTkxMTJmYTY2NmZlNzJiMDc3ZTRlZjE2ODI1NmYyNDViN2NmNjc5YmFiNDlhYiJ9fX0=
       villager:
@@ -1681,6 +1681,27 @@ npc:
             - text: " the \"Union\" had."
           - I don't think any of our workers need any of the proposed changes; adding "bathroom breaks" and "paid time off" will only lower productivity and profitability.
           - "Why don't you make this a company directive, actually. Oh, and fire anyone who mentions them on the spot."
+          end:
+            - type: score
+              value: ${npc('nortonhill')} dialogue-status 1
+            - type: score
+              value: ${select.self} dialogue-status -1
+    nortonhill:
+      name: Norton Hill
+      position: 798.5 84 -76.7
+      rotation: 150 0
+      colour: 0xddf013
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBjZjQ4MjNkZmZkNjg1ODhjZTE5N2E5MWQ3Y2MyNDBlYjVhOTNiMDQ4MjFmZWEwNzg3ZmMzZjJiMzViY2NjNiJ9fX0=
+      villager:
+        type: desert
+        value: cartographer
+      dialogue:
+        - messages:
+          - Of course, sire. I will relay the message immediately!
+          - I am appalled these "unioners" would ask for even more; our employess already enjoy numerous benefits.
+          - Great decision, Dr. Hill!
+          cond: 1
+          end: -1
 
 quest:
   birthday:

@@ -91,6 +91,7 @@ execute as @e[type=villager,tag=npc-damien,scores={dialogue-status=1},tag=!speak
 execute as @e[type=villager,tag=npc-mikepound,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-ekaterina,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-jebffosse,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
+execute as @e[type=villager,tag=npc-nortonhill,scores={dialogue-status=1},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-__safeway_apple,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-__safeway_melon_slice,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
 execute as @e[type=villager,tag=npc-__safeway_glow_berries,scores={dialogue-status=0},tag=!speaking,tag=!invisible] at @s anchored eyes run particle minecraft:happy_villager ^ ^0.5 ^ 0 0 0 0 1 force
