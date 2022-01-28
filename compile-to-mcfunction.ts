@@ -4370,7 +4370,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           `scoreboard players set #tmp car 0`,
           [-0.49, 0.49].map(os=>[
             `execute${cond}positioned ~${n[0] === 0 ? os : n[0]} ~-1 ~${n[1] === 0 ? os : n[1]} ${validblocks.map(b=>`unless block ~ ~ ~ ${b}`).join(' ')} run scoreboard players set #tmp car 1`,
-            `execute${cond}positioned ~${n[0] === 0 ? os : n[0]} ~ ~${n[1] === 0 ? os : n[1]} ${["air", "void_air", "cave_air"].map(b=>`unless block ~ ~ ~ ${b}`).join(' ')} run scoreboard players set #tmp car 1`,
+            `execute${cond}positioned ~${n[0] === 0 ? os : n[0]} ~ ~${n[1] === 0 ? os : n[1]} ${["air", "void_air", "cave_air", "#buttons", '#signs'].map(b=>`unless block ~ ~ ~ ${b}`).join(' ')} run scoreboard players set #tmp car 1`,
           ]),
           `${n[0] === 0 ? '# ' : ''}execute if score #tmp car matches 1 run scoreboard players set #tmpoffx car 1`,
           `${n[1] === 0 ? '# ' : ''}execute if score #tmp car matches 1 run scoreboard players set #tmpoffz car 1`
@@ -4386,7 +4386,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       "909.0 64 -149.0",
       "907.0 64 -149.0",
       "905.0 64 -149.0",
-      "903.0 64 -149.0"
+      "903.0 64 -149.0",
+      "901.0 64 -149.0"
       ].map(x=> `execute positioned ${x} run function hitchhike:car/summon`)
     ])
   })();
