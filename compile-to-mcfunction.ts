@@ -4314,10 +4314,10 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
     addfunc('phone/takecall', [
       'scoreboard players operation #tmp phone-detect-id = @s phone-detect-id',
-      `data modify entity @s HandItems set value [{},{}]`,
       'execute as @a if score @s phone-detect-id = #tmp phone-detect-id run tag @s add phone-detect-selected',
       `execute if entity @s[nbt={HandItems:{tag:{ownphone:1b}}}] run give @a[tag=phone-detect-selected] ${toGive(item.ownphone)}`,
       `execute if entity @s[nbt={HandItems:{tag:{iosphone:1b}}}] run give @a[tag=phone-detect-selected] ${toGive(item.iosphone)}`,
+      `data modify entity @s HandItems set value [{},{}]`,
       `execute as @a[tag=phone-detect-selected] run function generated:story/phone/call`,
       'tag @a remove phone-detect-selected'
     ])
