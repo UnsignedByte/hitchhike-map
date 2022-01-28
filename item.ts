@@ -68,7 +68,7 @@ export const item = {
     tag:{
       Enchantments:`[{}]`,
       display:{
-        Lore:`['{"text":"Runs Android 5.0.2 \\"Lollipop\\".","color":"dark_gray"}']`,
+        Lore:`['{"text":"Runs Android 5.0.2 \\\"Lollipop\\\".","color":"dark_gray"}']`,
         Name:`'{"text":"Motorola Moto G 2","color":"gray"}'`
       },
       phone: true,
