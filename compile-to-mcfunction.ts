@@ -4368,8 +4368,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         `scoreboard players set #tmp car 0`,
         `execute positioned ~${n[0]} ~-1 ~${n[1]} ${validblocks.map(b=>`unless block ~ ~ ~ ${b}`).join(' ')} run scoreboard players set #tmp car 1`,
         `execute positioned ~${n[0]} ~ ~${n[1]} ${["air", "void_air", "cave_air"].map(b=>`unless block ~ ~ ~ ${b}`).join(' ')} run scoreboard players set #tmp car 1`,
-        `${n[0] === 0 ? '# ' : ''}, execute if score #tmp car matches 1 run scoreboard players set #tmpoffx car 1`,
-        `${n[1] === 0 ? '# ' : ''}, execute if score #tmp car matches 1 run scoreboard players set #tmpoffz car 1`
+        `${n[0] === 0 ? '# ' : ''}execute if score #tmp car matches 1 run scoreboard players set #tmpoffx car 1`,
+        `${n[1] === 0 ? '# ' : ''}execute if score #tmp car matches 1 run scoreboard players set #tmpoffz car 1`
       ]),
       `execute if score #tmpoffx car matches 1 run scoreboard players operation @s car-velX /= -2 const`,
       `execute if score #tmpoffz car matches 1 run scoreboard players operation @s car-velZ /= -2 const`
