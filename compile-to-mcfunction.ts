@@ -4379,5 +4379,15 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       `execute if score #tmpoffx car matches 1 run scoreboard players operation @s car-velX /= -2 const`,
       `execute if score #tmpoffz car matches 1 run scoreboard players operation @s car-velZ /= -2 const`
     ])
+
+    addfunc('misc/car/addinitials', [
+      [
+      "910 64 -150",
+      "908 64 -150",
+      "906 64 -150",
+      "904 64 -150",
+      "902 64 -150"
+      ].map(x=> `execute positioned ${x} run function hitchhike:car/summon`)
+    ])
   })();
 }
