@@ -4365,7 +4365,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       'scoreboard players set #tmpoffx car 0',
       'scoreboard players set #tmpoffz car 0',
       neighbors.map(n=>{
-        const cond = `${n[0] == 0 ? ' ' : ` unless score @s car-velX matches ${n[0] < 0 ? "0.." : "..0"} `}${n[1] == 0 ? '' : `unless score @s car-velXZmatches ${n[1] < 0 ? "0.." : "..0"} `}`;
+        const cond = `${n[0] == 0 ? ' ' : ` unless score @s car-velX matches ${n[0] < 0 ? "0.." : "..0"} `}${n[1] == 0 ? '' : `unless score @s car-velZ matches ${n[1] < 0 ? "0.." : "..0"} `}`;
         return [
           `scoreboard players set #tmp car 0`,
           `execute${cond}positioned ~${n[0]} ~-1 ~${n[1]} ${validblocks.map(b=>`unless block ~ ~ ~ ${b}`).join(' ')} run scoreboard players set #tmp car 1`,
