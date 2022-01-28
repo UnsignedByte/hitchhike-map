@@ -8,3 +8,4 @@ function hitchhike:story/stores/tick
 function hitchhike:story/misc/tick
 function hitchhike:story/parkour/tick
 function hitchhike:story/tower/tick
+function hitchhike:story/phone/tick

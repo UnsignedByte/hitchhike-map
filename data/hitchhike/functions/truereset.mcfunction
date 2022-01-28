@@ -53,6 +53,8 @@ function generated:npc/loadchunks
 # Parkour
 function generated:story/parkour/loadchunks
 
+# 0 0 chunk
+forceload add -16 -16 15 15
 
 # sawyer house
 forceload add 930 -16 958 9

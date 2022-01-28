@@ -1,3 +1,6 @@
+# 0 0
+forceload add -16 -16 15 15
+
 # NPCS
 function generated:npc/loadchunks
 # spawn

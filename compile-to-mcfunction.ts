@@ -1103,7 +1103,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
     addfunc('intro/_resetstorages', [
       `setblock 1024 66 61 air`,
-      `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${toSnbt({
+      `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${toSnbt(Object.assign({Count:'1b',Slot:'4b'}, item.ownphone))},${toSnbt({
         Count:'1b',
         Slot:'13b',
         id:'"minecraft:paper"',
@@ -1172,8 +1172,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     addfunc('intro/await_start', [
-      'execute unless entity @a[nbt={SelectedItem:{tag:{tvremote:1b}}}] as @e[tag=remote_rightclick_detect] at @s run tp @s ~ 0 ~',
-      'execute as @a[nbt={SelectedItem:{tag:{tvremote:1b}}}] at @s run function generated:story/intro/tp_remote_holder',
+      'execute unless entity @e[type=player,nbt={SelectedItem:{tag:{tvremote:1b}}}] as @e[tag=remote_rightclick_detect] at @s run tp @s ~ 0 ~',
+      'execute as @e[type=player,nbt={SelectedItem:{tag:{tvremote:1b}}}] at @s run function generated:story/intro/tp_remote_holder',
       'execute as @e[tag=remote_rightclick_detect,nbt={HandItems:[{tag:{tvremote:1b}}]}] at @s run function generated:story/intro/_start',
       '',
       'execute unless score start story-intro matches 1 run schedule function generated:story/intro/await_start 1t'
@@ -4290,5 +4290,39 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       puzzles.colors.map(c=> `execute if entity @s[nbt={Item:{id:"minecraft:${c}_wool"}}] run data merge entity @s {Age:-32768s,Item:{tag:${toSnbt(Object.assign({CanPlaceOn:`["light_gray_concrete"]`}, puzzles.wirenbt(c)))}}}`)
     ])
 
+  })();
+
+  (() => {
+    addfunc('phone/handleholder', [
+      'execute unless score @s phone-detect-id matches 0.. at @s run function generated:story/phone/addholder',
+      'scoreboard players operation #tmp phone-detect-id = @s phone-detect-id',
+      `execute at @s as @e[tag=phone-click-detect] if score @s phone-detect-id = #tmp phone-detect-id run function generated:story/phone/tpholder`
+    ])
+
+    addfunc('phone/addholder', [
+      `summon armor_stand ~ ~0.7 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,ShowArms:1b,Small:1b,Invisible:1b,Tags:["phone-click-detect","phone-click-detect-init"],DisabledSlots:4079422}`,
+      `scoreboard players add -max phone-detect-id 1`,
+      `scoreboard players operation @s phone-detect-id = -max phone-detect-id`,
+      `scoreboard players operation @e[tag=phone-click-detect-init] phone-detect-id = -max phone-detect-id`,
+      `tag @e remove phone-click-detect-init`
+    ])
+
+    addfunc('phone/tpholder', [
+      'tp @s ~ ~0.7 ~',
+      'tag @s add phone-click-detect-enabled'
+    ])
+
+    addfunc('phone/takecall', [
+      'scoreboard players operation #tmp phone-detect-id = @s phone-detect-id',
+      'execute as @a if score @s phone-detect-id = #tmp phone-detect-id run tag @s add phone-detect-selected',
+      `execute if entity @s[nbt={HandItems:{tag:{ownphone:1b}}}] run give @a[tag=phone-detect-selected] ${toGive(item.ownphone)}`,
+      `execute if entity @s[nbt={HandItems:{tag:{iosphone:1b}}}] run give @a[tag=phone-detect-selected] ${toGive(item.iosphone)}`,
+      `execute as @a[tag=phone-detect-selected] run function generated:story/phone/call`,
+      'tag @a remove phone-detect-selected'
+    ])
+
+    addfunc('phone/call', [
+
+    ])
   })();
 }

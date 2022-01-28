@@ -68,10 +68,23 @@ export const item = {
     tag:{
       Enchantments:`[{}]`,
       display:{
-        Lore:`['{"text":"Phone.","color":"dark_gray"}']`,
+        Lore:`['{"text":"Runs Android 5.0.2 \\"Lollipop\\".","color":"dark_gray"}']`,
         Name:`'{"text":"Motorola Moto G 2","color":"gray"}'`
       },
-      phone: true
+      phone: true,
+      ownphone: true
+    }
+  },
+  iosphone: {
+    id:'"minecraft:black_candle"',
+    tag:{
+      Enchantments:`[{}]`,
+      display:{
+        Lore:`['{"text":"Only 13 nanometers thick.","color":"dark_gray"}']`,
+        Name:`'{"text":"iPhone XXGS Pro Max Plus+ Ultra","color":"gray"}'`
+      },
+      phone: true,
+      iosphone: true
     }
   },
   housekey: {
