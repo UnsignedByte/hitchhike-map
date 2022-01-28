@@ -4382,11 +4382,11 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
     addfunc('misc/car/addinitials', [
       [
-      "910 64 -150",
-      "908 64 -150",
-      "906 64 -150",
-      "904 64 -150",
-      "902 64 -150"
+      "911.0 64 -149.0",
+      "909.0 64 -149.0",
+      "907.0 64 -149.0",
+      "905.0 64 -149.0",
+      "903.0 64 -149.0"
       ].map(x=> `execute positioned ${x} run function hitchhike:car/summon`)
     ])
   })();
