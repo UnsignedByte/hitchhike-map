@@ -4351,14 +4351,14 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ]
 
     const neighbors = [
-      [-1, -1],
+      // [-1, -1],
       [-1, 0],
-      [-1, 1],
+      // [-1, 1],
       [0, -1],
       [0, 1],
-      [1, -1],
+      // [1, -1],
       [1, 0],
-      [1, 1],
+      // [1, 1],
     ]
 
     addfunc('misc/car/handlecollision', [
