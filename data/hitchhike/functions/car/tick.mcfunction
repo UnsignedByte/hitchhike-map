@@ -10,3 +10,12 @@ execute as @e[tag=car-root] at @s run function hitchhike:car/move
 
 # Render the car
 # execute as @e[tag=car-root] at @s run function hitchhike:car/render
+
+scoreboard players operation surplus car = playercount vars
+scoreboard players operation surplus car *= 2 const
+
+execute if score surplus car >= maxcars car run scoreboard players operation maxcars car = surplus car
+scoreboard players operation surplus car = maxcars car
+
+execute as @e[tag=car-root] run scoreboard players remove surplus car 1
+execute if score surplus car matches ..-1 run kill @e[tag=car-root,limit=1]
