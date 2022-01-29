@@ -4541,7 +4541,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         selector: 'at @a[tag=song-android]'
       },
       dialtone: {
-        notes: [...Array(100)].map((x, i)=>(i % 200 < 15) ? [19, 23] : []),
+        notes: [...Array(100)].map((x, i)=>(i % 20 < 15) ? [19, 23] : []),
         bpm: 60,
         denomination: 20,
         instrument: "block.note_block.bass",
