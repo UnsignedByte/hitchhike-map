@@ -4004,7 +4004,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     })
 
     addfunc('parkour/fillshoechest', [
-      `data merge block 822 114 407 {Items:[${toSnbt(Object.assign({Count:'1b', Slot:'13b'}, item.snowshoes))}]}`
+      `execute unless data block ~ ~ ~ Items[] run data merge block ~ ~ ~ {Items:[${toSnbt(Object.assign({Count:'1b', Slot:'13b'}, item.snowshoes))}]}`
     ])
 
     schedule(`execute if score #hurm-done vars matches 1 run give @a[nbt=!{Inventory:[{tag:{compass:1b}}]}] ${toGive(item.compass)}`, 20, functions)
