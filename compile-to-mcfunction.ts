@@ -4541,10 +4541,10 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         selector: 'at @a[tag=song-android]'
       },
       dialtone: {
-        notes: [...Array(100)].map((x, i)=>(i % 20 < 15) ? [19, 23] : []),
+        notes: [...Array(100)].map((x, i)=>(i % 20 < 15) ? [1, 5] : []),
         bpm: 60,
         denomination: 20,
-        instrument: "block.note_block.didgeridoo",
+        instrument: "block.note_block.bit",
         selector: 'at @a[tag=caller]'
       }
     }
