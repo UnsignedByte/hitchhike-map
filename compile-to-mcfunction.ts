@@ -4336,7 +4336,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
     const songs = {
       ios: {
-        notes: [
+        notes: [[
           [6, 18],
           [16],
           [13],
@@ -4450,14 +4450,14 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           [],
           [],
           [],
-        ],
+        ]],
         bpm: 140,
         denomination: 4,
-        instrument: "block.note_block.harp",
+        instrument: ["block.note_block.harp"],
         selector: 'at @a[tag=song-ios]'
       },
       android: {
-        notes: [
+        notes: [[
           [],
           [],
           [],
@@ -4534,17 +4534,20 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           [],
           [],
           [],
-        ],
+        ]],
         bpm: 120,
         denomination: 4,
-        instrument: "block.note_block.pling",
+        instrument: ["block.note_block.pling"],
         selector: 'at @a[tag=song-android]'
       },
       dialtone: {
-        notes: [...Array(100)].map((x, i)=>(i % 20 < 15) ? [1, 5] : []),
+        notes: [
+          [...Array(100)].map((x, i)=>(i % 20 < 15) ? [0, 4] : []),
+          [...Array(100)].map((x, i)=>(i % 20 < 15) ? [12, 16] : [])
+        ],
         bpm: 60,
         denomination: 20,
-        instrument: "block.note_block.bit",
+        instrument: ["block.note_block.bit", "block.note_block.didgeridoo"],
         selector: 'at @a[tag=caller]'
       }
     }
@@ -4556,21 +4559,23 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
       const song = [];
 
-      for (let i = 0; i < songdata.notes.length; i++) {
-        // console.log(songdata.notes, i)
-        const chord: number[] = songdata.notes[i];
-        if (chord.length === 0) continue;
+      for (const noteseq of songdata.notes) {
+        for (let i = 0; i < noteseq.length; i++) {
+          // console.log(songdata.notes, i)
+          const chord: number[] = noteseq[i];
+          if (chord.length === 0) continue;
 
-        song.push({
-          wait: delay * i,
-          seq: {
-            cmds: chord.map((x: number)=>`execute ${songdata.selector} run playsound ${songdata.instrument} player @a ~ ~ ~ 1 ${noteToPitch(x)}`)
-          }
-        })
+          song.push({
+            wait: delay * i,
+            seq: {
+              cmds: chord.map((x: number)=>`execute ${songdata.selector} run playsound ${songdata.instrument} player @a ~ ~ ~ 1 ${noteToPitch(x)}`)
+            }
+          })
+        }
       }
 
       song.push({
-        wait: delay * songdata.notes.length,
+        wait: delay * Math.max(songdata.notes.map((k: number[][])=>k.length)),
         seq: {
           cmds: [
             `scoreboard players set ${name} song-playing 0`
