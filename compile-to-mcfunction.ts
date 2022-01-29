@@ -4396,6 +4396,38 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         denomination: 4,
         instrument: "block.note_block.harp",
         selector: 'at @a[tag=song-apple]'
+      },
+      android: {
+        notes: [
+          [6],
+          [],
+          [],
+          [6],
+          [13],
+          [18],
+          [16],
+          [],
+          [],
+          [13],
+          [],
+          [],
+          [6],
+          [],
+          [],
+          [6],
+          [13],
+          [18],
+          [16],
+          [],
+          [],
+          [13],
+          [],
+          [],
+        ],
+        bpm: 120,
+        denomination: 3,
+        instrument: "block.note_block.flute",
+        selector: 'at @a[tag=song-android]'
       }
     }
 
