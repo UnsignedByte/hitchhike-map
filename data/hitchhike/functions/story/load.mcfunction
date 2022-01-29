@@ -5,7 +5,8 @@ function hitchhike:story/maze/load
 function hitchhike:story/fountain/load
 function hitchhike:story/lake/load
 function hitchhike:story/hurm/load
-function hitchhike:story/stores/load
+function hitchhike:story/stores/loadad
+function hitchhike:story/misc/load
 function hitchhike:story/parkour/load
 function hitchhike:story/tower/load
 function hitchhike:story/phone/load

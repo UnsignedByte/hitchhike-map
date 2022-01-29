@@ -4515,6 +4515,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       })
 
       addfunc(`songs/${name}`, [
+        `scoreboard players add ${name} song-playing 0`,
         `execute if score ${name} song-playing matches 0 run function generated:story/songs/_${name}`
       ])
 

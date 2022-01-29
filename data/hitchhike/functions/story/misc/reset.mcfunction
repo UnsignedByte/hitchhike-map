@@ -27,3 +27,6 @@ data merge entity @e[tag=npc-barteisenhower,limit=1] {SleepingX:1049,SleepingY:6
 
 
 function hitchhike:story/misc/lobby/reset
+
+scoreboard objectives remove song-playing
+scoreboard objectives add song-playing dummy
