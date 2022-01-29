@@ -12,6 +12,9 @@ summon area_effect_cloud -205.0 64 -3.5 {CustomNameVisible:1b,Duration:214748364
 
 
 #> Credits room
+# door
+clone -138 64 -3 -133 68 -1 -208 64 -3
+scoreboard players set #credit-door vars 0
 kill @e[tag=player-display-stand]
 
 # 844
