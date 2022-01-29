@@ -149,4 +149,4 @@ schedule function generated:story/songs/_dialtone-146 91t
 schedule function generated:story/songs/_dialtone-147 92t
 schedule function generated:story/songs/_dialtone-148 93t
 schedule function generated:story/songs/_dialtone-149 94t
-schedule function generated:story/songs/_dialtone-150 NaNt
+schedule function generated:story/songs/_dialtone-150 100t
