@@ -4575,6 +4575,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         }
       }
 
+      console.log(songdata.notes.map((k: number[][])=>k.length))
+
       song.push({
         wait: delay * Math.max(songdata.notes.map((k: number[][])=>k.length)),
         seq: {
