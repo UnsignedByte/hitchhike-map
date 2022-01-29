@@ -4559,7 +4559,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
       const song = [];
 
-      for (const noteseq of songdata.notes) {
+      for (let j = 0; j < songdata.notes.length; j++) {
+        const noteseq = songdata.notes[j];
         for (let i = 0; i < noteseq.length; i++) {
           // console.log(songdata.notes, i)
           const chord: number[] = noteseq[i];
@@ -4568,7 +4569,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           song.push({
             wait: delay * i,
             seq: {
-              cmds: chord.map((x: number)=>`execute ${songdata.selector} run playsound ${songdata.instrument} player @a ~ ~ ~ 1 ${noteToPitch(x)}`)
+              cmds: chord.map((x: number)=>`execute ${songdata.selector} run playsound ${songdata.instrument[j]} player @a ~ ~ ~ 1 ${noteToPitch(x)}`)
             }
           })
         }
