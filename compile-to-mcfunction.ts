@@ -4316,17 +4316,22 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     addfunc('phone/takecall', [
       'scoreboard players operation #tmp phone-detect-id = @s phone-detect-id',
       'execute as @a if score @s phone-detect-id = #tmp phone-detect-id run tag @s add phone-detect-selected',
-      `execute if entity @s[nbt={HandItems:[{tag:{iosphone:1b}}]}] run tag @a[tag=phone-detect-selected] add song-ios`,
-      `execute if entity @s[nbt={HandItems:[{tag:{androidphone:1b}}]}] run tag @a[tag=phone-detect-selected] add song-android`,
-      `give @a[tag=song-ios] ${toGive(item.iosphone)}`,
-      `give @a[tag=song-android] ${toGive(item.androidphone)}`,
+      `execute if score android song-playing matches 0 if score ios song-playing matches 0 if entity @s[nbt={HandItems:[{tag:{iosphone:1b}}]}] run tag @a[tag=phone-detect-selected] add song-ios`,
+      `execute if score android song-playing matches 0 if score ios song-playing matches 0 if entity @s[nbt={HandItems:[{tag:{androidphone:1b}}]}] run tag @a[tag=phone-detect-selected] add song-android`,
+      `execute if entity @s[nbt={HandItems:[{tag:{iosphone:1b}}]}] run give @a[tag=phone-detect-selected] ${toGive(item.iosphone)}`,
+      `execute if entity @s[nbt={HandItems:[{tag:{androidphone:1b}}]}] run give @a[tag=phone-detect-selected] ${toGive(item.androidphone)}`,
       `data modify entity @s HandItems set value [{},{}]`,
-      `execute as @a[tag=phone-detect-selected] run function generated:story/phone/call`,
+      `execute if score android song-playing matches 0 if score ios song-playing matches 0 as @a[tag=phone-detect-selected] run schedule function generated:story/phone/call 230t`,
       'tag @a remove phone-detect-selected'
     ])
 
     addfunc('phone/call', [
-      'execute unless score #phone-enabled vars matches 1 run title'
+      `tag @a[tag=song-ios] add caller`,
+      `tag @a[tag=song-android] add caller`,
+      'execute unless score #phone-enabled vars matches 1 run function generated:story/phone/failedcall',
+      'execute if score #phone-enabled vars matches 1 run function generated:story/phone/',
+      `tag @a remove song-ios`,
+      `tag @a remove song-android`
     ])
 
     const songs = {
@@ -4534,6 +4539,13 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         denomination: 4,
         instrument: "block.note_block.pling",
         selector: 'at @a[tag=song-android]'
+      },
+      dialtone: {
+        notes: [...Array(100)].map(x=>[11, 15]),
+        bpm: 60,
+        denomination: 20,
+        instrument: "block.note_block.bass",
+        selector: 'at @a[tag=caller]'
       }
     }
 
