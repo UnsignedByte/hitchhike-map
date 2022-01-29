@@ -6,6 +6,9 @@ summon area_effect_cloud -122.5 65 25.0 {CustomNameVisible:1b,Duration:214748364
 # Welcome
 summon area_effect_cloud -75.0 65.5 85.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Start Map Here","color":"white","bold":true}'}
 summon area_effect_cloud -75.0 65 85.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Good Luck!","color":"white","bold":true}'}
+# Thank you for playing
+summon area_effect_cloud -205.0 64.5 -3.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"The Hike","color":"white","bold":true}'}
+summon area_effect_cloud -205.0 64 -3.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Credits","color":"white","bold":true}'}
 
 
 #> Credits room

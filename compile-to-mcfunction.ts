@@ -4359,8 +4359,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       wait: 10,
                       seq: {
                         cmds: [
-                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.5`,
-                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 0.9`
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 0.9`
                         ],
                         next: [
                         ]
@@ -4370,8 +4370,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       wait: 20,
                       seq: {
                         cmds: [
-                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.5`,
-                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 0.9`
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 0.9`
                         ],
                         next: [
                         ]
@@ -4381,8 +4381,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       wait: 30,
                       seq: {
                         cmds: [
-                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.5`,
-                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 0.9`
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.3 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.3 0.9`
                         ],
                         next: [
                         ]
@@ -4392,8 +4392,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       wait: 40,
                       seq: {
                         cmds: [
-                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.5`,
-                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 0.9`
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.3 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.3 0.9`
                         ],
                         next: [
                         ]
@@ -4407,6 +4407,126 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                           `tag @a remove caller`
                         ],
                         next: [
+                          {
+                            wait: 10,
+                            seq: {
+                              cmds: [
+                                `tellraw @a {"text":"...hello?","color":"#c0d0d1","italic":true,"bold":true}`
+                              ],
+                              next: [
+                                {
+                                  wait: 30,
+                                  seq: {
+                                    cmds: [
+                                      `playsound minecraft:entity.illusioner.mirror_move player @a -196 64 -10 1 1.1`,
+                                      `tp @a[tag=!admin] -196 64 -10 90 0`
+                                    ],
+                                    next: [
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    })
+
+    genseq('misc/lobby/opendoor', {
+      cmds: [
+        'playsound minecraft:block.piston.extend block @a -205.0 65 -1.5 1 0.7'
+      ],
+      next: [
+        {
+          wait: 20,
+          seq: {
+            cmds: [
+              'playsound minecraft:block.piston.contract block @a -207 62 -2 1 1',
+              'playsound minecraft:block.piston.contract block @a -206 62 -2 1 1',
+              'playsound minecraft:block.piston.contract block @a -205 62 -2 1 1',
+              'playsound minecraft:block.piston.contract block @a -204 62 -2 1 1',
+              'playsound minecraft:block.stone.break block @a -207 64 -2 1 0.6',
+              'playsound minecraft:block.stone.break block @a -206 64 -2 1 0.6',
+              'playsound minecraft:block.stone.break block @a -205 64 -2 1 0.6',
+              'playsound minecraft:block.stone.break block @a -204 64 -2 1 0.6',
+              'execute positioned -148 64 -3 run clone ~ ~ ~ ~4 ~4 ~2 -208 64 -3'
+            ],
+            next: [
+              {
+                wait: 20,
+                seq: {
+                  cmds: [
+                    'playsound minecraft:block.piston.contract block @a -207 62 -2 1 1',
+                    'playsound minecraft:block.piston.contract block @a -206 62 -2 1 1',
+                    'playsound minecraft:block.piston.contract block @a -205 62 -2 1 1',
+                    'playsound minecraft:block.piston.contract block @a -204 62 -2 1 1',
+                    'playsound minecraft:block.stone.break block @a -207 64 -2 1 0.6',
+                    'playsound minecraft:block.stone.break block @a -206 64 -2 1 0.6',
+                    'playsound minecraft:block.stone.break block @a -205 64 -2 1 0.6',
+                    'playsound minecraft:block.stone.break block @a -204 64 -2 1 0.6',
+                    'execute positioned -158 64 -3 run clone ~ ~ ~ ~4 ~4 ~2 -208 64 -3'
+                  ],
+                  next: [
+                    {
+                      wait: 20,
+                      seq: {
+                        cmds: [
+                          'playsound minecraft:block.piston.contract block @a -207 62 -2 1 1',
+                          'playsound minecraft:block.piston.contract block @a -206 62 -2 1 1',
+                          'playsound minecraft:block.piston.contract block @a -205 62 -2 1 1',
+                          'playsound minecraft:block.piston.contract block @a -204 62 -2 1 1',
+                          'playsound minecraft:block.stone.break block @a -207 64 -2 1 0.6',
+                          'playsound minecraft:block.stone.break block @a -206 64 -2 1 0.6',
+                          'playsound minecraft:block.stone.break block @a -205 64 -2 1 0.6',
+                          'playsound minecraft:block.stone.break block @a -204 64 -2 1 0.6',
+                          'execute positioned -168 64 -3 run clone ~ ~ ~ ~4 ~4 ~2 -208 64 -3'
+                        ],
+                        next: [
+                          {
+                            wait: 20,
+                            seq: {
+                              cmds: [
+                                'playsound minecraft:block.piston.contract block @a -207 62 -2 1 1',
+                                'playsound minecraft:block.piston.contract block @a -206 62 -2 1 1',
+                                'playsound minecraft:block.piston.contract block @a -205 62 -2 1 1',
+                                'playsound minecraft:block.piston.contract block @a -204 62 -2 1 1',
+                                'playsound minecraft:block.stone.break block @a -207 64 -2 1 0.6',
+                                'playsound minecraft:block.stone.break block @a -206 64 -2 1 0.6',
+                                'playsound minecraft:block.stone.break block @a -205 64 -2 1 0.6',
+                                'playsound minecraft:block.stone.break block @a -204 64 -2 1 0.6',
+                                'execute positioned -178 64 -3 run clone ~ ~ ~ ~4 ~4 ~2 -208 64 -3'
+                              ],
+                              next: [
+                                {
+                                  wait: 20,
+                                  seq: {
+                                    cmds: [
+                                      'playsound minecraft:block.piston.contract block @a -207 62 -2 1 1',
+                                      'playsound minecraft:block.piston.contract block @a -206 62 -2 1 1',
+                                      'playsound minecraft:block.piston.contract block @a -205 62 -2 1 1',
+                                      'playsound minecraft:block.piston.contract block @a -204 62 -2 1 1',
+                                      'playsound minecraft:block.stone.break block @a -207 64 -2 1 0.6',
+                                      'playsound minecraft:block.stone.break block @a -206 64 -2 1 0.6',
+                                      'playsound minecraft:block.stone.break block @a -205 64 -2 1 0.6',
+                                      'playsound minecraft:block.stone.break block @a -204 64 -2 1 0.6',
+                                      'execute positioned -158 64 -3 run clone ~ ~ ~ ~4 ~4 ~2 -208 64 -3'
+                                    ],
+                                    next: [
+
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
                         ]
                       }
                     }
