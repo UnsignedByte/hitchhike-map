@@ -175,7 +175,7 @@ export const item = {
         })}]`
       },
       Enchantments:`[{}]`,
-      map: 0
+      map: 388
     }
   },
   btc: {

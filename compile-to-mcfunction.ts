@@ -536,7 +536,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
   function genseq(src: string, seq: any) {
     addfunc(src, [...(seq.cmds ?? []), ...(seq.next ?? []).map((x: any, i: number)=>{
       genseq(`${src}-${i}`, x.seq);
-      return `schedule function generated:story/${src}-${i} ${x.wait}t`
+      return (x.wait === 0) ? `function generated:story/${src}-${i}` : `schedule function generated:story/${src}-${i} ${x.wait}t`
     })])
   }
 
@@ -4326,6 +4326,58 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     addfunc('phone/call', [
       'execute unless score #phone-enabled vars matches 1 run title'
     ])
+
+    const songs = {
+      apple: {
+        notes: [
+          [6, 18],
+          [16],
+          [13],
+          [],
+          [18],
+          [],
+          [4, 11],
+          [],
+          [18],
+          [],
+          [16],
+          [18],
+          [3, 11]
+        ],
+        bpm: 140,
+        denomination: 16,
+        instrument: "block.note_block.harp",
+        selector: 'at @a[tag=song-apple]'
+      }
+    }
+
+    Object.entries(songs).map(([name, songdata]: [string, any]) => {
+      let delay = Math.round(60*20/songdata.bpm/songdata.denomination); // ticks between each denomination
+
+      delay = (delay < 1) ? 1 : delay; // set minimum delay to 1 tick
+
+      const song = [];
+
+      for (let i = 0; i < songdata.notes.length; i++) {
+        // console.log(songdata.notes, i)
+        const chord: number[] = songdata.notes[i];
+        if (chord.length === 0) continue;
+
+        song.push({
+          wait: delay * i,
+          seq: {
+            cmds: chord.map((x: number)=>`execute ${songdata.selector} run playsound ${songdata.instrument} player @a ~ ~ ~ 1 ${noteToPitch(x)}`)
+          }
+        })
+      }
+
+      genseq(`songs/${name}`, {
+        cmds: [
+        ],
+        next: song
+      })
+
+    });
   })();
 
   (() => {
@@ -4347,7 +4399,9 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       "andesite", 
       "cobbled_deepslate", 
       "stone_bricks", 
-      "white_terracotta"
+      "white_terracotta",
+      "tuff",
+      "dead_bubble_coral_block"
     ]
 
     const neighbors = [
