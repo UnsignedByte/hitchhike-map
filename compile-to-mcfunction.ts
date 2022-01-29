@@ -4547,7 +4547,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         ],
         bpm: 60,
         denomination: 20,
-        instrument: ["block.note_block.bit", "block.note_block.didgeridoo"],
+        instrument: ["block.lava.extinguish", "block.note_block.didgeridoo"],
         selector: 'at @a[tag=caller]'
       }
     }
