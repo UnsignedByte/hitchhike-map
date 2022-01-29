@@ -4345,7 +4345,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           [3, 11]
         ],
         bpm: 140,
-        denomination: 16,
+        denomination: 4,
         instrument: "block.note_block.harp",
         selector: 'at @a[tag=song-apple]'
       }
