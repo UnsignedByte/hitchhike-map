@@ -4413,7 +4413,6 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           [],
           [],
           [],
-          [],
           [6],
           [],
           [],
