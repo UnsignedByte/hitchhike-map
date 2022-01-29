@@ -4356,7 +4356,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                   ],
                   next: [
                     {
-                      wait: 5,
+                      wait: 10,
                       seq: {
                         cmds: [
                           `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.5`,
@@ -4367,7 +4367,29 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       }
                     },
                     {
-                      wait: 10,
+                      wait: 20,
+                      seq: {
+                        cmds: [
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
+                      wait: 30,
+                      seq: {
+                        cmds: [
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
+                      wait: 40,
                       seq: {
                         cmds: [
                           `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.5`,
