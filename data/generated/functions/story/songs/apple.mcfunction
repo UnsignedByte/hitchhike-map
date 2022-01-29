@@ -11,3 +11,16 @@ schedule function generated:story/songs/apple-9 42t
 schedule function generated:story/songs/apple-10 50t
 schedule function generated:story/songs/apple-11 54t
 schedule function generated:story/songs/apple-12 58t
+schedule function generated:story/songs/apple-13 62t
+schedule function generated:story/songs/apple-14 64t
+schedule function generated:story/songs/apple-15 66t
+schedule function generated:story/songs/apple-16 70t
+schedule function generated:story/songs/apple-17 74t
+schedule function generated:story/songs/apple-18 78t
+schedule function generated:story/songs/apple-19 82t
+schedule function generated:story/songs/apple-20 86t
+schedule function generated:story/songs/apple-21 90t
+schedule function generated:story/songs/apple-22 104t
+schedule function generated:story/songs/apple-23 112t
+schedule function generated:story/songs/apple-24 116t
+schedule function generated:story/songs/apple-25 120t
