@@ -63,7 +63,7 @@ export const item = {
       tvremote: true
     }
   },
-  ownphone: {
+  androidphone: {
     id:'"minecraft:black_candle"',
     tag:{
       Enchantments:`[{}]`,
@@ -72,7 +72,7 @@ export const item = {
         Name:`'{"text":"Motorola Moto G 2","color":"gray"}'`
       },
       phone: true,
-      ownphone: true
+      androidphone: true
     }
   },
   iosphone: {

@@ -1103,7 +1103,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
     addfunc('intro/_resetstorages', [
       `setblock 1024 66 61 air`,
-      `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${toSnbt(Object.assign({Count:'1b',Slot:'4b'}, item.ownphone))},${toSnbt({
+      `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${toSnbt(Object.assign({Count:'1b',Slot:'4b'}, item.iosphone))},${toSnbt({
         Count:'1b',
         Slot:'13b',
         id:'"minecraft:paper"',
@@ -4316,8 +4316,10 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     addfunc('phone/takecall', [
       'scoreboard players operation #tmp phone-detect-id = @s phone-detect-id',
       'execute as @a if score @s phone-detect-id = #tmp phone-detect-id run tag @s add phone-detect-selected',
-      `execute if entity @s[nbt={HandItems:[{tag:{ownphone:1b}}]}] run give @a[tag=phone-detect-selected] ${toGive(item.ownphone)}`,
-      `execute if entity @s[nbt={HandItems:[{tag:{iosphone:1b}}]}] run give @a[tag=phone-detect-selected] ${toGive(item.iosphone)}`,
+      `execute if entity @s[nbt={HandItems:[{tag:{iosphone:1b}}]}] run tag @a[tag=phone-detect-selected] add song-ios`,
+      `execute if entity @s[nbt={HandItems:[{tag:{androidphone:1b}}]}] run tag @a[tag=phone-detect-selected] add song-android`,
+      `give @a[tag=song-ios] ${toGive(item.iosphone)}`,
+      `give @a[tag=song-android] ${toGive(item.androidphone)}`,
       `data modify entity @s HandItems set value [{},{}]`,
       `execute as @a[tag=phone-detect-selected] run function generated:story/phone/call`,
       'tag @a remove phone-detect-selected'
@@ -4328,7 +4330,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     const songs = {
-      apple: {
+      ios: {
         notes: [
           [6, 18],
           [16],
@@ -4395,7 +4397,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         bpm: 140,
         denomination: 4,
         instrument: "block.note_block.harp",
-        selector: 'at @a[tag=song-apple]'
+        selector: 'at @a[tag=song-ios]'
       },
       android: {
         notes: [
@@ -4503,8 +4505,22 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         })
       }
 
-      genseq(`songs/${name}`, {
+      song.push({
+        wait: delay * songdata.notes.length,
+        seq: {
+          cmds: [
+            `scoreboard players set ${name} song-playing 0`
+          ]
+        }
+      })
+
+      addfunc(`songs/${name}`, [
+        `execute if score ${name} song-playing matches 0 run function generated:story/songs/_${name}`
+      ])
+
+      genseq(`songs/_${name}`, {
         cmds: [
+          `scoreboard players set ${name} song-playing 1`
         ],
         next: song
       })
