@@ -4321,18 +4321,58 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       `execute if entity @s[nbt={HandItems:[{tag:{iosphone:1b}}]}] run give @a[tag=phone-detect-selected] ${toGive(item.iosphone)}`,
       `execute if entity @s[nbt={HandItems:[{tag:{androidphone:1b}}]}] run give @a[tag=phone-detect-selected] ${toGive(item.androidphone)}`,
       `data modify entity @s HandItems set value [{},{}]`,
-      `execute if score android song-playing matches 0 if score ios song-playing matches 0 as @a[tag=phone-detect-selected] run schedule function generated:story/phone/call 230t`,
+      `execute unless score #phone-enabled vars matches 1 generated:story/phone/failedcall`,
+      `execute if score #phone-enabled vars matches 1 if score android song-playing matches 0 if score ios song-playing matches 0 as @a[tag=phone-detect-selected] run schedule function generated:story/phone/call 230t`,
       'tag @a remove phone-detect-selected'
     ])
 
-    addfunc('phone/call', [
-      `tag @a[tag=song-ios] add caller`,
-      `tag @a[tag=song-android] add caller`,
-      'execute unless score #phone-enabled vars matches 1 run function generated:story/phone/failedcall',
-      'execute if score #phone-enabled vars matches 1 run function generated:story/phone/',
-      `tag @a remove song-ios`,
-      `tag @a remove song-android`
+    addfunc('phone/failedcall', [
+      
     ])
+
+    genseq('phone/call', {
+      cmds: [
+        `tag @a[tag=song-ios] add caller`,
+        `tag @a[tag=song-android] add caller`,
+        `tag @a remove song-ios`,
+        `tag @a remove song-android`,
+      ],
+      next: [
+        {
+          wait: 15,
+          seq: {
+            cmds: [
+              `execute at @a[tag=caller] run playsound minecraft:block.wooden_door.open player @a ~ ~ ~ 0.8 1.6`,
+              `execute at @a[tag=caller] run playsound minecraft:block.iron_trapdoor.close player @a ~ ~ ~ 0.6 1.2`,
+              `execute at @a[tag=caller] run playsound minecraft:block.piston.contract player @a ~ ~ ~ 0.2 1.3`
+            ],
+            next: [
+              {
+                wait: 10,
+                seq: {
+                  cmds: [
+                    `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.5`,
+                    `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 0.9`
+                  ],
+                  next: [
+                    {
+                      wait: 20,
+                      seq: {
+                        cmds: [
+                          `stopsound @a player`
+                        ],
+                        next: [
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    })
 
     const songs = {
       ios: {
@@ -4540,16 +4580,16 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         instrument: ["block.note_block.pling"],
         selector: 'at @a[tag=song-android]'
       },
-      dialtone: {
-        notes: [
-          [...Array(100)].map((x, i)=>(i % 20 < 15) ? [0, 4] : []),
-          [...Array(100)].map((x, i)=>(i % 20 < 15) ? [12, 16] : [])
-        ],
-        bpm: 60,
-        denomination: 20,
-        instrument: ["block.lava.extinguish", "block.note_block.didgeridoo"],
-        selector: 'at @a[tag=caller]'
-      }
+      // dialtone: {
+      //   notes: [
+      //     [...Array(100)].map((x, i)=>(i % 20 < 15) ? [0, 4] : []),
+      //     [...Array(100)].map((x, i)=>(i % 20 < 15) ? [12, 16] : [])
+      //   ],
+      //   bpm: 60,
+      //   denomination: 20,
+      //   instrument: ["block.lava.extinguish", "block.note_block.didgeridoo"],
+      //   selector: 'at @a[tag=caller]'
+      // }
     }
 
     Object.entries(songs).map(([name, songdata]: [string, any]) => {
