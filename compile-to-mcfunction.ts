@@ -4447,7 +4447,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       ],
       next: [
         {
-          wait: 20,
+          wait: 30,
           seq: {
             cmds: [
               'playsound minecraft:block.piston.contract block @a -207 62 -2 1 1',
@@ -4462,7 +4462,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
             ],
             next: [
               {
-                wait: 20,
+                wait: 30,
                 seq: {
                   cmds: [
                     'playsound minecraft:block.piston.contract block @a -207 62 -2 1 1',
@@ -4477,7 +4477,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                   ],
                   next: [
                     {
-                      wait: 20,
+                      wait: 30,
                       seq: {
                         cmds: [
                           'playsound minecraft:block.piston.contract block @a -207 62 -2 1 1',
@@ -4492,7 +4492,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                         ],
                         next: [
                           {
-                            wait: 20,
+                            wait: 30,
                             seq: {
                               cmds: [
                                 'playsound minecraft:block.piston.contract block @a -207 62 -2 1 1',
@@ -4507,7 +4507,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                               ],
                               next: [
                                 {
-                                  wait: 20,
+                                  wait: 30,
                                   seq: {
                                     cmds: [
                                       'playsound minecraft:block.piston.contract block @a -207 62 -2 1 1',
