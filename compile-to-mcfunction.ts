@@ -4544,7 +4544,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         notes: [...Array(100)].map((x, i)=>(i % 20 < 15) ? [19, 23] : []),
         bpm: 60,
         denomination: 20,
-        instrument: "block.note_block.bass",
+        instrument: "block.note_block.didgeridoo",
         selector: 'at @a[tag=caller]'
       }
     }
