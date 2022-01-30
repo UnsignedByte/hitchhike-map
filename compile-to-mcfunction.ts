@@ -3808,11 +3808,6 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
   })();
 
-  schedule([
-    `particle minecraft:end_rod -75.0 67 88.5 1 0.8 0.3 0 5`,
-    `execute if entity @a[x=-77,y=65,z=88,dx=3,dy=2,dz=0] as @a[x=-127,y=64,z=-14,dx=103,dy=10,dz=103] run function hitchhike:story/intro/lobbytp`
-  ], 5, functions);
-
   (() => {
     const checkpoints = [
       // garden
@@ -4776,7 +4771,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                           cmds: [
                                             `title @a times 10 50 15`,
                                             `title @a title {"text":"Thank You for Playing!","color":"blue","bold":true}`,
-                                            'playsound minecraft:ui.toast.challenge_complete block @a -205.00 65 0.5 1 1'
+                                            'playsound minecraft:ui.toast.challenge_complete block @a -205.00 65 0.5 1 1',
+                                            'scoreboard players set #map-finished vars 1'
                                           ]
                                         }
                                       }
@@ -5127,5 +5123,17 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       "901.0 64 -149.0"
       ].map(x=> `execute positioned ${x} run function hitchhike:car/summon`)
     ])
+
+    // lobby handling
+
+    schedule([
+      `particle minecraft:end_rod -75.0 67 88.5 1 0.8 0.3 0 5`,
+      `execute if entity @a[x=-77,y=65,z=88,dx=3,dy=2,dz=0] as @a[x=-127,y=64,z=-14,dx=103,dy=10,dz=103] run function hitchhike:story/intro/lobbytp`,
+      `particle minecraft:end_rod -205.0 66 90.5 1 0.8 0.3 0 5`,
+      `tp @a[x=-207,y=64,z=90,dx=3,dy=3,dz=0] -75.0 65 -5.0 180 0`,
+      `execute if score #map-finished vars matches 1 run particle minecraft:end_rod -125.5.0 67 25.0 0.3 0.8 1 0 5`,
+      `execute if score #map-finished vars matches 1 run tp @a[x=-126,y=65,z=23,dx=0,dy=3,dz=3] -196 64 -10 -90 0`
+    ], 5, functions);
+
   })();
 }
