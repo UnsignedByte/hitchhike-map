@@ -3844,6 +3844,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       "887.5 150.5 526.5",
       "882.5 151.5 527.5",
       "870.5 159 541.5",
+      "874.5 160.5 538.5",
       "876.5 161 533.5",
       "878.5 164 528.5",
       "880.5 167 533.5",
@@ -5131,8 +5132,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       `execute if entity @a[x=-77,y=65,z=88,dx=3,dy=2,dz=0] as @a[x=-127,y=64,z=-14,dx=103,dy=10,dz=103] run function hitchhike:story/intro/lobbytp`,
       `particle minecraft:end_rod -205.0 66 90.5 1 0.8 0.3 0 5`,
       `tp @a[x=-207,y=64,z=90,dx=3,dy=3,dz=0] -75.0 65 -5.0 180 0`,
-      `execute if score #map-finished vars matches 1 run particle minecraft:end_rod -125.5 67 25.0 0.3 0.8 1 0 5`,
-      `execute if score #map-finished vars matches 1 run tp @a[x=-126,y=65,z=23,dx=0,dy=3,dz=3] -196 64 -10 -90 0`
+      `execute if score #map-finished vars matches 1 run particle minecraft:end_rod -75.0 65 -12.5 1 0.8 0.3 0 5`,
+      `execute if score #map-finished vars matches 1 run tp @a[x=-77,y=65,z=-13,dx=3,dy=3,dz=0] -196 64 -10 -90 0`
     ], 5, functions);
 
   })();

@@ -1,7 +1,7 @@
 #> Lobby text
 kill @e[tag=text-aec-display]
 # Credits
-summon area_effect_cloud -122.5 65.5 25.0 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Credits","color":"white","bold":true}'}
+summon area_effect_cloud -122.5 65.5 25.0 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Credits Room","color":"white","bold":true}'}
 summon area_effect_cloud -122.5 65 25.0 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Unlocked after completing map.","color":"white","bold":true}'}
 # Welcome
 summon area_effect_cloud -75.0 65.5 85.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Start Map Here","color":"white","bold":true}'}
