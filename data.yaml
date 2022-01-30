@@ -21,11 +21,11 @@ npc:
           - message: You really just broke right in, didn't you?
             command:
               - scoreboard players set visitfriend-start story-sawyer 1
-          - I guess you couldn't really text with the storm taking everything out but you could've at least knocked.
+          - I guess you couldn't really text right now but you could've at least knocked.
           - message: ... Anyways, what's up?
             wait: 60
           - So you're here for my help again, huh.
-          - Not that I expected anything else from you anyways...
+          - Not that I expected anything else from you...
           - Well, I have no idea. Why don't you wait until the connection is back?
           end: 1
         - messages:
@@ -58,7 +58,7 @@ npc:
               italic: true
             - text: " important to you huh."
           - "You're never this eager to talk to me..."
-          - Well, the mountain is the unmistakeable mass toward the south, if you can't find it.
+          - Well, the mountain is pretty unmistakeable. It's toward the south, if you can't find it.
           - No, I won't follow you there. You know I don't leave the house.
           - Stay safe or something, I guess.
           cond: 2
@@ -112,7 +112,7 @@ npc:
             - 'execute if score mouse quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 3'
             - 'execute unless score mouse quest-status matches -1 run scoreboard players set ${select.self} dialogue-status 11'
         - messages:
-          - message: You sure took your time, huh... Not that I was checking the clock or anything, I just noticed.
+          - message: You sure took your time, huh... Not that I was checking the clock or anything. I just noticed.
           - message: Anyways, thanks for the mouse.
             command:
               - 'setblock 949 71 0 stone_button'
@@ -282,7 +282,7 @@ npc:
           cond: 1
           end: 2
         - messages:
-            - What did I tell you? Don't come back until you're done preparing.
+            - What did I tell you, plebeian? Don't come back until you're done preparing.
             - How many times do I need to say it before it gets through your thick skull?
             - Ugh, whatever. I have nothing more to say to you.
           cond: 2
@@ -308,9 +308,9 @@ npc:
                 - 'summon minecart 950 40 -1 {Silent:1,Tags:["sawyer-holder"]}'
                 - 'scoreboard players set @e[tag=npc-sawyer] dialogue-status -1'
                 - 'scoreboard players set -held story-sawyer -1'
-            - At least I can respect that. Maybe you might be successful like me if you keep that up.
+            - At least I can respect that. Maybe you might actually be successful like me if you keep that up.
             - And it seems like you did listen to my directions and diligently prepared as I had requested.
-            - You've honestly surpassed my expectations. Most people I meet are not as attentive.
+            - You've honestly surpassed my expectations. Most people I talk to are not as... Good at remembering.
             - Before you get on your journey, I'll have you do a couple more things to prepare though.
             - message: Come on in, I have some things to give you.
               command:
@@ -497,7 +497,8 @@ npc:
                 - '# ${tp(929.5, 64, 197.5, 135, 0)}'
               wait: 300
             - Alright, the trail starts right through this gate.
-            - Last thing... If you come across anyone on the way, try not to bother them, for both of your sakes. Good luck, my friend!
+            - Last thing... If you come across anyone on the way, try not to bother them, for both of your sakes.
+            - Good luck, my friend!
           cond: 8
           end: -1
     hurm:
@@ -517,7 +518,7 @@ npc:
           - Whaddya doing barging into my home?
           - message: I have a fishing rod and I'm not afraid to use it.
             wait: 120
-          - Yer telling me you want to get up the mountain?
+          - Yer telling me ya wanna get up the mountain?
           - message:
             - text: "At "
             - text: "this"
@@ -530,7 +531,7 @@ npc:
               italic: true
             - text: " precious boat."
           - And I won't let random kids who have no idea what they're doing through my fishing ground.
-          - These waters are dangerous, I tell ya! Fall out of yer boat and those piranhas will make quick work of you.
+          - These waters are dangerous, I tell ya! Fall outta yer boat and those piranhas will make quick work of you.
           - message: "How about this: to prove yer up to snuff, why don't ya catch and cook me some good ol' fish to eat?"
             command:
               - scoreboard players set -caught hurm-fish-caught 0
@@ -543,9 +544,9 @@ npc:
               italic: true
           - That seems like a fair trade given all that yer asking me to help ya with.
           - You can find an old firepit I've used just outside to the east.
-          - I'll even let you use my fishing rods. They're in the garage, if remember correctly.
-          - If you need wood there's a grove I use for firewood back northeast.
-          - I'm sure you can at least start a fire and grill some food if you're set on climbing an entire mountain, heh.
+          - I'll even let ya use my fishing rods. They're in the garage, if I can remember correctly.
+          - If ya need wood there's a grove I use for firewood back northeast.
+          - I'm sure you can at least start a fire and grill some food if yer set on climbing an entire mountain, heh.
           - I'll be expecting you back soon, sport.
           cond: 1
           end:
@@ -595,7 +596,7 @@ npc:
           cond: 3
           end: -1
     solomon:
-      name: Solomon Quint
+      name: Jason Quint
       position: 995.5 214 580.3
       rotation: -180 0
       colour: 0x732424
@@ -606,13 +607,13 @@ npc:
       dialogue:
         - messages:
           - message:
-            - text: "...Hah? Who're you? Why'd Herb let you up in the "
+            - text: "... Huh? Who're you? Who let you up here in the "
             - text: middle of the night
               italic: true
             - text: "?"
           - You must be tired, come on in and make yourself at home.
           - What insanity sent you up a mountain, at night, during a huge thunderstorm?
-          - ...Internet, huh. Well, sorry to spoil the mood, but that tower over there isnt really working either.
+          - ... Internet, huh. Well, sorry to spoil the mood, but that tower over there isnt really working either.
           - A lightning strike must have shorted the electrical components at the top.
           - You say you can fix it?
           - message:
@@ -620,12 +621,12 @@ npc:
             - text: let
               italic: true
             - text: " you do something that dangerous, or I would get in trouble."
-          - message: Imagine if I let you get the key to the electrical box from the chest in the basement, climbed up that tower, and got hurt doing so!
+          - message: Imagine if I let you get the key to the electrical box from the chest in the basement, climb up that tower, and get hurt doing so!
             command:
             - type: quest
               value: tower
-          - That wouldn't do, would it? I guess you'll have to make your way back down the mountain...
-          - If you need help, I'll be right here, completely focused on my computer and unable to hear the possible opening of any basement doors.
+          - That wouldn't do, would it? Sorry, but I guess you'll have to make your way back down the mountain...
+          - If you need help, I'll be right here, completely focused on my computer and unable to hear something like the opening of any basement doors.
           end: 1
         - messages:
           - Hey, still standing around?
@@ -633,17 +634,17 @@ npc:
           cond: 1
           end: -1
         - messages:
-          - Back already? The internet just started working again!
-          - Feel free to hang around here; it's the least I could do considering your presence miraculously fixed the internet for me.
-          - By the way, please remember to return the electrical box key before you leave.
+          - Back already? Great news, the internet just started working again! Lucky you.
+          - Feel free to hang around here for a bit. Looks like I don't need to do any work after all!
+          - By the way, have you seen my electrical box key? I can't find it and really need it back.
           cond: 2
           end: -1
         - messages:
-          - Back already? The internet just started working again!
-          - message: Feel free to hang around here; it's the least I could do considering your presence miraculously fixed the internet for me.
+          - Back already? Great news, the internet just started working again! Lucky you.
+          - Feel free to hang around here for a bit. Looks like I don't need to do any work after all!
             wait: 100
-          - ...You need a phone? Sure, you can borrow mine.
-          - message: By the way, please remember to return the electrical box key before you leave.
+          - ... You need a phone? Sure, you can borrow mine.
+          - message: By the way, have you seen my electrical box key? I can't find it and really need it back.
             command:
               - give ${select.player} ${toGive(item.androidphone)}
           cond: 3
@@ -1540,7 +1541,7 @@ npc:
           - Feel free to take a look.
           end: -1
     stephen:
-      name: Stephen Fallus
+      name: Steve Allen
       position: 794.7 78 -46.5
       rotation: -90 40
       colour: 0xf08c71
@@ -1550,11 +1551,11 @@ npc:
         profession: librarian
       dialogue:
         - messages:
-          - message: Hmm... You make a very intriguing proposition.
+          - message: Hmm... You make a very interesting proposition.
             wait: 100
             command:
               - '${tp(794.7, 78, -46.5, -135, 0)}'
-          - A shift toward such innovative paradigms will surely be a profitable move for this company.
+          - A shift toward such an innovative paradigm must be a profitable move for this company.
           cond: 1
           end:
             - type: score
@@ -1564,8 +1565,8 @@ npc:
           - message: I definitely agree with Matthew on this.
             command:
               - ${tp(794.7, 78, -46.5, -14, 0)}
-          - Additionally, I would also implore us to consider the large-scale impacts of such changes within the environment of the company.
-          - With the necessary funding, these approaches can definitely set the organization back on the right check.
+          - Additionally, I would also ask us to consider the large-scale impacts of such changes within the environment of the company.
+          - With the necessary funding, these approaches can definitely set the organization back on the right path.
           cond: 2
           end: 
           - type: score
@@ -1584,7 +1585,7 @@ npc:
             - type: score
               value: ${select.self} dialogue-status -1
     matthew:
-      name: Matthew Sciento
+      name: Matthew Cinto
       position: 796.5 78 -48.3
       rotation: 0 0
       colour: 0x5c3f16
@@ -1594,8 +1595,8 @@ npc:
         profession: mason
       dialogue:
         - messages:
-          - As the emerging statistical models are clearly revealing, making these steps (provided, in the right direction) can significantly improve our quarter performance.
-          - The adoption of these new approaches toward marketing and design can definitely lead to an unequivocally positive effect on earnings.
+          - As the emerging statistical models are clearly revealing, making these steps (provided, in the right direction) could significantly improve our quarter performance.
+          - The adoption of these new approaches toward marketing and design will have an unequivocally positive effect on earnings.
           - All we need is your "okay" and we can go get the funding to implement some of these ideas.
           end:
             - type: score
@@ -1627,7 +1628,7 @@ npc:
               italic: true
             command:
               - ${tp(796.5, 78, -41.7, -180, 0)}
-          - Erm, that was a great discussion, I'm sure we could look further into some of the ideas proposed.
+          - Erm, that was a great discussion, I'm sure we could look further into this later.
           - Why don't both of you do some more research and get back to me with your findings?
           cond: 1
           end:
@@ -1651,7 +1652,7 @@ npc:
           - Not slow at all, if I do say so myself.
           end: -1
     avaissmal:
-      name: Ava Issmal
+      name: Ava Ismall
       position: 821.5 78 -68.3
       rotation: 0 80
       colour: 0x76a2a3
@@ -1675,7 +1676,7 @@ npc:
           - Being offline makes it difficult to work.
           end: -1
     jebffosse:
-      name: Jeb Ffosse
+      name: Jedd Fosse
       position: 797.5 84 -78.3
       rotation: -30 0
       colour: 0xcf1613
@@ -1692,12 +1693,12 @@ npc:
               - tag ${select.self} add npc-unface
               - ${tp(797.5, 84, -78.3, -25, 0)}
           - message: 
-            - text: "Oh yeah, I remember now; we were discussing responses to the "
+            - text: "Oh yeah, I remember now, we were discussing responses to the "
             - text: demands
               italic: true
             - text: " the \"Union\" had."
           - I don't think any of our workers need any of the proposed changes; adding "bathroom breaks" and "paid time off" will only lower productivity and profitability.
-          - "Why don't you make this a company directive, actually. Oh, and fire anyone who mentions them on the spot."
+          - "Why don't you make this a company directive, actually. Oh, and fire anyone who mentions anything about this."
           end:
             - type: score
               value: ${npc('nortonhill')} dialogue-status 1
@@ -1715,8 +1716,8 @@ npc:
       dialogue:
         - messages:
           - Of course, sire. I will relay the message immediately!
-          - I am appalled these "unioners" would ask for even more; our employess already enjoy numerous benefits.
-          - Great decision, Dr. Ffosse!
+          - I am appalled these "unioners" would ask for even more; our employees already enjoy far too many benefits.
+          - Great decision, Dr. Fosse!
           cond: 1
           end: -1
 
@@ -1741,7 +1742,7 @@ quest:
         - if score sdcard quest-status matches -1
       count: 4
   visitfriend: # visit friend's house
-    name: Talk to Chris
+    name: Visit Chris
     hint: The internet went down, but you don't know why. Luckily, you happen to have a programmer friend. Maybe pay them a visit (24 Pollocks Rd)?
     description: Unlawfully break and enter into your friend's house.
     condition:
@@ -1978,7 +1979,7 @@ quest:
       - type: score
         value: "${npc('simon')} dialogue-status 5"
   campfire:
-    name: Fire-lighting
+    name: Making Fire
     description: Craft and light a campfire at Herb's firepit.
     condition:
       type: nest
@@ -2000,7 +2001,7 @@ quest:
           stat: minecraft.used:minecraft.campfire
           count: 1
   grillfish:
-    name: Fish-n-chips
+    name: Fish-n-Chips
     description: Grill some fish for Herb's late-night snack!
     condition:
       type: nest
