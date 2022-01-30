@@ -4290,7 +4290,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       puzzles.colors.map(c=> `execute if entity @s[nbt={Item:{id:"minecraft:${c}_wool"}}] run data merge entity @s {Age:-32768s,Item:{tag:${toSnbt(Object.assign({CanPlaceOn:`["light_gray_concrete"]`}, puzzles.wirenbt(c)))}}}`)
     ])
 
-    genseq('tower/puzzles/activatetower', {
+    genseq('tower/activatetower', {
       cmds: [
         'forceload add 994 570 979 555'
       ],
@@ -4375,7 +4375,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                                                       seq: {
                                                                         cmds: [
                                                                           'setblock 986 255 563 minecraft:end_rod[facing=up]',
-                                                                          'playsound minecraft:entity.illusioner.prepare_mirror block @a 986 255 563 3 0.7'
+                                                                          'playsound minecraft:item.totem.use block @a 986 255 563 3 0.7'
                                                                         ],
                                                                         next: [
                                                                         ]
