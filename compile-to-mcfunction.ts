@@ -4466,9 +4466,9 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     addfunc('phone/startcall', [
-      `function generated:story/phone/call 230t`,
       `execute if entity @a[tag=song-ios] run function generated:story/songs/ios`,
-      `execute if entity @a[tag=song-android] run function generated:story/songs/android`
+      `execute if entity @a[tag=song-android] run function generated:story/songs/android`,
+      `schedule function generated:story/phone/call 230t`
     ])
 
     addfunc('phone/failedcall', [
