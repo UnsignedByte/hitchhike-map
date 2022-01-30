@@ -4663,7 +4663,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                       `tag @a remove caller`,
                                       `stopsound @a player`,
                                       `effect clear @a nausea`,
-                                      `tp @a[tag=!admin] -196 64 -10 -90 0`,
+                                      `tp @a[tag=!admin] -195.2 66 -9.5 -90 0`,
                                       `playsound minecraft:entity.illusioner.mirror_move player @a -196 64 -10 1 1.1`
                                     ],
                                     next: [
@@ -5131,9 +5131,9 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       `particle minecraft:end_rod -75.0 67 88.5 1 0.8 0.3 0 5`,
       `execute if entity @a[x=-77,y=65,z=88,dx=3,dy=2,dz=0] as @a[x=-127,y=64,z=-14,dx=103,dy=10,dz=103] run function hitchhike:story/intro/lobbytp`,
       `particle minecraft:end_rod -205.0 66 90.5 1 0.8 0.3 0 5`,
-      `tp @a[x=-207,y=64,z=90,dx=3,dy=3,dz=0] -75.0 65 55.0 0 0`,
+      `tp @a[x=-207,y=64,z=90,dx=3,dy=3,dz=0] -75.0 67 55.0 0 0`,
       `execute if score #map-finished vars matches 1 run particle minecraft:end_rod -75.0 67 -12.5 1 0.8 0.3 0 5`,
-      `execute if score #map-finished vars matches 1 run tp @a[x=-77,y=65,z=-13,dx=3,dy=3,dz=0] -196 64 -10 -90 0`
+      `execute if score #map-finished vars matches 1 run tp @a[x=-77,y=65,z=-13,dx=3,dy=3,dz=0] -195.2 66 -9.5 -90 0`
     ], 5, functions);
 
   })();

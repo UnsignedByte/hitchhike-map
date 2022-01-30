@@ -1,2 +1,2 @@
-tp @s 1006.5 59.0625 59.5 90 0
+tp @s 1009.2 61 59.5 90 0
 gamemode adventure @s

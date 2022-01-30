@@ -135,7 +135,7 @@ npc:
             - text: ". Please be patient while I load the SD card data into memory... My computer is slow so watch out for lag. Sorry."
             global: true
             command:
-              - 'tp @a[tag=!admin] -1400.0 11 -150.0'
+              - 'tp @a[tag=!admin] -1400.0 13 -150.0 -180 0'
               - 'schedule function generated:story/maze/create 1t'
           - message: Oh, are you confused?
             global: true
