@@ -4550,7 +4550,50 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       wait: 50,
                       seq: {
                         cmds: [
-                          `stopsound @a player`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
+                      wait: 60,
+                      seq: {
+                        cmds: [
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
+                      wait: 70,
+                      seq: {
+                        cmds: [
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.3 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.3 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
+                      wait: 80,
+                      seq: {
+                        cmds: [
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.3 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.3 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
+                      wait: 60,
+                      seq: {
+                        cmds: [
                           `tag @a remove caller`
                         ],
                         next: [
@@ -4565,8 +4608,9 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                   wait: 30,
                                   seq: {
                                     cmds: [
+                                      `stopsound @a player`,
+                                      `tp @a[tag=!admin] -196 64 -10 90 0`,
                                       `playsound minecraft:entity.illusioner.mirror_move player @a -196 64 -10 1 1.1`,
-                                      `tp @a[tag=!admin] -196 64 -10 90 0`
                                     ],
                                     next: [
                                     ]
