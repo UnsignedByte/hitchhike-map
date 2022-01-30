@@ -4639,8 +4639,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       wait: 130,
                       seq: {
                         cmds: [
-                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.6`,
-                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 0.9`
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 1.33 1.6`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 1.3 1`
                         ],
                         next: [
                         ]
