@@ -12,4 +12,5 @@ schedule function generated:story/phone/call-0-0-8 90t
 schedule function generated:story/phone/call-0-0-9 100t
 schedule function generated:story/phone/call-0-0-10 110t
 schedule function generated:story/phone/call-0-0-11 120t
-schedule function generated:story/phone/call-0-0-12 50t
+schedule function generated:story/phone/call-0-0-12 130t
+schedule function generated:story/phone/call-0-0-13 50t
