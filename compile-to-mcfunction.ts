@@ -4581,6 +4581,61 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       }
                     },
                     {
+                      wait: 80,
+                      seq: {
+                        cmds: [
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.3 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.3 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
+                      wait: 90,
+                      seq: {
+                        cmds: [
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
+                      wait: 100,
+                      seq: {
+                        cmds: [
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 1.5`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.4 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
+                      wait: 110,
+                      seq: {
+                        cmds: [
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.6`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
+                      wait: 120,
+                      seq: {
+                        cmds: [
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 1.6`,
+                          `execute at @a[tag=caller] run playsound minecraft:entity.guardian.attack player @a ~ ~ ~ 0.5 0.9`
+                        ],
+                        next: [
+                        ]
+                      }
+                    },
+                    {
                       wait: 50,
                       seq: {
                         cmds: [
@@ -4596,24 +4651,15 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                               ],
                               next: [
                                 {
-                                  wait: 20,
+                                  wait: 70,
                                   seq: {
                                     cmds: [
-                                      `stopsound @a player`
+                                      `stopsound @a player`,
+                                      `effect clear @a nausea`,
+                                      `tp @a[tag=!admin] -196 64 -10 -90 0`,
+                                      `playsound minecraft:entity.illusioner.mirror_move player @a -196 64 -10 1 1.1`
                                     ],
                                     next: [
-                                      {
-                                        wait: 50,
-                                        seq: {
-                                          cmds: [
-                                            `effect clear @a nausea`,
-                                            `tp @a[tag=!admin] -196 64 -10 -90 0`,
-                                            `playsound minecraft:entity.illusioner.mirror_move player @a -196 64 -10 1 1.1`
-                                          ],
-                                          next: [
-                                          ]
-                                        }
-                                      }
                                     ]
                                   }
                                 }
