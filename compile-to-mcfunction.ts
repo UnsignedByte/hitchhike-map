@@ -4474,8 +4474,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
     addfunc('phone/failedcall', [
       `execute if score #phone-enabled vars matches 0 run title @s actionbar {"text":"No Connection.","color":"#d4d1c3"}`,
-      'tag @a remove song-android',
-      'tag @a remove song-ios'
+      'execute unless score android song-playing matches 1 run tag @a remove song-android',
+      'execute unless score ios song-playing matches 1 run tag @a remove song-ios'
     ])
 
     genseq('phone/call', {
