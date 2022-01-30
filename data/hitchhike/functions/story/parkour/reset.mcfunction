@@ -4,6 +4,9 @@ scoreboard objectives add checkpoint-id dummy
 kill @e[tag=checkpoint-marker]
 function generated:story/parkour/summoncheckpoints
 
+# Reset snowshoe chest
+data modify block 822 114 407 Items set value []
+
 # Reset tower parkour
 setblock 986 237 563 air
 setblock 990 233 566 air
