@@ -4,8 +4,8 @@ kill @e[tag=text-aec-display]
 summon area_effect_cloud -75.0 65.5 85.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Credits Room","color":"white","bold":true}'}
 summon area_effect_cloud -75.0 65 85.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Unlocked after completing map.","color":"white","bold":true}'}
 # Welcome
-summon area_effect_cloud -75.0 65.5 85.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Start Map Here","color":"white","bold":true}'}
-summon area_effect_cloud -75.0 65 85.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Good Luck!","color":"white","bold":true}'}
+summon area_effect_cloud -75.0 65.5 -9.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Start Map Here","color":"white","bold":true}'}
+summon area_effect_cloud -75.0 65 -9.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Good Luck!","color":"white","bold":true}'}
 # Thank you for playing
 summon area_effect_cloud -205.0 64.5 -3.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"The Hike","color":"white","bold":true}'}
 summon area_effect_cloud -205.0 64 -3.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","text-aec-display"],CustomName:'{"text":"Credits","color":"white","bold":true}'}
