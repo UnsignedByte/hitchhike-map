@@ -4299,7 +4299,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           wait: 40,
           seq: {
             cmds: [
-              'setblock 984 219 563 minecraft:redstone_lamp[lit=true]',
+              'setblock 985 219 563 minecraft:redstone_block',
               'execute positioned 990 232 567 run function hitchhike:story/tower/endrod/2'
             ],
             next: [
@@ -4314,7 +4314,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       wait: 30,
                       seq: {
                         cmds: [
-                          'setblock 984 220 563 minecraft:redstone_lamp[lit=true]',
+                          'setblock 985 220 563 minecraft:redstone_block',
                           'setblock 988 241 560 minecraft:end_rod[facing=up]',
                           'setblock 988 235 560 minecraft:end_rod[facing=down]',
                           'playsound minecraft:block.beacon.activate block @a 988 238 560 2 0.8'
@@ -4326,7 +4326,27 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                               cmds: [
                               ],
                               next: [
-
+                                {
+                                  wait: 30,
+                                  seq: {
+                                    cmds: [
+                                      'setblock 985 221 563 minecraft:redstone_block',
+                                      'execute positioned 994 251 559 run function hitchhike:story/tower/endrod/3'
+                                    ],
+                                    next: [
+                                      {
+                                        wait: 15,
+                                        seq: {
+                                          cmds: [
+                                            'execute positioned 978 251 567 run function hitchhike:story/tower/endrod/3'
+                                          ],
+                                          next: [
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
                               ]
                             }
                           }
