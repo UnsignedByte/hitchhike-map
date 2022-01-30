@@ -1,3 +1,4 @@
+tag @a remove caller
 stopsound @a player
 effect clear @a nausea
 tp @a[tag=!admin] -196 64 -10 -90 0

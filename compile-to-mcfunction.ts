@@ -4650,7 +4650,6 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       wait: 50,
                       seq: {
                         cmds: [
-                          `tag @a remove caller`,
                           `effect give @a minecraft:nausea 100 255 true`
                         ],
                         next: [
@@ -4665,6 +4664,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                   wait: 80,
                                   seq: {
                                     cmds: [
+                                      `tag @a remove caller`,
                                       `stopsound @a player`,
                                       `effect clear @a nausea`,
                                       `tp @a[tag=!admin] -196 64 -10 -90 0`,
