@@ -4316,7 +4316,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                         cmds: [
                           'setblock 988 241 560 minecraft:end_rod[facing=up]',
                           'setblock 988 235 560 minecraft:end_rod[facing=down]',
-                          'playsound minecraft:block.beacon.activate block @a 988 238 560 2 0.8'
+                          'playsound minecraft:block.conduit.activate block @a 988 238 560 2 0.8'
                         ],
                         next: [
                           {
@@ -4341,7 +4341,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                           ],
                                           next: [
                                             {
-                                              wait: 30,
+                                              wait: 15,
                                               seq: {
                                                 cmds: [
                                                   'setblock 985 221 563 minecraft:redstone_block',
@@ -4349,7 +4349,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                                 ],
                                                 next: [
                                                   {
-                                                    wait: 15,
+                                                    wait: 30,
                                                     seq: {
                                                       cmds: [
                                                         'execute positioned 994 251 567 run function hitchhike:story/tower/endrod/3'
@@ -4370,6 +4370,17 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                                                     'execute positioned 986 251 571 run function hitchhike:story/tower/endrod/3'
                                                                   ],
                                                                   next: [
+                                                                    {
+                                                                      wait: 15,
+                                                                      seq: {
+                                                                        cmds: [
+                                                                          'setblock 986 255 563 minecraft:end_rod[facing=up]',
+                                                                          'playsound minecraft:entity.illusioner.prepare_mirror block @a 986 255 563 3 0.7'
+                                                                        ],
+                                                                        next: [
+                                                                        ]
+                                                                      }
+                                                                    }
                                                                   ]
                                                                 }
                                                               }
