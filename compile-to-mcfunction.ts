@@ -4460,7 +4460,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       `execute if entity @s[nbt={HandItems:[{tag:{iosphone:1b}}]}] run give @a[tag=phone-detect-selected] ${toGive(item.iosphone)}`,
       `execute if entity @s[nbt={HandItems:[{tag:{androidphone:1b}}]}] run give @a[tag=phone-detect-selected] ${toGive(item.androidphone)}`,
       `data modify entity @s HandItems set value [{},{}]`,
-      `execute unless score #phone-enabled vars matches 1 generated:story/phone/failedcall`,
+      `execute unless score #phone-enabled vars matches 1 run function generated:story/phone/failedcall`,
       `execute if score #phone-enabled vars matches 1 if score android song-playing matches 0 if score ios song-playing matches 0 as @a[tag=phone-detect-selected] run schedule function generated:story/phone/call 230t`,
       'tag @a remove phone-detect-selected'
     ])
