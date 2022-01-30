@@ -4592,10 +4592,11 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                       }
                     },
                     {
-                      wait: 60,
+                      wait: 50,
                       seq: {
                         cmds: [
-                          `tag @a remove caller`
+                          `tag @a remove caller`,
+                          `effect give @a minecraft:nausea 100 255 true`
                         ],
                         next: [
                           {
@@ -4606,14 +4607,24 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                               ],
                               next: [
                                 {
-                                  wait: 30,
+                                  wait: 20,
                                   seq: {
                                     cmds: [
-                                      `stopsound @a player`,
-                                      `tp @a[tag=!admin] -196 64 -10 -90 0`,
-                                      `playsound minecraft:entity.illusioner.mirror_move player @a -196 64 -10 1 1.1`
+                                      `stopsound @a player`
                                     ],
                                     next: [
+                                      {
+                                        wait: 50,
+                                        seq: {
+                                          cmds: [
+                                            `effect clear @a nausea`,
+                                            `tp @a[tag=!admin] -196 64 -10 -90 0`,
+                                            `playsound minecraft:entity.illusioner.mirror_move player @a -196 64 -10 1 1.1`
+                                          ],
+                                          next: [
+                                          ]
+                                        }
+                                      }
                                     ]
                                   }
                                 }
