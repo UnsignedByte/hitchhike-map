@@ -7,5 +7,4 @@ schedule function generated:story/phone/call-0-0-3 40t
 schedule function generated:story/phone/call-0-0-4 50t
 schedule function generated:story/phone/call-0-0-5 60t
 schedule function generated:story/phone/call-0-0-6 70t
-schedule function generated:story/phone/call-0-0-7 80t
-schedule function generated:story/phone/call-0-0-8 50t
+schedule function generated:story/phone/call-0-0-7 50t
