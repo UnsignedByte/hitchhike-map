@@ -4290,6 +4290,58 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       puzzles.colors.map(c=> `execute if entity @s[nbt={Item:{id:"minecraft:${c}_wool"}}] run data merge entity @s {Age:-32768s,Item:{tag:${toSnbt(Object.assign({CanPlaceOn:`["light_gray_concrete"]`}, puzzles.wirenbt(c)))}}}`)
     ])
 
+    genseq('tower/puzzles/activatetower', {
+      cmds: [
+        'forceload add 994 570 979 555'
+      ],
+      next: [
+        {
+          wait: 40,
+          seq: {
+            cmds: [
+              'setblock 984 219 563 minecraft:redstone_lamp[lit=true]',
+              'execute positioned 990 232 567 run function hitchhike:story/tower/endrod/2'
+            ],
+            next: [
+              {
+                wait: 15,
+                seq: {
+                  cmds: [
+                    'execute positioned 982 234 563 run function hitchhike:story/tower/endrod/2'
+                  ],
+                  next: [
+                    {
+                      wait: 30,
+                      seq: {
+                        cmds: [
+                          'setblock 984 220 563 minecraft:redstone_lamp[lit=true]',
+                          'setblock 988 241 560 minecraft:end_rod[facing=up]',
+                          'setblock 988 235 560 minecraft:end_rod[facing=down]',
+                          'playsound minecraft:block.beacon.activate block @a 988 238 560 2 0.8'
+                        ],
+                        next: [
+                          {
+                            wait: 15,
+                            seq: {
+                              cmds: [
+                              ],
+                              next: [
+
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    })
+
   })();
 
   (() => {
@@ -4327,7 +4379,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     addfunc('phone/failedcall', [
-      `title @s actionbar {"text":"No Connection.","color":"gray"}`
+      `title @s actionbar {"text":"No Connection.","color":"#d4d1c3"}`
     ])
 
     genseq('phone/call', {
