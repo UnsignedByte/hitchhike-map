@@ -4466,13 +4466,14 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     addfunc('phone/startcall', [
+      'scoreboard players set #phone-enabled vars -1',
       `execute if entity @a[tag=song-ios] run function generated:story/songs/ios`,
       `execute if entity @a[tag=song-android] run function generated:story/songs/android`,
       `schedule function generated:story/phone/call 230t`
     ])
 
     addfunc('phone/failedcall', [
-      `title @s actionbar {"text":"No Connection.","color":"#d4d1c3"}`,
+      `execute if score #phone-enabled vars matches 0 run title @s actionbar {"text":"No Connection.","color":"#d4d1c3"}`,
       'tag @a remove song-android',
       'tag @a remove song-ios'
     ])
@@ -4482,7 +4483,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         `tag @a[tag=song-ios] add caller`,
         `tag @a[tag=song-android] add caller`,
         `tag @a remove song-ios`,
-        `tag @a remove song-android`,
+        `tag @a remove song-android`
       ],
       next: [
         {
@@ -4609,8 +4610,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                   seq: {
                                     cmds: [
                                       `stopsound @a player`,
-                                      `tp @a[tag=!admin] -196 64 -10 90 0`,
-                                      `playsound minecraft:entity.illusioner.mirror_move player @a -196 64 -10 1 1.1`,
+                                      `tp @a[tag=!admin] -196 64 -10 -90 0`,
+                                      `playsound minecraft:entity.illusioner.mirror_move player @a -196 64 -10 1 1.1`
                                     ],
                                     next: [
                                     ]
