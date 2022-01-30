@@ -160,17 +160,35 @@ export const item = {
       Enchantments:`[{}]`
     }
   },
+  citymap: {
+    id: '"minecraft:filled_map"',
+    tag: {
+      display: {
+        Name: rawJson({
+          text: "New Califf Map",
+          color: "#25cc8c",
+          bold: true
+        }),
+        Lore: `[${rawJson({
+          text: "A map of the New Califf.",
+          color: "gray"
+        })}]`
+      },
+      Enchantments:`[{}]`,
+      map: 0
+    }
+  },
   map: {
     id: '"minecraft:filled_map"',
     tag: {
       display: {
         Name: rawJson({
-          text: "Mountain Trail Map",
+          text: "Mt. Eddreckson Map",
           color: "#25cc8c",
           bold: true
         }),
         Lore: `[${rawJson({
-          text: "A Map.",
+          text: "A map of the Mt. Eddreckson Reserve.",
           color: "gray"
         })}]`
       },

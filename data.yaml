@@ -632,6 +632,22 @@ npc:
           - Don't mind me, I'll be totally focused on this computer.
           cond: 1
           end: -1
+        - messages:
+          - Back already? The internet just started working again!
+          - Feel free to hang around here; it's the least I could do considering your presence miraculously fixed the internet for me.
+          - By the way, please remember to return the electrical box key before you leave.
+          cond: 2
+          end: -1
+        - messages:
+          - Back already? The internet just started working again!
+          - message: Feel free to hang around here; it's the least I could do considering your presence miraculously fixed the internet for me.
+            wait: 100
+          - ...You need a phone? Sure, you can borrow mine.
+          - message: By the way, please remember to return the electrical box key before you leave.
+            command:
+              - give ${select.player} ${toGive(item.androidphone)}
+          cond: 3
+          end: -1
     janitor:
       name: Ivan Cummings
       position: 887.5 70 11.5

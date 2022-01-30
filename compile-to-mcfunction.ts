@@ -1103,7 +1103,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
     addfunc('intro/_resetstorages', [
       `setblock 1024 66 61 air`,
-      `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${toSnbt(Object.assign({Count:'1b',Slot:'4b'}, item.iosphone))},${toSnbt({
+      `setblock 1024 66 61 minecraft:barrel[facing=west,open=false]{Items:[${toSnbt(Object.assign({Count:'1b',Slot:'4b'}, item.citymap))},${toSnbt({
         Count:'1b',
         Slot:'13b',
         id:'"minecraft:paper"',
@@ -3815,6 +3815,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
   (() => {
     const checkpoints = [
+      // garden
+      "823.5 117.9375 409.5",
       // main path
       "818.5 113.9375 412.5",
       "825.5 122.9375 454.5",
@@ -4292,7 +4294,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
 
     genseq('tower/activatetower', {
       cmds: [
-        'forceload add 994 570 979 555'
+        'forceload add 994 570 979 555',
+        'scoreboard players set @e[tag=npc-solomon] dialogue-status -1'
       ],
       next: [
         {
@@ -4378,6 +4381,18 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                                                           'playsound minecraft:item.totem.use block @a 986 255 563 3 0.9'
                                                                         ],
                                                                         next: [
+                                                                          {
+                                                                            wait: 40,
+                                                                            seq: {
+                                                                              cmds: [
+                                                                                'scoreboard players set #phone-enabled vars 1',
+                                                                                'execute if entity @a[nbt={Inventory:[{tag:{phone:1b}}]}] run scoreboard players set @e[tag=npc-solomon] dialogue-status 2',
+                                                                                'execute unless entity @a[nbt={Inventory:[{tag:{phone:1b}}]}] run scoreboard players set @e[tag=npc-solomon] dialogue-status 3'
+                                                                              ],
+                                                                              next: [
+                                                                              ]
+                                                                            }
+                                                                          }
                                                                         ]
                                                                       }
                                                                     }
