@@ -17,6 +17,4 @@ clear @a leather_boots{clownshoes:1b}
 function generated:story/maze/unloadchunks
 forceload remove -1504 -2 -1371 129
 
-tellraw @a {"score":{"name":"enabled","objective":"maze"}}
 scoreboard players set enabled maze 0
-tellraw @a {"score":{"name":"enabled","objective":"maze"}}
