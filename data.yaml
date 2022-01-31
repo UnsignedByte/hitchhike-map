@@ -136,6 +136,7 @@ npc:
             global: true
             command:
               - 'tp @a[tag=!admin] -1400.0 13 -150.0 -180 0'
+              - 'spawnpoint @a -1400 11 150'
               - 'schedule function generated:story/maze/create 1t'
           - message: Oh, are you confused?
             global: true
@@ -588,7 +589,7 @@ npc:
               - type: score
                 value: "#hurm-done vars 1"
               - 'execute as @a run function generated:story/parkour/respawn'
-              - team modify player collisionRule pushOtherTeams
+              - team modify player collisionRule pushOwnTeam
               - team modify player friendlyFire false
               - function hitchhike:story/parkour/await_start
               - spawnpoint @a 1077 125 353
@@ -641,7 +642,7 @@ npc:
           end: -1
         - messages:
           - Back already? Great news, the internet just started working again! Lucky you.
-          - Feel free to hang around here for a bit. Looks like I don't need to do any work after all!
+          - message: Feel free to hang around here for a bit. Looks like I don't need to do any work after all!
             wait: 100
           - ... You need a phone? Sure, you can borrow mine.
           - message: By the way, have you seen my electrical box key? I can't find it and really need it back.
@@ -1782,7 +1783,7 @@ quest:
         value: ${npc('simon')} dialogue-status 3
   diet:
     name: Full Stomach
-    description: Fill your stomach! Remember to keep a balanced diet (Fruit, vegetables, meat). How will Simon know if you finished this? A mystery.
+    description: Fill your stomach before your adventure! How will Simon know if you finished this? A mystery.
     condition:
       type: nest # listed values are also condition objects
       value:
@@ -1810,21 +1811,6 @@ quest:
               overflow: true
             - type: player
               stat: minecraft.used:minecraft.beetroot #q-1-0-2
-              count: 1
-              overflow: true
-          count: 2 # sum of child completeions must total 500% (5 pieces of food)
-        - type: nest #q-1-1
-          value:
-            - type: player
-              stat: minecraft.used:minecraft.rabbit_stew
-              count: 1
-              overflow: true
-            - type: player
-              stat: minecraft.used:minecraft.mushroom_stew
-              count: 1
-              overflow: true
-            - type: player
-              stat: minecraft.used:minecraft.beetroot_soup
               count: 1
               overflow: true
             - type: player
@@ -1855,9 +1841,6 @@ quest:
               stat: minecraft.used:minecraft.cooked_salmon
               count: 1
               overflow: true
-          count: 1
-        - type: nest # q-1-2
-          value:
             - type: player
               stat: minecraft.used:minecraft.sweet_berries #q-1-0-0
               count: 1
@@ -1874,7 +1857,7 @@ quest:
               stat: minecraft.used:minecraft.melon_slice #q-1-0-2
               count: 1
               overflow: true
-          count: 2
+          count: 6
         # - type: player
         #   all: true
         #   condition:
@@ -1891,10 +1874,10 @@ quest:
         - type: player
           all: true
           condition: # each condition in the list, when satisfied, will increment the score by 1. think of each condition as in `execute as @a at @s <conditions> run`
-            - if entity @s[nbt={Inventory:[{Slot:100b, id:"minecraft:leather_boots"}]}]
-            - if entity @s[nbt={Inventory:[{Slot:101b, id:"minecraft:leather_leggings"}]}]
-            - if entity @s[nbt={Inventory:[{Slot:102b, id:"minecraft:leather_chestplate"}]}]
-            - if entity @s[nbt={Inventory:[{Slot:103b, id:"minecraft:leather_helmet"}]}]
+            - if entity @s[nbt={Inventory:[{Slot:100b, id:"minecraft:leather_boots"}]}] unless entity @s[nbt={Inventory:[{Slot:100b, tag:{sold:0b}}]}]
+            - if entity @s[nbt={Inventory:[{Slot:101b, id:"minecraft:leather_leggings"}]}] unless entity @s[nbt={Inventory:[{Slot:101b, tag:{sold:0b}}]}]
+            - if entity @s[nbt={Inventory:[{Slot:102b, id:"minecraft:leather_chestplate"}]}] unless entity @s[nbt={Inventory:[{Slot:102b, tag:{sold:0b}}]}]
+            - if entity @s[nbt={Inventory:[{Slot:103b, id:"minecraft:leather_helmet"}]}] unless entity @s[nbt={Inventory:[{Slot:103b, tag:{sold:0b}}]}]
           count: 3
         # - type: player
         #   all: true

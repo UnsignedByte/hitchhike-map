@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-subway, limit=1] run tag @a[distance=..25] a
 # Dialogue line #0-1: speak and make noise.
 execute at @e[type=villager,tag=npc-subway, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Silas Connelly","color":"#f0d792","bold":true},"> ",{"text":"Hey, welcome to Subway. How can I help you?"}]
 execute at @e[type=villager,tag=npc-subway, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/subway/0-end 78t
+schedule function generated:npc/subway/0-end 52t
 tag @a remove npc-eavesdropper

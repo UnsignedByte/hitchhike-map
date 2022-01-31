@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-birthdayboy, limit=1] run tag @a[distance=..
 # Dialogue line #0-1: speak and make noise.
 execute at @e[type=villager,tag=npc-birthdayboy, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Matt Norma","color":"#de4b40","bold":true},"> ",{"text":"Oh hi! Are you here for my birthday party? Is my mom with you?"}]
 execute at @e[type=villager,tag=npc-birthdayboy, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/birthdayboy/0-1 102t
+schedule function generated:npc/birthdayboy/0-1 68t
 tag @a remove npc-eavesdropper

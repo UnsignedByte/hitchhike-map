@@ -6,5 +6,5 @@ execute at @e[type=villager,tag=npc-simon, limit=1] run playsound minecraft:enti
 summon item 964.5 75.5 197.5 {Item:{Count: 1b, id: "minecraft:filled_map", tag: {display: {Name: '{"text":"Mt. Eddreckson Map","color":"#25cc8c","bold":true}', Lore: ['{"text":"A map of the Mt. Eddreckson Reserve.","color":"gray"}']}, Enchantments: [{}], map: 388}}}
 playsound minecraft:block.piston.contract neutral @a 964.5 75.5 197.5
 tag @e[type=villager,tag=npc-simon, limit=1] remove npc-unface
-schedule function generated:npc/simon/7-09 282t
+schedule function generated:npc/simon/7-09 188t
 tag @a remove npc-eavesdropper

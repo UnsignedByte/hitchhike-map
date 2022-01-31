@@ -6,5 +6,5 @@ execute at @e[type=villager,tag=npc-simon, limit=1] run playsound minecraft:enti
 clear @a minecraft:daylight_detector{display: {Name: '{"text":"SD Card (Fixed)","color":"#d6679f","bold":true}', Lore: ['{"text":"An SD Card.","color":"blue"}']}, Enchantments: [{}]} 2147483647
 data modify entity @e[type=villager,tag=npc-simon, limit=1] HandItems[0] set value {Count: 1b, id: "minecraft:daylight_detector", tag: {display: {Name: '{"text":"SD Card (Fixed)","color":"#d6679f","bold":true}', Lore: ['{"text":"An SD Card.","color":"blue"}']}, Enchantments: [{}]}}
 execute at @e[type=villager,tag=npc-simon, limit=1] run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1
-schedule function generated:npc/simon/7-03 120t
+schedule function generated:npc/simon/7-03 80t
 tag @a remove npc-eavesdropper

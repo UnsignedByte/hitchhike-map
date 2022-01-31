@@ -10,5 +10,5 @@ execute at @e[type=villager,tag=npc-hurm, limit=1] run function hitchhike:story/
 execute if score -cleared hurm-fish matches 1 run data modify entity @e[type=villager,tag=npc-hurm, limit=1] HandItems[0] set value {id:"minecraft:cooked_salmon",Count:1b}
 execute if score -cleared hurm-fish matches 0 run data modify entity @e[type=villager,tag=npc-hurm, limit=1] HandItems[0] set value {id:"minecraft:cooked_cod",Count:1b}
 execute at @e[type=villager,tag=npc-hurm, limit=1] run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1
-schedule function generated:npc/hurm/2-1 36t
+schedule function generated:npc/hurm/2-1 24t
 tag @a remove npc-eavesdropper

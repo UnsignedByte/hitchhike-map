@@ -8,5 +8,5 @@ function generated:quests/picnic-start
 function generated:quests/leather-start
 function generated:quests/diet-start
 function generated:quests/preparedness-start
-schedule function generated:npc/simon/0-5 264t
+schedule function generated:npc/simon/0-5 176t
 tag @a remove npc-eavesdropper

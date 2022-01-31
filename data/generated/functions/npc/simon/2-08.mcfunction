@@ -15,5 +15,5 @@ playsound minecraft:block.iron_door.open block @a 913 64 192.5 10 0.8
 summon minecart 912 34 193 {Silent:1,Tags:["simon-holder"]}
 tag @e[type=villager,tag=npc-simon, limit=1] add npc-unface
 scoreboard players set -held story-simon -1
-schedule function generated:npc/simon/2-09 90t
+schedule function generated:npc/simon/2-09 60t
 tag @a remove npc-eavesdropper

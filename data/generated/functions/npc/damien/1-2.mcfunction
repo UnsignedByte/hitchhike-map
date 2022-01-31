@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-damien, limit=1] run tag @a[distance=..25] a
 # Dialogue line #1-3: speak and make noise.
 execute at @e[type=villager,tag=npc-damien, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Damien Herst","color":"#b8a184","bold":true},"> ",{"text":"Why don't both of you do some more research and get back to me with your findings?"}]
 execute at @e[type=villager,tag=npc-damien, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/damien/1-end 138t
+schedule function generated:npc/damien/1-end 92t
 tag @a remove npc-eavesdropper

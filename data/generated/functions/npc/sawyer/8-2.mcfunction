@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-sawyer, limit=1] run tag @a add npc-eavesdro
 # Dialogue line #8-3: speak and make noise.
 execute at @e[type=villager,tag=npc-sawyer, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Chris Sawyer","color":"#4fa1a7","bold":true},"> ",{"text":"I've looked at the rest of the SD card, and there should only be two more, just follow the green dust road..."}]
 execute at @e[type=villager,tag=npc-sawyer, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/sawyer/8-end 180t
+schedule function generated:npc/sawyer/8-end 120t
 tag @a remove npc-eavesdropper

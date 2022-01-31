@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-fronkobognole, limit=1] run tag @a[distance=
 # Dialogue line #0-3: speak and make noise.
 execute at @e[type=villager,tag=npc-fronkobognole, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Francis O'Bognole","color":"#f0c84d","bold":true},"> ",{"text":"I know, not exactly surprising, given my "},{"text":"sophisticated","italic":true},{"text":" look; you don't have to remind me."}]
 execute at @e[type=villager,tag=npc-fronkobognole, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/fronkobognole/0-3 156t
+schedule function generated:npc/fronkobognole/0-3 104t
 tag @a remove npc-eavesdropper

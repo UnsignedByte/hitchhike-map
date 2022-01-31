@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-walter, limit=1] run tag @a[distance=..25] a
 # Dialogue line #0-3: speak and make noise.
 execute at @e[type=villager,tag=npc-walter, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Walter Wheat","color":"#f7e5dc","bold":true},"> ",{"text":"There is absolutely nothing unusual being cooked here."}]
 execute at @e[type=villager,tag=npc-walter, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/walter/0-end 120t
+schedule function generated:npc/walter/0-end 80t
 tag @a remove npc-eavesdropper

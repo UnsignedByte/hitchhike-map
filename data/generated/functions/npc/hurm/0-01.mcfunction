@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-hurm, limit=1] run tag @a[distance=..25] add
 # Dialogue line #0-2: speak and make noise.
 execute at @e[type=villager,tag=npc-hurm, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Herb Schmitt","color":"#183aab","bold":true},"> ",{"text":"Whaddya doing barging into my home?"}]
 execute at @e[type=villager,tag=npc-hurm, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/hurm/0-02 60t
+schedule function generated:npc/hurm/0-02 40t
 tag @a remove npc-eavesdropper

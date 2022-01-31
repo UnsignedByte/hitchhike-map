@@ -6,5 +6,5 @@ execute at @e[type=villager,tag=npc-simon, limit=1] run playsound minecraft:enti
 scoreboard players set -held story-simon 0
 kill @e[tag=simon-holder]
 tp @e[type=villager,tag=npc-simon, limit=1] 956.50 74 203.50 90 55
-schedule function generated:npc/simon/2-11 144t
+schedule function generated:npc/simon/2-11 96t
 tag @a remove npc-eavesdropper

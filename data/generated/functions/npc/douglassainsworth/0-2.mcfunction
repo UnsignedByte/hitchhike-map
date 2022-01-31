@@ -4,5 +4,5 @@ execute at @e[type=villager,tag=npc-douglassainsworth, limit=1] run tag @a[dista
 execute at @e[type=villager,tag=npc-douglassainsworth, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Douglass Ainsworth","color":"#780fa8","bold":true},"> ",{"text":"It will maybe take another half hour or so."}]
 execute at @e[type=villager,tag=npc-douglassainsworth, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 tag @e[type=villager,tag=npc-douglassainsworth, limit=1] remove npc-unface
-schedule function generated:npc/douglassainsworth/0-3 84t
+schedule function generated:npc/douglassainsworth/0-3 56t
 tag @a remove npc-eavesdropper

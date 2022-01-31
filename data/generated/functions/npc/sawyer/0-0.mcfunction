@@ -4,5 +4,5 @@ execute at @e[type=villager,tag=npc-sawyer, limit=1] run tag @a[distance=..25] a
 execute at @e[type=villager,tag=npc-sawyer, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Chris Sawyer","color":"#4fa1a7","bold":true},"> ",{"text":"You really just broke right in, didn't you?"}]
 execute at @e[type=villager,tag=npc-sawyer, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 scoreboard players set visitfriend-start story-sawyer 1
-schedule function generated:npc/sawyer/0-1 72t
+schedule function generated:npc/sawyer/0-1 48t
 tag @a remove npc-eavesdropper

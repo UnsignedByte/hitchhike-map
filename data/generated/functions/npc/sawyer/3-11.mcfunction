@@ -5,5 +5,5 @@ execute at @e[type=villager,tag=npc-sawyer, limit=1] run tellraw @a[tag=npc-eave
 execute at @e[type=villager,tag=npc-sawyer, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 data modify entity @e[type=glow_item_frame,x=950,y=71,z=0,dx=0,dy=0,dz=0,sort=nearest,limit=1] Item.tag.map set value 347
 data modify entity @e[type=villager,tag=npc-sawyer, limit=1] HandItems[0] set value {}
-schedule function generated:npc/sawyer/3-12 174t
+schedule function generated:npc/sawyer/3-12 116t
 tag @a remove npc-eavesdropper

@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-sawyer, limit=1] run tag @a[distance=..25] a
 # Dialogue line #3-3: speak and make noise.
 execute at @e[type=villager,tag=npc-sawyer, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Chris Sawyer","color":"#4fa1a7","bold":true},"> ",{"text":"Anyways, you have something for me to look at?"}]
 execute at @e[type=villager,tag=npc-sawyer, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/sawyer/3-03 90t
+schedule function generated:npc/sawyer/3-03 60t
 tag @a remove npc-eavesdropper

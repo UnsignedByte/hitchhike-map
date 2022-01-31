@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-fountainman, limit=1] run tag @a[distance=..
 # Dialogue line #0-10: speak and make noise.
 execute at @e[type=villager,tag=npc-fountainman, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Sylvian Bismarck","color":"#9c389c","bold":true},"> ",{"text":"Anyways, pay no mind, these are just the ramblings of an old man."}]
 execute at @e[type=villager,tag=npc-fountainman, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/fountainman/0-10 102t
+schedule function generated:npc/fountainman/0-10 68t
 tag @a remove npc-eavesdropper

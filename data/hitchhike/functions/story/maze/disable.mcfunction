@@ -13,7 +13,7 @@ kill @e[tag=maze-weapon-displaystand,type=item]
 team modify player collisionRule always
 team modify player friendlyFire true
 
+clear @a leather_boots{clownshoes:1b}
+
 function generated:story/maze/unloadchunks
 forceload remove -1504 -2 -1371 129
-
-clear @a leather_boots{clownshoes:1b}

@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-fishjar, limit=1] run tag @a[distance=..25] 
 # Dialogue line #1-2: speak and make noise.
 execute at @e[type=villager,tag=npc-fishjar, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Jared Majors","color":"#bdaa77","bold":true},"> ",{"text":"Guess the total value in the jar, and place your bets to the right side."}]
 execute at @e[type=villager,tag=npc-fishjar, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/fishjar/1-2 132t
+schedule function generated:npc/fishjar/1-2 88t
 tag @a remove npc-eavesdropper

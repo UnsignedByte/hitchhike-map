@@ -189,7 +189,7 @@ export function createNpc (
               });
               // # of vowels (≈ syllables) * 5 ticks/vowel
               const fulltext = message.message.map(x=>x.text || '').join("");
-              const duration = message.wait ?? ((fulltext.match(/[aiueo]/gi)?.length ?? 4) * 6)
+              const duration = message.wait ?? ((fulltext.match(/[aiueo]/gi)?.length ?? 6) * 4)
               functions[`${indexToFuncName(i)}`] = [
                 `tag ${select.player} add npc-eavesdropper`,
                 `execute at ${select.self} run tag ${message.global ? '@a' : `@a[distance=..${HEAR_DIST}]`} add npc-eavesdropper`,
@@ -1999,6 +1999,9 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                     })}, ${rawJson({
                       text:"dare fight you anymore.",
                       color:"blue"
+                    })},${rawJson({
+                      text:"Blow away your problems.",
+                      color:"gray"
                     })}]`
           },
           HideFlags:7,
@@ -2044,6 +2047,12 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
             Lore:`[${rawJson({
                       text:"The Great...",
                       color:"#D65831"
+                    })},${rawJson({
+                      text:"Keeps out malicious",
+                      color:"gray"
+                    })},${rawJson({
+                      text:"enemies.",
+                      color:"gray"
                     })}]`
           },
           HideFlags:7,
@@ -2065,6 +2074,12 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
             Lore:`[${rawJson({
                     text:"(Probably) not addictive.",
                     color:"blue"
+                  })},${rawJson({
+                    text:"Throw it to spread",
+                    color:"gray"
+                  })},${rawJson({
+                    text:"joy and harmony.",
+                    color:"gray"
                   })}]`
           },
           HideFlags:7,
@@ -2086,6 +2101,15 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
             Lore:`[${rawJson({
                     text:"Simple and useful.",
                     color:"blue"
+                  })},${rawJson({
+                    text:"Hit mobs to \"mark\" them",
+                    color:"gray"
+                  })},${rawJson({
+                    text:"Throw the item to blow",
+                    color:"gray"
+                  })},${rawJson({
+                    text:"up \"marked\" mobs.",
+                    color:"gray"
                   })}]`
           },
           HideFlags:7,
@@ -3489,7 +3513,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
             " Bck. Just place the rest of your money on the counter and I'll complete your purchase!"
           ]
         ],
-        unsoldrange: [983, 65, -168, 985, 65, -168],
+        unsoldrange: [983, 64, -168, 985, 65, -168],
         paypos: [986.5, 65.0, -167.5],
         shoprange:[973, -172, 992, -153],
         lock: ["<",{"text":"Jean Slimm","color":"#2387d9","bold":true},"> You can't leaving without paying."]
@@ -3790,6 +3814,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           `execute as @e[type=item,tag=!paying,nbt={Item:{store:"${k}",tag:{sold:0b}},Age:0s},x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]},y=0,dy=255] run data modify entity @s Age set value 5800`,
           `tag @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}}] remove paying`,
           `tag @e[type=item,nbt={Item:{tag:{store:"${k}",sold:0b}}},${payrangesel}] add paying`,
+          `execute as ${unsolditems} unless entity @s[nbt={Age:-32768s}] run data modify entity @s PickupDelay set value 100`,
           `execute as ${unsolditems} run data modify entity @s Age set value -32768`,
           `# Deal with triggers`,
           `execute as @a unless score @s storetrigger matches 0 at @s if entity @s[x=${v.shoprange[0]},z=${v.shoprange[1]},dx=${v.shoprange[2]-v.shoprange[0]},dz=${v.shoprange[3]-v.shoprange[1]}] run function generated:story/stores/${k}/handletrigger`,

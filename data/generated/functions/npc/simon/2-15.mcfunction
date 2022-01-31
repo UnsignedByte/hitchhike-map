@@ -5,5 +5,5 @@ execute at @e[type=villager,tag=npc-simon, limit=1] run tellraw @a[tag=npc-eaves
 execute at @e[type=villager,tag=npc-simon, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 scoreboard players set -lacroix story-simon 0
 function generated:quests/lacroix-start
-schedule function generated:npc/simon/2-16 210t
+schedule function generated:npc/simon/2-16 140t
 tag @a remove npc-eavesdropper

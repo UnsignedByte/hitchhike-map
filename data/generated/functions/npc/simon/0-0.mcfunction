@@ -13,5 +13,5 @@ setblock 929 34 193 minecraft:rail[shape=east_west,waterlogged=false]
 summon minecart 939.5 39 195.5 {Silent:1,Tags:["simon-holder"]}
 tag @e[type=villager,tag=npc-simon, limit=1] add npc-unface
 scoreboard players set -held story-simon 1
-schedule function generated:npc/simon/0-1 138t
+schedule function generated:npc/simon/0-1 92t
 tag @a remove npc-eavesdropper

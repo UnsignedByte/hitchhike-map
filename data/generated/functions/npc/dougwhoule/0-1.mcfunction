@@ -3,5 +3,5 @@ execute at @e[type=villager,tag=npc-dougwhoule, limit=1] run tag @a[distance=..2
 # Dialogue line #0-2: speak and make noise.
 execute at @e[type=villager,tag=npc-dougwhoule, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Douglas Hollerman","color":"#ebe34b","bold":true},"> ",{"text":"I dug it myself."}]
 execute at @e[type=villager,tag=npc-dougwhoule, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
-schedule function generated:npc/dougwhoule/0-end 24t
+schedule function generated:npc/dougwhoule/0-end 16t
 tag @a remove npc-eavesdropper

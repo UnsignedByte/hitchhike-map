@@ -6,5 +6,5 @@ execute at @e[type=villager,tag=npc-hurm, limit=1] run playsound minecraft:entit
 scoreboard players set -caught hurm-fish-caught 0
 function generated:quests/campfire-start
 function generated:quests/grillfish-start
-schedule function generated:npc/hurm/0-10 168t
+schedule function generated:npc/hurm/0-10 112t
 tag @a remove npc-eavesdropper

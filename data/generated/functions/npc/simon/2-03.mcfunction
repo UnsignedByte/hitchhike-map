@@ -13,5 +13,5 @@ tag @e[tag=npc-sawyer] add npc-unface
 summon minecart 950 40 -1 {Silent:1,Tags:["sawyer-holder"]}
 scoreboard players set @e[tag=npc-sawyer] dialogue-status -1
 scoreboard players set -held story-sawyer -1
-schedule function generated:npc/simon/2-04 132t
+schedule function generated:npc/simon/2-04 88t
 tag @a remove npc-eavesdropper

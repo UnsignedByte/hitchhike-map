@@ -4,5 +4,5 @@ execute at @e[type=villager,tag=npc-damien, limit=1] run tag @a[distance=..25] a
 execute at @e[type=villager,tag=npc-damien, limit=1] run tellraw @a[tag=npc-eavesdropper] ["<",{"text":"Damien Herst","color":"#b8a184","bold":true},"> ",{"text":"...Eh?","italic":true}]
 execute at @e[type=villager,tag=npc-damien, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 tp @e[type=villager,tag=npc-damien, limit=1] 796.50 78 -41.70 -180 0
-schedule function generated:npc/damien/1-1 6t
+schedule function generated:npc/damien/1-1 4t
 tag @a remove npc-eavesdropper
