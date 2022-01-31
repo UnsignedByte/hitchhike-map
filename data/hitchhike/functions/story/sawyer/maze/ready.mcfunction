@@ -7,3 +7,5 @@ scoreboard players set enabled maze 1
 
 team modify player collisionRule always
 team modify player friendlyFire true
+
+say bruh
