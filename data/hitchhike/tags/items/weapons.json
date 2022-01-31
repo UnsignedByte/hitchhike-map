@@ -1,0 +1,12 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:iron_shovel",
+    "minecraft:blaze_powder",
+    "minecraft:redstone_torch",
+    "minecraft:command_block",
+    "minecraft:dragon_breath",
+    "minecraft:white_banner",
+    "minecraft:barrier"
+  ]
+}

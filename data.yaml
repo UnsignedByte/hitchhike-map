@@ -631,7 +631,7 @@ npc:
           end: 1
         - messages:
           - Hey, still standing around?
-          - Don't mind me, I'll be totally focused on this computer.
+          - Don't mind me, I'm just totally focused on this computer.
           cond: 1
           end: -1
         - messages:
@@ -1730,7 +1730,8 @@ quest:
       type: cond
       value:
         - if score tower quest-status matches -1
-      count: 1
+        - "if score #map-finished vars matches 1"
+      count: 2
   mountain:
     name: Rugged Adventure
     description: Make your way up the mountain.

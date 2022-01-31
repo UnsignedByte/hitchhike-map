@@ -10,3 +10,5 @@ tag @a remove lobby-uncompliant
 execute as @a[x=887,y=70,z=10,dx=16,dy=4,dz=12,nbt={SelectedItem:{tag:{sawyershovel:1b}}}] run item modify entity @s weapon.mainhand hitchhike:sawyershovel_enable
 
 execute as @a[nbt={SelectedItem:{tag:{sawyershovel:1b}}}] unless entity @s[x=887,y=70,z=10,dx=16,dy=4,dz=12] run item modify entity @s weapon.mainhand generated:disallow_mine
+
+execute unless score enabled maze matches 1 run clear @a #hitchhike:weapons{tag:{weapon:1b}}
