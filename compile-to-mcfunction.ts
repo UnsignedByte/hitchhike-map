@@ -2566,7 +2566,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       // 'tag @e[type=marker,tag=maze-node] remove maze-visited',
       'bossbar set minecraft:maze visible false',
       `function generated:story/maze/unloadchunks`,
-      'execute if score -sdcard story-simon matches 0 run function hitchhike:story/sawyer/maze/ready'
+      'execute if score enabled maze matches 0 run function hitchhike:story/sawyer/maze/ready'
     ])
 
     addfunc('maze/create/_propogatebatch', [
@@ -2853,10 +2853,11 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     genseq('sawyer/finish_maze', {
       cmds: [
         `function hitchhike:story/maze/disable`,
-        // 'tp @a[tag=!admin] 952 70 -1',
-        // 'spawnpoint @a 1007 59 59',
-        // 'time set 11500',
-        // 'gamerule doDaylightCycle true',
+        `scoreboard players set enabled maze -1`,
+        'tp @a[tag=!admin] 952 70 -1',
+        'spawnpoint @a 1007 59 59',
+        'time set 11500',
+        'gamerule doDaylightCycle true',
         'tellraw @a {"score":{"name":"enabled","objective":"maze"}}'
       ],
       next: [
