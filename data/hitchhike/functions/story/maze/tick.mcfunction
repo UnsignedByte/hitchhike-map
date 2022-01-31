@@ -16,3 +16,5 @@ function generated:story/maze/weapons/buildtool/tick
 
 # In case
 execute unless score enabled maze matches 1 run tag @a remove maze-mob
+
+execute unless score enabled maze matches 1 run clear @a #hitchhike:weapons{tag:{isweapon:1b}}
