@@ -2566,7 +2566,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       // 'tag @e[type=marker,tag=maze-node] remove maze-visited',
       'bossbar set minecraft:maze visible false',
       `function generated:story/maze/unloadchunks`,
-      'function hitchhike:story/sawyer/maze/ready'
+      'execute if score -sdcard story-simon matches 0 run function hitchhike:story/sawyer/maze/ready'
     ])
 
     addfunc('maze/create/_propogatebatch', [

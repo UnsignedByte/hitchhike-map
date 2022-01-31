@@ -208,8 +208,9 @@ npc:
           - message: Alright, that should be it. I'm fixing up the remaining parts of the SD card now.
             global: true
             wait: 100
-          - message: Let me take you back out and I'll analyze the data next.
+          - message: Let me take you back out and I'll analyze the data next...
             global: true
+            wait: 100
           - message: Welcome back to reality! I hope you enjoyed your stay.
             command:
               - 'function generated:story/sawyer/finish_maze'
