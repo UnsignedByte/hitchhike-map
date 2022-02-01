@@ -528,7 +528,10 @@ npc:
             - text: " ungodly hour?"
           - ... Young people these days.
           - message:
-            - text: "Well, sport, the only way to the trails is through the huge lake right here, and the only way through the lake is on "
+            - text: "Well, sport, the only way to the trails is through Eddreckson Lake right here, and the only way through "
+            - text: there
+              italic: true
+            - text: " is on "
             - text: my
               italic: true
             - text: " precious boat."
