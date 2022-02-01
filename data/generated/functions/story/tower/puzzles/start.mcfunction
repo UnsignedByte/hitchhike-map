@@ -1,5 +1,5 @@
 tp @a[tag=!admin] -2000 148 -50 -90 90
-effect give @a[tag=!admin] minecraft:resistance 4 5 true
+effect give @a[tag=!admin] minecraft:resistance 8 5 true
 effect give @a[tag=!admin] minecraft:nausea 8 0 true
 effect give @a[tag=!admin] minecraft:slowness 4 255 true
 effect give @a[tag=!admin] minecraft:night_vision 4 0 true
