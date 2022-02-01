@@ -4115,7 +4115,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     ])
 
     const puzzles = {
-      count: 4,
+      count: 8,
       colors: [
         "light_blue",
         "red",
