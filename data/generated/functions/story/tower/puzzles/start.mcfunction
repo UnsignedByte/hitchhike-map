@@ -1,6 +1,6 @@
 tp @a[tag=!admin] -2000 148 -50 -90 90
 effect give @a[tag=!admin] minecraft:resistance 5 5 true
-effect give @a[tag=!admin] minecraft:nausea 6 0 true
+effect give @a[tag=!admin] minecraft:nausea 8 0 true
 effect give @a[tag=!admin] minecraft:slowness 5 255 true
 effect give @a[tag=!admin] minecraft:night_vision 5 0 true
 particle minecraft:portal -2000 145 -50 1 3 1 0.15 1000
