@@ -4320,9 +4320,9 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     genseq('tower/puzzles/start', {
       cmds: [
         `tp @a[tag=!admin] -2000 148 -50 -90 90`,
-        `effect give @a[tag=!admin] minecraft:jump_boost 10 128 true`,
-        `effect give @a[tag=!admin] minecraft:nausea 10 0 true`,
-        `effect give @a[tag=!admin] minecraft:slowness 10 255 true`,
+        `effect give @a[tag=!admin] minecraft:resistance 5 5 true`,
+        `effect give @a[tag=!admin] minecraft:nausea 6 0 true`,
+        `effect give @a[tag=!admin] minecraft:slowness 5 255 true`,
         `scoreboard players set loadid tower-puzzle-id 0`,
         `function generated:story/tower/puzzles/loadpuzzle`,
         `scoreboard players set #electrical-done vars 0`,
@@ -4330,7 +4330,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       ],
       next: [
         {
-          wait: 80,
+          wait: 70,
           seq: {
             cmds: [
               `tp @a[tag=!admin] -2000 64 -9 180 0`
