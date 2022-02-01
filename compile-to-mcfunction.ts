@@ -3658,11 +3658,11 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     }
 
     addfunc(`stores/reset`, [
-      'kill @e[tag=aec,tag=store-pay-text]',
+      // 'kill @e[tag=aec,tag=store-pay-text]',
       Object.entries(stores).map(([k, v]) => [
         `data modify storage hitchhike:stores welcome.${k} set value ${rawJson(v.welcome)}`,
         `forceload add ${v.shoprange.join(' ')}`,
-        `summon area_effect_cloud ${v.paypos[0]} ${v.paypos[1]-0.5} ${v.paypos[2]} {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","store-pay-text"],CustomName:'{"text":"Payment Here","color":"white"}'}`
+        // `summon area_effect_cloud ${v.paypos[0]} ${v.paypos[1]-0.5} ${v.paypos[2]} {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","store-pay-text"],CustomName:'{"text":"Payment Here","color":"white"}'}`
       ]),
       `kill @e[type=armor_stand,tag=armorstand-clothes-display]`,
       item.store.commands,
