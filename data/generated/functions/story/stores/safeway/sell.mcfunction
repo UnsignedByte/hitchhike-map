@@ -37,6 +37,6 @@ execute as @e[tag=paying,nbt={Item:{tag:{sold:0b,store:"safeway",item:"bread"}}}
 execute as @e[tag=paying,nbt={Item:{tag:{sold:0b,store:"safeway",item:"hashbrown"}}}] run data merge entity @s {Item:{id: "minecraft:baked_potato", tag: {cost: 499, display: {Name: '{"text":"Hash Brown","bold":false,"color":"#bd7d2a"}', Lore: ["{\"text\":\"Freshly Fried Potatoes.\",\"italic\":false,\"color\":\"dark_gray\"}","{\"text\":\"\"}","{\"text\":\"Sold (4.99B)\",\"italic\":true,\"color\":\"dark_purple\"}"]}, store: "safeway", item: "hashbrown", sold: 1b}}}
 tag @e[tag=paying,type=item,x=891,y=65,z=-154,dx=0,dy=0,dz=0] add just-paid
 tag @e[tag=paying,type=item,x=891,y=65,z=-154,dx=0,dy=0,dz=0] remove paying
-tp @e[type=item,tag=just-paid] 893.0000 64.5000 -153.5000
+tp @e[type=item,tag=just-paid] 892.5000 65.0000 -153.5000
 execute as @e[type=item,tag=just-paid] run data modify entity @s Age set value 0
 tag @e remove just-paid
