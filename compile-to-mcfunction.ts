@@ -3475,7 +3475,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           ]
         ],
         unsoldrange: [891, 65, -154, 891, 65, -154],
-        paypos: [893.0, 64.5, -153.5],
+        paypos: [892.5, 65, -153.5],
         shoprange:[881, -169, 917, -151],
         lock: ["<",{"text":"Harold Pell","color":"#eb7060","bold":true},"> Hey! I think you forgot to pay for your items!"]
       },
@@ -3550,7 +3550,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
           ]
         ],
         unsoldrange: [950, 64, -147, 952, 65, -145],
-        paypos: [950.5, 64.5, -144.5],
+        paypos: [951.5, 65, -144.5],
         shoprange:[941, -161, 955, -141],
         lock: ["<",{"text":"Silas Connelly","color":"#f0d792","bold":true},"> You're not gonna finish your order?"]
       },
