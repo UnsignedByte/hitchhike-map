@@ -40,7 +40,7 @@ summon area_effect_cloud 894.5 61.625 -60.5 {NoGravity:1b,Duration:2147483647,Ta
 summon area_effect_cloud 914.5 48.625 -72.5 {NoGravity:1b,Duration:2147483647,Tags:["falling-block-display","aec"],Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:smooth_quartz"},NoGravity:1b,Silent:1b,Time:1,Tags:["falling-block-display"]}]}
 
 # Starbucks
-summon area_effect_cloud 1048.5 64.625 -149.5 {NoGravity:1b,Duration:2147483647,Tags:["falling-block-display","aec"],Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:spruce_trapdoor",Properties:{powered:"false",facing:"east",half:"bottom",open:"true"}},NoGravity:1b,Silent:1b,Time:1,Tags:["falling-block-display"]}]}
+# summon area_effect_cloud 1048.5 64.625 -149.5 {NoGravity:1b,Duration:2147483647,Tags:["falling-block-display","aec"],Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:spruce_trapdoor",Properties:{powered:"false",facing:"east",half:"bottom",open:"true"}},NoGravity:1b,Silent:1b,Time:1,Tags:["falling-block-display"]}]}
 
 
 team modify player collisionRule always
