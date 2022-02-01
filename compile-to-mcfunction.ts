@@ -4317,6 +4317,29 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       puzzles.colors.map(c=> `execute if entity @s[nbt={Item:{id:"minecraft:${c}_wool"}}] run data merge entity @s {Age:-32768s,Item:{tag:${toSnbt(Object.assign({CanPlaceOn:`["light_gray_concrete"]`}, puzzles.wirenbt(c)))}}}`)
     ])
 
+    genseq('tower/puzzles/start', {
+      cmds: [
+        `tp @a[tag=!admin] -2000 148 -50 -90 90`,
+        `effect give @a[tag=!admin] minecraft:jump_boost 10 128 true`,
+        `effect give @a[tag=!admin] minecraft:nausea 10 0 true`,
+        `effect give @a[tag=!admin] minecraft:slowness 10 255 true`,
+        `scoreboard players set loadid tower-puzzle-id 0`,
+        `function generated:story/tower/puzzles/loadpuzzle`,
+        `scoreboard players set #electrical-done vars 0`,
+        `execute as @a[tag=!admin] run function generated:story/parkour/setpuzzlecheckpoint`
+      ],
+      next: [
+        {
+          wait: 80,
+          seq: {
+            cmds: [
+              `tp @a[tag=!admin] -2000 64 -9 180 0`
+            ]
+          }
+        }
+      ]
+    })
+
     genseq('tower/activatetower', {
       cmds: [
         'forceload add 994 570 979 555',
