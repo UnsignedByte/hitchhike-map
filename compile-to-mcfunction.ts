@@ -3660,7 +3660,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
     addfunc(`stores/reset`, [
       Object.entries(stores).map(([k, v]) => [
         `data modify storage hitchhike:stores welcome.${k} set value ${rawJson(v.welcome)}`,
-        `forceload add ${v.shoprange.join(' ')}`
+        `forceload add ${v.shoprange.join(' ')}`,
+        `summon area_effect_cloud ${v.paypos.join(' ')} {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","store-pay-text"],CustomName:'{"text":"Place money here","color":"white","bold":true}'}`
       ]),
       `kill @e[type=armor_stand,tag=armorstand-clothes-display]`,
       item.store.commands,

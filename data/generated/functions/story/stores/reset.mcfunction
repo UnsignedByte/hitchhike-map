@@ -1,15 +1,21 @@
 data modify storage hitchhike:stores welcome.safeway set value '"Hope you had a great time shopping!"'
 forceload add 881 -169 917 -151
+summon area_effect_cloud 893 64.5 -153.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","store-pay-text"],CustomName:'{"text":"Place money here","color":"white","bold":true}'}
 data modify storage hitchhike:stores welcome.clothes set value '"Set on your new fit? I\'ll ring them up for you right here!"'
 forceload add 973 -172 992 -153
+summon area_effect_cloud 986.5 65 -167.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","store-pay-text"],CustomName:'{"text":"Place money here","color":"white","bold":true}'}
 data modify storage hitchhike:stores welcome.subway set value '"Are you ready to order yet?"'
 forceload add 941 -161 955 -141
+summon area_effect_cloud 950.5 64.5 -144.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","store-pay-text"],CustomName:'{"text":"Place money here","color":"white","bold":true}'}
 data modify storage hitchhike:stores welcome.boba set value '"Welcome to SiTea, voted the best boba shop in town for the past 10 years!"'
 forceload add 993 -173 1007 -153
+summon area_effect_cloud 996.5 65 -166.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","store-pay-text"],CustomName:'{"text":"Place money here","color":"white","bold":true}'}
 data modify storage hitchhike:stores welcome.ramen set value '"Ready for your order?"'
 forceload add 1029 -161 1043 -141
+summon area_effect_cloud 1039.5 65 -151.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","store-pay-text"],CustomName:'{"text":"Place money here","color":"white","bold":true}'}
 data modify storage hitchhike:stores welcome.starbucks set value '"Alright, what can I get you? The menu is on the billboard right above me."'
 forceload add 1044 -161 1060 -141
+summon area_effect_cloud 1047.5 65 -149.5 {CustomNameVisible:1b,Duration:2147483647,Tags:["aec","store-pay-text"],CustomName:'{"text":"Place money here","color":"white","bold":true}'}
 kill @e[type=armor_stand,tag=armorstand-clothes-display]
 summon armor_stand 986.74 64.5 -155.5 {DisabledSlots:4013373,NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{Head:[0F,0F,0F],LeftArm:[0F,0F,0F],RightArm:[0F,0F,0F],LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[-90F,0F],ArmorItems:[{Count: 1b, id: "minecraft:leather_boots", tag: {cost: 2999, rot: {0: -90, 1: 0}, display: {Name: '{"text":"Plain Boots (Blue)","color":"gray"}', Lore: ["{\"text\":\"Affordable and Fashionable.\",\"italic\":true,\"color\":\"dark_gray\"}","{\"text\":\"\"}","{\"text\":\"Unsold (29.99B)\",\"italic\":true,\"color\":\"dark_gray\"}"], color: 2378639}, Unbreakable: 1b, HideFlags: 127, store: "clothes", item: "pbblue", sold: 0b}},{},{},{}]}
 summon armor_stand 986.74 64.5 -156.4 {DisabledSlots:4013373,NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["armorstand-clothes-display"],Pose:{Head:[0F,0F,0F],LeftArm:[0F,0F,0F],RightArm:[0F,0F,0F],LeftLeg:[0f,0f,355f],RightLeg:[0f,0f,5f]},Rotation:[-90F,0F],ArmorItems:[{Count: 1b, id: "minecraft:leather_boots", tag: {cost: 2999, rot: {0: -90, 1: 0}, display: {Name: '{"text":"Plain Boots (Blue)","color":"gray"}', Lore: ["{\"text\":\"Affordable and Fashionable.\",\"italic\":true,\"color\":\"dark_gray\"}","{\"text\":\"\"}","{\"text\":\"Unsold (29.99B)\",\"italic\":true,\"color\":\"dark_gray\"}"], color: 2378639}, Unbreakable: 1b, HideFlags: 127, store: "clothes", item: "pbblue", sold: 0b}},{},{},{}]}
