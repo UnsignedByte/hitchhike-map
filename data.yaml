@@ -9,13 +9,13 @@ npc:
   npcs:
     sawyer:
       name: Chris Sawyer
-      colour: 0x4FA1A7
+      colour: 0x8de359
       position: 950.5 70.0 -0.25
       rotation: 0 0
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWFkMTNmN2Q4ZTVhMTBmNGZiYThiODk3NTVlZGVkNzBmYzk2MTE5YTRlOThkZjc3M2M4NmQzMmNmN2E3ZjNlZiJ9fX0=
       villager:
-        type: savanna
-        profession: cleric
+        type: desert
+        profession: nitwit
       dialogue:
         - messages:
           - message: You really just broke right in, didn't you?
@@ -225,7 +225,7 @@ npc:
           end: -1
     simon:
       name: Simon Ursus Stephens
-      colour: 0x85deb1
+      colour: 0x6bdfc3
       position: 939.25 68 195.00
       rotation: 90 15
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Q0ZjNhMDk3YjgyZGVjODBhMzZkYzRhODkxNmI4MWVmZWZhZGFlM2ExNDU1NTMxODI5NjliNDA5OTYwMGIxZSJ9fX0=
@@ -507,11 +507,11 @@ npc:
       name: Herb Schmitt
       position: 1075.7 125 355.5
       rotation: -90 30
-      colour: 0x183aab
+      colour: 0x3f7bd5
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhmMmZlNTFlODc1ODk4YTFmZTZkMzJiOWQzMWVlMjc3YjllMWZhOGZjYWQ5ODY2ZWNiZWZmY2QyMDQ0YjVhNyJ9fX0=
       villager:
         type: taiga
-        profession: none
+        profession: fisherman
       dialogue:
         - messages:
           - message: ... Eh? Who goes there?! Solomon, is that you?
@@ -604,11 +604,11 @@ npc:
       name: Jason Quint
       position: 995.5 214 580.3
       rotation: -180 0
-      colour: 0x732424
+      colour: 0xb68bdd
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTM2MTBmMTFmMzZkNTJiZjk2NGFkYTA1OTIyM2QyODk5ZWVhYzMwM2ExOTZkOGU4Y2Y3MDAzMGVlNzRjOGYxNSJ9fX0=
       villager:
-        type: snow
-        profession: armorer
+        type: swamp
+        profession: mason
       dialogue:
         - messages:
           - message:
@@ -715,11 +715,11 @@ npc:
       name: Harold Pell
       position: 891.5 64 -152.5
       rotation: 180 0
-      colour: 0xeb7060
+      colour: 0xed81b8
       head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjVmYWViMTFiMzc2NTYzNGY1MWFkYjBmMWFjNmRkM2I0OWIzMDE0ZjJiZjM5NWFlZDI2OWUzMzliYjMyYjc3OSJ9fX0=
       villager:
         type: savanna
-        profession: librarian
+        profession: cleric
       dialogue:
         - messages:
           - "Good morning! I'm Harry from Safeway, welcome!"
