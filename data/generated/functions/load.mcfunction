@@ -4158,6 +4158,10 @@ tag @a remove victim-of-dialogue-by-jebffosse
 
 tag @a remove victim-of-dialogue-by-nortonhill
 
+tag @a remove victim-of-dialogue-by-leonarddinkle
+
+tag @a remove victim-of-dialogue-by-patriciagoldstein
+
 tag @a remove victim-of-dialogue-by-__safeway_apple
 
 tag @a remove victim-of-dialogue-by-__safeway_melon_slice

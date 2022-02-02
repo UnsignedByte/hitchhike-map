@@ -50,6 +50,8 @@ forceload add 821 -69
 forceload add 804 -69
 forceload add 797 -79
 forceload add 798 -77
+forceload add 814 -152
+forceload add 829 -154
 forceload add 905 -153
 forceload add 909 -153
 forceload add 901 -153

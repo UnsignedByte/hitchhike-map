@@ -1725,6 +1725,35 @@ npc:
           - Great decision, Dr. Fosse!
           cond: 1
           end: -1
+    leonarddinkle:
+      name: Leonard Dinkle
+      position: 814.5 65 -151.3
+      rotation: 0 20
+      colour: 0x777ed9
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI1NDBkZTE0NzUzZGZiZjk3ZTc3OWVhODk4NDUzNWU3Y2FiNjFhMTMxYjIwMjU5NDVmOWIwYzcxMzlmYjAyOSJ9fX0=
+      villager:
+        type: plains
+        profession: armorer
+      dialogue:
+        - messages:
+          - Welcome! Due to the recent internet outage, we've let our employees have a day off.
+          - Regardless, you are always welcome to work in the office if you so choose!
+          - Have a nice day!
+          end: -1
+    patriciagoldstein:
+      name: Patricia Goldstein
+      position: 829.5 81 -153.7
+      rotation: -180 5
+      colour: 0x53cf86
+      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWI4NmQ0N2I4OWM1ZjQxODY3NzZhOGU4NmJiOGY2NWY5NThkOTQwNDU3ZWQ4NjdlMjc2ZTljYWUyZTcyYjNmNSJ9fX0=
+      villager:
+        type: savanna
+        profession: butcher
+      dialogue:
+        - messages:
+          - For the last time, I know I can leave, I'm choosing to stay here.
+          - Working in-office is infinitely better than dealing with that little monster back at home.
+          end: -1
 
 quest:
   birthday:

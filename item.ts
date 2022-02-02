@@ -68,7 +68,7 @@ export const item = {
     tag:{
       Enchantments:`[{}]`,
       display:{
-        Lore:`['{"text":"Runs Android 5.0.2 \\\\"Lollipop\\\\".","color":"dark_gray"}']`,
+        Lore:`['{"text":"Runs Android 5.0.2 \\\\"Lollipop\\\\".","color":"gray"}','{"text":"Use it by right clicking","color":"blue"}','{"text":"while standing still.","color":"blue"}']`,
         Name:`'{"text":"Motorola Moto G 2","color":"gray"}'`
       },
       phone: true,
@@ -80,7 +80,7 @@ export const item = {
     tag:{
       Enchantments:`[{}]`,
       display:{
-        Lore:`['{"text":"Only 13 nanometers thick.","color":"dark_gray"}']`,
+        Lore:`['{"text":"Only 13 nanometers thick.","color":"gray"}','{"text":"Use it by right clicking","color":"blue"}','{"text":"while standing still.","color":"blue"}']`,
         Name:`'{"text":"iPhone XXGS Pro Max Plus+ Ultra","color":"gray"}'`
       },
       phone: true,

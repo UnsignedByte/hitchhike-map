@@ -17,6 +17,8 @@ tag @e[tag=npc-douglassainsworth] add npc-unface
 
 tag @e[tag=npc-nortonhill] add npc-unface
 
+tag @e[tag=npc-patriciagoldstein] add npc-unface
+
 fill 973 70 2 973 71 2 air
 setblock 973 71 2 minecraft:dark_oak_door[facing=west,half=upper,hinge=right,open=false,powered=false]
 setblock 973 70 2 minecraft:dark_oak_door[facing=west,half=lower,hinge=right,open=false,powered=false]

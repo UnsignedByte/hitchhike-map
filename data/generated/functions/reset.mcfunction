@@ -816,6 +816,14 @@ scoreboard players set @e[tag=npc] dialogue-status 0
 summon minecraft:villager 798.50 84 -76.70 {Rotation: [150f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-nortonhill"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBjZjQ4MjNkZmZkNjg1ODhjZTE5N2E5MWQ3Y2MyNDBlYjVhOTNiMDQ4MjFmZWEwNzg3ZmMzZjJiMzViY2NjNiJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:desert", profession: "minecraft:none", level: 99}, Offers: {}, CustomName: '{"text":"Norton Hill","color":"#ddf013","bold":true}'}
 scoreboard players set @e[tag=npc] dialogue-status 0
 
+# Summon the villager for leonarddinkle.
+summon minecraft:villager 814.50 65 -151.30 {Rotation: [0f, 20f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-leonarddinkle"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI1NDBkZTE0NzUzZGZiZjk3ZTc3OWVhODk4NDUzNWU3Y2FiNjFhMTMxYjIwMjU5NDVmOWIwYzcxMzlmYjAyOSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:plains", profession: "minecraft:armorer", level: 99}, Offers: {}, CustomName: '{"text":"Leonard Dinkle","color":"#777ed9","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
+# Summon the villager for patriciagoldstein.
+summon minecraft:villager 829.50 81 -153.70 {Rotation: [-180f, 5f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-patriciagoldstein"], ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 0, 0, 0, 0], Properties: {textures: [{ Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWI4NmQ0N2I4OWM1ZjQxODY3NzZhOGU4NmJiOGY2NWY5NThkOTQwNDU3ZWQ4NjdlMjc2ZTljYWUyZTcyYjNmNSJ9fX0=" }]}}}}], VillagerData: {type: "minecraft:savanna", profession: "minecraft:butcher", level: 99}, Offers: {}, CustomName: '{"text":"Patricia Goldstein","color":"#53cf86","bold":true}'}
+scoreboard players set @e[tag=npc] dialogue-status 0
+
 # Summon the villager for __safeway_apple.
 summon minecraft:villager 905.50 64 -152.50 {Rotation: [0f, 0f], Silent: 1b, Invulnerable: 1b, NoAI: 1b, NoGravity: 1b, Tags: ["npc", "npc-__safeway_apple", "invisible"], VillagerData: {type: "minecraft:plains", profession: "minecraft:none", level: 99}, Offers: {}, Passengers: [{id: area_effect_cloud, CustomName: '[{"text":"Fuji Apple","color":"#FF0000"},{"text":" (1.99B)","bold":false,"italic":false,"strikethrough":false,"obfuscated":false,"underlined":false}]', Duration: 2147483647, Tags: ["npc", "aec"]}]}
 scoreboard players set @e[tag=npc] dialogue-status 0

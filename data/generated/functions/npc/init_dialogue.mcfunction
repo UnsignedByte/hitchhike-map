@@ -103,6 +103,10 @@ execute as @s[tag=npc-jebffosse] at @s run function generated:npc/jebffosse/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-nortonhill] at @s run function generated:npc/nortonhill/tick
 # Start a conversation if it was selected
+execute as @s[tag=npc-leonarddinkle] at @s run function generated:npc/leonarddinkle/tick
+# Start a conversation if it was selected
+execute as @s[tag=npc-patriciagoldstein] at @s run function generated:npc/patriciagoldstein/tick
+# Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_apple] at @s run function generated:npc/__safeway_apple/tick
 # Start a conversation if it was selected
 execute as @s[tag=npc-__safeway_melon_slice] at @s run function generated:npc/__safeway_melon_slice/tick
