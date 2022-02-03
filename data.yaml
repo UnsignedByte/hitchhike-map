@@ -1997,7 +1997,7 @@ quest:
         value: "${npc('simon')} dialogue-status 5"
   campfire:
     name: Making Fire
-    description: Craft and light a campfire at Herb's firepit.
+    description: Craft and light a campfire at Herb's firepit. You might find wood and coal for a campfire to the northeast...
     condition:
       type: nest
       value:

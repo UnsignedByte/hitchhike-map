@@ -1,3 +1,6 @@
+scoreboard objectives remove maze-placed
+scoreboard objectives add maze-placed minecraft.used:minecraft.barrier
+
 kill @e[tag=maze-weapon]
 kill @e[tag=maze-marker]
 tag @a remove maze-mob
