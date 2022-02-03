@@ -2360,7 +2360,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         t.forEach((x, i)=>{
           addfunc(`maze/weapons/buildtool/detector/increment-${i}`, [
             `execute as @s positioned ~${x[0]} ~${x[1]} ~${x[2]} if block ~ ~ ~ barrier run function generated:story/maze/weapons/buildtool/summontimer_`,
-            `execute as @s unless score @s maze-placed matches ..0 positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/detector/increment-${i+1}`
+            `execute as @s if score @s maze-placed matches 1.. positioned ~ ~ ~ run function generated:story/maze/weapons/buildtool/detector/increment-${i+1}`
           ])
         })
 

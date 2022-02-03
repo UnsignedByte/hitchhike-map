@@ -115,7 +115,7 @@ npc:
           - message: You sure took your time, huh... Not that I was checking the clock or anything. I just noticed.
           - message: Anyways, thanks for the mouse.
             command:
-              - 'setblock 949 71 0 stone_button'
+              - 'setblock 949 71 0 stone_button[face=floor,facing=east,powered=false]'
               - 'playsound minecraft:block.stone.place neutral @a 949 71 0 1 2'
               - 'clear @a ${toGive(item.mouse, 2147483647)}'
             wait: 120
@@ -136,16 +136,16 @@ npc:
             global: true
             command:
               - 'tp @a[tag=!admin] -1400.0 13 -150.0 -180 0'
-              - 'spawnpoint @a -1400 11 150'
+              - 'spawnpoint @a -1400 11 -150'
               - 'schedule function generated:story/maze/create 1t'
-          - message: Oh, are you confused?
-            global: true
-          - message: I mentioned you would be doing most of the work with fixing it, but don't worry, I'll be keeping you safe.
-            global: true
           cond: 3
           end: -1
         - messages:
           - message: The SD card is finally done loading! Sorry it took a while, I hope you weren't too bored.
+            global: true
+          - message: Oh, are you confused?
+            global: true
+          - message: I mentioned you would be doing most of the work with fixing it, but don't worry, I'll be keeping you safe.
             global: true
           - message: I'll also load in some random old models into the waiting room that you can take before you get into the card.
             global: true
