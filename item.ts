@@ -55,22 +55,24 @@ export const item = {
   tvremote: {
     id:'"minecraft:light_gray_candle"',
     tag:{
-      Enchantments:`[{}]`,
+      Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`,
       display:{
         Lore:`['{"text":"Right click to play/pause.","color":"blue"}']`,
         Name:`'{"text":"TV Remote","color":"gray"}'`
       },
+      HideFlags:127,
       tvremote: true
     }
   },
   androidphone: {
     id:'"minecraft:black_candle"',
     tag:{
-      Enchantments:`[{}]`,
+      Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`,
       display:{
         Lore:`['{"text":"Runs Android 5.0.2 \\\\"Lollipop\\\\".","color":"gray"}','{"text":"Use it by right clicking","color":"blue"}','{"text":"while standing still.","color":"blue"}']`,
         Name:`'{"text":"Motorola Moto G 2","color":"gray"}'`
       },
+      HideFlags:127,
       phone: true,
       androidphone: true
     }
@@ -78,11 +80,12 @@ export const item = {
   iosphone: {
     id:'"minecraft:black_candle"',
     tag:{
-      Enchantments:`[{}]`,
+      Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`,
       display:{
         Lore:`['{"text":"Only 13 nanometers thick.","color":"gray"}','{"text":"Use it by right clicking","color":"blue"}','{"text":"while standing still.","color":"blue"}']`,
         Name:`'{"text":"iPhone XXGS Pro Max Plus+ Ultra","color":"gray"}'`
       },
+      HideFlags:127,
       phone: true,
       iosphone: true
     }
@@ -90,11 +93,12 @@ export const item = {
   housekey: {
     id:'"minecraft:tripwire_hook"',
     tag:{
-      Enchantments:`[{}]`,
+      Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`,
       display:{
         Lore:`['{"text":"Unlocks Doors","color":"dark_gray"}']`,
         Name:`'{"text":"House Key","color":"dark_aqua","bold":true}'`
-      }
+      },
+      HideFlags:127
     }
   },
   spyglass: {
@@ -117,7 +121,8 @@ export const item = {
           color: "gray"
         })}]`
       },
-      Enchantments:`[{}]`
+      HideFlags:127,
+      Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`
     }
   },
   sdcardcorrupted: {
@@ -140,7 +145,8 @@ export const item = {
           color: "gray"
         })}]`
       },
-      Enchantments:`[{}]`
+      HideFlags:127,
+      Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`
     }
   },
   sdcardfixed: {
@@ -157,7 +163,8 @@ export const item = {
           color: "blue"
         })}]`
       },
-      Enchantments:`[{}]`
+      HideFlags:127,
+      Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`
     }
   },
   citymap: {
@@ -174,7 +181,8 @@ export const item = {
           color: "gray"
         })}]`
       },
-      Enchantments:`[{}]`,
+      HideFlags:127,
+      Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`,
       map: 0
     }
   },
@@ -192,7 +200,8 @@ export const item = {
           color: "gray"
         })}]`
       },
-      Enchantments:`[{}]`,
+      HideFlags:127,
+      Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`,
       map: 388
     }
   },
@@ -313,7 +322,7 @@ export const item = {
           color: "gray"
         }])}]`
       },
-      Enchantments:`[{}]`,
+      Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`,
       boxkey: true,
       HideFlags:127
     }
