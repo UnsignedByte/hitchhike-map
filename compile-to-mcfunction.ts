@@ -2273,8 +2273,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
       'tag @s add selected-weapon-item',
       Object.entries(weapons).map(([k, v])=>{
         addfunc(`maze/weapons/${k}/start`, [
-          `execute if entity @s[x=${-1500-Math.floor(cellsize/2)},y=${cellsize},z=${-Math.floor(cellsize/2)},dx=${cellsize*15-Math.floor(cellsize/2)},dy=${cellsize*15},dz=${cellsize*15-Math.floor(cellsize/2)},tag=maze-mob] as @s at @s run function generated:story/maze/weapons/${k}/_start`,
-          `execute unless entity @s[x=${-1500-Math.floor(cellsize/2)},y=${cellsize},z=${-Math.floor(cellsize/2)},dx=${cellsize*15-Math.floor(cellsize/2)},dy=${cellsize*15},dz=${cellsize*15-Math.floor(cellsize/2)},tag=maze-mob] as @s run function generated:story/maze/weapons/${k}/give`
+          `execute if entity @s[x=${-1500-Math.floor(cellsize/2)},y=${cellsize},z=${-Math.floor(cellsize/2)},dx=${cellsize*15},dy=${cellsize*15},dz=${cellsize*15},tag=maze-mob] as @s at @s run function generated:story/maze/weapons/${k}/_start`,
+          `execute unless entity @s[x=${-1500-Math.floor(cellsize/2)},y=${cellsize},z=${-Math.floor(cellsize/2)},dx=${cellsize*15},dy=${cellsize*15},dz=${cellsize*15},tag=maze-mob] as @s run function generated:story/maze/weapons/${k}/give`
         ])
         addfunc(`maze/weapons/${k}/_start`, [
           `summon minecraft:marker ~ ~ ~ {Tags:["maze-weapon-init","maze-weapon","maze-weapon-${k}"]}`,
@@ -4719,6 +4719,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
                                       `tag @a remove caller`,
                                       `stopsound @a player`,
                                       `effect clear @a nausea`,
+                                      `scoreboard players reset @a checkpoint-id`,
                                       `tp @a[tag=!admin] -195.2 66 -9.5 -90 0`,
                                       `playsound minecraft:entity.illusioner.mirror_move player @a -196 64 -10 1 1.1`
                                     ],
