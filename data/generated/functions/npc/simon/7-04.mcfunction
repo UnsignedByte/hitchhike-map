@@ -7,7 +7,7 @@ scoreboard players set -held story-simon 0
 kill @e[tag=simon-holder]
 tp @e[type=villager,tag=npc-simon, limit=1] 963.50 74 201.50 270 60
 playsound minecraft:entity.item_frame.remove_item neutral @a ~ ~ ~ 1
-summon glow_item_frame 963 74 201 {Silent:1b,Facing:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["inserted_sdcard"],Item:{id:"minecraft:daylight_detector",Count:1b,tag:{Enchantments:[{}]}}}
+summon glow_item_frame 963 74 201 {Silent:1b,Facing:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["inserted_sdcard"],Item:{id:"minecraft:daylight_detector",Count:1b,tag:{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}]}}}
 data modify entity @e[type=villager,tag=npc-simon, limit=1] HandItems[0] set value {}
 schedule function generated:npc/simon/7-05 40t
 tag @a remove npc-eavesdropper
