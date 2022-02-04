@@ -2857,8 +2857,8 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
         'tp @a[tag=!admin] 952 70 -1',
         'spawnpoint @a 1007 59 59',
         'time set 11500',
-        'gamerule doDaylightCycle true',
-        'tellraw @a {"score":{"name":"enabled","objective":"maze"}}'
+        'gamerule doDaylightCycle true'
+        // 'tellraw @a {"score":{"name":"enabled","objective":"maze"}}'
       ],
       next: [
         {
