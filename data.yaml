@@ -724,7 +724,8 @@ npc:
         - messages:
           - "Good morning! I'm Harry from Safeway, welcome!"
           - "If you want to buy anything, just drop it off here on the conveyor."
-          - "Have a great day."
+          - "Then you can pay by dropping some money on the brown square to your left."
+          - "Have a great day!"
         - messages:
           - message:
             - nbt: welcome.safeway
@@ -751,6 +752,7 @@ npc:
         - messages:
           - Welcome to Suburban Outfitters! Looking for the newest, trendy, and fashionable outfits?
           - Feel free to try on clothes in the changing rooms to your right!
+          - Once you're ready, put your selection on the counter and your money on the brown square on the right.
         - messages:
           - message:
             - nbt: welcome.clothes

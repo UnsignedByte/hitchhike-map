@@ -3464,7 +3464,7 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bck. Please place your payment in the space to your left!"
+            " Bck. Please place your payment in the brown square to your left!"
           ],
           [
             "It seems like you\'re ",
@@ -3505,14 +3505,14 @@ export function story(files: Record<string, Lines>, functions: Record<string, Li
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bck. Just place your payment on the counter here!"
+            " Bck. Just place your payment on the square to your right!"
           ],
           [
             "It seems you\'re missing ",
             {"score":{"name":"_B"}},
             ".",
             {"score":{"name":"_b"}},
-            " Bck. Just place the rest of your money on the counter and I'll complete your purchase!"
+            " Bck. Just place the rest of your money on the square to your right and I'll complete your purchase!"
           ]
         ],
         unsoldrange: [983, 64, -168, 985, 65, -168],
