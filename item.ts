@@ -145,6 +145,7 @@ export const item = {
           color: "gray"
         })}]`
       },
+      sdcardcorrupted: true,
       HideFlags:127,
       Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`
     }
@@ -163,6 +164,7 @@ export const item = {
           color: "blue"
         })}]`
       },
+      sdcardfixed: true,
       HideFlags:127,
       Enchantments:`[{id:"minecraft:unbreaking",lvl:1s}]`
     }

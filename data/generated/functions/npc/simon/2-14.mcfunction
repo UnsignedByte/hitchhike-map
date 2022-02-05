@@ -5,6 +5,6 @@ execute at @e[type=villager,tag=npc-simon, limit=1] run tellraw @a[tag=npc-eaves
 execute at @e[type=villager,tag=npc-simon, limit=1] run playsound minecraft:entity.villager.ambient player @a[tag=npc-eavesdropper] ~ ~ ~ 1000 1 1
 scoreboard players set -sdcard story-simon 0
 function generated:quests/sdcard-start
-give @a[tag=victim-of-dialogue-by-simon, limit=1] minecraft:daylight_detector{display: {Name: '{"text":"SD Card (Corrupted)","color":"#d6679f","bold":true}', Lore: ['{"text":"A corrupted SD Card","color":"blue"}', '{"text":"What secrets might","color":"gray"}', '{"text":"it hold inside?","color":"gray"}']}, HideFlags: 127, Enchantments: [{id:"minecraft:unbreaking",lvl:1s}]} 1
+give @a[tag=victim-of-dialogue-by-simon, limit=1] minecraft:daylight_detector{display: {Name: '{"text":"SD Card (Corrupted)","color":"#d6679f","bold":true}', Lore: ['{"text":"A corrupted SD Card","color":"blue"}', '{"text":"What secrets might","color":"gray"}', '{"text":"it hold inside?","color":"gray"}']}, sdcardcorrupted: 1b, HideFlags: 127, Enchantments: [{id:"minecraft:unbreaking",lvl:1s}]} 1
 schedule function generated:npc/simon/2-15 128t
 tag @a remove npc-eavesdropper

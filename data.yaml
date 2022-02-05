@@ -71,7 +71,7 @@ npc:
           - Figures. You're only ever here for my help.
           - message: I'll take a look at it.
             command:
-              - 'clear @a ${toGive(item.sdcardcorrupted, 2147483647)}'
+              - 'clear @a daylight_detector{sdcardcorrupted:1b}'
               - 'data modify entity ${select.self} HandItems[0] set value ${toSnbt(Object.assign({Count:"1b"}, item.sdcardcorrupted))}'
               - 'execute at ${select.self} run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1'
           - message: Follow me upstairs, I'll take this to my PC.
@@ -451,7 +451,7 @@ npc:
                 italic: true
             - message: Anyways, let me take that away from you before you break it.
               command:
-                - 'clear @a ${toGive(item.sdcardfixed, 2147483647)}'
+                - 'clear @a daylight_detector{sdcardfixed:1b}'
                 - 'data modify entity ${select.self} HandItems[0] set value ${toSnbt(Object.assign({Count:"1b"}, item.sdcardfixed))}'
                 - 'execute at ${select.self} run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 1 1'
             - message: Follow me, I'll get this plugged in.
